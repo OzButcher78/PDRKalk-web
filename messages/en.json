@@ -1,0 +1,133 @@
+{
+  "nav": {
+    "features": "Features",
+    "screenshots": "Screenshots",
+    "pricing": "Pricing",
+    "howItWorks": "Access",
+    "contact": "Contact",
+    "cta": "Buy License"
+  },
+  "hero": {
+    "badge": "v3.18.0 — New",
+    "title": "Professional PDR Estimation",
+    "titleAccent": "Built for Switzerland.",
+    "subtitle": "PDR Kalk creates hail damage estimates and parking damage reports in seconds — with official insurance tariffs, CHF rounding, and print-ready documents.",
+    "ctaPrimary": "Buy License",
+    "ctaSecondary": "Open App",
+    "screenshotAlt": "PDR Kalk Dashboard",
+    "trust1": "🔒 Local & Secure",
+    "trust2": "⚡ Report in 1 Min",
+    "trust3": "🌍 More countries soon"
+  },
+  "features": {
+    "title": "Everything a PDR Professional Needs",
+    "subtitle": "Built for PDR workshops — legally accurate, precise, efficient.",
+    "items": [
+      {
+        "title": "Hail Damage Estimation",
+        "desc": "Create an estimate in under a minute with integrated insurance tariffs (VFFS 2025, Zurich 2024). All details on one screen — deviations are automatically flagged for the insurer. Professional and trustworthy."
+      },
+      {
+        "title": "Parking Damage Entry",
+        "desc": "Lightning-fast entry — flat-rate price or per-panel pricing. Create a report in under a minute, attach photos and send your customer the PDF or invoice directly."
+      },
+      {
+        "title": "5 Document Types",
+        "desc": "Cost estimate, work report, receipt, invoice, and parking damage report — all print-ready as PDF. Customizable messages for private and business customers, with your own document prefixes and starting numbers."
+      },
+      {
+        "title": "Status Management & Workflow",
+        "desc": "Keep track of every job at a glance. Reports: Accepted, Completed, Cancelled. Invoices: Created, Sent, Paid, Overdue. Professional workflow management built right in."
+      },
+      {
+        "title": "Photo Documentation",
+        "desc": "Easily add photos to any report — choose your own compression level for optimal file size. 2 photos per page with optional descriptions, embedded directly into your PDF documents."
+      },
+      {
+        "title": "Local & Structured",
+        "desc": "Installable on PC or tablet. All documents, photos and backups are saved locally in a structured folder system. Complete data backup with one click."
+      }
+    ]
+  },
+  "screenshots": {
+    "title": "See It In Action",
+    "subtitle": "Professional documents at the press of a button.",
+    "images": [
+      { "file": "dashboard.jpg", "caption": "Dashboard — Recent Documents" },
+      { "file": "hagelauftrag.jpg", "caption": "Hail Damage Entry" },
+      { "file": "parkauftrag.jpg", "caption": "Parking Damage — Unit Pricing" },
+      { "file": "parkauftrag-pauschal.jpg", "caption": "Parking Damage — Flat Rate" },
+      { "file": "hagel-rapport.jpg", "caption": "Work Report PDF" },
+      { "file": "rechnung.jpg", "caption": "Invoice PDF" },
+      { "file": "sammelrechnung.jpg", "caption": "Job Overview" },
+      { "file": "fotos-pdf.jpg", "caption": "Photo Documentation PDF" },
+      { "file": "rechnung-park-pauschal.jpg", "caption": "Parking Damage Report PDF" }
+    ]
+  },
+  "howItWorks": {
+    "title": "Up and Running in 3 Steps",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Buy a License",
+        "desc": "One-time payment, no subscription. You receive your personal license key immediately by email."
+      },
+      {
+        "num": "02",
+        "title": "Install the App",
+        "desc": "Install PDR Kalk on your PC or tablet and enter your key — once, and it's permanently unlocked."
+      },
+      {
+        "num": "03",
+        "title": "Start Working",
+        "desc": "Create your first job. All data is stored locally on your device."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Simple. One-Time. Yours.",
+    "badge": "One-Time Payment — No Subscription",
+    "price": "CHF 499",
+    "priceSuffix": "one-time",
+    "cta": "Buy Now",
+    "note": "License valid for 3 installations. Instant access after payment.",
+    "features": [
+      "VFFS 2025 & Zurich 2024 tariffs",
+      "Hail damage & parking damage",
+      "5 document types as PDF",
+      "CHF with 5-Rappen rounding",
+      "Works with or without VAT registration",
+      "Customizable invoice messages (private/business)",
+      "Custom document prefixes & invoice numbering",
+      "Your own logo with adjustable size",
+      "Adjustable photo compression",
+      "Set default discount rates per customer",
+      "Status tracking for reports & invoices",
+      "Smart aluminium panel logic",
+      "Documents saved in structured local folders",
+      "One-click full backup",
+      "License for 3 installations"
+    ]
+  },
+  "contact": {
+    "title": "Questions? Get in Touch.",
+    "subtitle": "We typically respond within 24 hours.",
+    "namePlaceholder": "Your Name",
+    "emailPlaceholder": "Your Email",
+    "messagePlaceholder": "Your Message",
+    "submit": "Send Message",
+    "success": "Message sent — we'll be in touch soon!",
+    "email": "info@balmerstormsolutions.ch"
+  },
+  "footer": {
+    "company": "Balmer Storm Solutions",
+    "tagline": "Made in Switzerland.",
+    "copyright": "© 2025 Balmer Storm Solutions. All rights reserved.",
+    "intl": "More countries coming soon.",
+    "links": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "contact": "Contact"
+    }
+  }
+}

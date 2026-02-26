@@ -1,0 +1,133 @@
+{
+  "nav": {
+    "features": "Funktionen",
+    "screenshots": "Screenshots",
+    "pricing": "Preise",
+    "howItWorks": "Zugang",
+    "contact": "Kontakt",
+    "cta": "Lizenz kaufen"
+  },
+  "hero": {
+    "badge": "v3.18.0 — Neu",
+    "title": "Professionelle PDR-Kalkulation",
+    "titleAccent": "für die Schweiz.",
+    "subtitle": "PDR Kalk erstellt Hagelschaden-Offerten und Parkschadenrapporte in Sekunden — mit offiziellen Versicherungstarifen, CHF-Rundung und druckfertigen Dokumenten.",
+    "ctaPrimary": "Lizenz kaufen",
+    "ctaSecondary": "App öffnen",
+    "screenshotAlt": "PDR Kalk Dashboard",
+    "trust1": "🔒 Lokal & Sicher",
+    "trust2": "⚡ Rapport in 1 Min",
+    "trust3": "🌍 Bald international"
+  },
+  "features": {
+    "title": "Alles was ein PDR-Profi braucht",
+    "subtitle": "Entwickelt für PDR-Werkstätten — rechtssicher, präzise, effizient.",
+    "items": [
+      {
+        "title": "Hagelschaden-Kalkulation",
+        "desc": "Offerte in unter einer Minute erstellen mit integrierten Versicherungstarifen (VFFS 2025, Zürich 2024). Alle Details auf einem Bildschirm — Abweichungen werden automatisch für die Versicherung markiert. Professionell und vertrauenswürdig."
+      },
+      {
+        "title": "Parkschaden-Erfassung",
+        "desc": "Blitzschnelle Erfassung — Pauschalpreis oder Einzelpreise pro Bauteil. Rapport in unter einer Minute erstellen, Fotos anhängen und dem Kunden als PDF oder Rechnung direkt zustellen."
+      },
+      {
+        "title": "5 Dokumenttypen",
+        "desc": "Kostenvoranschlag, Arbeitsrapport, Quittung, Rechnung und Parkschadenrapport — alle print-ready als PDF. Anpassbare Texte für Privat- und Firmenkunden, eigene Dokumentenpräfixe und Startnummern."
+      },
+      {
+        "title": "Statusverwaltung & Workflow",
+        "desc": "Behalten Sie den Überblick über jeden Auftrag. Rapporte: Akzeptiert, Abgeschlossen, Storniert. Rechnungen: Erstellt, Versendet, Bezahlt, Überfällig. Professionelles Workflow-Management auf einen Blick."
+      },
+      {
+        "title": "Fotodokumentation",
+        "desc": "Fotos einfach zum Rapport hinzufügen — Komprimierungsgrad frei wählbar. 2 Fotos pro Seite mit optionalen Beschreibungen, direkt in die PDF-Dokumente eingebettet."
+      },
+      {
+        "title": "Lokal & Strukturiert",
+        "desc": "Installierbar auf PC oder Tablet. Alle Dokumente, Fotos und Backups werden lokal in einer strukturierten Ordnerstruktur gespeichert. Vollständige Datensicherung mit einem Klick."
+      }
+    ]
+  },
+  "screenshots": {
+    "title": "In Aktion",
+    "subtitle": "Professionelle Dokumente auf Knopfdruck.",
+    "images": [
+      { "file": "dashboard.jpg", "caption": "Dashboard — Letzte Dokumente" },
+      { "file": "hagelauftrag.jpg", "caption": "Hagelschaden-Erfassung" },
+      { "file": "parkauftrag.jpg", "caption": "Parkschaden — Einzelpreise" },
+      { "file": "parkauftrag-pauschal.jpg", "caption": "Parkschaden — Pauschalpreis" },
+      { "file": "hagel-rapport.jpg", "caption": "Arbeitsrapport PDF" },
+      { "file": "rechnung.jpg", "caption": "Rechnung PDF" },
+      { "file": "sammelrechnung.jpg", "caption": "Auftragsübersicht" },
+      { "file": "fotos-pdf.jpg", "caption": "Fotodokumentation PDF" },
+      { "file": "rechnung-park-pauschal.jpg", "caption": "Parkschadenrapport PDF" }
+    ]
+  },
+  "howItWorks": {
+    "title": "In 3 Schritten starten",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Lizenz kaufen",
+        "desc": "Einmalige Zahlung, kein Abo. Sie erhalten sofort Ihren persönlichen Lizenzschlüssel per E-Mail."
+      },
+      {
+        "num": "02",
+        "title": "App installieren",
+        "desc": "Installieren Sie PDR Kalk auf Ihrem PC oder Tablet und geben Sie Ihren Schlüssel ein — einmalig, danach dauerhaft freigeschaltet."
+      },
+      {
+        "num": "03",
+        "title": "Sofort loslegen",
+        "desc": "Erstellen Sie Ihren ersten Auftrag. Alle Daten bleiben lokal auf Ihrem Gerät gespeichert."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Einfach. Einmalig. Ihr.",
+    "badge": "Einmalzahlung — Kein Abo",
+    "price": "CHF 499",
+    "priceSuffix": "einmalig",
+    "cta": "Jetzt kaufen",
+    "note": "Lizenz gilt für 3 Installationen. Sofortiger Zugang nach Zahlungseingang.",
+    "features": [
+      "VFFS 2025 & Zürich 2024 Tarife",
+      "Hagelschaden & Parkschaden",
+      "5 Dokumenttypen als PDF",
+      "CHF mit 5-Rappen-Rundung",
+      "Für MwSt-pflichtige & Privatbetriebe",
+      "Anpassbare Texte für Privat-/Firmenkunden",
+      "Eigene Dokumentenpräfixe & Rechnungsnummern",
+      "Eigenes Logo mit wählbarer Grösse",
+      "Fotos komprimierbar — individuell einstellbar",
+      "Standard-Rabattsätze pro Kunde definierbar",
+      "Statusverwaltung für Rapporte & Rechnungen",
+      "Intelligente Aluminium-Bauteil-Logik",
+      "Dokumente lokal in strukturierten Ordnern",
+      "Datensicherung mit einem Klick",
+      "Lizenz für 3 Installationen"
+    ]
+  },
+  "contact": {
+    "title": "Fragen? Melden Sie sich.",
+    "subtitle": "Wir antworten in der Regel innert 24 Stunden.",
+    "namePlaceholder": "Ihr Name",
+    "emailPlaceholder": "Ihre E-Mail",
+    "messagePlaceholder": "Ihre Nachricht",
+    "submit": "Nachricht senden",
+    "success": "Nachricht gesendet — wir melden uns bald!",
+    "email": "info@balmerstormsolutions.ch"
+  },
+  "footer": {
+    "company": "Balmer Storm Solutions",
+    "tagline": "Entwickelt in der Schweiz.",
+    "copyright": "© 2025 Balmer Storm Solutions. Alle Rechte vorbehalten.",
+    "intl": "Weitere Länder folgen.",
+    "links": {
+      "features": "Funktionen",
+      "pricing": "Preise",
+      "contact": "Kontakt"
+    }
+  }
+}

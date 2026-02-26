@@ -1,26 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Barlow:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0a0f1e;
+
+  /* Brand palette */
+  --ink:        #0a0f1e;
+  --ink-mid:    #121929;
+  --ink-muted:  #1e2d42;
+  --red:        #e8001d;
+  --red-hover:  #c40019;
+  --blue:       #2563eb;
+  --green:      #16a34a;
+  --orange:     #ea580c;
+  --steel:      #94a3b8;
+  --fog:        #f1f5f9;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ink:        var(--ink);
+  --color-ink-mid:    var(--ink-mid);
+  --color-ink-muted:  var(--ink-muted);
+  --color-red:        var(--red);
+  --color-blue:       var(--blue);
+  --color-green:      var(--green);
+  --color-orange:     var(--orange);
+  --color-steel:      var(--steel);
+  --color-fog:        var(--fog);
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body:    'Barlow', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  font-family: 'Barlow', sans-serif;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- Utility animations ---- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+@keyframes pulse-red {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232,0,29,0.4); }
+  50%       { box-shadow: 0 0 0 8px rgba(232,0,29,0); }
+}
+
+.fade-up   { animation: fadeUp 0.65s ease both; }
+.fade-up-1 { animation: fadeUp 0.65s 0.1s ease both; }
+.fade-up-2 { animation: fadeUp 0.65s 0.2s ease both; }
+.fade-up-3 { animation: fadeUp 0.65s 0.3s ease both; }
+.fade-up-4 { animation: fadeUp 0.65s 0.4s ease both; }
+.fade-up-5 { animation: fadeUp 0.65s 0.5s ease both; }
+.fade-up-6 { animation: fadeUp 0.65s 0.6s ease both; }
+
+/* animated gradient underline */
+.gradient-line {
+  height: 3px;
+  background: linear-gradient(90deg, var(--red), var(--blue), var(--red));
+  background-size: 200% 100%;
+  animation: shimmer 3.5s linear infinite;
+}
+
+/* lightbox overlay */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 15, 30, 0.96);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s ease;
+}
+
+/* diagonal accent stripe — used in hero */
+.diagonal-stripe {
+  position: absolute;
+  width: 3px;
+  height: 120%;
+  background: var(--red);
+  transform: rotate(12deg);
+  opacity: 0.6;
 }

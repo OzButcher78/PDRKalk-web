@@ -1,0 +1,39 @@
+import type {Metadata} from 'next';
+import {NextIntlClientProvider, hasLocale} from 'next-intl';
+import {notFound} from 'next/navigation';
+import {routing} from '@/i18n/routing';
+
+export const metadata: Metadata = {
+  title: 'PDR Kalk — Professionelle Schadenerfassung für die Schweiz',
+  description: 'PDR Kalk erstellt Hagelschaden-Offerten und Parkschadenrapporte mit offiziellen Schweizer Tarifen (VFFS 2025). Präzise, schnell, CHF-konform.',
+  openGraph: {
+    title: 'PDR Kalk',
+    description: 'Professionelle PDR-Kalkulation für Schweizer Werkstätten.',
+    images: ['/screenshots/dashboard.jpg'],
+  },
+};
+
+type Props = {
+  children: React.ReactNode;
+  params: Promise<{locale: string}>;
+};
+
+export default async function LocaleLayout({children, params}: Props) {
+  const {locale} = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  const messages = (await import(`@/messages/${locale}.json`)).default;
+
+  return (
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      {children}
+    </NextIntlClientProvider>
+  );
+}
+
+export function generateStaticParams() {
+  return routing.locales.map(locale => ({locale}));
+}
