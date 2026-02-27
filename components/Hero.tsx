@@ -154,29 +154,21 @@ export default function Hero() {
             >
               {t('ctaPrimary')}
             </a>
-            <a
-              href={APP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-ghost"
-              style={{
-                fontFamily: 'Barlow Condensed, sans-serif',
-                fontWeight: 700,
-                fontSize: '1rem',
-                letterSpacing: '0.1em',
-                textTransform: 'uppercase',
-                color: '#fff',
-                background: 'transparent',
-                textDecoration: 'none',
-                padding: '0.85rem 2rem',
-                borderRadius: '5px',
-                border: '2px solid rgba(255,255,255,0.2)',
-                display: 'inline-block',
-                transition: 'border-color 0.2s, transform 0.15s',
-              }}
-            >
-              {t('ctaSecondary')} →
-            </a>
+            <span style={{
+              fontFamily: 'Barlow Condensed, sans-serif',
+              fontWeight: 700,
+              fontSize: '1rem',
+              letterSpacing: '0.1em',
+              textTransform: 'uppercase',
+              color: 'rgba(148,163,184,0.5)',
+              padding: '0.85rem 2rem',
+              borderRadius: '5px',
+              border: '2px solid rgba(255,255,255,0.08)',
+              display: 'inline-block',
+              cursor: 'default',
+            }}>
+              Demo Coming Soon
+            </span>
           </div>
 
           {/* Trust indicators */}

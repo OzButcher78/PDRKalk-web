@@ -20,6 +20,7 @@ export default function Pricing() {
 
   const monthly = t.raw('monthly') as {
     badge: string;
+    badgeNote: string;
     price: string;
     priceSuffix: string;
     features: string[];
@@ -242,7 +243,7 @@ export default function Pricing() {
               flexGrow: 1,
             }}>
               {/* Badge */}
-              <div style={{marginBottom: '1.5rem', textAlign: 'center'}}>
+              <div style={{marginBottom: '0.5rem', textAlign: 'center'}}>
                 <span style={{
                   display: 'inline-block',
                   background: 'rgba(148,163,184,0.12)',
@@ -258,6 +259,16 @@ export default function Pricing() {
                 }}>
                   {monthly.badge}
                 </span>
+              </div>
+              <div style={{
+                textAlign: 'center',
+                fontFamily: 'Barlow, sans-serif',
+                fontSize: '0.75rem',
+                color: '#64748b',
+                letterSpacing: '0.06em',
+                marginBottom: '1.5rem',
+              }}>
+                {monthly.badgeNote}
               </div>
 
               {/* Price */}
@@ -447,9 +458,10 @@ export default function Pricing() {
                     fontSize: '0.85rem',
                     letterSpacing: '0.1em',
                     textTransform: 'uppercase' as const,
-                    color: 'var(--red)',
-                    borderBottom: '2px solid var(--red)',
-                    borderLeft: '2px solid rgba(232,0,29,0.2)',
+                    color: '#4ade80',
+                    borderBottom: '2px solid var(--green)',
+                    borderLeft: '2px solid rgba(22,163,74,0.3)',
+                    background: 'rgba(22,163,74,0.07)',
                   }}>
                     {comparisonTable.headers.pdrKalk}
                   </th>
@@ -486,11 +498,11 @@ export default function Pricing() {
                       </td>
                       <td style={{
                         textAlign: 'center',
-                        color: 'var(--green)',
+                        color: '#166534',
                         fontWeight: 700,
-                        borderBottom: '1px solid #e2e8f0',
-                        borderLeft: '2px solid rgba(232,0,29,0.15)',
-                        background: 'rgba(232,0,29,0.03)',
+                        borderBottom: '1px solid #bbf7d0',
+                        borderLeft: '2px solid rgba(22,163,74,0.25)',
+                        background: 'rgba(22,163,74,0.07)',
                       }}>
                         {row.pdrKalk}
                       </td>

@@ -102,7 +102,7 @@
           "tagline": "Significant time savings across the year."
         },
         {
-          "heading": "Custom Settings and Branding",
+          "heading": "Settings and Branding",
           "bullets": [
             "Define your own document prefixes",
             "Custom introduction and closing texts",
@@ -159,7 +159,8 @@
       "features": [
         "2 installations included",
         "No subscription fees",
-        "Activation via encrypted license key",
+        "No setup fees",
+        "No ongoing fees",
         "Unlimited use",
         "Works offline"
       ],
@@ -168,6 +169,7 @@
     },
     "monthly": {
       "badge": "Monthly License",
+      "badgeNote": "Flexible Rate",
       "price": "TBA",
       "priceSuffix": "per month",
       "features": [

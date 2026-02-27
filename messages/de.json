@@ -102,7 +102,7 @@
           "tagline": "Deutliche Zeitersparnis übers Jahr gerechnet."
         },
         {
-          "heading": "Individuelle Einstellungen und Branding",
+          "heading": "Einstellungen und Branding",
           "bullets": [
             "Eigene Dokumentpräfixe definieren",
             "Individuelle Einleitungs- und Schlusstexte",
@@ -159,7 +159,8 @@
       "features": [
         "2 Installationen inklusive",
         "Keine Abogebühren",
-        "Aktivierung über verschlüsselten Lizenzschlüssel",
+        "Keine Einrichtungsgebühren",
+        "Keine laufenden Kosten",
         "Unbegrenzte Nutzung",
         "Offline-fähig"
       ],
@@ -168,6 +169,7 @@
     },
     "monthly": {
       "badge": "Monatslizenz",
+      "badgeNote": "Flexible Rate",
       "price": "TBA",
       "priceSuffix": "pro Monat",
       "features": [
