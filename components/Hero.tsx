@@ -98,7 +98,7 @@ export default function Hero() {
           <h1 className="fade-up-1" style={{
             fontFamily: 'Barlow Condensed, sans-serif',
             fontWeight: 900,
-            fontSize: 'clamp(2.4rem, 6vw, 5rem)',
+            fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)',
             lineHeight: 0.95,
             color: '#ffffff',
             margin: '0 0 0.5rem',
@@ -109,7 +109,7 @@ export default function Hero() {
           <h1 className="fade-up-2" style={{
             fontFamily: 'Barlow Condensed, sans-serif',
             fontWeight: 900,
-            fontSize: 'clamp(2.4rem, 6vw, 5rem)',
+            fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)',
             lineHeight: 0.95,
             color: 'var(--red)',
             margin: '0 0 2rem',
