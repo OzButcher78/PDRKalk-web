@@ -34,7 +34,7 @@ export default function Footer() {
         {/* Brand */}
         <div style={{display: 'flex', flexDirection: 'column', gap: '0.5rem'}}>
           <Image
-            src="/PDRKalk-logot2.png"
+            src="/logo.png"
             alt="PDR Kalk Logo"
             width={180}
             height={48}

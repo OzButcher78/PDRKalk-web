@@ -5,7 +5,6 @@ import {useRouter, usePathname} from 'next/navigation';
 import {useState, useEffect} from 'react';
 import Image from 'next/image';
 
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL || '#';
 const BUY_URL = process.env.NEXT_PUBLIC_BUY_URL || '#pricing';
 
 export default function Navbar() {
@@ -71,7 +70,7 @@ export default function Navbar() {
           }}
         >
           <Image
-            src="/PDRKalk-logot2.png"
+            src="/logo.png"
             alt="PDR Kalk Logo"
             width={200}
             height={54}
