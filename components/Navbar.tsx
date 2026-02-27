@@ -46,7 +46,7 @@ export default function Navbar() {
         background: scrolled ? 'rgba(10,15,30,0.97)' : 'rgba(10,15,30,1)',
         borderBottom: scrolled ? '1px solid rgba(232,0,29,0.25)' : '1px solid transparent',
         backdropFilter: 'blur(12px)',
-        transition: 'all 0.3s ease',
+        transition: 'background 0.3s ease, border-color 0.3s ease',
       }}
     >
       <nav style={{
@@ -217,7 +217,7 @@ export default function Navbar() {
                 height: '2px',
                 background: '#fff',
                 borderRadius: '1px',
-                transition: 'all 0.3s',
+                transition: 'transform 0.3s, opacity 0.3s',
                 transform: menuOpen
                   ? i === 0 ? 'translateY(7px) rotate(45deg)'
                   : i === 2 ? 'translateY(-7px) rotate(-45deg)'

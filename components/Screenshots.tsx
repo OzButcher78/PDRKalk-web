@@ -249,7 +249,7 @@ export default function Screenshots() {
               alignItems: 'center',
               gap: '1rem',
               maxWidth: '92vw',
-              padding: '0 4rem',
+              padding: '0 1rem',
             }}
           >
             <div style={{

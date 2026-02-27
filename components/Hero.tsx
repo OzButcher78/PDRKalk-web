@@ -12,12 +12,11 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="section-pad"
+      className="section-pad hero-section"
       style={{
         background: 'var(--ink)',
         position: 'relative',
         overflow: 'hidden',
-        minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
         paddingTop: '5rem',

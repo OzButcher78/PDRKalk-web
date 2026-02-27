@@ -48,7 +48,7 @@ export default function Contact() {
     fontFamily: 'Barlow, sans-serif',
     fontSize: '0.95rem',
     color: '#fff',
-    outline: 'none',
+    outline: 'none',        /* suppressed — .contact-input:focus-visible provides ring */
     transition: 'border-color 0.2s',
     boxSizing: 'border-box' as const,
   };
@@ -121,12 +121,15 @@ export default function Contact() {
               <div>
                 <input
                   type="text"
+                  name="name"
+                  autoComplete="name"
                   placeholder={t('namePlaceholder')}
                   value={form.name}
                   onChange={e => {
                     setForm({...form, name: e.target.value});
                     if (errors.name) setErrors({...errors, name: undefined});
                   }}
+                  className="contact-input"
                   style={{
                     ...inputStyle,
                     borderColor: errors.name ? 'rgba(252,129,129,0.6)' : 'rgba(255,255,255,0.1)',
@@ -139,12 +142,16 @@ export default function Contact() {
               <div>
                 <input
                   type="email"
+                  name="email"
+                  autoComplete="email"
+                  inputMode="email"
                   placeholder={t('emailPlaceholder')}
                   value={form.email}
                   onChange={e => {
                     setForm({...form, email: e.target.value});
                     if (errors.email) setErrors({...errors, email: undefined});
                   }}
+                  className="contact-input"
                   style={{
                     ...inputStyle,
                     borderColor: errors.email ? 'rgba(252,129,129,0.6)' : 'rgba(255,255,255,0.1)',
@@ -159,12 +166,15 @@ export default function Contact() {
             <div style={{marginBottom: '1rem'}}>
               <textarea
                 rows={5}
+                name="message"
+                autoComplete="off"
                 placeholder={t('messagePlaceholder')}
                 value={form.message}
                 onChange={e => {
                   setForm({...form, message: e.target.value});
                   if (errors.message) setErrors({...errors, message: undefined});
                 }}
+                className="contact-input"
                 style={{
                   ...inputStyle,
                   resize: 'vertical',

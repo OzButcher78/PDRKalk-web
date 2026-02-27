@@ -38,7 +38,13 @@
   box-sizing: border-box;
 }
 
+button, a {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
 html {
+  color-scheme: dark;
   scroll-behavior: smooth;
 }
 
@@ -71,20 +77,25 @@ body {
   50%       { box-shadow: 0 0 0 8px rgba(232,0,29,0); }
 }
 
-.fade-up   { animation: fadeUp 0.65s ease both; }
-.fade-up-1 { animation: fadeUp 0.65s 0.1s ease both; }
-.fade-up-2 { animation: fadeUp 0.65s 0.2s ease both; }
-.fade-up-3 { animation: fadeUp 0.65s 0.3s ease both; }
-.fade-up-4 { animation: fadeUp 0.65s 0.4s ease both; }
-.fade-up-5 { animation: fadeUp 0.65s 0.5s ease both; }
-.fade-up-6 { animation: fadeUp 0.65s 0.6s ease both; }
+@media (prefers-reduced-motion: no-preference) {
+  .fade-up   { animation: fadeUp 0.65s ease both; }
+  .fade-up-1 { animation: fadeUp 0.65s 0.1s ease both; }
+  .fade-up-2 { animation: fadeUp 0.65s 0.2s ease both; }
+  .fade-up-3 { animation: fadeUp 0.65s 0.3s ease both; }
+  .fade-up-4 { animation: fadeUp 0.65s 0.4s ease both; }
+  .fade-up-5 { animation: fadeUp 0.65s 0.5s ease both; }
+  .fade-up-6 { animation: fadeUp 0.65s 0.6s ease both; }
+}
 
 /* animated gradient underline */
 .gradient-line {
   height: 3px;
   background: linear-gradient(90deg, var(--red), var(--blue), var(--red));
   background-size: 200% 100%;
-  animation: shimmer 3.5s linear infinite;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .gradient-line { animation: shimmer 3.5s linear infinite; }
 }
 
 /* lightbox overlay */
@@ -97,6 +108,7 @@ body {
   align-items: center;
   justify-content: center;
   animation: fadeIn 0.2s ease;
+  overscroll-behavior: contain;
 }
 
 /* ---- CSS hover classes (replaces onMouseEnter/Leave) ---- */
@@ -194,4 +206,16 @@ body {
 
   /* Tighter section padding on small phones */
   .section-pad { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+}
+
+/* Hero: iOS Safari 100vh fix — 100svh excludes browser toolbar */
+.hero-section {
+  min-height: 100vh;   /* fallback for older browsers */
+  min-height: 100svh;  /* iOS Safari 15.4+ */
+}
+
+/* Contact form focus ring — replaces outline:none with :focus-visible */
+.contact-input:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 2px;
 }
