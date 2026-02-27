@@ -36,8 +36,8 @@ export default function Footer() {
           <Image
             src="/PDRKalk-logot2.png"
             alt="PDR Kalk Logo"
-            width={148}
-            height={40}
+            width={180}
+            height={48}
             style={{objectFit: 'contain'}}
           />
           <div style={{

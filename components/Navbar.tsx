@@ -53,7 +53,7 @@ export default function Navbar() {
         maxWidth: '1200px',
         margin: '0 auto',
         padding: '0 1.5rem',
-        height: '64px',
+        height: '72px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -73,8 +73,8 @@ export default function Navbar() {
           <Image
             src="/PDRKalk-logot2.png"
             alt="PDR Kalk Logo"
-            width={160}
-            height={44}
+            width={200}
+            height={54}
             style={{objectFit: 'contain'}}
             priority
           />
