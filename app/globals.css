@@ -46,6 +46,7 @@ button, a {
 html {
   color-scheme: dark;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -54,6 +55,8 @@ body {
   background: var(--background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* ---- Utility animations ---- */
