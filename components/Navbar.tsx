@@ -71,7 +71,7 @@ export default function Navbar() {
           }}
         >
           <Image
-            src="/logo.png"
+            src="/PDRKalk-logo2.png"
             alt="PDR Kalk Logo"
             width={160}
             height={44}
