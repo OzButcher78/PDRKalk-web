@@ -93,33 +93,42 @@
     ]
   },
   "pricing": {
-    "title": "Einmalige Lizenz – volle Kontrolle",
-    "badge": "Einmalzahlung — Kein Abo",
-    "price": "CHF 699.00",
-    "priceSuffix": "einmalig",
-    "cta": "Jetzt kaufen",
-    "note": "Lizenz gilt für 2 Installationen. Sofortiger Zugang nach Zahlungseingang.",
-    "features": [
-      "Keine Abogebühren",
-      "2 Installationen inklusive",
-      "Aktivierung über verschlüsselten Lizenzschlüssel",
-      "Nutzung ohne Internetverbindung"
-    ],
+    "title": "Flexible Lizenzmodelle – volle Kontrolle",
+    "lifetime": {
+      "badge": "EMPFOHLEN",
+      "badgeNote": "Einmalzahlung — Kein Abo",
+      "price": "CHF 699.00",
+      "priceSuffix": "einmalig",
+      "features": [
+        "2 Installationen inklusive",
+        "Keine Abogebühren",
+        "Aktivierung über verschlüsselten Lizenzschlüssel",
+        "Unbegrenzte Nutzung",
+        "Offline-fähig"
+      ],
+      "note": "Beste Wahl für langfristige Nutzung.",
+      "cta": "Jetzt kaufen"
+    },
+    "monthly": {
+      "badge": "Monatslizenz",
+      "price": "CHF 69.–",
+      "priceSuffix": "pro Monat",
+      "features": [
+        "Kein hoher Einstiegspreis",
+        "Jederzeit kündbar",
+        "Zugriff auf die aktuelle Version",
+        "Nutzung solange aktiv"
+      ],
+      "disclaimer": "Bei Kündigung endet der Zugriff auf das System."
+    },
     "comparison": {
       "title": "Kostenvergleich über 5 Jahre",
-      "competitorLabel": "Typische Wettbewerbssoftware",
-      "competitorItems": [
-        "Anschaffung: CHF 1'000–2'000",
-        "Laufende Gebühren oder Updatepflicht",
-        "Gesamtkosten über 5 Jahre: CHF 5'000–10'000"
+      "items": [
+        { "label": "Wettbewerbssoftware",   "total": "CHF 5'000–10'000",       "accent": "steel" },
+        { "label": "PDR Kalk Dauerlizenz",  "total": "CHF 699.00",             "accent": "green" },
+        { "label": "PDR Kalk Monatslizenz", "total": "CHF 4'140 über 5 Jahre", "accent": "blue"  }
       ],
-      "ourLabel": "PDR Kalk",
-      "ourItems": [
-        "Einmalige Investition: CHF 699.00",
-        "Kleine optionale Update-Gebühr bei Versicherungstarif-Anpassungen",
-        "Optionale Feature-Upgrades"
-      ],
-      "conclusion": "Volle Kontrolle über Ihre Investition – keine laufenden Verpflichtungen."
+      "conclusion": "Sie entscheiden, welches Modell zu Ihrem Betrieb passt."
     }
   },
   "contact": {

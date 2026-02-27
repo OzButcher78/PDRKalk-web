@@ -126,7 +126,7 @@ body {
   transform: translateY(0) !important;
 }
 
-/* Ghost / outline buttons */
+/* Ghost / outline buttons (dark background) */
 .btn-ghost:hover {
   border-color: rgba(255,255,255,0.5) !important;
   transform: translateY(-2px);
@@ -134,6 +134,10 @@ body {
 .btn-ghost:active {
   transform: translateY(0) !important;
 }
+
+/* Ghost button on light (white) backgrounds */
+.btn-ghost-dark:hover  { border-color: #94a3b8 !important; transform: translateY(-2px); }
+.btn-ghost-dark:active { transform: translateY(0) !important; }
 
 /* Feature cards — only on pointer devices */
 @media (hover: hover) {
@@ -168,8 +172,9 @@ body {
 .features-grid    { grid-template-columns: repeat(3, 1fr); }
 .screenshots-grid { grid-template-columns: repeat(3, 1fr); }
 .steps-grid       { grid-template-columns: repeat(3, 1fr); }
-.pricing-features { grid-template-columns: 1fr 1fr; }
-.contact-grid     { grid-template-columns: 1fr 1fr; }
+.pricing-cards      { grid-template-columns: 1fr 1fr; }
+.pricing-comparison { grid-template-columns: repeat(3, 1fr); }
+.contact-grid       { grid-template-columns: 1fr 1fr; }
 
 /* ---- Responsive breakpoints ---- */
 
@@ -194,8 +199,9 @@ body {
   .steps-connector { display: none; }
 
   /* Pricing + Contact: single column */
-  .pricing-features { grid-template-columns: 1fr; }
-  .contact-grid     { grid-template-columns: 1fr; }
+  .pricing-cards      { grid-template-columns: 1fr; }
+  .pricing-comparison { grid-template-columns: 1fr; }
+  .contact-grid       { grid-template-columns: 1fr; }
 
   /* Footer: center-stack */
   .footer-inner     { flex-direction: column; align-items: center; text-align: center; }

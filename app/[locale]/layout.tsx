@@ -6,6 +6,9 @@ import {routing} from '@/i18n/routing';
 export const metadata: Metadata = {
   title: 'PDR Kalk — Professionelle Schadenerfassung für die Schweiz',
   description: 'PDR Kalk erstellt Hagelschaden-Offerten und Parkschadenrapporte mit offiziellen Schweizer Tarifen (VFFS 2025). Präzise, schnell, CHF-konform.',
+  icons: {
+    icon: '/favicon.png',
+  },
   openGraph: {
     title: 'PDR Kalk',
     description: 'Professionelle PDR-Kalkulation für Schweizer Werkstätten.',

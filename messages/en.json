@@ -93,33 +93,42 @@
     ]
   },
   "pricing": {
-    "title": "One-Time License – Full Control",
-    "badge": "One-Time Payment — No Subscription",
-    "price": "CHF 699.00",
-    "priceSuffix": "one-time",
-    "cta": "Buy Now",
-    "note": "License valid for 2 installations. Instant access after payment.",
-    "features": [
-      "No subscription fees",
-      "2 installations included",
-      "Activation via encrypted license key",
-      "Works without internet connection"
-    ],
+    "title": "Flexible License Models – Full Control",
+    "lifetime": {
+      "badge": "RECOMMENDED",
+      "badgeNote": "One-Time Payment — No Subscription",
+      "price": "CHF 699.00",
+      "priceSuffix": "one-time",
+      "features": [
+        "2 installations included",
+        "No subscription fees",
+        "Activation via encrypted license key",
+        "Unlimited use",
+        "Works offline"
+      ],
+      "note": "Best choice for long-term use.",
+      "cta": "Buy Now"
+    },
+    "monthly": {
+      "badge": "Monthly License",
+      "price": "CHF 69.–",
+      "priceSuffix": "per month",
+      "features": [
+        "No high entry cost",
+        "Cancel anytime",
+        "Access to the current version",
+        "Use as long as active"
+      ],
+      "disclaimer": "Access ends upon cancellation."
+    },
     "comparison": {
       "title": "5-Year Cost Comparison",
-      "competitorLabel": "Typical competitor software",
-      "competitorItems": [
-        "Purchase price: CHF 1,000–2,000",
-        "Ongoing fees or mandatory updates",
-        "Total cost over 5 years: CHF 5,000–10,000"
+      "items": [
+        { "label": "Competitor Software",       "total": "CHF 5,000–10,000",        "accent": "steel" },
+        { "label": "PDR Kalk Lifetime License", "total": "CHF 699.00",              "accent": "green" },
+        { "label": "PDR Kalk Monthly License",  "total": "CHF 4,140 over 5 years",  "accent": "blue"  }
       ],
-      "ourLabel": "PDR Kalk",
-      "ourItems": [
-        "One-time investment: CHF 699.00",
-        "Small optional update fee for insurance tariff changes",
-        "Optional feature upgrades"
-      ],
-      "conclusion": "Full control over your investment – no ongoing commitments."
+      "conclusion": "You decide which model fits your business."
     }
   },
   "contact": {
