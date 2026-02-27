@@ -3,7 +3,7 @@
 import {useTranslations} from 'next-intl';
 import Image from 'next/image';
 
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL || '#';
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://web.pdrkalk.com';
 const BUY_URL = process.env.NEXT_PUBLIC_BUY_URL || '#pricing';
 
 export default function Hero() {

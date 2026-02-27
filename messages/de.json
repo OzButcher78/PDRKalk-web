@@ -9,11 +9,11 @@
   },
   "hero": {
     "badge": "v3.18.0 — Neu",
-    "title": "Professionelle PDR-Kalkulation",
-    "titleAccent": "für die Schweiz.",
-    "subtitle": "PDR Kalk erstellt Hagelschaden-Offerten und Parkschadenrapporte in Sekunden — mit offiziellen Versicherungstarifen, CHF-Rundung und druckfertigen Dokumenten.",
-    "ctaPrimary": "Lizenz kaufen",
-    "ctaSecondary": "App öffnen",
+    "title": "Hagel- und Parkschaden-Kalkulation –",
+    "titleAccent": "schnell, lokal und rechtssicher.",
+    "subtitle": "Erstellen Sie professionelle Rapporte und Rechnungen in Minuten – ohne Cloud, ohne Abo, mit voller Datenkontrolle.",
+    "ctaPrimary": "Lizenz anfragen",
+    "ctaSecondary": "Demo öffnen",
     "screenshotAlt": "PDR Kalk Dashboard",
     "trust1": "🔒 Lokal & Sicher",
     "trust2": "⚡ Rapport in 1 Min",
@@ -24,28 +24,36 @@
     "subtitle": "Entwickelt für PDR-Werkstätten — rechtssicher, präzise, effizient.",
     "items": [
       {
-        "title": "Hagelschaden-Kalkulation",
-        "desc": "Offerte in unter einer Minute erstellen mit integrierten Versicherungstarifen (VFFS 2025, Zürich 2024). Alle Details auf einem Bildschirm — Abweichungen werden automatisch für die Versicherung markiert. Professionell und vertrauenswürdig."
+        "title": "Professionelle Arbeitsrapporte – transparent, sauber und papierlos erstellt.",
+        "desc": "Erstellen Sie übersichtliche Rapporte in Minuten – klar strukturiert und versandbereit."
       },
       {
-        "title": "Parkschaden-Erfassung",
-        "desc": "Blitzschnelle Erfassung — Pauschalpreis oder Einzelpreise pro Bauteil. Rapport in unter einer Minute erstellen, Fotos anhängen und dem Kunden als PDF oder Rechnung direkt zustellen."
+        "title": "Schäden schnell und unkompliziert erfassen – mehr Zeit für die eigentliche Reparatur.",
+        "desc": "Reduzieren Sie Administrationsaufwand und konzentrieren Sie sich auf Ihre Arbeit."
       },
       {
-        "title": "5 Dokumenttypen",
-        "desc": "Kostenvoranschlag, Arbeitsrapport, Quittung, Rechnung und Parkschadenrapport — alle print-ready als PDF. Anpassbare Texte für Privat- und Firmenkunden, eigene Dokumentenpräfixe und Startnummern."
+        "title": "Fotos einfach anhängen – automatisch komprimiert und direkt ins PDF integriert.",
+        "desc": "Keine Nachbearbeitung, kein externes Tool nötig."
       },
       {
-        "title": "Statusverwaltung & Workflow",
-        "desc": "Behalten Sie den Überblick über jeden Auftrag. Rapporte: Akzeptiert, Abgeschlossen, Storniert. Rechnungen: Erstellt, Versendet, Bezahlt, Überfällig. Professionelles Workflow-Management auf einen Blick."
+        "title": "Parkschäden effizient berechnen – pauschal oder positionsbezogen pro Bauteil.",
+        "desc": ""
       },
       {
-        "title": "Fotodokumentation",
-        "desc": "Fotos einfach zum Rapport hinzufügen — Komprimierungsgrad frei wählbar. 2 Fotos pro Seite mit optionalen Beschreibungen, direkt in die PDF-Dokumente eingebettet."
+        "title": "Rechnungen in Sekunden erstellt – einzeln oder als Sammelrechnung.",
+        "desc": ""
       },
       {
-        "title": "Lokal & Strukturiert",
-        "desc": "Installierbar auf PC oder Tablet. Alle Dokumente, Fotos und Backups werden lokal in einer strukturierten Ordnerstruktur gespeichert. Vollständige Datensicherung mit einem Klick."
+        "title": "Messbare Zeitersparnis",
+        "desc": "– Bis zu 20 Minuten pro Auftrag bei der Schadenaufnahme\n– 30 bis 60 Minuten im Büro bei der Rechnungserstellung"
+      },
+      {
+        "title": "Offline-fähig & extrem schnell.",
+        "desc": "Kein Cloud-Zwang. Funktioniert auch ohne WLAN oder Mobilnetz."
+      },
+      {
+        "title": "Ihre Kundendaten bleiben lokal gespeichert.",
+        "desc": "Kein Risiko durch Cloud-Leaks oder externe Server."
       }
     ]
   },
@@ -69,7 +77,7 @@
     "steps": [
       {
         "num": "01",
-        "title": "Lizenz kaufen",
+        "title": "Lizenz anfragen",
         "desc": "Einmalige Zahlung, kein Abo. Sie erhalten sofort Ihren persönlichen Lizenzschlüssel per E-Mail."
       },
       {
@@ -85,29 +93,34 @@
     ]
   },
   "pricing": {
-    "title": "Einfach. Einmalig. Ihr.",
+    "title": "Einmalige Lizenz – volle Kontrolle",
     "badge": "Einmalzahlung — Kein Abo",
-    "price": "CHF 499",
+    "price": "CHF 699.00",
     "priceSuffix": "einmalig",
     "cta": "Jetzt kaufen",
-    "note": "Lizenz gilt für 3 Installationen. Sofortiger Zugang nach Zahlungseingang.",
+    "note": "Lizenz gilt für 2 Installationen. Sofortiger Zugang nach Zahlungseingang.",
     "features": [
-      "VFFS 2025 & Zürich 2024 Tarife",
-      "Hagelschaden & Parkschaden",
-      "5 Dokumenttypen als PDF",
-      "CHF mit 5-Rappen-Rundung",
-      "Für MwSt-pflichtige & Privatbetriebe",
-      "Anpassbare Texte für Privat-/Firmenkunden",
-      "Eigene Dokumentenpräfixe & Rechnungsnummern",
-      "Eigenes Logo mit wählbarer Grösse",
-      "Fotos komprimierbar — individuell einstellbar",
-      "Standard-Rabattsätze pro Kunde definierbar",
-      "Statusverwaltung für Rapporte & Rechnungen",
-      "Intelligente Aluminium-Bauteil-Logik",
-      "Dokumente lokal in strukturierten Ordnern",
-      "Datensicherung mit einem Klick",
-      "Lizenz für 3 Installationen"
-    ]
+      "Keine Abogebühren",
+      "2 Installationen inklusive",
+      "Aktivierung über verschlüsselten Lizenzschlüssel",
+      "Nutzung ohne Internetverbindung"
+    ],
+    "comparison": {
+      "title": "Kostenvergleich über 5 Jahre",
+      "competitorLabel": "Typische Wettbewerbssoftware",
+      "competitorItems": [
+        "Anschaffung: CHF 1'000–2'000",
+        "Laufende Gebühren oder Updatepflicht",
+        "Gesamtkosten über 5 Jahre: CHF 5'000–10'000"
+      ],
+      "ourLabel": "PDR Kalk",
+      "ourItems": [
+        "Einmalige Investition: CHF 699.00",
+        "Kleine optionale Update-Gebühr bei Versicherungstarif-Anpassungen",
+        "Optionale Feature-Upgrades"
+      ],
+      "conclusion": "Volle Kontrolle über Ihre Investition – keine laufenden Verpflichtungen."
+    }
   },
   "contact": {
     "title": "Fragen? Melden Sie sich.",

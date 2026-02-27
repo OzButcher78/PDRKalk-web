@@ -40,9 +40,19 @@ const icons = [
     <circle cx="11" cy="8" r="1.2" fill="currentColor"/>
     <circle cx="15" cy="8" r="1.2" fill="currentColor"/>
   </svg>,
+  /* clock */
+  <svg key="clock" width="28" height="28" viewBox="0 0 28 28" fill="none">
+    <circle cx="14" cy="14" r="10" stroke="currentColor" strokeWidth="1.8"/>
+    <path d="M14 9v5.5l3.5 3.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>,
+  /* shield */
+  <svg key="shield" width="28" height="28" viewBox="0 0 28 28" fill="none">
+    <path d="M14 3L5 7v8c0 5.25 3.8 10.15 9 11.35C19.2 25.15 23 20.25 23 15V7L14 3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"/>
+    <path d="M10 14l3 3 5-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>,
 ];
 
-const accentColors = ['var(--red)', 'var(--orange)', 'var(--blue)', 'var(--green)', 'var(--blue)', 'var(--steel)'];
+const accentColors = ['var(--red)', 'var(--orange)', 'var(--blue)', 'var(--green)', 'var(--blue)', 'var(--steel)', 'var(--green)', 'var(--blue)'];
 
 export default function Features() {
   const t = useTranslations('features');
@@ -122,6 +132,7 @@ export default function Features() {
                 color: '#64748b',
                 lineHeight: 1.6,
                 margin: 0,
+                whiteSpace: 'pre-line',
               }}>
                 {item.desc}
               </p>

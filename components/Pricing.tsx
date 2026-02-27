@@ -7,6 +7,14 @@ const BUY_URL = process.env.NEXT_PUBLIC_BUY_URL || '#contact';
 export default function Pricing() {
   const t = useTranslations('pricing');
   const features = t.raw('features') as string[];
+  const comparison = t.raw('comparison') as {
+    title: string;
+    competitorLabel: string;
+    competitorItems: string[];
+    ourLabel: string;
+    ourItems: string[];
+    conclusion: string;
+  };
 
   return (
     <section id="pricing" className="section-pad" style={{
@@ -166,6 +174,113 @@ export default function Pricing() {
               {t('note')}
             </p>
           </div>
+        </div>
+
+        {/* Cost comparison */}
+        <div style={{marginTop: '3rem'}}>
+          <h3 style={{
+            fontFamily: 'Barlow Condensed, sans-serif',
+            fontWeight: 900,
+            fontSize: 'clamp(1.4rem, 3vw, 1.8rem)',
+            color: 'var(--ink)',
+            margin: '0 0 1.25rem',
+            textAlign: 'center',
+            letterSpacing: '-0.01em',
+          }}>
+            {comparison.title}
+          </h3>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))',
+            gap: '1rem',
+          }}>
+            {/* Competitor column */}
+            <div style={{
+              background: '#fff',
+              border: '1px solid #e2e8f0',
+              borderLeft: '3px solid #94a3b8',
+              borderRadius: '8px',
+              padding: '1.25rem',
+            }}>
+              <p style={{
+                fontFamily: 'Barlow Condensed, sans-serif',
+                fontWeight: 800,
+                fontSize: '0.95rem',
+                letterSpacing: '0.04em',
+                textTransform: 'uppercase',
+                color: '#475569',
+                margin: '0 0 0.75rem',
+              }}>
+                {comparison.competitorLabel}
+              </p>
+              <ul style={{listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem'}}>
+                {comparison.competitorItems.map((item, i) => (
+                  <li key={i} style={{
+                    fontFamily: 'Barlow, sans-serif',
+                    fontSize: '0.85rem',
+                    color: '#64748b',
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    gap: '0.4rem',
+                    lineHeight: 1.4,
+                  }}>
+                    <span style={{color: '#94a3b8', flexShrink: 0}}>✕</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* PDR Kalk column */}
+            <div style={{
+              background: '#f0fdf4',
+              border: '1px solid #bbf7d0',
+              borderLeft: '3px solid var(--green)',
+              borderRadius: '8px',
+              padding: '1.25rem',
+            }}>
+              <p style={{
+                fontFamily: 'Barlow Condensed, sans-serif',
+                fontWeight: 800,
+                fontSize: '0.95rem',
+                letterSpacing: '0.04em',
+                textTransform: 'uppercase',
+                color: 'var(--ink)',
+                margin: '0 0 0.75rem',
+              }}>
+                {comparison.ourLabel}
+              </p>
+              <ul style={{listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem'}}>
+                {comparison.ourItems.map((item, i) => (
+                  <li key={i} style={{
+                    fontFamily: 'Barlow, sans-serif',
+                    fontSize: '0.85rem',
+                    color: '#166534',
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    gap: '0.4rem',
+                    lineHeight: 1.4,
+                  }}>
+                    <span style={{color: 'var(--green)', flexShrink: 0, fontWeight: 700}}>✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <p style={{
+            textAlign: 'center',
+            fontFamily: 'Barlow, sans-serif',
+            fontSize: '0.88rem',
+            fontWeight: 600,
+            color: '#475569',
+            margin: '1.25rem 0 0',
+            fontStyle: 'italic',
+          }}>
+            {comparison.conclusion}
+          </p>
         </div>
       </div>
     </section>

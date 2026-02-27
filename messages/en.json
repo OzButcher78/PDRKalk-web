@@ -9,11 +9,11 @@
   },
   "hero": {
     "badge": "v3.18.0 — New",
-    "title": "Professional PDR Estimation",
-    "titleAccent": "Built for Switzerland.",
-    "subtitle": "PDR Kalk creates hail damage estimates and parking damage reports in seconds — with official insurance tariffs, CHF rounding, and print-ready documents.",
-    "ctaPrimary": "Buy License",
-    "ctaSecondary": "Open App",
+    "title": "Hail & Parking Damage Estimation –",
+    "titleAccent": "fast, local, and legally compliant.",
+    "subtitle": "Create professional reports and invoices in minutes — no cloud, no subscription, full data control.",
+    "ctaPrimary": "Request License",
+    "ctaSecondary": "Open Demo",
     "screenshotAlt": "PDR Kalk Dashboard",
     "trust1": "🔒 Local & Secure",
     "trust2": "⚡ Report in 1 Min",
@@ -24,28 +24,36 @@
     "subtitle": "Built for PDR workshops — legally accurate, precise, efficient.",
     "items": [
       {
-        "title": "Hail Damage Estimation",
-        "desc": "Create an estimate in under a minute with integrated insurance tariffs (VFFS 2025, Zurich 2024). All details on one screen — deviations are automatically flagged for the insurer. Professional and trustworthy."
+        "title": "Professional work reports – transparent, clean, and paperless.",
+        "desc": "Create clear reports in minutes — well-structured and ready to send."
       },
       {
-        "title": "Parking Damage Entry",
-        "desc": "Lightning-fast entry — flat-rate price or per-panel pricing. Create a report in under a minute, attach photos and send your customer the PDF or invoice directly."
+        "title": "Capture damage quickly and easily – more time for the actual repair.",
+        "desc": "Reduce administrative overhead and focus on your work."
       },
       {
-        "title": "5 Document Types",
-        "desc": "Cost estimate, work report, receipt, invoice, and parking damage report — all print-ready as PDF. Customizable messages for private and business customers, with your own document prefixes and starting numbers."
+        "title": "Attach photos effortlessly – automatically compressed and embedded in the PDF.",
+        "desc": "No post-processing, no external tool needed."
       },
       {
-        "title": "Status Management & Workflow",
-        "desc": "Keep track of every job at a glance. Reports: Accepted, Completed, Cancelled. Invoices: Created, Sent, Paid, Overdue. Professional workflow management built right in."
+        "title": "Calculate parking damage efficiently – flat rate or per-panel pricing.",
+        "desc": ""
       },
       {
-        "title": "Photo Documentation",
-        "desc": "Easily add photos to any report — choose your own compression level for optimal file size. 2 photos per page with optional descriptions, embedded directly into your PDF documents."
+        "title": "Invoices created in seconds – individually or as a batch invoice.",
+        "desc": ""
       },
       {
-        "title": "Local & Structured",
-        "desc": "Installable on PC or tablet. All documents, photos and backups are saved locally in a structured folder system. Complete data backup with one click."
+        "title": "Measurable time savings",
+        "desc": "– Up to 20 minutes per job during damage capture\n– 30 to 60 minutes in the office when creating invoices"
+      },
+      {
+        "title": "Offline-capable & extremely fast.",
+        "desc": "No cloud required. Works without WiFi or mobile network."
+      },
+      {
+        "title": "Your customer data stays stored locally.",
+        "desc": "No risk from cloud leaks or external servers."
       }
     ]
   },
@@ -69,7 +77,7 @@
     "steps": [
       {
         "num": "01",
-        "title": "Buy a License",
+        "title": "Request a License",
         "desc": "One-time payment, no subscription. You receive your personal license key immediately by email."
       },
       {
@@ -85,29 +93,34 @@
     ]
   },
   "pricing": {
-    "title": "Simple. One-Time. Yours.",
+    "title": "One-Time License – Full Control",
     "badge": "One-Time Payment — No Subscription",
-    "price": "CHF 499",
+    "price": "CHF 699.00",
     "priceSuffix": "one-time",
     "cta": "Buy Now",
-    "note": "License valid for 3 installations. Instant access after payment.",
+    "note": "License valid for 2 installations. Instant access after payment.",
     "features": [
-      "VFFS 2025 & Zurich 2024 tariffs",
-      "Hail damage & parking damage",
-      "5 document types as PDF",
-      "CHF with 5-Rappen rounding",
-      "Works with or without VAT registration",
-      "Customizable invoice messages (private/business)",
-      "Custom document prefixes & invoice numbering",
-      "Your own logo with adjustable size",
-      "Adjustable photo compression",
-      "Set default discount rates per customer",
-      "Status tracking for reports & invoices",
-      "Smart aluminium panel logic",
-      "Documents saved in structured local folders",
-      "One-click full backup",
-      "License for 3 installations"
-    ]
+      "No subscription fees",
+      "2 installations included",
+      "Activation via encrypted license key",
+      "Works without internet connection"
+    ],
+    "comparison": {
+      "title": "5-Year Cost Comparison",
+      "competitorLabel": "Typical competitor software",
+      "competitorItems": [
+        "Purchase price: CHF 1,000–2,000",
+        "Ongoing fees or mandatory updates",
+        "Total cost over 5 years: CHF 5,000–10,000"
+      ],
+      "ourLabel": "PDR Kalk",
+      "ourItems": [
+        "One-time investment: CHF 699.00",
+        "Small optional update fee for insurance tariff changes",
+        "Optional feature upgrades"
+      ],
+      "conclusion": "Full control over your investment – no ongoing commitments."
+    }
   },
   "contact": {
     "title": "Questions? Get in Touch.",
