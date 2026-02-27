@@ -147,7 +147,7 @@ export default function Navbar() {
           {/* CTA */}
           <a
             href={BUY_URL}
-            className="btn-red"
+            className="btn-red hidden-mobile"
             style={{
               fontFamily: 'Barlow Condensed, sans-serif',
               fontWeight: 700,
