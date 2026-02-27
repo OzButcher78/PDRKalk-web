@@ -60,26 +60,43 @@ export default function Features() {
 
   return (
     <>
-      {/* ══ SUBSECTION A: Trust line + 3 Intro Blocks ══ */}
-      <section id="features" style={{
+      {/* ══ TRUST BAND: Dark section flows from hero ══ */}
+      <div id="features" style={{
+        background: 'var(--ink)',
+        padding: '3.5rem 1.5rem 4rem',
+        textAlign: 'center',
+        position: 'relative',
+        overflow: 'hidden',
+      }}>
+        {/* Subtle blue glow — matches hero */}
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'radial-gradient(ellipse 70% 100% at 50% 0%, rgba(37,99,235,0.07) 0%, transparent 70%)',
+          pointerEvents: 'none',
+        }}/>
+        <div className="fade-up" style={{maxWidth: '760px', margin: '0 auto', position: 'relative', zIndex: 1}}>
+          <div className="gradient-line" style={{width: '40px', margin: '0 auto 1.75rem'}}/>
+          <p style={{
+            fontFamily: 'Barlow Condensed, sans-serif',
+            fontWeight: 700,
+            fontSize: 'clamp(1.2rem, 2.5vw, 1.75rem)',
+            color: '#ffffff',
+            lineHeight: 1.45,
+            letterSpacing: '0.02em',
+            margin: 0,
+          }}>
+            {t('trustLine')}
+          </p>
+        </div>
+      </div>
+
+      {/* ══ SUBSECTION A: 3 Intro Blocks ══ */}
+      <section style={{
         background: 'var(--fog)',
         padding: '6rem 1.5rem 5rem',
       }}>
         <div style={{maxWidth: '1200px', margin: '0 auto'}}>
-
-          {/* Trust line */}
-          <p className="fade-up" style={{
-            textAlign: 'center',
-            fontFamily: 'Barlow, sans-serif',
-            fontSize: '0.9rem',
-            color: 'var(--steel)',
-            maxWidth: '640px',
-            margin: '0 auto 3rem',
-            lineHeight: 1.7,
-            fontStyle: 'italic',
-          }}>
-            {t('trustLine')}
-          </p>
 
           {/* Section title */}
           <div style={{textAlign: 'center', marginBottom: '2.5rem'}}>
