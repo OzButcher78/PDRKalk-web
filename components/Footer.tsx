@@ -32,42 +32,21 @@ export default function Footer() {
         }}
       >
         {/* Brand */}
-        <div style={{display: 'flex', alignItems: 'center', gap: '0.85rem'}}>
+        <div style={{display: 'flex', flexDirection: 'column', gap: '0.5rem'}}>
           <Image
             src="/logo.png"
             alt="PDR Kalk Logo"
-            width={72}
-            height={48}
-            style={{objectFit: 'contain', filter: 'drop-shadow(0 1px 4px rgba(0,0,0,0.5))'}}
+            width={148}
+            height={40}
+            style={{objectFit: 'contain'}}
           />
-          <div>
-            <div style={{
-              fontFamily: 'Barlow Condensed, sans-serif',
-              fontWeight: 800,
-              fontSize: '1rem',
-              color: '#fff',
-              letterSpacing: '0.04em',
-              lineHeight: 1.2,
-            }}>
-              PDR Kalk
-            </div>
-            <div style={{
-              fontFamily: 'Barlow, sans-serif',
-              fontSize: '0.72rem',
-              color: 'var(--steel)',
-              letterSpacing: '0.06em',
-              lineHeight: 1.2,
-            }}>
-              {t('company')}
-            </div>
-            <div style={{
-              fontFamily: 'Barlow, sans-serif',
-              fontSize: '0.68rem',
-              color: '#475569',
-              letterSpacing: '0.04em',
-            }}>
-              {t('tagline')}
-            </div>
+          <div style={{
+            fontFamily: 'Barlow, sans-serif',
+            fontSize: '0.7rem',
+            color: 'var(--steel)',
+            letterSpacing: '0.06em',
+          }}>
+            {t('company')} — {t('tagline')}
           </div>
         </div>
 

@@ -73,33 +73,11 @@ export default function Navbar() {
           <Image
             src="/logo.png"
             alt="PDR Kalk Logo"
-            width={70}
-            height={47}
-            style={{objectFit: 'contain', filter: 'drop-shadow(0 1px 4px rgba(0,0,0,0.5))'}}
+            width={160}
+            height={44}
+            style={{objectFit: 'contain'}}
             priority
           />
-          <div>
-            <div style={{
-              fontFamily: 'Barlow Condensed, sans-serif',
-              fontWeight: 800,
-              fontSize: '1.25rem',
-              color: '#fff',
-              letterSpacing: '0.04em',
-              lineHeight: 1,
-            }}>
-              PDR KALK
-            </div>
-            <div style={{
-              fontFamily: 'Barlow, sans-serif',
-              fontSize: '0.62rem',
-              color: 'var(--steel)',
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              lineHeight: 1,
-            }}>
-              v3.18.0
-            </div>
-          </div>
         </a>
 
         {/* Desktop nav links */}
