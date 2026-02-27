@@ -3,18 +3,39 @@
 import {useTranslations} from 'next-intl';
 import {useState} from 'react';
 
+type FormErrors = {name?: string; email?: string; message?: string};
+
 export default function Contact() {
   const t = useTranslations('contact');
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({name: '', email: '', message: ''});
+  const [errors, setErrors] = useState<FormErrors>({});
+
+  const validate = (): FormErrors => {
+    const errs: FormErrors = {};
+    if (!form.name.trim() || form.name.trim().length < 2) {
+      errs.name = 'Name benötigt (min. 2 Zeichen)';
+    }
+    if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
+      errs.email = 'Gültige E-Mail-Adresse benötigt';
+    }
+    if (!form.message.trim() || form.message.trim().length < 10) {
+      errs.message = 'Nachricht benötigt (min. 10 Zeichen)';
+    }
+    return errs;
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simple mailto fallback — wire to Resend/Formspree post-launch
-    const subject = encodeURIComponent(`BSS PDR Kalk — Anfrage von ${form.name}`);
-    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`);
-    window.location.href = `mailto:${t('email')}?subject=${subject}&body=${body}`;
+    const errs = validate();
+    if (Object.keys(errs).length > 0) {
+      setErrors(errs);
+      return;
+    }
+    // TODO: wire to Resend / Formspree for actual delivery
     setSubmitted(true);
+    setForm({name: '', email: '', message: ''});
+    setErrors({});
   };
 
   const inputStyle = {
@@ -32,8 +53,16 @@ export default function Contact() {
     boxSizing: 'border-box' as const,
   };
 
+  const errorStyle = {
+    fontFamily: 'Barlow, sans-serif',
+    fontSize: '0.78rem',
+    color: '#fc8181',
+    marginTop: '0.3rem',
+    display: 'block',
+  };
+
   return (
-    <section id="contact" style={{
+    <section id="contact" className="section-pad" style={{
       background: 'var(--ink-mid)',
       padding: '6rem 1.5rem',
     }}>
@@ -77,59 +106,80 @@ export default function Contact() {
               fontSize: '1.2rem',
               color: '#4ade80',
               letterSpacing: '0.04em',
+              margin: 0,
             }}>
               {t('success')}
             </p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="fade-up">
-            <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem'}}
+          <form onSubmit={handleSubmit} className="fade-up" noValidate>
+            {/* Name + Email row */}
+            <div
               className="contact-grid"
+              style={{display: 'grid', gap: '1rem', marginBottom: '1rem'}}
             >
               <div>
                 <input
                   type="text"
-                  required
                   placeholder={t('namePlaceholder')}
                   value={form.name}
-                  onChange={e => setForm({...form, name: e.target.value})}
-                  style={inputStyle}
-                  onFocus={e => e.target.style.borderColor = 'var(--red)'}
-                  onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
+                  onChange={e => {
+                    setForm({...form, name: e.target.value});
+                    if (errors.name) setErrors({...errors, name: undefined});
+                  }}
+                  style={{
+                    ...inputStyle,
+                    borderColor: errors.name ? 'rgba(252,129,129,0.6)' : 'rgba(255,255,255,0.1)',
+                  }}
+                  onFocus={e => { if (!errors.name) e.target.style.borderColor = 'var(--red)'; }}
+                  onBlur={e => { if (!errors.name) e.target.style.borderColor = 'rgba(255,255,255,0.1)'; }}
                 />
+                {errors.name && <span style={errorStyle}>{errors.name}</span>}
               </div>
               <div>
                 <input
                   type="email"
-                  required
                   placeholder={t('emailPlaceholder')}
                   value={form.email}
-                  onChange={e => setForm({...form, email: e.target.value})}
-                  style={inputStyle}
-                  onFocus={e => e.target.style.borderColor = 'var(--red)'}
-                  onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
+                  onChange={e => {
+                    setForm({...form, email: e.target.value});
+                    if (errors.email) setErrors({...errors, email: undefined});
+                  }}
+                  style={{
+                    ...inputStyle,
+                    borderColor: errors.email ? 'rgba(252,129,129,0.6)' : 'rgba(255,255,255,0.1)',
+                  }}
+                  onFocus={e => { if (!errors.email) e.target.style.borderColor = 'var(--red)'; }}
+                  onBlur={e => { if (!errors.email) e.target.style.borderColor = 'rgba(255,255,255,0.1)'; }}
                 />
+                {errors.email && <span style={errorStyle}>{errors.email}</span>}
               </div>
             </div>
 
-            <textarea
-              required
-              rows={5}
-              placeholder={t('messagePlaceholder')}
-              value={form.message}
-              onChange={e => setForm({...form, message: e.target.value})}
-              style={{
-                ...inputStyle,
-                resize: 'vertical',
-                marginBottom: '1rem',
-                minHeight: '120px',
-              }}
-              onFocus={e => e.target.style.borderColor = 'var(--red)'}
-              onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
-            />
+            <div style={{marginBottom: '1rem'}}>
+              <textarea
+                rows={5}
+                placeholder={t('messagePlaceholder')}
+                value={form.message}
+                onChange={e => {
+                  setForm({...form, message: e.target.value});
+                  if (errors.message) setErrors({...errors, message: undefined});
+                }}
+                style={{
+                  ...inputStyle,
+                  resize: 'vertical',
+                  minHeight: '120px',
+                  borderColor: errors.message ? 'rgba(252,129,129,0.6)' : 'rgba(255,255,255,0.1)',
+                }}
+                onFocus={e => { if (!errors.message) e.target.style.borderColor = 'var(--red)'; }}
+                onBlur={e => { if (!errors.message) e.target.style.borderColor = 'rgba(255,255,255,0.1)'; }}
+              />
+              {errors.message && <span style={errorStyle}>{errors.message}</span>}
+            </div>
 
             <button
               type="submit"
+              className="btn-red"
               style={{
                 width: '100%',
                 fontFamily: 'Barlow Condensed, sans-serif',
@@ -143,16 +193,8 @@ export default function Contact() {
                 borderRadius: '6px',
                 padding: '1rem',
                 cursor: 'pointer',
-                transition: 'all 0.2s',
+                transition: 'background 0.2s, transform 0.15s',
                 boxShadow: '0 4px 20px rgba(232,0,29,0.25)',
-              }}
-              onMouseEnter={e => {
-                e.currentTarget.style.background = '#c40019';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.background = 'var(--red)';
-                e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
               {t('submit')} →
@@ -176,12 +218,6 @@ export default function Contact() {
           </a>
         </p>
       </div>
-
-      <style>{`
-        @media (max-width: 520px) {
-          .contact-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </section>
   );
 }

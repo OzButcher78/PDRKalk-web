@@ -12,6 +12,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
+      className="section-pad"
       style={{
         background: 'var(--ink)',
         position: 'relative',
@@ -19,6 +20,8 @@ export default function Hero() {
         minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
+        paddingTop: '5rem',
+        paddingBottom: '5rem',
       }}
     >
       {/* Background geometric detail */}
@@ -50,19 +53,19 @@ export default function Hero() {
         pointerEvents: 'none',
       }}/>
 
-      <div style={{
-        maxWidth: '1200px',
-        margin: '0 auto',
-        padding: '5rem 1.5rem',
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
-        gap: '3rem',
-        alignItems: 'center',
-        position: 'relative',
-        zIndex: 2,
-        width: '100%',
-      }}
+      <div
         className="hero-grid"
+        style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          padding: '0 1.5rem',
+          display: 'grid',
+          gap: '3rem',
+          alignItems: 'center',
+          position: 'relative',
+          zIndex: 2,
+          width: '100%',
+        }}
       >
         {/* Left — Text */}
         <div>
@@ -96,7 +99,7 @@ export default function Hero() {
           <h1 className="fade-up-1" style={{
             fontFamily: 'Barlow Condensed, sans-serif',
             fontWeight: 900,
-            fontSize: 'clamp(2.8rem, 6vw, 5rem)',
+            fontSize: 'clamp(2.4rem, 6vw, 5rem)',
             lineHeight: 0.95,
             color: '#ffffff',
             margin: '0 0 0.5rem',
@@ -107,7 +110,7 @@ export default function Hero() {
           <h1 className="fade-up-2" style={{
             fontFamily: 'Barlow Condensed, sans-serif',
             fontWeight: 900,
-            fontSize: 'clamp(2.8rem, 6vw, 5rem)',
+            fontSize: 'clamp(2.4rem, 6vw, 5rem)',
             lineHeight: 0.95,
             color: 'var(--red)',
             margin: '0 0 2rem',
@@ -120,7 +123,7 @@ export default function Hero() {
           <p className="fade-up-3" style={{
             fontFamily: 'Barlow, sans-serif',
             fontWeight: 400,
-            fontSize: 'clamp(1rem, 1.5vw, 1.15rem)',
+            fontSize: 'clamp(0.95rem, 1.5vw, 1.15rem)',
             lineHeight: 1.65,
             color: '#8fa8c8',
             maxWidth: '500px',
@@ -133,6 +136,7 @@ export default function Hero() {
           <div className="fade-up-4" style={{display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
             <a
               href={BUY_URL}
+              className="btn-red"
               style={{
                 fontFamily: 'Barlow Condensed, sans-serif',
                 fontWeight: 800,
@@ -145,18 +149,8 @@ export default function Hero() {
                 padding: '0.85rem 2rem',
                 borderRadius: '5px',
                 display: 'inline-block',
-                transition: 'all 0.2s',
+                transition: 'background 0.2s, transform 0.15s, box-shadow 0.2s',
                 boxShadow: '0 4px 20px rgba(232,0,29,0.35)',
-              }}
-              onMouseEnter={e => {
-                e.currentTarget.style.background = 'var(--red-hover, #c40019)';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 8px 28px rgba(232,0,29,0.45)';
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.background = 'var(--red)';
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 4px 20px rgba(232,0,29,0.35)';
               }}
             >
               {t('ctaPrimary')}
@@ -165,6 +159,7 @@ export default function Hero() {
               href={APP_URL}
               target="_blank"
               rel="noopener noreferrer"
+              className="btn-ghost"
               style={{
                 fontFamily: 'Barlow Condensed, sans-serif',
                 fontWeight: 700,
@@ -178,15 +173,7 @@ export default function Hero() {
                 borderRadius: '5px',
                 border: '2px solid rgba(255,255,255,0.2)',
                 display: 'inline-block',
-                transition: 'all 0.2s',
-              }}
-              onMouseEnter={e => {
-                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.5)';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)';
-                e.currentTarget.style.transform = 'translateY(0)';
+                transition: 'border-color 0.2s, transform 0.15s',
               }}
             >
               {t('ctaSecondary')} →
@@ -266,6 +253,7 @@ export default function Hero() {
               alt={t('screenshotAlt')}
               width={1200}
               height={800}
+              sizes="(max-width: 768px) 100vw, 50vw"
               style={{width: '100%', height: 'auto', display: 'block'}}
               priority
             />
@@ -283,17 +271,6 @@ export default function Hero() {
         background: 'linear-gradient(transparent, rgba(10,15,30,0.3))',
         pointerEvents: 'none',
       }}/>
-
-      <style>{`
-        @media (max-width: 900px) {
-          .hero-grid {
-            grid-template-columns: 1fr !important;
-          }
-          .hero-screenshot {
-            order: -1;
-          }
-        }
-      `}</style>
     </section>
   );
 }

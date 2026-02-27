@@ -2,17 +2,41 @@
 
 import {useTranslations} from 'next-intl';
 import Image from 'next/image';
-import {useState} from 'react';
+import {useState, useEffect, useCallback} from 'react';
 
 type ImgEntry = {file: string; caption: string};
 
 export default function Screenshots() {
   const t = useTranslations('screenshots');
   const images = t.raw('images') as ImgEntry[];
-  const [lightbox, setLightbox] = useState<ImgEntry | null>(null);
+  const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
+
+  const closeLightbox = useCallback(() => setLightboxIdx(null), []);
+
+  const prevImage = useCallback(() => {
+    setLightboxIdx(idx => idx === null ? null : (idx - 1 + images.length) % images.length);
+  }, [images.length]);
+
+  const nextImage = useCallback(() => {
+    setLightboxIdx(idx => idx === null ? null : (idx + 1) % images.length);
+  }, [images.length]);
+
+  // Keyboard: Escape to close, arrow keys to navigate
+  useEffect(() => {
+    if (lightboxIdx === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape')     closeLightbox();
+      if (e.key === 'ArrowLeft')  prevImage();
+      if (e.key === 'ArrowRight') nextImage();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [lightboxIdx, closeLightbox, prevImage, nextImage]);
+
+  const lightbox = lightboxIdx !== null ? images[lightboxIdx] : null;
 
   return (
-    <section id="screenshots" style={{
+    <section id="screenshots" className="section-pad" style={{
       background: 'var(--ink-mid)',
       padding: '6rem 1.5rem',
       position: 'relative',
@@ -49,13 +73,13 @@ export default function Screenshots() {
           </p>
         </div>
 
-        {/* Screenshot grid */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: '1rem',
-        }}
+        {/* Screenshot grid — breakpoints in globals.css */}
+        <div
           className="screenshots-grid"
+          style={{
+            display: 'grid',
+            gap: '1rem',
+          }}
         >
           {images.map((img, i) => (
             <div
@@ -64,15 +88,9 @@ export default function Screenshots() {
               style={{display: 'flex', flexDirection: 'column', gap: '0.5rem'}}
             >
               <button
-                onClick={() => setLightbox(img)}
-                style={{
-                  background: 'none',
-                  border: 'none',
-                  padding: 0,
-                  cursor: 'pointer',
-                  display: 'block',
-                  width: '100%',
-                }}
+                onClick={() => setLightboxIdx(i)}
+                className="screenshot-btn"
+                aria-label={`${img.caption} vergrössern`}
               >
                 <div style={{
                   position: 'relative',
@@ -85,11 +103,13 @@ export default function Screenshots() {
                     src={`/screenshots/${img.file}`}
                     alt={img.caption}
                     fill
-                    style={{objectFit: 'cover', transition: 'transform 0.35s ease'}}
-                    className={`screenshot-img-${i}`}
+                    sizes="(max-width: 480px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    style={{objectFit: 'cover'}}
+                    className="screenshot-img"
                   />
                   {/* Hover overlay */}
                   <div
+                    className="screenshot-overlay"
                     style={{
                       position: 'absolute',
                       inset: 0,
@@ -97,20 +117,23 @@ export default function Screenshots() {
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      transition: 'background 0.25s',
                     }}
-                    className={`screenshot-overlay-${i}`}
                   >
-                    <svg width="28" height="28" viewBox="0 0 28 28" fill="white"
-                      style={{opacity: 0, transition: 'opacity 0.25s', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))'}}>
-                      <circle cx="14" cy="14" r="13" fill="rgba(0,0,0,0.4)" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5"/>
-                      <path d="M11 9l8 5-8 5V9z" fill="white"/>
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="white"
+                      className="screenshot-play"
+                      style={{filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.6))'}}
+                    >
+                      <circle cx="20" cy="20" r="19" fill="rgba(0,0,0,0.45)" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5"/>
+                      <path d="M16 13l14 7-14 7V13z" fill="white"/>
                     </svg>
                   </div>
                 </div>
               </button>
 
-              {/* Caption below the image */}
               <div style={{
                 fontFamily: 'Barlow Condensed, sans-serif',
                 fontWeight: 600,
@@ -123,44 +146,101 @@ export default function Screenshots() {
               }}>
                 {img.caption}
               </div>
-
-              <style>{`
-                button:hover .screenshot-img-${i} { transform: scale(1.04); }
-                button:hover .screenshot-overlay-${i} { background: rgba(37,99,235,0.18) !important; }
-                button:hover .screenshot-overlay-${i} svg { opacity: 1 !important; }
-              `}</style>
             </div>
           ))}
         </div>
       </div>
 
       {/* Lightbox */}
-      {lightbox && (
+      {lightbox && lightboxIdx !== null && (
         <div
           className="lightbox-overlay"
-          onClick={() => setLightbox(null)}
+          onClick={closeLightbox}
+          role="dialog"
+          aria-modal="true"
+          aria-label={lightbox.caption}
         >
+          {/* Close button */}
           <button
-            onClick={() => setLightbox(null)}
+            onClick={closeLightbox}
+            aria-label="Schliessen"
             style={{
               position: 'absolute',
-              top: '1.5rem',
-              right: '1.5rem',
-              background: 'rgba(255,255,255,0.1)',
+              top: '1rem',
+              right: '1rem',
+              background: 'rgba(255,255,255,0.12)',
               border: '1px solid rgba(255,255,255,0.2)',
               borderRadius: '50%',
-              width: '44px',
-              height: '44px',
+              width: '48px',
+              height: '48px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               cursor: 'pointer',
               color: '#fff',
-              fontSize: '1.2rem',
+              fontSize: '1.3rem',
+              zIndex: 10,
+              flexShrink: 0,
             }}
           >
             ✕
           </button>
+
+          {/* Prev button */}
+          <button
+            onClick={e => { e.stopPropagation(); prevImage(); }}
+            aria-label="Vorheriges Bild"
+            style={{
+              position: 'absolute',
+              left: '1rem',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              background: 'rgba(255,255,255,0.12)',
+              border: '1px solid rgba(255,255,255,0.2)',
+              borderRadius: '50%',
+              width: '52px',
+              height: '52px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer',
+              color: '#fff',
+              fontSize: '1.4rem',
+              zIndex: 10,
+              flexShrink: 0,
+            }}
+          >
+            ‹
+          </button>
+
+          {/* Next button */}
+          <button
+            onClick={e => { e.stopPropagation(); nextImage(); }}
+            aria-label="Nächstes Bild"
+            style={{
+              position: 'absolute',
+              right: '1rem',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              background: 'rgba(255,255,255,0.12)',
+              border: '1px solid rgba(255,255,255,0.2)',
+              borderRadius: '50%',
+              width: '52px',
+              height: '52px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer',
+              color: '#fff',
+              fontSize: '1.4rem',
+              zIndex: 10,
+              flexShrink: 0,
+            }}
+          >
+            ›
+          </button>
+
+          {/* Content — stop click propagation so clicking image doesn't close */}
           <div
             onClick={e => e.stopPropagation()}
             style={{
@@ -169,9 +249,9 @@ export default function Screenshots() {
               alignItems: 'center',
               gap: '1rem',
               maxWidth: '92vw',
+              padding: '0 4rem',
             }}
           >
-            {/* Image — no caption overlay */}
             <div style={{
               borderRadius: '10px',
               overflow: 'hidden',
@@ -185,41 +265,46 @@ export default function Screenshots() {
                 height={900}
                 style={{
                   maxWidth: '88vw',
-                  maxHeight: '76vh',
+                  maxHeight: '72vh',
                   objectFit: 'contain',
                   display: 'block',
                 }}
               />
             </div>
 
-            {/* Caption below the image */}
+            {/* Caption + counter */}
             <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '1rem',
               fontFamily: 'Barlow Condensed, sans-serif',
-              fontWeight: 700,
-              fontSize: '1rem',
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              color: 'rgba(255,255,255,0.7)',
               textAlign: 'center',
-              background: 'rgba(10,15,30,0.6)',
-              border: '1px solid rgba(255,255,255,0.08)',
-              borderRadius: '4px',
-              padding: '0.4rem 1.25rem',
             }}>
-              {lightbox.caption}
+              <span style={{
+                fontWeight: 700,
+                fontSize: '1rem',
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+                color: 'rgba(255,255,255,0.8)',
+                background: 'rgba(10,15,30,0.6)',
+                border: '1px solid rgba(255,255,255,0.08)',
+                borderRadius: '4px',
+                padding: '0.4rem 1.25rem',
+              }}>
+                {lightbox.caption}
+              </span>
+              <span style={{
+                fontSize: '0.82rem',
+                letterSpacing: '0.08em',
+                color: 'rgba(148,163,184,0.7)',
+                whiteSpace: 'nowrap',
+              }}>
+                {lightboxIdx + 1} / {images.length}
+              </span>
             </div>
           </div>
         </div>
       )}
-
-      <style>{`
-        @media (max-width: 900px) {
-          .screenshots-grid { grid-template-columns: repeat(2, 1fr) !important; }
-        }
-        @media (max-width: 580px) {
-          .screenshots-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </section>
   );
 }

@@ -24,18 +24,17 @@ export default function Navbar() {
 
   const switchLocale = () => {
     const next = locale === 'de' ? 'en' : 'de';
-    // Replace locale prefix in pathname
     const segments = pathname.split('/');
     segments[1] = next;
     router.push(segments.join('/') || `/${next}`);
   };
 
   const navLinks = [
-    {href: '#features', label: t('features')},
+    {href: '#features',    label: t('features')},
     {href: '#screenshots', label: t('screenshots')},
-    {href: '#pricing', label: t('pricing')},
-    {href: '#access', label: t('howItWorks')},
-    {href: '#contact', label: t('contact')},
+    {href: '#pricing',     label: t('pricing')},
+    {href: '#access',      label: t('howItWorks')},
+    {href: '#contact',     label: t('contact')},
   ];
 
   return (
@@ -44,9 +43,7 @@ export default function Navbar() {
         position: 'sticky',
         top: 0,
         zIndex: 50,
-        background: scrolled
-          ? 'rgba(10,15,30,0.97)'
-          : 'rgba(10,15,30,1)',
+        background: scrolled ? 'rgba(10,15,30,0.97)' : 'rgba(10,15,30,1)',
         borderBottom: scrolled ? '1px solid rgba(232,0,29,0.25)' : '1px solid transparent',
         backdropFilter: 'blur(12px)',
         transition: 'all 0.3s ease',
@@ -106,20 +103,22 @@ export default function Navbar() {
         </a>
 
         {/* Desktop nav links */}
-        <ul style={{
-          display: 'flex',
-          gap: '0.25rem',
-          listStyle: 'none',
-          margin: 0,
-          padding: 0,
-          alignItems: 'center',
-        }}
+        <ul
           className="hidden-mobile"
+          style={{
+            display: 'flex',
+            gap: '0.25rem',
+            listStyle: 'none',
+            margin: 0,
+            padding: 0,
+            alignItems: 'center',
+          }}
         >
           {navLinks.map(link => (
             <li key={link.href}>
               <a
                 href={link.href}
+                className="nav-link"
                 style={{
                   fontFamily: 'Barlow Condensed, sans-serif',
                   fontWeight: 600,
@@ -128,12 +127,10 @@ export default function Navbar() {
                   textTransform: 'uppercase',
                   color: 'var(--steel)',
                   textDecoration: 'none',
-                  padding: '0.4rem 0.75rem',
+                  padding: '0.5rem 0.75rem',
                   borderRadius: '4px',
-                  transition: 'color 0.2s',
+                  display: 'inline-block',
                 }}
-                onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
-                onMouseLeave={e => (e.currentTarget.style.color = 'var(--steel)')}
               >
                 {link.label}
               </a>
@@ -146,6 +143,7 @@ export default function Navbar() {
           {/* Lang switcher */}
           <button
             onClick={switchLocale}
+            className="nav-link"
             style={{
               fontFamily: 'Barlow Condensed, sans-serif',
               fontWeight: 700,
@@ -155,18 +153,14 @@ export default function Navbar() {
               background: 'rgba(255,255,255,0.06)',
               border: '1px solid rgba(148,163,184,0.2)',
               borderRadius: '4px',
-              padding: '0.35rem 0.65rem',
+              padding: '0.4rem 0.65rem',
               cursor: 'pointer',
-              transition: 'all 0.2s',
               textTransform: 'uppercase',
-            }}
-            onMouseEnter={e => {
-              e.currentTarget.style.color = '#fff';
-              e.currentTarget.style.borderColor = 'rgba(148,163,184,0.5)';
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.color = 'var(--steel)';
-              e.currentTarget.style.borderColor = 'rgba(148,163,184,0.2)';
+              minWidth: '44px',
+              minHeight: '44px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
           >
             {locale === 'de' ? 'EN' : 'DE'}
@@ -175,6 +169,7 @@ export default function Navbar() {
           {/* CTA */}
           <a
             href={BUY_URL}
+            className="btn-red"
             style={{
               fontFamily: 'Barlow Condensed, sans-serif',
               fontWeight: 700,
@@ -188,16 +183,9 @@ export default function Navbar() {
               padding: '0.5rem 1.1rem',
               textDecoration: 'none',
               cursor: 'pointer',
-              transition: 'background 0.2s, transform 0.15s',
+              transition: 'background 0.2s, transform 0.15s, box-shadow 0.2s',
               display: 'inline-block',
-            }}
-            onMouseEnter={e => {
-              e.currentTarget.style.background = 'var(--red-hover)';
-              e.currentTarget.style.transform = 'translateY(-1px)';
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.background = 'var(--red)';
-              e.currentTarget.style.transform = 'translateY(0)';
+              whiteSpace: 'nowrap',
             }}
           >
             {t('cta')}
@@ -206,19 +194,23 @@ export default function Navbar() {
           {/* Mobile hamburger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
+            className="show-mobile"
+            aria-label="Menu"
+            aria-expanded={menuOpen}
             style={{
-              display: 'none',
               flexDirection: 'column',
               gap: '5px',
               background: 'none',
               border: 'none',
               cursor: 'pointer',
-              padding: '4px',
+              padding: '8px',
+              minWidth: '44px',
+              minHeight: '44px',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
-            className="show-mobile"
-            aria-label="Menu"
           >
-            {[0,1,2].map(i => (
+            {[0, 1, 2].map(i => (
               <span key={i} style={{
                 display: 'block',
                 width: '22px',
@@ -242,7 +234,7 @@ export default function Navbar() {
         <div style={{
           background: 'var(--ink)',
           borderTop: '1px solid rgba(232,0,29,0.2)',
-          padding: '1rem 1.5rem',
+          padding: '0.75rem 1.5rem 1.25rem',
         }}>
           {navLinks.map(link => (
             <a
@@ -250,7 +242,8 @@ export default function Navbar() {
               href={link.href}
               onClick={() => setMenuOpen(false)}
               style={{
-                display: 'block',
+                display: 'flex',
+                alignItems: 'center',
                 fontFamily: 'Barlow Condensed, sans-serif',
                 fontWeight: 700,
                 fontSize: '1.1rem',
@@ -258,22 +251,39 @@ export default function Navbar() {
                 textTransform: 'uppercase',
                 color: '#fff',
                 textDecoration: 'none',
-                padding: '0.75rem 0',
+                padding: '0.85rem 0',
                 borderBottom: '1px solid rgba(255,255,255,0.07)',
+                minHeight: '48px',
               }}
             >
               {link.label}
             </a>
           ))}
+          <a
+            href={BUY_URL}
+            onClick={() => setMenuOpen(false)}
+            className="btn-red"
+            style={{
+              display: 'block',
+              textAlign: 'center',
+              fontFamily: 'Barlow Condensed, sans-serif',
+              fontWeight: 800,
+              fontSize: '1rem',
+              letterSpacing: '0.1em',
+              textTransform: 'uppercase',
+              color: '#fff',
+              background: 'var(--red)',
+              textDecoration: 'none',
+              padding: '0.85rem 1rem',
+              borderRadius: '5px',
+              marginTop: '1rem',
+              transition: 'background 0.2s',
+            }}
+          >
+            {t('cta')} →
+          </a>
         </div>
       )}
-
-      <style>{`
-        @media (max-width: 768px) {
-          .hidden-mobile { display: none !important; }
-          .show-mobile   { display: flex !important; }
-        }
-      `}</style>
     </header>
   );
 }

@@ -7,21 +7,30 @@ export default function Footer() {
   const t = useTranslations('footer');
   const nav = useTranslations('nav');
 
+  const links = [
+    {key: 'features' as const, href: '#features'},
+    {key: 'pricing'  as const, href: '#pricing'},
+    {key: 'contact'  as const, href: '#contact'},
+  ];
+
   return (
     <footer style={{
       background: 'var(--ink)',
       borderTop: '1px solid rgba(232,0,29,0.2)',
       padding: '3rem 1.5rem',
     }}>
-      <div style={{
-        maxWidth: '1200px',
-        margin: '0 auto',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        flexWrap: 'wrap',
-        gap: '2rem',
-      }}>
+      <div
+        className="footer-inner"
+        style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '2rem',
+        }}
+      >
         {/* Brand */}
         <div style={{display: 'flex', alignItems: 'center', gap: '0.85rem'}}>
           <Image
@@ -63,15 +72,17 @@ export default function Footer() {
         </div>
 
         {/* Nav links */}
-        <nav style={{
+        <nav aria-label="Footer navigation" style={{
           display: 'flex',
           gap: '1.5rem',
           flexWrap: 'wrap',
+          justifyContent: 'center',
         }}>
-          {(['features', 'pricing', 'contact'] as const).map(key => (
+          {links.map(({key, href}) => (
             <a
               key={key}
-              href={`#${key === 'features' ? 'features' : key === 'pricing' ? 'pricing' : 'contact'}`}
+              href={href}
+              className="footer-link"
               style={{
                 fontFamily: 'Barlow Condensed, sans-serif',
                 fontWeight: 600,
@@ -81,9 +92,8 @@ export default function Footer() {
                 color: 'var(--steel)',
                 textDecoration: 'none',
                 transition: 'color 0.2s',
+                padding: '0.25rem 0',
               }}
-              onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
-              onMouseLeave={e => (e.currentTarget.style.color = 'var(--steel)')}
             >
               {nav(key)}
             </a>
@@ -91,7 +101,7 @@ export default function Footer() {
         </nav>
 
         {/* Copyright + international note */}
-        <div style={{textAlign: 'right'}}>
+        <div className="footer-copyright" style={{textAlign: 'right'}}>
           <p style={{
             fontFamily: 'Barlow, sans-serif',
             fontSize: '0.78rem',

@@ -9,7 +9,7 @@ export default function Pricing() {
   const features = t.raw('features') as string[];
 
   return (
-    <section id="pricing" style={{
+    <section id="pricing" className="section-pad" style={{
       background: 'var(--fog)',
       padding: '6rem 1.5rem',
       position: 'relative',
@@ -47,7 +47,7 @@ export default function Pricing() {
           }}/>
 
           {/* Card content */}
-          <div style={{padding: '2.5rem 2.5rem'}}>
+          <div style={{padding: 'clamp(1.5rem, 4vw, 2.5rem)'}}>
             {/* Badge */}
             <div style={{marginBottom: '2rem', textAlign: 'center'}}>
               <span style={{
@@ -98,16 +98,16 @@ export default function Pricing() {
               marginBottom: '2rem',
             }}/>
 
-            {/* Features list */}
-            <ul style={{
-              listStyle: 'none',
-              margin: '0 0 2rem',
-              padding: 0,
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              gap: '0.65rem',
-            }}
+            {/* Features list — breakpoints in globals.css */}
+            <ul
               className="pricing-features"
+              style={{
+                listStyle: 'none',
+                margin: '0 0 2rem',
+                padding: 0,
+                display: 'grid',
+                gap: '0.65rem',
+              }}
             >
               {features.map((feat, i) => (
                 <li key={i} style={{
@@ -134,6 +134,7 @@ export default function Pricing() {
             {/* CTA button */}
             <a
               href={BUY_URL}
+              className="btn-red"
               style={{
                 display: 'block',
                 textAlign: 'center',
@@ -147,18 +148,8 @@ export default function Pricing() {
                 textDecoration: 'none',
                 padding: '1rem',
                 borderRadius: '6px',
-                transition: 'all 0.2s',
+                transition: 'background 0.2s, transform 0.15s, box-shadow 0.2s',
                 boxShadow: '0 4px 20px rgba(232,0,29,0.3)',
-              }}
-              onMouseEnter={e => {
-                e.currentTarget.style.background = '#c40019';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 8px 30px rgba(232,0,29,0.45)';
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.background = 'var(--red)';
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 4px 20px rgba(232,0,29,0.3)';
               }}
             >
               {t('cta')} →
@@ -177,12 +168,6 @@ export default function Pricing() {
           </div>
         </div>
       </div>
-
-      <style>{`
-        @media (max-width: 520px) {
-          .pricing-features { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </section>
   );
 }

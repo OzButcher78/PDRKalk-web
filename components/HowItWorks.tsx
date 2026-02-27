@@ -7,7 +7,7 @@ export default function HowItWorks() {
   const steps = t.raw('steps') as Array<{num: string; title: string; desc: string}>;
 
   return (
-    <section id="access" style={{
+    <section id="access" className="section-pad" style={{
       background: 'var(--ink)',
       padding: '6rem 1.5rem',
       position: 'relative',
@@ -40,25 +40,27 @@ export default function HowItWorks() {
           <div className="gradient-line" style={{width: '60px', margin: '0 auto'}}/>
         </div>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: '0',
-          position: 'relative',
-        }}
+        {/* Steps grid — breakpoints handled in globals.css */}
+        <div
           className="steps-grid"
-        >
-          {/* Connector line */}
-          <div style={{
-            position: 'absolute',
-            top: '36px',
-            left: '16.67%',
-            right: '16.67%',
-            height: '2px',
-            background: 'linear-gradient(90deg, var(--red), var(--blue))',
-            zIndex: 0,
+          style={{
+            display: 'grid',
+            gap: '0',
+            position: 'relative',
           }}
+        >
+          {/* Connector line — hidden on mobile via CSS */}
+          <div
             className="steps-connector"
+            style={{
+              position: 'absolute',
+              top: '36px',
+              left: '16.67%',
+              right: '16.67%',
+              height: '2px',
+              background: 'linear-gradient(90deg, var(--red), var(--blue))',
+              zIndex: 0,
+            }}
           />
 
           {steps.map((step, i) => (
@@ -80,7 +82,7 @@ export default function HowItWorks() {
                 width: '72px',
                 height: '72px',
                 borderRadius: '50%',
-                background: i === 0 ? 'var(--red)' : i === 1 ? '#1e2d42' : '#1e2d42',
+                background: i === 0 ? 'var(--red)' : '#1e2d42',
                 border: `2px solid ${i === 0 ? 'var(--red)' : 'rgba(255,255,255,0.1)'}`,
                 display: 'flex',
                 alignItems: 'center',
@@ -117,6 +119,7 @@ export default function HowItWorks() {
                 color: '#8fa8c8',
                 lineHeight: 1.65,
                 margin: 0,
+                maxWidth: '260px',
               }}>
                 {step.desc}
               </p>
@@ -124,13 +127,6 @@ export default function HowItWorks() {
           ))}
         </div>
       </div>
-
-      <style>{`
-        @media (max-width: 680px) {
-          .steps-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
-          .steps-connector { display: none; }
-        }
-      `}</style>
     </section>
   );
 }

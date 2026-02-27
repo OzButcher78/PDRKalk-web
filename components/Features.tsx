@@ -49,7 +49,7 @@ export default function Features() {
   const items = t.raw('items') as Array<{title: string; desc: string}>;
 
   return (
-    <section id="features" style={{
+    <section id="features" className="section-pad" style={{
       background: 'var(--fog)',
       padding: '6rem 1.5rem',
     }}>
@@ -79,34 +79,25 @@ export default function Features() {
           </p>
         </div>
 
-        {/* Cards grid */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: '1.25rem',
-        }}
+        {/* Cards grid — breakpoints handled in globals.css */}
+        <div
           className="features-grid"
+          style={{
+            display: 'grid',
+            gap: '1.25rem',
+          }}
         >
           {items.map((item, i) => (
             <div
               key={i}
-              className={`fade-up-${i + 1}`}
+              className={`feature-card fade-up-${Math.min(i + 1, 6)}`}
               style={{
                 background: '#fff',
                 borderRadius: '8px',
                 padding: '1.75rem',
                 border: '1px solid #e2e8f0',
                 borderLeft: `3px solid ${accentColors[i]}`,
-                transition: 'transform 0.2s, box-shadow 0.2s',
                 cursor: 'default',
-              }}
-              onMouseEnter={e => {
-                (e.currentTarget as HTMLElement).style.transform = 'translateY(-4px)';
-                (e.currentTarget as HTMLElement).style.boxShadow = '0 12px 32px rgba(10,15,30,0.12)';
-              }}
-              onMouseLeave={e => {
-                (e.currentTarget as HTMLElement).style.transform = 'translateY(0)';
-                (e.currentTarget as HTMLElement).style.boxShadow = 'none';
               }}
             >
               <div style={{
@@ -138,15 +129,6 @@ export default function Features() {
           ))}
         </div>
       </div>
-
-      <style>{`
-        @media (max-width: 900px) {
-          .features-grid { grid-template-columns: repeat(2, 1fr) !important; }
-        }
-        @media (max-width: 580px) {
-          .features-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </section>
   );
 }
