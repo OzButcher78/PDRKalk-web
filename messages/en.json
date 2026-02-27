@@ -20,42 +20,99 @@
     "trust3": "🌍 More countries soon"
   },
   "features": {
-    "title": "Everything a PDR Professional Needs",
-    "subtitle": "Built for PDR workshops — legally accurate, precise, efficient.",
-    "items": [
-      {
-        "title": "Professional work reports – transparent, clean, and paperless.",
-        "desc": "Create clear reports in minutes — well-structured and ready to send."
-      },
-      {
-        "title": "Capture damage quickly and easily – more time for the actual repair.",
-        "desc": "Reduce administrative overhead and focus on your work."
-      },
-      {
-        "title": "Attach photos effortlessly – automatically compressed and embedded in the PDF.",
-        "desc": "No post-processing, no external tool needed."
-      },
-      {
-        "title": "Calculate parking damage efficiently – flat rate or per-panel pricing.",
-        "desc": ""
-      },
-      {
-        "title": "Invoices created in seconds – individually or as a batch invoice.",
-        "desc": ""
-      },
-      {
-        "title": "Measurable time savings",
-        "desc": "– Up to 20 minutes per job during damage capture\n– 30 to 60 minutes in the office when creating invoices"
-      },
-      {
-        "title": "Offline-capable & extremely fast.",
-        "desc": "No cloud required. Works without WiFi or mobile network."
-      },
-      {
-        "title": "Your customer data stays stored locally.",
-        "desc": "No risk from cloud leaks or external servers."
-      }
-    ]
+    "trustLine": "Developed by a professional PDR technician with over 25 years of experience in hail and parking dent repair.",
+    "intro": {
+      "title": "What Makes PDR Kalk Different",
+      "cards": [
+        {
+          "heading": "Designed by a technician. For technicians.",
+          "desc": "This custom-built PDR software creates hail damage and parking dent estimates quickly, efficiently and professionally.",
+          "support": "Time = money. Let PDR Kalk do the hard work for you."
+        },
+        {
+          "heading": "Create professional estimates in under a minute — all on one page.",
+          "desc": "Choose your customer.\nFill in the vehicle details.\nAdd the damage and photos — and you're done.\n\nNo Excel. No manual formatting. No external PDF tools.",
+          "support": ""
+        },
+        {
+          "heading": "One-time purchase. You own it.",
+          "desc": "You pay once. Install it on your PC or tablet.\nNo cloud. No WiFi or unstable mobile signals. Lightning fast.\n\nFully GDPR compliant. No customer data stored in the cloud.\n\nOptional monthly payment plan available for those who prefer it.",
+          "support": ""
+        }
+      ]
+    },
+    "divider": {
+      "statement": "Finally, estimating software that works like a PDR technician thinks."
+    },
+    "outcomes": {
+      "title": "What PDR Kalk Does for You",
+      "cards": [
+        {
+          "heading": "Hail Damage Estimates",
+          "bullets": [
+            "Automatic AW logic using the latest insurance matrices",
+            "Choose between private and business customers directly from your address book",
+            "All important fields clearly displayed on one page",
+            "Instant live calculation while entering damage",
+            "Add R&R (removal & refitting) and custom notes to reports",
+            "Each job is saved locally with automatic backup",
+            "Any deviation from insurance matrices is clearly displayed for insurers, building transparency and trust"
+          ],
+          "tagline": "Calculate correctly. Every time."
+        },
+        {
+          "heading": "Parking Dent Estimates",
+          "bullets": [
+            "Fast and intuitive parking dent calculator",
+            "Select customer from address book",
+            "Choose pricing per vehicle or per panel",
+            "One-click surcharges for: dent size, material type, deep dents, stretched dents, body line dents, creases",
+            "You control the pricing — the system handles the text, descriptions and formatting",
+            "Add photos and generate the PDF instantly"
+          ],
+          "tagline": ""
+        },
+        {
+          "heading": "Save 30–60 Minutes Per Job",
+          "bullets": [
+            "Lightning-fast damage capture",
+            "Office work reduced by 30–60 minutes per job",
+            "Photos automatically compressed and embedded",
+            "Creates a single PDF for customer or insurance, with or without discounts"
+          ],
+          "tagline": "More repairs. Less administration."
+        },
+        {
+          "heading": "Full Control of Your Data",
+          "bullets": [
+            "Stored locally on your computer",
+            "Works completely offline — no internet required",
+            "Automatic job backups and full-system backup options",
+            "Ideal for hail technicians and mobile parking dent specialists"
+          ],
+          "tagline": "Your business stays yours."
+        },
+        {
+          "heading": "From Estimate to Invoice",
+          "bullets": [
+            "Create professional invoices in seconds",
+            "Single-job or multi-job invoice creation",
+            "Formatted for standard C5 window envelopes"
+          ],
+          "tagline": "Significant time savings across the year."
+        },
+        {
+          "heading": "Custom Settings and Branding",
+          "bullets": [
+            "Define your own document prefixes",
+            "Custom introduction and closing texts",
+            "Default discount rates globally or per customer",
+            "Full branding with your company logo and details"
+          ],
+          "tagline": ""
+        }
+      ]
+    }
   },
   "screenshots": {
     "title": "See It In Action",
@@ -97,7 +154,7 @@
     "lifetime": {
       "badge": "RECOMMENDED",
       "badgeNote": "One-Time Payment — No Subscription",
-      "price": "CHF 699.00",
+      "price": "TBA",
       "priceSuffix": "one-time",
       "features": [
         "2 installations included",
@@ -111,7 +168,7 @@
     },
     "monthly": {
       "badge": "Monthly License",
-      "price": "CHF 69.–",
+      "price": "TBA",
       "priceSuffix": "per month",
       "features": [
         "No high entry cost",
@@ -121,14 +178,25 @@
       ],
       "disclaimer": "Access ends upon cancellation."
     },
-    "comparison": {
+    "comparisonTable": {
       "title": "5-Year Cost Comparison",
-      "items": [
-        { "label": "Competitor Software",       "total": "CHF 5,000–10,000",        "accent": "steel" },
-        { "label": "PDR Kalk Lifetime License", "total": "CHF 699.00",              "accent": "green" },
-        { "label": "PDR Kalk Monthly License",  "total": "CHF 4,140 over 5 years",  "accent": "blue"  }
+      "headers": {
+        "feature": "Feature",
+        "competitorA": "Competitor A",
+        "competitorB": "Competitor B",
+        "pdrKalk": "PDR Kalk"
+      },
+      "rows": [
+        { "feature": "License model",            "competitorA": "Monthly subscription", "competitorB": "Monthly subscription", "pdrKalk": "One-time / Monthly" },
+        { "feature": "Setup fee",                "competitorA": "Yes",                  "competitorB": "Yes",                  "pdrKalk": "No" },
+        { "feature": "Additional user fees",     "competitorA": "Yes",                  "competitorB": "Yes",                  "pdrKalk": "Included (2 installs)" },
+        { "feature": "Cloud-based",              "competitorA": "Yes",                  "competitorB": "Yes",                  "pdrKalk": "No — local" },
+        { "feature": "Internet required",        "competitorA": "Yes",                  "competitorB": "Yes",                  "pdrKalk": "No" },
+        { "feature": "Cost Year 1",              "competitorA": "CHF 1,127",            "competitorB": "CHF 1,188",            "pdrKalk": "TBA" },
+        { "feature": "Cost after 5 years",       "competitorA": "CHF 4,439",            "competitorB": "CHF 5,940",            "pdrKalk": "TBA" }
       ],
-      "conclusion": "You decide which model fits your business."
+      "closing": "Save thousands of CHF over five years compared to subscription-based systems.",
+      "note": "Optional feature enhancements or insurance updates may be offered for a small fee. All comparison figures are based on publicly available pricing information (as of spring 2026)."
     }
   },
   "contact": {

@@ -20,42 +20,99 @@
     "trust3": "🌍 Bald international"
   },
   "features": {
-    "title": "Alles was ein PDR-Profi braucht",
-    "subtitle": "Entwickelt für PDR-Werkstätten — rechtssicher, präzise, effizient.",
-    "items": [
-      {
-        "title": "Professionelle Arbeitsrapporte – transparent, sauber und papierlos erstellt.",
-        "desc": "Erstellen Sie übersichtliche Rapporte in Minuten – klar strukturiert und versandbereit."
-      },
-      {
-        "title": "Schäden schnell und unkompliziert erfassen – mehr Zeit für die eigentliche Reparatur.",
-        "desc": "Reduzieren Sie Administrationsaufwand und konzentrieren Sie sich auf Ihre Arbeit."
-      },
-      {
-        "title": "Fotos einfach anhängen – automatisch komprimiert und direkt ins PDF integriert.",
-        "desc": "Keine Nachbearbeitung, kein externes Tool nötig."
-      },
-      {
-        "title": "Parkschäden effizient berechnen – pauschal oder positionsbezogen pro Bauteil.",
-        "desc": ""
-      },
-      {
-        "title": "Rechnungen in Sekunden erstellt – einzeln oder als Sammelrechnung.",
-        "desc": ""
-      },
-      {
-        "title": "Messbare Zeitersparnis",
-        "desc": "– Bis zu 20 Minuten pro Auftrag bei der Schadenaufnahme\n– 30 bis 60 Minuten im Büro bei der Rechnungserstellung"
-      },
-      {
-        "title": "Offline-fähig & extrem schnell.",
-        "desc": "Kein Cloud-Zwang. Funktioniert auch ohne WLAN oder Mobilnetz."
-      },
-      {
-        "title": "Ihre Kundendaten bleiben lokal gespeichert.",
-        "desc": "Kein Risiko durch Cloud-Leaks oder externe Server."
-      }
-    ]
+    "trustLine": "Entwickelt von einem professionellen PDR-Techniker mit über 25 Jahren Erfahrung in der Hagel- und Parkschadenreparatur.",
+    "intro": {
+      "title": "Was PDR Kalk besonders macht",
+      "cards": [
+        {
+          "heading": "Von einem Techniker entwickelt. Für Techniker.",
+          "desc": "Diese massgeschneiderte PDR-Software erstellt Hagelschaden- und Parkschadenkalkulationen schnell, effizient und professionell.",
+          "support": "Zeit ist Geld. Lassen Sie PDR Kalk die Arbeit für Sie erledigen."
+        },
+        {
+          "heading": "Professionelle Kalkulationen in unter einer Minute — alles auf einer Seite.",
+          "desc": "Kunden auswählen.\nFahrzeugdaten erfassen.\nSchaden und Fotos hinzufügen — fertig.\n\nKein Excel. Keine manuelle Formatierung. Keine externen PDF-Tools.",
+          "support": ""
+        },
+        {
+          "heading": "Einmalig kaufen. Dauerhaft besitzen.",
+          "desc": "Sie zahlen einmal. Installieren Sie es auf Ihrem PC oder Tablet.\nKeine Cloud. Kein WLAN-Zwang oder instabile Mobilsignale. Blitzschnell.\n\nVollständig DSGVO-konform. Keine Kundendaten in der Cloud.\n\nOptionale monatliche Ratenzahlung für alle, die es bevorzugen.",
+          "support": ""
+        }
+      ]
+    },
+    "divider": {
+      "statement": "Endlich eine Kalkulationssoftware, die so denkt wie ein PDR-Techniker."
+    },
+    "outcomes": {
+      "title": "Was PDR Kalk für Sie leistet",
+      "cards": [
+        {
+          "heading": "Hagelschadenkalkulationen",
+          "bullets": [
+            "Automatische AW-Logik nach aktuellen Versicherungsmatrizen",
+            "Privat- und Geschäftskunden direkt aus dem Adressbuch wählen",
+            "Alle wichtigen Felder übersichtlich auf einer Seite",
+            "Live-Berechnung während der Schadeneingabe",
+            "R&R (De-/Montage) und individuelle Notizen zum Rapport hinzufügen",
+            "Jeder Auftrag wird lokal gespeichert mit automatischer Sicherung",
+            "Abweichungen von der Versicherungsmatrix werden für Versicherungen transparent ausgewiesen"
+          ],
+          "tagline": "Korrekt kalkulieren. Jedes Mal."
+        },
+        {
+          "heading": "Parkschadenkalkulationen",
+          "bullets": [
+            "Schneller und intuitiver Parkschadenrechner",
+            "Kunden aus dem Adressbuch auswählen",
+            "Preis pro Fahrzeug oder pro Bauteil wählbar",
+            "Ein-Klick-Aufschläge für: Dellengrösse, Materialart, tiefe Dellen, gedehnte Dellen, kantennahe Dellen, Falze",
+            "Sie bestimmen die Preise — das System übernimmt Text, Beschreibungen und Formatierung",
+            "Fotos hinzufügen und PDF sofort generieren"
+          ],
+          "tagline": ""
+        },
+        {
+          "heading": "30–60 Minuten Ersparnis pro Auftrag",
+          "bullets": [
+            "Blitzschnelle Schadenaufnahme",
+            "Büroaufwand um 30–60 Minuten pro Auftrag reduziert",
+            "Fotos automatisch komprimiert und eingebettet",
+            "Erstellt ein einziges PDF für Kunden oder Versicherung, mit oder ohne Rabatt"
+          ],
+          "tagline": "Mehr Reparaturen. Weniger Administration."
+        },
+        {
+          "heading": "Volle Kontrolle über Ihre Daten",
+          "bullets": [
+            "Lokal auf Ihrem Computer gespeichert",
+            "Vollständig offline — keine Internetverbindung erforderlich",
+            "Automatische Auftragssicherung und vollständige System-Backup-Optionen",
+            "Ideal für Hageltechniker und mobile Parkschadenspezialisten"
+          ],
+          "tagline": "Ihr Betrieb bleibt Ihres."
+        },
+        {
+          "heading": "Von der Kalkulation zur Rechnung",
+          "bullets": [
+            "Professionelle Rechnungen in Sekundenschnelle erstellen",
+            "Einzelrechnungen oder Sammelrechnungen",
+            "Formatiert für Standard C5-Fensterkuverts"
+          ],
+          "tagline": "Deutliche Zeitersparnis übers Jahr gerechnet."
+        },
+        {
+          "heading": "Individuelle Einstellungen und Branding",
+          "bullets": [
+            "Eigene Dokumentpräfixe definieren",
+            "Individuelle Einleitungs- und Schlusstexte",
+            "Standard-Rabattsätze global oder pro Kunden",
+            "Vollständiges Branding mit Firmenlogo und -angaben"
+          ],
+          "tagline": ""
+        }
+      ]
+    }
   },
   "screenshots": {
     "title": "In Aktion",
@@ -97,7 +154,7 @@
     "lifetime": {
       "badge": "EMPFOHLEN",
       "badgeNote": "Einmalzahlung — Kein Abo",
-      "price": "CHF 699.00",
+      "price": "TBA",
       "priceSuffix": "einmalig",
       "features": [
         "2 Installationen inklusive",
@@ -111,7 +168,7 @@
     },
     "monthly": {
       "badge": "Monatslizenz",
-      "price": "CHF 69.–",
+      "price": "TBA",
       "priceSuffix": "pro Monat",
       "features": [
         "Kein hoher Einstiegspreis",
@@ -121,14 +178,25 @@
       ],
       "disclaimer": "Bei Kündigung endet der Zugriff auf das System."
     },
-    "comparison": {
-      "title": "Kostenvergleich über 5 Jahre",
-      "items": [
-        { "label": "Wettbewerbssoftware",   "total": "CHF 5'000–10'000",       "accent": "steel" },
-        { "label": "PDR Kalk Dauerlizenz",  "total": "CHF 699.00",             "accent": "green" },
-        { "label": "PDR Kalk Monatslizenz", "total": "CHF 4'140 über 5 Jahre", "accent": "blue"  }
+    "comparisonTable": {
+      "title": "5-Jahres-Kostenvergleich",
+      "headers": {
+        "feature": "Merkmal",
+        "competitorA": "Anbieter A",
+        "competitorB": "Anbieter B",
+        "pdrKalk": "PDR Kalk"
+      },
+      "rows": [
+        { "feature": "Lizenzmodell",                    "competitorA": "Monatliches Abo",  "competitorB": "Monatliches Abo",  "pdrKalk": "Einmalig / Monatlich" },
+        { "feature": "Einrichtungsgebühr",              "competitorA": "Ja",               "competitorB": "Ja",               "pdrKalk": "Nein" },
+        { "feature": "Kosten pro weiterem Nutzer",      "competitorA": "Ja",               "competitorB": "Ja",               "pdrKalk": "Inklusive (2 Inst.)" },
+        { "feature": "Cloud-basiert",                   "competitorA": "Ja",               "competitorB": "Ja",               "pdrKalk": "Nein — lokal" },
+        { "feature": "Internetverbindung erforderlich", "competitorA": "Ja",               "competitorB": "Ja",               "pdrKalk": "Nein" },
+        { "feature": "Kosten Jahr 1",                   "competitorA": "CHF 1'127",        "competitorB": "CHF 1'188",        "pdrKalk": "TBA" },
+        { "feature": "Kosten nach 5 Jahren",            "competitorA": "CHF 4'439",        "competitorB": "CHF 5'940",        "pdrKalk": "TBA" }
       ],
-      "conclusion": "Sie entscheiden, welches Modell zu Ihrem Betrieb passt."
+      "closing": "Sparen Sie über fünf Jahre Tausende von Franken im Vergleich zu abonnementsbasierten Systemen.",
+      "note": "Optionale Funktionserweiterungen oder Versicherungsupdates können gegen eine kleine Gebühr angeboten werden. Alle Vergleichswerte basieren auf öffentlich zugänglichen Preisinformationen (Stand Frühjahr 2026)."
     }
   },
   "contact": {

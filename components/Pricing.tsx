@@ -4,11 +4,6 @@ import {useTranslations} from 'next-intl';
 
 const BUY_URL = process.env.NEXT_PUBLIC_BUY_URL || '#contact';
 
-const accentColors: Record<string, { border: string; label: string }> = {
-  steel: { border: '#94a3b8', label: '#475569' },
-  green: { border: '#16a34a', label: '#166534' },
-  blue:  { border: '#2563eb', label: '#1e40af' },
-};
 
 export default function Pricing() {
   const t = useTranslations('pricing');
@@ -31,10 +26,12 @@ export default function Pricing() {
     disclaimer: string;
   };
 
-  const comparison = t.raw('comparison') as {
+  const comparisonTable = t.raw('comparisonTable') as {
     title: string;
-    items: Array<{ label: string; total: string; accent: string }>;
-    conclusion: string;
+    headers: { feature: string; competitorA: string; competitorB: string; pdrKalk: string };
+    rows: Array<{ feature: string; competitorA: string; competitorB: string; pdrKalk: string }>;
+    closing: string;
+    note: string;
   };
 
   return (
@@ -366,8 +363,17 @@ export default function Pricing() {
 
         </div>
 
-        {/* Cost comparison */}
+        {/* 5-Year cost comparison table */}
         <div>
+          <style>{`
+            .comparison-table th,
+            .comparison-table td { padding: 0.85rem 1rem; }
+            @media (max-width: 768px) {
+              .comparison-table th,
+              .comparison-table td { padding: 0.6rem 0.5rem; font-size: 0.8rem; }
+            }
+          `}</style>
+
           <h3 style={{
             fontFamily: 'Barlow Condensed, sans-serif',
             fontWeight: 900,
@@ -377,60 +383,144 @@ export default function Pricing() {
             textAlign: 'center',
             letterSpacing: '-0.01em',
           }}>
-            {comparison.title}
+            {comparisonTable.title}
           </h3>
 
-          <div
-            className="pricing-comparison"
-            style={{display: 'grid', gap: '1rem'}}
-          >
-            {comparison.items.map((item, i) => {
-              const colors = accentColors[item.accent] ?? accentColors.steel;
-              return (
-                <div key={i} style={{
-                  background: '#fff',
-                  border: '1px solid #e2e8f0',
-                  borderLeft: `3px solid ${colors.border}`,
-                  borderRadius: '8px',
-                  padding: '1.25rem',
-                  textAlign: 'center',
-                }}>
-                  <p style={{
+          <div style={{
+            overflowX: 'auto',
+            borderRadius: '8px',
+            boxShadow: '0 2px 12px rgba(10,15,30,0.07)',
+          }}>
+            <table
+              className="comparison-table"
+              style={{
+                width: '100%',
+                borderCollapse: 'collapse',
+                minWidth: '480px',
+                background: '#fff',
+                fontFamily: 'Barlow, sans-serif',
+                fontSize: '0.9rem',
+              }}
+            >
+              <thead>
+                <tr style={{background: 'var(--ink)'}}>
+                  <th style={{
+                    textAlign: 'left',
                     fontFamily: 'Barlow Condensed, sans-serif',
-                    fontWeight: 800,
-                    fontSize: '0.95rem',
-                    letterSpacing: '0.04em',
+                    fontWeight: 700,
+                    fontSize: '0.8rem',
+                    letterSpacing: '0.1em',
                     textTransform: 'uppercase' as const,
-                    color: '#475569',
-                    margin: '0 0 0.5rem',
+                    color: 'var(--steel)',
+                    borderBottom: '2px solid rgba(255,255,255,0.08)',
                   }}>
-                    {item.label}
-                  </p>
-                  <p style={{
+                    {comparisonTable.headers.feature}
+                  </th>
+                  <th style={{
+                    textAlign: 'center',
                     fontFamily: 'Barlow Condensed, sans-serif',
-                    fontWeight: 900,
-                    fontSize: '1.3rem',
-                    color: colors.label,
-                    margin: 0,
-                    letterSpacing: '-0.01em',
+                    fontWeight: 700,
+                    fontSize: '0.8rem',
+                    letterSpacing: '0.1em',
+                    textTransform: 'uppercase' as const,
+                    color: 'var(--steel)',
+                    borderBottom: '2px solid rgba(255,255,255,0.08)',
                   }}>
-                    {item.total}
-                  </p>
-                </div>
-              );
-            })}
+                    {comparisonTable.headers.competitorA}
+                  </th>
+                  <th style={{
+                    textAlign: 'center',
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 700,
+                    fontSize: '0.8rem',
+                    letterSpacing: '0.1em',
+                    textTransform: 'uppercase' as const,
+                    color: 'var(--steel)',
+                    borderBottom: '2px solid rgba(255,255,255,0.08)',
+                  }}>
+                    {comparisonTable.headers.competitorB}
+                  </th>
+                  <th style={{
+                    textAlign: 'center',
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 700,
+                    fontSize: '0.85rem',
+                    letterSpacing: '0.1em',
+                    textTransform: 'uppercase' as const,
+                    color: 'var(--red)',
+                    borderBottom: '2px solid var(--red)',
+                    borderLeft: '2px solid rgba(232,0,29,0.2)',
+                  }}>
+                    {comparisonTable.headers.pdrKalk}
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonTable.rows.map((row, i) => {
+                  const isEven = i % 2 === 0;
+                  const isCostRow = i >= 5;
+                  return (
+                    <tr key={i} style={{background: isEven ? '#fff' : '#f8fafc'}}>
+                      <td style={{
+                        color: '#475569',
+                        fontWeight: 500,
+                        borderBottom: '1px solid #e2e8f0',
+                      }}>
+                        {row.feature}
+                      </td>
+                      <td style={{
+                        textAlign: 'center',
+                        color: isCostRow ? 'var(--red)' : '#64748b',
+                        fontWeight: isCostRow ? 600 : 400,
+                        borderBottom: '1px solid #e2e8f0',
+                      }}>
+                        {row.competitorA}
+                      </td>
+                      <td style={{
+                        textAlign: 'center',
+                        color: isCostRow ? 'var(--red)' : '#64748b',
+                        fontWeight: isCostRow ? 600 : 400,
+                        borderBottom: '1px solid #e2e8f0',
+                      }}>
+                        {row.competitorB}
+                      </td>
+                      <td style={{
+                        textAlign: 'center',
+                        color: 'var(--green)',
+                        fontWeight: 700,
+                        borderBottom: '1px solid #e2e8f0',
+                        borderLeft: '2px solid rgba(232,0,29,0.15)',
+                        background: 'rgba(232,0,29,0.03)',
+                      }}>
+                        {row.pdrKalk}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
           </div>
 
           <p style={{
             textAlign: 'center',
             fontFamily: 'Barlow, sans-serif',
-            fontSize: '0.88rem',
+            fontSize: '0.95rem',
             fontWeight: 600,
             color: '#475569',
-            margin: '1.25rem 0 0',
-            fontStyle: 'italic',
+            margin: '1.5rem 0 0.5rem',
           }}>
-            {comparison.conclusion}
+            {comparisonTable.closing}
+          </p>
+
+          <p style={{
+            textAlign: 'center',
+            fontFamily: 'Barlow, sans-serif',
+            fontSize: '0.78rem',
+            color: '#94a3b8',
+            fontStyle: 'italic',
+            margin: '0.5rem 0 0',
+          }}>
+            {comparisonTable.note}
           </p>
         </div>
 
