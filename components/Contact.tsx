@@ -3,13 +3,17 @@
 import {useTranslations} from 'next-intl';
 import {useState} from 'react';
 
+const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID;
+
 type FormErrors = {name?: string; email?: string; message?: string};
 
 export default function Contact() {
   const t = useTranslations('contact');
-  const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({name: '', email: '', message: ''});
-  const [errors, setErrors] = useState<FormErrors>({});
+  const [submitted, setSubmitted]   = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [sendError, setSendError]   = useState(false);
+  const [form, setForm]             = useState({name: '', email: '', message: ''});
+  const [errors, setErrors]         = useState<FormErrors>({});
 
   const validate = (): FormErrors => {
     const errs: FormErrors = {};
@@ -25,17 +29,36 @@ export default function Contact() {
     return errs;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const errs = validate();
     if (Object.keys(errs).length > 0) {
       setErrors(errs);
       return;
     }
-    // TODO: wire to Resend / Formspree for actual delivery
-    setSubmitted(true);
-    setForm({name: '', email: '', message: ''});
-    setErrors({});
+
+    setSubmitting(true);
+    setSendError(false);
+
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+        body: JSON.stringify({name: form.name, email: form.email, message: form.message}),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+        setForm({name: '', email: '', message: ''});
+        setErrors({});
+      } else {
+        setSendError(true);
+      }
+    } catch {
+      setSendError(true);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const inputStyle = {
@@ -48,7 +71,7 @@ export default function Contact() {
     fontFamily: 'Barlow, sans-serif',
     fontSize: '0.95rem',
     color: '#fff',
-    outline: 'none',        /* suppressed — .contact-input:focus-visible provides ring */
+    outline: 'none',
     transition: 'border-color 0.2s',
     boxSizing: 'border-box' as const,
   };
@@ -187,8 +210,21 @@ export default function Contact() {
               {errors.message && <span style={errorStyle}>{errors.message}</span>}
             </div>
 
+            {sendError && (
+              <p style={{
+                fontFamily: 'Barlow, sans-serif',
+                fontSize: '0.85rem',
+                color: '#fc8181',
+                textAlign: 'center',
+                marginBottom: '0.75rem',
+              }}>
+                Senden fehlgeschlagen. Bitte versuchen Sie es erneut oder schreiben Sie direkt an die E-Mail-Adresse unten.
+              </p>
+            )}
+
             <button
               type="submit"
+              disabled={submitting}
               className="btn-red"
               style={{
                 width: '100%',
@@ -202,12 +238,13 @@ export default function Contact() {
                 border: 'none',
                 borderRadius: '6px',
                 padding: '1rem',
-                cursor: 'pointer',
-                transition: 'background 0.2s, transform 0.15s',
+                cursor: submitting ? 'wait' : 'pointer',
+                opacity: submitting ? 0.7 : 1,
+                transition: 'background 0.2s, transform 0.15s, opacity 0.2s',
                 boxShadow: '0 4px 20px rgba(232,0,29,0.25)',
               }}
             >
-              {t('submit')} →
+              {submitting ? 'Wird gesendet…' : `${t('submit')} →`}
             </button>
           </form>
         )}
