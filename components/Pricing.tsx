@@ -399,6 +399,7 @@ export default function Pricing() {
 
           <div style={{
             overflowX: 'auto',
+            maxWidth: '100%',
             borderRadius: '8px',
             boxShadow: '0 2px 12px rgba(10,15,30,0.07)',
           }}>

@@ -99,7 +99,7 @@ export default function Contact() {
               borderRadius: '10px',
             }}
           >
-            <div style={{fontSize: '2.5rem', marginBottom: '1rem'}}>✓</div>
+            <div style={{fontSize: '2.5rem', marginBottom: '1rem', color: '#22c55e'}}>✓</div>
             <p style={{
               fontFamily: 'Barlow Condensed, sans-serif',
               fontWeight: 700,
