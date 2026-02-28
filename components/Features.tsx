@@ -120,45 +120,50 @@ export default function Features() {
                 key={i}
                 className={`feature-card fade-up-${i + 1}`}
                 style={{
-                  background: '#fff',
-                  borderRadius: '8px',
-                  padding: '1.75rem',
-                  border: '1px solid #e2e8f0',
-                  borderLeft: '3px solid var(--red)',
+                  background: 'linear-gradient(135deg, var(--red), var(--blue))',
+                  borderRadius: '9px',
+                  padding: '1px',
                   cursor: 'default',
                 }}
               >
-                <h3 style={{
-                  fontFamily: 'Barlow Condensed, sans-serif',
-                  fontWeight: 800,
-                  fontSize: '1.15rem',
-                  letterSpacing: '0.02em',
-                  color: 'var(--ink)',
-                  margin: '0 0 0.75rem',
+                <div style={{
+                  background: '#fff',
+                  borderRadius: '8px',
+                  padding: '1.75rem',
+                  height: '100%',
                 }}>
-                  {card.heading}
-                </h3>
-                <p style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontSize: '0.92rem',
-                  color: '#64748b',
-                  lineHeight: 1.65,
-                  margin: card.support ? '0 0 0.75rem' : '0',
-                  whiteSpace: 'pre-line',
-                }}>
-                  {card.desc}
-                </p>
-                {card.support && (
+                  <h3 style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 800,
+                    fontSize: '1.15rem',
+                    letterSpacing: '0.02em',
+                    color: 'var(--ink)',
+                    margin: '0 0 0.75rem',
+                  }}>
+                    {card.heading}
+                  </h3>
                   <p style={{
                     fontFamily: 'Barlow, sans-serif',
-                    fontSize: '0.82rem',
-                    color: 'var(--steel)',
-                    fontStyle: 'italic',
-                    margin: 0,
+                    fontSize: '0.92rem',
+                    color: '#64748b',
+                    lineHeight: 1.65,
+                    margin: card.support ? '0 0 0.75rem' : '0',
+                    whiteSpace: 'pre-line',
                   }}>
-                    {card.support}
+                    {card.desc}
                   </p>
-                )}
+                  {card.support && (
+                    <p style={{
+                      fontFamily: 'Barlow, sans-serif',
+                      fontSize: '0.82rem',
+                      color: 'var(--steel)',
+                      fontStyle: 'italic',
+                      margin: 0,
+                    }}>
+                      {card.support}
+                    </p>
+                  )}
+                </div>
               </div>
             ))}
           </div>
@@ -225,79 +230,84 @@ export default function Features() {
                 key={i}
                 className={`feature-card fade-up-${Math.min(i + 1, 6)}`}
                 style={{
+                  background: 'linear-gradient(135deg, var(--red), var(--blue))',
+                  borderRadius: '9px',
+                  padding: '1px',
+                  cursor: 'default',
+                }}
+              >
+                <div style={{
                   background: '#fff',
                   borderRadius: '8px',
                   padding: '1.75rem',
-                  border: '1px solid #e2e8f0',
-                  borderLeft: `3px solid ${outcomeAccents[i]}`,
-                  cursor: 'default',
+                  height: '100%',
                   display: 'flex',
                   flexDirection: 'column',
-                }}
-              >
-                {/* Icon */}
-                <div style={{color: outcomeAccents[i], marginBottom: '1rem'}}>
-                  {outcomeIcons[i]}
-                </div>
-
-                {/* Heading */}
-                <h3 style={{
-                  fontFamily: 'Barlow Condensed, sans-serif',
-                  fontWeight: 800,
-                  fontSize: '1.15rem',
-                  letterSpacing: '0.02em',
-                  color: 'var(--ink)',
-                  margin: '0 0 0.75rem',
                 }}>
-                  {card.heading}
-                </h3>
+                  {/* Icon */}
+                  <div style={{color: outcomeAccents[i], marginBottom: '1rem'}}>
+                    {outcomeIcons[i]}
+                  </div>
 
-                {/* Bullet list */}
-                <ul style={{
-                  listStyle: 'none',
-                  padding: 0,
-                  margin: '0',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '0.4rem',
-                  flexGrow: 1,
-                }}>
-                  {card.bullets.map((bullet, j) => (
-                    <li key={j} style={{
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      gap: '0.45rem',
-                      fontFamily: 'Barlow, sans-serif',
-                      fontSize: '0.88rem',
-                      color: '#64748b',
-                      lineHeight: 1.5,
-                    }}>
-                      <span style={{
-                        color: outcomeAccents[i],
-                        fontWeight: 700,
-                        flexShrink: 0,
-                        fontSize: '0.9rem',
-                        marginTop: '0.05rem',
-                      }}>—</span>
-                      {bullet}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Tagline */}
-                {card.tagline && (
-                  <p style={{
+                  {/* Heading */}
+                  <h3 style={{
                     fontFamily: 'Barlow Condensed, sans-serif',
                     fontWeight: 800,
-                    fontSize: '0.9rem',
-                    letterSpacing: '0.06em',
-                    textTransform: 'uppercase',
-                    color: outcomeAccents[i],
-                    margin: '1rem 0 0',
+                    fontSize: '1.15rem',
+                    letterSpacing: '0.02em',
+                    color: 'var(--ink)',
+                    margin: '0 0 0.75rem',
                   }}>
-                    {card.tagline}
-                  </p>
-                )}
+                    {card.heading}
+                  </h3>
+
+                  {/* Bullet list */}
+                  <ul style={{
+                    listStyle: 'none',
+                    padding: 0,
+                    margin: '0',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '0.4rem',
+                    flexGrow: 1,
+                  }}>
+                    {card.bullets.map((bullet, j) => (
+                      <li key={j} style={{
+                        display: 'flex',
+                        alignItems: 'flex-start',
+                        gap: '0.45rem',
+                        fontFamily: 'Barlow, sans-serif',
+                        fontSize: '0.88rem',
+                        color: '#64748b',
+                        lineHeight: 1.5,
+                      }}>
+                        <span style={{
+                          color: outcomeAccents[i],
+                          fontWeight: 700,
+                          flexShrink: 0,
+                          fontSize: '0.9rem',
+                          marginTop: '0.05rem',
+                        }}>—</span>
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Tagline */}
+                  {card.tagline && (
+                    <p style={{
+                      fontFamily: 'Barlow Condensed, sans-serif',
+                      fontWeight: 800,
+                      fontSize: '0.9rem',
+                      letterSpacing: '0.06em',
+                      textTransform: 'uppercase',
+                      color: outcomeAccents[i],
+                      margin: '1rem 0 0',
+                    }}>
+                      {card.tagline}
+                    </p>
+                  )}
+                </div>
               </div>
             ))}
           </div>

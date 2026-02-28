@@ -145,7 +145,7 @@ body {
 @media (hover: hover) {
   .feature-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(10,15,30,0.12);
+    box-shadow: 0 16px 40px rgba(232,0,29,0.15), 0 4px 12px rgba(37,99,235,0.1);
   }
 }
 
