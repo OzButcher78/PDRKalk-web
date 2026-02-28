@@ -3,7 +3,7 @@
 import {useTranslations} from 'next-intl';
 import {useState} from 'react';
 
-const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID;
+const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID || 'mlgwvvbo';
 
 type FormErrors = {name?: string; email?: string; message?: string};
 
