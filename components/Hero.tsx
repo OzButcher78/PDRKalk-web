@@ -57,7 +57,7 @@ export default function Hero() {
         style={{
           maxWidth: '1200px',
           margin: '0 auto',
-          padding: '0 1.5rem',
+          padding: '0 2.5rem',
           display: 'grid',
           gap: '3rem',
           alignItems: 'center',
@@ -72,7 +72,7 @@ export default function Hero() {
           <h1 className="fade-up-1" style={{
             fontFamily: 'Barlow Condensed, sans-serif',
             fontWeight: 900,
-            fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)',
+            fontSize: 'clamp(1.9rem, 4vw, 3.4rem)',
             lineHeight: 0.95,
             color: '#ffffff',
             margin: '0 0 0.5rem',
@@ -83,7 +83,7 @@ export default function Hero() {
           <h1 className="fade-up-2" style={{
             fontFamily: 'Barlow Condensed, sans-serif',
             fontWeight: 900,
-            fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)',
+            fontSize: 'clamp(1.9rem, 4vw, 3.4rem)',
             lineHeight: 0.95,
             color: 'var(--red)',
             margin: '0 0 2rem',
