@@ -117,15 +117,23 @@
     "title": "See It In Action",
     "subtitle": "Professional documents at the press of a button.",
     "images": [
-      { "file": "dashboard.jpg", "caption": "Dashboard — Recent Documents" },
-      { "file": "hagelauftrag.jpg", "caption": "Hail Damage Entry" },
-      { "file": "parkauftrag.jpg", "caption": "Parking Damage — Unit Pricing" },
-      { "file": "parkauftrag-pauschal.jpg", "caption": "Parking Damage — Flat Rate" },
-      { "file": "hagel-rapport.jpg", "caption": "Work Report PDF" },
-      { "file": "rechnung.jpg", "caption": "Invoice PDF" },
-      { "file": "sammelrechnung.jpg", "caption": "Job Overview" },
-      { "file": "fotos-pdf.jpg", "caption": "Photo Documentation PDF" },
-      { "file": "rechnung-park-pauschal.jpg", "caption": "Parking Damage Report PDF" }
+      { "file": "dashboard.jpg",        "caption": "Dashboard — Recent Documents" },
+      { "file": "hagel-auftrag.jpg",    "caption": "Hail Damage Entry" },
+      { "file": "hagel-auftrag2.jpg",   "caption": "Hail Damage — Detail View" },
+      { "file": "park-auftrag.jpg",     "caption": "Parking Damage Entry" },
+      { "file": "kostenvoranschlag.jpg","caption": "Cost Estimate" },
+      { "file": "rechnungen.jpg",       "caption": "Invoice Overview" },
+      { "file": "pdf-hagel.jpg",        "caption": "Hail Report PDF" },
+      { "file": "pdf-rechnung.jpg",     "caption": "Invoice PDF" },
+      { "file": "pdf-park.jpg",         "caption": "Parking Damage Report PDF" },
+      { "file": "pdf-photos.jpg",       "caption": "Photo Documentation PDF" },
+      { "file": "arbeitsrapporte.jpg",  "caption": "Work Reports" },
+      { "file": "quittungen.jpg",       "caption": "Receipts" },
+      { "file": "adresse-buch.jpg",     "caption": "Address Book" },
+      { "file": "kunden-info.jpg",      "caption": "Customer Info" },
+      { "file": "einstellungen1.jpg",   "caption": "Settings (1)" },
+      { "file": "einstellungen2.jpg",   "caption": "Settings (2)" },
+      { "file": "einstellungen3.jpg",   "caption": "Settings (3)" }
     ]
   },
   "howItWorks": {

@@ -117,15 +117,23 @@
     "title": "In Aktion",
     "subtitle": "Professionelle Dokumente auf Knopfdruck.",
     "images": [
-      { "file": "dashboard.jpg", "caption": "Dashboard — Letzte Dokumente" },
-      { "file": "hagelauftrag.jpg", "caption": "Hagelschaden-Erfassung" },
-      { "file": "parkauftrag.jpg", "caption": "Parkschaden — Einzelpreise" },
-      { "file": "parkauftrag-pauschal.jpg", "caption": "Parkschaden — Pauschalpreis" },
-      { "file": "hagel-rapport.jpg", "caption": "Arbeitsrapport PDF" },
-      { "file": "rechnung.jpg", "caption": "Rechnung PDF" },
-      { "file": "sammelrechnung.jpg", "caption": "Auftragsübersicht" },
-      { "file": "fotos-pdf.jpg", "caption": "Fotodokumentation PDF" },
-      { "file": "rechnung-park-pauschal.jpg", "caption": "Parkschadenrapport PDF" }
+      { "file": "dashboard.jpg",        "caption": "Dashboard — Letzte Dokumente" },
+      { "file": "hagel-auftrag.jpg",    "caption": "Hagelschaden-Erfassung" },
+      { "file": "hagel-auftrag2.jpg",   "caption": "Hagelschaden — Detailansicht" },
+      { "file": "park-auftrag.jpg",     "caption": "Parkschaden-Erfassung" },
+      { "file": "kostenvoranschlag.jpg","caption": "Kostenvoranschlag" },
+      { "file": "rechnungen.jpg",       "caption": "Rechnungsübersicht" },
+      { "file": "pdf-hagel.jpg",        "caption": "Hagelrapport PDF" },
+      { "file": "pdf-rechnung.jpg",     "caption": "Rechnung PDF" },
+      { "file": "pdf-park.jpg",         "caption": "Parkschadenrapport PDF" },
+      { "file": "pdf-photos.jpg",       "caption": "Fotodokumentation PDF" },
+      { "file": "arbeitsrapporte.jpg",  "caption": "Arbeitsrapporte" },
+      { "file": "quittungen.jpg",       "caption": "Quittungen" },
+      { "file": "adresse-buch.jpg",     "caption": "Adressbuch" },
+      { "file": "kunden-info.jpg",      "caption": "Kundeninformation" },
+      { "file": "einstellungen1.jpg",   "caption": "Einstellungen (1)" },
+      { "file": "einstellungen2.jpg",   "caption": "Einstellungen (2)" },
+      { "file": "einstellungen3.jpg",   "caption": "Einstellungen (3)" }
     ]
   },
   "howItWorks": {

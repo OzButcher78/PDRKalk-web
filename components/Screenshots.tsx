@@ -104,6 +104,7 @@ export default function Screenshots() {
                     alt={img.caption}
                     fill
                     sizes="(max-width: 480px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    quality={90}
                     style={{objectFit: 'cover'}}
                     className="screenshot-img"
                   />
@@ -160,10 +161,18 @@ export default function Screenshots() {
           aria-modal="true"
           aria-label={lightbox.caption}
         >
+          <style>{`
+            @media (max-width: 480px) {
+              .lb-close { width: 36px !important; height: 36px !important; font-size: 1rem !important; top: 0.5rem !important; right: 0.5rem !important; }
+              .lb-nav   { width: 36px !important; height: 36px !important; font-size: 1rem !important; }
+            }
+          `}</style>
+
           {/* Close button */}
           <button
             onClick={closeLightbox}
             aria-label="Schliessen"
+            className="lb-close"
             style={{
               position: 'absolute',
               top: '1rem',
@@ -190,9 +199,10 @@ export default function Screenshots() {
           <button
             onClick={e => { e.stopPropagation(); prevImage(); }}
             aria-label="Vorheriges Bild"
+            className="lb-nav"
             style={{
               position: 'absolute',
-              left: '1rem',
+              left: '0.75rem',
               top: '50%',
               transform: 'translateY(-50%)',
               background: 'rgba(255,255,255,0.12)',
@@ -217,9 +227,10 @@ export default function Screenshots() {
           <button
             onClick={e => { e.stopPropagation(); nextImage(); }}
             aria-label="Nächstes Bild"
+            className="lb-nav"
             style={{
               position: 'absolute',
-              right: '1rem',
+              right: '0.75rem',
               top: '50%',
               transform: 'translateY(-50%)',
               background: 'rgba(255,255,255,0.12)',
@@ -248,8 +259,8 @@ export default function Screenshots() {
               flexDirection: 'column',
               alignItems: 'center',
               gap: '1rem',
-              maxWidth: '92vw',
-              padding: '0 1rem',
+              maxWidth: '96vw',
+              padding: '0 0.5rem',
             }}
           >
             <div style={{
@@ -261,11 +272,12 @@ export default function Screenshots() {
               <Image
                 src={`/screenshots/${lightbox.file}`}
                 alt={lightbox.caption}
-                width={1400}
-                height={900}
+                width={1600}
+                height={1000}
+                quality={95}
                 style={{
-                  maxWidth: '88vw',
-                  maxHeight: '72vh',
+                  maxWidth: '92vw',
+                  maxHeight: '86vh',
                   objectFit: 'contain',
                   display: 'block',
                 }}
