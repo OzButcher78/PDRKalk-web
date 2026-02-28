@@ -19,7 +19,7 @@ export default function Hero() {
         overflow: 'hidden',
         display: 'flex',
         alignItems: 'center',
-        paddingTop: '5rem',
+        paddingTop: '3rem',
         paddingBottom: '5rem',
       }}
     >
@@ -68,32 +68,6 @@ export default function Hero() {
       >
         {/* Left — Text */}
         <div>
-          {/* Badge */}
-          <div className="fade-up" style={{marginBottom: '1.5rem'}}>
-            <span style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.5rem',
-              background: 'rgba(232,0,29,0.12)',
-              border: '1px solid rgba(232,0,29,0.35)',
-              borderRadius: '3px',
-              padding: '0.3rem 0.75rem',
-              fontFamily: 'Barlow Condensed, sans-serif',
-              fontWeight: 700,
-              fontSize: '0.8rem',
-              letterSpacing: '0.12em',
-              textTransform: 'uppercase',
-              color: '#ff4455',
-            }}>
-              {/* Swiss cross mini */}
-              <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor">
-                <rect x="4" y="0" width="2" height="10" rx="0.3"/>
-                <rect x="0" y="4" width="10" height="2" rx="0.3"/>
-              </svg>
-              {t('badge')}
-            </span>
-          </div>
-
           {/* Headline */}
           <h1 className="fade-up-1" style={{
             fontFamily: 'Barlow Condensed, sans-serif',
