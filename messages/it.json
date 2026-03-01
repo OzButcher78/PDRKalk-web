@@ -1,0 +1,236 @@
+{
+  "nav": {
+    "features": "Funzionalità",
+    "screenshots": "Schermate",
+    "pricing": "Prezzi",
+    "howItWorks": "Accesso",
+    "contact": "Contatto",
+    "cta": "Acquista licenza"
+  },
+  "hero": {
+    "title": "Calcolo danni da grandine e parcheggio –",
+    "titleAccent": "veloce, locale e conforme.",
+    "subtitle": "Crea rapporti e fatture professionali in pochi minuti — senza cloud, senza abbonamento, con pieno controllo dei dati.",
+    "ctaPrimary": "Richiedi licenza",
+    "ctaSecondary": "Apri demo",
+    "screenshotAlt": "Dashboard PDR Kalk",
+    "trust1": "🔒 Locale e sicuro",
+    "trust2": "⚡ Rapporto in 1 min",
+    "trust3": "🌍 Presto internazionale",
+    "languageLabel": "Disponibile in",
+    "languageDe": "Deutsch",
+    "languageFr": "Français",
+    "languageIt": "Italiano"
+  },
+  "features": {
+    "trustLine": "Sviluppato da un tecnico PDR professionista con oltre 25 anni di esperienza nella riparazione di danni da grandine e parcheggio.",
+    "intro": {
+      "title": "Cosa rende speciale PDR Kalk",
+      "cards": [
+        {
+          "heading": "Progettato da un tecnico. Per i tecnici.",
+          "desc": "Questo software PDR su misura crea calcoli di danni da grandine e parcheggio in modo rapido, efficiente e professionale.",
+          "support": "Il tempo è denaro. Lascia che PDR Kalk faccia il lavoro per te."
+        },
+        {
+          "heading": "Calcoli professionali in meno di un minuto — tutto su una pagina.",
+          "desc": "Seleziona il cliente.\nInserisci i dati del veicolo.\nAggiungi i danni e le foto — fatto.\n\nNiente Excel. Niente formattazione manuale. Niente strumenti PDF esterni.",
+          "support": ""
+        },
+        {
+          "heading": "Acquisto unico. Proprietà permanente.",
+          "desc": "Paghi una volta. Installalo sul tuo PC o tablet.\nNiente cloud. Niente Wi-Fi obbligatorio o segnali mobili instabili. Velocissimo.\n\nPienamente conforme al GDPR. Nessun dato cliente nel cloud.\n\nOpzione di pagamento mensile disponibile per chi lo preferisce.",
+          "support": ""
+        }
+      ]
+    },
+    "divider": {
+      "statement": "Finalmente un software di calcolo che pensa come un tecnico PDR."
+    },
+    "outcomes": {
+      "title": "Cosa fa PDR Kalk per te",
+      "cards": [
+        {
+          "heading": "Calcoli danni da grandine",
+          "bullets": [
+            "Logica AW automatica secondo le matrici assicurative attuali",
+            "Clienti privati e aziendali direttamente dalla rubrica",
+            "Tutti i campi importanti chiaramente visualizzati su una pagina",
+            "Calcolo in tempo reale durante l'inserimento dei danni",
+            "Aggiungi R&R (smontaggio/rimontaggio) e note individuali al rapporto",
+            "Ogni ordine viene salvato localmente con backup automatico",
+            "Le deviazioni dalla matrice assicurativa vengono chiaramente indicate per gli assicuratori"
+          ],
+          "tagline": "Calcolare correttamente. Ogni volta."
+        },
+        {
+          "heading": "Calcoli danni da parcheggio",
+          "bullets": [
+            "Calcolatore di danni da parcheggio rapido e intuitivo",
+            "Selezione del cliente dalla rubrica",
+            "Prezzo per veicolo o per componente a scelta",
+            "Supplementi con un clic: dimensione ammaccatura, tipo di materiale, ammaccature profonde, ammaccature allungate, ammaccature vicino ai bordi, pieghe",
+            "Tu definisci i prezzi — il sistema gestisce testo, descrizioni e formattazione",
+            "Aggiungi foto e genera il PDF istantaneamente"
+          ],
+          "tagline": ""
+        },
+        {
+          "heading": "30–60 minuti di risparmio per ordine",
+          "bullets": [
+            "Registrazione dei danni ultra-rapida",
+            "Lavoro d'ufficio ridotto di 30–60 minuti per ordine",
+            "Foto automaticamente compresse e integrate",
+            "Crea un unico PDF per il cliente o l'assicurazione, con o senza sconto"
+          ],
+          "tagline": "Più riparazioni. Meno amministrazione."
+        },
+        {
+          "heading": "Pieno controllo dei tuoi dati",
+          "bullets": [
+            "Archiviati localmente sul tuo computer",
+            "Funziona completamente offline — nessuna connessione Internet necessaria",
+            "Backup automatico degli ordini e opzioni di backup completo del sistema",
+            "Ideale per tecnici grandine e specialisti mobili"
+          ],
+          "tagline": "La tua attività resta tua."
+        },
+        {
+          "heading": "Dal calcolo alla fattura",
+          "bullets": [
+            "Crea fatture professionali in pochi secondi",
+            "Fatture singole o fatture cumulative",
+            "Formattate per buste standard con finestra C5"
+          ],
+          "tagline": "Risparmio di tempo significativo nell'arco dell'anno."
+        },
+        {
+          "heading": "Impostazioni e personalizzazione",
+          "bullets": [
+            "Definisci i tuoi prefissi per i documenti",
+            "Testi di introduzione e chiusura personalizzati",
+            "Tassi di sconto predefiniti globalmente o per cliente",
+            "Branding completo con logo aziendale e dati"
+          ],
+          "tagline": ""
+        }
+      ]
+    }
+  },
+  "screenshots": {
+    "title": "In azione",
+    "subtitle": "Documenti professionali con un clic.",
+    "images": [
+      { "file": "dashboard.jpg",        "caption": "Dashboard — Documenti recenti" },
+      { "file": "hagel-auftrag.jpg",    "caption": "Registrazione danni da grandine" },
+      { "file": "hagel-auftrag2.jpg",   "caption": "Danni da grandine — Vista dettagliata" },
+      { "file": "pdf-hagel.jpg",        "caption": "Rapporto grandine PDF" },
+      { "file": "pdf-photos.jpg",       "caption": "Documentazione fotografica PDF" },
+      { "file": "park-auftrag.jpg",     "caption": "Registrazione danni da parcheggio" },
+      { "file": "pdf-park.jpg",         "caption": "Rapporto parcheggio PDF" },
+      { "file": "pdf-rechnung.jpg",     "caption": "Fattura PDF" },
+      { "file": "kostenvoranschlag.jpg","caption": "Preventivo" },
+      { "file": "arbeitsrapporte.jpg",  "caption": "Rapporti di lavoro" },
+      { "file": "quittungen.jpg",       "caption": "Ricevute" },
+      { "file": "rechnungen.jpg",       "caption": "Panoramica fatture" },
+      { "file": "adresse-buch.jpg",     "caption": "Rubrica" },
+      { "file": "kunden-info.jpg",      "caption": "Informazioni cliente" },
+      { "file": "einstellungen1.jpg",   "caption": "Impostazioni (1)" },
+      { "file": "einstellungen2.jpg",   "caption": "Impostazioni (2)" },
+      { "file": "einstellungen3.jpg",   "caption": "Impostazioni (3)" }
+    ]
+  },
+  "howItWorks": {
+    "title": "Inizia in 3 passi",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Richiedi una licenza",
+        "desc": "Pagamento unico, senza abbonamento. Ricevi immediatamente la tua chiave di licenza personale via e-mail."
+      },
+      {
+        "num": "02",
+        "title": "Installa l'app",
+        "desc": "Installa PDR Kalk sul tuo PC o tablet e inserisci la tua chiave — una sola volta, poi sbloccato permanentemente."
+      },
+      {
+        "num": "03",
+        "title": "Inizia subito",
+        "desc": "Crea il tuo primo ordine. Tutti i dati rimangono archiviati localmente sul tuo dispositivo."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Modelli di licenza flessibili – pieno controllo",
+    "lifetime": {
+      "badge": "CONSIGLIATO",
+      "badgeNote": "Pagamento unico — Senza abbonamento",
+      "price": "TBA",
+      "priceSuffix": "unico",
+      "features": [
+        "2 installazioni incluse",
+        "Nessun costo di abbonamento",
+        "Nessun costo di installazione",
+        "Nessun costo ricorrente",
+        "Utilizzo illimitato",
+        "Funziona offline"
+      ],
+      "note": "Scelta migliore per l'uso a lungo termine.",
+      "cta": "Acquista ora"
+    },
+    "monthly": {
+      "badge": "Licenza mensile",
+      "badgeNote": "Tariffa flessibile",
+      "price": "TBA",
+      "priceSuffix": "al mese",
+      "features": [
+        "Nessun costo d'ingresso elevato",
+        "Disdetta in qualsiasi momento",
+        "Accesso alla versione attuale",
+        "Utilizzo finché l'abbonamento è attivo"
+      ],
+      "disclaimer": "L'accesso termina con la disdetta."
+    },
+    "comparisonTable": {
+      "title": "Confronto costi su 5 anni",
+      "headers": {
+        "feature": "Caratteristica",
+        "competitorA": "Concorrente A",
+        "competitorB": "Concorrente B",
+        "pdrKalk": "PDR Kalk"
+      },
+      "rows": [
+        { "feature": "Modello di licenza",                  "competitorA": "Abbonamento mensile",  "competitorB": "Abbonamento mensile",  "pdrKalk": "Unico / Mensile" },
+        { "feature": "Costo di installazione",              "competitorA": "Sì",                   "competitorB": "Sì",                   "pdrKalk": "No" },
+        { "feature": "Costo per utente aggiuntivo",         "competitorA": "Sì",                   "competitorB": "Sì",                   "pdrKalk": "Incluso (2 inst.)" },
+        { "feature": "Basato su cloud",                     "competitorA": "Sì",                   "competitorB": "Sì",                   "pdrKalk": "No — locale" },
+        { "feature": "Connessione Internet necessaria",     "competitorA": "Sì",                   "competitorB": "Sì",                   "pdrKalk": "No" },
+        { "feature": "Costo anno 1",                        "competitorA": "CHF 1'127",            "competitorB": "CHF 1'188",            "pdrKalk": "TBA" },
+        { "feature": "Costo dopo 5 anni",                   "competitorA": "CHF 4'439",            "competitorB": "CHF 5'940",            "pdrKalk": "TBA" }
+      ],
+      "closing": "Risparmia migliaia di franchi in cinque anni rispetto ai sistemi in abbonamento.",
+      "note": "Estensioni di funzionalità o aggiornamenti assicurativi opzionali possono essere offerti a un piccolo supplemento. Tutti i valori comparativi si basano su informazioni tariffarie pubbliche (stato primavera 2026)."
+    }
+  },
+  "contact": {
+    "title": "Domande? Contattaci.",
+    "subtitle": "Di solito rispondiamo entro 24 ore.",
+    "namePlaceholder": "Il tuo nome",
+    "emailPlaceholder": "La tua e-mail",
+    "messagePlaceholder": "Il tuo messaggio",
+    "submit": "Invia messaggio",
+    "success": "Messaggio inviato — ti risponderemo presto!",
+    "email": "info@balmerstormsolutions.ch"
+  },
+  "footer": {
+    "company": "Balmer Storm Solutions",
+    "tagline": "Sviluppato in Svizzera.",
+    "copyright": "© 2026 Balmer Storm Solutions. Tutti i diritti riservati.",
+    "intl": "Altri paesi in arrivo.",
+    "links": {
+      "features": "Funzionalità",
+      "pricing": "Prezzi",
+      "contact": "Contatto"
+    }
+  }
+}

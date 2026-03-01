@@ -1,0 +1,236 @@
+{
+  "nav": {
+    "features": "Fonctionnalités",
+    "screenshots": "Captures d'écran",
+    "pricing": "Tarifs",
+    "howItWorks": "Accès",
+    "contact": "Contact",
+    "cta": "Acheter une licence"
+  },
+  "hero": {
+    "title": "Calcul de dommages de grêle et de stationnement –",
+    "titleAccent": "rapide, local et conforme.",
+    "subtitle": "Créez des rapports et factures professionnels en quelques minutes — sans cloud, sans abonnement, avec un contrôle total des données.",
+    "ctaPrimary": "Demander une licence",
+    "ctaSecondary": "Ouvrir la démo",
+    "screenshotAlt": "Tableau de bord PDR Kalk",
+    "trust1": "🔒 Local et sécurisé",
+    "trust2": "⚡ Rapport en 1 min",
+    "trust3": "🌍 Bientôt international",
+    "languageLabel": "Disponible en",
+    "languageDe": "Deutsch",
+    "languageFr": "Français",
+    "languageIt": "Italiano"
+  },
+  "features": {
+    "trustLine": "Développé par un technicien PDR professionnel avec plus de 25 ans d'expérience dans la réparation de dommages de grêle et de stationnement.",
+    "intro": {
+      "title": "Ce qui rend PDR Kalk unique",
+      "cards": [
+        {
+          "heading": "Conçu par un technicien. Pour les techniciens.",
+          "desc": "Ce logiciel PDR sur mesure crée des calculs de dommages de grêle et de stationnement rapidement, efficacement et professionnellement.",
+          "support": "Le temps, c'est de l'argent. Laissez PDR Kalk faire le travail pour vous."
+        },
+        {
+          "heading": "Calculs professionnels en moins d'une minute — tout sur une seule page.",
+          "desc": "Sélectionnez votre client.\nSaisissez les données du véhicule.\nAjoutez les dommages et les photos — c'est fait.\n\nPas d'Excel. Pas de formatage manuel. Pas d'outils PDF externes.",
+          "support": ""
+        },
+        {
+          "heading": "Achat unique. Propriété permanente.",
+          "desc": "Vous payez une fois. Installez-le sur votre PC ou tablette.\nPas de cloud. Pas de Wi-Fi obligatoire ni de signaux mobiles instables. Ultra-rapide.\n\nEntièrement conforme au RGPD. Aucune donnée client dans le cloud.\n\nOption de paiement mensuel disponible pour ceux qui le préfèrent.",
+          "support": ""
+        }
+      ]
+    },
+    "divider": {
+      "statement": "Enfin un logiciel de calcul qui pense comme un technicien PDR."
+    },
+    "outcomes": {
+      "title": "Ce que PDR Kalk fait pour vous",
+      "cards": [
+        {
+          "heading": "Calculs de dommages de grêle",
+          "bullets": [
+            "Logique AW automatique selon les matrices d'assurance actuelles",
+            "Clients privés et professionnels directement depuis le carnet d'adresses",
+            "Tous les champs importants clairement affichés sur une page",
+            "Calcul en temps réel pendant la saisie des dommages",
+            "Ajout de R&R (démontage/remontage) et notes individuelles au rapport",
+            "Chaque commande est enregistrée localement avec sauvegarde automatique",
+            "Les écarts par rapport à la matrice d'assurance sont clairement indiqués pour les assureurs"
+          ],
+          "tagline": "Calculer correctement. À chaque fois."
+        },
+        {
+          "heading": "Calculs de dommages de stationnement",
+          "bullets": [
+            "Calculateur de dommages de stationnement rapide et intuitif",
+            "Sélection du client depuis le carnet d'adresses",
+            "Prix par véhicule ou par pièce au choix",
+            "Suppléments en un clic : taille de bosse, type de matériau, bosses profondes, bosses étirées, bosses près des arêtes, plis",
+            "Vous définissez les prix — le système gère le texte, les descriptions et la mise en forme",
+            "Ajoutez des photos et générez le PDF instantanément"
+          ],
+          "tagline": ""
+        },
+        {
+          "heading": "30 à 60 minutes d'économie par commande",
+          "bullets": [
+            "Saisie des dommages ultra-rapide",
+            "Travail administratif réduit de 30 à 60 minutes par commande",
+            "Photos automatiquement compressées et intégrées",
+            "Crée un seul PDF pour le client ou l'assurance, avec ou sans remise"
+          ],
+          "tagline": "Plus de réparations. Moins d'administration."
+        },
+        {
+          "heading": "Contrôle total de vos données",
+          "bullets": [
+            "Stockées localement sur votre ordinateur",
+            "Fonctionne entièrement hors ligne — pas de connexion Internet requise",
+            "Sauvegarde automatique des commandes et options de sauvegarde complète du système",
+            "Idéal pour les techniciens grêle et les spécialistes mobiles"
+          ],
+          "tagline": "Votre entreprise reste la vôtre."
+        },
+        {
+          "heading": "Du calcul à la facture",
+          "bullets": [
+            "Créez des factures professionnelles en quelques secondes",
+            "Factures individuelles ou factures groupées",
+            "Formatées pour les enveloppes standard à fenêtre C5"
+          ],
+          "tagline": "Gain de temps significatif sur l'année."
+        },
+        {
+          "heading": "Paramètres et personnalisation",
+          "bullets": [
+            "Définissez vos propres préfixes de documents",
+            "Textes d'introduction et de conclusion personnalisés",
+            "Taux de remise par défaut globalement ou par client",
+            "Image de marque complète avec logo et coordonnées de l'entreprise"
+          ],
+          "tagline": ""
+        }
+      ]
+    }
+  },
+  "screenshots": {
+    "title": "En action",
+    "subtitle": "Documents professionnels en un clic.",
+    "images": [
+      { "file": "dashboard.jpg",        "caption": "Tableau de bord — Documents récents" },
+      { "file": "hagel-auftrag.jpg",    "caption": "Saisie dommages de grêle" },
+      { "file": "hagel-auftrag2.jpg",   "caption": "Dommages de grêle — Vue détaillée" },
+      { "file": "pdf-hagel.jpg",        "caption": "Rapport grêle PDF" },
+      { "file": "pdf-photos.jpg",       "caption": "Documentation photo PDF" },
+      { "file": "park-auftrag.jpg",     "caption": "Saisie dommages de stationnement" },
+      { "file": "pdf-park.jpg",         "caption": "Rapport stationnement PDF" },
+      { "file": "pdf-rechnung.jpg",     "caption": "Facture PDF" },
+      { "file": "kostenvoranschlag.jpg","caption": "Devis" },
+      { "file": "arbeitsrapporte.jpg",  "caption": "Rapports de travail" },
+      { "file": "quittungen.jpg",       "caption": "Quittances" },
+      { "file": "rechnungen.jpg",       "caption": "Aperçu des factures" },
+      { "file": "adresse-buch.jpg",     "caption": "Carnet d'adresses" },
+      { "file": "kunden-info.jpg",      "caption": "Informations client" },
+      { "file": "einstellungen1.jpg",   "caption": "Paramètres (1)" },
+      { "file": "einstellungen2.jpg",   "caption": "Paramètres (2)" },
+      { "file": "einstellungen3.jpg",   "caption": "Paramètres (3)" }
+    ]
+  },
+  "howItWorks": {
+    "title": "Démarrez en 3 étapes",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Demander une licence",
+        "desc": "Paiement unique, sans abonnement. Vous recevez immédiatement votre clé de licence personnelle par e-mail."
+      },
+      {
+        "num": "02",
+        "title": "Installer l'application",
+        "desc": "Installez PDR Kalk sur votre PC ou tablette et entrez votre clé — une seule fois, puis déverrouillé en permanence."
+      },
+      {
+        "num": "03",
+        "title": "Commencer immédiatement",
+        "desc": "Créez votre première commande. Toutes les données restent stockées localement sur votre appareil."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Modèles de licence flexibles – contrôle total",
+    "lifetime": {
+      "badge": "RECOMMANDÉ",
+      "badgeNote": "Paiement unique — Sans abonnement",
+      "price": "TBA",
+      "priceSuffix": "unique",
+      "features": [
+        "2 installations incluses",
+        "Pas de frais d'abonnement",
+        "Pas de frais d'installation",
+        "Pas de frais récurrents",
+        "Utilisation illimitée",
+        "Fonctionne hors ligne"
+      ],
+      "note": "Meilleur choix pour une utilisation à long terme.",
+      "cta": "Acheter maintenant"
+    },
+    "monthly": {
+      "badge": "Licence mensuelle",
+      "badgeNote": "Tarif flexible",
+      "price": "TBA",
+      "priceSuffix": "par mois",
+      "features": [
+        "Pas de coût d'entrée élevé",
+        "Résiliable à tout moment",
+        "Accès à la version actuelle",
+        "Utilisation tant que l'abonnement est actif"
+      ],
+      "disclaimer": "L'accès prend fin en cas de résiliation."
+    },
+    "comparisonTable": {
+      "title": "Comparaison des coûts sur 5 ans",
+      "headers": {
+        "feature": "Caractéristique",
+        "competitorA": "Concurrent A",
+        "competitorB": "Concurrent B",
+        "pdrKalk": "PDR Kalk"
+      },
+      "rows": [
+        { "feature": "Modèle de licence",               "competitorA": "Abonnement mensuel",  "competitorB": "Abonnement mensuel",  "pdrKalk": "Unique / Mensuel" },
+        { "feature": "Frais d'installation",             "competitorA": "Oui",                 "competitorB": "Oui",                 "pdrKalk": "Non" },
+        { "feature": "Coût par utilisateur supplémentaire", "competitorA": "Oui",              "competitorB": "Oui",                 "pdrKalk": "Inclus (2 inst.)" },
+        { "feature": "Basé sur le cloud",                "competitorA": "Oui",                 "competitorB": "Oui",                 "pdrKalk": "Non — local" },
+        { "feature": "Connexion Internet requise",       "competitorA": "Oui",                 "competitorB": "Oui",                 "pdrKalk": "Non" },
+        { "feature": "Coût année 1",                     "competitorA": "CHF 1'127",           "competitorB": "CHF 1'188",           "pdrKalk": "TBA" },
+        { "feature": "Coût après 5 ans",                 "competitorA": "CHF 4'439",           "competitorB": "CHF 5'940",           "pdrKalk": "TBA" }
+      ],
+      "closing": "Économisez des milliers de francs sur cinq ans par rapport aux systèmes par abonnement.",
+      "note": "Des extensions de fonctionnalités ou des mises à jour d'assurance optionnelles peuvent être proposées moyennant un petit supplément. Toutes les valeurs comparatives sont basées sur des informations tarifaires publiques (état printemps 2026)."
+    }
+  },
+  "contact": {
+    "title": "Des questions ? Contactez-nous.",
+    "subtitle": "Nous répondons généralement dans les 24 heures.",
+    "namePlaceholder": "Votre nom",
+    "emailPlaceholder": "Votre e-mail",
+    "messagePlaceholder": "Votre message",
+    "submit": "Envoyer le message",
+    "success": "Message envoyé — nous vous répondrons bientôt !",
+    "email": "info@balmerstormsolutions.ch"
+  },
+  "footer": {
+    "company": "Balmer Storm Solutions",
+    "tagline": "Développé en Suisse.",
+    "copyright": "© 2026 Balmer Storm Solutions. Tous droits réservés.",
+    "intl": "D'autres pays suivront.",
+    "links": {
+      "features": "Fonctionnalités",
+      "pricing": "Tarifs",
+      "contact": "Contact"
+    }
+  }
+}

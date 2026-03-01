@@ -164,80 +164,15 @@ export default function Hero() {
             ))}
           </div>
 
-          {/* App language availability */}
-          <div className="fade-up-6" style={{
-            marginTop: '1.5rem',
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '0.6rem',
-            background: 'rgba(255,255,255,0.04)',
-            border: '1px solid rgba(255,255,255,0.07)',
-            borderRadius: '999px',
-            padding: '0.5rem 1.25rem',
-            backdropFilter: 'blur(12px)',
-            WebkitBackdropFilter: 'blur(12px)',
-          }}>
-            <span style={{
-              fontFamily: 'Barlow, sans-serif',
-              fontSize: '0.75rem',
-              color: 'rgba(148,163,184,0.6)',
-              letterSpacing: '0.05em',
-              textTransform: 'uppercase',
-              marginRight: '0.25rem',
-            }}>
-              {t('languageLabel')}
-            </span>
-
-            {/* DE flag */}
-            <span style={{display: 'inline-flex', alignItems: 'center', gap: '0.35rem'}}>
-              <svg width="18" height="18" viewBox="0 0 18 18" style={{flexShrink: 0}}>
-                <clipPath id="flagClipDE"><circle cx="9" cy="9" r="9"/></clipPath>
-                <g clipPath="url(#flagClipDE)">
-                  <rect y="0" width="18" height="6" fill="#000"/>
-                  <rect y="6" width="18" height="6" fill="#DD0000"/>
-                  <rect y="12" width="18" height="6" fill="#FFCC00"/>
-                </g>
-              </svg>
-              <span style={{fontFamily: 'Barlow, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.75)'}}>{t('languageDe')}</span>
-            </span>
-
-            <span style={{color: 'rgba(148,163,184,0.3)', fontSize: '0.7rem'}}>·</span>
-
-            {/* FR flag */}
-            <span style={{display: 'inline-flex', alignItems: 'center', gap: '0.35rem'}}>
-              <svg width="18" height="18" viewBox="0 0 18 18" style={{flexShrink: 0}}>
-                <clipPath id="flagClipFR"><circle cx="9" cy="9" r="9"/></clipPath>
-                <g clipPath="url(#flagClipFR)">
-                  <rect x="0" width="6" height="18" fill="#002395"/>
-                  <rect x="6" width="6" height="18" fill="#FFFFFF"/>
-                  <rect x="12" width="6" height="18" fill="#ED2939"/>
-                </g>
-              </svg>
-              <span style={{fontFamily: 'Barlow, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.75)'}}>{t('languageFr')}</span>
-            </span>
-
-            <span style={{color: 'rgba(148,163,184,0.3)', fontSize: '0.7rem'}}>·</span>
-
-            {/* IT flag */}
-            <span style={{display: 'inline-flex', alignItems: 'center', gap: '0.35rem'}}>
-              <svg width="18" height="18" viewBox="0 0 18 18" style={{flexShrink: 0}}>
-                <clipPath id="flagClipIT"><circle cx="9" cy="9" r="9"/></clipPath>
-                <g clipPath="url(#flagClipIT)">
-                  <rect x="0" width="6" height="18" fill="#009246"/>
-                  <rect x="6" width="6" height="18" fill="#FFFFFF"/>
-                  <rect x="12" width="6" height="18" fill="#CE2B37"/>
-                </g>
-              </svg>
-              <span style={{fontFamily: 'Barlow, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.75)'}}>{t('languageIt')}</span>
-            </span>
-          </div>
         </div>
 
         {/* Right — App screenshot */}
         <div className="fade-up-3 hero-screenshot" style={{
           position: 'relative',
           display: 'flex',
-          justifyContent: 'center',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '1rem',
         }}>
           {/* Glow behind screenshot */}
           <div style={{
@@ -290,6 +225,66 @@ export default function Hero() {
               style={{width: '100%', height: 'auto', display: 'block'}}
               priority
             />
+          </div>
+
+          {/* App language availability — below screenshot */}
+          <div className="fade-up-6" style={{
+            position: 'relative',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '0.75rem',
+            background: 'rgba(255,255,255,0.04)',
+            border: '1px solid rgba(255,255,255,0.07)',
+            borderRadius: '6px',
+            padding: '0.55rem 1.5rem',
+            backdropFilter: 'blur(12px)',
+            WebkitBackdropFilter: 'blur(12px)',
+          }}>
+            <span style={{
+              fontFamily: 'Barlow Condensed, sans-serif',
+              fontWeight: 700,
+              fontSize: '0.72rem',
+              color: 'rgba(148,163,184,0.6)',
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              marginRight: '0.15rem',
+            }}>
+              {t('languageLabel')}
+            </span>
+
+            {/* DE flag */}
+            <span style={{display: 'inline-flex', alignItems: 'center', gap: '0.35rem'}}>
+              <svg width="18" height="13" viewBox="0 0 18 13" style={{flexShrink: 0, borderRadius: '2px', overflow: 'hidden'}}>
+                <rect y="0" width="18" height="4.33" fill="#000"/>
+                <rect y="4.33" width="18" height="4.34" fill="#DD0000"/>
+                <rect y="8.67" width="18" height="4.33" fill="#FFCC00"/>
+              </svg>
+              <span style={{fontFamily: 'Barlow, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.75)'}}>{t('languageDe')}</span>
+            </span>
+
+            <span style={{color: 'rgba(148,163,184,0.2)', fontSize: '0.9rem', fontWeight: 300}}>|</span>
+
+            {/* FR flag */}
+            <span style={{display: 'inline-flex', alignItems: 'center', gap: '0.35rem'}}>
+              <svg width="18" height="13" viewBox="0 0 18 13" style={{flexShrink: 0, borderRadius: '2px', overflow: 'hidden'}}>
+                <rect x="0" width="6" height="13" fill="#002395"/>
+                <rect x="6" width="6" height="13" fill="#FFFFFF"/>
+                <rect x="12" width="6" height="13" fill="#ED2939"/>
+              </svg>
+              <span style={{fontFamily: 'Barlow, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.75)'}}>{t('languageFr')}</span>
+            </span>
+
+            <span style={{color: 'rgba(148,163,184,0.2)', fontSize: '0.9rem', fontWeight: 300}}>|</span>
+
+            {/* IT flag */}
+            <span style={{display: 'inline-flex', alignItems: 'center', gap: '0.35rem'}}>
+              <svg width="18" height="13" viewBox="0 0 18 13" style={{flexShrink: 0, borderRadius: '2px', overflow: 'hidden'}}>
+                <rect x="0" width="6" height="13" fill="#009246"/>
+                <rect x="6" width="6" height="13" fill="#FFFFFF"/>
+                <rect x="12" width="6" height="13" fill="#CE2B37"/>
+              </svg>
+              <span style={{fontFamily: 'Barlow, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.75)'}}>{t('languageIt')}</span>
+            </span>
           </div>
         </div>
       </div>
