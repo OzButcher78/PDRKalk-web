@@ -287,6 +287,20 @@ export default function Hero() {
               </svg>
               <span className="lang-name" style={{fontFamily: 'Barlow, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.75)'}}>{t('languageIt')}</span>
             </span>
+
+            <span className="lang-sep" style={{color: 'rgba(148,163,184,0.2)', fontSize: '0.9rem', fontWeight: 300}}>|</span>
+
+            {/* EN flag */}
+            <span style={{display: 'inline-flex', alignItems: 'center', gap: '0.35rem'}}>
+              <svg width="18" height="13" viewBox="0 0 18 13" style={{flexShrink: 0, borderRadius: '2px', overflow: 'hidden'}}>
+                <rect width="18" height="13" fill="#012169"/>
+                <path d="M0,0 L18,13 M18,0 L0,13" stroke="#FFFFFF" strokeWidth="2.2"/>
+                <path d="M0,0 L18,13 M18,0 L0,13" stroke="#C8102E" strokeWidth="1.2"/>
+                <path d="M9,0 V13 M0,6.5 H18" stroke="#FFFFFF" strokeWidth="3.6"/>
+                <path d="M9,0 V13 M0,6.5 H18" stroke="#C8102E" strokeWidth="2.2"/>
+              </svg>
+              <span className="lang-name" style={{fontFamily: 'Barlow, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.75)'}}>{t('languageEn')}</span>
+            </span>
           </div>
         </div>
       </div>
