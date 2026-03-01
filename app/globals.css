@@ -178,6 +178,14 @@ body {
 .pricing-comparison { grid-template-columns: repeat(3, 1fr); }
 .contact-grid       { grid-template-columns: 1fr 1fr; }
 
+/* Prevent grid children from overflowing on narrow screens */
+.features-grid > *,
+.hero-grid > * {
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
 /* ---- Responsive breakpoints ---- */
 
 /* Tablet landscape / small desktop (≤ 1024px) */

@@ -131,6 +131,7 @@ export default function Features() {
                   borderRadius: '8px',
                   padding: '1.75rem',
                   height: '100%',
+                  overflow: 'hidden',
                 }}>
                   <h3 style={{
                     fontFamily: 'Barlow Condensed, sans-serif',
@@ -243,6 +244,7 @@ export default function Features() {
                   height: '100%',
                   display: 'flex',
                   flexDirection: 'column',
+                  overflow: 'hidden',
                 }}>
                   {/* Icon */}
                   <div style={{color: outcomeAccents[i], marginBottom: '1rem'}}>
