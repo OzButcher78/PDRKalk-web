@@ -82,6 +82,7 @@ export default function Navbar() {
         {/* Logo */}
         <a
           href="#"
+          className="nav-logo"
           style={{
             display: 'flex',
             alignItems: 'center',

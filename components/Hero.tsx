@@ -228,7 +228,7 @@ export default function Hero() {
           </div>
 
           {/* App language availability — below screenshot */}
-          <div className="fade-up-6" style={{
+          <div className="fade-up-6 lang-pill" style={{
             position: 'relative',
             display: 'inline-flex',
             alignItems: 'center',
@@ -239,8 +239,10 @@ export default function Hero() {
             padding: '0.55rem 1.5rem',
             backdropFilter: 'blur(12px)',
             WebkitBackdropFilter: 'blur(12px)',
+            justifyContent: 'center',
+            maxWidth: '100%',
           }}>
-            <span style={{
+            <span className="lang-label" style={{
               fontFamily: 'Barlow Condensed, sans-serif',
               fontWeight: 700,
               fontSize: '0.72rem',
@@ -259,10 +261,10 @@ export default function Hero() {
                 <rect y="4.33" width="18" height="4.34" fill="#DD0000"/>
                 <rect y="8.67" width="18" height="4.33" fill="#FFCC00"/>
               </svg>
-              <span style={{fontFamily: 'Barlow, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.75)'}}>{t('languageDe')}</span>
+              <span className="lang-name" style={{fontFamily: 'Barlow, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.75)'}}>{t('languageDe')}</span>
             </span>
 
-            <span style={{color: 'rgba(148,163,184,0.2)', fontSize: '0.9rem', fontWeight: 300}}>|</span>
+            <span className="lang-sep" style={{color: 'rgba(148,163,184,0.2)', fontSize: '0.9rem', fontWeight: 300}}>|</span>
 
             {/* FR flag */}
             <span style={{display: 'inline-flex', alignItems: 'center', gap: '0.35rem'}}>
@@ -271,10 +273,10 @@ export default function Hero() {
                 <rect x="6" width="6" height="13" fill="#FFFFFF"/>
                 <rect x="12" width="6" height="13" fill="#ED2939"/>
               </svg>
-              <span style={{fontFamily: 'Barlow, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.75)'}}>{t('languageFr')}</span>
+              <span className="lang-name" style={{fontFamily: 'Barlow, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.75)'}}>{t('languageFr')}</span>
             </span>
 
-            <span style={{color: 'rgba(148,163,184,0.2)', fontSize: '0.9rem', fontWeight: 300}}>|</span>
+            <span className="lang-sep" style={{color: 'rgba(148,163,184,0.2)', fontSize: '0.9rem', fontWeight: 300}}>|</span>
 
             {/* IT flag */}
             <span style={{display: 'inline-flex', alignItems: 'center', gap: '0.35rem'}}>
@@ -283,7 +285,7 @@ export default function Hero() {
                 <rect x="6" width="6" height="13" fill="#FFFFFF"/>
                 <rect x="12" width="6" height="13" fill="#CE2B37"/>
               </svg>
-              <span style={{fontFamily: 'Barlow, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.75)'}}>{t('languageIt')}</span>
+              <span className="lang-name" style={{fontFamily: 'Barlow, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.75)'}}>{t('languageIt')}</span>
             </span>
           </div>
         </div>
