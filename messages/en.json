@@ -16,7 +16,11 @@
     "screenshotAlt": "PDR Kalk Dashboard",
     "trust1": "🔒 Local & Secure",
     "trust2": "⚡ Report in 1 Min",
-    "trust3": "🌍 More countries soon"
+    "trust3": "🌍 More countries soon",
+    "languageLabel": "Available in",
+    "languageDe": "Deutsch",
+    "languageFr": "Français",
+    "languageIt": "Italiano"
   },
   "features": {
     "trustLine": "Developed by a professional PDR technician with over 25 years of experience in hail and parking dent repair.",

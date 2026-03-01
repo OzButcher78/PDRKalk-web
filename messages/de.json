@@ -16,7 +16,11 @@
     "screenshotAlt": "PDR Kalk Dashboard",
     "trust1": "🔒 Lokal & Sicher",
     "trust2": "⚡ Rapport in 1 Min",
-    "trust3": "🌍 Bald international"
+    "trust3": "🌍 Bald international",
+    "languageLabel": "Verfügbar in",
+    "languageDe": "Deutsch",
+    "languageFr": "Français",
+    "languageIt": "Italiano"
   },
   "features": {
     "trustLine": "Entwickelt von einem professionellen PDR-Techniker mit über 25 Jahren Erfahrung in der Hagel- und Parkschadenreparatur.",
