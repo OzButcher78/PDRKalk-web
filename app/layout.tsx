@@ -7,11 +7,7 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-// Minimal root layout — locale-specific setup is in app/[locale]/layout.tsx
+// Minimal root layout — html/body rendered in [locale]/layout.tsx for lang attribute
 export default function RootLayout({children}: {children: React.ReactNode}) {
-  return (
-    <html suppressHydrationWarning>
-      <body>{children}</body>
-    </html>
-  );
+  return children;
 }

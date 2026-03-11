@@ -33,6 +33,38 @@ export default function Screenshots() {
     return () => window.removeEventListener('keydown', onKey);
   }, [lightboxIdx, closeLightbox, prevImage, nextImage]);
 
+  // Focus trap: keep focus within lightbox
+  useEffect(() => {
+    if (lightboxIdx === null) return;
+    const overlay = document.querySelector('.lightbox-overlay') as HTMLElement | null;
+    if (!overlay) return;
+    const previouslyFocused = document.activeElement as HTMLElement | null;
+    const focusableSelector = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+
+    const trapFocus = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return;
+      const focusable = overlay.querySelectorAll(focusableSelector);
+      if (focusable.length === 0) return;
+      const first = focusable[0] as HTMLElement;
+      const last = focusable[focusable.length - 1] as HTMLElement;
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    };
+
+    // Focus close button
+    const closeBtn = overlay.querySelector('.lb-close') as HTMLElement | null;
+    closeBtn?.focus();
+
+    window.addEventListener('keydown', trapFocus);
+    return () => {
+      window.removeEventListener('keydown', trapFocus);
+      previouslyFocused?.focus();
+    };
+  }, [lightboxIdx]);
+
   const lightbox = lightboxIdx !== null ? images[lightboxIdx] : null;
 
   return (
@@ -90,7 +122,7 @@ export default function Screenshots() {
               <button
                 onClick={() => setLightboxIdx(i)}
                 className="screenshot-btn"
-                aria-label={`${img.caption} vergrössern`}
+                aria-label={t('enlarge', {caption: img.caption})}
               >
                 <div style={{
                   position: 'relative',
@@ -171,7 +203,7 @@ export default function Screenshots() {
           {/* Close button */}
           <button
             onClick={closeLightbox}
-            aria-label="Schliessen"
+            aria-label={t('close')}
             className="lb-close"
             style={{
               position: 'absolute',
@@ -198,7 +230,7 @@ export default function Screenshots() {
           {/* Prev button */}
           <button
             onClick={e => { e.stopPropagation(); prevImage(); }}
-            aria-label="Vorheriges Bild"
+            aria-label={t('prev')}
             className="lb-nav"
             style={{
               position: 'absolute',
@@ -226,7 +258,7 @@ export default function Screenshots() {
           {/* Next button */}
           <button
             onClick={e => { e.stopPropagation(); nextImage(); }}
-            aria-label="Nächstes Bild"
+            aria-label={t('next')}
             className="lb-nav"
             style={{
               position: 'absolute',

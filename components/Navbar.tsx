@@ -167,7 +167,7 @@ export default function Navbar() {
               }}
             >
               {locale.toUpperCase()}
-              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" style={{
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true" style={{
                 transition: 'transform 0.2s',
                 transform: langOpen ? 'rotate(180deg)' : 'none',
               }}>

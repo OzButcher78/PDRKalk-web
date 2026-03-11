@@ -5,7 +5,8 @@
     "pricing": "Pricing",
     "howItWorks": "Access",
     "contact": "Contact",
-    "cta": "Buy License"
+    "cta": "Buy License",
+    "skipToContent": "Skip to content"
   },
   "hero": {
     "title": "Hail & Parking Damage Estimation –",
@@ -21,7 +22,8 @@
     "languageDe": "Deutsch",
     "languageFr": "Français",
     "languageIt": "Italiano",
-    "languageEn": "English"
+    "languageEn": "English",
+    "demoComingSoon": "Demo Coming Soon"
   },
   "features": {
     "trustLine": "Developed by a professional PDR technician with over 25 years of experience in hail and parking dent repair.",
@@ -121,6 +123,10 @@
   "screenshots": {
     "title": "See It In Action",
     "subtitle": "Professional documents at the press of a button.",
+    "enlarge": "Enlarge {caption}",
+    "close": "Close",
+    "prev": "Previous image",
+    "next": "Next image",
     "images": [
       { "file": "dashboard.jpg",        "caption": "Dashboard — Recent Documents" },
       { "file": "hagel-auftrag.jpg",    "caption": "Hail Damage Entry" },
@@ -220,6 +226,14 @@
     "emailPlaceholder": "Your Email",
     "messagePlaceholder": "Your Message",
     "submit": "Send Message",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "messageLabel": "Message",
+    "errorNameRequired": "Name required (min. 2 characters)",
+    "errorEmailInvalid": "Valid email address required",
+    "errorMessageRequired": "Message required (min. 10 characters)",
+    "sendError": "Failed to send. Please try again or email us directly at the address below.",
+    "submitting": "Sending\u2026",
     "success": "Message sent — we'll be in touch soon!",
     "email": "info@balmerstorms.ch"
   },

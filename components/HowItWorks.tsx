@@ -34,6 +34,7 @@ export default function HowItWorks() {
             fontSize: 'clamp(2rem, 4vw, 3rem)',
             color: '#ffffff',
             margin: '0 0 0.75rem',
+            textWrap: 'balance',
           }}>
             {t('title')}
           </h2>

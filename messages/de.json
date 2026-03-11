@@ -5,7 +5,8 @@
     "pricing": "Preise",
     "howItWorks": "Zugang",
     "contact": "Kontakt",
-    "cta": "Lizenz kaufen"
+    "cta": "Lizenz kaufen",
+    "skipToContent": "Zum Inhalt springen"
   },
   "hero": {
     "title": "Hagel- und Parkschaden-Kalkulation –",
@@ -21,7 +22,8 @@
     "languageDe": "Deutsch",
     "languageFr": "Français",
     "languageIt": "Italiano",
-    "languageEn": "English"
+    "languageEn": "English",
+    "demoComingSoon": "Demo demnächst verfügbar"
   },
   "features": {
     "trustLine": "Entwickelt von einem professionellen PDR-Techniker mit über 25 Jahren Erfahrung in der Hagel- und Parkschadenreparatur.",
@@ -121,6 +123,10 @@
   "screenshots": {
     "title": "In Aktion",
     "subtitle": "Professionelle Dokumente auf Knopfdruck.",
+    "enlarge": "{caption} vergrössern",
+    "close": "Schliessen",
+    "prev": "Vorheriges Bild",
+    "next": "Nächstes Bild",
     "images": [
       { "file": "dashboard.jpg",        "caption": "Dashboard — Letzte Dokumente" },
       { "file": "hagel-auftrag.jpg",    "caption": "Hagelschaden-Erfassung" },
@@ -220,6 +226,14 @@
     "emailPlaceholder": "Ihre E-Mail",
     "messagePlaceholder": "Ihre Nachricht",
     "submit": "Nachricht senden",
+    "nameLabel": "Name",
+    "emailLabel": "E-Mail",
+    "messageLabel": "Nachricht",
+    "errorNameRequired": "Name benötigt (min. 2 Zeichen)",
+    "errorEmailInvalid": "Gültige E-Mail-Adresse benötigt",
+    "errorMessageRequired": "Nachricht benötigt (min. 10 Zeichen)",
+    "sendError": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut oder schreiben Sie direkt an die E-Mail-Adresse unten.",
+    "submitting": "Wird gesendet\u2026",
     "success": "Nachricht gesendet — wir melden uns bald!",
     "email": "info@balmerstorms.ch"
   },

@@ -125,6 +125,7 @@ export default function Pricing() {
                   color: '#ffffff',
                   lineHeight: 1,
                   letterSpacing: '-0.02em',
+                  fontVariantNumeric: 'tabular-nums',
                 }}>
                   {lifetime.price}
                 </div>
@@ -280,6 +281,7 @@ export default function Pricing() {
                   color: 'var(--ink)',
                   lineHeight: 1,
                   letterSpacing: '-0.02em',
+                  fontVariantNumeric: 'tabular-nums',
                 }}>
                   {monthly.price}
                 </div>
@@ -412,6 +414,7 @@ export default function Pricing() {
                 background: '#fff',
                 fontFamily: 'Barlow, sans-serif',
                 fontSize: '0.9rem',
+                fontVariantNumeric: 'tabular-nums',
               }}
             >
               <thead>

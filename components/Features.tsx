@@ -6,31 +6,31 @@ import {useTranslations} from 'next-intl';
 // hail, parking, clock, shield, doc, browser
 const outcomeIcons = [
   /* hail */
-  <svg key="hail" width="28" height="28" viewBox="0 0 28 28" fill="none">
+  <svg key="hail" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
     <path d="M14 4L7 14h5l-2 10 12-14h-6l3-6H14z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" fill="none"/>
   </svg>,
   /* parking */
-  <svg key="park" width="28" height="28" viewBox="0 0 28 28" fill="none">
+  <svg key="park" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
     <rect x="4" y="4" width="20" height="20" rx="3" stroke="currentColor" strokeWidth="1.8"/>
     <path d="M10 20V9h5a4 4 0 010 8h-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
   </svg>,
   /* clock */
-  <svg key="clock" width="28" height="28" viewBox="0 0 28 28" fill="none">
+  <svg key="clock" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
     <circle cx="14" cy="14" r="10" stroke="currentColor" strokeWidth="1.8"/>
     <path d="M14 9v5.5l3.5 3.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>,
   /* shield */
-  <svg key="shield" width="28" height="28" viewBox="0 0 28 28" fill="none">
+  <svg key="shield" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
     <path d="M14 3L5 7v8c0 5.25 3.8 10.15 9 11.35C19.2 25.15 23 20.25 23 15V7L14 3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"/>
     <path d="M10 14l3 3 5-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>,
   /* doc */
-  <svg key="doc" width="28" height="28" viewBox="0 0 28 28" fill="none">
+  <svg key="doc" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
     <rect x="6" y="3" width="16" height="22" rx="2" stroke="currentColor" strokeWidth="1.8"/>
     <path d="M10 9h8M10 13h8M10 17h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
   </svg>,
   /* browser / settings */
-  <svg key="browser" width="28" height="28" viewBox="0 0 28 28" fill="none">
+  <svg key="browser" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
     <rect x="3" y="5" width="22" height="18" rx="2" stroke="currentColor" strokeWidth="1.8"/>
     <path d="M3 11h22" stroke="currentColor" strokeWidth="1.8"/>
     <circle cx="7" cy="8" r="1.2" fill="currentColor"/>

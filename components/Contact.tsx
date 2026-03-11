@@ -1,7 +1,7 @@
 'use client';
 
 import {useTranslations} from 'next-intl';
-import {useState} from 'react';
+import {useState, useRef} from 'react';
 
 const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID || 'mlgwvvbo';
 
@@ -15,16 +15,20 @@ export default function Contact() {
   const [form, setForm]             = useState({name: '', email: '', message: ''});
   const [errors, setErrors]         = useState<FormErrors>({});
 
+  const nameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
+
   const validate = (): FormErrors => {
     const errs: FormErrors = {};
     if (!form.name.trim() || form.name.trim().length < 2) {
-      errs.name = 'Name benötigt (min. 2 Zeichen)';
+      errs.name = t('errorNameRequired');
     }
     if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
-      errs.email = 'Gültige E-Mail-Adresse benötigt';
+      errs.email = t('errorEmailInvalid');
     }
     if (!form.message.trim() || form.message.trim().length < 10) {
-      errs.message = 'Nachricht benötigt (min. 10 Zeichen)';
+      errs.message = t('errorMessageRequired');
     }
     return errs;
   };
@@ -34,6 +38,9 @@ export default function Contact() {
     const errs = validate();
     if (Object.keys(errs).length > 0) {
       setErrors(errs);
+      if (errs.name) nameRef.current?.focus();
+      else if (errs.email) emailRef.current?.focus();
+      else if (errs.message) messageRef.current?.focus();
       return;
     }
 
@@ -71,7 +78,6 @@ export default function Contact() {
     fontFamily: 'Barlow, sans-serif',
     fontSize: '0.95rem',
     color: '#fff',
-    outline: 'none',
     transition: 'border-color 0.2s',
     boxSizing: 'border-box' as const,
   };
@@ -114,6 +120,8 @@ export default function Contact() {
         {submitted ? (
           <div
             className="fade-up"
+            aria-live="polite"
+            role="status"
             style={{
               textAlign: 'center',
               padding: '3rem 2rem',
@@ -145,6 +153,8 @@ export default function Contact() {
                 <input
                   type="text"
                   name="name"
+                  ref={nameRef}
+                  aria-label={t('nameLabel')}
                   autoComplete="name"
                   placeholder={t('namePlaceholder')}
                   value={form.name}
@@ -166,6 +176,9 @@ export default function Contact() {
                 <input
                   type="email"
                   name="email"
+                  ref={emailRef}
+                  aria-label={t('emailLabel')}
+                  spellCheck={false}
                   autoComplete="email"
                   inputMode="email"
                   placeholder={t('emailPlaceholder')}
@@ -190,6 +203,8 @@ export default function Contact() {
               <textarea
                 rows={5}
                 name="message"
+                ref={messageRef}
+                aria-label={t('messageLabel')}
                 autoComplete="off"
                 placeholder={t('messagePlaceholder')}
                 value={form.message}
@@ -218,7 +233,7 @@ export default function Contact() {
                 textAlign: 'center',
                 marginBottom: '0.75rem',
               }}>
-                Senden fehlgeschlagen. Bitte versuchen Sie es erneut oder schreiben Sie direkt an die E-Mail-Adresse unten.
+                {t('sendError')}
               </p>
             )}
 
@@ -244,7 +259,7 @@ export default function Contact() {
                 boxShadow: '0 4px 20px rgba(232,0,29,0.25)',
               }}
             >
-              {submitting ? 'Wird gesendet…' : `${t('submit')} →`}
+              {submitting ? t('submitting') : `${t('submit')} →`}
             </button>
           </form>
         )}

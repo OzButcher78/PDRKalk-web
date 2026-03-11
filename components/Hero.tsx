@@ -75,21 +75,18 @@ export default function Hero() {
             fontSize: 'clamp(1.9rem, 4vw, 3.4rem)',
             lineHeight: 0.95,
             color: '#ffffff',
-            margin: '0 0 0.5rem',
-            letterSpacing: '-0.01em',
-          }}>
-            {t('title')}
-          </h1>
-          <h1 className="fade-up-2" style={{
-            fontFamily: 'Barlow Condensed, sans-serif',
-            fontWeight: 900,
-            fontSize: 'clamp(1.9rem, 4vw, 3.4rem)',
-            lineHeight: 0.95,
-            color: 'var(--red)',
             margin: '0 0 2rem',
             letterSpacing: '-0.01em',
+            textWrap: 'balance',
           }}>
-            {t('titleAccent')}
+            {t('title')}
+            <span className="fade-up-2" style={{
+              display: 'block',
+              color: 'var(--red)',
+              marginTop: '0.5rem',
+            }}>
+              {t('titleAccent')}
+            </span>
           </h1>
 
           {/* Subtitle */}
@@ -141,7 +138,7 @@ export default function Hero() {
               display: 'inline-block',
               cursor: 'default',
             }}>
-              Demo Coming Soon
+              {t('demoComingSoon')}
             </span>
           </div>
 
@@ -256,7 +253,7 @@ export default function Hero() {
 
             {/* DE flag */}
             <span style={{display: 'inline-flex', alignItems: 'center', gap: '0.35rem'}}>
-              <svg width="18" height="13" viewBox="0 0 18 13" style={{flexShrink: 0, borderRadius: '2px', overflow: 'hidden'}}>
+              <svg width="18" height="13" viewBox="0 0 18 13" aria-hidden="true" style={{flexShrink: 0, borderRadius: '2px', overflow: 'hidden'}}>
                 <rect y="0" width="18" height="4.33" fill="#000"/>
                 <rect y="4.33" width="18" height="4.34" fill="#DD0000"/>
                 <rect y="8.67" width="18" height="4.33" fill="#FFCC00"/>
@@ -268,7 +265,7 @@ export default function Hero() {
 
             {/* FR flag */}
             <span style={{display: 'inline-flex', alignItems: 'center', gap: '0.35rem'}}>
-              <svg width="18" height="13" viewBox="0 0 18 13" style={{flexShrink: 0, borderRadius: '2px', overflow: 'hidden'}}>
+              <svg width="18" height="13" viewBox="0 0 18 13" aria-hidden="true" style={{flexShrink: 0, borderRadius: '2px', overflow: 'hidden'}}>
                 <rect x="0" width="6" height="13" fill="#002395"/>
                 <rect x="6" width="6" height="13" fill="#FFFFFF"/>
                 <rect x="12" width="6" height="13" fill="#ED2939"/>
@@ -280,7 +277,7 @@ export default function Hero() {
 
             {/* IT flag */}
             <span style={{display: 'inline-flex', alignItems: 'center', gap: '0.35rem'}}>
-              <svg width="18" height="13" viewBox="0 0 18 13" style={{flexShrink: 0, borderRadius: '2px', overflow: 'hidden'}}>
+              <svg width="18" height="13" viewBox="0 0 18 13" aria-hidden="true" style={{flexShrink: 0, borderRadius: '2px', overflow: 'hidden'}}>
                 <rect x="0" width="6" height="13" fill="#009246"/>
                 <rect x="6" width="6" height="13" fill="#FFFFFF"/>
                 <rect x="12" width="6" height="13" fill="#CE2B37"/>
@@ -292,7 +289,7 @@ export default function Hero() {
 
             {/* EN flag */}
             <span style={{display: 'inline-flex', alignItems: 'center', gap: '0.35rem'}}>
-              <svg width="18" height="13" viewBox="0 0 18 13" style={{flexShrink: 0, borderRadius: '2px', overflow: 'hidden'}}>
+              <svg width="18" height="13" viewBox="0 0 18 13" aria-hidden="true" style={{flexShrink: 0, borderRadius: '2px', overflow: 'hidden'}}>
                 <rect width="18" height="13" fill="#012169"/>
                 <path d="M0,0 L18,13 M18,0 L0,13" stroke="#FFFFFF" strokeWidth="2.2"/>
                 <path d="M0,0 L18,13 M18,0 L0,13" stroke="#C8102E" strokeWidth="1.2"/>

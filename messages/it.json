@@ -5,7 +5,8 @@
     "pricing": "Prezzi",
     "howItWorks": "Accesso",
     "contact": "Contatto",
-    "cta": "Acquista licenza"
+    "cta": "Acquista licenza",
+    "skipToContent": "Vai al contenuto"
   },
   "hero": {
     "title": "Calcolo danni da grandine e parcheggio –",
@@ -20,7 +21,9 @@
     "languageLabel": "Disponibile in",
     "languageDe": "Deutsch",
     "languageFr": "Français",
-    "languageIt": "Italiano"
+    "languageIt": "Italiano",
+    "languageEn": "English",
+    "demoComingSoon": "Demo in arrivo"
   },
   "features": {
     "trustLine": "Sviluppato da un tecnico PDR professionista con oltre 25 anni di esperienza nella riparazione di danni da grandine e parcheggio.",
@@ -120,6 +123,10 @@
   "screenshots": {
     "title": "In azione",
     "subtitle": "Documenti professionali con un clic.",
+    "enlarge": "Ingrandisci {caption}",
+    "close": "Chiudi",
+    "prev": "Immagine precedente",
+    "next": "Immagine successiva",
     "images": [
       { "file": "dashboard.jpg",        "caption": "Dashboard — Documenti recenti" },
       { "file": "hagel-auftrag.jpg",    "caption": "Registrazione danni da grandine" },
@@ -219,6 +226,14 @@
     "emailPlaceholder": "La tua e-mail",
     "messagePlaceholder": "Il tuo messaggio",
     "submit": "Invia messaggio",
+    "nameLabel": "Nome",
+    "emailLabel": "E-mail",
+    "messageLabel": "Messaggio",
+    "errorNameRequired": "Nome richiesto (min. 2 caratteri)",
+    "errorEmailInvalid": "Indirizzo e-mail valido richiesto",
+    "errorMessageRequired": "Messaggio richiesto (min. 10 caratteri)",
+    "sendError": "Invio fallito. Riprova o scrivici direttamente all'indirizzo qui sotto.",
+    "submitting": "Invio in corso\u2026",
     "success": "Messaggio inviato — ti risponderemo presto!",
     "email": "info@balmerstorms.ch"
   },
