@@ -89,10 +89,12 @@
     "prev": "Vorheriges Bild",
     "next": "Nächstes Bild",
     "images": [
-      { "file": "dashboard.jpg",     "caption": "Dashboard — Aufträge im Überblick" },
-      { "file": "hagel-auftrag.jpg", "caption": "Hagelschaden-Kalkulation" },
-      { "file": "pdf-hagel.jpg",     "caption": "Professioneller PDF-Rapport" },
-      { "file": "park-auftrag.jpg",  "caption": "Parkschaden-Erfassung" }
+      { "file": "dashboard.jpg",        "caption": "Dashboard — Aufträge im Überblick" },
+      { "file": "hagel-auftrag.jpg",    "caption": "Hagelschaden-Kalkulation (VFFS)" },
+      { "file": "hagel-auftragBVAT.jpg","caption": "Hagelschaden-Kalkulation (BVAT)" },
+      { "file": "park-auftrag2.jpg",    "caption": "Parkschaden — Bauteil wählen" },
+      { "file": "pdf-QR-rechnung.jpg",  "caption": "Schweizer QR-Rechnung" },
+      { "file": "rechnungen.jpg",       "caption": "Rechnungsübersicht mit Status" }
     ]
   },
   "secondaryFeatures": {

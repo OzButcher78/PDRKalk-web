@@ -209,7 +209,7 @@ body {
 /* ---- Layout grid utilities ---- */
 .hero-grid        { grid-template-columns: 1fr 1fr; }
 .features-grid    { grid-template-columns: repeat(3, 1fr); }
-.screenshots-grid { grid-template-columns: repeat(2, 1fr); }
+.screenshots-grid { grid-template-columns: repeat(3, 1fr); }
 .problem-grid     { grid-template-columns: repeat(3, 1fr); }
 .timesavings-grid { grid-template-columns: repeat(4, 1fr); }
 .pricing-cards      { grid-template-columns: 1fr 1fr; }

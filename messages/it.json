@@ -89,10 +89,12 @@
     "prev": "Immagine precedente",
     "next": "Immagine successiva",
     "images": [
-      { "file": "dashboard.jpg",     "caption": "Dashboard — Panoramica ordini" },
-      { "file": "hagel-auftrag.jpg", "caption": "Calcolo danni da grandine" },
-      { "file": "pdf-hagel.jpg",     "caption": "Rapporto PDF professionale" },
-      { "file": "park-auftrag.jpg",  "caption": "Registrazione danni da parcheggio" }
+      { "file": "dashboard.jpg",        "caption": "Dashboard — Panoramica ordini" },
+      { "file": "hagel-auftrag.jpg",    "caption": "Calcolo danni da grandine (VFFS)" },
+      { "file": "hagel-auftragBVAT.jpg","caption": "Calcolo danni da grandine (BVAT)" },
+      { "file": "park-auftrag2.jpg",    "caption": "Danni da parcheggio — Selezione pezzo" },
+      { "file": "pdf-QR-rechnung.jpg",  "caption": "Fattura QR svizzera" },
+      { "file": "rechnungen.jpg",       "caption": "Panoramica fatture con stato" }
     ]
   },
   "secondaryFeatures": {

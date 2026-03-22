@@ -115,7 +115,7 @@ export default function Screenshots() {
           {images.map((img, i) => (
             <div
               key={img.file}
-              className={`fade-up-${Math.min(i + 1, 4)}`}
+              className={`fade-up-${Math.min(i + 1, 6)}`}
               style={{display: 'flex', flexDirection: 'column', gap: '0.5rem'}}
             >
               <button
@@ -134,7 +134,7 @@ export default function Screenshots() {
                     src={`/screenshots/${img.file}`}
                     alt={img.caption}
                     fill
-                    sizes="(max-width: 480px) 100vw, 50vw"
+                    sizes="(max-width: 480px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     quality={90}
                     style={{objectFit: 'cover'}}
                     className="screenshot-img"

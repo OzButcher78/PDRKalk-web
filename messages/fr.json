@@ -89,10 +89,12 @@
     "prev": "Image précédente",
     "next": "Image suivante",
     "images": [
-      { "file": "dashboard.jpg",     "caption": "Tableau de bord — Vue d'ensemble" },
-      { "file": "hagel-auftrag.jpg", "caption": "Calcul dommages de grêle" },
-      { "file": "pdf-hagel.jpg",     "caption": "Rapport PDF professionnel" },
-      { "file": "park-auftrag.jpg",  "caption": "Saisie dommages de stationnement" }
+      { "file": "dashboard.jpg",        "caption": "Tableau de bord — Vue d'ensemble" },
+      { "file": "hagel-auftrag.jpg",    "caption": "Calcul dommages de grêle (VFFS)" },
+      { "file": "hagel-auftragBVAT.jpg","caption": "Calcul dommages de grêle (BVAT)" },
+      { "file": "park-auftrag2.jpg",    "caption": "Dommages de stationnement — Choix de pièce" },
+      { "file": "pdf-QR-rechnung.jpg",  "caption": "Facture QR suisse" },
+      { "file": "rechnungen.jpg",       "caption": "Aperçu des factures avec statut" }
     ]
   },
   "secondaryFeatures": {

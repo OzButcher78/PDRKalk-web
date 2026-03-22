@@ -89,10 +89,12 @@
     "prev": "Previous image",
     "next": "Next image",
     "images": [
-      { "file": "dashboard.jpg",     "caption": "Dashboard — Jobs at a glance" },
-      { "file": "hagel-auftrag.jpg", "caption": "Hail damage estimation" },
-      { "file": "pdf-hagel.jpg",     "caption": "Professional PDF report" },
-      { "file": "park-auftrag.jpg",  "caption": "Parking damage entry" }
+      { "file": "dashboard.jpg",        "caption": "Dashboard — Jobs at a glance" },
+      { "file": "hagel-auftrag.jpg",    "caption": "Hail damage estimation (VFFS)" },
+      { "file": "hagel-auftragBVAT.jpg","caption": "Hail damage estimation (BVAT)" },
+      { "file": "park-auftrag2.jpg",    "caption": "Parking damage — Select panel" },
+      { "file": "pdf-QR-rechnung.jpg",  "caption": "Swiss QR Invoice" },
+      { "file": "rechnungen.jpg",       "caption": "Invoice overview with status" }
     ]
   },
   "secondaryFeatures": {
