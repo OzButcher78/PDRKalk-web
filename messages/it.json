@@ -94,8 +94,26 @@
       { "file": "hagel-auftragBVAT.jpg","caption": "Calcolo danni da grandine (BVAT)" },
       { "file": "park-auftrag2.jpg",    "caption": "Danni da parcheggio — Selezione pezzo" },
       { "file": "pdf-QR-rechnung.jpg",  "caption": "Fattura QR svizzera" },
-      { "file": "rechnungen.jpg",       "caption": "Panoramica fatture con stato" }
-    ]
+      { "file": "rechnungen.jpg",       "caption": "Panoramica fatture con stato" },
+      { "file": "verlauf.jpg",           "caption": "Registro attività e cronologia" },
+      { "file": "hagel-auftrag2.jpg",   "caption": "Danni da grandine — Vista dettagliata" },
+      { "file": "park-auftrag.jpg",     "caption": "Registrazione danni da parcheggio" },
+      { "file": "pdf-hagel.jpg",        "caption": "Rapporto grandine PDF" },
+      { "file": "pdf-park.jpg",         "caption": "Rapporto parcheggio PDF" },
+      { "file": "pdf-rechnung.jpg",     "caption": "Fattura PDF" },
+      { "file": "pdf-photos.jpg",       "caption": "Documentazione fotografica PDF" },
+      { "file": "kostenvoranschlag.jpg", "caption": "Preventivi" },
+      { "file": "arbeitsrapporte.jpg",  "caption": "Rapporti di lavoro" },
+      { "file": "quittungen.jpg",       "caption": "Ricevute" },
+      { "file": "adresse-buch.jpg",     "caption": "Rubrica" },
+      { "file": "kunden-info.jpg",      "caption": "Informazioni cliente" },
+      { "file": "einstellungen1.jpg",   "caption": "Impostazioni (1)" },
+      { "file": "einstellungen2.jpg",   "caption": "Impostazioni (2)" },
+      { "file": "einstellungen3.jpg",   "caption": "Impostazioni (3)" }
+    ],
+    "initialCount": 7,
+    "showMore": "Vedi più schermate",
+    "showLess": "Mostra meno"
   },
   "secondaryFeatures": {
     "title": "E ancora di più...",

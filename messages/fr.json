@@ -94,8 +94,26 @@
       { "file": "hagel-auftragBVAT.jpg","caption": "Calcul dommages de grêle (BVAT)" },
       { "file": "park-auftrag2.jpg",    "caption": "Dommages de stationnement — Choix de pièce" },
       { "file": "pdf-QR-rechnung.jpg",  "caption": "Facture QR suisse" },
-      { "file": "rechnungen.jpg",       "caption": "Aperçu des factures avec statut" }
-    ]
+      { "file": "rechnungen.jpg",       "caption": "Aperçu des factures avec statut" },
+      { "file": "verlauf.jpg",           "caption": "Journal d'activité & historique" },
+      { "file": "hagel-auftrag2.jpg",   "caption": "Dommages de grêle — Vue détaillée" },
+      { "file": "park-auftrag.jpg",     "caption": "Saisie dommages de stationnement" },
+      { "file": "pdf-hagel.jpg",        "caption": "Rapport grêle PDF" },
+      { "file": "pdf-park.jpg",         "caption": "Rapport stationnement PDF" },
+      { "file": "pdf-rechnung.jpg",     "caption": "Facture PDF" },
+      { "file": "pdf-photos.jpg",       "caption": "Documentation photo PDF" },
+      { "file": "kostenvoranschlag.jpg", "caption": "Devis" },
+      { "file": "arbeitsrapporte.jpg",  "caption": "Rapports de travail" },
+      { "file": "quittungen.jpg",       "caption": "Quittances" },
+      { "file": "adresse-buch.jpg",     "caption": "Carnet d'adresses" },
+      { "file": "kunden-info.jpg",      "caption": "Informations client" },
+      { "file": "einstellungen1.jpg",   "caption": "Paramètres (1)" },
+      { "file": "einstellungen2.jpg",   "caption": "Paramètres (2)" },
+      { "file": "einstellungen3.jpg",   "caption": "Paramètres (3)" }
+    ],
+    "initialCount": 7,
+    "showMore": "Voir plus de captures d'écran",
+    "showLess": "Voir moins"
   },
   "secondaryFeatures": {
     "title": "Et encore plus...",

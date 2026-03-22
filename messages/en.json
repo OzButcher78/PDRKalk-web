@@ -94,8 +94,26 @@
       { "file": "hagel-auftragBVAT.jpg","caption": "Hail damage estimation (BVAT)" },
       { "file": "park-auftrag2.jpg",    "caption": "Parking damage — Select panel" },
       { "file": "pdf-QR-rechnung.jpg",  "caption": "Swiss QR Invoice" },
-      { "file": "rechnungen.jpg",       "caption": "Invoice overview with status" }
-    ]
+      { "file": "rechnungen.jpg",       "caption": "Invoice overview with status" },
+      { "file": "verlauf.jpg",           "caption": "Activity log & history" },
+      { "file": "hagel-auftrag2.jpg",   "caption": "Hail damage — Detail view" },
+      { "file": "park-auftrag.jpg",     "caption": "Parking damage entry" },
+      { "file": "pdf-hagel.jpg",        "caption": "Hail report PDF" },
+      { "file": "pdf-park.jpg",         "caption": "Parking damage report PDF" },
+      { "file": "pdf-rechnung.jpg",     "caption": "Invoice PDF" },
+      { "file": "pdf-photos.jpg",       "caption": "Photo documentation PDF" },
+      { "file": "kostenvoranschlag.jpg", "caption": "Cost estimates" },
+      { "file": "arbeitsrapporte.jpg",  "caption": "Work reports" },
+      { "file": "quittungen.jpg",       "caption": "Receipts" },
+      { "file": "adresse-buch.jpg",     "caption": "Address book" },
+      { "file": "kunden-info.jpg",      "caption": "Customer information" },
+      { "file": "einstellungen1.jpg",   "caption": "Settings (1)" },
+      { "file": "einstellungen2.jpg",   "caption": "Settings (2)" },
+      { "file": "einstellungen3.jpg",   "caption": "Settings (3)" }
+    ],
+    "initialCount": 7,
+    "showMore": "See more screenshots",
+    "showLess": "Show less"
   },
   "secondaryFeatures": {
     "title": "And even more...",

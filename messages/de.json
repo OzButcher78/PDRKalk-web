@@ -94,8 +94,26 @@
       { "file": "hagel-auftragBVAT.jpg","caption": "Hagelschaden-Kalkulation (BVAT)" },
       { "file": "park-auftrag2.jpg",    "caption": "Parkschaden — Bauteil wählen" },
       { "file": "pdf-QR-rechnung.jpg",  "caption": "Schweizer QR-Rechnung" },
-      { "file": "rechnungen.jpg",       "caption": "Rechnungsübersicht mit Status" }
-    ]
+      { "file": "rechnungen.jpg",       "caption": "Rechnungsübersicht mit Status" },
+      { "file": "verlauf.jpg",           "caption": "Aktivitätsprotokoll & Verlauf" },
+      { "file": "hagel-auftrag2.jpg",   "caption": "Hagelschaden — Detailansicht" },
+      { "file": "park-auftrag.jpg",     "caption": "Parkschaden-Erfassung" },
+      { "file": "pdf-hagel.jpg",        "caption": "Hagelrapport PDF" },
+      { "file": "pdf-park.jpg",         "caption": "Parkschadenrapport PDF" },
+      { "file": "pdf-rechnung.jpg",     "caption": "Rechnung PDF" },
+      { "file": "pdf-photos.jpg",       "caption": "Fotodokumentation PDF" },
+      { "file": "kostenvoranschlag.jpg", "caption": "Kostenvoranschläge" },
+      { "file": "arbeitsrapporte.jpg",  "caption": "Arbeitsrapporte" },
+      { "file": "quittungen.jpg",       "caption": "Quittungen" },
+      { "file": "adresse-buch.jpg",     "caption": "Adressbuch" },
+      { "file": "kunden-info.jpg",      "caption": "Kundeninformation" },
+      { "file": "einstellungen1.jpg",   "caption": "Einstellungen (1)" },
+      { "file": "einstellungen2.jpg",   "caption": "Einstellungen (2)" },
+      { "file": "einstellungen3.jpg",   "caption": "Einstellungen (3)" }
+    ],
+    "initialCount": 7,
+    "showMore": "Mehr Screenshots anzeigen",
+    "showLess": "Weniger anzeigen"
   },
   "secondaryFeatures": {
     "title": "Und noch mehr...",

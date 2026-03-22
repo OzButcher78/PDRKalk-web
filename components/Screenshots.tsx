@@ -9,7 +9,11 @@ type ImgEntry = {file: string; caption: string};
 export default function Screenshots() {
   const t = useTranslations('screenshots');
   const images = t.raw('images') as ImgEntry[];
+  const initialCount = (t.raw('initialCount') as number) || 6;
+  const [showAll, setShowAll] = useState(false);
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
+
+  const visibleImages = showAll ? images : images.slice(0, initialCount);
 
   const closeLightbox = useCallback(() => setLightboxIdx(null), []);
 
@@ -112,7 +116,7 @@ export default function Screenshots() {
             gap: '1.25rem',
           }}
         >
-          {images.map((img, i) => (
+          {visibleImages.map((img, i) => (
             <div
               key={img.file}
               className={`fade-up-${Math.min(i + 1, 6)}`}
@@ -181,6 +185,32 @@ export default function Screenshots() {
             </div>
           ))}
         </div>
+
+        {/* Show more / less toggle */}
+        {images.length > initialCount && (
+          <div style={{textAlign: 'center', marginTop: '2rem'}}>
+            <button
+              onClick={() => setShowAll(prev => !prev)}
+              className="btn-ghost"
+              style={{
+                fontFamily: 'Barlow Condensed, sans-serif',
+                fontWeight: 700,
+                fontSize: '0.9rem',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                color: 'rgba(255,255,255,0.7)',
+                background: 'none',
+                border: '2px solid rgba(255,255,255,0.15)',
+                borderRadius: '5px',
+                padding: '0.7rem 1.75rem',
+                cursor: 'pointer',
+                transition: 'border-color 0.2s, transform 0.15s, color 0.2s',
+              }}
+            >
+              {showAll ? t('showLess') : t('showMore')} {showAll ? '↑' : '↓'}
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Lightbox */}
