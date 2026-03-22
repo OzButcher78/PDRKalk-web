@@ -1,9 +1,14 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import Features from '@/components/Features';
+import TimeSavings from '@/components/TimeSavings';
+import ProblemSolution from '@/components/ProblemSolution';
+import CoreFeatures from '@/components/CoreFeatures';
 import Screenshots from '@/components/Screenshots';
-import HowItWorks from '@/components/HowItWorks';
+import SecondaryFeatures from '@/components/SecondaryFeatures';
+import Comparison from '@/components/Comparison';
 import Pricing from '@/components/Pricing';
+import Testimonial from '@/components/Testimonial';
+import FinalCTA from '@/components/FinalCTA';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
@@ -19,10 +24,15 @@ export default function Home() {
       <main>
         <Navbar />
         <Hero />
-        <Features />
+        <TimeSavings />
+        <ProblemSolution />
+        <CoreFeatures />
         <Screenshots />
-        <HowItWorks />
+        <SecondaryFeatures />
+        <Comparison />
         <Pricing />
+        <Testimonial />
+        <FinalCTA />
         <Contact />
         <Footer />
       </main>

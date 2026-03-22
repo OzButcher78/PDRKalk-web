@@ -33,7 +33,7 @@ export default function Screenshots() {
     return () => window.removeEventListener('keydown', onKey);
   }, [lightboxIdx, closeLightbox, prevImage, nextImage]);
 
-  // Focus trap: keep focus within lightbox
+  // Focus trap
   useEffect(() => {
     if (lightboxIdx === null) return;
     const overlay = document.querySelector('.lightbox-overlay') as HTMLElement | null;
@@ -54,7 +54,6 @@ export default function Screenshots() {
       }
     };
 
-    // Focus close button
     const closeBtn = overlay.querySelector('.lb-close') as HTMLElement | null;
     closeBtn?.focus();
 
@@ -83,7 +82,7 @@ export default function Screenshots() {
         pointerEvents: 'none',
       }}/>
 
-      <div style={{maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 2}}>
+      <div style={{maxWidth: '1000px', margin: '0 auto', position: 'relative', zIndex: 2}}>
         {/* Header */}
         <div style={{textAlign: 'center', marginBottom: '3rem'}}>
           <h2 style={{
@@ -105,18 +104,18 @@ export default function Screenshots() {
           </p>
         </div>
 
-        {/* Screenshot grid — breakpoints in globals.css */}
+        {/* Screenshot grid — 2 columns */}
         <div
           className="screenshots-grid"
           style={{
             display: 'grid',
-            gap: '1rem',
+            gap: '1.25rem',
           }}
         >
           {images.map((img, i) => (
             <div
               key={img.file}
-              className={`fade-up-${Math.min(i + 1, 6)}`}
+              className={`fade-up-${Math.min(i + 1, 4)}`}
               style={{display: 'flex', flexDirection: 'column', gap: '0.5rem'}}
             >
               <button
@@ -135,7 +134,7 @@ export default function Screenshots() {
                     src={`/screenshots/${img.file}`}
                     alt={img.caption}
                     fill
-                    sizes="(max-width: 480px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    sizes="(max-width: 480px) 100vw, 50vw"
                     quality={90}
                     style={{objectFit: 'cover'}}
                     className="screenshot-img"
@@ -283,7 +282,7 @@ export default function Screenshots() {
             ›
           </button>
 
-          {/* Content — stop click propagation so clicking image doesn't close */}
+          {/* Content */}
           <div
             onClick={e => e.stopPropagation()}
             style={{

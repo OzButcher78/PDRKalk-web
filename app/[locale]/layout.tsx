@@ -7,7 +7,12 @@ export const metadata: Metadata = {
   title: 'PDR Kalk — Professionelle Schadenerfassung für die Schweiz',
   description: 'PDR Kalk erstellt Hagelschaden-Offerten und Parkschadenrapporte mit offiziellen Schweizer Tarifen (VFFS 2025). Präzise, schnell, CHF-konform.',
   icons: {
-    icon: '/favicon.png',
+    icon: [
+      { url: '/favicon/favicon.ico', sizes: 'any' },
+      { url: '/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: '/favicon/apple-touch-icon.png',
   },
   openGraph: {
     title: 'PDR Kalk',

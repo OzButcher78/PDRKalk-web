@@ -4,7 +4,6 @@ import {useTranslations} from 'next-intl';
 
 const BUY_URL = process.env.NEXT_PUBLIC_BUY_URL || '#contact';
 
-
 export default function Pricing() {
   const t = useTranslations('pricing');
 
@@ -29,22 +28,22 @@ export default function Pricing() {
 
   const comparisonTable = t.raw('comparisonTable') as {
     title: string;
-    headers: { feature: string; competitorA: string; competitorB: string; pdrKalk: string };
-    rows: Array<{ feature: string; competitorA: string; competitorB: string; pdrKalk: string }>;
+    headers: { feature: string; competitor: string; pdrKalk: string };
+    rows: Array<{ feature: string; competitor: string; pdrKalk: string }>;
     closing: string;
     note: string;
   };
 
   return (
     <section id="pricing" className="section-pad" style={{
-      background: 'var(--fog)',
+      background: '#ffffff',
       padding: '6rem 1.5rem',
       position: 'relative',
     }}>
       <div style={{maxWidth: '900px', margin: '0 auto'}}>
 
         {/* Header */}
-        <div style={{textAlign: 'center', marginBottom: '3rem'}}>
+        <div style={{textAlign: 'center', marginBottom: '1rem'}}>
           <h2 style={{
             fontFamily: 'Barlow Condensed, sans-serif',
             fontWeight: 900,
@@ -57,13 +56,32 @@ export default function Pricing() {
           <div className="gradient-line" style={{width: '60px', margin: '0 auto'}}/>
         </div>
 
+        {/* Installment badge */}
+        <div style={{textAlign: 'center', marginBottom: '2.5rem'}}>
+          <span style={{
+            display: 'inline-block',
+            background: 'rgba(22,163,74,0.08)',
+            border: '1px solid rgba(22,163,74,0.25)',
+            borderRadius: '20px',
+            padding: '0.4rem 1.25rem',
+            fontFamily: 'Barlow Condensed, sans-serif',
+            fontWeight: 700,
+            fontSize: '0.82rem',
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
+            color: '#166534',
+          }}>
+            {t('installmentBadge')}
+          </span>
+        </div>
+
         {/* Two pricing cards */}
         <div
           className="pricing-cards"
           style={{display: 'grid', gap: '1.5rem', marginBottom: '3rem'}}
         >
 
-          {/* ── Dauerlizenz card (dark) ── */}
+          {/* Dauerlizenz card (dark) */}
           <div
             className="fade-up-1"
             style={{
@@ -218,7 +236,7 @@ export default function Pricing() {
             </div>
           </div>
 
-          {/* ── Monatslizenz card (light) ── */}
+          {/* Monatslizenz card (light) */}
           <div
             className="fade-up-2"
             style={{
@@ -373,7 +391,6 @@ export default function Pricing() {
               </p>
             </div>
           </div>
-
         </div>
 
         {/* 5-Year cost comparison table */}
@@ -441,19 +458,7 @@ export default function Pricing() {
                     color: 'var(--steel)',
                     borderBottom: '2px solid rgba(255,255,255,0.08)',
                   }}>
-                    {comparisonTable.headers.competitorA}
-                  </th>
-                  <th style={{
-                    textAlign: 'center',
-                    fontFamily: 'Barlow Condensed, sans-serif',
-                    fontWeight: 700,
-                    fontSize: '0.8rem',
-                    letterSpacing: '0.1em',
-                    textTransform: 'uppercase' as const,
-                    color: 'var(--steel)',
-                    borderBottom: '2px solid rgba(255,255,255,0.08)',
-                  }}>
-                    {comparisonTable.headers.competitorB}
+                    {comparisonTable.headers.competitor}
                   </th>
                   <th style={{
                     textAlign: 'center',
@@ -490,15 +495,7 @@ export default function Pricing() {
                         fontWeight: isCostRow ? 600 : 400,
                         borderBottom: '1px solid #e2e8f0',
                       }}>
-                        {row.competitorA}
-                      </td>
-                      <td style={{
-                        textAlign: 'center',
-                        color: isCostRow ? 'var(--red)' : '#64748b',
-                        fontWeight: isCostRow ? 600 : 400,
-                        borderBottom: '1px solid #e2e8f0',
-                      }}>
-                        {row.competitorB}
+                        {row.competitor}
                       </td>
                       <td style={{
                         textAlign: 'center',
@@ -539,7 +536,6 @@ export default function Pricing() {
             {comparisonTable.note}
           </p>
         </div>
-
       </div>
     </section>
   );

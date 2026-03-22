@@ -79,7 +79,7 @@ export default function Footer() {
           ))}
         </nav>
 
-        {/* Copyright + international note */}
+        {/* Copyright + tech note */}
         <div className="footer-copyright" style={{textAlign: 'right'}}>
           <p style={{
             fontFamily: 'Barlow, sans-serif',
@@ -91,12 +91,21 @@ export default function Footer() {
           </p>
           <p style={{
             fontFamily: 'Barlow, sans-serif',
+            fontSize: '0.75rem',
+            color: 'var(--steel)',
+            margin: '0 0 0.25rem',
+            fontStyle: 'italic',
+          }}>
+            {t('techNote')}
+          </p>
+          <p style={{
+            fontFamily: 'Barlow, sans-serif',
             fontSize: '0.72rem',
             color: '#374151',
             margin: 0,
             fontStyle: 'italic',
           }}>
-            🌍 {t('intl')}
+            {t('intl')}
           </p>
         </div>
       </div>

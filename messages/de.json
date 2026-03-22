@@ -3,172 +3,164 @@
     "features": "Funktionen",
     "screenshots": "Screenshots",
     "pricing": "Preise",
-    "howItWorks": "Zugang",
+    "more": "Mehr",
     "contact": "Kontakt",
-    "cta": "Lizenz kaufen",
+    "cta": "Jetzt kaufen",
     "skipToContent": "Zum Inhalt springen"
   },
   "hero": {
-    "title": "Hagel- und Parkschaden-Kalkulation –",
-    "titleAccent": "schnell, lokal und rechtssicher.",
-    "subtitle": "Erstellen Sie professionelle Rapporte und Rechnungen in Minuten – ohne Cloud, ohne Abo, mit voller Datenkontrolle.",
-    "ctaPrimary": "Lizenz anfragen",
-    "ctaSecondary": "Demo öffnen",
+    "title": "Hagelschaden kalkulieren.",
+    "titleAccent": "In unter 60 Sekunden.",
+    "subtitle": "Die Kalkulationssoftware für PDR-Techniker. Professionelle Rapporte und Rechnungen — ohne Cloud, ohne Abo.",
+    "ctaPrimary": "Kostenlos testen",
+    "ctaSecondary": "Funktionen entdecken",
     "screenshotAlt": "PDR Kalk Dashboard",
-    "trust1": "🔒 Lokal & Sicher",
-    "trust2": "⚡ Rapport in 1 Min",
-    "trust3": "🌍 Bald international",
-    "languageLabel": "Verfügbar in",
-    "languageDe": "Deutsch",
-    "languageFr": "Français",
-    "languageIt": "Italiano",
-    "languageEn": "English",
+    "trustBar": [
+      "100% offline",
+      "Keine Abo-Kosten",
+      "Swiss Made",
+      "DSGVO-konform"
+    ],
     "demoComingSoon": "Demo demnächst verfügbar"
   },
-  "features": {
-    "trustLine": "Entwickelt von einem professionellen PDR-Techniker mit über 25 Jahren Erfahrung in der Hagel- und Parkschadenreparatur.",
-    "intro": {
-      "title": "Was PDR Kalk besonders macht",
-      "cards": [
-        {
-          "heading": "Von einem Techniker entwickelt. Für Techniker.",
-          "desc": "Diese massgeschneiderte PDR-Software erstellt Hagelschaden- und Parkschadenkalkulationen schnell, effizient und professionell.",
-          "support": "Zeit ist Geld. Lassen Sie PDR Kalk die Arbeit für Sie erledigen."
-        },
-        {
-          "heading": "Professionelle Kalkulationen in unter einer Minute — alles auf einer Seite.",
-          "desc": "Kunden auswählen.\nFahrzeugdaten erfassen.\nSchaden und Fotos hinzufügen — fertig.\n\nKein Excel. Keine manuelle Formatierung. Keine externen PDF-Tools.",
-          "support": ""
-        },
-        {
-          "heading": "Einmalig kaufen. Dauerhaft besitzen.",
-          "desc": "Sie zahlen einmal. Installieren Sie es auf Ihrem PC oder Tablet.\nKeine Cloud. Kein WLAN-Zwang oder instabile Mobilsignale. Blitzschnell.\n\nVollständig DSGVO-konform. Keine Kundendaten in der Cloud.\n\nOptionale monatliche Ratenzahlung für alle, die es bevorzugen.",
-          "support": ""
-        }
-      ]
-    },
-    "divider": {
-      "statement": "Endlich eine Kalkulationssoftware, die so denkt wie ein PDR-Techniker."
-    },
-    "outcomes": {
-      "title": "Was PDR Kalk für Sie leistet",
-      "cards": [
-        {
-          "heading": "Hagelschadenkalkulationen",
-          "bullets": [
-            "Automatische AW-Logik nach aktuellen Versicherungsmatrizen",
-            "Privat- und Geschäftskunden direkt aus dem Adressbuch wählen",
-            "Alle wichtigen Felder übersichtlich auf einer Seite",
-            "Live-Berechnung während der Schadeneingabe",
-            "R&R (De-/Montage) und individuelle Notizen zum Rapport hinzufügen",
-            "Jeder Auftrag wird lokal gespeichert mit automatischer Sicherung",
-            "Abweichungen von der Versicherungsmatrix werden für Versicherungen transparent ausgewiesen"
-          ],
-          "tagline": "Korrekt kalkulieren. Jedes Mal."
-        },
-        {
-          "heading": "Parkschadenkalkulationen",
-          "bullets": [
-            "Schneller und intuitiver Parkschadenrechner",
-            "Kunden aus dem Adressbuch auswählen",
-            "Preis pro Fahrzeug oder pro Bauteil wählbar",
-            "Ein-Klick-Aufschläge für: Dellengrösse, Materialart, tiefe Dellen, gedehnte Dellen, kantennahe Dellen, Falze",
-            "Sie bestimmen die Preise — das System übernimmt Text, Beschreibungen und Formatierung",
-            "Fotos hinzufügen und PDF sofort generieren"
-          ],
-          "tagline": ""
-        },
-        {
-          "heading": "30–60 Minuten Ersparnis pro Auftrag",
-          "bullets": [
-            "Blitzschnelle Schadenaufnahme",
-            "Büroaufwand um 30–60 Minuten pro Auftrag reduziert",
-            "Fotos automatisch komprimiert und eingebettet",
-            "Erstellt ein einziges PDF für Kunden oder Versicherung, mit oder ohne Rabatt"
-          ],
-          "tagline": "Mehr Reparaturen. Weniger Administration."
-        },
-        {
-          "heading": "Volle Kontrolle über Ihre Daten",
-          "bullets": [
-            "Lokal auf Ihrem Computer gespeichert",
-            "Vollständig offline — keine Internetverbindung erforderlich",
-            "Automatische Auftragssicherung und vollständige System-Backup-Optionen",
-            "Ideal für Hageltechniker und mobile Parkschadenspezialisten"
-          ],
-          "tagline": "Ihr Betrieb bleibt Ihres."
-        },
-        {
-          "heading": "Von der Kalkulation zur Rechnung",
-          "bullets": [
-            "Professionelle Rechnungen in Sekundenschnelle erstellen",
-            "Einzelrechnungen oder Sammelrechnungen",
-            "Formatiert für Standard C5-Fensterkuverts"
-          ],
-          "tagline": "Deutliche Zeitersparnis übers Jahr gerechnet."
-        },
-        {
-          "heading": "Einstellungen und Branding",
-          "bullets": [
-            "Eigene Dokumentpräfixe definieren",
-            "Individuelle Einleitungs- und Schlusstexte",
-            "Standard-Rabattsätze global oder pro Kunden",
-            "Vollständiges Branding mit Firmenlogo und -angaben"
-          ],
-          "tagline": ""
-        }
-      ]
-    }
+  "timeSavings": {
+    "title": "Zeit ist Geld — sparen Sie mit",
+    "titleAccent": "PDR Kalk!",
+    "cards": [
+      { "value": "1.5", "unit": "Stunden", "period": "pro Tag" },
+      { "value": "33", "unit": "Stunden", "period": "pro Monat" },
+      { "value": "396", "unit": "Stunden", "period": "pro Jahr" },
+      { "value": "1980", "unit": "Stunden", "period": "in 5 Jahren" }
+    ],
+    "tagline": "Weniger Büroarbeit. Mehr Zeit für das, was Sie am besten können.",
+    "disclaimer": "Basierend auf 22 Arbeitstagen / Monat"
+  },
+  "problemSolution": {
+    "title": "Warum PDR Kalk?",
+    "columns": [
+      {
+        "heading": "Schluss mit Excel-Tabellen",
+        "desc": "Automatische Berechnung ersetzt manuelle Arbeit. Kein Formatieren, kein Kopieren, keine Fehler."
+      },
+      {
+        "heading": "Vom Rapport bis zur Rechnung",
+        "desc": "Ein Werkzeug für den gesamten Workflow — Kalkulation, Rapport, Rechnung und Quittung."
+      },
+      {
+        "heading": "30–60 Min. gespart pro Auftrag",
+        "desc": "Weniger Papierkram, mehr Reparaturen. Die Zeitersparnis zahlt sich vom ersten Tag an aus."
+      }
+    ]
+  },
+  "coreFeatures": {
+    "title": "Was PDR Kalk kann",
+    "cards": [
+      {
+        "heading": "Hagel- & Parkschadenkalkulation",
+        "desc": "Live-Berechnung während der Eingabe. VFFS, Zürich und BVAT-Profile integriert. Zuschläge per Klick."
+      },
+      {
+        "heading": "Professionelle Dokumente",
+        "desc": "Kostenvoranschlag, Rapport, Rechnung und Quittung — als PDF mit Ihrem Logo. Inklusive Schweizer QR-Rechnung."
+      },
+      {
+        "heading": "E-Mail-Versand direkt aus der App",
+        "desc": "PDFs per E-Mail verschicken, ohne die App zu verlassen. Mit Vorlagen, Vorschau und Sendungsverfolgung."
+      },
+      {
+        "heading": "Kundenverwaltung",
+        "desc": "Adressbuch mit Firmen- und Privatkunden. Individuelle Rabatte, Zahlungsfristen und Stundensätze pro Kunde."
+      },
+      {
+        "heading": "4 Sprachen — DE / FR / IT / EN",
+        "desc": "Komplett übersetzt. Perfekt für die mehrsprachige Schweiz und den deutschen Markt."
+      },
+      {
+        "heading": "100% Offline & Lokal",
+        "desc": "Keine Cloud, kein Konto, keine monatlichen Kosten. Ihre Daten bleiben auf Ihrem Gerät. DSGVO-konform."
+      }
+    ]
   },
   "screenshots": {
-    "title": "In Aktion",
+    "title": "PDR Kalk in Aktion",
     "subtitle": "Professionelle Dokumente auf Knopfdruck.",
     "enlarge": "{caption} vergrössern",
     "close": "Schliessen",
     "prev": "Vorheriges Bild",
     "next": "Nächstes Bild",
     "images": [
-      { "file": "dashboard.jpg",        "caption": "Dashboard — Letzte Dokumente" },
-      { "file": "hagel-auftrag.jpg",    "caption": "Hagelschaden-Erfassung" },
-      { "file": "hagel-auftrag2.jpg",   "caption": "Hagelschaden — Detailansicht" },
-      { "file": "pdf-hagel.jpg",        "caption": "Hagelrapport PDF" },
-      { "file": "pdf-photos.jpg",       "caption": "Fotodokumentation PDF" },
-      { "file": "park-auftrag.jpg",     "caption": "Parkschaden-Erfassung" },
-      { "file": "pdf-park.jpg",         "caption": "Parkschadenrapport PDF" },
-      { "file": "pdf-rechnung.jpg",     "caption": "Rechnung PDF" },
-      { "file": "kostenvoranschlag.jpg","caption": "Kostenvoranschlag" },
-      { "file": "arbeitsrapporte.jpg",  "caption": "Arbeitsrapporte" },
-      { "file": "quittungen.jpg",       "caption": "Quittungen" },
-      { "file": "rechnungen.jpg",       "caption": "Rechnungsübersicht" },
-      { "file": "adresse-buch.jpg",     "caption": "Adressbuch" },
-      { "file": "kunden-info.jpg",      "caption": "Kundeninformation" },
-      { "file": "einstellungen1.jpg",   "caption": "Einstellungen (1)" },
-      { "file": "einstellungen2.jpg",   "caption": "Einstellungen (2)" },
-      { "file": "einstellungen3.jpg",   "caption": "Einstellungen (3)" }
+      { "file": "dashboard.jpg",     "caption": "Dashboard — Aufträge im Überblick" },
+      { "file": "hagel-auftrag.jpg", "caption": "Hagelschaden-Kalkulation" },
+      { "file": "pdf-hagel.jpg",     "caption": "Professioneller PDF-Rapport" },
+      { "file": "park-auftrag.jpg",  "caption": "Parkschaden-Erfassung" }
     ]
   },
-  "howItWorks": {
-    "title": "In 3 Schritten starten",
-    "steps": [
+  "secondaryFeatures": {
+    "title": "Und noch mehr...",
+    "groups": [
       {
-        "num": "01",
-        "title": "Lizenz anfragen",
-        "desc": "Einmalige Zahlung, kein Abo. Sie erhalten sofort Ihren persönlichen Lizenzschlüssel per E-Mail."
+        "heading": "Rechnungswesen",
+        "items": [
+          "Rechnungsstatus-Tracking (Erstellt → Zugestellt → Bezahlt)",
+          "Überfällige Zahlungen auf einen Blick",
+          "Stornierung mit Grund und Ersatzrechnung",
+          "Mehrere Aufträge auf einer Rechnung"
+        ]
       },
       {
-        "num": "02",
-        "title": "App installieren",
-        "desc": "Installieren Sie PDR Kalk auf Ihrem PC oder Tablet und geben Sie Ihren Schlüssel ein — einmalig, danach dauerhaft freigeschaltet."
+        "heading": "Fotos",
+        "items": [
+          "Bis zu 12 Fotos pro Auftrag mit Beschriftung",
+          "Automatische Komprimierung in 3 Qualitätsstufen",
+          "Direkte Kameraaufnahme vom Gerät",
+          "Fotos im PDF-Rapport integriert"
+        ]
       },
       {
-        "num": "03",
-        "title": "Sofort loslegen",
-        "desc": "Erstellen Sie Ihren ersten Auftrag. Alle Daten bleiben lokal auf Ihrem Gerät gespeichert."
+        "heading": "Datensicherung",
+        "items": [
+          "Vollbackup als ZIP (Einstellungen, Kunden, Dokumente, Fotos)",
+          "Auto-Speicherung auf lokalen Ordner",
+          "Demo-Daten zum Ausprobieren"
+        ]
+      },
+      {
+        "heading": "Grenzüberschreitend arbeiten",
+        "items": [
+          "Automatische Währungsumschaltung CHF ↔ EUR",
+          "Reverse-Charge für EU-Kunden",
+          "Schweiz (CH) und Deutschland (DE) als Regionen"
+        ]
+      },
+      {
+        "heading": "Nachvollziehbar & manipulationssicher",
+        "items": [
+          "Lückenlose Aktivitätshistorie pro Dokument",
+          "Dokumentversionen bei jeder Statusänderung",
+          "Manipulationssicher durch Verkettung",
+          "Prüfbarer Audit-Export"
+        ]
       }
     ]
   },
+  "comparison": {
+    "title": "Warum PDR Kalk?",
+    "headers": {
+      "feature": "Merkmal",
+      "pdrKalk": "PDR Kalk",
+      "competitor": "Typische Abo-Software"
+    },
+    "rows": [
+      { "feature": "Einmalzahlung", "pdrKalk": true, "competitor": false, "competitorNote": "Monatlich" },
+      { "feature": "Offline nutzbar", "pdrKalk": true, "competitor": false, "competitorNote": "Cloud" },
+      { "feature": "QR-Rechnung", "pdrKalk": true, "competitor": false, "competitorNote": "Selten" },
+      { "feature": "4 Sprachen", "pdrKalk": true, "competitor": false, "competitorNote": "Nur DE" },
+      { "feature": "Ihre Daten gehören Ihnen", "pdrKalk": true, "competitor": false, "competitorNote": "Auf fremden Servern" }
+    ]
+  },
   "pricing": {
-    "title": "Flexible Lizenzmodelle – volle Kontrolle",
+    "title": "Einmal kaufen. Für immer nutzen.",
+    "installmentBadge": "Ratenzahlung möglich",
     "lifetime": {
       "badge": "EMPFOHLEN",
       "badgeNote": "Einmalzahlung — Kein Abo",
@@ -202,22 +194,32 @@
       "title": "5-Jahres-Kostenvergleich",
       "headers": {
         "feature": "Merkmal",
-        "competitorA": "Anbieter A",
-        "competitorB": "Anbieter B",
+        "competitor": "Anbieter B",
         "pdrKalk": "PDR Kalk"
       },
       "rows": [
-        { "feature": "Lizenzmodell",                    "competitorA": "Monatliches Abo",  "competitorB": "Monatliches Abo",  "pdrKalk": "Einmalig / Monatlich" },
-        { "feature": "Einrichtungsgebühr",              "competitorA": "Ja",               "competitorB": "Ja",               "pdrKalk": "Nein" },
-        { "feature": "Kosten pro weiterem Nutzer",      "competitorA": "Ja",               "competitorB": "Ja",               "pdrKalk": "Inklusive (2 Inst.)" },
-        { "feature": "Cloud-basiert",                   "competitorA": "Ja",               "competitorB": "Ja",               "pdrKalk": "Nein — lokal" },
-        { "feature": "Internetverbindung erforderlich", "competitorA": "Ja",               "competitorB": "Ja",               "pdrKalk": "Nein" },
-        { "feature": "Kosten Jahr 1",                   "competitorA": "CHF 1'127",        "competitorB": "CHF 1'188",        "pdrKalk": "TBA" },
-        { "feature": "Kosten nach 5 Jahren",            "competitorA": "CHF 4'439",        "competitorB": "CHF 5'940",        "pdrKalk": "TBA" }
+        { "feature": "Lizenzmodell",                    "competitor": "Monatliches Abo",  "pdrKalk": "Einmalig / Monatlich" },
+        { "feature": "Einrichtungsgebühr",              "competitor": "Ja",               "pdrKalk": "Nein" },
+        { "feature": "Kosten pro weiterem Nutzer",      "competitor": "Ja",               "pdrKalk": "Inklusive (2 Inst.)" },
+        { "feature": "Cloud-basiert",                   "competitor": "Ja",               "pdrKalk": "Nein — lokal" },
+        { "feature": "Internetverbindung erforderlich", "competitor": "Ja",               "pdrKalk": "Nein" },
+        { "feature": "Kosten Jahr 1",                   "competitor": "CHF 1'188",        "pdrKalk": "TBA" },
+        { "feature": "Kosten nach 5 Jahren",            "competitor": "CHF 5'940",        "pdrKalk": "TBA" }
       ],
       "closing": "Sparen Sie über fünf Jahre Tausende von Franken im Vergleich zu abonnementsbasierten Systemen.",
       "note": "Optionale Funktionserweiterungen oder Versicherungsupdates können gegen eine kleine Gebühr angeboten werden. Alle Vergleichswerte basieren auf öffentlich zugänglichen Preisinformationen (Stand Frühjahr 2026)."
     }
+  },
+  "testimonial": {
+    "title": "Was Techniker sagen",
+    "placeholder": "Kundenstimmen folgen in Kürze.",
+    "quote": "Entwickelt von einem PDR-Techniker mit über 25 Jahren Erfahrung in der Hagel- und Parkschadenreparatur."
+  },
+  "finalCta": {
+    "title": "Bereit, Zeit zu sparen?",
+    "subtitle": "Starten Sie noch heute mit PDR Kalk und sparen Sie Stunden pro Woche.",
+    "cta": "Jetzt testen",
+    "note": "Keine Installation nötig. Läuft im Browser."
   },
   "contact": {
     "title": "Fragen? Melden Sie sich.",
@@ -240,6 +242,7 @@
   "footer": {
     "company": "Balmer Storm Solutions",
     "tagline": "Entwickelt in der Schweiz.",
+    "techNote": "Entwickelt von einem PDR-Techniker mit über 25 Jahren Erfahrung.",
     "copyright": "© 2026 Balmer Storm Solutions. Alle Rechte vorbehalten.",
     "intl": "Weitere Länder folgen.",
     "links": {

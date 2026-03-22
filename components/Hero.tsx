@@ -8,6 +8,7 @@ const BUY_URL = process.env.NEXT_PUBLIC_BUY_URL || '#pricing';
 
 export default function Hero() {
   const t = useTranslations('hero');
+  const trustBar = t.raw('trustBar') as string[];
 
   return (
     <section
@@ -68,7 +69,7 @@ export default function Hero() {
       >
         {/* Left — Text */}
         <div>
-          {/* Headline */}
+          {/* Headline — pain point focus */}
           <h1 className="fade-up-1" style={{
             fontFamily: 'Barlow Condensed, sans-serif',
             fontWeight: 900,
@@ -102,7 +103,7 @@ export default function Hero() {
             {t('subtitle')}
           </p>
 
-          {/* CTAs */}
+          {/* CTAs — two real buttons */}
           <div className="fade-up-4" style={{display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
             <a
               href={BUY_URL}
@@ -125,42 +126,58 @@ export default function Hero() {
             >
               {t('ctaPrimary')}
             </a>
-            <span style={{
-              fontFamily: 'Barlow Condensed, sans-serif',
-              fontWeight: 700,
-              fontSize: '1rem',
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              color: 'rgba(148,163,184,0.5)',
-              padding: '0.85rem 2rem',
-              borderRadius: '5px',
-              border: '2px solid rgba(255,255,255,0.08)',
-              display: 'inline-block',
-              cursor: 'default',
-            }}>
-              {t('demoComingSoon')}
-            </span>
+            <a
+              href="#features"
+              className="btn-ghost"
+              style={{
+                fontFamily: 'Barlow Condensed, sans-serif',
+                fontWeight: 700,
+                fontSize: '1rem',
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+                color: 'rgba(255,255,255,0.7)',
+                padding: '0.85rem 2rem',
+                borderRadius: '5px',
+                border: '2px solid rgba(255,255,255,0.15)',
+                display: 'inline-block',
+                textDecoration: 'none',
+                transition: 'border-color 0.2s, transform 0.15s, color 0.2s',
+              }}
+            >
+              {t('ctaSecondary')}
+            </a>
           </div>
 
-          {/* Trust indicators */}
+          {/* Trust bar */}
           <div className="fade-up-5" style={{
             display: 'flex',
-            gap: '1.5rem',
+            gap: '1.25rem',
             marginTop: '2.5rem',
             flexWrap: 'wrap',
           }}>
-            {[t('trust1'), t('trust2'), t('trust3')].map(item => (
-              <span key={item} style={{
-                fontFamily: 'Barlow, sans-serif',
-                fontSize: '0.8rem',
-                color: 'rgba(148,163,184,0.8)',
-                letterSpacing: '0.03em',
+            {trustBar.map((item, i) => (
+              <span key={i} style={{
+                fontFamily: 'Barlow Condensed, sans-serif',
+                fontWeight: 700,
+                fontSize: '0.82rem',
+                letterSpacing: '0.06em',
+                textTransform: 'uppercase',
+                color: 'rgba(255,255,255,0.85)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.4rem',
               }}>
+                <span className="trust-dot" style={{
+                  width: '6px',
+                  height: '6px',
+                  borderRadius: '50%',
+                  background: 'var(--green)',
+                  flexShrink: 0,
+                }}/>
                 {item}
               </span>
             ))}
           </div>
-
         </div>
 
         {/* Right — App screenshot */}
@@ -169,7 +186,6 @@ export default function Hero() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: '1rem',
         }}>
           {/* Glow behind screenshot */}
           <div style={{
@@ -222,82 +238,6 @@ export default function Hero() {
               style={{width: '100%', height: 'auto', display: 'block'}}
               priority
             />
-          </div>
-
-          {/* App language availability — below screenshot */}
-          <div className="fade-up-6 lang-pill" style={{
-            position: 'relative',
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '0.75rem',
-            background: 'rgba(255,255,255,0.04)',
-            border: '1px solid rgba(255,255,255,0.07)',
-            borderRadius: '6px',
-            padding: '0.55rem 1.5rem',
-            backdropFilter: 'blur(12px)',
-            WebkitBackdropFilter: 'blur(12px)',
-            justifyContent: 'center',
-            maxWidth: '100%',
-          }}>
-            <span className="lang-label" style={{
-              fontFamily: 'Barlow Condensed, sans-serif',
-              fontWeight: 700,
-              fontSize: '0.72rem',
-              color: 'rgba(148,163,184,0.6)',
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
-              marginRight: '0.15rem',
-            }}>
-              {t('languageLabel')}
-            </span>
-
-            {/* DE flag */}
-            <span style={{display: 'inline-flex', alignItems: 'center', gap: '0.35rem'}}>
-              <svg width="18" height="13" viewBox="0 0 18 13" aria-hidden="true" style={{flexShrink: 0, borderRadius: '2px', overflow: 'hidden'}}>
-                <rect y="0" width="18" height="4.33" fill="#000"/>
-                <rect y="4.33" width="18" height="4.34" fill="#DD0000"/>
-                <rect y="8.67" width="18" height="4.33" fill="#FFCC00"/>
-              </svg>
-              <span className="lang-name" style={{fontFamily: 'Barlow, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.75)'}}>{t('languageDe')}</span>
-            </span>
-
-            <span className="lang-sep" style={{color: 'rgba(148,163,184,0.2)', fontSize: '0.9rem', fontWeight: 300}}>|</span>
-
-            {/* FR flag */}
-            <span style={{display: 'inline-flex', alignItems: 'center', gap: '0.35rem'}}>
-              <svg width="18" height="13" viewBox="0 0 18 13" aria-hidden="true" style={{flexShrink: 0, borderRadius: '2px', overflow: 'hidden'}}>
-                <rect x="0" width="6" height="13" fill="#002395"/>
-                <rect x="6" width="6" height="13" fill="#FFFFFF"/>
-                <rect x="12" width="6" height="13" fill="#ED2939"/>
-              </svg>
-              <span className="lang-name" style={{fontFamily: 'Barlow, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.75)'}}>{t('languageFr')}</span>
-            </span>
-
-            <span className="lang-sep" style={{color: 'rgba(148,163,184,0.2)', fontSize: '0.9rem', fontWeight: 300}}>|</span>
-
-            {/* IT flag */}
-            <span style={{display: 'inline-flex', alignItems: 'center', gap: '0.35rem'}}>
-              <svg width="18" height="13" viewBox="0 0 18 13" aria-hidden="true" style={{flexShrink: 0, borderRadius: '2px', overflow: 'hidden'}}>
-                <rect x="0" width="6" height="13" fill="#009246"/>
-                <rect x="6" width="6" height="13" fill="#FFFFFF"/>
-                <rect x="12" width="6" height="13" fill="#CE2B37"/>
-              </svg>
-              <span className="lang-name" style={{fontFamily: 'Barlow, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.75)'}}>{t('languageIt')}</span>
-            </span>
-
-            <span className="lang-sep" style={{color: 'rgba(148,163,184,0.2)', fontSize: '0.9rem', fontWeight: 300}}>|</span>
-
-            {/* EN flag */}
-            <span style={{display: 'inline-flex', alignItems: 'center', gap: '0.35rem'}}>
-              <svg width="18" height="13" viewBox="0 0 18 13" aria-hidden="true" style={{flexShrink: 0, borderRadius: '2px', overflow: 'hidden'}}>
-                <rect width="18" height="13" fill="#012169"/>
-                <path d="M0,0 L18,13 M18,0 L0,13" stroke="#FFFFFF" strokeWidth="2.2"/>
-                <path d="M0,0 L18,13 M18,0 L0,13" stroke="#C8102E" strokeWidth="1.2"/>
-                <path d="M9,0 V13 M0,6.5 H18" stroke="#FFFFFF" strokeWidth="3.6"/>
-                <path d="M9,0 V13 M0,6.5 H18" stroke="#C8102E" strokeWidth="2.2"/>
-              </svg>
-              <span className="lang-name" style={{fontFamily: 'Barlow, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.75)'}}>{t('languageEn')}</span>
-            </span>
           </div>
         </div>
       </div>

@@ -53,7 +53,7 @@ export default function Navbar() {
     {href: '#features',    label: t('features')},
     {href: '#screenshots', label: t('screenshots')},
     {href: '#pricing',     label: t('pricing')},
-    {href: '#access',      label: t('howItWorks')},
+    {href: '#more',        label: t('more')},
     {href: '#contact',     label: t('contact')},
   ];
 
