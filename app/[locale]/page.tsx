@@ -9,6 +9,7 @@ import Comparison from '@/components/Comparison';
 import Pricing from '@/components/Pricing';
 import Testimonial from '@/components/Testimonial';
 import FinalCTA from '@/components/FinalCTA';
+import Downloads from '@/components/Downloads';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
@@ -33,6 +34,7 @@ export default function Home() {
         <Pricing />
         <Testimonial />
         <FinalCTA />
+        <Downloads />
         <Contact />
         <Footer />
       </main>

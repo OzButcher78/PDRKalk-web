@@ -480,30 +480,35 @@ export default function Pricing() {
                 {comparisonTable.rows.map((row, i) => {
                   const isEven = i % 2 === 0;
                   const isCostRow = i >= 5;
+                  const isLastRow = i === comparisonTable.rows.length - 1;
                   return (
                     <tr key={i} style={{background: isEven ? '#fff' : '#f8fafc'}}>
                       <td style={{
                         color: '#475569',
-                        fontWeight: 500,
+                        fontWeight: isLastRow ? 800 : 500,
                         borderBottom: '1px solid #e2e8f0',
+                        borderTop: isLastRow ? '2px solid #cbd5e1' : undefined,
                       }}>
                         {row.feature}
                       </td>
                       <td style={{
                         textAlign: 'center',
                         color: isCostRow ? 'var(--red)' : '#64748b',
-                        fontWeight: isCostRow ? 600 : 400,
+                        fontWeight: isLastRow ? 800 : isCostRow ? 600 : 400,
                         borderBottom: '1px solid #e2e8f0',
+                        borderTop: isLastRow ? '2px solid #cbd5e1' : undefined,
                       }}>
                         {row.competitor}
                       </td>
                       <td style={{
                         textAlign: 'center',
                         color: '#166534',
-                        fontWeight: 700,
+                        fontWeight: isLastRow ? 900 : 700,
+                        fontSize: isLastRow ? '1.05em' : undefined,
                         borderBottom: '1px solid #bbf7d0',
                         borderLeft: '2px solid rgba(22,163,74,0.25)',
                         background: 'rgba(22,163,74,0.07)',
+                        borderTop: isLastRow ? '2px solid #16a34a' : undefined,
                       }}>
                         {row.pdrKalk}
                       </td>

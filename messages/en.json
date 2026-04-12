@@ -49,6 +49,18 @@
       {
         "heading": "30–60 min. saved per job",
         "desc": "Less paperwork, more repairs. The time savings pay off from day one."
+      },
+      {
+        "heading": "Tamper-proof audit trail",
+        "desc": "SHA-256 hash chain, automatic document versions and PDF snapshots — full traceability for every invoice."
+      },
+      {
+        "heading": "DATEV & accounting export",
+        "desc": "DATEV CSV, VAT export and open receivables as Excel — seamless handoff to your tax advisor."
+      },
+      {
+        "heading": "Local data backup",
+        "desc": "Full backup as ZIP on your device. Auto-save, smart restore — your data stays with you."
       }
     ]
   },
@@ -57,23 +69,23 @@
     "cards": [
       {
         "heading": "Hail & parking damage estimation",
-        "desc": "Live calculation during input. VFFS, Zurich and BVAT profiles built in. Surcharges with one click."
+        "desc": "4 price matrices (VFFS, Zurich, BVAT, Austria) with live calculation across 14 panels. Parking damage: per panel, flat rate, or time-based."
       },
       {
-        "heading": "Professional documents",
-        "desc": "Cost estimate, report, invoice and receipt — as PDF with your logo. Including Swiss QR invoice."
+        "heading": "10+ document types",
+        "desc": "Cost estimate, report, invoice, receipt, credit note, assignment declaration and QR invoice — all as PDF with your logo. Including split invoices for insurance cases."
       },
       {
-        "heading": "Send emails directly from the app",
-        "desc": "Send PDFs via email without leaving the app. With templates, preview and delivery tracking."
+        "heading": "Insurance direct workflow",
+        "desc": "Guided 4-step process: damage entry, assignment declaration with digital signature, send to insurer, automatic split invoice generation."
       },
       {
-        "heading": "Customer management",
-        "desc": "Address book with business and private customers. Individual discounts, payment terms and hourly rates per customer."
+        "heading": "Subcontractor management",
+        "desc": "Encrypted job transfer (AES-256), three compensation models, configurable branding, and complete audit trail between contractor and sub."
       },
       {
         "heading": "4 languages — DE / FR / IT / EN",
-        "desc": "Fully translated. Perfect for multilingual Switzerland and the German market."
+        "desc": "Fully translated. Perfect for multilingual Switzerland and the German-speaking market."
       },
       {
         "heading": "100% offline & local",
@@ -122,9 +134,36 @@
         "heading": "Invoicing",
         "items": [
           "Invoice status tracking (Created → Delivered → Paid)",
-          "Overdue payments at a glance",
-          "Cancellation with reason and replacement invoice",
-          "Multiple jobs on one invoice"
+          "Credit notes — full or partial, linked to original invoice",
+          "Split invoices: insurance + deductible separated",
+          "Cancellation with mandatory reason and replacement invoice"
+        ]
+      },
+      {
+        "heading": "Email integration",
+        "items": [
+          "Direct SMTP sending with PDF attachments",
+          "Editable preview (To, Subject, Body) before sending",
+          "IMAP sent folder filing",
+          "Delivery tracking with automatic status updates"
+        ]
+      },
+      {
+        "heading": "Customer management",
+        "items": [
+          "5 categories: Business, Private, Insurance, Subs, Contractors",
+          "Individual discounts, payment terms and hourly rates",
+          "Insurance-specific fields for direct workflow",
+          "Alphabetical A–Z quick filter"
+        ]
+      },
+      {
+        "heading": "Export & accounting",
+        "items": [
+          "DATEV export (CSV) for German tax advisors",
+          "VAT export for tax returns (CH/DE/AT)",
+          "Open receivables and invoice export as Excel",
+          "Audit trail export as JSON with SHA-256 verification"
         ]
       },
       {
@@ -137,28 +176,21 @@
         ]
       },
       {
-        "heading": "Data backup",
+        "heading": "3 regions — CH, DE, AT",
         "items": [
-          "Full backup as ZIP (settings, customers, documents, photos)",
-          "Auto-save to local folder",
-          "Demo data to try it out"
-        ]
-      },
-      {
-        "heading": "Working across borders",
-        "items": [
-          "Automatic currency switching CHF ↔ EUR",
-          "Reverse charge for EU customers",
-          "Switzerland (CH) and Germany (DE) as regions"
+          "Switzerland: CHF, VAT 8.1%, QR payment slip, 5-Rappen rounding",
+          "Germany: EUR, VAT 19%, DATEV export, cancellation invoices",
+          "Austria: EUR, VAT 20%, dedicated price matrix",
+          "Reverse charge for EU customers with VAT ID"
         ]
       },
       {
         "heading": "Traceable & tamper-proof",
         "items": [
-          "Complete activity history per document",
-          "Document versions on every status change",
-          "Tamper-proof through chaining",
-          "Verifiable audit export"
+          "SHA-256 hash chain — every entry cryptographically linked",
+          "Automatic document versions on every status change",
+          "PDF snapshots archived for dispute resolution",
+          "Audit trail survives even a full data reset"
         ]
       }
     ]
@@ -173,6 +205,8 @@
     "rows": [
       { "feature": "One-time payment", "pdrKalk": true, "competitor": false, "competitorNote": "Monthly" },
       { "feature": "Works offline", "pdrKalk": true, "competitor": false, "competitorNote": "Cloud" },
+      { "feature": "Insurance direct workflow", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
+      { "feature": "Subcontractor management", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
       { "feature": "QR invoice", "pdrKalk": true, "competitor": false, "competitorNote": "Rare" },
       { "feature": "4 languages", "pdrKalk": true, "competitor": false, "competitorNote": "DE only" },
       { "feature": "Your data belongs to you", "pdrKalk": true, "competitor": false, "competitorNote": "On third-party servers" }
@@ -184,31 +218,31 @@
     "lifetime": {
       "badge": "RECOMMENDED",
       "badgeNote": "One-Time Payment — No Subscription",
-      "price": "TBA",
+      "price": "€750",
       "priceSuffix": "one-time",
       "features": [
-        "2 installations included",
         "No subscription fees",
         "No setup fees",
         "No ongoing fees",
         "Unlimited use",
+        "Small updates included *",
         "Works offline"
       ],
-      "note": "Best choice for long-term use.",
+      "note": "Best choice for long-term use. * Optional insurance list updates may attract a small fee.",
       "cta": "Buy Now"
     },
     "monthly": {
-      "badge": "Monthly License",
-      "badgeNote": "Flexible Rate",
-      "price": "TBA",
-      "priceSuffix": "per month",
+      "badge": "Trial License",
+      "badgeNote": "Try for 1 month",
+      "price": "€40",
+      "priceSuffix": "for 1 month",
       "features": [
-        "No high entry cost",
-        "Cancel anytime",
-        "Access to the current version",
-        "Use as long as active"
+        "All features for 1 month",
+        "No subscription — ends automatically",
+        "Upgrade to full license possible",
+        "Ideal for trying it out"
       ],
-      "disclaimer": "Access ends upon cancellation."
+      "disclaimer": "The trial license ends automatically after 1 month."
     },
     "comparisonTable": {
       "title": "5-Year Cost Comparison",
@@ -218,13 +252,17 @@
         "pdrKalk": "PDR Kalk"
       },
       "rows": [
-        { "feature": "License model",            "competitor": "Monthly subscription", "pdrKalk": "One-time / Monthly" },
+        { "feature": "License model",            "competitor": "Monthly subscription", "pdrKalk": "One-time / Trial" },
         { "feature": "Setup fee",                "competitor": "Yes",                  "pdrKalk": "No" },
-        { "feature": "Additional user fees",     "competitor": "Yes",                  "pdrKalk": "Included (2 installs)" },
+        { "feature": "Additional user fees",     "competitor": "Yes",                  "pdrKalk": "No" },
         { "feature": "Cloud-based",              "competitor": "Yes",                  "pdrKalk": "No — local" },
         { "feature": "Internet required",        "competitor": "Yes",                  "pdrKalk": "No" },
-        { "feature": "Cost Year 1",              "competitor": "CHF 1,188",            "pdrKalk": "TBA" },
-        { "feature": "Cost after 5 years",       "competitor": "CHF 5,940",            "pdrKalk": "TBA" }
+        { "feature": "Cost year 1",              "competitor": "EUR 1,100",            "pdrKalk": "EUR 750" },
+        { "feature": "Cost year 2",              "competitor": "EUR 1,100",            "pdrKalk": "EUR 0" },
+        { "feature": "Cost year 3",              "competitor": "EUR 1,100",            "pdrKalk": "EUR 0" },
+        { "feature": "Cost year 4",              "competitor": "EUR 1,100",            "pdrKalk": "EUR 0" },
+        { "feature": "Cost year 5",              "competitor": "EUR 1,100",            "pdrKalk": "EUR 0" },
+        { "feature": "Total after 5 years",      "competitor": "EUR 5,500",            "pdrKalk": "EUR 750" }
       ],
       "closing": "Save thousands of CHF over five years compared to subscription-based systems.",
       "note": "Optional feature enhancements or insurance updates may be offered for a small fee. All comparison figures are based on publicly available pricing information (as of spring 2026)."
@@ -240,6 +278,14 @@
     "subtitle": "Start with PDR Kalk today and save hours every week.",
     "cta": "Try now",
     "note": "No installation needed. Runs in the browser."
+  },
+  "downloads": {
+    "title": "Detailed Feature Overview",
+    "subtitle": "Download our complete feature overview as PDF — ideal for comparing with other providers.",
+    "file": "/PDR_Kalk_Feature_Comparison.pdf",
+    "cta": "Download PDF",
+    "pages": "8 pages",
+    "version": "Version 4.17"
   },
   "contact": {
     "title": "Questions? Get in Touch.",

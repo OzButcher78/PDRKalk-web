@@ -24,9 +24,27 @@ const icons = [
     <path d="M18 10v8.5l5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
     <circle cx="18" cy="18" r="2.5" fill="var(--green)"/>
   </svg>,
+  /* shield / audit trail */
+  <svg key="shield" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+    <path d="M18 3L5 9v9c0 8.5 5.5 14.5 13 17 7.5-2.5 13-8.5 13-17V9L18 3z" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+    <path d="M13 18l3.5 3.5L23 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>,
+  /* document export / accounting */
+  <svg key="export" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+    <rect x="7" y="4" width="16" height="22" rx="2.5" stroke="currentColor" strokeWidth="1.5"/>
+    <path d="M11 11h8M11 15h5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.4"/>
+    <circle cx="26" cy="25" r="7" stroke="currentColor" strokeWidth="1.5"/>
+    <path d="M26 21.5v7M23 25.5l3 3 3-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>,
+  /* local backup / save */
+  <svg key="backup" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+    <rect x="6" y="18" width="24" height="13" rx="3" stroke="currentColor" strokeWidth="1.5"/>
+    <circle cx="26" cy="24.5" r="1.5" fill="currentColor"/>
+    <path d="M18 4v14M13 13l5 5 5-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>,
 ];
 
-const accentColors = ['var(--red)', 'var(--blue)', 'var(--green)'];
+const accentColors = ['var(--red)', 'var(--blue)', 'var(--green)', 'var(--blue)', 'var(--green)', 'var(--red)'];
 
 export default function ProblemSolution() {
   const t = useTranslations('problemSolution');
