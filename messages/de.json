@@ -69,27 +69,27 @@
     "cards": [
       {
         "heading": "Hagel- & Parkschadenkalkulation",
-        "desc": "4 Preismatrizen (VFFS, Zürich, BVAT, Österreich) mit Live-Berechnung über 14 Panels. Parkschaden wahlweise pro Panel, pauschal oder AW-basiert."
+        "desc": "4 Preismatrizen (VFFS, Zürich Mischhagel, BVAT mit De-/Montage-Spalte, Österreich) mit Live-Berechnung über 14 Panels. Parkschaden wahlweise pro Panel, pauschal oder AW-basiert."
       },
       {
-        "heading": "10+ Dokumenttypen",
-        "desc": "Kostenvoranschlag, Rapport, Rechnung, Quittung, Gutschrift, Abtretungserklärung und QR-Rechnung — als PDF mit Ihrem Logo. Inklusive Split-Rechnungen für Versicherungsfälle."
+        "heading": "Dokumente & Manuelle Rechnungen",
+        "desc": "Kostenvoranschlag, Rapport, Rechnung, QR-Rechnung, Gutschrift und Abtretungserklärung — als PDF mit Ihrem Logo. Plus freie Manuelle Rechnungen ohne Rapport und Job Package ZIP pro Auftrag."
       },
       {
         "heading": "Versicherungs-Direktworkflow",
-        "desc": "Geführter 4-Schritt-Prozess: Schadenserfassung, Abtretungserklärung mit digitaler Unterschrift, Versand an Versicherung, automatische Split-Rechnungserstellung."
+        "desc": "Geführter 4-Schritt-Prozess: Schadenserfassung, Abtretungserklärung mit digitaler Unterschrift, Versand an Versicherung, automatische Split-Rechnungserstellung — inkl. Kundenfreigabe vor Ort."
       },
       {
-        "heading": "Subunternehmer-Management",
-        "desc": "Verschlüsselter Auftragstransfer (AES-256), drei Vergütungsmodelle, konfigurierbares Branding und lückenloser Audit-Trail zwischen Auftraggeber und Sub."
+        "heading": "Subunternehmer-Workflow",
+        "desc": "Verschlüsselter Auftragstransfer (AES-256), drei Vergütungsmodelle mit Live-Aufteilung, dual-notify-Abschluss und Duplikat-Merge — lückenloser Audit-Trail zwischen Auftraggeber und Sub."
       },
       {
-        "heading": "4 Sprachen — DE / FR / IT / EN",
-        "desc": "Komplett übersetzt. Perfekt für die mehrsprachige Schweiz und den deutschsprachigen Markt."
+        "heading": "Analysen-Dashboard",
+        "desc": "Business-Intelligence auf Knopfdruck: Umsatz & Cashflow, offene Forderungen nach Fälligkeit, Top-Kunden, Top-Versicherungen, Zahlungsdauer und Konversions-Trichter — mehrwährungsfähig."
       },
       {
         "heading": "100% Offline & Lokal",
-        "desc": "Keine Cloud, kein Konto, keine monatlichen Kosten. Ihre Daten bleiben auf Ihrem Gerät. DSGVO-konform."
+        "desc": "Keine Cloud, kein Konto, keine monatlichen Kosten. Ihre Daten bleiben auf Ihrem Gerät. DSGVO-konform, 4 Sprachen (DE / FR / IT / EN)."
       }
     ]
   },
@@ -101,29 +101,43 @@
     "prev": "Vorheriges Bild",
     "next": "Nächstes Bild",
     "images": [
-      { "file": "dashboard.jpg",        "caption": "Dashboard — Aufträge im Überblick" },
-      { "file": "hagel-auftrag.jpg",    "caption": "Hagelschaden-Kalkulation (VFFS)" },
-      { "file": "hagel-auftragBVAT.jpg","caption": "Hagelschaden-Kalkulation (BVAT)" },
-      { "file": "park-auftrag2.jpg",    "caption": "Parkschaden — Bauteil wählen" },
-      { "file": "pdf-QR-rechnung.jpg",  "caption": "Schweizer QR-Rechnung" },
-      { "file": "rechnungen.jpg",       "caption": "Rechnungsübersicht mit Status" },
-      { "file": "verlauf.jpg",           "caption": "Aktivitätsprotokoll & Verlauf" },
-      { "file": "hagel-auftrag2.jpg",   "caption": "Hagelschaden — Detailansicht" },
-      { "file": "park-auftrag.jpg",     "caption": "Parkschaden-Erfassung" },
-      { "file": "pdf-hagel.jpg",        "caption": "Hagelrapport PDF" },
-      { "file": "pdf-park.jpg",         "caption": "Parkschadenrapport PDF" },
-      { "file": "pdf-rechnung.jpg",     "caption": "Rechnung PDF" },
-      { "file": "pdf-photos.jpg",       "caption": "Fotodokumentation PDF" },
-      { "file": "kostenvoranschlag.jpg", "caption": "Kostenvoranschläge" },
-      { "file": "arbeitsrapporte.jpg",  "caption": "Arbeitsrapporte" },
-      { "file": "quittungen.jpg",       "caption": "Quittungen" },
-      { "file": "adresse-buch.jpg",     "caption": "Adressbuch" },
-      { "file": "kunden-info.jpg",      "caption": "Kundeninformation" },
-      { "file": "einstellungen1.jpg",   "caption": "Einstellungen (1)" },
-      { "file": "einstellungen2.jpg",   "caption": "Einstellungen (2)" },
-      { "file": "einstellungen3.jpg",   "caption": "Einstellungen (3)" }
+      { "file": "dashboard.jpg",                   "caption": "Dashboard — Aufträge im Überblick" },
+      { "file": "analysen1.jpg",                   "caption": "Analysen-Dashboard — Umsatz & Cashflow" },
+      { "file": "analysen2.jpg",                   "caption": "Top-Kunden & Konversions-Trichter" },
+      { "file": "hagel-auftrag.jpg",               "caption": "Hagelschaden-Kalkulation (VFFS)" },
+      { "file": "hagel-auftragBVAT.jpg",           "caption": "Hagelschaden — BVAT mit De-/Montage" },
+      { "file": "parkschaden-erfassung.jpg",       "caption": "Parkschaden — Pro-Teil / Pauschal / AW" },
+      { "file": "manuel-rechungen.jpg",            "caption": "Manuelle Rechnung (ohne Rapport)" },
+      { "file": "Versicherung-Direkt.jpg",         "caption": "Direkt-Versicherung in 4 Schritten" },
+      { "file": "kundebestatigung.jpg",            "caption": "Kundenfreigabe vor Ort mit Unterschrift" },
+      { "file": "Subzuweisen.jpg",                 "caption": "Subunternehmer zuweisen — Live-Aufteilung" },
+      { "file": "sub-verwalten.jpg",               "caption": "Subunternehmer-Auftrag verwalten" },
+      { "file": "Abtretungserklarung1.jpg",        "caption": "Abtretungserklärung an die Versicherung" },
+      { "file": "Techniker-und-Dokumenten.jpg",    "caption": "Dokumente-Panel pro Auftrag" },
+      { "file": "email-doks.jpg",                  "caption": "E-Mail-Vorschau mit Mehrfach-Anhängen" },
+      { "file": "verlauf.jpg",                     "caption": "Job Timeline — Zeitstrahl pro Fall" },
+      { "file": "audit.jpg",                       "caption": "Aktivitätsprotokoll & Versionen" },
+      { "file": "backup.jpg",                      "caption": "Backup, Sub-Import & Demodaten" },
+      { "file": "wiederherstellen.jpg",            "caption": "Intelligente Wiederherstellung" },
+      { "file": "hilfe.jpg",                       "caption": "Umfangreiches Benutzerhandbuch — in der App" },
+      { "file": "Teile-Notiz.jpg",                 "caption": "Beschädigte Teile & Notiz" },
+      { "file": "pdf-QR-rechnung.jpg",             "caption": "Schweizer QR-Rechnung" },
+      { "file": "rechnungen.jpg",                  "caption": "Rechnungsübersicht mit Status" },
+      { "file": "hagel-auftrag2.jpg",              "caption": "Hagelschaden — Detailansicht" },
+      { "file": "pdf-hagel.jpg",                   "caption": "Hagelrapport PDF" },
+      { "file": "pdf-park.jpg",                    "caption": "Parkschadenrapport PDF" },
+      { "file": "pdf-rechnung.jpg",                "caption": "Rechnung PDF" },
+      { "file": "pdf-photos.jpg",                  "caption": "Fotodokumentation PDF" },
+      { "file": "kostenvoranschlag.jpg",           "caption": "Kostenvoranschläge" },
+      { "file": "arbeitsrapporte.jpg",             "caption": "Arbeitsrapporte" },
+      { "file": "quittungen.jpg",                  "caption": "Quittungen" },
+      { "file": "adresse-buch.jpg",                "caption": "Adressbuch" },
+      { "file": "kunden-info.jpg",                 "caption": "Kundeninformation" },
+      { "file": "einstellungen1.jpg",              "caption": "Einstellungen (1)" },
+      { "file": "einstellungen2.jpg",              "caption": "Einstellungen (2)" },
+      { "file": "einstellungen3.jpg",              "caption": "Einstellungen (3)" }
     ],
-    "initialCount": 7,
+    "initialCount": 8,
     "showMore": "Mehr Screenshots anzeigen",
     "showLess": "Weniger anzeigen"
   },
@@ -131,48 +145,57 @@
     "title": "Und noch mehr...",
     "groups": [
       {
-        "heading": "Rechnungswesen",
+        "heading": "Rechnungswesen & Zahlungseingang",
         "items": [
-          "Rechnungsstatus-Tracking (Erstellt → Zugestellt → Bezahlt)",
-          "Gutschriften — voll oder teilweise, mit Rückverweis auf Original",
-          "Split-Rechnungen: Versicherung + Selbstbehalt getrennt",
-          "Stornorechnung mit Pflichtbegründung und Ersatzrechnung"
+          "Manuelle Rechnungen ohne Rapport — teilen dieselben RE-Nummern",
+          "Zahlungseingang-Tracking mit Teilzahlungen und Fehlbetrag-Anzeige",
+          "Rechnungsstatus (Erstellt → Zugestellt → Bezahlt) automatisch aktualisiert",
+          "Gutschriften, Split-Rechnungen, Stornorechnung mit Ersatz"
         ]
       },
       {
-        "heading": "E-Mail-Integration",
+        "heading": "Analysen & Controlling",
         "items": [
-          "Direkter SMTP-Versand mit PDF-Anhängen",
-          "Bearbeitbare Vorschau (An, Betreff, Text) vor dem Senden",
-          "IMAP Gesendet-Ordner-Ablage",
-          "Versandverfolgung mit automatischer Statusaktualisierung"
+          "Umsatz- und Cashflow-Diagramme über frei wählbare Zeiträume",
+          "Offene Forderungen gegliedert nach Fälligkeit (0–30, 31–60, 61–90, 90+)",
+          "Top-Kunden, Top-Versicherungen, ∅ Auftragswert, ∅ Zahlungsdauer",
+          "Konversions-Trichter: Rapport → Angenommen → Verrechnet → Bezahlt"
         ]
       },
       {
-        "heading": "Kundenverwaltung",
+        "heading": "Job Package & Dokumente",
         "items": [
-          "5 Kategorien: Firmen, Privat, Versicherungen, Subs, Auftraggeber",
-          "Individuelle Rabatte, Zahlungsfristen und Stundensätze",
-          "Versicherungsspezifische Felder für Direktworkflow",
-          "Alphabetischer A–Z-Schnellfilter"
+          "Job Package Export — ZIP pro Auftrag mit Rapport, Rechnung, Abtretung, Fotos, Backup",
+          "Dokumente-Panel: PDFs an Aufträge anhängen (z.B. Gutachten, Versicherungsbestätigung)",
+          "E-Mail-Vorschau mit Mehrfach-Anhängen aus allen Auftragsdokumenten",
+          "Kundenfreigabe vor Ort mit digitaler Unterschrift auf dem Gerät"
         ]
       },
       {
-        "heading": "Export & Buchhaltung",
+        "heading": "Subunternehmer-Workflow",
         "items": [
-          "DATEV-Export (CSV) für deutsche Steuerberater",
-          "MwSt-/USt-Export für die Steuererklärung (CH/DE/AT)",
-          "Offene-Debitoren- und Rechnungsexport als Excel",
-          "Audit-Trail-Export als JSON mit SHA-256-Verifizierung"
+          "Drei Vergütungsmodelle: AW-Satz, Prozent, Pauschale — mit Live-Aufteilung",
+          "Dual-notify-Abschluss: Sub und Auftraggeber werden automatisch informiert",
+          "Verschlüsselter Auftragstransfer (AES-256) und Sub-Auftrag-Import via Backup-Menü",
+          "Duplikat-Merge beim Rückimport — keine doppelten Einträge"
         ]
       },
       {
-        "heading": "Fotos",
+        "heading": "Fotos & Fahrzeug",
         "items": [
-          "Bis zu 12 Fotos pro Auftrag mit Beschriftung",
+          "Bis zu 12 Fotos pro Auftrag mit Beschriftung, integriert im PDF-Rapport",
           "Automatische Komprimierung in 3 Qualitätsstufen",
           "Direkte Kameraaufnahme vom Gerät",
-          "Fotos im PDF-Rapport integriert"
+          "Beschädigte-Teile-Auswahl L/R pro Panel mit Notiz"
+        ]
+      },
+      {
+        "heading": "Export, Backup & Buchhaltung",
+        "items": [
+          "DATEV-Export (CSV), MwSt-/USt-Export, Offene-Debitoren-Export als Excel",
+          "Vollbackup als ZIP (mit / ohne Fotos) lokal auf Ihrem Gerät",
+          "Intelligente Wiederherstellung — keine Duplikate, Fotos werden übernommen",
+          "Audit-Trail-Export als JSON mit SHA-256-Verifizierung"
         ]
       },
       {
@@ -185,12 +208,21 @@
         ]
       },
       {
-        "heading": "Nachvollziehbar & manipulationssicher",
+        "heading": "Timeline, Audit-Trail & E-Mail",
         "items": [
+          "Job Timeline / Historie — einheitliche Fallansicht über Rapport ↔ Rechnung",
           "SHA-256 Hash-Kette — jeder Eintrag kryptografisch verknüpft",
-          "Automatische Dokumentversionen bei jeder Statusänderung",
-          "PDF-Snapshots zur Streitbeilegung archiviert",
-          "Audit-Trail überlebt selbst vollständigen Daten-Reset"
+          "Automatische Dokumentversionen und PDF-Snapshots bei jeder Statusänderung",
+          "Direkter SMTP-Versand mit IMAP-Ablage und Versandverfolgung"
+        ]
+      },
+      {
+        "heading": "Hilfe & Benutzerhandbuch",
+        "items": [
+          "Umfangreiches Benutzerhandbuch direkt in der App — durchsuchbar nach Thema",
+          "Bereichsbezogene Anleitungen: Dashboard, Analysen, Rechnungen, E-Mail, Subunternehmer, Versicherung …",
+          "Schritt-für-Schritt-Workflows mit Hinweisen und Tipps",
+          "Eigener Abschnitt zur Revisionssicherheit und Tastaturnavigation"
         ]
       }
     ]
@@ -206,7 +238,8 @@
       { "feature": "Einmalzahlung", "pdrKalk": true, "competitor": false, "competitorNote": "Monatlich" },
       { "feature": "Funktioniert ohne Internet", "pdrKalk": true, "competitor": false, "competitorNote": "Cloud" },
       { "feature": "Versicherungs-Direktworkflow", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" },
-      { "feature": "Subunternehmer-Management", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" },
+      { "feature": "Subunternehmer-Workflow", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" },
+      { "feature": "Analysen-Dashboard (BI)", "pdrKalk": true, "competitor": false, "competitorNote": "Aufpreis" },
       { "feature": "QR-Rechnung", "pdrKalk": true, "competitor": false, "competitorNote": "Selten" },
       { "feature": "4 Sprachen", "pdrKalk": true, "competitor": false, "competitorNote": "Nur DE" },
       { "feature": "Ihre Daten gehören Ihnen", "pdrKalk": true, "competitor": false, "competitorNote": "Auf fremden Servern" }

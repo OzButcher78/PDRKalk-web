@@ -69,27 +69,27 @@
     "cards": [
       {
         "heading": "Hail & parking damage estimation",
-        "desc": "4 price matrices (VFFS, Zurich, BVAT, Austria) with live calculation across 14 panels. Parking damage: per panel, flat rate, or time-based."
+        "desc": "4 price matrices (VFFS, Zurich mixed-hail, BVAT with de-/remount column, Austria) with live calculation across 14 panels. Parking damage: per panel, flat rate, or time-based."
       },
       {
-        "heading": "10+ document types",
-        "desc": "Cost estimate, report, invoice, receipt, credit note, assignment declaration and QR invoice — all as PDF with your logo. Including split invoices for insurance cases."
+        "heading": "Documents & manual invoices",
+        "desc": "Cost estimate, report, invoice, QR invoice, credit note and assignment declaration — all as PDF with your logo. Plus freeform manual invoices without a report and a one-click job-package ZIP."
       },
       {
         "heading": "Insurance direct workflow",
-        "desc": "Guided 4-step process: damage entry, assignment declaration with digital signature, send to insurer, automatic split invoice generation."
+        "desc": "Guided 4-step process: damage entry, assignment declaration with digital signature, send to insurer, automatic split invoice — including in-person customer approval."
       },
       {
-        "heading": "Subcontractor management",
-        "desc": "Encrypted job transfer (AES-256), three compensation models, configurable branding, and complete audit trail between contractor and sub."
+        "heading": "Subcontractor workflow",
+        "desc": "Encrypted job transfer (AES-256), three compensation models with live split, dual-notify close-out, and duplicate-merge on re-import — complete audit trail between contractor and sub."
       },
       {
-        "heading": "4 languages — DE / FR / IT / EN",
-        "desc": "Fully translated. Perfect for multilingual Switzerland and the German-speaking market."
+        "heading": "Analytics dashboard",
+        "desc": "Business intelligence at a glance: revenue & cashflow, receivables by due-date bucket, top customers, top insurers, payment duration and a conversion funnel — multi-currency."
       },
       {
         "heading": "100% offline & local",
-        "desc": "No cloud, no account, no monthly fees. Your data stays on your device. GDPR compliant."
+        "desc": "No cloud, no account, no monthly fees. Your data stays on your device. GDPR compliant, 4 languages (DE / FR / IT / EN)."
       }
     ]
   },
@@ -101,29 +101,43 @@
     "prev": "Previous image",
     "next": "Next image",
     "images": [
-      { "file": "dashboard.jpg",        "caption": "Dashboard — Jobs at a glance" },
-      { "file": "hagel-auftrag.jpg",    "caption": "Hail damage estimation (VFFS)" },
-      { "file": "hagel-auftragBVAT.jpg","caption": "Hail damage estimation (BVAT)" },
-      { "file": "park-auftrag2.jpg",    "caption": "Parking damage — Select panel" },
-      { "file": "pdf-QR-rechnung.jpg",  "caption": "Swiss QR Invoice" },
-      { "file": "rechnungen.jpg",       "caption": "Invoice overview with status" },
-      { "file": "verlauf.jpg",           "caption": "Activity log & history" },
-      { "file": "hagel-auftrag2.jpg",   "caption": "Hail damage — Detail view" },
-      { "file": "park-auftrag.jpg",     "caption": "Parking damage entry" },
-      { "file": "pdf-hagel.jpg",        "caption": "Hail report PDF" },
-      { "file": "pdf-park.jpg",         "caption": "Parking damage report PDF" },
-      { "file": "pdf-rechnung.jpg",     "caption": "Invoice PDF" },
-      { "file": "pdf-photos.jpg",       "caption": "Photo documentation PDF" },
-      { "file": "kostenvoranschlag.jpg", "caption": "Cost estimates" },
-      { "file": "arbeitsrapporte.jpg",  "caption": "Work reports" },
-      { "file": "quittungen.jpg",       "caption": "Receipts" },
-      { "file": "adresse-buch.jpg",     "caption": "Address book" },
-      { "file": "kunden-info.jpg",      "caption": "Customer information" },
-      { "file": "einstellungen1.jpg",   "caption": "Settings (1)" },
-      { "file": "einstellungen2.jpg",   "caption": "Settings (2)" },
-      { "file": "einstellungen3.jpg",   "caption": "Settings (3)" }
+      { "file": "dashboard.jpg",                   "caption": "Dashboard — Jobs at a glance" },
+      { "file": "analysen1.jpg",                   "caption": "Analytics dashboard — revenue & cashflow" },
+      { "file": "analysen2.jpg",                   "caption": "Top customers & conversion funnel" },
+      { "file": "hagel-auftrag.jpg",               "caption": "Hail damage estimation (VFFS)" },
+      { "file": "hagel-auftragBVAT.jpg",           "caption": "Hail damage — BVAT with de-/remount" },
+      { "file": "parkschaden-erfassung.jpg",       "caption": "Parking damage — per-panel / flat / time-based" },
+      { "file": "manuel-rechungen.jpg",            "caption": "Manual invoice (no report required)" },
+      { "file": "Versicherung-Direkt.jpg",         "caption": "Insurance direct workflow — 4 steps" },
+      { "file": "kundebestatigung.jpg",            "caption": "In-person customer approval with signature" },
+      { "file": "Subzuweisen.jpg",                 "caption": "Assign subcontractor — live split" },
+      { "file": "sub-verwalten.jpg",               "caption": "Manage subcontractor job" },
+      { "file": "Abtretungserklarung1.jpg",        "caption": "Assignment declaration to insurer" },
+      { "file": "Techniker-und-Dokumenten.jpg",    "caption": "Documents panel per job" },
+      { "file": "email-doks.jpg",                  "caption": "Email preview with multi-attachments" },
+      { "file": "verlauf.jpg",                     "caption": "Job timeline — unified case view" },
+      { "file": "audit.jpg",                       "caption": "Activity log & versions" },
+      { "file": "backup.jpg",                      "caption": "Backup, sub-import & demo data" },
+      { "file": "wiederherstellen.jpg",            "caption": "Smart restore" },
+      { "file": "hilfe.jpg",                       "caption": "Extensive in-app user manual" },
+      { "file": "Teile-Notiz.jpg",                 "caption": "Damaged parts & note" },
+      { "file": "pdf-QR-rechnung.jpg",             "caption": "Swiss QR Invoice" },
+      { "file": "rechnungen.jpg",                  "caption": "Invoice overview with status" },
+      { "file": "hagel-auftrag2.jpg",              "caption": "Hail damage — Detail view" },
+      { "file": "pdf-hagel.jpg",                   "caption": "Hail report PDF" },
+      { "file": "pdf-park.jpg",                    "caption": "Parking damage report PDF" },
+      { "file": "pdf-rechnung.jpg",                "caption": "Invoice PDF" },
+      { "file": "pdf-photos.jpg",                  "caption": "Photo documentation PDF" },
+      { "file": "kostenvoranschlag.jpg",           "caption": "Cost estimates" },
+      { "file": "arbeitsrapporte.jpg",             "caption": "Work reports" },
+      { "file": "quittungen.jpg",                  "caption": "Receipts" },
+      { "file": "adresse-buch.jpg",                "caption": "Address book" },
+      { "file": "kunden-info.jpg",                 "caption": "Customer information" },
+      { "file": "einstellungen1.jpg",              "caption": "Settings (1)" },
+      { "file": "einstellungen2.jpg",              "caption": "Settings (2)" },
+      { "file": "einstellungen3.jpg",              "caption": "Settings (3)" }
     ],
-    "initialCount": 7,
+    "initialCount": 8,
     "showMore": "See more screenshots",
     "showLess": "Show less"
   },
@@ -131,48 +145,57 @@
     "title": "And even more...",
     "groups": [
       {
-        "heading": "Invoicing",
+        "heading": "Invoicing & payments",
         "items": [
-          "Invoice status tracking (Created → Delivered → Paid)",
-          "Credit notes — full or partial, linked to original invoice",
-          "Split invoices: insurance + deductible separated",
-          "Cancellation with mandatory reason and replacement invoice"
+          "Manual invoices without a report — share the same RE- counter",
+          "Payment tracking with partial payments and shortfall display",
+          "Invoice status (Created → Delivered → Paid) updated automatically",
+          "Credit notes, split invoices, cancellation with replacement"
         ]
       },
       {
-        "heading": "Email integration",
+        "heading": "Analytics & controlling",
         "items": [
-          "Direct SMTP sending with PDF attachments",
-          "Editable preview (To, Subject, Body) before sending",
-          "IMAP sent folder filing",
-          "Delivery tracking with automatic status updates"
+          "Revenue and cashflow charts over any custom time range",
+          "Receivables aged into buckets (0–30, 31–60, 61–90, 90+ days)",
+          "Top customers, top insurers, avg. job value, avg. days to pay",
+          "Conversion funnel: Report → Accepted → Invoiced → Paid"
         ]
       },
       {
-        "heading": "Customer management",
+        "heading": "Job package & documents",
         "items": [
-          "5 categories: Business, Private, Insurance, Subs, Contractors",
-          "Individual discounts, payment terms and hourly rates",
-          "Insurance-specific fields for direct workflow",
-          "Alphabetical A–Z quick filter"
+          "Job-package export — ZIP per job with report, invoice, assignment, photos, backup",
+          "Documents panel: attach any PDF to a job (expert report, insurance confirmation…)",
+          "Email preview with multi-attachment picker across all job documents",
+          "In-person customer approval with digital signature on the device"
         ]
       },
       {
-        "heading": "Export & accounting",
+        "heading": "Subcontractor workflow",
         "items": [
-          "DATEV export (CSV) for German tax advisors",
-          "VAT export for tax returns (CH/DE/AT)",
-          "Open receivables and invoice export as Excel",
-          "Audit trail export as JSON with SHA-256 verification"
+          "Three compensation models: time rate, percentage, flat — with live split",
+          "Dual-notify close-out: both sub and contractor are informed automatically",
+          "Encrypted job transfer (AES-256) and sub-job import via the backup menu",
+          "Duplicate merge on re-import — no double entries"
         ]
       },
       {
-        "heading": "Photos",
+        "heading": "Photos & vehicle",
         "items": [
-          "Up to 12 photos per job with captions",
+          "Up to 12 photos per job with captions, integrated in the PDF report",
           "Automatic compression in 3 quality levels",
           "Direct camera capture from device",
-          "Photos integrated in PDF report"
+          "Damaged-parts selector L/R per panel with note"
+        ]
+      },
+      {
+        "heading": "Export, backup & accounting",
+        "items": [
+          "DATEV export (CSV), VAT export, open-receivables export as Excel",
+          "Full backup as ZIP (with / without photos) locally on your device",
+          "Smart restore — no duplicates, photos are picked up automatically",
+          "Audit trail export as JSON with SHA-256 verification"
         ]
       },
       {
@@ -185,12 +208,21 @@
         ]
       },
       {
-        "heading": "Traceable & tamper-proof",
+        "heading": "Timeline, audit trail & email",
         "items": [
+          "Job timeline / history — unified case view across report ↔ invoice",
           "SHA-256 hash chain — every entry cryptographically linked",
-          "Automatic document versions on every status change",
-          "PDF snapshots archived for dispute resolution",
-          "Audit trail survives even a full data reset"
+          "Automatic document versions and PDF snapshots on every status change",
+          "Direct SMTP sending with IMAP filing and delivery tracking"
+        ]
+      },
+      {
+        "heading": "Help & user manual",
+        "items": [
+          "Extensive user manual built directly into the app — searchable by topic",
+          "Section-specific guides: dashboard, analytics, invoices, email, subcontractors, insurance…",
+          "Step-by-step workflows with notes and tips",
+          "Dedicated sections on audit-trail compliance and keyboard navigation"
         ]
       }
     ]
@@ -206,7 +238,8 @@
       { "feature": "One-time payment", "pdrKalk": true, "competitor": false, "competitorNote": "Monthly" },
       { "feature": "Works offline", "pdrKalk": true, "competitor": false, "competitorNote": "Cloud" },
       { "feature": "Insurance direct workflow", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
-      { "feature": "Subcontractor management", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
+      { "feature": "Subcontractor workflow", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
+      { "feature": "Analytics dashboard (BI)", "pdrKalk": true, "competitor": false, "competitorNote": "Extra charge" },
       { "feature": "QR invoice", "pdrKalk": true, "competitor": false, "competitorNote": "Rare" },
       { "feature": "4 languages", "pdrKalk": true, "competitor": false, "competitorNote": "DE only" },
       { "feature": "Your data belongs to you", "pdrKalk": true, "competitor": false, "competitorNote": "On third-party servers" }

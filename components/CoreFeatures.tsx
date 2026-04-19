@@ -25,10 +25,12 @@ const featureIcons = [
     <circle cx="14" cy="11" r="3.5" stroke="currentColor" strokeWidth="1.8"/>
     <path d="M8.5 21c0-3 2.5-5 5.5-5s5.5 2 5.5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
   </svg>,
-  /* globe — languages */
-  <svg key="lang" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-    <circle cx="14" cy="14" r="10" stroke="currentColor" strokeWidth="1.8"/>
-    <path d="M4 14h20M14 4c-3.5 3-5 6.5-5 10s1.5 7 5 10c3.5-3 5-6.5 5-10s-1.5-7-5-10z" stroke="currentColor" strokeWidth="1.8"/>
+  /* bar chart — analytics */
+  <svg key="analytics" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+    <path d="M4 24h20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+    <rect x="6" y="14" width="3.5" height="8" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"/>
+    <rect x="12.25" y="9" width="3.5" height="13" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"/>
+    <rect x="18.5" y="5" width="3.5" height="17" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"/>
   </svg>,
   /* shield — offline / privacy */
   <svg key="offline" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">

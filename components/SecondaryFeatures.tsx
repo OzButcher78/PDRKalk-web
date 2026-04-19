@@ -11,6 +11,24 @@ const groupIcons = [
     <rect x="4" y="2" width="16" height="20" rx="2" stroke="currentColor" strokeWidth="1.5"/>
     <path d="M8 7h8M8 11h6M8 15h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
   </svg>,
+  /* bar chart — analytics */
+  <svg key="analytics" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M3 21h18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+    <rect x="5" y="12" width="3" height="7" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+    <rect x="10.5" y="8" width="3" height="11" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+    <rect x="16" y="4" width="3" height="15" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+  </svg>,
+  /* package / ZIP bundle */
+  <svg key="package" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M12 3l8 4v10l-8 4-8-4V7l8-4z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+    <path d="M4 7l8 4 8-4M12 11v10" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+  </svg>,
+  /* users — subcontractor */
+  <svg key="users" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <circle cx="9" cy="9" r="3.5" stroke="currentColor" strokeWidth="1.5"/>
+    <circle cx="17" cy="10.5" r="2.5" stroke="currentColor" strokeWidth="1.5"/>
+    <path d="M3 20c0-3 2.5-5 6-5s6 2 6 5M15 20c0-2 1.5-3.5 4-3.5s3 1.5 3 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+  </svg>,
   /* camera */
   <svg key="camera" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
     <rect x="2" y="6" width="20" height="14" rx="2" stroke="currentColor" strokeWidth="1.5"/>
@@ -28,10 +46,15 @@ const groupIcons = [
     <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5"/>
     <path d="M3 12h18M12 3c-3 2.5-4.5 5.5-4.5 9s1.5 6.5 4.5 9c3-2.5 4.5-5.5 4.5-9s-1.5-6.5-4.5-9z" stroke="currentColor" strokeWidth="1.5"/>
   </svg>,
-  /* shield / compliance */
-  <svg key="compliance" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path d="M12 2L4 6v6c0 5 3.5 9.5 8 10.5 4.5-1 8-5.5 8-10.5V6L12 2z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
-    <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  /* clock — timeline */
+  <svg key="timeline" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5"/>
+    <path d="M12 7v5l3.5 2.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>,
+  /* book — help / manual */
+  <svg key="help" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M4 4h7a3 3 0 013 3v13a2 2 0 00-2-2H4V4z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+    <path d="M20 4h-7a3 3 0 00-3 3v13a2 2 0 012-2h8V4z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
   </svg>,
 ];
 
