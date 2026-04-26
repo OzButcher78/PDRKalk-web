@@ -10,7 +10,7 @@
   },
   "hero": {
     "title": "Hagelschaden kalkulieren.",
-    "titleAccent": "In unter 60 Sekunden.",
+    "titleAccent": "In Minuten.",
     "subtitle": "Die Kalkulationssoftware für PDR-Techniker. Professionelle Rapporte und Rechnungen — ohne Cloud, ohne Abo.",
     "ctaPrimary": "Kostenlos testen",
     "ctaSecondary": "Funktionen entdecken",
@@ -260,6 +260,7 @@
       "badgeNote": "Einmalzahlung — Kein Abo",
       "price": "€750",
       "priceSuffix": "einmalig",
+      "priceMonthly": "ca. €63/Monat über 12 Raten",
       "features": [
         "Keine Abogebühren",
         "Keine Einrichtungsgebühren",

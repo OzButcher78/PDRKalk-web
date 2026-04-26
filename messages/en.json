@@ -10,7 +10,7 @@
   },
   "hero": {
     "title": "Calculate hail damage.",
-    "titleAccent": "In under 60 seconds.",
+    "titleAccent": "In minutes.",
     "subtitle": "The estimation software for PDR technicians. Professional reports and invoices — no cloud, no subscription.",
     "ctaPrimary": "Try for free",
     "ctaSecondary": "Discover features",
@@ -260,6 +260,7 @@
       "badgeNote": "One-Time Payment — No Subscription",
       "price": "€750",
       "priceSuffix": "one-time",
+      "priceMonthly": "approx. €63/mo over 12 installments",
       "features": [
         "No subscription fees",
         "No setup fees",

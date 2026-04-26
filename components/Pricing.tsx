@@ -12,6 +12,7 @@ export default function Pricing() {
     badgeNote: string;
     price: string;
     priceSuffix: string;
+    priceMonthly: string;
     features: string[];
     note: string;
     cta: string;
@@ -157,6 +158,15 @@ export default function Pricing() {
                   letterSpacing: '0.08em',
                 }}>
                   {lifetime.priceSuffix}
+                </div>
+                <div style={{
+                  fontFamily: 'Barlow, sans-serif',
+                  fontSize: '0.78rem',
+                  color: '#64748b',
+                  marginTop: '0.4rem',
+                  fontStyle: 'italic',
+                }}>
+                  {lifetime.priceMonthly}
                 </div>
               </div>
 
