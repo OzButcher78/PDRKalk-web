@@ -23,6 +23,7 @@ export default function Pricing() {
     price: string;
     priceSuffix: string;
     features: string[];
+    cta: string;
     disclaimer: string;
   };
 
@@ -375,7 +376,7 @@ export default function Pricing() {
                   transition: 'border-color 0.2s, transform 0.15s',
                 }}
               >
-                {monthly.badge} →
+                {monthly.cta} →
               </a>
 
               {/* Disclaimer */}

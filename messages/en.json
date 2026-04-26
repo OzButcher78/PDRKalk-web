@@ -88,8 +88,8 @@
         "desc": "Business intelligence at a glance: revenue & cashflow, receivables by due-date bucket, top customers, top insurers, payment duration and a conversion funnel — multi-currency."
       },
       {
-        "heading": "100% offline & local",
-        "desc": "No cloud, no account, no monthly fees. Your data stays on your device. GDPR compliant, 4 languages (DE / FR / IT / EN)."
+        "heading": "Multi-device & local data",
+        "desc": "Sync the office PC, the workshop tablet and the accountant's PC through your own NAS or cloud — same data on every device. Stays 100% local, GDPR compliant, 4 languages."
       }
     ]
   },
@@ -179,10 +179,19 @@
       {
         "heading": "Photos & vehicle",
         "items": [
+          "QR-code mini server — upload photos straight from your smartphone into the job, no cable or login",
           "Up to 12 photos per job with captions, integrated in the PDF report",
-          "Automatic compression in 3 quality levels",
-          "Direct camera capture from device",
+          "Automatic compression in 3 quality levels, EXIF data (incl. GPS) is stripped",
           "Damaged-parts selector L/R per panel with note"
+        ]
+      },
+      {
+        "heading": "Multi-device & NAS sync",
+        "items": [
+          "Run PDR Kalk on multiple devices — desktop in the office, tablet in the workshop, accountant from home",
+          "Sync data through your own NAS or cloud storage — you control where your data lives",
+          "Recommended: a Windows-based tablet for the full feature set",
+          "Android tablet support coming soon"
         ]
       },
       {
@@ -236,6 +245,8 @@
       { "feature": "Insurance direct workflow", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
       { "feature": "Subcontractor workflow", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
       { "feature": "Analytics dashboard (BI)", "pdrKalk": true, "competitor": false, "competitorNote": "Extra charge" },
+      { "feature": "Multi-device via your NAS", "pdrKalk": true, "competitor": false, "competitorNote": "Cloud only" },
+      { "feature": "QR photo upload from phone", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
       { "feature": "QR invoice", "pdrKalk": true, "competitor": false, "competitorNote": "Rare" },
       { "feature": "4 languages", "pdrKalk": true, "competitor": false, "competitorNote": "DE only" },
       { "feature": "Your data belongs to you", "pdrKalk": true, "competitor": false, "competitorNote": "On third-party servers" }
@@ -261,17 +272,18 @@
       "cta": "Buy Now"
     },
     "monthly": {
-      "badge": "Trial License",
-      "badgeNote": "Try for 1 month",
-      "price": "€40",
-      "priceSuffix": "for 1 month",
+      "badge": "7-Day Trial License",
+      "badgeNote": "Try free for 7 days",
+      "price": "Free",
+      "priceSuffix": "7 days, no limits",
       "features": [
-        "All features for 1 month",
-        "No subscription — ends automatically",
-        "Upgrade to full license possible",
-        "Ideal for trying it out"
+        "All features unlocked for 7 days",
+        "No subscription, no credit card",
+        "License code on request via the contact form",
+        "Optional upgrade to a full license afterwards"
       ],
-      "disclaimer": "The trial license ends automatically after 1 month."
+      "cta": "Request license",
+      "disclaimer": "Request a license code with no obligation — typical reply within 24 hours."
     },
     "comparisonTable": {
       "title": "5-Year Cost Comparison",

@@ -88,8 +88,8 @@
         "desc": "Business-Intelligence auf Knopfdruck: Umsatz & Cashflow, offene Forderungen nach Fälligkeit, Top-Kunden, Top-Versicherungen, Zahlungsdauer und Konversions-Trichter — mehrwährungsfähig."
       },
       {
-        "heading": "100% Offline & Lokal",
-        "desc": "Keine Cloud, kein Konto, keine monatlichen Kosten. Ihre Daten bleiben auf Ihrem Gerät. DSGVO-konform, 4 Sprachen (DE / FR / IT / EN)."
+        "heading": "Multi-Device & lokale Daten",
+        "desc": "Synchronisieren Sie Office-PC, Werkstatt-Tablet und Buchhalter-PC über Ihre eigene NAS oder Cloud — gleicher Datenstand auf allen Geräten. Bleibt 100% lokal, DSGVO-konform, 4 Sprachen."
       }
     ]
   },
@@ -179,10 +179,19 @@
       {
         "heading": "Fotos & Fahrzeug",
         "items": [
+          "QR-Code Mini-Server — Fotos vom Smartphone direkt in den Auftrag laden, ohne Kabel oder Login",
           "Bis zu 12 Fotos pro Auftrag mit Beschriftung, integriert im PDF-Rapport",
-          "Automatische Komprimierung in 3 Qualitätsstufen",
-          "Direkte Kameraaufnahme vom Gerät",
+          "Automatische Komprimierung in 3 Qualitätsstufen, EXIF-Daten (inkl. GPS) werden entfernt",
           "Beschädigte-Teile-Auswahl L/R pro Panel mit Notiz"
+        ]
+      },
+      {
+        "heading": "Multi-Device & NAS-Sync",
+        "items": [
+          "Mit PDR Kalk auf mehreren Geräten arbeiten — Desktop im Büro, Tablet in der Werkstatt, Buchhalter zu Hause",
+          "Daten via NAS oder Cloud-Speicher Ihrer Wahl synchronisieren — Sie kontrollieren wo Ihre Daten liegen",
+          "Empfohlen: Windows-basiertes Tablet für den vollen Funktionsumfang",
+          "Android-Tablet-Unterstützung folgt in Kürze"
         ]
       },
       {
@@ -236,6 +245,8 @@
       { "feature": "Versicherungs-Direktworkflow", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" },
       { "feature": "Subunternehmer-Workflow", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" },
       { "feature": "Analysen-Dashboard (BI)", "pdrKalk": true, "competitor": false, "competitorNote": "Aufpreis" },
+      { "feature": "Multi-Device via Ihrer NAS", "pdrKalk": true, "competitor": false, "competitorNote": "Nur via Cloud" },
+      { "feature": "QR-Foto-Upload vom Smartphone", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" },
       { "feature": "QR-Rechnung", "pdrKalk": true, "competitor": false, "competitorNote": "Selten" },
       { "feature": "4 Sprachen", "pdrKalk": true, "competitor": false, "competitorNote": "Nur DE" },
       { "feature": "Ihre Daten gehören Ihnen", "pdrKalk": true, "competitor": false, "competitorNote": "Auf fremden Servern" }
@@ -261,17 +272,18 @@
       "cta": "Jetzt kaufen"
     },
     "monthly": {
-      "badge": "Testlizenz",
-      "badgeNote": "1 Monat testen",
-      "price": "€40",
-      "priceSuffix": "für 1 Monat",
+      "badge": "7-Tage Testlizenz",
+      "badgeNote": "7 Tage kostenlos testen",
+      "price": "Gratis",
+      "priceSuffix": "7 Tage uneingeschränkt",
       "features": [
-        "Alle Funktionen für 1 Monat",
-        "Kein Abo — endet automatisch",
-        "Upgrade auf Dauerlizenz möglich",
-        "Ideal zum Ausprobieren"
+        "Alle Funktionen für 7 Tage freigeschaltet",
+        "Kein Abo, keine Kreditkarte",
+        "Lizenzcode auf Anfrage per Kontaktformular",
+        "Anschliessend optional Upgrade auf Dauerlizenz"
       ],
-      "disclaimer": "Die Testlizenz endet automatisch nach 1 Monat."
+      "cta": "Lizenz anfragen",
+      "disclaimer": "Lizenzcode unverbindlich anfordern — Antwort meist innert 24 Stunden."
     },
     "comparisonTable": {
       "title": "5-Jahres-Kostenvergleich",
