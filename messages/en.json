@@ -9,6 +9,7 @@
     "skipToContent": "Skip to content"
   },
   "hero": {
+    "newBadge": "New: Now available for Microsoft and Android Tablets!",
     "title": "Calculate hail damage.",
     "titleAccent": "In minutes.",
     "subtitle": "The estimation software for PDR technicians. Professional reports and invoices — no cloud, no subscription.",
@@ -190,8 +191,8 @@
         "items": [
           "Run PDR Kalk on multiple devices — desktop in the office, tablet in the workshop, accountant from home",
           "Sync data through your own NAS or cloud storage — you control where your data lives",
-          "Recommended: a Windows-based tablet for the full feature set",
-          "Android tablet support coming soon"
+          "Runs on Windows and Android tablets — full feature set on the go",
+          "Recommended: Windows tablet 10\" or larger, or Android tablet on Android 10+"
         ]
       },
       {

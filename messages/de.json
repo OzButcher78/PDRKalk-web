@@ -9,6 +9,7 @@
     "skipToContent": "Zum Inhalt springen"
   },
   "hero": {
+    "newBadge": "Neu: Jetzt verfügbar für Microsoft- und Android-Tablets!",
     "title": "Hagelschaden kalkulieren.",
     "titleAccent": "In Minuten.",
     "subtitle": "Die Kalkulationssoftware für PDR-Techniker. Professionelle Rapporte und Rechnungen — ohne Cloud, ohne Abo.",
@@ -190,8 +191,8 @@
         "items": [
           "Mit PDR Kalk auf mehreren Geräten arbeiten — Desktop im Büro, Tablet in der Werkstatt, Buchhalter zu Hause",
           "Daten via NAS oder Cloud-Speicher Ihrer Wahl synchronisieren — Sie kontrollieren wo Ihre Daten liegen",
-          "Empfohlen: Windows-basiertes Tablet für den vollen Funktionsumfang",
-          "Android-Tablet-Unterstützung folgt in Kürze"
+          "Läuft auf Windows- und Android-Tablets — voller Funktionsumfang unterwegs",
+          "Empfohlen: Windows-Tablet ab 10 Zoll oder Android-Tablet ab Android 10"
         ]
       },
       {
