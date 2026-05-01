@@ -122,6 +122,7 @@
         "heading": "Facturation",
         "items": [
           "Suivi du statut des factures (Créée → Livrée → Payée)",
+          "Facture électronique Factur-X / ZUGFeRD (PDF/A-3 avec XML intégré, EN 16931) — conforme au mandat B2B allemand",
           "Paiements en retard en un coup d'œil",
           "Annulation avec motif et facture de remplacement",
           "Plusieurs commandes sur une seule facture"
@@ -174,6 +175,7 @@
       { "feature": "Paiement unique", "pdrKalk": true, "competitor": false, "competitorNote": "Mensuel" },
       { "feature": "Fonctionne hors ligne", "pdrKalk": true, "competitor": false, "competitorNote": "Cloud" },
       { "feature": "Facture QR", "pdrKalk": true, "competitor": false, "competitorNote": "Rare" },
+      { "feature": "Factur-X / ZUGFeRD", "pdrKalk": true, "competitor": false, "competitorNote": "Supplément" },
       { "feature": "4 langues", "pdrKalk": true, "competitor": false, "competitorNote": "DE uniquement" },
       { "feature": "Vos données vous appartiennent", "pdrKalk": true, "competitor": false, "competitorNote": "Sur des serveurs tiers" }
     ]

@@ -73,7 +73,7 @@
       },
       {
         "heading": "Documents & manual invoices",
-        "desc": "Cost estimate, report, invoice, QR invoice, credit note and assignment declaration — all as PDF with your logo. Plus freeform manual invoices without a report and a one-click job-package ZIP."
+        "desc": "Cost estimate, report, invoice, Swiss QR invoice and ZUGFeRD/Factur-X e-invoice (PDF/A-3 with embedded XML) for Germany — all as PDF with your logo. Plus credit notes, assignment declaration, freeform manual invoices and a one-click job-package ZIP."
       },
       {
         "heading": "Insurance direct workflow",
@@ -144,6 +144,7 @@
         "heading": "Invoicing & payments",
         "items": [
           "Manual invoices without a report — share the same RE- counter",
+          "ZUGFeRD/Factur-X e-invoice (PDF/A-3 with embedded XML, EN 16931) — compliant with the German B2B mandate",
           "Payment tracking with partial payments and shortfall display",
           "Invoice status (Created → Delivered → Paid) updated automatically",
           "Credit notes, split invoices, cancellation with replacement"
@@ -207,7 +208,7 @@
         "heading": "3 regions — CH, DE, AT",
         "items": [
           "Switzerland: CHF, VAT 8.1%, QR payment slip, 5-Rappen rounding",
-          "Germany: EUR, VAT 19%, DATEV export, cancellation invoices",
+          "Germany: EUR, VAT 19%, DATEV export, cancellation invoices, ZUGFeRD/Factur-X e-invoice",
           "Austria: EUR, VAT 20%, dedicated price matrix",
           "Reverse charge for EU customers with VAT ID"
         ]
@@ -248,6 +249,7 @@
       { "feature": "Multi-device via your NAS", "pdrKalk": true, "competitor": false, "competitorNote": "Cloud only" },
       { "feature": "QR photo upload from phone", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
       { "feature": "QR invoice", "pdrKalk": true, "competitor": false, "competitorNote": "Rare" },
+      { "feature": "ZUGFeRD/Factur-X e-invoice", "pdrKalk": true, "competitor": false, "competitorNote": "Extra charge" },
       { "feature": "4 languages", "pdrKalk": true, "competitor": false, "competitorNote": "DE only" },
       { "feature": "Your data belongs to you", "pdrKalk": true, "competitor": false, "competitorNote": "On third-party servers" }
     ]
@@ -320,14 +322,6 @@
     "subtitle": "Start with PDR Kalk today and save hours every week.",
     "cta": "Try now",
     "note": "No installation needed. Runs in the browser."
-  },
-  "downloads": {
-    "title": "Detailed Feature Overview",
-    "subtitle": "Download our complete feature overview as PDF — ideal for comparing with other providers.",
-    "file": "/PDR_Kalk_Feature_Comparison.pdf",
-    "cta": "Download PDF",
-    "pages": "8 pages",
-    "version": "Version 4.17"
   },
   "contact": {
     "title": "Request a Free Trial",

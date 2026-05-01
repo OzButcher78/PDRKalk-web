@@ -73,7 +73,7 @@
       },
       {
         "heading": "Dokumente & Manuelle Rechnungen",
-        "desc": "Kostenvoranschlag, Rapport, Rechnung, QR-Rechnung, Gutschrift und Abtretungserklärung — als PDF mit Ihrem Logo. Plus freie Manuelle Rechnungen ohne Rapport und Job Package ZIP pro Auftrag."
+        "desc": "Kostenvoranschlag, Rapport, Rechnung, Schweizer QR-Rechnung sowie ZUGFeRD/Factur-X E-Rechnung (PDF/A-3 mit eingebettetem XML) für Deutschland — als PDF mit Ihrem Logo. Plus Gutschrift, Abtretungserklärung, freie Manuelle Rechnungen und Job Package ZIP pro Auftrag."
       },
       {
         "heading": "Versicherungs-Direktworkflow",
@@ -144,6 +144,7 @@
         "heading": "Rechnungswesen & Zahlungseingang",
         "items": [
           "Manuelle Rechnungen ohne Rapport — teilen dieselben RE-Nummern",
+          "ZUGFeRD/Factur-X E-Rechnung (PDF/A-3 mit eingebettetem XML, EN 16931) — pflichtkonform für B2B in Deutschland",
           "Zahlungseingang-Tracking mit Teilzahlungen und Fehlbetrag-Anzeige",
           "Rechnungsstatus (Erstellt → Zugestellt → Bezahlt) automatisch aktualisiert",
           "Gutschriften, Split-Rechnungen, Stornorechnung mit Ersatz"
@@ -207,7 +208,7 @@
         "heading": "3 Regionen — CH, DE, AT",
         "items": [
           "Schweiz: CHF, MwSt 8,1%, QR-Einzahlungsschein, 5-Rappen-Rundung",
-          "Deutschland: EUR, MwSt 19%, DATEV-Export, Stornorechnung",
+          "Deutschland: EUR, MwSt 19%, DATEV-Export, Stornorechnung, ZUGFeRD/Factur-X E-Rechnung",
           "Österreich: EUR, USt 20%, eigene Preismatrix",
           "Reverse Charge bei EU-Kunden mit USt-IdNr"
         ]
@@ -248,6 +249,7 @@
       { "feature": "Multi-Device via Ihrer NAS", "pdrKalk": true, "competitor": false, "competitorNote": "Nur via Cloud" },
       { "feature": "QR-Foto-Upload vom Smartphone", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" },
       { "feature": "QR-Rechnung", "pdrKalk": true, "competitor": false, "competitorNote": "Selten" },
+      { "feature": "ZUGFeRD/Factur-X E-Rechnung", "pdrKalk": true, "competitor": false, "competitorNote": "Aufpreis" },
       { "feature": "4 Sprachen", "pdrKalk": true, "competitor": false, "competitorNote": "Nur DE" },
       { "feature": "Ihre Daten gehören Ihnen", "pdrKalk": true, "competitor": false, "competitorNote": "Auf fremden Servern" }
     ]
@@ -320,14 +322,6 @@
     "subtitle": "Starten Sie noch heute mit PDR Kalk und sparen Sie Stunden pro Woche.",
     "cta": "Jetzt testen",
     "note": "Keine Installation nötig. Läuft im Browser."
-  },
-  "downloads": {
-    "title": "Detaillierte Funktionsübersicht",
-    "subtitle": "Laden Sie unsere vollständige Funktionsübersicht als PDF herunter — ideal für den Vergleich mit anderen Anbietern.",
-    "file": "/PDR_Kalk_Funktionsuebersicht.pdf",
-    "cta": "PDF herunterladen",
-    "pages": "8 Seiten",
-    "version": "Version 4.17"
   },
   "contact": {
     "title": "Testlizenz anfordern",
