@@ -5,30 +5,85 @@ import {useState, useRef} from 'react';
 
 const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID || 'mlgwvvbo';
 
-type FormErrors = {name?: string; email?: string; message?: string};
+type FormState = {
+  firstName: string;
+  lastName: string;
+  company: string;
+  owner: string;
+  street: string;
+  postalCode: string;
+  city: string;
+  country: string;
+  state: string;
+  phone: string;
+  email: string;
+  website: string;
+  message: string;
+};
+
+type FormErrors = Partial<Record<keyof FormState, string>>;
+
+const COUNTRY_OPTIONS = ['ch', 'de', 'at', 'au', 'other'] as const;
+
+const AU_STATES = [
+  {code: 'NSW', name: 'New South Wales'},
+  {code: 'VIC', name: 'Victoria'},
+  {code: 'QLD', name: 'Queensland'},
+  {code: 'WA',  name: 'Western Australia'},
+  {code: 'SA',  name: 'South Australia'},
+  {code: 'TAS', name: 'Tasmania'},
+  {code: 'ACT', name: 'Australian Capital Territory'},
+  {code: 'NT',  name: 'Northern Territory'},
+];
+
+const initialForm: FormState = {
+  firstName: '', lastName: '', company: '', owner: '',
+  street: '', postalCode: '', city: '',
+  country: '', state: '',
+  phone: '', email: '', website: '', message: '',
+};
 
 export default function Contact() {
   const t = useTranslations('contact');
   const [submitted, setSubmitted]   = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [sendError, setSendError]   = useState(false);
-  const [form, setForm]             = useState({name: '', email: '', message: ''});
+  const [form, setForm]             = useState<FormState>(initialForm);
   const [errors, setErrors]         = useState<FormErrors>({});
 
-  const nameRef = useRef<HTMLInputElement>(null);
-  const emailRef = useRef<HTMLInputElement>(null);
-  const messageRef = useRef<HTMLTextAreaElement>(null);
+  const refs = {
+    firstName:  useRef<HTMLInputElement>(null),
+    lastName:   useRef<HTMLInputElement>(null),
+    company:    useRef<HTMLInputElement>(null),
+    owner:      useRef<HTMLInputElement>(null),
+    street:     useRef<HTMLInputElement>(null),
+    postalCode: useRef<HTMLInputElement>(null),
+    city:       useRef<HTMLInputElement>(null),
+    country:    useRef<HTMLSelectElement>(null),
+    state:      useRef<HTMLSelectElement>(null),
+    phone:      useRef<HTMLInputElement>(null),
+    email:      useRef<HTMLInputElement>(null),
+  };
+
+  const update = (field: keyof FormState, value: string) => {
+    setForm(prev => ({...prev, [field]: value}));
+    if (errors[field]) setErrors(prev => ({...prev, [field]: undefined}));
+  };
 
   const validate = (): FormErrors => {
     const errs: FormErrors = {};
-    if (!form.name.trim() || form.name.trim().length < 2) {
-      errs.name = t('errorNameRequired');
-    }
+    if (!form.firstName.trim())  errs.firstName  = t('errorFirstNameRequired');
+    if (!form.lastName.trim())   errs.lastName   = t('errorLastNameRequired');
+    if (!form.company.trim())    errs.company    = t('errorCompanyRequired');
+    if (!form.owner.trim())      errs.owner      = t('errorOwnerRequired');
+    if (!form.street.trim())     errs.street     = t('errorStreetRequired');
+    if (!form.postalCode.trim()) errs.postalCode = t('errorPostalCodeRequired');
+    if (!form.city.trim())       errs.city       = t('errorCityRequired');
+    if (!form.country)           errs.country    = t('errorCountryRequired');
+    if (form.country === 'au' && !form.state) errs.state = t('errorStateRequired');
+    if (!form.phone.trim())      errs.phone      = t('errorPhoneRequired');
     if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
       errs.email = t('errorEmailInvalid');
-    }
-    if (!form.message.trim() || form.message.trim().length < 10) {
-      errs.message = t('errorMessageRequired');
     }
     return errs;
   };
@@ -38,9 +93,11 @@ export default function Contact() {
     const errs = validate();
     if (Object.keys(errs).length > 0) {
       setErrors(errs);
-      if (errs.name) nameRef.current?.focus();
-      else if (errs.email) emailRef.current?.focus();
-      else if (errs.message) messageRef.current?.focus();
+      const firstErrField = (Object.keys(errs) as Array<keyof FormState>).find(k => errs[k]);
+      if (firstErrField && firstErrField in refs) {
+        const ref = refs[firstErrField as keyof typeof refs];
+        ref?.current?.focus();
+      }
       return;
     }
 
@@ -48,15 +105,33 @@ export default function Contact() {
     setSendError(false);
 
     try {
+      const countryLabel = form.country ? t(`country_${form.country}` as const) : '';
+      const payload = {
+        _subject: `[Trial Request] ${form.firstName} ${form.lastName} — ${form.company}`,
+        firstName: form.firstName,
+        lastName: form.lastName,
+        company: form.company,
+        owner: form.owner,
+        street: form.street,
+        postalCode: form.postalCode,
+        city: form.city,
+        country: countryLabel,
+        state: form.country === 'au' ? form.state : '',
+        phone: form.phone,
+        email: form.email,
+        website: form.website,
+        message: form.message,
+      };
+
       const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
-        body: JSON.stringify({name: form.name, email: form.email, message: form.message}),
+        body: JSON.stringify(payload),
       });
 
       if (res.ok) {
         setSubmitted(true);
-        setForm({name: '', email: '', message: ''});
+        setForm(initialForm);
         setErrors({});
       } else {
         setSendError(true);
@@ -90,14 +165,44 @@ export default function Contact() {
     display: 'block',
   };
 
+  const fieldBorder = (field: keyof FormState) =>
+    errors[field] ? 'rgba(252,129,129,0.6)' : 'rgba(255,255,255,0.1)';
+
+  type RefField = keyof typeof refs;
+  const renderInput = (
+    field: RefField,
+    type: string = 'text',
+    autoComplete?: string,
+    inputMode?: 'text' | 'email' | 'tel' | 'url' | 'numeric',
+  ) => (
+    <div>
+      <input
+        type={type}
+        name={field}
+        ref={refs[field] as React.RefObject<HTMLInputElement | null>}
+        aria-label={t(`${field}Label` as const)}
+        autoComplete={autoComplete}
+        inputMode={inputMode}
+        placeholder={t(`${field}Placeholder` as const)}
+        value={form[field]}
+        onChange={e => update(field, e.target.value)}
+        className="contact-input"
+        style={{...inputStyle, borderColor: fieldBorder(field)}}
+        onFocus={e => { if (!errors[field]) e.target.style.borderColor = 'var(--red)'; }}
+        onBlur={e => { if (!errors[field]) e.target.style.borderColor = 'rgba(255,255,255,0.1)'; }}
+      />
+      {errors[field] && <span style={errorStyle}>{errors[field]}</span>}
+    </div>
+  );
+
   return (
     <section id="contact" className="section-pad" style={{
       background: 'var(--ink-mid)',
       padding: '6rem 1.5rem',
     }}>
-      <div style={{maxWidth: '640px', margin: '0 auto'}}>
+      <div style={{maxWidth: '720px', margin: '0 auto'}}>
         {/* Header */}
-        <div style={{textAlign: 'center', marginBottom: '3rem'}}>
+        <div style={{textAlign: 'center', marginBottom: '2.5rem'}}>
           <h2 style={{
             fontFamily: 'Barlow Condensed, sans-serif',
             fontWeight: 900,
@@ -112,10 +217,60 @@ export default function Contact() {
             fontFamily: 'Barlow, sans-serif',
             fontSize: '1rem',
             color: '#8fa8c8',
+            maxWidth: '520px',
+            margin: '0 auto',
           }}>
             {t('subtitle')}
           </p>
         </div>
+
+        {!submitted && (
+          <div style={{
+            background: 'rgba(37,99,235,0.08)',
+            border: '1px solid rgba(37,99,235,0.3)',
+            borderRadius: '10px',
+            padding: '1.1rem 1.25rem',
+            marginBottom: '2rem',
+            display: 'flex',
+            gap: '0.85rem',
+            alignItems: 'flex-start',
+          }}>
+            <div aria-hidden style={{
+              width: '32px', height: '32px',
+              flexShrink: 0,
+              borderRadius: '50%',
+              background: 'rgba(37,99,235,0.18)',
+              color: '#60a5fa',
+              fontFamily: 'Barlow Condensed, sans-serif',
+              fontWeight: 800,
+              fontSize: '1.1rem',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              marginTop: '2px',
+            }}>i</div>
+            <div>
+              <div style={{
+                fontFamily: 'Barlow Condensed, sans-serif',
+                fontWeight: 800,
+                fontSize: '0.95rem',
+                letterSpacing: '0.02em',
+                color: '#ffffff',
+                marginBottom: '0.3rem',
+                textTransform: 'uppercase',
+              }}>
+                {t('platformNoticeTitle')}
+              </div>
+              <p style={{
+                fontFamily: 'Barlow, sans-serif',
+                fontSize: '0.92rem',
+                lineHeight: 1.55,
+                color: '#cbd5e1',
+                margin: 0,
+              }}>
+                {t('platformNoticeBody')}
+              </p>
+            </div>
+          </div>
+        )}
 
         {submitted ? (
           <div
@@ -144,85 +299,143 @@ export default function Contact() {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="fade-up" noValidate>
-            {/* Name + Email row */}
-            <div
-              className="contact-grid"
-              style={{display: 'grid', gap: '1rem', marginBottom: '1rem'}}
-            >
-              <div>
-                <input
-                  type="text"
-                  name="name"
-                  ref={nameRef}
-                  aria-label={t('nameLabel')}
-                  autoComplete="name"
-                  placeholder={t('namePlaceholder')}
-                  value={form.name}
-                  onChange={e => {
-                    setForm({...form, name: e.target.value});
-                    if (errors.name) setErrors({...errors, name: undefined});
-                  }}
-                  className="contact-input"
-                  style={{
-                    ...inputStyle,
-                    borderColor: errors.name ? 'rgba(252,129,129,0.6)' : 'rgba(255,255,255,0.1)',
-                  }}
-                  onFocus={e => { if (!errors.name) e.target.style.borderColor = 'var(--red)'; }}
-                  onBlur={e => { if (!errors.name) e.target.style.borderColor = 'rgba(255,255,255,0.1)'; }}
-                />
-                {errors.name && <span style={errorStyle}>{errors.name}</span>}
-              </div>
-              <div>
-                <input
-                  type="email"
-                  name="email"
-                  ref={emailRef}
-                  aria-label={t('emailLabel')}
-                  spellCheck={false}
-                  autoComplete="email"
-                  inputMode="email"
-                  placeholder={t('emailPlaceholder')}
-                  value={form.email}
-                  onChange={e => {
-                    setForm({...form, email: e.target.value});
-                    if (errors.email) setErrors({...errors, email: undefined});
-                  }}
-                  className="contact-input"
-                  style={{
-                    ...inputStyle,
-                    borderColor: errors.email ? 'rgba(252,129,129,0.6)' : 'rgba(255,255,255,0.1)',
-                  }}
-                  onFocus={e => { if (!errors.email) e.target.style.borderColor = 'var(--red)'; }}
-                  onBlur={e => { if (!errors.email) e.target.style.borderColor = 'rgba(255,255,255,0.1)'; }}
-                />
-                {errors.email && <span style={errorStyle}>{errors.email}</span>}
-              </div>
+            {/* First / Last name */}
+            <div className="contact-grid" style={{display: 'grid', gap: '1rem', marginBottom: '1rem'}}>
+              {renderInput('firstName', 'text', 'given-name')}
+              {renderInput('lastName',  'text', 'family-name')}
             </div>
 
+            {/* Company / Owner */}
+            <div className="contact-grid" style={{display: 'grid', gap: '1rem', marginBottom: '1rem'}}>
+              {renderInput('company', 'text', 'organization')}
+              {renderInput('owner',   'text', 'off')}
+            </div>
+
+            {/* Street */}
+            <div style={{marginBottom: '1rem'}}>
+              {renderInput('street', 'text', 'street-address')}
+            </div>
+
+            {/* Postal code / City */}
+            <div className="contact-grid" style={{display: 'grid', gap: '1rem', marginBottom: '1rem', gridTemplateColumns: '1fr 2fr'}}>
+              {renderInput('postalCode', 'text', 'postal-code')}
+              {renderInput('city',       'text', 'address-level2')}
+            </div>
+
+            {/* Phone / Email */}
+            <div className="contact-grid" style={{display: 'grid', gap: '1rem', marginBottom: '1rem'}}>
+              {renderInput('phone', 'tel',   'tel',   'tel')}
+              {renderInput('email', 'email', 'email', 'email')}
+            </div>
+
+            {/* Country */}
+            <div style={{marginBottom: '1rem'}}>
+              <select
+                name="country"
+                ref={refs.country}
+                aria-label={t('countryLabel')}
+                value={form.country}
+                onChange={e => update('country', e.target.value)}
+                className="contact-input"
+                style={{
+                  ...inputStyle,
+                  borderColor: fieldBorder('country'),
+                  appearance: 'none',
+                  backgroundImage: 'linear-gradient(45deg, transparent 50%, rgba(255,255,255,0.5) 50%), linear-gradient(135deg, rgba(255,255,255,0.5) 50%, transparent 50%)',
+                  backgroundPosition: 'calc(100% - 18px) 50%, calc(100% - 13px) 50%',
+                  backgroundSize: '5px 5px, 5px 5px',
+                  backgroundRepeat: 'no-repeat',
+                  paddingRight: '2.5rem',
+                }}
+                onFocus={e => { if (!errors.country) e.target.style.borderColor = 'var(--red)'; }}
+                onBlur={e => { if (!errors.country) e.target.style.borderColor = 'rgba(255,255,255,0.1)'; }}
+              >
+                <option value="" disabled style={{background: '#1a2332'}}>
+                  {t('countryPlaceholder')}
+                </option>
+                {COUNTRY_OPTIONS.map(c => (
+                  <option key={c} value={c} style={{background: '#1a2332'}}>
+                    {t(`country_${c}` as const)}
+                  </option>
+                ))}
+              </select>
+              {errors.country && <span style={errorStyle}>{errors.country}</span>}
+            </div>
+
+            {/* State (Australia only) */}
+            {form.country === 'au' && (
+              <div style={{marginBottom: '1rem'}}>
+                <select
+                  name="state"
+                  ref={refs.state}
+                  aria-label={t('stateLabel')}
+                  value={form.state}
+                  onChange={e => update('state', e.target.value)}
+                  className="contact-input"
+                  style={{
+                    ...inputStyle,
+                    borderColor: fieldBorder('state'),
+                    appearance: 'none',
+                    backgroundImage: 'linear-gradient(45deg, transparent 50%, rgba(255,255,255,0.5) 50%), linear-gradient(135deg, rgba(255,255,255,0.5) 50%, transparent 50%)',
+                    backgroundPosition: 'calc(100% - 18px) 50%, calc(100% - 13px) 50%',
+                    backgroundSize: '5px 5px, 5px 5px',
+                    backgroundRepeat: 'no-repeat',
+                    paddingRight: '2.5rem',
+                  }}
+                  onFocus={e => { if (!errors.state) e.target.style.borderColor = 'var(--red)'; }}
+                  onBlur={e => { if (!errors.state) e.target.style.borderColor = 'rgba(255,255,255,0.1)'; }}
+                >
+                  <option value="" disabled style={{background: '#1a2332'}}>
+                    {t('statePlaceholder')}
+                  </option>
+                  {AU_STATES.map(s => (
+                    <option key={s.code} value={s.code} style={{background: '#1a2332'}}>
+                      {s.code} — {s.name}
+                    </option>
+                  ))}
+                </select>
+                {errors.state && <span style={errorStyle}>{errors.state}</span>}
+              </div>
+            )}
+
+            {/* Website (optional) */}
+            <div style={{marginBottom: '1rem'}}>
+              <input
+                type="text"
+                name="website"
+                aria-label={t('websiteLabel')}
+                autoComplete="url"
+                inputMode="url"
+                placeholder={t('websitePlaceholder')}
+                value={form.website}
+                onChange={e => update('website', e.target.value)}
+                className="contact-input"
+                style={{...inputStyle, borderColor: 'rgba(255,255,255,0.1)'}}
+                onFocus={e => e.target.style.borderColor = 'var(--red)'}
+                onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
+              />
+            </div>
+
+            {/* Message (optional) */}
             <div style={{marginBottom: '1rem'}}>
               <textarea
-                rows={5}
+                rows={4}
                 name="message"
-                ref={messageRef}
                 aria-label={t('messageLabel')}
                 autoComplete="off"
                 placeholder={t('messagePlaceholder')}
                 value={form.message}
-                onChange={e => {
-                  setForm({...form, message: e.target.value});
-                  if (errors.message) setErrors({...errors, message: undefined});
-                }}
+                onChange={e => update('message', e.target.value)}
                 className="contact-input"
                 style={{
                   ...inputStyle,
                   resize: 'vertical',
-                  minHeight: '120px',
-                  borderColor: errors.message ? 'rgba(252,129,129,0.6)' : 'rgba(255,255,255,0.1)',
+                  minHeight: '100px',
+                  borderColor: 'rgba(255,255,255,0.1)',
                 }}
-                onFocus={e => { if (!errors.message) e.target.style.borderColor = 'var(--red)'; }}
-                onBlur={e => { if (!errors.message) e.target.style.borderColor = 'rgba(255,255,255,0.1)'; }}
+                onFocus={e => e.target.style.borderColor = 'var(--red)'}
+                onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
               />
-              {errors.message && <span style={errorStyle}>{errors.message}</span>}
             </div>
 
             {sendError && (

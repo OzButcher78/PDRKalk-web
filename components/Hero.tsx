@@ -69,37 +69,8 @@ export default function Hero() {
       >
         {/* Left — Text */}
         <div>
-          {/* New: tablet availability badge */}
-          <div className="fade-up-1 hero-new-badge" style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '0.55rem',
-            padding: '0.5rem 1rem',
-            marginBottom: '1.25rem',
-            borderRadius: '999px',
-            background: 'rgba(232,0,29,0.12)',
-            border: '1px solid rgba(232,0,29,0.45)',
-            boxShadow: '0 0 24px rgba(232,0,29,0.18)',
-            fontFamily: 'Barlow Condensed, sans-serif',
-            fontWeight: 700,
-            fontSize: '0.88rem',
-            letterSpacing: '0.04em',
-            color: 'rgba(255,255,255,0.95)',
-            textTransform: 'uppercase',
-          }}>
-            <span style={{
-              width: '8px',
-              height: '8px',
-              borderRadius: '50%',
-              background: 'var(--red)',
-              boxShadow: '0 0 8px var(--red)',
-              flexShrink: 0,
-            }}/>
-            {t('newBadge')}
-          </div>
-
           {/* Headline — pain point focus */}
-          <h1 className="fade-up-2" style={{
+          <h1 className="fade-up-1" style={{
             fontFamily: 'Barlow Condensed, sans-serif',
             fontWeight: 900,
             fontSize: 'clamp(1.9rem, 4vw, 3.4rem)',
@@ -110,7 +81,7 @@ export default function Hero() {
             textWrap: 'balance',
           }}>
             {t('title')}
-            <span className="fade-up-3" style={{
+            <span className="fade-up-2" style={{
               display: 'block',
               color: 'var(--red)',
               marginTop: '0.5rem',
@@ -120,7 +91,7 @@ export default function Hero() {
           </h1>
 
           {/* Subtitle */}
-          <p className="fade-up-4" style={{
+          <p className="fade-up-3" style={{
             fontFamily: 'Barlow, sans-serif',
             fontWeight: 400,
             fontSize: 'clamp(0.95rem, 1.5vw, 1.15rem)',
@@ -133,7 +104,7 @@ export default function Hero() {
           </p>
 
           {/* CTAs — two real buttons */}
-          <div className="fade-up-5" style={{display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
+          <div className="fade-up-4" style={{display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
             <a
               href={BUY_URL}
               className="btn-red"
@@ -178,7 +149,7 @@ export default function Hero() {
           </div>
 
           {/* Trust bar */}
-          <div className="fade-up-6" style={{
+          <div className="fade-up-5" style={{
             display: 'flex',
             gap: '1.25rem',
             marginTop: '2.5rem',
@@ -267,6 +238,39 @@ export default function Hero() {
               style={{width: '100%', height: 'auto', display: 'block'}}
               priority
             />
+          </div>
+
+          {/* Tablet availability announcement */}
+          <div className="fade-up-4" style={{
+            position: 'relative',
+            marginTop: '1.75rem',
+            textAlign: 'center',
+            width: '100%',
+            maxWidth: '580px',
+          }}>
+            <div style={{
+              fontFamily: 'Barlow Condensed, sans-serif',
+              fontWeight: 700,
+              fontSize: '0.78rem',
+              letterSpacing: '0.22em',
+              textTransform: 'uppercase',
+              color: 'rgba(255,255,255,0.55)',
+              marginBottom: '0.4rem',
+            }}>
+              {t('tabletsLabel')}
+            </div>
+            <div style={{
+              fontFamily: 'Barlow Condensed, sans-serif',
+              fontWeight: 800,
+              fontSize: 'clamp(1.25rem, 2.4vw, 1.75rem)',
+              letterSpacing: '0.02em',
+              lineHeight: 1.1,
+              color: '#ffffff',
+              textTransform: 'uppercase',
+            }}>
+              <span style={{color: 'var(--red)'}}>Microsoft &amp; Android</span>{' '}
+              <span style={{color: 'rgba(255,255,255,0.92)', textTransform: 'none'}}>{t('tabletsNoun')}</span>
+            </div>
           </div>
         </div>
       </div>
