@@ -240,37 +240,32 @@ export default function Hero() {
             />
           </div>
 
-          {/* Tablet availability announcement */}
+          {/* Platform availability badges */}
           <div className="fade-up-4" style={{
             position: 'relative',
             marginTop: '1.75rem',
-            textAlign: 'center',
+            display: 'flex',
+            gap: '1rem',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexWrap: 'wrap',
             width: '100%',
             maxWidth: '580px',
           }}>
-            <div style={{
-              fontFamily: 'Barlow Condensed, sans-serif',
-              fontWeight: 700,
-              fontSize: '0.78rem',
-              letterSpacing: '0.22em',
-              textTransform: 'uppercase',
-              color: 'rgba(255,255,255,0.55)',
-              marginBottom: '0.4rem',
-            }}>
-              {t('tabletsLabel')}
-            </div>
-            <div style={{
-              fontFamily: 'Barlow Condensed, sans-serif',
-              fontWeight: 800,
-              fontSize: 'clamp(1.25rem, 2.4vw, 1.75rem)',
-              letterSpacing: '0.02em',
-              lineHeight: 1.1,
-              color: '#ffffff',
-              textTransform: 'uppercase',
-            }}>
-              <span style={{color: 'var(--red)'}}>Microsoft &amp; Android</span>{' '}
-              <span style={{color: 'rgba(255,255,255,0.92)', textTransform: 'none'}}>{t('tabletsNoun')}</span>
-            </div>
+            <Image
+              src="/a-microsoft.png"
+              alt="Get it on Microsoft"
+              width={1033}
+              height={334}
+              style={{height: '56px', width: 'auto', display: 'block'}}
+            />
+            <Image
+              src="/android.png"
+              alt="Get it on Android"
+              width={475}
+              height={162}
+              style={{height: '56px', width: 'auto', display: 'block'}}
+            />
           </div>
         </div>
       </div>
