@@ -18,12 +18,14 @@ type FormState = {
   phone: string;
   email: string;
   website: string;
+  platform: string;
   message: string;
 };
 
 type FormErrors = Partial<Record<keyof FormState, string>>;
 
 const COUNTRY_OPTIONS = ['ch', 'de', 'at', 'au', 'other'] as const;
+const PLATFORM_OPTIONS = ['windows', 'android', 'both'] as const;
 
 const AU_STATES = [
   {code: 'NSW', name: 'New South Wales'},
@@ -40,7 +42,7 @@ const initialForm: FormState = {
   firstName: '', lastName: '', company: '', owner: '',
   street: '', postalCode: '', city: '',
   country: '', state: '',
-  phone: '', email: '', website: '', message: '',
+  phone: '', email: '', website: '', platform: '', message: '',
 };
 
 export default function Contact() {
@@ -85,6 +87,7 @@ export default function Contact() {
     if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
       errs.email = t('errorEmailInvalid');
     }
+    if (!form.platform)          errs.platform   = t('errorPlatformRequired');
     return errs;
   };
 
@@ -106,6 +109,7 @@ export default function Contact() {
 
     try {
       const countryLabel = form.country ? t(`country_${form.country}` as const) : '';
+      const platformLabel = form.platform ? t(`platform_${form.platform}` as const) : '';
       const payload = {
         _subject: `[Trial Request] ${form.firstName} ${form.lastName} — ${form.company}`,
         firstName: form.firstName,
@@ -120,6 +124,7 @@ export default function Contact() {
         phone: form.phone,
         email: form.email,
         website: form.website,
+        platform: platformLabel,
         message: form.message,
       };
 
@@ -397,6 +402,58 @@ export default function Contact() {
                 {errors.state && <span style={errorStyle}>{errors.state}</span>}
               </div>
             )}
+
+            {/* Platform (Windows / Android / Both) */}
+            <fieldset
+              style={{
+                border: `1px solid ${errors.platform ? 'rgba(252,129,129,0.6)' : 'rgba(255,255,255,0.1)'}`,
+                borderRadius: '6px',
+                padding: '0.85rem 1rem 1rem',
+                marginBottom: '1rem',
+                background: 'rgba(255,255,255,0.05)',
+              }}
+            >
+              <legend
+                style={{
+                  fontFamily: 'Barlow Condensed, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '0.85rem',
+                  letterSpacing: '0.06em',
+                  textTransform: 'uppercase',
+                  color: '#cbd5e1',
+                  padding: '0 0.4rem',
+                }}
+              >
+                {t('platformLegend')} *
+              </legend>
+              <div style={{display: 'flex', flexWrap: 'wrap', gap: '1.25rem', marginTop: '0.4rem'}}>
+                {PLATFORM_OPTIONS.map(p => (
+                  <label
+                    key={p}
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.5rem',
+                      fontFamily: 'Barlow, sans-serif',
+                      fontSize: '0.95rem',
+                      color: '#fff',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    <input
+                      type="radio"
+                      name="platform"
+                      value={p}
+                      checked={form.platform === p}
+                      onChange={() => update('platform', p)}
+                      style={{accentColor: 'var(--red)', width: '16px', height: '16px', cursor: 'pointer'}}
+                    />
+                    {t(`platform_${p}` as const)}
+                  </label>
+                ))}
+              </div>
+              {errors.platform && <span style={{...errorStyle, marginTop: '0.5rem'}}>{errors.platform}</span>}
+            </fieldset>
 
             {/* Website (optional) */}
             <div style={{marginBottom: '1rem'}}>
