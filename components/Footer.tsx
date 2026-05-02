@@ -3,9 +3,16 @@
 import {useTranslations} from 'next-intl';
 import Image from 'next/image';
 
+const REGION_FLAGS = [
+  {code: 'ch', col: 6, row: 0},
+  {code: 'de', col: 1, row: 0},
+  {code: 'at', col: 2, row: 3},
+] as const;
+
 export default function Footer() {
   const t = useTranslations('footer');
   const nav = useTranslations('nav');
+  const country = useTranslations('contact');
 
   const links = [
     {key: 'features' as const, href: '#features'},
@@ -93,11 +100,40 @@ export default function Footer() {
             fontFamily: 'Barlow, sans-serif',
             fontSize: '0.75rem',
             color: 'var(--steel)',
-            margin: '0 0 0.25rem',
+            margin: '0 0 0.5rem',
             fontStyle: 'italic',
           }}>
             {t('techNote')}
           </p>
+          <div
+            aria-label={t('regions')}
+            style={{
+              display: 'flex',
+              gap: '0.4rem',
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+              marginBottom: '0.35rem',
+            }}
+          >
+            {REGION_FLAGS.map(({code, col, row}) => (
+              <span
+                key={code}
+                role="img"
+                aria-label={country(`country_${code}` as 'country_ch' | 'country_de' | 'country_at')}
+                title={country(`country_${code}` as 'country_ch' | 'country_de' | 'country_at')}
+                style={{
+                  width: '30px',
+                  height: '20px',
+                  backgroundImage: 'url(/eu-country-flags.jpg)',
+                  backgroundSize: '700% 600%',
+                  backgroundPosition: `${(col / 6) * 100}% ${(row / 5) * 100}%`,
+                  borderRadius: '2px',
+                  boxShadow: '0 0 0 1px rgba(255,255,255,0.12)',
+                  display: 'inline-block',
+                }}
+              />
+            ))}
+          </div>
           <p style={{
             fontFamily: 'Barlow, sans-serif',
             fontSize: '0.72rem',
