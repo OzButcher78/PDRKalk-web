@@ -404,7 +404,9 @@ export default function Contact() {
             )}
 
             {/* Platform (Windows / Android / Both) */}
-            <fieldset
+            <div
+              role="radiogroup"
+              aria-label={t('platformLegend')}
               style={{
                 border: `1px solid ${errors.platform ? 'rgba(252,129,129,0.6)' : 'rgba(255,255,255,0.1)'}`,
                 borderRadius: '6px',
@@ -413,7 +415,7 @@ export default function Contact() {
                 background: 'rgba(255,255,255,0.05)',
               }}
             >
-              <legend
+              <div
                 style={{
                   fontFamily: 'Barlow Condensed, sans-serif',
                   fontWeight: 700,
@@ -421,12 +423,12 @@ export default function Contact() {
                   letterSpacing: '0.06em',
                   textTransform: 'uppercase',
                   color: '#cbd5e1',
-                  padding: '0 0.4rem',
+                  marginBottom: '0.65rem',
                 }}
               >
                 {t('platformLegend')} *
-              </legend>
-              <div style={{display: 'flex', flexWrap: 'wrap', gap: '1.25rem', marginTop: '0.4rem'}}>
+              </div>
+              <div style={{display: 'flex', flexWrap: 'wrap', gap: '1.25rem'}}>
                 {PLATFORM_OPTIONS.map(p => (
                   <label
                     key={p}
@@ -453,7 +455,7 @@ export default function Contact() {
                 ))}
               </div>
               {errors.platform && <span style={{...errorStyle, marginTop: '0.5rem'}}>{errors.platform}</span>}
-            </fieldset>
+            </div>
 
             {/* Website (optional) */}
             <div style={{marginBottom: '1rem'}}>
