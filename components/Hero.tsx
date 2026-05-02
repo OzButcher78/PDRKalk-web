@@ -97,7 +97,7 @@ export default function Hero() {
             fontFamily: 'Barlow Condensed, sans-serif',
             fontWeight: 900,
             fontSize: 'clamp(1.9rem, 4vw, 3.4rem)',
-            lineHeight: 0.95,
+            lineHeight: 1.05,
             color: '#ffffff',
             margin: '0 0 2rem',
             letterSpacing: '-0.01em',
@@ -174,9 +174,9 @@ export default function Hero() {
           {/* Trust bar */}
           <div className="fade-up-5" style={{
             display: 'flex',
-            gap: '1.25rem',
+            flexDirection: 'column',
+            gap: '0.45rem',
             marginTop: '2.5rem',
-            flexWrap: 'wrap',
           }}>
             {trustBar.slice(0, 2).map((item, i) => (
               <span key={`pre-${i}`} style={TRUST_ITEM_STYLE}>
