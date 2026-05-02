@@ -6,8 +6,31 @@ import Image from 'next/image';
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://web.pdrkalk.com';
 const BUY_URL = process.env.NEXT_PUBLIC_BUY_URL || '#pricing';
 
+const REGION_FLAGS = ['ch', 'de', 'at'] as const;
+
+const TRUST_ITEM_STYLE: React.CSSProperties = {
+  fontFamily: 'Barlow Condensed, sans-serif',
+  fontWeight: 700,
+  fontSize: '0.82rem',
+  letterSpacing: '0.06em',
+  textTransform: 'uppercase',
+  color: 'rgba(255,255,255,0.85)',
+  display: 'flex',
+  alignItems: 'center',
+  gap: '0.4rem',
+};
+
+const TRUST_DOT_STYLE: React.CSSProperties = {
+  width: '6px',
+  height: '6px',
+  borderRadius: '50%',
+  background: 'var(--green)',
+  flexShrink: 0,
+};
+
 export default function Hero() {
   const t = useTranslations('hero');
+  const country = useTranslations('contact');
   const trustBar = t.raw('trustBar') as string[];
 
   return (
@@ -155,25 +178,52 @@ export default function Hero() {
             marginTop: '2.5rem',
             flexWrap: 'wrap',
           }}>
-            {trustBar.map((item, i) => (
-              <span key={i} style={{
-                fontFamily: 'Barlow Condensed, sans-serif',
-                fontWeight: 700,
-                fontSize: '0.82rem',
-                letterSpacing: '0.06em',
-                textTransform: 'uppercase',
-                color: 'rgba(255,255,255,0.85)',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.4rem',
+            {trustBar.slice(0, 2).map((item, i) => (
+              <span key={`pre-${i}`} style={TRUST_ITEM_STYLE}>
+                <span className="trust-dot" style={TRUST_DOT_STYLE}/>
+                {item}
+              </span>
+            ))}
+
+            <span style={TRUST_ITEM_STYLE}>
+              <span className="trust-dot" style={TRUST_DOT_STYLE}/>
+              {t('regionsLabel')}
+              <span style={{display: 'inline-flex', gap: '0.3rem', alignItems: 'center'}}>
+                {REGION_FLAGS.map((code) => {
+                  const label = country(`country_${code}` as 'country_ch' | 'country_de' | 'country_at');
+                  return (
+                    <Image
+                      key={code}
+                      src={`/${code}.jpg`}
+                      alt={label}
+                      title={label}
+                      width={209}
+                      height={125}
+                      style={{
+                        height: '14px',
+                        width: 'auto',
+                        borderRadius: '2px',
+                        boxShadow: '0 0 0 1px rgba(255,255,255,0.18)',
+                        display: 'inline-block',
+                      }}
+                    />
+                  );
+                })}
+              </span>
+              <span style={{
+                textTransform: 'none',
+                letterSpacing: 0,
+                fontWeight: 400,
+                color: 'rgba(255,255,255,0.55)',
+                fontStyle: 'italic',
               }}>
-                <span className="trust-dot" style={{
-                  width: '6px',
-                  height: '6px',
-                  borderRadius: '50%',
-                  background: 'var(--green)',
-                  flexShrink: 0,
-                }}/>
+                {t('regionsMore')}
+              </span>
+            </span>
+
+            {trustBar.slice(2).map((item, i) => (
+              <span key={`post-${i}`} style={TRUST_ITEM_STYLE}>
+                <span className="trust-dot" style={TRUST_DOT_STYLE}/>
                 {item}
               </span>
             ))}

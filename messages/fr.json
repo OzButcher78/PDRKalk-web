@@ -18,10 +18,11 @@
     "trustBar": [
       "100% hors ligne",
       "Pas de frais d'abonnement",
-      "Swiss Made",
       "Conforme RGPD",
-      "Facture électronique ZUGFeRD/Factur-X"
+      "Facture électronique ZUGFeRD/Factur-X/CH QR"
     ],
+    "regionsLabel": "Au service de :",
+    "regionsMore": "autres sur demande",
     "demoComingSoon": "Démo bientôt disponible"
   },
   "timeSavings": {

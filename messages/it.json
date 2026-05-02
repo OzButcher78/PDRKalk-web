@@ -18,10 +18,11 @@
     "trustBar": [
       "100% offline",
       "Nessun costo di abbonamento",
-      "Swiss Made",
       "Conforme GDPR",
-      "Fattura elettronica ZUGFeRD/Factur-X"
+      "Fattura elettronica ZUGFeRD/Factur-X/CH QR"
     ],
+    "regionsLabel": "Al servizio di:",
+    "regionsMore": "altri su richiesta",
     "demoComingSoon": "Demo in arrivo"
   },
   "timeSavings": {
