@@ -178,8 +178,8 @@ export default function Hero() {
             gap: '0.45rem',
             marginTop: '2.5rem',
           }}>
-            {trustBar.slice(0, 2).map((item, i) => (
-              <span key={`pre-${i}`} style={TRUST_ITEM_STYLE}>
+            {trustBar.map((item, i) => (
+              <span key={i} style={TRUST_ITEM_STYLE}>
                 <span className="trust-dot" style={TRUST_DOT_STYLE}/>
                 {item}
               </span>
@@ -220,13 +220,6 @@ export default function Hero() {
                 {t('regionsMore')}
               </span>
             </span>
-
-            {trustBar.slice(2).map((item, i) => (
-              <span key={`post-${i}`} style={TRUST_ITEM_STYLE}>
-                <span className="trust-dot" style={TRUST_DOT_STYLE}/>
-                {item}
-              </span>
-            ))}
           </div>
         </div>
 
