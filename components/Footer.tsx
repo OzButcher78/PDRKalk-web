@@ -3,11 +3,7 @@
 import {useTranslations} from 'next-intl';
 import Image from 'next/image';
 
-const REGION_FLAGS = [
-  {code: 'ch', col: 6, row: 0},
-  {code: 'de', col: 1, row: 0},
-  {code: 'at', col: 2, row: 3},
-] as const;
+const REGION_FLAGS = ['ch', 'de', 'at'] as const;
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -115,24 +111,26 @@ export default function Footer() {
               marginBottom: '0.35rem',
             }}
           >
-            {REGION_FLAGS.map(({code, col, row}) => (
-              <span
-                key={code}
-                role="img"
-                aria-label={country(`country_${code}` as 'country_ch' | 'country_de' | 'country_at')}
-                title={country(`country_${code}` as 'country_ch' | 'country_de' | 'country_at')}
-                style={{
-                  width: '30px',
-                  height: '20px',
-                  backgroundImage: 'url(/eu-country-flags.jpg)',
-                  backgroundSize: '700% 600%',
-                  backgroundPosition: `${(col / 6) * 100}% ${(row / 5) * 100}%`,
-                  borderRadius: '2px',
-                  boxShadow: '0 0 0 1px rgba(255,255,255,0.12)',
-                  display: 'inline-block',
-                }}
-              />
-            ))}
+            {REGION_FLAGS.map((code) => {
+              const label = country(`country_${code}` as 'country_ch' | 'country_de' | 'country_at');
+              return (
+                <Image
+                  key={code}
+                  src={`/${code}.jpg`}
+                  alt={label}
+                  title={label}
+                  width={209}
+                  height={125}
+                  style={{
+                    height: '20px',
+                    width: 'auto',
+                    borderRadius: '2px',
+                    boxShadow: '0 0 0 1px rgba(255,255,255,0.12)',
+                    display: 'block',
+                  }}
+                />
+              );
+            })}
           </div>
           <p style={{
             fontFamily: 'Barlow, sans-serif',
