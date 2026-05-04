@@ -1,5 +1,6 @@
 'use client';
 
+import type {CSSProperties} from 'react';
 import {useTranslations} from 'next-intl';
 
 type FeatureCard = { heading: string; desc: string };
@@ -40,12 +41,12 @@ const featureIcons = [
 ];
 
 const featureAccents = [
-  'var(--red)',
-  'var(--blue)',
-  'var(--orange)',
-  'var(--green)',
-  'var(--blue)',
-  'var(--steel)',
+  'var(--red)',   /* Hagel- & Parkschadenkalkulation */
+  'var(--red)',   /* Dokumente & manuelle Rechnungen */
+  'var(--red)',   /* Versicherungs-Direktworkflow */
+  'var(--blue)',  /* Subunternehmer-Workflow */
+  'var(--blue)',  /* Analysen-Dashboard */
+  'var(--blue)',  /* Multi-Device & lokale Daten */
 ];
 
 export default function CoreFeatures() {
@@ -78,51 +79,37 @@ export default function CoreFeatures() {
           {cards.map((card, i) => (
             <div
               key={i}
-              className={`feature-card fade-up-${Math.min(i + 1, 6)}`}
+              className={`feature-card feature-card-mesh fade-up-${Math.min(i + 1, 6)}`}
               style={{
-                background: 'linear-gradient(135deg, var(--red), var(--blue))',
-                borderRadius: '9px',
-                padding: '1px',
+                ['--accent' as string]: featureAccents[i],
                 cursor: 'default',
-              }}
+              } as CSSProperties}
             >
-              <div style={{
-                background: '#fff',
-                borderRadius: '8px',
-                padding: '1.75rem',
-                height: '100%',
-                display: 'flex',
-                flexDirection: 'column',
-                overflow: 'hidden',
-              }}>
-                {/* Icon */}
-                <div style={{color: featureAccents[i], marginBottom: '1rem'}}>
-                  {featureIcons[i]}
-                </div>
-
-                {/* Heading */}
-                <h3 style={{
-                  fontFamily: 'Barlow Condensed, sans-serif',
-                  fontWeight: 800,
-                  fontSize: '1.15rem',
-                  letterSpacing: '0.02em',
-                  color: 'var(--ink)',
-                  margin: '0 0 0.6rem',
-                }}>
-                  {card.heading}
-                </h3>
-
-                {/* Description — 1-2 sentences, no bullets */}
-                <p style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontSize: '0.9rem',
-                  color: '#64748b',
-                  lineHeight: 1.65,
-                  margin: 0,
-                }}>
-                  {card.desc}
-                </p>
+              <div className="feature-icon-tile" style={{marginBottom: '1.5rem'}}>
+                {featureIcons[i]}
               </div>
+
+              <h3 style={{
+                fontFamily: 'Barlow Condensed, sans-serif',
+                fontWeight: 800,
+                fontSize: 'clamp(1.2rem, 1.6vw, 1.4rem)',
+                letterSpacing: '-0.015em',
+                lineHeight: 1.15,
+                color: 'var(--ink)',
+                margin: 0,
+              }}>
+                {card.heading}
+              </h3>
+
+              <p style={{
+                fontFamily: 'Barlow, sans-serif',
+                fontSize: '0.95rem',
+                color: '#475569',
+                lineHeight: 1.7,
+                margin: '0.75rem 0 0',
+              }}>
+                {card.desc}
+              </p>
             </div>
           ))}
         </div>
