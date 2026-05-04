@@ -32,12 +32,14 @@ export default function Comparison() {
         {/* Table */}
         <div style={{
           borderRadius: '10px',
-          overflow: 'hidden',
+          overflowX: 'auto',
           boxShadow: '0 2px 16px rgba(10,15,30,0.08)',
           border: '1px solid #e2e8f0',
+          maxWidth: '100%',
         }}>
           <table style={{
             width: '100%',
+            minWidth: '480px',
             borderCollapse: 'collapse',
             fontFamily: 'Barlow, sans-serif',
             fontSize: '0.92rem',

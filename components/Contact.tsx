@@ -24,7 +24,14 @@ type FormState = {
 
 type FormErrors = Partial<Record<keyof FormState, string>>;
 
-const COUNTRY_OPTIONS = ['ch', 'de', 'at', 'au', 'other'] as const;
+const COUNTRY_OPTIONS = [
+  'ch',
+  // EU 27
+  'at', 'be', 'bg', 'hr', 'cy', 'cz', 'dk', 'ee', 'fi', 'fr',
+  'de', 'gr', 'hu', 'ie', 'it', 'lv', 'lt', 'lu', 'mt', 'nl',
+  'pl', 'pt', 'ro', 'sk', 'si', 'es', 'se',
+  'gb', 'au',
+] as const;
 const PLATFORM_OPTIONS = ['windows', 'android', 'both'] as const;
 
 const AU_STATES = [
@@ -358,11 +365,18 @@ export default function Contact() {
                 <option value="" disabled style={{background: '#1a2332'}}>
                   {t('countryPlaceholder')}
                 </option>
-                {COUNTRY_OPTIONS.map(c => (
-                  <option key={c} value={c} style={{background: '#1a2332'}}>
-                    {t(`country_${c}` as const)}
-                  </option>
-                ))}
+                {(() => {
+                  const labelled = COUNTRY_OPTIONS.map(c => ({code: c, label: t(`country_${c}` as const)}));
+                  const ch = labelled.find(o => o.code === 'ch');
+                  const rest = labelled.filter(o => o.code !== 'ch')
+                    .sort((a, b) => a.label.localeCompare(b.label));
+                  const ordered = ch ? [ch, ...rest] : rest;
+                  return ordered.map(o => (
+                    <option key={o.code} value={o.code} style={{background: '#1a2332'}}>
+                      {o.label}
+                    </option>
+                  ));
+                })()}
               </select>
               {errors.country && <span style={errorStyle}>{errors.country}</span>}
             </div>
