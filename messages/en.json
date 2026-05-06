@@ -281,12 +281,12 @@
       "cta": "Buy Now"
     },
     "monthly": {
-      "badge": "7-Day Trial License",
-      "badgeNote": "Try free for 7 days",
+      "badge": "14-Day Trial License",
+      "badgeNote": "Try free for 14 days",
       "price": "Free",
-      "priceSuffix": "7 days, no limits",
+      "priceSuffix": "14 days, no limits",
       "features": [
-        "All features unlocked for 7 days",
+        "All features unlocked for 14 days",
         "No subscription, no credit card",
         "License code on request via the contact form",
         "Optional upgrade to a full license afterwards"

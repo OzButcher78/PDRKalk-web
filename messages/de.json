@@ -281,12 +281,12 @@
       "cta": "Jetzt kaufen"
     },
     "monthly": {
-      "badge": "7-Tage Testlizenz",
-      "badgeNote": "7 Tage kostenlos testen",
+      "badge": "14-Tage Testlizenz",
+      "badgeNote": "14 Tage kostenlos testen",
       "price": "Gratis",
-      "priceSuffix": "7 Tage uneingeschränkt",
+      "priceSuffix": "14 Tage uneingeschränkt",
       "features": [
-        "Alle Funktionen für 7 Tage freigeschaltet",
+        "Alle Funktionen für 14 Tage freigeschaltet",
         "Kein Abo, keine Kreditkarte",
         "Lizenzcode auf Anfrage per Kontaktformular",
         "Anschliessend optional Upgrade auf Dauerlizenz"

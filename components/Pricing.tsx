@@ -150,12 +150,14 @@ export default function Pricing() {
                   {lifetime.price}
                 </div>
                 <div style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontSize: '0.9rem',
-                  color: 'var(--steel)',
-                  marginTop: '0.35rem',
+                  fontFamily: 'Barlow Condensed, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '1rem',
+                  color: '#34d399',
+                  marginTop: '0.5rem',
                   textTransform: 'uppercase' as const,
-                  letterSpacing: '0.08em',
+                  letterSpacing: '0.12em',
+                  textShadow: '0 0 8px rgba(52,211,153,0.55), 0 0 18px rgba(52,211,153,0.35)',
                 }}>
                   {lifetime.priceSuffix}
                 </div>
