@@ -252,7 +252,12 @@
       { "feature": "QR invoice", "pdrKalk": true, "competitor": false, "competitorNote": "Rare" },
       { "feature": "ZUGFeRD/Factur-X e-invoice", "pdrKalk": true, "competitor": false, "competitorNote": "Extra charge" },
       { "feature": "4 languages", "pdrKalk": true, "competitor": false, "competitorNote": "DE only" },
-      { "feature": "Your data belongs to you", "pdrKalk": true, "competitor": false, "competitorNote": "On third-party servers" }
+      { "feature": "Your data belongs to you", "pdrKalk": true, "competitor": false, "competitorNote": "On third-party servers" },
+      { "feature": "Native on Microsoft & Android", "pdrKalk": true, "competitor": false, "competitorNote": "Cloud only" },
+      { "feature": "Unlimited users per license", "pdrKalk": true, "competitor": false, "competitorNote": "1 user (more at extra cost)" },
+      { "feature": "Tamper-evident audit trail (SHA-256)", "pdrKalk": true, "competitor": false, "competitorNote": "Rare" },
+      { "feature": "DATEV / accounting export", "pdrKalk": true, "competitor": false, "competitorNote": "Extra charge" },
+      { "feature": "Camera capture in-app", "pdrKalk": true, "competitor": false, "competitorNote": "No" }
     ]
   },
   "pricing": {
@@ -262,7 +267,7 @@
       "badge": "RECOMMENDED",
       "badgeNote": "One-Time Payment — No Subscription",
       "price": "€750",
-      "priceSuffix": "one-time",
+      "priceSuffix": "FOR 5 YEARS!",
       "priceMonthly": "approx. €63/mo over 12 installments",
       "features": [
         "No subscription fees",

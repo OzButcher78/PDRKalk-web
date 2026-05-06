@@ -252,7 +252,12 @@
       { "feature": "QR-Rechnung", "pdrKalk": true, "competitor": false, "competitorNote": "Selten" },
       { "feature": "ZUGFeRD/Factur-X E-Rechnung", "pdrKalk": true, "competitor": false, "competitorNote": "Aufpreis" },
       { "feature": "4 Sprachen", "pdrKalk": true, "competitor": false, "competitorNote": "Nur DE" },
-      { "feature": "Ihre Daten gehören Ihnen", "pdrKalk": true, "competitor": false, "competitorNote": "Auf fremden Servern" }
+      { "feature": "Ihre Daten gehören Ihnen", "pdrKalk": true, "competitor": false, "competitorNote": "Auf fremden Servern" },
+      { "feature": "Native auf Microsoft & Android", "pdrKalk": true, "competitor": false, "competitorNote": "Nur Cloud" },
+      { "feature": "Unbegrenzte Nutzer pro Lizenz", "pdrKalk": true, "competitor": false, "competitorNote": "1 Nutzer (mehr gegen Aufpreis)" },
+      { "feature": "Manipulationssicherer Audit-Trail (SHA-256)", "pdrKalk": true, "competitor": false, "competitorNote": "Selten" },
+      { "feature": "DATEV / Buchhaltungsexport", "pdrKalk": true, "competitor": false, "competitorNote": "Aufpreis" },
+      { "feature": "Kamera direkt in der App", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" }
     ]
   },
   "pricing": {
@@ -262,7 +267,7 @@
       "badge": "EMPFOHLEN",
       "badgeNote": "Einmalzahlung — Kein Abo",
       "price": "€750",
-      "priceSuffix": "einmalig",
+      "priceSuffix": "FÜR 5 JAHRE!",
       "priceMonthly": "ca. €63/Monat über 12 Raten",
       "features": [
         "Keine Abogebühren",
