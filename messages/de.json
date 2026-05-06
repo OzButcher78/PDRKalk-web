@@ -302,7 +302,7 @@
         "pdrKalk": "PDR Kalk"
       },
       "rows": [
-        { "feature": "Lizenzmodell",                    "competitor": "Monatliches Abo",  "pdrKalk": "Einmalig / Testlizenz" },
+        { "feature": "Lizenzmodell",                    "competitor": "Monatliches Abo",  "pdrKalk": "Einmalig" },
         { "feature": "Einrichtungsgebühr",              "competitor": "Ja",               "pdrKalk": "Nein" },
         { "feature": "Kosten pro weiterem Nutzer",      "competitor": "Ja",               "pdrKalk": "Nein" },
         { "feature": "Cloud-basiert",                   "competitor": "Ja",               "pdrKalk": "Nein — lokal" },

@@ -302,7 +302,7 @@
         "pdrKalk": "PDR Kalk"
       },
       "rows": [
-        { "feature": "License model",            "competitor": "Monthly subscription", "pdrKalk": "One-time / Trial" },
+        { "feature": "License model",            "competitor": "Monthly subscription", "pdrKalk": "One-time" },
         { "feature": "Setup fee",                "competitor": "Yes",                  "pdrKalk": "No" },
         { "feature": "Additional user fees",     "competitor": "Yes",                  "pdrKalk": "No" },
         { "feature": "Cloud-based",              "competitor": "Yes",                  "pdrKalk": "No — local" },
