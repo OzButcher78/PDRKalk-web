@@ -251,7 +251,7 @@
       { "feature": "Insurance direct workflow", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
       { "feature": "Subcontractor workflow", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
       { "feature": "Analytics dashboard (BI)", "pdrKalk": true, "competitor": false, "competitorNote": "Extra charge" },
-      { "feature": "Multi-device via your NAS", "pdrKalk": true, "competitor": false, "competitorNote": "Cloud only" },
+      { "feature": "Multi-device via your NAS", "pdrKalk": true, "competitor": false, "competitorNote": "Cloud only", "pdrKalkAsterisk": true },
       { "feature": "QR photo upload from phone", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
       { "feature": "QR invoice", "pdrKalk": true, "competitor": false, "competitorNote": "Rare" },
       { "feature": "ZUGFeRD/Factur-X e-invoice", "pdrKalk": true, "competitor": false, "competitorNote": "Extra charge" },
@@ -262,7 +262,8 @@
       { "feature": "Tamper-evident audit trail (SHA-256)", "pdrKalk": true, "competitor": false, "competitorNote": "Rare" },
       { "feature": "DATEV / accounting export", "pdrKalk": true, "competitor": false, "competitorNote": "Extra charge" },
       { "feature": "Camera capture in-app", "pdrKalk": true, "competitor": false, "competitorNote": "No" }
-    ]
+    ],
+    "footnote": "* This feature is only supported on Microsoft Tablets."
   },
   "pricing": {
     "title": "Buy once. Use forever.",
@@ -337,7 +338,7 @@
     "title": "Request a Free Trial",
     "subtitle": "Fill in your details below — we'll send your personal trial code within 24 hours. Free, no commitment.",
     "platformNoticeTitle": "Which devices are supported?",
-    "platformNoticeBody": "PDR Kalk runs on Microsoft and Android tablets as well as on PCs and laptops. Apple devices and smartphones are not supported.",
+    "platformNoticeBody": "PDR Kalk runs on Microsoft and Android tablets as well as on PCs and laptops. All features are available on Microsoft devices; Android tablets offer the full feature set except for multi-device synchronisation via a shared work folder. Apple devices and smartphones are not supported.",
     "firstNamePlaceholder": "First name *",
     "firstNameLabel": "First name",
     "lastNamePlaceholder": "Last name *",

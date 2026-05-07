@@ -2,11 +2,12 @@
 
 import {useTranslations} from 'next-intl';
 
-type CompRow = { feature: string; pdrKalk: boolean; competitor: boolean; competitorNote: string };
+type CompRow = { feature: string; pdrKalk: boolean; competitor: boolean; competitorNote: string; pdrKalkAsterisk?: boolean };
 
 export default function Comparison() {
   const t = useTranslations('comparison');
   const rows = t.raw('rows') as CompRow[];
+  const footnote = t('footnote');
 
   return (
     <section id="comparison" style={{
@@ -108,6 +109,14 @@ export default function Comparison() {
                     fontSize: '1.1rem',
                   }}>
                     ✓
+                    {row.pdrKalkAsterisk && (
+                      <sup style={{
+                        marginLeft: '0.15em',
+                        fontSize: '0.7em',
+                        color: 'var(--red)',
+                        fontWeight: 800,
+                      }}>*</sup>
+                    )}
                   </td>
                   <td style={{
                     textAlign: 'center',
@@ -124,6 +133,20 @@ export default function Comparison() {
             </tbody>
           </table>
         </div>
+
+        {footnote && (
+          <p style={{
+            fontFamily: 'Barlow, sans-serif',
+            fontSize: '0.82rem',
+            color: '#64748b',
+            marginTop: '1rem',
+            marginBottom: 0,
+            fontStyle: 'italic',
+            textAlign: 'left',
+          }}>
+            {footnote}
+          </p>
+        )}
       </div>
     </section>
   );

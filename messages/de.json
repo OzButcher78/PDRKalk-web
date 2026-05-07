@@ -251,7 +251,7 @@
       { "feature": "Versicherungs-Direktworkflow", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" },
       { "feature": "Subunternehmer-Workflow", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" },
       { "feature": "Analysen-Dashboard (BI)", "pdrKalk": true, "competitor": false, "competitorNote": "Aufpreis" },
-      { "feature": "Multi-Device via Ihrer NAS", "pdrKalk": true, "competitor": false, "competitorNote": "Nur via Cloud" },
+      { "feature": "Multi-Device via Ihrer NAS", "pdrKalk": true, "competitor": false, "competitorNote": "Nur via Cloud", "pdrKalkAsterisk": true },
       { "feature": "QR-Foto-Upload vom Smartphone", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" },
       { "feature": "QR-Rechnung", "pdrKalk": true, "competitor": false, "competitorNote": "Selten" },
       { "feature": "ZUGFeRD/Factur-X E-Rechnung", "pdrKalk": true, "competitor": false, "competitorNote": "Aufpreis" },
@@ -262,7 +262,8 @@
       { "feature": "Manipulationssicherer Audit-Trail (SHA-256)", "pdrKalk": true, "competitor": false, "competitorNote": "Selten" },
       { "feature": "DATEV / Buchhaltungsexport", "pdrKalk": true, "competitor": false, "competitorNote": "Aufpreis" },
       { "feature": "Kamera direkt in der App", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" }
-    ]
+    ],
+    "footnote": "* Diese Funktion wird nur auf Microsoft-Tablets unterstützt."
   },
   "pricing": {
     "title": "Einmal kaufen. Für immer nutzen.",
@@ -337,7 +338,7 @@
     "title": "Testlizenz anfordern",
     "subtitle": "Tragen Sie Ihre Daten unten ein — wir senden Ihren persönlichen Testcode meist innert 24 Stunden zu. Kostenlos und unverbindlich.",
     "platformNoticeTitle": "Welche Geräte werden unterstützt?",
-    "platformNoticeBody": "PDR Kalk läuft auf Microsoft- und Android-Tablets sowie auf PCs und Laptops. Apple-Geräte und Smartphones werden nicht unterstützt.",
+    "platformNoticeBody": "PDR Kalk läuft auf Microsoft- und Android-Tablets sowie auf PCs und Laptops. Alle Funktionen stehen auf Microsoft-Geräten zur Verfügung; Android-Tablets bieten den vollen Funktionsumfang mit Ausnahme der Mehrgeräte-Synchronisation über gemeinsamen Arbeitsordner. Apple-Geräte und Smartphones werden nicht unterstützt.",
     "firstNamePlaceholder": "Vorname *",
     "firstNameLabel": "Vorname",
     "lastNamePlaceholder": "Nachname *",
