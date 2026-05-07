@@ -197,7 +197,7 @@
           "Mit PDR Kalk auf mehreren Geräten arbeiten — Desktop im Büro, Tablet in der Werkstatt, Buchhalter zu Hause",
           "Synchronisation über gemeinsamen Arbeitsordner (NAS, OneDrive, Synology Drive) zwischen Ihren Windows-Geräten — Sie kontrollieren wo Ihre Daten liegen",
           "Android-Tablets laufen als eigenständige Geräte mit vollem Funktionsumfang — eigene lokale Datenbank, ohne Shared-Folder-Sync",
-          "Empfohlen: Windows-Tablet ab 10 Zoll oder Android-Tablet ab Android 10"
+          "Empfohlen für Shared-Folder-Sync: Microsoft-PC, Laptop oder Windows-Tablet ab 10 Zoll — Android-Tablets (ab Android 10) nur für eigenständigen Einsatz"
         ]
       },
       {

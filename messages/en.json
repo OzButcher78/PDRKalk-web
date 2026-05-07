@@ -197,7 +197,7 @@
           "Run PDR Kalk on multiple devices — desktop in the office, tablet in the workshop, accountant from home",
           "Shared-folder sync (NAS, OneDrive, Synology Drive) between your Windows devices — you control where your data lives",
           "Android tablets run standalone with the full feature set — own local database, no shared-folder sync",
-          "Recommended: Windows tablet 10\" or larger, or Android tablet on Android 10+"
+          "Recommended for shared-folder sync: Microsoft PC, laptop or Windows tablet 10\" or larger — Android tablets (Android 10+) for standalone use only"
         ]
       },
       {
