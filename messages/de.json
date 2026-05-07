@@ -266,9 +266,9 @@
     "lifetime": {
       "badge": "EMPFOHLEN",
       "badgeNote": "Einmalzahlung — Kein Abo",
-      "price": "€750",
+      "price": "CHF 550",
       "priceSuffix": "FÜR 5 JAHRE!",
-      "priceMonthly": "ca. €63/Monat über 12 Raten",
+      "priceMonthly": "ca. 9.- pro Monat",
       "features": [
         "Keine Abogebühren",
         "Keine Einrichtungsgebühren",
@@ -307,12 +307,12 @@
         { "feature": "Kosten pro weiterem Nutzer",      "competitor": "Ja",               "pdrKalk": "Nein" },
         { "feature": "Cloud-basiert",                   "competitor": "Ja",               "pdrKalk": "Nein — lokal" },
         { "feature": "Internetverbindung erforderlich", "competitor": "Ja",               "pdrKalk": "Nein" },
-        { "feature": "Kosten 1. Jahr",                   "competitor": "EUR 1'399 (mit Einrichtungsgebühr)", "pdrKalk": "EUR 750" },
-        { "feature": "Kosten 2. Jahr",                  "competitor": "EUR 1'100",        "pdrKalk": "EUR 0" },
-        { "feature": "Kosten 3. Jahr",                  "competitor": "EUR 1'100",        "pdrKalk": "EUR 0" },
-        { "feature": "Kosten 4. Jahr",                  "competitor": "EUR 1'100",        "pdrKalk": "EUR 0" },
-        { "feature": "Kosten 5. Jahr",                  "competitor": "EUR 1'100",        "pdrKalk": "EUR 0" },
-        { "feature": "Total nach 5 Jahren",             "competitor": "EUR 5'799",        "pdrKalk": "EUR 750" }
+        { "feature": "Kosten 1. Jahr",                   "competitor": "EUR 1'399 (mit Einrichtungsgebühr)", "pdrKalk": "CHF 550" },
+        { "feature": "Kosten 2. Jahr",                  "competitor": "EUR 1'100",        "pdrKalk": "CHF 0" },
+        { "feature": "Kosten 3. Jahr",                  "competitor": "EUR 1'100",        "pdrKalk": "CHF 0" },
+        { "feature": "Kosten 4. Jahr",                  "competitor": "EUR 1'100",        "pdrKalk": "CHF 0" },
+        { "feature": "Kosten 5. Jahr",                  "competitor": "EUR 1'100",        "pdrKalk": "CHF 0" },
+        { "feature": "Total nach 5 Jahren",             "competitor": "EUR 5'799",        "pdrKalk": "CHF 550" }
       ],
       "closing": "Sparen Sie über fünf Jahre Tausende von Franken im Vergleich zu abonnementsbasierten Systemen.",
       "note": "Optionale Funktionserweiterungen oder Versicherungsupdates können gegen eine kleine Gebühr angeboten werden. Alle Vergleichswerte basieren auf öffentlich zugänglichen Preisinformationen (Stand Frühjahr 2026)."

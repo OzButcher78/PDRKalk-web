@@ -266,9 +266,9 @@
     "lifetime": {
       "badge": "RECOMMENDED",
       "badgeNote": "One-Time Payment — No Subscription",
-      "price": "€750",
+      "price": "CHF 550",
       "priceSuffix": "FOR 5 YEARS!",
-      "priceMonthly": "approx. €63/mo over 12 installments",
+      "priceMonthly": "approx. CHF 9/month",
       "features": [
         "No subscription fees",
         "No setup fees",
@@ -307,12 +307,12 @@
         { "feature": "Additional user fees",     "competitor": "Yes",                  "pdrKalk": "No" },
         { "feature": "Cloud-based",              "competitor": "Yes",                  "pdrKalk": "No — local" },
         { "feature": "Internet required",        "competitor": "Yes",                  "pdrKalk": "No" },
-        { "feature": "Cost year 1",              "competitor": "EUR 1,399 (incl. setup fee)", "pdrKalk": "EUR 750" },
-        { "feature": "Cost year 2",              "competitor": "EUR 1,100",            "pdrKalk": "EUR 0" },
-        { "feature": "Cost year 3",              "competitor": "EUR 1,100",            "pdrKalk": "EUR 0" },
-        { "feature": "Cost year 4",              "competitor": "EUR 1,100",            "pdrKalk": "EUR 0" },
-        { "feature": "Cost year 5",              "competitor": "EUR 1,100",            "pdrKalk": "EUR 0" },
-        { "feature": "Total after 5 years",      "competitor": "EUR 5,799",            "pdrKalk": "EUR 750" }
+        { "feature": "Cost year 1",              "competitor": "EUR 1,399 (incl. setup fee)", "pdrKalk": "CHF 550" },
+        { "feature": "Cost year 2",              "competitor": "EUR 1,100",            "pdrKalk": "CHF 0" },
+        { "feature": "Cost year 3",              "competitor": "EUR 1,100",            "pdrKalk": "CHF 0" },
+        { "feature": "Cost year 4",              "competitor": "EUR 1,100",            "pdrKalk": "CHF 0" },
+        { "feature": "Cost year 5",              "competitor": "EUR 1,100",            "pdrKalk": "CHF 0" },
+        { "feature": "Total after 5 years",      "competitor": "EUR 5,799",            "pdrKalk": "CHF 550" }
       ],
       "closing": "Save thousands of CHF over five years compared to subscription-based systems.",
       "note": "Optional feature enhancements or insurance updates may be offered for a small fee. All comparison figures are based on publicly available pricing information (as of spring 2026)."
