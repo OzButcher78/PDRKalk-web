@@ -22,7 +22,11 @@
     ],
     "regionsLabel": "Working for:",
     "regionsMore": "more on request",
-    "demoComingSoon": "Demo Coming Soon"
+    "demoComingSoon": "Demo Coming Soon",
+    "priceCallout": {
+      "headline": "CHF 550 — FOR 5 YEARS!",
+      "monthly": "approx. CHF 9/month"
+    }
   },
   "timeSavings": {
     "title": "Time is Money — save with",

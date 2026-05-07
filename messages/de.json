@@ -22,7 +22,11 @@
     ],
     "regionsLabel": "Im Einsatz für:",
     "regionsMore": "weitere auf Anfrage",
-    "demoComingSoon": "Demo demnächst verfügbar"
+    "demoComingSoon": "Demo demnächst verfügbar",
+    "priceCallout": {
+      "headline": "CHF 550 — FÜR 5 JAHRE!",
+      "monthly": "ca. 9.- pro Monat"
+    }
   },
   "timeSavings": {
     "title": "Zeit ist Geld — sparen Sie mit",

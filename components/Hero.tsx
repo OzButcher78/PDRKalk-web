@@ -283,6 +283,36 @@ export default function Hero() {
             />
           </div>
 
+          {/* Price callout */}
+          <div className="fade-up-4" style={{
+            position: 'relative',
+            marginTop: '1.5rem',
+            textAlign: 'center',
+          }}>
+            <div style={{
+              fontFamily: 'Barlow Condensed, sans-serif',
+              fontWeight: 900,
+              fontSize: 'clamp(1.6rem, 2.6vw, 2.1rem)',
+              color: '#34d399',
+              letterSpacing: '0.04em',
+              textTransform: 'uppercase',
+              textShadow: '0 0 10px rgba(52,211,153,0.55), 0 0 22px rgba(52,211,153,0.35)',
+              lineHeight: 1.05,
+            }}>
+              {t('priceCallout.headline')}
+            </div>
+            <div style={{
+              fontFamily: 'Barlow, sans-serif',
+              fontWeight: 600,
+              fontSize: '1rem',
+              color: 'var(--red)',
+              marginTop: '0.35rem',
+              letterSpacing: '0.04em',
+            }}>
+              {t('priceCallout.monthly')}
+            </div>
+          </div>
+
           {/* Platform availability badges */}
           <div className="fade-up-4" style={{
             position: 'relative',
