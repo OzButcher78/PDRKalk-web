@@ -94,7 +94,7 @@
       },
       {
         "heading": "Multi-Device & lokale Daten",
-        "desc": "Synchronisieren Sie Office-PC, Werkstatt-Tablet und Buchhalter-PC über Ihre eigene NAS oder Cloud — gleicher Datenstand auf allen Geräten. Bleibt 100% lokal, DSGVO-konform, 4 Sprachen."
+        "desc": "Synchronisieren Sie Office-PC, Werkstatt-Tablet und Buchhalter-PC über Ihre eigene NAS oder Cloud — gleicher Datenstand auf allen Geräten. Shared-Folder-Sync läuft auf Windows; Android-Tablets arbeiten eigenständig mit vollem Funktionsumfang. Bleibt 100% lokal, DSGVO-konform, 4 Sprachen."
       }
     ]
   },
@@ -195,8 +195,8 @@
         "heading": "Multi-Device & NAS-Sync",
         "items": [
           "Mit PDR Kalk auf mehreren Geräten arbeiten — Desktop im Büro, Tablet in der Werkstatt, Buchhalter zu Hause",
-          "Daten via NAS oder Cloud-Speicher Ihrer Wahl synchronisieren — Sie kontrollieren wo Ihre Daten liegen",
-          "Läuft auf Windows- und Android-Tablets — voller Funktionsumfang unterwegs",
+          "Synchronisation über gemeinsamen Arbeitsordner (NAS, OneDrive, Synology Drive) zwischen Ihren Windows-Geräten — Sie kontrollieren wo Ihre Daten liegen",
+          "Android-Tablets laufen als eigenständige Geräte mit vollem Funktionsumfang — eigene lokale Datenbank, ohne Shared-Folder-Sync",
           "Empfohlen: Windows-Tablet ab 10 Zoll oder Android-Tablet ab Android 10"
         ]
       },

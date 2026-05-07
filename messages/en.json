@@ -94,7 +94,7 @@
       },
       {
         "heading": "Multi-device & local data",
-        "desc": "Sync the office PC, the workshop tablet and the accountant's PC through your own NAS or cloud — same data on every device. Stays 100% local, GDPR compliant, 4 languages."
+        "desc": "Sync the office PC, the workshop tablet and the accountant's PC through your own NAS or cloud — same data on every device. Shared-folder sync runs on Windows; Android tablets work standalone with the full feature set. Stays 100% local, GDPR compliant, 4 languages."
       }
     ]
   },
@@ -195,8 +195,8 @@
         "heading": "Multi-device & NAS sync",
         "items": [
           "Run PDR Kalk on multiple devices — desktop in the office, tablet in the workshop, accountant from home",
-          "Sync data through your own NAS or cloud storage — you control where your data lives",
-          "Runs on Windows and Android tablets — full feature set on the go",
+          "Shared-folder sync (NAS, OneDrive, Synology Drive) between your Windows devices — you control where your data lives",
+          "Android tablets run standalone with the full feature set — own local database, no shared-folder sync",
           "Recommended: Windows tablet 10\" or larger, or Android tablet on Android 10+"
         ]
       },
