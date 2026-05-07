@@ -263,7 +263,7 @@
       { "feature": "DATEV / accounting export", "pdrKalk": true, "competitor": false, "competitorNote": "Extra charge" },
       { "feature": "Camera capture in-app", "pdrKalk": true, "competitor": false, "competitorNote": "No" }
     ],
-    "footnote": "* This feature is only supported on Microsoft Tablets."
+    "footnote": "* This feature is only supported on Microsoft devices."
   },
   "pricing": {
     "title": "Buy once. Use forever.",

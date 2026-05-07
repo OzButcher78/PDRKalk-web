@@ -263,7 +263,7 @@
       { "feature": "DATEV / Buchhaltungsexport", "pdrKalk": true, "competitor": false, "competitorNote": "Aufpreis" },
       { "feature": "Kamera direkt in der App", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" }
     ],
-    "footnote": "* Diese Funktion wird nur auf Microsoft-Tablets unterstützt."
+    "footnote": "* Diese Funktion wird nur auf Microsoft-Geräten unterstützt."
   },
   "pricing": {
     "title": "Einmal kaufen. Für immer nutzen.",
