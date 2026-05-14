@@ -415,7 +415,8 @@
     "sendError": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut oder schreiben Sie direkt an die E-Mail-Adresse unten.",
     "submitting": "Wird gesendet\u2026",
     "success": "Antrag gesendet — wir senden Ihnen Ihren Testcode in Kürze zu!",
-    "email": "info@balmerstorms.ch"
+    "emailUser": "info",
+    "emailDomain": "pdrkalk.ch"
   },
   "footer": {
     "company": "Balmer Storm Solutions",

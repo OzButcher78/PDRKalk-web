@@ -320,7 +320,8 @@
     "sendError": "Invio fallito. Riprova o scrivici direttamente all'indirizzo qui sotto.",
     "submitting": "Invio in corso\u2026",
     "success": "Richiesta inviata — ti invieremo a breve il codice di prova!",
-    "email": "info@balmerstorms.ch"
+    "emailUser": "info",
+    "emailDomain": "pdrkalk.ch"
   },
   "footer": {
     "company": "Balmer Storm Solutions",

@@ -2,6 +2,7 @@
 
 import {useTranslations} from 'next-intl';
 import {useState, useRef} from 'react';
+import ObfuscatedEmail from './ObfuscatedEmail';
 
 const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID || 'mlgwvvbo';
 
@@ -558,12 +559,11 @@ export default function Contact() {
           color: '#64748b',
           marginTop: '1.5rem',
         }}>
-          <a
-            href={`mailto:${t('email')}`}
+          <ObfuscatedEmail
+            user={t('emailUser')}
+            domain={t('emailDomain')}
             style={{color: 'var(--steel)', textDecoration: 'none'}}
-          >
-            {t('email')}
-          </a>
+          />
         </p>
       </div>
     </section>

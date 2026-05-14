@@ -415,7 +415,8 @@
     "sendError": "Failed to send. Please try again or email us directly at the address below.",
     "submitting": "Sending\u2026",
     "success": "Request sent — we'll send you your trial code shortly!",
-    "email": "info@balmerstorms.ch"
+    "emailUser": "info",
+    "emailDomain": "pdrkalk.ch"
   },
   "footer": {
     "company": "Balmer Storm Solutions",

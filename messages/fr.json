@@ -320,7 +320,8 @@
     "sendError": "Échec de l'envoi. Veuillez réessayer ou nous écrire directement à l'adresse ci-dessous.",
     "submitting": "Envoi en cours\u2026",
     "success": "Demande envoyée — nous vous enverrons votre code d'essai sous peu !",
-    "email": "info@balmerstorms.ch"
+    "emailUser": "info",
+    "emailDomain": "pdrkalk.ch"
   },
   "footer": {
     "company": "Balmer Storm Solutions",
