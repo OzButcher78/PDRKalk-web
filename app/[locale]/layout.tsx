@@ -1,9 +1,11 @@
 import type {Metadata} from 'next';
 import {NextIntlClientProvider, hasLocale} from 'next-intl';
+import {setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://pdrkalk.ch'),
   title: 'PDR Kalk — Professionelle Schadenerfassung für die Schweiz',
   description: 'PDR Kalk erstellt Hagelschaden-Offerten und Parkschadenrapporte mit offiziellen Schweizer Tarifen (VFFS 2025). Präzise, schnell, CHF-konform.',
   icons: {
@@ -32,6 +34,8 @@ export default async function LocaleLayout({children, params}: Props) {
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
+
+  setRequestLocale(locale);
 
   const messages = (await import(`@/messages/${locale}.json`)).default;
 
