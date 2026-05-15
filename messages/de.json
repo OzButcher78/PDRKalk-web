@@ -292,11 +292,11 @@
       "features": [
         "Alle Funktionen für 30 Tage freigeschaltet",
         "Kein Abo, keine Kreditkarte",
-        "Trial Code auf Anfrage per Kontaktformular",
+        "Anfrage über das Kontaktformular",
         "Anschliessend optional Upgrade auf Dauerlizenz"
       ],
       "cta": "Jetzt Testen",
-      "disclaimer": "Trial Code unverbindlich anfordern — Antwort meist innert 24 Stunden."
+      "disclaimer": "Unverbindlich anfragen — Antwort meist innert 24 Stunden."
     },
     "comparisonTable": {
       "title": "5-Jahres-Kostenvergleich",
@@ -412,7 +412,7 @@
     "country_gb": "Vereinigtes Königreich",
     "sendError": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut oder schreiben Sie direkt an die E-Mail-Adresse unten.",
     "submitting": "Wird gesendet\u2026",
-    "success": "Antrag gesendet — wir senden Ihnen Ihren Testcode in Kürze zu!",
+    "success": "Antrag gesendet — wir melden uns in Kürze bei Ihnen!",
     "emailUser": "info",
     "emailDomain": "pdrkalk.ch"
   },

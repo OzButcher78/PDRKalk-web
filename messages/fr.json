@@ -207,11 +207,11 @@
       "features": [
         "Toutes les fonctionnalités débloquées pendant 30 jours",
         "Pas d'abonnement, pas de carte bancaire",
-        "Code d'essai sur demande via le formulaire de contact",
+        "Demande via le formulaire de contact",
         "Mise à niveau optionnelle vers une licence complète"
       ],
       "cta": "Essayer maintenant",
-      "disclaimer": "Demandez un code d'essai sans engagement — réponse généralement sous 24 heures."
+      "disclaimer": "Demande sans engagement — réponse généralement sous 24 heures."
     },
     "comparisonTable": {
       "title": "Comparaison des coûts sur 5 ans",
@@ -318,7 +318,7 @@
     "country_gb": "Royaume-Uni",
     "sendError": "Échec de l'envoi. Veuillez réessayer ou nous écrire directement à l'adresse ci-dessous.",
     "submitting": "Envoi en cours\u2026",
-    "success": "Demande envoyée — nous vous enverrons votre code d'essai sous peu !",
+    "success": "Demande envoyée — nous vous recontacterons sous peu !",
     "emailUser": "info",
     "emailDomain": "pdrkalk.ch"
   },

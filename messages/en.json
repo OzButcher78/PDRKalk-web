@@ -292,11 +292,11 @@
       "features": [
         "All features unlocked for 30 days",
         "No subscription, no credit card",
-        "Trial code on request via the contact form",
+        "Request via the contact form",
         "Optional upgrade to a full license afterwards"
       ],
       "cta": "Try now",
-      "disclaimer": "Request a trial code with no obligation — typical reply within 24 hours."
+      "disclaimer": "Request with no obligation — typical reply within 24 hours."
     },
     "comparisonTable": {
       "title": "5-Year Cost Comparison",
@@ -412,7 +412,7 @@
     "country_gb": "United Kingdom",
     "sendError": "Failed to send. Please try again or email us directly at the address below.",
     "submitting": "Sending\u2026",
-    "success": "Request sent — we'll send you your trial code shortly!",
+    "success": "Request sent — we'll get back to you shortly!",
     "emailUser": "info",
     "emailDomain": "pdrkalk.ch"
   },

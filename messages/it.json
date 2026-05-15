@@ -207,11 +207,11 @@
       "features": [
         "Tutte le funzioni sbloccate per 30 giorni",
         "Nessun abbonamento, nessuna carta di credito",
-        "Codice trial su richiesta tramite modulo di contatto",
+        "Richiesta tramite il modulo di contatto",
         "Aggiornamento opzionale a licenza completa successivamente"
       ],
       "cta": "Prova ora",
-      "disclaimer": "Richiedi un codice trial senza impegno — risposta solitamente entro 24 ore."
+      "disclaimer": "Richiesta senza impegno — risposta solitamente entro 24 ore."
     },
     "comparisonTable": {
       "title": "Confronto costi su 5 anni",
@@ -318,7 +318,7 @@
     "country_gb": "Regno Unito",
     "sendError": "Invio fallito. Riprova o scrivici direttamente all'indirizzo qui sotto.",
     "submitting": "Invio in corso\u2026",
-    "success": "Richiesta inviata — ti invieremo a breve il codice di prova!",
+    "success": "Richiesta inviata — ti risponderemo a breve!",
     "emailUser": "info",
     "emailDomain": "pdrkalk.ch"
   },
