@@ -286,18 +286,18 @@
       "cta": "Buy Now"
     },
     "monthly": {
-      "badge": "14-Day Trial License",
-      "badgeNote": "Try free for 14 days",
+      "badge": "30-Day Trial",
+      "badgeNote": "Try free for 30 days",
       "price": "Free",
-      "priceSuffix": "14 days, no limits",
+      "priceSuffix": "30 days, no limits",
       "features": [
-        "All features unlocked for 14 days",
+        "All features unlocked for 30 days",
         "No subscription, no credit card",
-        "License code on request via the contact form",
+        "Trial code on request via the contact form",
         "Optional upgrade to a full license afterwards"
       ],
-      "cta": "Request license",
-      "disclaimer": "Request a license code with no obligation — typical reply within 24 hours."
+      "cta": "Try now",
+      "disclaimer": "Request a trial code with no obligation — typical reply within 24 hours."
     },
     "comparisonTable": {
       "title": "5-Year Cost Comparison",
@@ -369,7 +369,7 @@
     "platform_both": "Both",
     "messagePlaceholder": "Notes or questions (optional)",
     "messageLabel": "Notes",
-    "submit": "Request Trial License",
+    "submit": "Request Trial",
     "errorFirstNameRequired": "First name required",
     "errorLastNameRequired": "Last name required",
     "errorCompanyRequired": "Company required",

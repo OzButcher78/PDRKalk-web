@@ -201,17 +201,18 @@
       "cta": "Acquista ora"
     },
     "monthly": {
-      "badge": "Licenza mensile",
-      "badgeNote": "Tariffa flessibile",
-      "price": "TBA",
-      "priceSuffix": "al mese",
+      "badge": "Trial 30 giorni",
+      "badgeNote": "Prova gratis per 30 giorni",
+      "price": "Gratis",
+      "priceSuffix": "30 giorni senza limiti",
       "features": [
-        "Nessun costo d'ingresso elevato",
-        "Disdetta in qualsiasi momento",
-        "Accesso alla versione attuale",
-        "Utilizzo finché l'abbonamento è attivo"
+        "Tutte le funzioni sbloccate per 30 giorni",
+        "Nessun abbonamento, nessuna carta di credito",
+        "Codice trial su richiesta tramite modulo di contatto",
+        "Aggiornamento opzionale a licenza completa successivamente"
       ],
-      "disclaimer": "L'accesso termina con la disdetta."
+      "cta": "Prova ora",
+      "disclaimer": "Richiedi un codice trial senza impegno — risposta solitamente entro 24 ore."
     },
     "comparisonTable": {
       "title": "Confronto costi su 5 anni",
@@ -245,7 +246,7 @@
     "note": "Nessuna installazione necessaria. Funziona nel browser."
   },
   "contact": {
-    "title": "Richiedi una licenza di prova",
+    "title": "Richiedi una prova",
     "subtitle": "Inserisci i tuoi dati qui sotto — ti invieremo il tuo codice di prova personale entro 24 ore. Gratuito e senza impegno.",
     "platformNoticeTitle": "Quali dispositivi sono supportati?",
     "platformNoticeBody": "PDR Kalk funziona su tablet Microsoft e Android, oltre che su PC e laptop. I dispositivi Apple e gli smartphone non sono supportati.",
@@ -275,7 +276,7 @@
     "websiteLabel": "Sito web",
     "messagePlaceholder": "Note o domande (facoltativo)",
     "messageLabel": "Note",
-    "submit": "Richiedi licenza di prova",
+    "submit": "Richiedi prova",
     "errorFirstNameRequired": "Nome richiesto",
     "errorLastNameRequired": "Cognome richiesto",
     "errorCompanyRequired": "Azienda richiesta",

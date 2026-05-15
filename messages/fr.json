@@ -201,17 +201,18 @@
       "cta": "Acheter maintenant"
     },
     "monthly": {
-      "badge": "Licence mensuelle",
-      "badgeNote": "Tarif flexible",
-      "price": "TBA",
-      "priceSuffix": "par mois",
+      "badge": "Essai 30 jours",
+      "badgeNote": "Essayez gratuitement pendant 30 jours",
+      "price": "Gratuit",
+      "priceSuffix": "30 jours sans limite",
       "features": [
-        "Pas de coût d'entrée élevé",
-        "Résiliable à tout moment",
-        "Accès à la version actuelle",
-        "Utilisation tant que l'abonnement est actif"
+        "Toutes les fonctionnalités débloquées pendant 30 jours",
+        "Pas d'abonnement, pas de carte bancaire",
+        "Code d'essai sur demande via le formulaire de contact",
+        "Mise à niveau optionnelle vers une licence complète"
       ],
-      "disclaimer": "L'accès prend fin en cas de résiliation."
+      "cta": "Essayer maintenant",
+      "disclaimer": "Demandez un code d'essai sans engagement — réponse généralement sous 24 heures."
     },
     "comparisonTable": {
       "title": "Comparaison des coûts sur 5 ans",
@@ -245,7 +246,7 @@
     "note": "Aucune installation nécessaire. Fonctionne dans le navigateur."
   },
   "contact": {
-    "title": "Demander une licence d'essai",
+    "title": "Demander un essai",
     "subtitle": "Remplissez vos coordonnées ci-dessous — nous vous enverrons votre code d'essai personnel sous 24 heures. Gratuit et sans engagement.",
     "platformNoticeTitle": "Quels appareils sont pris en charge ?",
     "platformNoticeBody": "PDR Kalk fonctionne sur les tablettes Microsoft et Android ainsi que sur PC et ordinateurs portables. Les appareils Apple et les smartphones ne sont pas pris en charge.",
@@ -275,7 +276,7 @@
     "websiteLabel": "Site web",
     "messagePlaceholder": "Remarques ou questions (facultatif)",
     "messageLabel": "Remarques",
-    "submit": "Demander la licence d'essai",
+    "submit": "Demander un essai",
     "errorFirstNameRequired": "Prénom requis",
     "errorLastNameRequired": "Nom requis",
     "errorCompanyRequired": "Société requise",

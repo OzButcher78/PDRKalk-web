@@ -286,18 +286,18 @@
       "cta": "Jetzt kaufen"
     },
     "monthly": {
-      "badge": "14-Tage Testlizenz",
-      "badgeNote": "14 Tage kostenlos testen",
+      "badge": "30-Tage Trial",
+      "badgeNote": "30 Tage kostenlos testen",
       "price": "Gratis",
-      "priceSuffix": "14 Tage uneingeschränkt",
+      "priceSuffix": "30 Tage uneingeschränkt",
       "features": [
-        "Alle Funktionen für 14 Tage freigeschaltet",
+        "Alle Funktionen für 30 Tage freigeschaltet",
         "Kein Abo, keine Kreditkarte",
-        "Lizenzcode auf Anfrage per Kontaktformular",
+        "Trial Code auf Anfrage per Kontaktformular",
         "Anschliessend optional Upgrade auf Dauerlizenz"
       ],
-      "cta": "Lizenz anfragen",
-      "disclaimer": "Lizenzcode unverbindlich anfordern — Antwort meist innert 24 Stunden."
+      "cta": "Jetzt Testen",
+      "disclaimer": "Trial Code unverbindlich anfordern — Antwort meist innert 24 Stunden."
     },
     "comparisonTable": {
       "title": "5-Jahres-Kostenvergleich",
@@ -335,7 +335,7 @@
     "note": "Keine Installation nötig. Läuft im Browser."
   },
   "contact": {
-    "title": "Testlizenz anfordern",
+    "title": "Trial anfordern",
     "subtitle": "Tragen Sie Ihre Daten unten ein — wir senden Ihren persönlichen Testcode meist innert 24 Stunden zu. Kostenlos und unverbindlich.",
     "platformNoticeTitle": "Welche Geräte werden unterstützt?",
     "platformNoticeBody": "PDR Kalk läuft auf Microsoft- und Android-Tablets sowie auf PCs und Laptops. Alle Funktionen stehen auf Microsoft-Geräten zur Verfügung; Android-Tablets bieten den vollen Funktionsumfang mit Ausnahme der Mehrgeräte-Synchronisation über gemeinsamen Arbeitsordner. Apple-Geräte und Smartphones werden nicht unterstützt.",
@@ -369,7 +369,7 @@
     "platform_both": "Beides",
     "messagePlaceholder": "Anmerkungen oder Fragen (optional)",
     "messageLabel": "Anmerkungen",
-    "submit": "Testlizenz anfordern",
+    "submit": "Trial anfordern",
     "errorFirstNameRequired": "Vorname benötigt",
     "errorLastNameRequired": "Nachname benötigt",
     "errorCompanyRequired": "Firma benötigt",
