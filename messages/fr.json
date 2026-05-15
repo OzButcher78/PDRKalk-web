@@ -183,7 +183,6 @@
   },
   "pricing": {
     "title": "Acheter une fois. Utiliser pour toujours.",
-    "installmentBadge": "Paiement échelonné possible",
     "lifetime": {
       "badge": "RECOMMANDÉ",
       "badgeNote": "Paiement unique — Sans abonnement",
@@ -242,12 +241,11 @@
   "finalCta": {
     "title": "Prêt à gagner du temps ?",
     "subtitle": "Commencez avec PDR Kalk dès aujourd'hui et économisez des heures chaque semaine.",
-    "cta": "Essayer maintenant",
-    "note": "Aucune installation nécessaire. Fonctionne dans le navigateur."
+    "cta": "Essayer maintenant"
   },
   "contact": {
     "title": "Demander un essai",
-    "subtitle": "Remplissez vos coordonnées ci-dessous — nous vous enverrons votre code d'essai personnel sous 24 heures. Gratuit et sans engagement.",
+    "subtitle": "Remplissez vos coordonnées ci-dessous — nous vous répondrons sous 24 heures. Gratuit et sans engagement.",
     "platformNoticeTitle": "Quels appareils sont pris en charge ?",
     "platformNoticeBody": "PDR Kalk fonctionne sur les tablettes Microsoft et Android ainsi que sur PC et ordinateurs portables. Les appareils Apple et les smartphones ne sont pas pris en charge.",
     "firstNamePlaceholder": "Prénom *",

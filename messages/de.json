@@ -267,7 +267,6 @@
   },
   "pricing": {
     "title": "Einmal kaufen. Für immer nutzen.",
-    "installmentBadge": "Ratenzahlung möglich",
     "lifetime": {
       "badge": "EMPFOHLEN",
       "badgeNote": "Einmalzahlung — Kein Abo",
@@ -331,12 +330,11 @@
   "finalCta": {
     "title": "Bereit, Zeit zu sparen?",
     "subtitle": "Starten Sie noch heute mit PDR Kalk und sparen Sie Stunden pro Woche.",
-    "cta": "Jetzt testen",
-    "note": "Keine Installation nötig. Läuft im Browser."
+    "cta": "Jetzt testen"
   },
   "contact": {
     "title": "Trial anfordern",
-    "subtitle": "Tragen Sie Ihre Daten unten ein — wir senden Ihren persönlichen Testcode meist innert 24 Stunden zu. Kostenlos und unverbindlich.",
+    "subtitle": "Tragen Sie Ihre Daten unten ein — wir melden uns meist innert 24 Stunden bei Ihnen. Kostenlos und unverbindlich.",
     "platformNoticeTitle": "Welche Geräte werden unterstützt?",
     "platformNoticeBody": "PDR Kalk läuft auf Microsoft- und Android-Tablets sowie auf PCs und Laptops. Alle Funktionen stehen auf Microsoft-Geräten zur Verfügung; Android-Tablets bieten den vollen Funktionsumfang mit Ausnahme der Mehrgeräte-Synchronisation über gemeinsamen Arbeitsordner. Apple-Geräte und Smartphones werden nicht unterstützt.",
     "firstNamePlaceholder": "Vorname *",

@@ -74,16 +74,6 @@ export default function FinalCTA() {
         >
           {t('cta')} →
         </a>
-
-        {/* Note */}
-        <p className="fade-up-3" style={{
-          fontFamily: 'Barlow, sans-serif',
-          fontSize: '0.82rem',
-          color: 'var(--steel)',
-          marginTop: '1.5rem',
-        }}>
-          {t('note')}
-        </p>
       </div>
     </section>
   );

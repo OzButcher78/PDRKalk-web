@@ -58,25 +58,6 @@ export default function Pricing() {
           <div className="gradient-line" style={{width: '60px', margin: '0 auto'}}/>
         </div>
 
-        {/* Installment badge */}
-        <div style={{textAlign: 'center', marginBottom: '2.5rem'}}>
-          <span style={{
-            display: 'inline-block',
-            background: 'rgba(22,163,74,0.08)',
-            border: '1px solid rgba(22,163,74,0.25)',
-            borderRadius: '20px',
-            padding: '0.4rem 1.25rem',
-            fontFamily: 'Barlow Condensed, sans-serif',
-            fontWeight: 700,
-            fontSize: '0.82rem',
-            letterSpacing: '0.08em',
-            textTransform: 'uppercase',
-            color: '#166534',
-          }}>
-            {t('installmentBadge')}
-          </span>
-        </div>
-
         {/* Two pricing cards */}
         <div
           className="pricing-cards"

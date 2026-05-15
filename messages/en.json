@@ -267,7 +267,6 @@
   },
   "pricing": {
     "title": "Buy once. Use forever.",
-    "installmentBadge": "Installment plan available",
     "lifetime": {
       "badge": "RECOMMENDED",
       "badgeNote": "One-Time Payment — No Subscription",
@@ -331,12 +330,11 @@
   "finalCta": {
     "title": "Ready to save time?",
     "subtitle": "Start with PDR Kalk today and save hours every week.",
-    "cta": "Try now",
-    "note": "No installation needed. Runs in the browser."
+    "cta": "Try now"
   },
   "contact": {
     "title": "Request a Free Trial",
-    "subtitle": "Fill in your details below — we'll send your personal trial code within 24 hours. Free, no commitment.",
+    "subtitle": "Fill in your details below — we'll get back to you within 24 hours. Free, no commitment.",
     "platformNoticeTitle": "Which devices are supported?",
     "platformNoticeBody": "PDR Kalk runs on Microsoft and Android tablets as well as on PCs and laptops. All features are available on Microsoft devices; Android tablets offer the full feature set except for multi-device synchronisation via a shared work folder. Apple devices and smartphones are not supported.",
     "firstNamePlaceholder": "First name *",
