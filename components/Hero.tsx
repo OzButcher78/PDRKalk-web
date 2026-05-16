@@ -5,6 +5,13 @@ import Image from 'next/image';
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://web.pdrkalk.com';
 const BUY_URL = process.env.NEXT_PUBLIC_BUY_URL || '#pricing';
+const WINDOWS_DOWNLOAD_URL =
+  process.env.NEXT_PUBLIC_WINDOWS_DOWNLOAD_URL ||
+  'https://github.com/OzButcher78/pdrkalk/releases/download/v4.24.56/PDR-Kalk-Setup-4.24.56.exe';
+const ANDROID_DOWNLOAD_URL =
+  process.env.NEXT_PUBLIC_ANDROID_DOWNLOAD_URL ||
+  'https://github.com/OzButcher78/pdrkalk/releases/download/android-v4.24.62/pdrkalk-android-4.24.62.apk';
+const YOUTUBE_VIDEO_ID = 'YnwMff4CjB4';
 
 const REGION_FLAGS = ['ch', 'de', 'at'] as const;
 
@@ -238,7 +245,7 @@ export default function Hero() {
             filter: 'blur(20px)',
           }}/>
 
-          {/* Browser chrome mockup */}
+          {/* YouTube product video */}
           <div style={{
             position: 'relative',
             borderRadius: '10px',
@@ -247,39 +254,24 @@ export default function Hero() {
             border: '1px solid rgba(255,255,255,0.08)',
             width: '100%',
             maxWidth: '580px',
-            background: '#1e2d42',
+            background: '#000',
+            aspectRatio: '16 / 9',
           }}>
-            {/* Browser bar */}
-            <div style={{
-              height: '36px',
-              background: '#121929',
-              display: 'flex',
-              alignItems: 'center',
-              padding: '0 1rem',
-              gap: '0.5rem',
-              borderBottom: '1px solid rgba(255,255,255,0.06)',
-            }}>
-              <div style={{width: '10px', height: '10px', borderRadius: '50%', background: 'var(--red)', opacity: 0.8}}/>
-              <div style={{width: '10px', height: '10px', borderRadius: '50%', background: '#f59e0b', opacity: 0.8}}/>
-              <div style={{width: '10px', height: '10px', borderRadius: '50%', background: 'var(--green)', opacity: 0.8}}/>
-              <div style={{
-                flex: 1,
-                height: '20px',
-                background: 'rgba(255,255,255,0.05)',
-                borderRadius: '3px',
-                marginLeft: '0.5rem',
-              }}/>
-            </div>
-
-            {/* Screenshot */}
-            <Image
-              src="/screenshots/dashboard.jpg"
-              alt={t('screenshotAlt')}
-              width={1200}
-              height={800}
-              sizes="(max-width: 768px) 100vw, 50vw"
-              style={{width: '100%', height: 'auto', display: 'block'}}
-              priority
+            <iframe
+              src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?rel=0&modestbranding=1`}
+              title={t('videoTitle')}
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              style={{
+                position: 'absolute',
+                inset: 0,
+                width: '100%',
+                height: '100%',
+                border: 0,
+                display: 'block',
+              }}
             />
           </div>
 
@@ -318,27 +310,87 @@ export default function Hero() {
             position: 'relative',
             marginTop: '1.75rem',
             display: 'flex',
-            gap: '1rem',
+            gap: '2rem',
             justifyContent: 'center',
-            alignItems: 'center',
+            alignItems: 'flex-start',
             flexWrap: 'wrap',
             width: '100%',
             maxWidth: '580px',
           }}>
-            <Image
-              src="/a-microsoft.png"
-              alt="Get it on Microsoft"
-              width={1033}
-              height={334}
-              style={{height: '56px', width: 'auto', display: 'block'}}
-            />
-            <Image
-              src="/android.png"
-              alt="Get it on Android"
-              width={475}
-              height={162}
-              style={{height: '56px', width: 'auto', display: 'block'}}
-            />
+            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem'}}>
+              <a
+                href={WINDOWS_DOWNLOAD_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+                aria-label={`${t('downloadTrial')}: Microsoft`}
+                style={{display: 'block', lineHeight: 0}}
+              >
+                <Image
+                  src="/a-microsoft.png"
+                  alt="Get it on Microsoft"
+                  width={1033}
+                  height={334}
+                  style={{height: '56px', width: 'auto', display: 'block'}}
+                />
+              </a>
+              <a
+                href={WINDOWS_DOWNLOAD_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+                style={{
+                  fontFamily: 'Barlow Condensed, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '0.82rem',
+                  letterSpacing: '0.06em',
+                  textTransform: 'uppercase',
+                  color: 'rgba(255,255,255,0.85)',
+                  textDecoration: 'underline',
+                  textUnderlineOffset: '3px',
+                  textDecorationColor: 'rgba(255,255,255,0.35)',
+                }}
+              >
+                {t('downloadTrial')}: Microsoft
+              </a>
+            </div>
+            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem'}}>
+              <a
+                href={ANDROID_DOWNLOAD_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+                aria-label={`${t('downloadTrial')}: Android`}
+                style={{display: 'block', lineHeight: 0}}
+              >
+                <Image
+                  src="/android.png"
+                  alt="Get it on Android"
+                  width={475}
+                  height={162}
+                  style={{height: '56px', width: 'auto', display: 'block'}}
+                />
+              </a>
+              <a
+                href={ANDROID_DOWNLOAD_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+                style={{
+                  fontFamily: 'Barlow Condensed, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '0.82rem',
+                  letterSpacing: '0.06em',
+                  textTransform: 'uppercase',
+                  color: 'rgba(255,255,255,0.85)',
+                  textDecoration: 'underline',
+                  textUnderlineOffset: '3px',
+                  textDecorationColor: 'rgba(255,255,255,0.35)',
+                }}
+              >
+                {t('downloadTrial')}: Android
+              </a>
+            </div>
           </div>
         </div>
       </div>
