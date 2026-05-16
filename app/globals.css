@@ -377,6 +377,13 @@ body {
   /* Footer: center logo column + flag row */
   .footer-brand { align-items: center !important; text-align: center; }
   .footer-flags { justify-content: center !important; }
+
+  /* Pricing cards: shrink CTA typography so "Jetzt herunterladen" fits */
+  .pricing-cta {
+    font-size: 0.95rem !important;
+    letter-spacing: 0.04em !important;
+    padding: 0.85rem 0.5rem !important;
+  }
 }
 
 /* Hero: iOS Safari 100vh fix — 100svh excludes browser toolbar */

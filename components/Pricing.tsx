@@ -195,7 +195,7 @@ export default function Pricing() {
               {/* CTA */}
               <a
                 href={BUY_URL}
-                className="btn-red"
+                className="btn-red pricing-cta"
                 style={{
                   display: 'block',
                   textAlign: 'center',
@@ -211,6 +211,8 @@ export default function Pricing() {
                   borderRadius: '6px',
                   transition: 'background 0.2s, transform 0.15s, box-shadow 0.2s',
                   boxShadow: '0 4px 20px rgba(232,0,29,0.3)',
+                  boxSizing: 'border-box',
+                  whiteSpace: 'normal',
                 }}
               >
                 {lifetime.cta} →
@@ -351,7 +353,7 @@ export default function Pricing() {
               {/* Ghost CTA */}
               <a
                 href="#download"
-                className="btn-ghost-dark"
+                className="btn-ghost-dark pricing-cta"
                 style={{
                   display: 'block',
                   textAlign: 'center',
@@ -367,6 +369,8 @@ export default function Pricing() {
                   borderRadius: '6px',
                   border: '2px solid #cbd5e1',
                   transition: 'border-color 0.2s, transform 0.15s',
+                  boxSizing: 'border-box',
+                  whiteSpace: 'normal',
                 }}
               >
                 {monthly.cta} →
