@@ -6,10 +6,32 @@ import ObfuscatedEmail from './ObfuscatedEmail';
 
 const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID || 'mlgwvvbo';
 
+const COUNTRY_CODES = [
+  'ch', 'at', 'au', 'be', 'bg', 'hr', 'cy', 'cz', 'dk', 'ee',
+  'fi', 'fr', 'de', 'gr', 'hu', 'ie', 'it', 'lv', 'lt', 'lu',
+  'mt', 'nl', 'pl', 'pt', 'ro', 'sk', 'si', 'es', 'se', 'gb',
+] as const;
+
+const AU_STATES: ReadonlyArray<{code: string; name: string}> = [
+  {code: 'NSW', name: 'New South Wales'},
+  {code: 'VIC', name: 'Victoria'},
+  {code: 'QLD', name: 'Queensland'},
+  {code: 'WA',  name: 'Western Australia'},
+  {code: 'SA',  name: 'South Australia'},
+  {code: 'TAS', name: 'Tasmania'},
+  {code: 'ACT', name: 'Australian Capital Territory'},
+  {code: 'NT',  name: 'Northern Territory'},
+];
+
 type FormState = {
   firstName: string;
   lastName: string;
   company: string;
+  street: string;
+  postalCode: string;
+  city: string;
+  country: string;
+  state: string;
   email: string;
   message: string;
 };
@@ -20,6 +42,11 @@ const initialForm: FormState = {
   firstName: '',
   lastName: '',
   company: '',
+  street: '',
+  postalCode: '',
+  city: '',
+  country: '',
+  state: '',
   email: '',
   message: '',
 };
@@ -33,22 +60,36 @@ export default function Contact() {
   const [errors, setErrors]         = useState<FormErrors>({});
 
   const refs = {
-    firstName: useRef<HTMLInputElement>(null),
-    lastName:  useRef<HTMLInputElement>(null),
-    company:   useRef<HTMLInputElement>(null),
-    email:     useRef<HTMLInputElement>(null),
+    firstName:  useRef<HTMLInputElement>(null),
+    lastName:   useRef<HTMLInputElement>(null),
+    company:    useRef<HTMLInputElement>(null),
+    street:     useRef<HTMLInputElement>(null),
+    postalCode: useRef<HTMLInputElement>(null),
+    city:       useRef<HTMLInputElement>(null),
+    country:    useRef<HTMLSelectElement>(null),
+    state:      useRef<HTMLSelectElement>(null),
+    email:      useRef<HTMLInputElement>(null),
   };
 
   const update = (field: keyof FormState, value: string) => {
-    setForm(prev => ({...prev, [field]: value}));
+    setForm(prev => {
+      const next = {...prev, [field]: value};
+      if (field === 'country' && value !== 'au') next.state = '';
+      return next;
+    });
     if (errors[field]) setErrors(prev => ({...prev, [field]: undefined}));
   };
 
   const validate = (): FormErrors => {
     const errs: FormErrors = {};
-    if (!form.firstName.trim()) errs.firstName = t('errorFirstNameRequired');
-    if (!form.lastName.trim())  errs.lastName  = t('errorLastNameRequired');
-    if (!form.company.trim())   errs.company   = t('errorCompanyRequired');
+    if (!form.firstName.trim())  errs.firstName  = t('errorFirstNameRequired');
+    if (!form.lastName.trim())   errs.lastName   = t('errorLastNameRequired');
+    if (!form.company.trim())    errs.company    = t('errorCompanyRequired');
+    if (!form.street.trim())     errs.street     = t('errorStreetRequired');
+    if (!form.postalCode.trim()) errs.postalCode = t('errorPostalCodeRequired');
+    if (!form.city.trim())       errs.city       = t('errorCityRequired');
+    if (!form.country)           errs.country    = t('errorCountryRequired');
+    if (form.country === 'au' && !form.state) errs.state = t('errorStateRequired');
     if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
       errs.email = t('errorEmailInvalid');
     }
@@ -76,6 +117,11 @@ export default function Contact() {
         firstName: form.firstName,
         lastName: form.lastName,
         company: form.company,
+        street: form.street,
+        postalCode: form.postalCode,
+        city: form.city,
+        country: form.country ? t(`country_${form.country}` as 'country_ch') : '',
+        state: form.state,
         email: form.email,
         message: form.message,
       };
@@ -126,8 +172,9 @@ export default function Contact() {
     errors[field] ? 'rgba(252,129,129,0.6)' : 'rgba(255,255,255,0.1)';
 
   type RefField = keyof typeof refs;
+  type InputRefField = Exclude<RefField, 'country' | 'state'>;
   const renderInput = (
-    field: RefField,
+    field: InputRefField,
     type: string = 'text',
     autoComplete?: string,
     inputMode?: 'text' | 'email' | 'tel' | 'url' | 'numeric',
@@ -136,7 +183,7 @@ export default function Contact() {
       <input
         type={type}
         name={field}
-        ref={refs[field]}
+        ref={refs[field] as React.RefObject<HTMLInputElement>}
         aria-label={t(`${field}Label` as const)}
         autoComplete={autoComplete}
         inputMode={inputMode}
@@ -266,6 +313,88 @@ export default function Contact() {
             <div style={{marginBottom: '1rem'}}>
               {renderInput('company', 'text', 'organization')}
             </div>
+
+            {/* Street */}
+            <div style={{marginBottom: '1rem'}}>
+              {renderInput('street', 'text', 'street-address')}
+            </div>
+
+            {/* Postal code / City */}
+            <div className="contact-grid" style={{display: 'grid', gap: '1rem', marginBottom: '1rem'}}>
+              {renderInput('postalCode', 'text', 'postal-code')}
+              {renderInput('city', 'text', 'address-level2')}
+            </div>
+
+            {/* Country */}
+            <div style={{marginBottom: '1rem'}}>
+              <select
+                name="country"
+                ref={refs.country}
+                aria-label={t('countryLabel')}
+                autoComplete="country"
+                value={form.country}
+                onChange={e => update('country', e.target.value)}
+                className="contact-input"
+                style={{
+                  ...inputStyle,
+                  borderColor: fieldBorder('country'),
+                  appearance: 'none',
+                  backgroundImage:
+                    'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'8\' viewBox=\'0 0 12 8\'><path fill=\'%2394a3b8\' d=\'M6 8L0 0h12z\'/></svg>")',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'right 1rem center',
+                  paddingRight: '2.5rem',
+                  color: form.country ? '#fff' : 'rgba(255,255,255,0.5)',
+                  cursor: 'pointer',
+                }}
+                onFocus={e => { if (!errors.country) e.target.style.borderColor = 'var(--red)'; }}
+                onBlur={e => { if (!errors.country) e.target.style.borderColor = 'rgba(255,255,255,0.1)'; }}
+              >
+                <option value="" disabled>{t('countryPlaceholder')}</option>
+                {COUNTRY_CODES
+                  .map(code => ({code, name: t(`country_${code}` as 'country_ch')}))
+                  .sort((a, b) => a.name.localeCompare(b.name))
+                  .map(({code, name}) => (
+                    <option key={code} value={code} style={{color: '#000'}}>{name}</option>
+                  ))}
+              </select>
+              {errors.country && <span style={errorStyle}>{errors.country}</span>}
+            </div>
+
+            {/* State (Australia only) */}
+            {form.country === 'au' && (
+              <div style={{marginBottom: '1rem'}}>
+                <select
+                  name="state"
+                  ref={refs.state}
+                  aria-label={t('stateLabel')}
+                  autoComplete="address-level1"
+                  value={form.state}
+                  onChange={e => update('state', e.target.value)}
+                  className="contact-input"
+                  style={{
+                    ...inputStyle,
+                    borderColor: fieldBorder('state'),
+                    appearance: 'none',
+                    backgroundImage:
+                      'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'8\' viewBox=\'0 0 12 8\'><path fill=\'%2394a3b8\' d=\'M6 8L0 0h12z\'/></svg>")',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'right 1rem center',
+                    paddingRight: '2.5rem',
+                    color: form.state ? '#fff' : 'rgba(255,255,255,0.5)',
+                    cursor: 'pointer',
+                  }}
+                  onFocus={e => { if (!errors.state) e.target.style.borderColor = 'var(--red)'; }}
+                  onBlur={e => { if (!errors.state) e.target.style.borderColor = 'rgba(255,255,255,0.1)'; }}
+                >
+                  <option value="" disabled>{t('statePlaceholder')}</option>
+                  {AU_STATES.map(({code, name}) => (
+                    <option key={code} value={code} style={{color: '#000'}}>{name} ({code})</option>
+                  ))}
+                </select>
+                {errors.state && <span style={errorStyle}>{errors.state}</span>}
+              </div>
+            )}
 
             {/* Email */}
             <div style={{marginBottom: '1rem'}}>
