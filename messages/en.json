@@ -287,18 +287,18 @@
       "cta": "Buy Now"
     },
     "monthly": {
-      "badge": "30-Day Trial",
-      "badgeNote": "Try free for 30 days",
+      "badge": "Free Download",
+      "badgeNote": "30 days, no limits",
       "price": "Free",
       "priceSuffix": "30 days, no limits",
       "features": [
         "All features unlocked for 30 days",
+        "Direct download, start instantly",
         "No subscription, no credit card",
-        "Request via the contact form",
         "Optional upgrade to a full license afterwards"
       ],
-      "cta": "Try now",
-      "disclaimer": "Request with no obligation — typical reply within 24 hours."
+      "cta": "Download now",
+      "disclaimer": "Direct download — no sign-up required."
     },
     "comparisonTable": {
       "title": "5-Year Cost Comparison",
@@ -332,11 +332,30 @@
   "finalCta": {
     "title": "Ready to save time?",
     "subtitle": "Start with PDR Kalk today and save hours every week.",
-    "cta": "Try now"
+    "cta": "Download now"
+  },
+  "download": {
+    "title": "Try free for 30 days",
+    "subtitle": "Direct download — no sign-up, no credit card. Full feature set for 30 days.",
+    "windows": {
+      "eyebrow": "For PC & laptop",
+      "name": "Microsoft Windows",
+      "system": "Windows 10 or 11",
+      "version": "Version 4.24.56",
+      "button": "Windows installer"
+    },
+    "android": {
+      "eyebrow": "For tablet",
+      "name": "Android",
+      "system": "Android 10 or newer",
+      "version": "Version 4.24.62",
+      "button": "Android APK"
+    },
+    "footnote": "Apple devices and smartphones are not supported."
   },
   "contact": {
-    "title": "Request a Free Trial",
-    "subtitle": "Fill in your details below — we'll get back to you within 24 hours. Free, no commitment.",
+    "title": "Buy a Licence",
+    "subtitle": "Tried PDR Kalk and ready to buy? Fill in your details below — we'll get back to you within 24 hours.",
     "platformNoticeTitle": "Which devices are supported?",
     "platformNoticeBody": "PDR Kalk runs on Microsoft and Android tablets as well as on PCs and laptops. All features are available on Microsoft devices; Android tablets offer the full feature set except for multi-device synchronisation via a shared work folder. Apple devices and smartphones are not supported.",
     "firstNamePlaceholder": "First name *",
@@ -369,7 +388,7 @@
     "platform_both": "Both",
     "messagePlaceholder": "Notes or questions (optional)",
     "messageLabel": "Notes",
-    "submit": "Request Trial",
+    "submit": "Request Licence",
     "errorFirstNameRequired": "First name required",
     "errorLastNameRequired": "Last name required",
     "errorCompanyRequired": "Company required",

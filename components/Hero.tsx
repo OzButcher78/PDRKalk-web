@@ -136,7 +136,7 @@ export default function Hero() {
           {/* CTAs — two real buttons */}
           <div className="fade-up-4" style={{display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
             <a
-              href="#contact"
+              href="#download"
               className="btn-red"
               style={{
                 fontFamily: 'Barlow Condensed, sans-serif',

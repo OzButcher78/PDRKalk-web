@@ -2,8 +2,6 @@
 
 import {useTranslations} from 'next-intl';
 
-const BUY_URL = process.env.NEXT_PUBLIC_BUY_URL || '#pricing';
-
 export default function FinalCTA() {
   const t = useTranslations('finalCta');
 
@@ -54,7 +52,7 @@ export default function FinalCTA() {
 
         {/* Big CTA */}
         <a
-          href={BUY_URL}
+          href="#download"
           className="btn-red fade-up-2"
           style={{
             fontFamily: 'Barlow Condensed, sans-serif',

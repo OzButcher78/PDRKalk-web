@@ -350,7 +350,7 @@ export default function Pricing() {
 
               {/* Ghost CTA */}
               <a
-                href="#contact"
+                href="#download"
                 className="btn-ghost-dark"
                 style={{
                   display: 'block',

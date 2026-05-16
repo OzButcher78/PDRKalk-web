@@ -202,18 +202,18 @@
       "cta": "Acheter maintenant"
     },
     "monthly": {
-      "badge": "Essai 30 jours",
-      "badgeNote": "Essayez gratuitement pendant 30 jours",
+      "badge": "Téléchargement gratuit",
+      "badgeNote": "30 jours sans limite",
       "price": "Gratuit",
       "priceSuffix": "30 jours sans limite",
       "features": [
         "Toutes les fonctionnalités débloquées pendant 30 jours",
+        "Téléchargement direct, démarrage immédiat",
         "Pas d'abonnement, pas de carte bancaire",
-        "Demande via le formulaire de contact",
         "Mise à niveau optionnelle vers une licence complète"
       ],
-      "cta": "Essayer maintenant",
-      "disclaimer": "Demande sans engagement — réponse généralement sous 24 heures."
+      "cta": "Télécharger maintenant",
+      "disclaimer": "Téléchargement direct — aucune inscription requise."
     },
     "comparisonTable": {
       "title": "Comparaison des coûts sur 5 ans",
@@ -243,11 +243,30 @@
   "finalCta": {
     "title": "Prêt à gagner du temps ?",
     "subtitle": "Commencez avec PDR Kalk dès aujourd'hui et économisez des heures chaque semaine.",
-    "cta": "Essayer maintenant"
+    "cta": "Télécharger maintenant"
+  },
+  "download": {
+    "title": "Essayez gratuitement 30 jours",
+    "subtitle": "Téléchargement direct — sans inscription, sans carte bancaire. Toutes les fonctionnalités pendant 30 jours.",
+    "windows": {
+      "eyebrow": "Pour PC & portable",
+      "name": "Microsoft Windows",
+      "system": "Windows 10 ou 11",
+      "version": "Version 4.24.56",
+      "button": "Installateur Windows"
+    },
+    "android": {
+      "eyebrow": "Pour tablette",
+      "name": "Android",
+      "system": "Android 10 ou plus récent",
+      "version": "Version 4.24.62",
+      "button": "APK Android"
+    },
+    "footnote": "Les appareils Apple et les smartphones ne sont pas pris en charge."
   },
   "contact": {
-    "title": "Demander un essai",
-    "subtitle": "Remplissez vos coordonnées ci-dessous — nous vous répondrons sous 24 heures. Gratuit et sans engagement.",
+    "title": "Acheter une licence",
+    "subtitle": "Vous avez testé PDR Kalk et souhaitez acheter une licence ? Remplissez vos coordonnées ci-dessous — nous vous répondrons sous 24 heures.",
     "platformNoticeTitle": "Quels appareils sont pris en charge ?",
     "platformNoticeBody": "PDR Kalk fonctionne sur les tablettes Microsoft et Android ainsi que sur PC et ordinateurs portables. Les appareils Apple et les smartphones ne sont pas pris en charge.",
     "firstNamePlaceholder": "Prénom *",
@@ -276,7 +295,7 @@
     "websiteLabel": "Site web",
     "messagePlaceholder": "Remarques ou questions (facultatif)",
     "messageLabel": "Remarques",
-    "submit": "Demander un essai",
+    "submit": "Demander une licence",
     "errorFirstNameRequired": "Prénom requis",
     "errorLastNameRequired": "Nom requis",
     "errorCompanyRequired": "Société requise",

@@ -8,6 +8,7 @@ import Screenshots from '@/components/Screenshots';
 import SecondaryFeatures from '@/components/SecondaryFeatures';
 import Comparison from '@/components/Comparison';
 import Pricing from '@/components/Pricing';
+import Download from '@/components/Download';
 import Testimonial from '@/components/Testimonial';
 import FinalCTA from '@/components/FinalCTA';
 import Contact from '@/components/Contact';
@@ -39,6 +40,7 @@ export default async function Home({params}: Props) {
         <SecondaryFeatures />
         <Comparison />
         <Pricing />
+        <Download />
         <Testimonial />
         <FinalCTA />
         <Contact />

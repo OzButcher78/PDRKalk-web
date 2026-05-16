@@ -287,18 +287,18 @@
       "cta": "Jetzt kaufen"
     },
     "monthly": {
-      "badge": "30-Tage Trial",
-      "badgeNote": "30 Tage kostenlos testen",
+      "badge": "Gratis Download",
+      "badgeNote": "30 Tage uneingeschränkt",
       "price": "Gratis",
       "priceSuffix": "30 Tage uneingeschränkt",
       "features": [
         "Alle Funktionen für 30 Tage freigeschaltet",
+        "Direkt herunterladen, sofort starten",
         "Kein Abo, keine Kreditkarte",
-        "Anfrage über das Kontaktformular",
         "Anschliessend optional Upgrade auf Dauerlizenz"
       ],
-      "cta": "Jetzt Testen",
-      "disclaimer": "Unverbindlich anfragen — Antwort meist innert 24 Stunden."
+      "cta": "Jetzt herunterladen",
+      "disclaimer": "Direkt-Download — keine Anmeldung erforderlich."
     },
     "comparisonTable": {
       "title": "5-Jahres-Kostenvergleich",
@@ -332,11 +332,30 @@
   "finalCta": {
     "title": "Bereit, Zeit zu sparen?",
     "subtitle": "Starten Sie noch heute mit PDR Kalk und sparen Sie Stunden pro Woche.",
-    "cta": "Jetzt testen"
+    "cta": "Jetzt herunterladen"
+  },
+  "download": {
+    "title": "30 Tage gratis ausprobieren",
+    "subtitle": "Direkt herunterladen — keine Anmeldung, keine Kreditkarte. Voller Funktionsumfang für 30 Tage.",
+    "windows": {
+      "eyebrow": "Für PC & Laptop",
+      "name": "Microsoft Windows",
+      "system": "Windows 10 oder 11",
+      "version": "Version 4.24.56",
+      "button": "Windows-Installer"
+    },
+    "android": {
+      "eyebrow": "Für Tablet",
+      "name": "Android",
+      "system": "Android 10 oder neuer",
+      "version": "Version 4.24.62",
+      "button": "Android-APK"
+    },
+    "footnote": "Apple-Geräte und Smartphones werden nicht unterstützt."
   },
   "contact": {
-    "title": "Trial anfordern",
-    "subtitle": "Tragen Sie Ihre Daten unten ein — wir melden uns meist innert 24 Stunden bei Ihnen. Kostenlos und unverbindlich.",
+    "title": "Lizenz kaufen",
+    "subtitle": "Sie haben PDR Kalk getestet und möchten eine Lizenz erwerben? Tragen Sie Ihre Daten unten ein — wir melden uns meist innert 24 Stunden bei Ihnen.",
     "platformNoticeTitle": "Welche Geräte werden unterstützt?",
     "platformNoticeBody": "PDR Kalk läuft auf Microsoft- und Android-Tablets sowie auf PCs und Laptops. Alle Funktionen stehen auf Microsoft-Geräten zur Verfügung; Android-Tablets bieten den vollen Funktionsumfang mit Ausnahme der Mehrgeräte-Synchronisation über gemeinsamen Arbeitsordner. Apple-Geräte und Smartphones werden nicht unterstützt.",
     "firstNamePlaceholder": "Vorname *",
@@ -369,7 +388,7 @@
     "platform_both": "Beides",
     "messagePlaceholder": "Anmerkungen oder Fragen (optional)",
     "messageLabel": "Anmerkungen",
-    "submit": "Trial anfordern",
+    "submit": "Lizenz anfragen",
     "errorFirstNameRequired": "Vorname benötigt",
     "errorLastNameRequired": "Nachname benötigt",
     "errorCompanyRequired": "Firma benötigt",

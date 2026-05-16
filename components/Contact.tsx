@@ -72,7 +72,7 @@ export default function Contact() {
 
     try {
       const payload = {
-        _subject: `[Trial Request] ${form.firstName} ${form.lastName} — ${form.company}`,
+        _subject: `[Licence Enquiry] ${form.firstName} ${form.lastName} — ${form.company}`,
         firstName: form.firstName,
         lastName: form.lastName,
         company: form.company,
