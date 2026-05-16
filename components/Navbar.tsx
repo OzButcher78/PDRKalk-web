@@ -297,7 +297,7 @@ export default function Navbar() {
         <div style={{
           background: 'var(--ink)',
           borderTop: '1px solid rgba(232,0,29,0.2)',
-          padding: '0.75rem 1.5rem 1.25rem',
+          padding: '0.4rem 1.25rem 0.85rem',
         }}>
           {navLinks.map(link => (
             <a
@@ -309,14 +309,14 @@ export default function Navbar() {
                 alignItems: 'center',
                 fontFamily: 'Barlow Condensed, sans-serif',
                 fontWeight: 700,
-                fontSize: '1.1rem',
-                letterSpacing: '0.08em',
+                fontSize: '0.95rem',
+                letterSpacing: '0.06em',
                 textTransform: 'uppercase',
                 color: '#fff',
                 textDecoration: 'none',
-                padding: '0.85rem 0',
+                padding: '0.55rem 0',
                 borderBottom: '1px solid rgba(255,255,255,0.07)',
-                minHeight: '48px',
+                minHeight: '40px',
               }}
             >
               {link.label}
@@ -331,15 +331,15 @@ export default function Navbar() {
               textAlign: 'center',
               fontFamily: 'Barlow Condensed, sans-serif',
               fontWeight: 800,
-              fontSize: '1rem',
-              letterSpacing: '0.1em',
+              fontSize: '0.95rem',
+              letterSpacing: '0.08em',
               textTransform: 'uppercase',
               color: '#fff',
               background: 'var(--red)',
               textDecoration: 'none',
-              padding: '0.85rem 1rem',
+              padding: '0.65rem 1rem',
               borderRadius: '5px',
-              marginTop: '1rem',
+              marginTop: '0.75rem',
               transition: 'background 0.2s',
             }}
           >

@@ -192,10 +192,10 @@ export default function Hero() {
               </span>
             ))}
 
-            <span style={TRUST_ITEM_STYLE}>
+            <span className="regions-row" style={TRUST_ITEM_STYLE}>
               <span className="trust-dot" style={TRUST_DOT_STYLE}/>
               {t('regionsLabel')}
-              <span style={{display: 'inline-flex', gap: '0.3rem', alignItems: 'center'}}>
+              <span style={{display: 'inline-flex', gap: '0.3rem', alignItems: 'center', flexShrink: 0}}>
                 {REGION_FLAGS.map((code) => {
                   const label = country(`country_${code}` as 'country_ch' | 'country_de' | 'country_at');
                   return (
@@ -217,7 +217,7 @@ export default function Hero() {
                   );
                 })}
               </span>
-              <span style={{
+              <span className="regions-more" style={{
                 textTransform: 'none',
                 letterSpacing: 0,
                 fontWeight: 400,
@@ -339,6 +339,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 download
+                className="hero-dl-link"
                 style={{
                   fontFamily: 'Barlow Condensed, sans-serif',
                   fontWeight: 700,
@@ -376,6 +377,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 download
+                className="hero-dl-link"
                 style={{
                   fontFamily: 'Barlow Condensed, sans-serif',
                   fontWeight: 700,

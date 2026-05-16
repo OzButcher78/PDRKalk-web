@@ -328,8 +328,55 @@ body {
   /* Reduce hero grid side padding */
   .hero-grid { padding-left: 1rem !important; padding-right: 1rem !important; }
 
-  /* Constrain navbar logo */
-  .nav-logo img { max-width: 150px !important; width: auto !important; height: auto !important; }
+  /* Constrain navbar logo so hamburger fits */
+  .nav-logo img { max-width: 130px !important; width: auto !important; height: auto !important; }
+
+  /* Hero: let "weitere auf Anfrage" wrap below the flags */
+  .regions-row  { flex-wrap: wrap; row-gap: 0.15rem; }
+  .regions-more { flex-basis: 100%; margin-top: 0.1rem; }
+
+  /* Hero: center the trial download link labels under each platform badge */
+  .hero-dl-link { display: inline-block; text-align: center; max-width: 100%; }
+
+  /* TimeSavings: trim section side padding so 2x2 bubble grid fits */
+  .timesavings-section { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+
+  /* SecondaryFeatures: smaller toggle text + tighter expanded indent */
+  .sf-toggle-button { padding: 0.85rem 0.75rem !important; gap: 0.5rem !important; }
+  .sf-toggle-title  { font-size: 0.82rem !important; letter-spacing: 0.02em !important; }
+  .sf-toggle-body   { padding: 0 0.85rem 1rem 0.85rem !important; }
+
+  /* FinalCTA: keep "Jetzt herunterladen" button inside viewport */
+  .finalcta-btn {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: normal;
+  }
+
+  /* Download section: full-width single column + button stays in bounds */
+  .download-section { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
+  .download-cards   { grid-template-columns: 1fr !important; }
+  .download-btn {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: normal;
+  }
+
+  /* Contact: stack the "Welche Geräte" info icon above the text so it isn't squished */
+  .platform-notice {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.5rem !important;
+    padding: 0.9rem 1rem !important;
+  }
+
+  /* Footer: center logo column + flag row */
+  .footer-brand { align-items: center !important; text-align: center; }
+  .footer-flags { justify-content: center !important; }
 }
 
 /* Hero: iOS Safari 100vh fix — 100svh excludes browser toolbar */

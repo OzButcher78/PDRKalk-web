@@ -104,6 +104,7 @@ export default function TimeSavings() {
     <section
       ref={sectionRef}
       id="timesavings"
+      className="timesavings-section"
       style={{
         background: 'linear-gradient(180deg, var(--ink) 0%, #0d1425 100%)',
         padding: '4rem 1.5rem',

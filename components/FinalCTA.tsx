@@ -53,7 +53,7 @@ export default function FinalCTA() {
         {/* Big CTA */}
         <a
           href="#download"
-          className="btn-red fade-up-2"
+          className="btn-red fade-up-2 finalcta-btn"
           style={{
             fontFamily: 'Barlow Condensed, sans-serif',
             fontWeight: 800,

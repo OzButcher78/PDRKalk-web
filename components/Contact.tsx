@@ -229,7 +229,7 @@ export default function Contact() {
         </div>
 
         {!submitted && (
-          <div style={{
+          <div className="platform-notice" style={{
             background: 'rgba(37,99,235,0.08)',
             border: '1px solid rgba(37,99,235,0.3)',
             borderRadius: '10px',

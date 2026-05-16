@@ -25,7 +25,7 @@ export default function Download() {
   return (
     <section
       id="download"
-      className="section-pad"
+      className="section-pad download-section"
       style={{
         background: 'var(--ink)',
         padding: '6rem 1.5rem',
@@ -138,7 +138,7 @@ export default function Download() {
                 target="_blank"
                 rel="noopener noreferrer"
                 download
-                className="btn-red"
+                className="btn-red download-btn"
                 style={{
                   display: 'inline-block',
                   fontFamily: 'Barlow Condensed, sans-serif',

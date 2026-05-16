@@ -118,6 +118,7 @@ export default function SecondaryFeatures() {
                 <button
                   onClick={() => toggle(i)}
                   aria-expanded={isOpen}
+                  className="sf-toggle-button"
                   style={{
                     width: '100%',
                     display: 'flex',
@@ -137,7 +138,7 @@ export default function SecondaryFeatures() {
                   </span>
 
                   {/* Title */}
-                  <span style={{
+                  <span className="sf-toggle-title" style={{
                     fontFamily: 'Barlow Condensed, sans-serif',
                     fontWeight: 700,
                     fontSize: '1rem',
@@ -146,6 +147,7 @@ export default function SecondaryFeatures() {
                     color: '#fff',
                     textAlign: 'left',
                     flex: 1,
+                    minWidth: 0,
                   }}>
                     {group.heading}
                   </span>
@@ -167,7 +169,7 @@ export default function SecondaryFeatures() {
                 {/* Body */}
                 <div className={`accordion-body${isOpen ? ' open' : ''}`}>
                   <div>
-                    <ul style={{
+                    <ul className="sf-toggle-body" style={{
                       listStyle: 'none',
                       margin: 0,
                       padding: '0 1.25rem 1.25rem 3.25rem',

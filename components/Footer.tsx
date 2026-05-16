@@ -35,7 +35,7 @@ export default function Footer() {
         }}
       >
         {/* Brand */}
-        <div style={{display: 'flex', flexDirection: 'column', gap: '0.5rem'}}>
+        <div className="footer-brand" style={{display: 'flex', flexDirection: 'column', gap: '0.5rem'}}>
           <Image
             src="/logo.png"
             alt="PDR Kalk Logo"
@@ -103,6 +103,7 @@ export default function Footer() {
           </p>
           <div
             aria-label={t('regions')}
+            className="footer-flags"
             style={{
               display: 'flex',
               gap: '0.4rem',
