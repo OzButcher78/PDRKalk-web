@@ -14,7 +14,7 @@ No linter or test runner is configured.
 
 ## Architecture
 
-This is a single-page marketing website for PDR Kalk, a Swiss PDR cost calculator desktop app. The site is a Next.js 16 App Router project deployed on Vercel with full i18n support (German default, English).
+This is a single-page marketing website for PDR Kalk, a Swiss PDR cost calculator desktop app. The site is a Next.js 16 App Router project deployed on Cloudflare with full i18n support (German default, English).
 
 ### Routing & i18n
 

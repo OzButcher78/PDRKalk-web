@@ -1,7 +1,8 @@
 'use client';
 
-import {useTranslations} from 'next-intl';
+import {useTranslations, useLocale} from 'next-intl';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const REGION_FLAGS = ['ch', 'de', 'at'] as const;
 
@@ -9,11 +10,12 @@ export default function Footer() {
   const t = useTranslations('footer');
   const nav = useTranslations('nav');
   const country = useTranslations('contact');
+  const locale = useLocale();
 
-  const links = [
-    {key: 'features' as const, href: '#features'},
-    {key: 'pricing'  as const, href: '#pricing'},
-    {key: 'contact'  as const, href: '#contact'},
+  const links: Array<{key: 'features' | 'pricing' | 'contact'; href: string}> = [
+    {key: 'features', href: '#features'},
+    {key: 'pricing',  href: '#pricing'},
+    {key: 'contact',  href: '#contact'},
   ];
 
   return (
@@ -80,6 +82,23 @@ export default function Footer() {
               {nav(key)}
             </a>
           ))}
+          <Link
+            href={`/${locale}/privacy/`}
+            className="footer-link"
+            style={{
+              fontFamily: 'Barlow Condensed, sans-serif',
+              fontWeight: 600,
+              fontSize: '0.85rem',
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              color: 'var(--steel)',
+              textDecoration: 'none',
+              transition: 'color 0.2s',
+              padding: '0.25rem 0',
+            }}
+          >
+            {t('links.privacy')}
+          </Link>
         </nav>
 
         {/* Copyright + tech note */}

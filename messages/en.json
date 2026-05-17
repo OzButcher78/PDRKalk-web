@@ -437,6 +437,43 @@
     "emailUser": "info",
     "emailDomain": "pdrkalk.ch"
   },
+  "privacy": {
+    "title": "Privacy notice — online trial activation",
+    "lastUpdated": "Last updated: 16 May 2026",
+    "intro": "When you first launch PDR Kalk and choose “Start 30-day trial”, we send a small amount of data once to our server to activate the trial. This prevents the same trial from being started repeatedly on a single device. The trial itself then runs fully offline — no further data is transmitted.",
+    "dataCollectedTitle": "What data we transmit",
+    "dataCollectedIntro": "On first-time activation, PDR Kalk sends to api.pdrkalk.ch:",
+    "dataCollectedItems": [
+      "A device identifier as a hash value (HMAC-SHA256, one-way — cannot be reversed to plaintext)",
+      "Platform (Windows or Android) and app version",
+      "A truncated IP address (IPv4 /24, IPv6 /48 — e.g. 203.0.113.0/24 instead of 203.0.113.42)",
+      "Operating system major version (e.g. “Windows 11” or “Android 14” — no detailed user-agent data)",
+      "Timestamp of the activation",
+      "After the subsequent region selection: the chosen region (CH, DE or AT)"
+    ],
+    "dataNotCollectedTitle": "What we do NOT transmit:",
+    "dataNotCollectedItems": [
+      "No name, email address or postal address",
+      "No company, customer, report or invoice data",
+      "No full IP address",
+      "No telemetry or usage data during the trial",
+      "No cookies or tracking IDs"
+    ],
+    "purposeTitle": "Purpose and legal basis",
+    "purposeBody": "The transmitted data is used solely to enforce one trial per device (abuse prevention). The legal basis is our legitimate interest in protecting against licence abuse under Art. 6(1)(f) GDPR or Art. 31(2)(d) revFADP (Switzerland).",
+    "retentionTitle": "Retention period",
+    "retentionBody": "The activation record is stored during the active trial (30 days) and for 30 days after expiry. After that, the truncated IP address is removed from the record. The device-identifier hash is kept permanently for abuse-prevention purposes — it contains no directly personal data.",
+    "processorTitle": "Data processor",
+    "processorBody": "Server infrastructure: Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA. Cloudflare is certified under the EU-US Data Privacy Framework (DPF). The database is configured in Cloudflare’s WEUR cluster (Frankfurt / Amsterdam); activation data is therefore normally processed exclusively within the EU.",
+    "rightsTitle": "Your rights (access, deletion, objection)",
+    "rightsBody": "You have the right to access, rectification, deletion, restriction of processing and objection. To exercise these rights, contact us by email at:",
+    "rightsContact": "dsr@pdrkalk.ch",
+    "rightsContactNote": "Please include your activation token (visible in the app’s licence dialog) so we can locate your record unambiguously.",
+    "fingerprintTitle": "Technical note: device drift",
+    "fingerprintBody": "On Windows 11 with MAC-address randomisation enabled, the device identifier may change over time. In rare cases this means the same device is recognised as a new one after a reinstall. If you need a legitimate second trial (e.g. after a hardware swap or restore), contact us at info@pdrkalk.ch and we will unlock it manually.",
+    "appHelpTitle": "In-app help",
+    "appHelpBody": "A short summary of this information is also available directly in PDR Kalk under “Help → Trial privacy”."
+  },
   "footer": {
     "company": "Balmer Storm Solutions",
     "tagline": "Made in Switzerland.",
@@ -447,7 +484,8 @@
     "links": {
       "features": "Features",
       "pricing": "Pricing",
-      "contact": "Contact"
+      "contact": "Contact",
+      "privacy": "Privacy"
     }
   }
 }

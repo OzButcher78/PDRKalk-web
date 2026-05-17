@@ -437,6 +437,43 @@
     "emailUser": "info",
     "emailDomain": "pdrkalk.ch"
   },
+  "privacy": {
+    "title": "Datenschutzerklärung — Online-Trial-Aktivierung",
+    "lastUpdated": "Stand: 16. Mai 2026",
+    "intro": "Wenn Sie PDR Kalk zum ersten Mal starten und „30 Tage testen“ wählen, übermitteln wir einmalig eine kleine Datenmenge an unseren Server, um die Trial-Version zu aktivieren. Damit verhindern wir, dass dieselbe Trial auf einem Gerät mehrfach hintereinander gestartet werden kann. Die Trial-Nutzung selbst läuft anschliessend vollständig offline — es findet keine weitere Übertragung statt.",
+    "dataCollectedTitle": "Welche Daten werden übermittelt?",
+    "dataCollectedIntro": "Bei der einmaligen Aktivierung sendet PDR Kalk an api.pdrkalk.ch:",
+    "dataCollectedItems": [
+      "Gerätekennung als Hashwert (HMAC-SHA256, einseitig — kein Klartext-Rückschluss möglich)",
+      "Plattform (Windows oder Android) und App-Version",
+      "Verkürzte IP-Adresse (IPv4 /24, IPv6 /48 — z. B. 203.0.113.0/24 statt 203.0.113.42)",
+      "Betriebssystem-Hauptversion (z. B. „Windows 11“ oder „Android 14“ — keine detaillierten User-Agent-Daten)",
+      "Zeitstempel der Aktivierung",
+      "Nach der anschliessenden Region-Auswahl: die gewählte Region (CH, DE oder AT)"
+    ],
+    "dataNotCollectedTitle": "Was wir NICHT übermitteln:",
+    "dataNotCollectedItems": [
+      "Kein Name, keine E-Mail-Adresse, keine Adresse",
+      "Keine Firmen-, Kunden-, Rapport- oder Rechnungsdaten",
+      "Keine vollständige IP-Adresse",
+      "Keine Telemetrie oder Nutzungsdaten während der Trial",
+      "Keine Cookies oder Tracking-IDs"
+    ],
+    "purposeTitle": "Zweck und Rechtsgrundlage",
+    "purposeBody": "Die übermittelten Daten dienen ausschliesslich dazu, eine Trial-Version pro Gerät durchzusetzen (Missbrauchsvermeidung). Rechtsgrundlage ist unser berechtigtes Interesse am Schutz vor Lizenzmissbrauch nach Art. 6 Abs. 1 lit. f DSGVO bzw. Art. 31 Abs. 2 lit. d revDSG (Schweiz).",
+    "retentionTitle": "Aufbewahrungsdauer",
+    "retentionBody": "Der Aktivierungs-Eintrag wird während der laufenden Trial (30 Tage) sowie für 30 Tage nach Trial-Ablauf gespeichert. Danach wird die verkürzte IP-Adresse aus dem Datensatz entfernt. Die Gerätekennung als Hashwert bleibt zur Missbrauchsvermeidung dauerhaft erhalten — sie enthält keine direkt personenbezogenen Daten.",
+    "processorTitle": "Auftragsverarbeiter",
+    "processorBody": "Server-Infrastruktur: Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA. Cloudflare ist nach dem EU-US Data Privacy Framework (DPF) zertifiziert. Die Datenbank ist im Cloudflare-Rechenzentrums-Cluster „WEUR“ (Frankfurt / Amsterdam) konfiguriert; die Aktivierungsdaten werden daher im Regelfall ausschliesslich innerhalb der EU verarbeitet.",
+    "rightsTitle": "Ihre Rechte (Auskunft, Löschung, Widerspruch)",
+    "rightsBody": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung sowie Widerspruch. Wenden Sie sich dafür per E-Mail an:",
+    "rightsContact": "dsr@pdrkalk.ch",
+    "rightsContactNote": "Bitte geben Sie idealerweise Ihren Aktivierungs-Token an (sichtbar im Lizenz-Dialog der App), damit wir Ihren Eintrag eindeutig zuordnen können.",
+    "fingerprintTitle": "Technischer Hinweis: Geräte-Drift",
+    "fingerprintBody": "Auf Windows 11 mit aktiviertem MAC-Adress-Zufallsgenerator kann sich die Gerätekennung im Laufe der Zeit ändern. In seltenen Fällen kann es dadurch vorkommen, dass dasselbe Gerät nach einer Neuinstallation als anderes Gerät erkannt wird. Wenn Sie eine berechtigte zweite Trial benötigen (z. B. nach Hardware-Tausch oder Wiederherstellung), kontaktieren Sie uns bitte unter info@pdrkalk.ch — wir schalten Sie manuell frei.",
+    "appHelpTitle": "In-App-Hilfe",
+    "appHelpBody": "Eine kurze Zusammenfassung dieser Informationen finden Sie auch direkt in PDR Kalk unter „Hilfe → Datenschutz Testversion“."
+  },
   "footer": {
     "company": "Balmer Storm Solutions",
     "tagline": "Entwickelt in der Schweiz.",
@@ -447,7 +484,8 @@
     "links": {
       "features": "Funktionen",
       "pricing": "Preise",
-      "contact": "Kontakt"
+      "contact": "Kontakt",
+      "privacy": "Datenschutz"
     }
   }
 }

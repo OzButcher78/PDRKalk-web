@@ -343,6 +343,43 @@
     "emailUser": "info",
     "emailDomain": "pdrkalk.ch"
   },
+  "privacy": {
+    "title": "Politique de confidentialité — activation en ligne de la version d'essai",
+    "lastUpdated": "Dernière mise à jour : 16 mai 2026",
+    "intro": "Lorsque vous démarrez PDR Kalk pour la première fois et choisissez « Tester 30 jours », nous envoyons une seule fois une petite quantité de données à notre serveur pour activer la version d'essai. Cela empêche de relancer la même version d'essai de manière répétée sur un même appareil. L'utilisation de la version d'essai elle-même se déroule ensuite entièrement hors ligne — aucune autre transmission n'a lieu.",
+    "dataCollectedTitle": "Quelles données sont transmises ?",
+    "dataCollectedIntro": "Lors de l'activation unique, PDR Kalk envoie à api.pdrkalk.ch :",
+    "dataCollectedItems": [
+      "Un identifiant d'appareil sous forme de valeur de hachage (HMAC-SHA256, à sens unique — non réversible en clair)",
+      "Plateforme (Windows ou Android) et version de l'application",
+      "Une adresse IP tronquée (IPv4 /24, IPv6 /48 — par ex. 203.0.113.0/24 au lieu de 203.0.113.42)",
+      "Version majeure du système d'exploitation (par ex. « Windows 11 » ou « Android 14 » — sans données détaillées de user-agent)",
+      "Horodatage de l'activation",
+      "Après la sélection de région qui suit : la région choisie (CH, DE ou AT)"
+    ],
+    "dataNotCollectedTitle": "Ce que nous NE transmettons PAS :",
+    "dataNotCollectedItems": [
+      "Aucun nom, adresse e-mail ou adresse postale",
+      "Aucune donnée d'entreprise, client, rapport ou facture",
+      "Aucune adresse IP complète",
+      "Aucune télémétrie ou donnée d'utilisation pendant la période d'essai",
+      "Aucun cookie ni identifiant de suivi"
+    ],
+    "purposeTitle": "Finalité et base juridique",
+    "purposeBody": "Les données transmises servent exclusivement à faire respecter une version d'essai par appareil (prévention des abus). La base juridique est notre intérêt légitime à nous protéger contre les abus de licence au sens de l'art. 6 al. 1 let. f RGPD ou de l'art. 31 al. 2 let. d nLPD (Suisse).",
+    "retentionTitle": "Durée de conservation",
+    "retentionBody": "L'enregistrement d'activation est conservé pendant la période d'essai active (30 jours) et pendant 30 jours après son expiration. Au-delà, l'adresse IP tronquée est retirée de l'enregistrement. Le hachage de l'identifiant d'appareil est conservé de manière permanente à des fins de prévention des abus — il ne contient aucune donnée directement personnelle.",
+    "processorTitle": "Sous-traitant",
+    "processorBody": "Infrastructure serveur : Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis. Cloudflare est certifié dans le cadre du EU-US Data Privacy Framework (DPF). La base de données est configurée dans le cluster « WEUR » de Cloudflare (Francfort / Amsterdam) ; les données d'activation sont donc en règle générale traitées exclusivement au sein de l'UE.",
+    "rightsTitle": "Vos droits (accès, suppression, opposition)",
+    "rightsBody": "Vous disposez d'un droit d'accès, de rectification, de suppression, de limitation du traitement et d'opposition. Pour exercer ces droits, contactez-nous par e-mail à :",
+    "rightsContact": "dsr@pdrkalk.ch",
+    "rightsContactNote": "Veuillez indiquer si possible votre jeton d'activation (visible dans la boîte de dialogue de licence de l'application) afin que nous puissions identifier votre enregistrement sans ambiguïté.",
+    "fingerprintTitle": "Note technique : dérive d'identifiant",
+    "fingerprintBody": "Sur Windows 11 avec la randomisation d'adresse MAC activée, l'identifiant d'appareil peut changer au fil du temps. Dans de rares cas, un même appareil peut être reconnu comme un nouvel appareil après une réinstallation. Si vous avez besoin d'une seconde version d'essai légitime (par ex. après un remplacement de matériel ou une restauration), contactez-nous à info@pdrkalk.ch — nous procéderons à un déblocage manuel.",
+    "appHelpTitle": "Aide intégrée",
+    "appHelpBody": "Un résumé de ces informations est également disponible directement dans PDR Kalk sous « Aide → Confidentialité de la version d'essai »."
+  },
   "footer": {
     "company": "Balmer Storm Solutions",
     "tagline": "Développé en Suisse.",
@@ -353,7 +390,8 @@
     "links": {
       "features": "Fonctionnalités",
       "pricing": "Tarifs",
-      "contact": "Contact"
+      "contact": "Contact",
+      "privacy": "Confidentialité"
     }
   }
 }
