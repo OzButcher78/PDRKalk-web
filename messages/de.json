@@ -26,8 +26,8 @@
     "regionsMore": "weitere auf Anfrage",
     "demoComingSoon": "Demo demnächst verfügbar",
     "priceCallout": {
-      "headline": "CHF 550 — FÜR 5 JAHRE!",
-      "monthly": "ca. 9.- pro Monat"
+      "headline": "CHF 550 (≈ EUR 580) — FÜR 5 JAHRE!",
+      "monthly": "ca. 9.- (≈ EUR 10) pro Monat"
     }
   },
   "timeSavings": {
@@ -272,9 +272,9 @@
     "lifetime": {
       "badge": "EMPFOHLEN",
       "badgeNote": "Einmalzahlung — Kein Abo",
-      "price": "CHF 550",
+      "price": "CHF 550 (≈ EUR 580)",
       "priceSuffix": "FÜR 5 JAHRE!",
-      "priceMonthly": "ca. 9.- pro Monat",
+      "priceMonthly": "ca. 9.- (≈ EUR 10) pro Monat",
       "features": [
         "Keine Abogebühren",
         "Keine Einrichtungsgebühren",

@@ -26,8 +26,8 @@
     "regionsMore": "more on request",
     "demoComingSoon": "Demo Coming Soon",
     "priceCallout": {
-      "headline": "CHF 550 — FOR 5 YEARS!",
-      "monthly": "approx. CHF 9/month"
+      "headline": "CHF 550 (≈ EUR 580) — FOR 5 YEARS!",
+      "monthly": "approx. CHF 9 (≈ EUR 10) /month"
     }
   },
   "timeSavings": {
@@ -272,9 +272,9 @@
     "lifetime": {
       "badge": "RECOMMENDED",
       "badgeNote": "One-Time Payment — No Subscription",
-      "price": "CHF 550",
+      "price": "CHF 550 (≈ EUR 580)",
       "priceSuffix": "FOR 5 YEARS!",
-      "priceMonthly": "approx. CHF 9/month",
+      "priceMonthly": "approx. CHF 9 (≈ EUR 10) /month",
       "features": [
         "No subscription fees",
         "No setup fees",
