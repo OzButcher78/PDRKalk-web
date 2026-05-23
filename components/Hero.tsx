@@ -291,7 +291,13 @@ export default function Hero() {
               textShadow: '0 0 10px rgba(52,211,153,0.55), 0 0 22px rgba(52,211,153,0.35)',
               lineHeight: 1.05,
             }}>
-              {t('priceCallout.headline')}
+              {t.rich('priceCallout.headline', {
+                eur: (chunks) => (
+                  <span style={{fontSize: '0.6em', fontWeight: 700, opacity: 0.8, letterSpacing: '0.02em'}}>
+                    {chunks}
+                  </span>
+                ),
+              })}
             </div>
             <div style={{
               fontFamily: 'Barlow, sans-serif',

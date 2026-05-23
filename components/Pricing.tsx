@@ -10,7 +10,6 @@ export default function Pricing() {
   const lifetime = t.raw('lifetime') as {
     badge: string;
     badgeNote: string;
-    price: string;
     priceSuffix: string;
     priceMonthly: string;
     features: string[];
@@ -128,7 +127,20 @@ export default function Pricing() {
                   letterSpacing: '-0.02em',
                   fontVariantNumeric: 'tabular-nums',
                 }}>
-                  {lifetime.price}
+                  {t.rich('lifetime.price', {
+                    eur: (chunks) => (
+                      <span style={{
+                        fontSize: '0.45em',
+                        fontWeight: 700,
+                        color: '#94a3b8',
+                        letterSpacing: '0.02em',
+                        marginLeft: '0.5em',
+                        verticalAlign: 'middle',
+                      }}>
+                        {chunks}
+                      </span>
+                    ),
+                  })}
                 </div>
                 <div style={{
                   fontFamily: 'Barlow Condensed, sans-serif',
