@@ -284,28 +284,45 @@ export default function Hero() {
             <div style={{
               fontFamily: 'Barlow Condensed, sans-serif',
               fontWeight: 900,
-              fontSize: 'clamp(1.6rem, 2.6vw, 2.1rem)',
+              fontSize: 'clamp(1.9rem, 3.2vw, 2.5rem)',
               color: '#34d399',
-              letterSpacing: '0.04em',
-              textTransform: 'uppercase',
+              letterSpacing: '0.02em',
               textShadow: '0 0 10px rgba(52,211,153,0.55), 0 0 22px rgba(52,211,153,0.35)',
-              lineHeight: 1.05,
+              lineHeight: 1,
+              fontVariantNumeric: 'tabular-nums',
             }}>
-              {t.rich('priceCallout.headline', {
-                eur: (chunks) => (
-                  <span style={{fontSize: '0.6em', fontWeight: 700, opacity: 0.8, letterSpacing: '0.02em'}}>
-                    {chunks}
-                  </span>
-                ),
-              })}
+              {t('priceCallout.amount')}
             </div>
             <div style={{
               fontFamily: 'Barlow, sans-serif',
               fontWeight: 600,
-              fontSize: '1rem',
-              color: 'var(--red)',
-              marginTop: '0.35rem',
-              letterSpacing: '0.04em',
+              fontSize: '0.95rem',
+              color: 'rgba(255,255,255,0.55)',
+              marginTop: '0.25rem',
+              letterSpacing: '0.02em',
+            }}>
+              {t('priceCallout.amountEur')}
+            </div>
+            <div style={{
+              fontFamily: 'Barlow Condensed, sans-serif',
+              fontWeight: 900,
+              fontSize: 'clamp(1.1rem, 1.8vw, 1.35rem)',
+              color: '#34d399',
+              letterSpacing: '0.06em',
+              textTransform: 'uppercase',
+              textShadow: '0 0 8px rgba(52,211,153,0.45)',
+              marginTop: '0.45rem',
+              lineHeight: 1.05,
+            }}>
+              {t('priceCallout.suffix')}
+            </div>
+            <div style={{
+              fontFamily: 'Barlow, sans-serif',
+              fontWeight: 500,
+              fontSize: '0.92rem',
+              color: 'rgba(255,255,255,0.75)',
+              marginTop: '0.6rem',
+              letterSpacing: '0.02em',
             }}>
               {t('priceCallout.monthly')}
             </div>
