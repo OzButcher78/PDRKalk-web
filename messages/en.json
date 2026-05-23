@@ -27,7 +27,7 @@
     "demoComingSoon": "Demo Coming Soon",
     "priceCallout": {
       "headline": "CHF 550 (≈ EUR 580) — FOR 5 YEARS!",
-      "monthly": "approx. CHF 9 (≈ EUR 10) /month"
+      "monthly": "approx. CHF 9 (≈ EUR 10) /month · excl. VAT"
     }
   },
   "timeSavings": {
@@ -274,7 +274,7 @@
       "badgeNote": "One-Time Payment — No Subscription",
       "price": "CHF 550 (≈ EUR 580)",
       "priceSuffix": "FOR 5 YEARS!",
-      "priceMonthly": "approx. CHF 9 (≈ EUR 10) /month",
+      "priceMonthly": "approx. CHF 9 (≈ EUR 10) /month · excl. VAT",
       "features": [
         "No subscription fees",
         "No setup fees",
@@ -321,7 +321,7 @@
         { "feature": "Total after 5 years",      "competitor": "EUR 5,799",            "pdrKalk": "CHF 550" }
       ],
       "closing": "Save thousands of CHF over five years compared to subscription-based systems.",
-      "note": "Optional feature enhancements or insurance updates may be offered for a small fee. All comparison figures are based on publicly available pricing information (as of spring 2026)."
+      "note": "All prices exclude VAT. Optional feature enhancements or insurance updates may be offered for a small fee. All comparison figures are based on publicly available pricing information (as of spring 2026)."
     }
   },
   "testimonial": {
