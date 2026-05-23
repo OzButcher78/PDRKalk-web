@@ -11,9 +11,9 @@ export default function Pricing() {
     badge: string;
     badgeNote: string;
     price: string;
-    priceEur: string;
     priceSuffix: string;
-    priceMonthly: string;
+    priceEur: string;
+    vatNote: string;
     features: string[];
     note: string;
     cta: string;
@@ -124,43 +124,37 @@ export default function Pricing() {
                   fontFamily: 'Barlow Condensed, sans-serif',
                   fontWeight: 900,
                   fontSize: 'clamp(2.5rem, 5vw, 4rem)',
-                  color: '#ffffff',
+                  color: '#34d399',
                   lineHeight: 1,
                   letterSpacing: '-0.02em',
                   fontVariantNumeric: 'tabular-nums',
+                  textShadow: '0 0 10px rgba(52,211,153,0.4), 0 0 22px rgba(52,211,153,0.25)',
                 }}>
                   {lifetime.price}
                 </div>
                 <div style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontWeight: 600,
-                  fontSize: '0.95rem',
-                  color: '#94a3b8',
-                  marginTop: '0.4rem',
-                  letterSpacing: '0.02em',
-                }}>
-                  {lifetime.priceEur}
-                </div>
-                <div style={{
                   fontFamily: 'Barlow Condensed, sans-serif',
                   fontWeight: 700,
-                  fontSize: '1rem',
+                  fontSize: 'clamp(1rem, 1.6vw, 1.2rem)',
                   color: '#34d399',
                   marginTop: '0.5rem',
                   textTransform: 'uppercase' as const,
-                  letterSpacing: '0.12em',
-                  textShadow: '0 0 8px rgba(52,211,153,0.55), 0 0 18px rgba(52,211,153,0.35)',
+                  letterSpacing: '0.08em',
+                  textShadow: '0 0 8px rgba(52,211,153,0.45)',
                 }}>
                   {lifetime.priceSuffix}
                 </div>
                 <div style={{
                   fontFamily: 'Barlow, sans-serif',
-                  fontSize: '0.78rem',
-                  color: '#64748b',
-                  marginTop: '0.4rem',
-                  fontStyle: 'italic',
+                  fontWeight: 500,
+                  fontSize: '0.85rem',
+                  color: '#94a3b8',
+                  marginTop: '1rem',
+                  letterSpacing: '0.02em',
+                  lineHeight: 1.4,
                 }}>
-                  {lifetime.priceMonthly}
+                  <div>{lifetime.priceEur}</div>
+                  <div>{lifetime.vatNote}</div>
                 </div>
               </div>
 

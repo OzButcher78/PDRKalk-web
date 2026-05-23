@@ -27,9 +27,9 @@
     "demoComingSoon": "Demo Coming Soon",
     "priceCallout": {
       "amount": "CHF 550",
+      "suffix": "FOR 5 YEARS! (approx. CHF 9/month)",
       "amountEur": "≈ EUR 580",
-      "suffix": "FOR 5 YEARS!",
-      "monthly": "approx. CHF 9 (≈ EUR 10) /month · excl. VAT"
+      "vatNote": "All prices exclude VAT."
     }
   },
   "timeSavings": {
@@ -275,9 +275,9 @@
       "badge": "RECOMMENDED",
       "badgeNote": "One-Time Payment — No Subscription",
       "price": "CHF 550",
+      "priceSuffix": "FOR 5 YEARS! (approx. CHF 9/month)",
       "priceEur": "≈ EUR 580",
-      "priceSuffix": "FOR 5 YEARS!",
-      "priceMonthly": "approx. CHF 9 (≈ EUR 10) /month · excl. VAT",
+      "vatNote": "All prices exclude VAT.",
       "features": [
         "No subscription fees",
         "No setup fees",

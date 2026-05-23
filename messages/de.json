@@ -27,9 +27,9 @@
     "demoComingSoon": "Demo demnächst verfügbar",
     "priceCallout": {
       "amount": "CHF 550",
+      "suffix": "FÜR 5 JAHRE! (ca. 9.-/Monat)",
       "amountEur": "≈ EUR 580",
-      "suffix": "FÜR 5 JAHRE!",
-      "monthly": "ca. 9.- (≈ EUR 10) pro Monat · exkl. MwSt"
+      "vatNote": "Alle Preise exkl. MwSt."
     }
   },
   "timeSavings": {
@@ -275,9 +275,9 @@
       "badge": "EMPFOHLEN",
       "badgeNote": "Einmalzahlung — Kein Abo",
       "price": "CHF 550",
+      "priceSuffix": "FÜR 5 JAHRE! (ca. 9.-/Monat)",
       "priceEur": "≈ EUR 580",
-      "priceSuffix": "FÜR 5 JAHRE!",
-      "priceMonthly": "ca. 9.- (≈ EUR 10) pro Monat · exkl. MwSt",
+      "vatNote": "Alle Preise exkl. MwSt.",
       "features": [
         "Keine Abogebühren",
         "Keine Einrichtungsgebühren",

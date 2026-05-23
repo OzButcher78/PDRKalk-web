@@ -284,7 +284,7 @@ export default function Hero() {
             <div style={{
               fontFamily: 'Barlow Condensed, sans-serif',
               fontWeight: 900,
-              fontSize: 'clamp(1.9rem, 3.2vw, 2.5rem)',
+              fontSize: 'clamp(2rem, 3.4vw, 2.7rem)',
               color: '#34d399',
               letterSpacing: '0.02em',
               textShadow: '0 0 10px rgba(52,211,153,0.55), 0 0 22px rgba(52,211,153,0.35)',
@@ -294,24 +294,14 @@ export default function Hero() {
               {t('priceCallout.amount')}
             </div>
             <div style={{
-              fontFamily: 'Barlow, sans-serif',
-              fontWeight: 600,
-              fontSize: '0.95rem',
-              color: 'rgba(255,255,255,0.55)',
-              marginTop: '0.25rem',
-              letterSpacing: '0.02em',
-            }}>
-              {t('priceCallout.amountEur')}
-            </div>
-            <div style={{
               fontFamily: 'Barlow Condensed, sans-serif',
               fontWeight: 900,
-              fontSize: 'clamp(1.1rem, 1.8vw, 1.35rem)',
+              fontSize: 'clamp(1.1rem, 1.9vw, 1.45rem)',
               color: '#34d399',
               letterSpacing: '0.06em',
               textTransform: 'uppercase',
               textShadow: '0 0 8px rgba(52,211,153,0.45)',
-              marginTop: '0.45rem',
+              marginTop: '0.4rem',
               lineHeight: 1.05,
             }}>
               {t('priceCallout.suffix')}
@@ -319,12 +309,14 @@ export default function Hero() {
             <div style={{
               fontFamily: 'Barlow, sans-serif',
               fontWeight: 500,
-              fontSize: '0.92rem',
-              color: 'rgba(255,255,255,0.75)',
-              marginTop: '0.6rem',
+              fontSize: '0.88rem',
+              color: 'rgba(255,255,255,0.55)',
+              marginTop: '1.1rem',
               letterSpacing: '0.02em',
+              lineHeight: 1.4,
             }}>
-              {t('priceCallout.monthly')}
+              <div>{t('priceCallout.amountEur')}</div>
+              <div>{t('priceCallout.vatNote')}</div>
             </div>
           </div>
 
