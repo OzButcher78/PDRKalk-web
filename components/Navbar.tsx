@@ -4,6 +4,7 @@ import {useTranslations, useLocale} from 'next-intl';
 import {useRouter, usePathname} from 'next/navigation';
 import {useState, useEffect, useRef} from 'react';
 import Image from 'next/image';
+import {routing} from '@/i18n/routing';
 
 const BUY_URL = process.env.NEXT_PUBLIC_BUY_URL || '#pricing';
 
@@ -17,12 +18,7 @@ export default function Navbar() {
   const [langOpen, setLangOpen] = useState(false);
   const langRef = useRef<HTMLDivElement>(null);
 
-  const allLocales = [
-    {code: 'de', label: 'DE'},
-    {code: 'en', label: 'EN'},
-    {code: 'fr', label: 'FR'},
-    {code: 'it', label: 'IT'},
-  ] as const;
+  const allLocales = routing.locales.map(code => ({code, label: code.toUpperCase()}));
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -49,12 +45,13 @@ export default function Navbar() {
     setLangOpen(false);
   };
 
+  const home = `/${locale}/`;
   const navLinks = [
-    {href: '#features',    label: t('features')},
-    {href: '#screenshots', label: t('screenshots')},
-    {href: '#pricing',     label: t('pricing')},
-    {href: '#more',        label: t('more')},
-    {href: '#contact',     label: t('contact')},
+    {href: `${home}#features`,    label: t('features')},
+    {href: `${home}#screenshots`, label: t('screenshots')},
+    {href: `${home}#pricing`,     label: t('pricing')},
+    {href: `${home}#more`,        label: t('more')},
+    {href: `${home}#contact`,     label: t('contact')},
   ];
 
   return (
@@ -81,7 +78,7 @@ export default function Navbar() {
       }}>
         {/* Logo */}
         <a
-          href="#"
+          href={home}
           className="nav-logo"
           style={{
             display: 'flex',

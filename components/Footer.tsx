@@ -12,10 +12,11 @@ export default function Footer() {
   const country = useTranslations('contact');
   const locale = useLocale();
 
+  const home = `/${locale}/`;
   const links: Array<{key: 'features' | 'pricing' | 'contact'; href: string}> = [
-    {key: 'features', href: '#features'},
-    {key: 'pricing',  href: '#pricing'},
-    {key: 'contact',  href: '#contact'},
+    {key: 'features', href: `${home}#features`},
+    {key: 'pricing',  href: `${home}#pricing`},
+    {key: 'contact',  href: `${home}#contact`},
   ];
 
   return (
