@@ -1,4 +1,10 @@
 {
+  "meta": {
+    "title": "PDR Kalk — Hail & Park Damage Estimation Software for PDR Technicians",
+    "description": "Offline desktop app for PDR technicians. Hail and park-damage estimates, reports, and Swiss QR / ZUGFeRD invoices. One-time CHF 550, no subscription, GDPR-compliant.",
+    "ogTitle": "PDR Kalk — Hail & Park Damage Estimation",
+    "ogDescription": "Professional PDR estimation for workshops in Switzerland, Germany and Austria. Offline, no subscription."
+  },
   "nav": {
     "features": "Features",
     "screenshots": "Screenshots",
@@ -445,6 +451,8 @@
     "emailDomain": "pdrkalk.ch"
   },
   "privacy": {
+    "metaTitle": "Privacy — PDR Kalk",
+    "metaDescription": "Privacy notice for PDR Kalk's one-time online trial activation: which data is sent, why, and how long it is kept. GDPR and revDSG compliant.",
     "title": "Privacy notice — online trial activation",
     "lastUpdated": "Last updated: 16 May 2026",
     "intro": "When you first launch PDR Kalk and choose “Start 30-day trial”, we send a small amount of data once to our server to activate the trial. This prevents the same trial from being started repeatedly on a single device. The trial itself then runs fully offline — no further data is transmitted.",

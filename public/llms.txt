@@ -1,0 +1,41 @@
+# PDR Kalk
+
+> Offline desktop software for PDR (paintless dent repair) technicians: estimate hail and park damage, generate Swiss QR-bills and ZUGFeRD / Factur-X e-invoices, manage the full job-to-invoice workflow without a cloud or subscription.
+
+## About
+
+PDR Kalk is built by Balmer Storm Solutions, a Swiss company founded by Dieter Balmer, a PDR technician with over 25 years of hail and park-damage repair experience. It runs locally on Windows and Android, keeps all data on the user's own device or NAS, and is sold as a one-time 5-year licence (CHF 550, approx. EUR 580) with a free 30-day trial. PDR Kalk is GDPR / revDSG compliant and targets workshops in Switzerland, Germany, and Austria.
+
+## Key facts
+
+- Product: PDR Kalk desktop application
+- Maker: Balmer Storm Solutions (Switzerland)
+- Founder: Dieter Balmer
+- Pricing: CHF 550 one-time, 5-year licence (approx. CHF 9 / month); 30-day free trial, no credit card
+- Platforms: Windows, Android
+- Markets: Switzerland (CH), Germany (DE), Austria (AT)
+- Languages: German, English
+- Tariff matrices: VFFS 2025 (CH), Zürich Mischhagel, BVAT (DE), Austria
+- Invoicing: Swiss QR-bill, ZUGFeRD / Factur-X (PDF/A-3 with embedded XML)
+- Accounting export: DATEV CSV, VAT export, open receivables as Excel
+- Compliance: GDPR / revDSG, EN 16931 e-invoice
+- Audit trail: SHA-256 hash chain, automatic versions, PDF snapshots
+- Sync: shared-folder sync via the user's own NAS or cloud — no vendor cloud
+- Data ownership: 100% local, full ZIP backup on device
+- Contact: info@pdrkalk.ch
+
+## What problem it solves
+
+PDR technicians traditionally estimate hail and park damage in spreadsheets, then re-enter data into separate tools for reports, invoices, and accounting. PDR Kalk replaces that chain with one offline application covering estimation, report generation, customer signature, insurance hand-off, subcontractor workflow, invoicing (including Swiss QR and German e-invoice), and accounting export — saving 30 to 60 minutes per job and removing transcription errors.
+
+## Who it is for
+
+Independent PDR technicians, hail-repair workshops, and PDR subcontractors operating in Switzerland, Germany, and Austria who want a one-time-purchase tool that runs offline and keeps customer data on their own hardware.
+
+## Pages
+
+- https://pdrkalk.ch/de/ — German home (default)
+- https://pdrkalk.ch/en/ — English home
+- https://pdrkalk.ch/de/privacy/ — Privacy notice (DE)
+- https://pdrkalk.ch/en/privacy/ — Privacy notice (EN)
+- https://pdrkalk.ch/sitemap.xml — sitemap

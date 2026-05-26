@@ -1,0 +1,24 @@
+{
+  "name": "PDR Kalk",
+  "short_name": "PDR Kalk",
+  "description": "Offline PDR estimation software for hail and park damage — Swiss QR & ZUGFeRD invoices.",
+  "start_url": "/de/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0a0f1e",
+  "theme_color": "#0a0f1e",
+  "icons": [
+    {
+      "src": "/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

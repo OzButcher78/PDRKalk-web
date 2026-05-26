@@ -1,8 +1,11 @@
+import type {Metadata} from 'next';
 import {useTranslations} from 'next-intl';
-import {setRequestLocale} from 'next-intl/server';
+import {getTranslations, setRequestLocale} from 'next-intl/server';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import {routing} from '@/i18n/routing';
+
+const SITE_URL = 'https://pdrkalk.ch';
 
 type Props = {
   params: Promise<{locale: string}>;
@@ -10,6 +13,34 @@ type Props = {
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({locale}));
+}
+
+export async function generateMetadata({params}: Props): Promise<Metadata> {
+  const {locale} = await params;
+  const t = await getTranslations({locale, namespace: 'privacy'});
+
+  const languages: Record<string, string> = {
+    'x-default': `${SITE_URL}/de/privacy/`,
+  };
+  for (const l of routing.locales) {
+    languages[l] = `${SITE_URL}/${l}/privacy/`;
+  }
+
+  return {
+    title: t('metaTitle'),
+    description: t('metaDescription'),
+    alternates: {
+      canonical: `${SITE_URL}/${locale}/privacy/`,
+      languages,
+    },
+    openGraph: {
+      type: 'article',
+      url: `${SITE_URL}/${locale}/privacy/`,
+      title: t('metaTitle'),
+      description: t('metaDescription'),
+    },
+    robots: {index: true, follow: true},
+  };
 }
 
 export default async function PrivacyPage({params}: Props) {

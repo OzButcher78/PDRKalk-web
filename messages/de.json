@@ -1,4 +1,10 @@
 {
+  "meta": {
+    "title": "PDR Kalk — Professionelle Schadenerfassung für Dellentechniker",
+    "description": "PDR-Kalkulationssoftware für Hagel- und Parkschäden. Offline-Desktop-App mit Schweizer QR-Rechnung und ZUGFeRD/Factur-X. Einmalig CHF 550, keine Abos, DSGVO-konform.",
+    "ogTitle": "PDR Kalk — Hagel- und Parkschadenkalkulation",
+    "ogDescription": "Professionelle PDR-Kalkulation für Werkstätten in der Schweiz, Deutschland und Österreich. Offline, ohne Abo."
+  },
   "nav": {
     "features": "Funktionen",
     "screenshots": "Screenshots",
@@ -445,6 +451,8 @@
     "emailDomain": "pdrkalk.ch"
   },
   "privacy": {
+    "metaTitle": "Datenschutz — PDR Kalk",
+    "metaDescription": "Datenschutzerklärung zur Online-Trial-Aktivierung von PDR Kalk: welche Daten übermittelt werden, wofür und wie lange sie gespeichert werden. DSGVO- und revDSG-konform.",
     "title": "Datenschutzerklärung — Online-Trial-Aktivierung",
     "lastUpdated": "Stand: 16. Mai 2026",
     "intro": "Wenn Sie PDR Kalk zum ersten Mal starten und „30 Tage testen“ wählen, übermitteln wir einmalig eine kleine Datenmenge an unseren Server, um die Trial-Version zu aktivieren. Damit verhindern wir, dass dieselbe Trial auf einem Gerät mehrfach hintereinander gestartet werden kann. Die Trial-Nutzung selbst läuft anschliessend vollständig offline — es findet keine weitere Übertragung statt.",
