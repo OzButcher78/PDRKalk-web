@@ -23,7 +23,10 @@ const AU_STATES: ReadonlyArray<{code: string; name: string}> = [
   {code: 'NT',  name: 'Northern Territory'},
 ];
 
+type Intent = '' | 'buy' | 'inquiry';
+
 type FormState = {
+  intent: Intent;
   firstName: string;
   lastName: string;
   company: string;
@@ -39,6 +42,7 @@ type FormState = {
 type FormErrors = Partial<Record<keyof FormState, string>>;
 
 const initialForm: FormState = {
+  intent: '',
   firstName: '',
   lastName: '',
   company: '',
@@ -60,6 +64,7 @@ export default function Contact() {
   const [errors, setErrors]         = useState<FormErrors>({});
 
   const refs = {
+    intent:     useRef<HTMLInputElement>(null),
     firstName:  useRef<HTMLInputElement>(null),
     lastName:   useRef<HTMLInputElement>(null),
     company:    useRef<HTMLInputElement>(null),
@@ -82,6 +87,7 @@ export default function Contact() {
 
   const validate = (): FormErrors => {
     const errs: FormErrors = {};
+    if (!form.intent)            errs.intent     = t('errorIntentRequired');
     if (!form.firstName.trim())  errs.firstName  = t('errorFirstNameRequired');
     if (!form.lastName.trim())   errs.lastName   = t('errorLastNameRequired');
     if (!form.company.trim())    errs.company    = t('errorCompanyRequired');
@@ -112,8 +118,11 @@ export default function Contact() {
     setSendError(false);
 
     try {
+      const intentLabel = form.intent ? t(`intent_${form.intent}` as 'intent_buy') : '';
+      const subjectTag = form.intent === 'buy' ? 'Licence Order' : 'Inquiry';
       const payload = {
-        _subject: `[Licence Enquiry] ${form.firstName} ${form.lastName} — ${form.company}`,
+        _subject: `[${subjectTag}] ${form.firstName} ${form.lastName} — ${form.company}`,
+        intent: intentLabel,
         firstName: form.firstName,
         lastName: form.lastName,
         company: form.company,
@@ -172,7 +181,7 @@ export default function Contact() {
     errors[field] ? 'rgba(252,129,129,0.6)' : 'rgba(255,255,255,0.1)';
 
   type RefField = keyof typeof refs;
-  type InputRefField = Exclude<RefField, 'country' | 'state'>;
+  type InputRefField = Exclude<RefField, 'country' | 'state' | 'intent'>;
   const renderInput = (
     field: InputRefField,
     type: string = 'text',
@@ -303,6 +312,107 @@ export default function Contact() {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="fade-up" noValidate>
+            {/* Intent — which is it? */}
+            <fieldset style={{
+              border: 'none',
+              padding: 0,
+              margin: '0 0 1.25rem',
+            }}>
+              <legend style={{
+                fontFamily: 'Barlow Condensed, sans-serif',
+                fontWeight: 800,
+                fontSize: '0.85rem',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                color: '#cbd5e1',
+                padding: 0,
+                marginBottom: '0.6rem',
+              }}>
+                {t('intentLegend')}
+              </legend>
+              <div className="contact-grid" style={{display: 'grid', gap: '0.75rem'}}>
+                {(['buy', 'inquiry'] as const).map((value, idx) => {
+                  const selected = form.intent === value;
+                  return (
+                    <label
+                      key={value}
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.75rem',
+                        background: selected ? 'rgba(232,0,29,0.08)' : 'rgba(255,255,255,0.05)',
+                        border: `1px solid ${
+                          selected
+                            ? 'var(--red)'
+                            : errors.intent
+                            ? 'rgba(252,129,129,0.6)'
+                            : 'rgba(255,255,255,0.1)'
+                        }`,
+                        borderRadius: '8px',
+                        padding: '0.85rem 1rem',
+                        cursor: 'pointer',
+                        transition: 'background 0.15s, border-color 0.15s',
+                      }}
+                    >
+                      <input
+                        type="radio"
+                        name="intent"
+                        value={value}
+                        ref={idx === 0 ? refs.intent : undefined}
+                        checked={selected}
+                        onChange={() => {
+                          setForm(prev => ({...prev, intent: value}));
+                          if (errors.intent) setErrors(prev => ({...prev, intent: undefined}));
+                        }}
+                        style={{
+                          position: 'absolute',
+                          width: 1,
+                          height: 1,
+                          padding: 0,
+                          margin: -1,
+                          overflow: 'hidden',
+                          clip: 'rect(0,0,0,0)',
+                          border: 0,
+                        }}
+                      />
+                      <span
+                        aria-hidden
+                        style={{
+                          width: '18px',
+                          height: '18px',
+                          flexShrink: 0,
+                          borderRadius: '50%',
+                          border: `2px solid ${selected ? 'var(--red)' : 'rgba(255,255,255,0.4)'}`,
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          transition: 'border-color 0.15s',
+                        }}
+                      >
+                        {selected && (
+                          <span style={{
+                            width: '8px',
+                            height: '8px',
+                            borderRadius: '50%',
+                            background: 'var(--red)',
+                          }}/>
+                        )}
+                      </span>
+                      <span style={{
+                        fontFamily: 'Barlow, sans-serif',
+                        fontSize: '0.95rem',
+                        color: '#fff',
+                        lineHeight: 1.3,
+                      }}>
+                        {t(`intent_${value}` as 'intent_buy')}
+                      </span>
+                    </label>
+                  );
+                })}
+              </div>
+              {errors.intent && <span style={errorStyle}>{errors.intent}</span>}
+            </fieldset>
+
             {/* First / Last name */}
             <div className="contact-grid" style={{display: 'grid', gap: '1rem', marginBottom: '1rem'}}>
               {renderInput('firstName', 'text', 'given-name')}
