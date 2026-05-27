@@ -10,6 +10,8 @@ const SITE_URL = 'https://pdrkalk.ch';
 const OG_LOCALE: Record<string, string> = {
   de: 'de_CH',
   en: 'en_US',
+  fr: 'fr_FR',
+  it: 'it_IT',
 };
 
 type Props = {

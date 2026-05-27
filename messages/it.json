@@ -1,6 +1,12 @@
 {
+  "meta": {
+    "title": "PDR Kalk — Software di calcolo per danni da grandine e parcheggio per tecnici PDR",
+    "description": "App desktop offline per tecnici di rimozione ammaccature senza verniciatura. Preventivi grandine e parcheggio, rapporti e fatture QR svizzere / ZUGFeRD. Pagamento unico di CHF 550, senza abbonamento, conforme al GDPR.",
+    "ogTitle": "PDR Kalk — Calcolo danni da grandine e parcheggio",
+    "ogDescription": "Software professionale di calcolo PDR per tecnici di rimozione ammaccature."
+  },
   "nav": {
-    "features": "Funzionalità",
+    "features": "Funzioni",
     "screenshots": "Schermate",
     "pricing": "Prezzi",
     "more": "Altro",
@@ -10,21 +16,27 @@
   },
   "hero": {
     "title": "Calcola i danni da grandine.",
-    "titleAccent": "In meno di 60 secondi.",
+    "titleAccent": "In pochi minuti.",
     "subtitle": "Il software di calcolo per tecnici PDR. Rapporti e fatture professionali — senza cloud, senza abbonamento.",
     "ctaPrimary": "Prova gratuita",
-    "ctaSecondary": "Scopri le funzionalità",
+    "ctaSecondary": "Scopri le funzioni",
     "screenshotAlt": "Dashboard PDR Kalk",
-    "videoTitle": "PDR Kalk — Video prodotto",
+    "videoTitle": "PDR Kalk — Video del prodotto",
     "downloadTrial": "Scarica la prova di 30 giorni",
     "trustBar": [
       "Prezzo unico, nessun costo ricorrente",
-      "Conforme GDPR",
-      "Fattura elettronica ZUGFeRD/Factur-X/CH QR"
+      "Conforme al GDPR",
+      "Fattura elettronica ZUGFeRD/Factur-X/QR CH"
     ],
-    "regionsLabel": "Al servizio di:",
-    "regionsMore": "altri su richiesta",
-    "demoComingSoon": "Demo in arrivo"
+    "regionsLabel": "In uso per:",
+    "regionsMore": "altre su richiesta",
+    "demoComingSoon": "Demo presto disponibile",
+    "priceCallout": {
+      "amount": "CHF 550",
+      "suffix": "PER 5 ANNI! (ca. CHF 9/mese)",
+      "amountEur": "≈ EUR 580",
+      "vatNote": "Tutti i prezzi sono al netto dell'IVA."
+    }
   },
   "timeSavings": {
     "title": "Il tempo è denaro — risparmia con",
@@ -35,52 +47,64 @@
       { "value": "396", "unit": "ore", "period": "all'anno" },
       { "value": "1980", "unit": "ore", "period": "in 5 anni" }
     ],
-    "tagline": "Meno burocrazia. Più tempo per quello che sai fare meglio.",
-    "disclaimer": "Basato su 22 giorni lavorativi / mese"
+    "tagline": "Meno burocrazia. Più tempo per ciò che sai fare meglio.",
+    "disclaimer": "In base a 22 giorni lavorativi / mese"
   },
   "problemSolution": {
     "title": "Perché PDR Kalk?",
     "columns": [
       {
-        "heading": "Basta con i fogli Excel",
-        "desc": "Il calcolo automatico sostituisce il lavoro manuale. Niente formattazione, niente copie, niente errori."
+        "heading": "Basta fogli di calcolo",
+        "desc": "Il calcolo automatico sostituisce il lavoro manuale. Niente formattazione, niente copia-incolla, niente errori."
       },
       {
         "heading": "Dal rapporto alla fattura",
-        "desc": "Un unico strumento per l'intero flusso di lavoro — calcolo, rapporto, fattura e ricevuta."
+        "desc": "Un unico strumento per l'intero flusso di lavoro — preventivo, rapporto, fattura e ricevuta."
       },
       {
-        "heading": "30–60 min. risparmiati per ordine",
-        "desc": "Meno burocrazia, più riparazioni. Il risparmio di tempo si ripaga dal primo giorno."
+        "heading": "30–60 min. risparmiati per pratica",
+        "desc": "Meno burocrazia, più riparazioni. Il risparmio di tempo conviene fin dal primo giorno."
+      },
+      {
+        "heading": "Audit trail a prova di manomissione",
+        "desc": "Catena di hash SHA-256, versioni automatiche dei documenti e snapshot PDF — tracciabilità completa per ogni fattura."
+      },
+      {
+        "heading": "Export DATEV e contabile",
+        "desc": "CSV DATEV, export IVA e crediti aperti in formato Excel — passaggio fluido al tuo commercialista."
+      },
+      {
+        "heading": "Backup locale dei dati",
+        "desc": "Backup completo in formato ZIP sul tuo dispositivo. Salvataggio automatico, ripristino intelligente — i tuoi dati restano con te."
       }
     ]
   },
   "coreFeatures": {
-    "title": "Cosa può fare PDR Kalk",
+    "title": "Cosa sa fare PDR Kalk",
     "cards": [
       {
         "heading": "Calcolo danni da grandine e parcheggio",
-        "desc": "Calcolo in tempo reale durante l'inserimento. Profili VFFS, Zurigo e BVAT integrati. Supplementi con un clic."
+        "desc": "4 matrici di prezzo (VFFS, grandine mista Zurigo, BVAT con colonna smontaggio/rimontaggio, Austria) con calcolo in tempo reale su 14 pannelli. Danni da parcheggio: per pannello, forfait o a tempo."
       },
       {
-        "heading": "Documenti professionali",
-        "desc": "Preventivo, rapporto, fattura e ricevuta — come PDF con il tuo logo. Inclusa fattura QR svizzera."
+        "heading": "Documenti e fatture manuali",
+        "desc": "Preventivo, rapporto, fattura, fattura QR svizzera e fattura elettronica ZUGFeRD/Factur-X (PDF/A-3 con XML incorporato) per la Germania — tutto in PDF con il tuo logo. Più note di credito, dichiarazione di cessione, fatture manuali libere e archivio ZIP per pratica con un clic."
       },
       {
-        "heading": "Invio e-mail direttamente dall'app",
-        "desc": "Invia PDF via e-mail senza uscire dall'app. Con modelli, anteprima e tracciamento dell'invio."
+        "heading": "Flusso diretto con l'assicurazione",
+        "desc": "Processo guidato in 4 passaggi: registrazione del danno, dichiarazione di cessione con firma digitale, invio all'assicuratore, fattura suddivisa automatica — inclusa l'approvazione del cliente sul posto."
       },
       {
-        "heading": "Gestione clienti",
-        "desc": "Rubrica con clienti aziendali e privati. Sconti individuali, termini di pagamento e tariffe orarie per cliente."
+        "heading": "Flusso per subappaltatori",
+        "desc": "Trasferimento della pratica crittografato (AES-256), tre modelli di compenso con ripartizione in tempo reale, chiusura con doppia notifica e unione dei duplicati alla reimportazione — audit trail completo tra committente e subappaltatore."
       },
       {
-        "heading": "4 lingue — DE / FR / IT / EN",
-        "desc": "Completamente tradotto. Perfetto per la Svizzera multilingue e il mercato tedesco."
+        "heading": "Dashboard analitica",
+        "desc": "Business intelligence a colpo d'occhio: fatturato e flusso di cassa, crediti per scadenza, migliori clienti, migliori assicuratori, tempi di pagamento e imbuto di conversione — multivaluta."
       },
       {
-        "heading": "100% offline e locale",
-        "desc": "Nessun cloud, nessun account, nessun costo mensile. I tuoi dati restano sul tuo dispositivo. Conforme GDPR."
+        "heading": "Multi-dispositivo e dati locali",
+        "desc": "Sincronizza il PC dell'ufficio, il tablet dell'officina e il PC del contabile tramite il tuo NAS o cloud — gli stessi dati su ogni dispositivo. La sincronizzazione tramite cartella condivisa funziona su Windows; i tablet Android funzionano in autonomia con tutte le funzioni. Resta 100% locale, conforme al GDPR, 4 lingue."
       }
     ]
   },
@@ -92,77 +116,134 @@
     "prev": "Immagine precedente",
     "next": "Immagine successiva",
     "images": [
-      { "file": "dashboard.jpg",        "caption": "Dashboard — Panoramica ordini" },
-      { "file": "hagel-auftrag.jpg",    "caption": "Calcolo danni da grandine (VFFS)" },
-      { "file": "hagel-auftragBVAT.jpg","caption": "Calcolo danni da grandine (BVAT)" },
-      { "file": "park-auftrag2.jpg",    "caption": "Danni da parcheggio — Selezione pezzo" },
-      { "file": "pdf-QR-rechnung.jpg",  "caption": "Fattura QR svizzera" },
-      { "file": "rechnungen.jpg",       "caption": "Panoramica fatture con stato" },
-      { "file": "verlauf.jpg",           "caption": "Registro attività e cronologia" },
-      { "file": "hagel-auftrag2.jpg",   "caption": "Danni da grandine — Vista dettagliata" },
-      { "file": "park-auftrag.jpg",     "caption": "Registrazione danni da parcheggio" },
-      { "file": "pdf-hagel.jpg",        "caption": "Rapporto grandine PDF" },
-      { "file": "pdf-park.jpg",         "caption": "Rapporto parcheggio PDF" },
-      { "file": "pdf-rechnung.jpg",     "caption": "Fattura PDF" },
-      { "file": "pdf-photos.jpg",       "caption": "Documentazione fotografica PDF" },
-      { "file": "kostenvoranschlag.jpg", "caption": "Preventivi" },
-      { "file": "arbeitsrapporte.jpg",  "caption": "Rapporti di lavoro" },
-      { "file": "quittungen.jpg",       "caption": "Ricevute" },
-      { "file": "adresse-buch.jpg",     "caption": "Rubrica" },
-      { "file": "kunden-info.jpg",      "caption": "Informazioni cliente" },
-      { "file": "einstellungen1.jpg",   "caption": "Impostazioni (1)" },
-      { "file": "einstellungen2.jpg",   "caption": "Impostazioni (2)" },
-      { "file": "einstellungen3.jpg",   "caption": "Impostazioni (3)" }
+      { "file": "dashboard.jpg",                   "caption": "Dashboard — pratiche a colpo d'occhio" },
+      { "file": "analysen1.jpg",                   "caption": "Dashboard analitica — fatturato e flusso di cassa" },
+      { "file": "analysen2.jpg",                   "caption": "Migliori clienti e imbuto di conversione" },
+      { "file": "hagel-auftrag.jpg",               "caption": "Calcolo danni da grandine (VFFS)" },
+      { "file": "hagel-auftragBVAT.jpg",           "caption": "Danni da grandine — BVAT con smontaggio/rimontaggio" },
+      { "file": "parkschaden-erfassung.jpg",       "caption": "Danni da parcheggio — per pannello / forfait / a tempo" },
+      { "file": "manuel-rechungen.jpg",            "caption": "Fattura manuale (senza rapporto)" },
+      { "file": "Versicherung-Direkt.jpg",         "caption": "Flusso diretto con l'assicurazione — 4 passaggi" },
+      { "file": "kundebestatigung.jpg",            "caption": "Approvazione del cliente sul posto con firma" },
+      { "file": "Subzuweisen.jpg",                 "caption": "Assegna subappaltatore — ripartizione in tempo reale" },
+      { "file": "sub-verwalten.jpg",               "caption": "Gestisci la pratica del subappaltatore" },
+      { "file": "Abtretungserklarung1.jpg",        "caption": "Dichiarazione di cessione all'assicuratore" },
+      { "file": "Techniker-und-Dokumenten.jpg",    "caption": "Pannello documenti per pratica" },
+      { "file": "email-doks.jpg",                  "caption": "Anteprima e-mail con più allegati" },
+      { "file": "verlauf.jpg",                     "caption": "Cronologia della pratica — vista unificata" },
+      { "file": "audit.jpg",                       "caption": "Registro attività e versioni" },
+      { "file": "backup.jpg",                      "caption": "Backup, importazione subappaltatore e dati demo" },
+      { "file": "wiederherstellen.jpg",            "caption": "Ripristino intelligente" },
+      { "file": "hilfe.jpg",                       "caption": "Manuale d'uso integrato e completo" },
+      { "file": "Teile-Notiz.jpg",                 "caption": "Parti danneggiate e nota" },
+      { "file": "pdf-QR-rechnung.jpg",             "caption": "Fattura QR svizzera" },
+      { "file": "hagel-auftrag2.jpg",              "caption": "Danni da grandine — vista dettagliata" },
+      { "file": "pdf-hagel.jpg",                   "caption": "Rapporto grandine PDF" },
+      { "file": "pdf-park.jpg",                    "caption": "Rapporto danni da parcheggio PDF" },
+      { "file": "pdf-rechnung.jpg",                "caption": "Fattura PDF" },
+      { "file": "pdf-photos.jpg",                  "caption": "Documentazione fotografica PDF" },
+      { "file": "arbeitsrapporte.jpg",             "caption": "Rapporti di lavoro" },
+      { "file": "adresse-buch.jpg",                "caption": "Rubrica" },
+      { "file": "einstellungen1.jpg",              "caption": "Impostazioni (1)" },
+      { "file": "einstellungen2.jpg",              "caption": "Impostazioni (2)" },
+      { "file": "einstellungen3.jpg",              "caption": "Impostazioni (3)" }
     ],
-    "initialCount": 7,
-    "showMore": "Vedi più schermate",
+    "initialCount": 8,
+    "showMore": "Vedi altre schermate",
     "showLess": "Mostra meno"
   },
   "secondaryFeatures": {
     "title": "E ancora di più...",
     "groups": [
       {
-        "heading": "Fatturazione",
+        "heading": "Fatturazione e pagamenti",
         "items": [
-          "Tracciamento stato fatture (Creata → Consegnata → Pagata)",
-          "Fattura elettronica ZUGFeRD/Factur-X (PDF/A-3 con XML integrato, EN 16931) — conforme all'obbligo B2B tedesco",
-          "Pagamenti scaduti a colpo d'occhio",
-          "Annullamento con motivo e fattura sostitutiva",
-          "Più ordini su un'unica fattura"
+          "Fatture manuali senza rapporto — condividono lo stesso contatore RE-",
+          "Fattura elettronica ZUGFeRD/Factur-X (PDF/A-3 con XML incorporato, EN 16931) — conforme all'obbligo B2B tedesco",
+          "Monitoraggio dei pagamenti con pagamenti parziali e visualizzazione del saldo",
+          "Stato della fattura (Creata → Consegnata → Pagata) aggiornato automaticamente",
+          "Note di credito, fatture suddivise, storno con sostituzione"
         ]
       },
       {
-        "heading": "Foto",
+        "heading": "Analisi e controllo di gestione",
         "items": [
-          "Fino a 12 foto per ordine con didascalia",
-          "Compressione automatica in 3 livelli di qualità",
-          "Acquisizione diretta dalla fotocamera del dispositivo",
-          "Foto integrate nel rapporto PDF"
+          "Grafici di fatturato e flusso di cassa su qualsiasi periodo personalizzato",
+          "Crediti suddivisi per scadenza (0–30, 31–60, 61–90, 90+ giorni)",
+          "Migliori clienti, migliori assicuratori, valore medio per pratica, giorni medi di pagamento",
+          "Imbuto di conversione: Rapporto → Accettato → Fatturato → Pagato"
         ]
       },
       {
-        "heading": "Backup dei dati",
+        "heading": "Archivio pratica e documenti",
         "items": [
-          "Backup completo come ZIP (impostazioni, clienti, documenti, foto)",
-          "Salvataggio automatico in cartella locale",
-          "Dati demo per provare"
+          "Export archivio pratica — ZIP per pratica con rapporto, fattura, cessione, foto, backup",
+          "Pannello documenti: allega qualsiasi PDF a una pratica (perizia, conferma assicurativa…)",
+          "Anteprima e-mail con selettore di più allegati su tutti i documenti della pratica",
+          "Approvazione del cliente sul posto con firma digitale sul dispositivo"
         ]
       },
       {
-        "heading": "Lavoro transfrontaliero",
+        "heading": "Flusso per subappaltatori",
         "items": [
-          "Cambio automatico di valuta CHF ↔ EUR",
-          "Inversione contabile per clienti UE",
-          "Svizzera (CH) e Germania (DE) come regioni"
+          "Tre modelli di compenso: a tempo, a percentuale, a forfait — con ripartizione in tempo reale",
+          "Chiusura con doppia notifica: subappaltatore e committente vengono informati automaticamente",
+          "Trasferimento della pratica crittografato (AES-256) e importazione della pratica del subappaltatore dal menu backup",
+          "Unione dei duplicati alla reimportazione — niente voci doppie"
         ]
       },
       {
-        "heading": "Tracciabile e a prova di manomissione",
+        "heading": "Foto e veicolo",
         "items": [
-          "Storico completo delle attività per documento",
-          "Versioni del documento ad ogni cambio di stato",
-          "A prova di manomissione tramite concatenamento",
-          "Esportazione audit verificabile"
+          "Mini-server con codice QR — carica le foto direttamente dallo smartphone nella pratica, senza cavo né login",
+          "Fino a 12 foto per pratica con didascalie, integrate nel rapporto PDF",
+          "Compressione automatica su 3 livelli di qualità, i dati EXIF (incluso GPS) vengono rimossi",
+          "Selettore parti danneggiate S/D per pannello con nota"
+        ]
+      },
+      {
+        "heading": "Multi-dispositivo e sincronizzazione NAS",
+        "items": [
+          "Usa PDR Kalk su più dispositivi — desktop in ufficio, tablet in officina, contabile da casa",
+          "Sincronizzazione tramite cartella condivisa (NAS, OneDrive, Synology Drive) tra i tuoi dispositivi Windows — decidi tu dove risiedono i dati",
+          "I tablet Android funzionano in autonomia con tutte le funzioni — database locale proprio, senza sincronizzazione tramite cartella condivisa",
+          "Consigliato per la sincronizzazione tramite cartella condivisa: PC Microsoft, portatile o tablet Windows da 10\" o più grande — tablet Android (Android 10+) solo per uso autonomo"
+        ]
+      },
+      {
+        "heading": "Export, backup e contabilità",
+        "items": [
+          "Export DATEV (CSV), export IVA, export dei crediti aperti in formato Excel",
+          "Backup completo in formato ZIP (con / senza foto) localmente sul tuo dispositivo",
+          "Ripristino intelligente — senza duplicati, le foto vengono recuperate automaticamente",
+          "Export dell'audit trail in formato JSON con verifica SHA-256"
+        ]
+      },
+      {
+        "heading": "3 regioni — CH, DE, AT",
+        "items": [
+          "Svizzera: CHF, IVA 8,1%, polizza di versamento QR, arrotondamento ai 5 centesimi",
+          "Germania: EUR, IVA 19%, export DATEV, fatture di storno, fattura elettronica ZUGFeRD/Factur-X",
+          "Austria: EUR, IVA 20%, matrice di prezzo dedicata",
+          "Inversione contabile per i clienti UE con partita IVA"
+        ]
+      },
+      {
+        "heading": "Cronologia, audit trail ed e-mail",
+        "items": [
+          "Cronologia / storico della pratica — vista unificata tra rapporto ↔ fattura",
+          "Catena di hash SHA-256 — ogni voce collegata crittograficamente",
+          "Versioni automatiche dei documenti e snapshot PDF a ogni cambio di stato",
+          "Invio SMTP diretto con archiviazione IMAP e monitoraggio della consegna"
+        ]
+      },
+      {
+        "heading": "Aiuto e manuale d'uso",
+        "items": [
+          "Manuale d'uso completo integrato direttamente nell'app — ricercabile per argomento",
+          "Guide per sezione: dashboard, analisi, fatture, e-mail, subappaltatori, assicurazione…",
+          "Flussi di lavoro passo dopo passo con note e suggerimenti",
+          "Sezioni dedicate alla conformità dell'audit trail e alla navigazione da tastiera"
         ]
       }
     ]
@@ -170,86 +251,103 @@
   "comparison": {
     "title": "Perché PDR Kalk?",
     "headers": {
-      "feature": "Caratteristica",
+      "feature": "Funzione",
       "pdrKalk": "PDR Kalk",
-      "competitor": "Software in abbonamento tipico"
+      "competitor": "Tipico software in abbonamento"
     },
     "rows": [
       { "feature": "Pagamento unico", "pdrKalk": true, "competitor": false, "competitorNote": "Mensile" },
       { "feature": "Funziona offline", "pdrKalk": true, "competitor": false, "competitorNote": "Cloud" },
+      { "feature": "Flusso diretto con l'assicurazione", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
+      { "feature": "Flusso per subappaltatori", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
+      { "feature": "Dashboard analitica (BI)", "pdrKalk": true, "competitor": false, "competitorNote": "A pagamento" },
+      { "feature": "Multi-dispositivo tramite il tuo NAS", "pdrKalk": true, "competitor": false, "competitorNote": "Solo cloud", "pdrKalkAsterisk": true },
+      { "feature": "Caricamento foto via QR dal telefono", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
       { "feature": "Fattura QR", "pdrKalk": true, "competitor": false, "competitorNote": "Raro" },
-      { "feature": "ZUGFeRD/Factur-X", "pdrKalk": true, "competitor": false, "competitorNote": "Supplemento" },
+      { "feature": "Fattura elettronica ZUGFeRD/Factur-X", "pdrKalk": true, "competitor": false, "competitorNote": "A pagamento" },
       { "feature": "4 lingue", "pdrKalk": true, "competitor": false, "competitorNote": "Solo DE" },
-      { "feature": "I tuoi dati ti appartengono", "pdrKalk": true, "competitor": false, "competitorNote": "Su server di terzi" }
-    ]
+      { "feature": "I tuoi dati appartengono a te", "pdrKalk": true, "competitor": false, "competitorNote": "Su server di terzi" },
+      { "feature": "Nativo su Microsoft e Android", "pdrKalk": true, "competitor": false, "competitorNote": "Solo cloud" },
+      { "feature": "Utenti illimitati per licenza", "pdrKalk": true, "competitor": false, "competitorNote": "1 utente (altri a pagamento)" },
+      { "feature": "Audit trail a prova di manomissione (SHA-256)", "pdrKalk": true, "competitor": false, "competitorNote": "Raro" },
+      { "feature": "Export DATEV / contabile", "pdrKalk": true, "competitor": false, "competitorNote": "A pagamento" },
+      { "feature": "Acquisizione foto nell'app", "pdrKalk": true, "competitor": false, "competitorNote": "No" }
+    ],
+    "footnote": "* Questa funzione è supportata solo sui dispositivi Microsoft."
   },
   "pricing": {
     "title": "Acquista una volta. Usa per sempre.",
     "lifetime": {
       "badge": "CONSIGLIATO",
-      "badgeNote": "Pagamento unico — Senza abbonamento",
-      "price": "TBA",
-      "priceSuffix": "unico",
+      "badgeNote": "Pagamento unico — senza abbonamento",
+      "price": "CHF 550",
+      "priceSuffix": "PER 5 ANNI! (ca. CHF 9/mese)",
+      "priceEur": "≈ EUR 580",
+      "vatNote": "Tutti i prezzi sono al netto dell'IVA.",
       "features": [
-        "2 installazioni incluse",
         "Nessun costo di abbonamento",
-        "Nessun costo di installazione",
+        "Nessun costo di attivazione",
         "Nessun costo ricorrente",
-        "Utilizzo illimitato",
+        "Uso illimitato",
+        "Piccoli aggiornamenti inclusi *",
         "Funziona offline"
       ],
-      "note": "Scelta migliore per l'uso a lungo termine.",
-      "cta": "Acquista ora"
+      "note": "La scelta migliore per un uso a lungo termine. * Gli aggiornamenti facoltativi delle liste assicurative possono comportare un piccolo costo.",
+      "cta": "Acquista"
     },
     "monthly": {
       "badge": "Download gratuito",
-      "badgeNote": "30 giorni senza limiti",
+      "badgeNote": "30 giorni, senza limiti",
       "price": "Gratis",
-      "priceSuffix": "30 giorni senza limiti",
+      "priceSuffix": "30 giorni, senza limiti",
       "features": [
         "Tutte le funzioni sbloccate per 30 giorni",
         "Download diretto, avvio immediato",
-        "Nessun abbonamento, nessuna carta di credito",
-        "Aggiornamento opzionale a licenza completa successivamente"
+        "Senza abbonamento, senza carta di credito",
+        "Passaggio facoltativo a una licenza completa in seguito"
       ],
       "cta": "Scarica ora",
       "disclaimer": "Download diretto — nessuna registrazione richiesta."
     },
     "comparisonTable": {
-      "title": "Confronto costi su 5 anni",
+      "title": "Confronto dei costi su 5 anni",
       "headers": {
-        "feature": "Caratteristica",
+        "feature": "Funzione",
         "competitor": "Concorrente B",
         "pdrKalk": "PDR Kalk"
       },
       "rows": [
-        { "feature": "Modello di licenza",                  "competitor": "Abbonamento mensile",  "pdrKalk": "Unico / Mensile" },
-        { "feature": "Costo di installazione",              "competitor": "Sì",                   "pdrKalk": "No" },
-        { "feature": "Costo per utente aggiuntivo",         "competitor": "Sì",                   "pdrKalk": "Incluso (2 inst.)" },
-        { "feature": "Basato su cloud",                     "competitor": "Sì",                   "pdrKalk": "No — locale" },
-        { "feature": "Connessione Internet necessaria",     "competitor": "Sì",                   "pdrKalk": "No" },
-        { "feature": "Costo anno 1",                        "competitor": "CHF 1'188",            "pdrKalk": "TBA" },
-        { "feature": "Costo dopo 5 anni",                   "competitor": "CHF 5'940",            "pdrKalk": "TBA" }
+        { "feature": "Modello di licenza",        "competitor": "Abbonamento mensile",  "pdrKalk": "Pagamento unico" },
+        { "feature": "Costo di attivazione",       "competitor": "Sì",                   "pdrKalk": "No" },
+        { "feature": "Costi per utente aggiuntivo", "competitor": "Sì",                  "pdrKalk": "No" },
+        { "feature": "Basato su cloud",            "competitor": "Sì",                   "pdrKalk": "No — locale" },
+        { "feature": "Internet richiesto",         "competitor": "Sì",                   "pdrKalk": "No" },
+        { "feature": "Costo anno 1",               "competitor": "EUR 1.399 (incl. costo di attivazione)", "pdrKalk": "CHF 550" },
+        { "feature": "Costo anno 2",               "competitor": "EUR 1.100",            "pdrKalk": "CHF 0" },
+        { "feature": "Costo anno 3",               "competitor": "EUR 1.100",            "pdrKalk": "CHF 0" },
+        { "feature": "Costo anno 4",               "competitor": "EUR 1.100",            "pdrKalk": "CHF 0" },
+        { "feature": "Costo anno 5",               "competitor": "EUR 1.100",            "pdrKalk": "CHF 0" },
+        { "feature": "Totale dopo 5 anni",         "competitor": "EUR 5.799",            "pdrKalk": "CHF 550" }
       ],
-      "closing": "Risparmia migliaia di franchi in cinque anni rispetto ai sistemi in abbonamento.",
-      "note": "Estensioni di funzionalità o aggiornamenti assicurativi opzionali possono essere offerti a un piccolo supplemento. Tutti i valori comparativi si basano su informazioni tariffarie pubbliche (stato primavera 2026)."
+      "closing": "Risparmia migliaia di CHF in cinque anni rispetto ai sistemi in abbonamento.",
+      "note": "Tutti i prezzi sono al netto dell'IVA. Miglioramenti facoltativi delle funzioni o aggiornamenti assicurativi possono essere offerti a un piccolo costo. Tutte le cifre di confronto si basano su informazioni tariffarie pubbliche (aggiornate alla primavera 2026)."
     }
   },
   "testimonial": {
     "title": "Cosa dicono i tecnici",
-    "placeholder": "Testimonianze dei clienti in arrivo.",
+    "placeholder": "Testimonianze dei clienti presto disponibili.",
     "quote": "Sviluppato da un tecnico PDR professionista con oltre 25 anni di esperienza nella riparazione di danni da grandine e parcheggio."
   },
   "finalCta": {
     "title": "Pronto a risparmiare tempo?",
-    "subtitle": "Inizia con PDR Kalk oggi e risparmia ore ogni settimana.",
+    "subtitle": "Inizia oggi con PDR Kalk e risparmia ore ogni settimana.",
     "cta": "Scarica ora"
   },
   "download": {
     "title": "Prova gratis per 30 giorni",
-    "subtitle": "Download diretto — nessuna registrazione, nessuna carta di credito. Tutte le funzioni per 30 giorni.",
+    "subtitle": "Download diretto — senza registrazione, senza carta di credito. Tutte le funzioni per 30 giorni.",
     "windows": {
-      "eyebrow": "Per PC & laptop",
+      "eyebrow": "Per PC e portatile",
       "name": "Microsoft Windows",
       "system": "Windows 10 o 11",
       "version": "Versione 4.25.0",
@@ -266,11 +364,11 @@
   },
   "contact": {
     "title": "Acquista una licenza",
-    "subtitle": "Hai provato PDR Kalk e vuoi acquistare una licenza? Inserisci i tuoi dati qui sotto — ti risponderemo entro 24 ore.",
+    "subtitle": "Hai provato PDR Kalk e vuoi acquistarlo? Compila i tuoi dati qui sotto — ti risponderemo entro 24 ore.",
     "platformNoticeTitle": "Quali dispositivi sono supportati?",
-    "platformNoticeBody": "PDR Kalk funziona su tablet Microsoft e Android, oltre che su PC e laptop. I dispositivi Apple e gli smartphone non sono supportati.",
-    "intentLegend": "Di cosa si tratta?",
-    "intent_buy": "Acquista licenza / Richiedi fattura",
+    "platformNoticeBody": "PDR Kalk funziona su tablet Microsoft e Android nonché su PC e portatili. Tutte le funzioni sono disponibili sui dispositivi Microsoft; i tablet Android offrono tutte le funzioni tranne la sincronizzazione multi-dispositivo tramite una cartella di lavoro condivisa. I dispositivi Apple e gli smartphone non sono supportati.",
+    "intentLegend": "Come possiamo aiutarti?",
+    "intent_buy": "Acquista licenza / richiedi fattura",
     "intent_inquiry": "Richiesta generica",
     "errorIntentRequired": "Seleziona un'opzione",
     "firstNamePlaceholder": "Nome *",
@@ -288,29 +386,34 @@
     "cityPlaceholder": "Città *",
     "cityLabel": "Città",
     "countryLabel": "Paese",
-    "countryPlaceholder": "Seleziona il paese *",
-    "stateLabel": "Stato",
-    "statePlaceholder": "Seleziona lo stato *",
+    "countryPlaceholder": "Seleziona un paese *",
+    "stateLabel": "Stato/Regione",
+    "statePlaceholder": "Seleziona uno stato *",
     "phonePlaceholder": "Telefono *",
     "phoneLabel": "Telefono",
     "emailPlaceholder": "E-mail *",
     "emailLabel": "E-mail",
     "websitePlaceholder": "Sito web (se disponibile)",
     "websiteLabel": "Sito web",
+    "platformLegend": "Su quale dispositivo desideri provare?",
+    "platform_windows": "Microsoft Windows",
+    "platform_android": "Android",
+    "platform_both": "Entrambi",
     "messagePlaceholder": "Note o domande (facoltativo)",
     "messageLabel": "Note",
     "submit": "Richiedi licenza",
-    "errorFirstNameRequired": "Nome richiesto",
-    "errorLastNameRequired": "Cognome richiesto",
-    "errorCompanyRequired": "Azienda richiesta",
-    "errorOwnerRequired": "Titolare richiesto",
-    "errorStreetRequired": "Via richiesta",
-    "errorPostalCodeRequired": "CAP richiesto",
-    "errorCityRequired": "Città richiesta",
+    "errorFirstNameRequired": "Nome obbligatorio",
+    "errorLastNameRequired": "Cognome obbligatorio",
+    "errorCompanyRequired": "Azienda obbligatoria",
+    "errorOwnerRequired": "Nome del titolare obbligatorio",
+    "errorStreetRequired": "Via obbligatoria",
+    "errorPostalCodeRequired": "CAP obbligatorio",
+    "errorCityRequired": "Città obbligatoria",
     "errorCountryRequired": "Seleziona un paese",
     "errorStateRequired": "Seleziona uno stato",
-    "errorPhoneRequired": "Numero di telefono richiesto",
-    "errorEmailInvalid": "Indirizzo e-mail valido richiesto",
+    "errorPhoneRequired": "Numero di telefono obbligatorio",
+    "errorEmailInvalid": "È richiesto un indirizzo e-mail valido",
+    "errorPlatformRequired": "Seleziona un dispositivo",
     "country_ch": "Svizzera",
     "country_at": "Austria",
     "country_au": "Australia",
@@ -341,48 +444,50 @@
     "country_es": "Spagna",
     "country_se": "Svezia",
     "country_gb": "Regno Unito",
-    "sendError": "Invio fallito. Riprova o scrivici direttamente all'indirizzo qui sotto.",
-    "submitting": "Invio in corso\u2026",
+    "sendError": "Invio non riuscito. Riprova o scrivici direttamente all'indirizzo qui sotto.",
+    "submitting": "Invio in corso…",
     "success": "Richiesta inviata — ti risponderemo a breve!",
     "emailUser": "info",
     "emailDomain": "pdrkalk.ch"
   },
   "privacy": {
-    "title": "Informativa sulla privacy — attivazione online della versione di prova",
+    "metaTitle": "Privacy — PDR Kalk",
+    "metaDescription": "Informativa sulla privacy per l'attivazione della prova online di PDR Kalk: quali dati vengono trasmessi, perché e per quanto tempo vengono conservati. Conforme al GDPR e alla nLPD.",
+    "title": "Informativa sulla privacy — attivazione della prova online",
     "lastUpdated": "Ultimo aggiornamento: 16 maggio 2026",
-    "intro": "Quando avvii PDR Kalk per la prima volta e selezioni « Prova 30 giorni », inviamo una sola volta una piccola quantità di dati al nostro server per attivare la versione di prova. In questo modo impediamo che la stessa prova venga avviata ripetutamente sullo stesso dispositivo. L'utilizzo della versione di prova si svolge poi completamente offline — non avviene alcuna ulteriore trasmissione.",
-    "dataCollectedTitle": "Quali dati vengono trasmessi?",
-    "dataCollectedIntro": "Durante l'attivazione una tantum, PDR Kalk invia a api.pdrkalk.ch:",
+    "intro": "Quando avvii PDR Kalk per la prima volta e scegli «Avvia la prova di 30 giorni», inviamo una sola volta una piccola quantità di dati al nostro server per attivare la prova. Questo impedisce di riavviare ripetutamente la stessa prova su un singolo dispositivo. La prova stessa funziona poi interamente offline — non viene trasmesso alcun altro dato.",
+    "dataCollectedTitle": "Quali dati trasmettiamo",
+    "dataCollectedIntro": "Alla prima attivazione, PDR Kalk invia a api.pdrkalk.ch:",
     "dataCollectedItems": [
-      "Un identificatore del dispositivo sotto forma di valore hash (HMAC-SHA256, unidirezionale — non reversibile in chiaro)",
+      "Un identificatore del dispositivo come valore hash (HMAC-SHA256, unidirezionale — non riconducibile al testo in chiaro)",
       "Piattaforma (Windows o Android) e versione dell'app",
       "Un indirizzo IP troncato (IPv4 /24, IPv6 /48 — ad es. 203.0.113.0/24 invece di 203.0.113.42)",
-      "Versione principale del sistema operativo (ad es. « Windows 11 » o « Android 14 » — nessun dato dettagliato di user-agent)",
+      "Versione principale del sistema operativo (ad es. «Windows 11» o «Android 14» — nessun dato user-agent dettagliato)",
       "Marca temporale dell'attivazione",
       "Dopo la successiva selezione della regione: la regione scelta (CH, DE o AT)"
     ],
     "dataNotCollectedTitle": "Cosa NON trasmettiamo:",
     "dataNotCollectedItems": [
       "Nessun nome, indirizzo e-mail o indirizzo postale",
-      "Nessun dato di azienda, cliente, rapporto o fattura",
+      "Nessun dato aziendale, di cliente, di rapporto o di fattura",
       "Nessun indirizzo IP completo",
-      "Nessuna telemetria o dato di utilizzo durante la prova",
+      "Nessun dato di telemetria o di utilizzo durante la prova",
       "Nessun cookie o identificatore di tracciamento"
     ],
     "purposeTitle": "Finalità e base giuridica",
-    "purposeBody": "I dati trasmessi servono esclusivamente a garantire una versione di prova per dispositivo (prevenzione degli abusi). La base giuridica è il nostro legittimo interesse a proteggerci dagli abusi di licenza ai sensi dell'art. 6 par. 1 lett. f GDPR o dell'art. 31 cpv. 2 lett. d nLPD (Svizzera).",
+    "purposeBody": "I dati trasmessi vengono utilizzati esclusivamente per imporre una sola prova per dispositivo (prevenzione degli abusi). La base giuridica è il nostro legittimo interesse a tutelarci dall'uso abusivo delle licenze ai sensi dell'art. 6, par. 1, lett. f) del GDPR o dell'art. 31, cpv. 2, lett. d) della nLPD (Svizzera).",
     "retentionTitle": "Periodo di conservazione",
-    "retentionBody": "Il record di attivazione viene conservato durante la prova attiva (30 giorni) e per 30 giorni dopo la scadenza. Successivamente l'indirizzo IP troncato viene rimosso dal record. L'hash dell'identificatore del dispositivo viene conservato in modo permanente a scopo di prevenzione degli abusi — non contiene dati direttamente personali.",
+    "retentionBody": "Il record di attivazione viene conservato durante la prova attiva (30 giorni) e per 30 giorni dopo la scadenza. Successivamente, l'indirizzo IP troncato viene rimosso dal record. L'hash dell'identificatore del dispositivo viene conservato in modo permanente ai fini della prevenzione degli abusi — non contiene alcun dato direttamente personale.",
     "processorTitle": "Responsabile del trattamento",
-    "processorBody": "Infrastruttura server: Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA. Cloudflare è certificata nell'ambito dell'EU-US Data Privacy Framework (DPF). Il database è configurato nel cluster « WEUR » di Cloudflare (Francoforte / Amsterdam); i dati di attivazione vengono pertanto, di regola, trattati esclusivamente all'interno dell'UE.",
+    "processorBody": "Infrastruttura server: Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA. Cloudflare è certificata nell'ambito dell'EU-US Data Privacy Framework (DPF). Il database è configurato nel cluster WEUR di Cloudflare (Francoforte / Amsterdam); i dati di attivazione vengono pertanto normalmente trattati esclusivamente all'interno dell'UE.",
     "rightsTitle": "I tuoi diritti (accesso, cancellazione, opposizione)",
     "rightsBody": "Hai diritto di accesso, rettifica, cancellazione, limitazione del trattamento e opposizione. Per esercitare questi diritti, contattaci via e-mail all'indirizzo:",
     "rightsContact": "dsr@pdrkalk.ch",
-    "rightsContactNote": "Indica preferibilmente il tuo token di attivazione (visibile nella finestra di dialogo della licenza nell'app) per consentirci di identificare il tuo record in modo univoco.",
-    "fingerprintTitle": "Nota tecnica: deriva dell'identificatore",
-    "fingerprintBody": "Su Windows 11 con la randomizzazione dell'indirizzo MAC attivata, l'identificatore del dispositivo può cambiare nel tempo. In rari casi questo può far sì che lo stesso dispositivo venga riconosciuto come nuovo dopo una reinstallazione. Se hai bisogno di una seconda versione di prova legittima (ad es. dopo una sostituzione hardware o un ripristino), contattaci a info@pdrkalk.ch — provvederemo a sbloccarti manualmente.",
-    "appHelpTitle": "Guida in-app",
-    "appHelpBody": "Un breve riassunto di queste informazioni è disponibile anche direttamente in PDR Kalk in « Aiuto → Privacy versione di prova »."
+    "rightsContactNote": "Indica il tuo token di attivazione (visibile nella finestra di dialogo della licenza dell'app) affinché possiamo individuare il tuo record in modo univoco.",
+    "fingerprintTitle": "Nota tecnica: deriva del dispositivo",
+    "fingerprintBody": "Su Windows 11 con la randomizzazione dell'indirizzo MAC attiva, l'identificatore del dispositivo può cambiare nel tempo. In rari casi ciò comporta che lo stesso dispositivo venga riconosciuto come nuovo dopo una reinstallazione. Se hai bisogno di una seconda prova legittima (ad es. dopo una sostituzione hardware o un ripristino), contattaci a info@pdrkalk.ch e la sbloccheremo manualmente.",
+    "appHelpTitle": "Aiuto nell'app",
+    "appHelpBody": "Un breve riepilogo di queste informazioni è disponibile anche direttamente in PDR Kalk sotto «Aiuto → Privacy della prova»."
   },
   "footer": {
     "company": "Balmer Storm Solutions",
@@ -392,7 +497,7 @@
     "regions": "Disponibile in",
     "intl": "Altri paesi in arrivo.",
     "links": {
-      "features": "Funzionalità",
+      "features": "Funzioni",
       "pricing": "Prezzi",
       "contact": "Contatto",
       "privacy": "Privacy"

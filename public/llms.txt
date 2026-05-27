@@ -14,7 +14,7 @@ PDR Kalk is built by Balmer Storm Solutions, a Swiss company founded by Dieter B
 - Pricing: CHF 550 one-time, 5-year licence (approx. CHF 9 / month); 30-day free trial, no credit card
 - Platforms: Windows, Android
 - Markets: Switzerland (CH), Germany (DE), Austria (AT)
-- Languages: German, English
+- Languages: German, English, French, Italian
 - Tariff matrices: VFFS 2025 (CH), Zürich Mischhagel, BVAT (DE), Austria
 - Invoicing: Swiss QR-bill, ZUGFeRD / Factur-X (PDF/A-3 with embedded XML)
 - Accounting export: DATEV CSV, VAT export, open receivables as Excel
@@ -36,6 +36,10 @@ Independent PDR technicians, hail-repair workshops, and PDR subcontractors opera
 
 - https://pdrkalk.ch/de/ — German home (default)
 - https://pdrkalk.ch/en/ — English home
+- https://pdrkalk.ch/fr/ — French home
+- https://pdrkalk.ch/it/ — Italian home
 - https://pdrkalk.ch/de/privacy/ — Privacy notice (DE)
 - https://pdrkalk.ch/en/privacy/ — Privacy notice (EN)
+- https://pdrkalk.ch/fr/privacy/ — Privacy notice (FR)
+- https://pdrkalk.ch/it/privacy/ — Privacy notice (IT)
 - https://pdrkalk.ch/sitemap.xml — sitemap

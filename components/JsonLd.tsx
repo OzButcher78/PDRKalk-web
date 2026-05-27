@@ -46,7 +46,7 @@ export default function JsonLd({locale, description}: Props) {
       applicationSubCategory: 'Estimation and Invoicing Software',
       operatingSystem: 'Windows, Android',
       softwareVersion: '4.25.0',
-      inLanguage: ['de', 'en'],
+      inLanguage: ['de', 'en', 'fr', 'it'],
       author: {'@id': ORG_ID},
       publisher: {'@id': ORG_ID},
       offers: [
