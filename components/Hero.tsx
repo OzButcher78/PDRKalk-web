@@ -10,7 +10,7 @@ const WINDOWS_DOWNLOAD_URL =
   'https://github.com/OzButcher78/pdrkalk/releases/download/v4.25.1/PDR-Kalk-Setup-4.25.1.exe';
 const ANDROID_DOWNLOAD_URL =
   process.env.NEXT_PUBLIC_ANDROID_DOWNLOAD_URL ||
-  'https://github.com/OzButcher78/pdrkalk/releases/download/android-v4.25.1/app-release.apk';
+  'https://github.com/OzButcher78/pdrkalk/releases/download/android-v4.25.1/pdrkalk-android-4.25.1.apk';
 const YOUTUBE_VIDEO_ID = 'YnwMff4CjB4';
 
 const REGION_FLAGS = ['ch', 'de', 'at'] as const;
