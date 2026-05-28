@@ -4,10 +4,10 @@ import {useTranslations} from 'next-intl';
 
 const WINDOWS_DOWNLOAD_URL =
   process.env.NEXT_PUBLIC_WINDOWS_DOWNLOAD_URL ||
-  'https://github.com/OzButcher78/pdrkalk/releases/download/v4.25.0/PDR-Kalk-Setup-4.25.0.exe';
+  'https://github.com/OzButcher78/pdrkalk/releases/download/v4.25.1/PDR-Kalk-Setup-4.25.1.exe';
 const ANDROID_DOWNLOAD_URL =
   process.env.NEXT_PUBLIC_ANDROID_DOWNLOAD_URL ||
-  'https://github.com/OzButcher78/pdrkalk/releases/download/android-v4.25.0/pdrkalk-android-4.25.0.apk';
+  'https://github.com/OzButcher78/pdrkalk/releases/download/android-v4.25.1/app-release.apk';
 
 type Platform = {
   key: 'windows' | 'android';
