@@ -135,7 +135,7 @@ export default function Testimonials() {
           {/* Viewport — all slides stacked in one grid cell so the height is
               stable (tallest slide) and every quote stays in the server HTML
               for crawlers. Inactive slides fade out and are aria-hidden. */}
-          <div aria-live="polite" style={{display: 'grid'}}>
+          <div aria-live="polite" style={{position: 'relative'}}>
             {items.map((item, i) => {
               const active = i === index;
               return (
@@ -146,8 +146,13 @@ export default function Testimonials() {
                   aria-label={`${i + 1} / ${count}`}
                   aria-hidden={!active}
                   style={{
-                    gridArea: '1 / 1',
-                    alignSelf: 'center',
+                    // The active slide stays in flow and sets the height;
+                    // inactive slides are absolutely positioned so they stay
+                    // in the DOM (crawlable) without inflating the height.
+                    position: active ? 'relative' : 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
                     margin: 0,
                     display: 'flex',
                     flexDirection: 'column',
@@ -158,20 +163,6 @@ export default function Testimonials() {
                     transition: 'opacity 0.5s ease',
                   }}
                 >
-                  {/* Decorative quote mark */}
-                  <div
-                    aria-hidden="true"
-                    style={{
-                      fontFamily: 'Georgia, serif',
-                      fontSize: '3rem',
-                      lineHeight: 1,
-                      color: 'var(--red)',
-                      marginBottom: '0.5rem',
-                    }}
-                  >
-                    &ldquo;
-                  </div>
-
                   {/* 5-star rating */}
                   <div
                     role="img"
@@ -197,7 +188,33 @@ export default function Testimonials() {
                       color: '#e6edf7',
                     }}
                   >
+                    <span
+                      aria-hidden="true"
+                      style={{
+                        color: 'var(--red)',
+                        fontFamily: 'Georgia, serif',
+                        fontSize: '1.5em',
+                        lineHeight: 0,
+                        verticalAlign: '-0.35em',
+                        marginRight: '0.08em',
+                      }}
+                    >
+                      &ldquo;
+                    </span>
                     {item.quote}
+                    <span
+                      aria-hidden="true"
+                      style={{
+                        color: 'var(--red)',
+                        fontFamily: 'Georgia, serif',
+                        fontSize: '1.5em',
+                        lineHeight: 0,
+                        verticalAlign: '-0.35em',
+                        marginLeft: '0.06em',
+                      }}
+                    >
+                      &rdquo;
+                    </span>
                   </blockquote>
 
                   <div
