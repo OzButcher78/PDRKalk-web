@@ -47,11 +47,12 @@ export default function Navbar() {
 
   const home = `/${locale}/`;
   const navLinks = [
-    {href: `${home}#features`,    label: t('features')},
-    {href: `${home}#screenshots`, label: t('screenshots')},
-    {href: `${home}#pricing`,     label: t('pricing')},
-    {href: `${home}#more`,        label: t('more')},
-    {href: `${home}#contact`,     label: t('contact')},
+    {href: `${home}#features`,     label: t('features')},
+    {href: `${home}#screenshots`,  label: t('screenshots')},
+    {href: `${home}#pricing`,      label: t('pricing')},
+    {href: `${home}#more`,         label: t('more')},
+    {href: `${home}#testimonials`, label: t('testimonials')},
+    {href: `${home}#contact`,      label: t('contact')},
   ];
 
   return (

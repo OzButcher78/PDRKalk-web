@@ -100,6 +100,7 @@ export default async function LocaleLayout({children, params}: Props) {
 
   const messages = (await import(`@/messages/${locale}.json`)).default;
   const t = await getTranslations({locale, namespace: 'meta'});
+  const reviews = messages.testimonials?.items ?? [];
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -111,7 +112,7 @@ export default async function LocaleLayout({children, params}: Props) {
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
-        <JsonLd locale={locale} description={t('description')} />
+        <JsonLd locale={locale} description={t('description')} reviews={reviews} />
       </body>
     </html>
   );

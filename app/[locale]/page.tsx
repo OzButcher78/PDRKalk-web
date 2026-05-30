@@ -9,7 +9,7 @@ import SecondaryFeatures from '@/components/SecondaryFeatures';
 import Comparison from '@/components/Comparison';
 import Pricing from '@/components/Pricing';
 import Download from '@/components/Download';
-import Testimonial from '@/components/Testimonial';
+import Testimonials from '@/components/Testimonials';
 import FinalCTA from '@/components/FinalCTA';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -41,7 +41,7 @@ export default async function Home({params}: Props) {
         <Comparison />
         <Pricing />
         <Download />
-        <Testimonial />
+        <Testimonials />
         <FinalCTA />
         <Contact />
         <Footer />

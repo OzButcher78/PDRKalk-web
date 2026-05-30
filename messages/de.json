@@ -10,6 +10,7 @@
     "screenshots": "Screenshots",
     "pricing": "Preise",
     "more": "Mehr",
+    "testimonials": "Kundenstimmen",
     "contact": "Kontakt",
     "cta": "Jetzt kaufen",
     "skipToContent": "Zum Inhalt springen"
@@ -333,10 +334,27 @@
       "note": "Alle Preise exkl. MwSt. Optionale Funktionserweiterungen oder Versicherungsupdates können gegen eine kleine Gebühr angeboten werden. Alle Vergleichswerte basieren auf öffentlich zugänglichen Preisinformationen (Stand Frühjahr 2026)."
     }
   },
-  "testimonial": {
-    "title": "Was Techniker sagen",
-    "placeholder": "Kundenstimmen folgen in Kürze.",
-    "quote": "Entwickelt von einem PDR-Techniker mit über 25 Jahren Erfahrung in der Hagel- und Parkschadenreparatur."
+  "testimonials": {
+    "title": "Das sagen Anwender",
+    "subtitle": "Echte Rückmeldungen aus der PDR-Praxis",
+    "prev": "Vorherige Stimme",
+    "next": "Nächste Stimme",
+    "goTo": "Zur Stimme {n} wechseln",
+    "rating": "{r} von 5 Sternen",
+    "items": [
+      {
+        "quote": "PDR Kalk ist für mich als PDR-Techniker eine enorme Arbeitserleichterung. Die Software ist übersichtlich, professionell aufgebaut und spart täglich viel Zeit bei der Kalkulation von Hagel- und Parkschäden. Besonders schätze ich die einfache Bedienung, die saubere Erstellung von Rapporten und Rechnungen sowie die zuverlässigen Berechnungen. Man merkt sofort, dass die Software von jemandem entwickelt wurde, der die PDR-Branche aus der Praxis kennt. Der Support ist schnell und kompetent. Klare Empfehlung für alle, die professionell und effizient arbeiten möchten.",
+        "name": "Florian Huber",
+        "company": "Carrosserie Huber · Aber Tip Top",
+        "location": "Schweiz"
+      },
+      {
+        "quote": "PDRkalk ist aus meiner Sicht die beste Hagel- und Parkschaden-Berechnungssoftware auf dem Markt. Die Anwendung überzeugt durch eine extrem einfache und intuitive Bedienung und ist sowohl für Microsoft (Windows) als auch für Android verfügbar – ideal für den flexiblen Einsatz im Büro und unterwegs. Kalkulationen lassen sich schnell und übersichtlich erstellen, direkt digital versenden und nahtlos in Rechnungen umwandeln. Besonders stark ist die Möglichkeit, Arbeiten sauber zu unterteilen und mehrere Drücker als Subunternehmer gemeinsam in einem System arbeiten zu lassen. Dadurch bleibt jederzeit volle Transparenz über Leistungen, Abrechnungen und Zuständigkeiten erhalten. PDRkalk spart enorm viel Zeit, reduziert Fehler und sorgt für einen professionellen, strukturierten Ablauf – von der Schadenaufnahme bis zur Abrechnung. Für Betriebe im Bereich Hagel- und Parkschadeninstandsetzung ist diese Software ein echter Mehrwert und aus dem Arbeitsalltag kaum wegzudenken. Klare Empfehlung.",
+        "name": "Jürg Strähl",
+        "company": "Strähl Drücktechnik",
+        "location": "Schweiz"
+      }
+    ]
   },
   "finalCta": {
     "title": "Bereit, Zeit zu sparen?",
