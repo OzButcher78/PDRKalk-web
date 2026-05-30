@@ -69,12 +69,24 @@ export default function Testimonials() {
     <section
       id="testimonials"
       style={{
-        background: 'var(--ink)',
+        background: 'var(--ink-mid)',
         padding: '5rem 1.5rem',
         position: 'relative',
         overflow: 'hidden',
       }}
     >
+      {/* Subtle grid texture — sets this section apart from the
+          var(--ink) Download / FinalCTA sections on either side. */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage:
+            'linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px)',
+          backgroundSize: '40px 40px',
+          pointerEvents: 'none',
+        }}
+      />
       {/* Subtle red glow */}
       <div
         style={{
