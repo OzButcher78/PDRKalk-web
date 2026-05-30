@@ -12,7 +12,7 @@ import {
 type TestimonialItem = {
   quote: string;
   name: string;
-  company: string;
+  company?: string;
   location: string;
 };
 
@@ -275,16 +275,18 @@ export default function Testimonials() {
                       >
                         {item.name}
                       </cite>
-                      <span
-                        style={{
-                          display: 'block',
-                          fontFamily: 'Barlow, sans-serif',
-                          fontSize: '0.85rem',
-                          color: 'var(--steel)',
-                        }}
-                      >
-                        {item.company}
-                      </span>
+                      {item.company && (
+                        <span
+                          style={{
+                            display: 'block',
+                            fontFamily: 'Barlow, sans-serif',
+                            fontSize: '0.85rem',
+                            color: 'var(--steel)',
+                          }}
+                        >
+                          {item.company}
+                        </span>
+                      )}
                       <span
                         style={{
                           display: 'block',
