@@ -379,14 +379,14 @@
       "eyebrow": "For PC & laptop",
       "name": "Microsoft Windows",
       "system": "Windows 10 or 11",
-      "version": "Version 4.25.1",
+      "version": "Version 4.25.2",
       "button": "Windows installer"
     },
     "android": {
       "eyebrow": "For tablet",
       "name": "Android",
       "system": "Android 10 or newer",
-      "version": "Version 4.25.1",
+      "version": "Version 4.25.2",
       "button": "Android APK"
     },
     "footnote": "Apple devices and smartphones are not supported."
