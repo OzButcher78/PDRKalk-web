@@ -379,14 +379,14 @@
       "eyebrow": "Per PC e portatile",
       "name": "Microsoft Windows",
       "system": "Windows 10 o 11",
-      "version": "Versione 4.25.2",
+      "version": "Versione 4.25.10",
       "button": "Installer Windows"
     },
     "android": {
       "eyebrow": "Per tablet",
       "name": "Android",
       "system": "Android 10 o più recente",
-      "version": "Versione 4.25.2",
+      "version": "Versione 4.25.8",
       "button": "APK Android"
     },
     "footnote": "I dispositivi Apple e gli smartphone non sono supportati."

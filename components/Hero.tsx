@@ -7,10 +7,10 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://web.pdrkalk.com';
 const BUY_URL = process.env.NEXT_PUBLIC_BUY_URL || '#pricing';
 const WINDOWS_DOWNLOAD_URL =
   process.env.NEXT_PUBLIC_WINDOWS_DOWNLOAD_URL ||
-  'https://github.com/OzButcher78/pdrkalk/releases/download/v4.25.2/PDR-Kalk-Setup-4.25.2.exe';
+  'https://github.com/OzButcher78/pdrkalk/releases/download/v4.25.10/PDR-Kalk-Setup-4.25.10.exe';
 const ANDROID_DOWNLOAD_URL =
   process.env.NEXT_PUBLIC_ANDROID_DOWNLOAD_URL ||
-  'https://github.com/OzButcher78/pdrkalk/releases/download/android-v4.25.2/pdrkalk-android-4.25.2.apk';
+  'https://github.com/OzButcher78/pdrkalk/releases/download/android-v4.25.8/pdrkalk-android-4.25.8.apk';
 const YOUTUBE_VIDEO_ID = 'YnwMff4CjB4';
 
 const REGION_FLAGS = ['ch', 'de', 'at'] as const;

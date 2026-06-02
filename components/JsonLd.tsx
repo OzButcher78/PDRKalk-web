@@ -53,7 +53,7 @@ export default function JsonLd({locale, description, reviews = []}: Props) {
       applicationCategory: 'BusinessApplication',
       applicationSubCategory: 'Estimation and Invoicing Software',
       operatingSystem: 'Windows, Android',
-      softwareVersion: '4.25.2',
+      softwareVersion: '4.25.10',
       inLanguage: ['de', 'en', 'fr', 'it'],
       author: {'@id': ORG_ID},
       publisher: {'@id': ORG_ID},
