@@ -4,7 +4,7 @@ import {useTranslations, useLocale} from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const REGION_FLAGS = ['ch', 'de', 'at'] as const;
+const REGION_FLAGS = ['ch', 'de', 'at', 'au'] as const;
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -133,7 +133,7 @@ export default function Footer() {
             }}
           >
             {REGION_FLAGS.map((code) => {
-              const label = country(`country_${code}` as 'country_ch' | 'country_de' | 'country_at');
+              const label = country(`country_${code}` as 'country_ch' | 'country_de' | 'country_at' | 'country_au');
               return (
                 <Image
                   key={code}

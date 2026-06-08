@@ -85,7 +85,7 @@
     "cards": [
       {
         "heading": "Hail & parking damage estimation",
-        "desc": "4 price matrices (VFFS, Zurich mixed-hail, BVAT with de-/remount column, Austria) with live calculation across 14 panels. Parking damage: per panel, flat rate, or time-based."
+        "desc": "4 price matrices (VFFS, Zurich mixed-hail, BVAT with de-/remount column, Austria) with live calculation across 14 panels. Australia: hail estimate per panel, per vehicle, triage, or hours. Parking damage: per panel, flat rate, or time-based."
       },
       {
         "heading": "Documents & manual invoices",
@@ -221,11 +221,12 @@
         ]
       },
       {
-        "heading": "3 regions — CH, DE, AT",
+        "heading": "4 regions — CH, DE, AT, AU",
         "items": [
           "Switzerland: CHF, VAT 8.1%, QR payment slip, 5-Rappen rounding",
           "Germany: EUR, VAT 19%, DATEV export, cancellation invoices, ZUGFeRD/Factur-X e-invoice",
           "Austria: EUR, VAT 20%, dedicated price matrix",
+          "Australia: AUD, GST 10%, hail estimate per panel, per vehicle, triage, or hours",
           "Reverse charge for EU customers with VAT ID"
         ]
       },

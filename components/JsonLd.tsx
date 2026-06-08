@@ -33,7 +33,7 @@ export default function JsonLd({locale, description, reviews = []}: Props) {
         '@type': 'Country',
         name: 'Switzerland',
       },
-      areaServed: ['CH', 'DE', 'AT'],
+      areaServed: ['CH', 'DE', 'AT', 'AU'],
       slogan: 'Made in Switzerland.',
     },
     {

@@ -85,7 +85,7 @@
     "cards": [
       {
         "heading": "Hagel- & Parkschadenkalkulation",
-        "desc": "4 Preismatrizen (VFFS, Zürich Mischhagel, BVAT mit De-/Montage-Spalte, Österreich) mit Live-Berechnung über 14 Panels. Parkschaden wahlweise pro Panel, pauschal oder AW-basiert."
+        "desc": "4 Preismatrizen (VFFS, Zürich Mischhagel, BVAT mit De-/Montage-Spalte, Österreich) mit Live-Berechnung über 14 Panels. Australien: Hagelschätzung pro Panel, pro Fahrzeug, Triage oder stundenbasiert. Parkschaden wahlweise pro Panel, pauschal oder AW-basiert."
       },
       {
         "heading": "Dokumente & Manuelle Rechnungen",
@@ -221,11 +221,12 @@
         ]
       },
       {
-        "heading": "3 Regionen — CH, DE, AT",
+        "heading": "4 Regionen — CH, DE, AT, AU",
         "items": [
           "Schweiz: CHF, MwSt 8,1%, QR-Einzahlungsschein, 5-Rappen-Rundung",
           "Deutschland: EUR, MwSt 19%, DATEV-Export, Stornorechnung, ZUGFeRD/Factur-X E-Rechnung",
           "Österreich: EUR, USt 20%, eigene Preismatrix",
+          "Australien: AUD, GST 10%, Hagelschätzung pro Panel, pro Fahrzeug, Triage oder stundenbasiert",
           "Reverse Charge bei EU-Kunden mit USt-IdNr"
         ]
       },

@@ -85,7 +85,7 @@
     "cards": [
       {
         "heading": "Calcolo danni da grandine e parcheggio",
-        "desc": "4 matrici di prezzo (VFFS, grandine mista Zurigo, BVAT con colonna smontaggio/rimontaggio, Austria) con calcolo in tempo reale su 14 pannelli. Danni da parcheggio: per pannello, forfait o a tempo."
+        "desc": "4 matrici di prezzo (VFFS, grandine mista Zurigo, BVAT con colonna smontaggio/rimontaggio, Austria) con calcolo in tempo reale su 14 pannelli. Australia: stima grandine per pannello, per veicolo, triage o a ore. Danni da parcheggio: per pannello, forfait o a tempo."
       },
       {
         "heading": "Documenti e fatture manuali",
@@ -221,11 +221,12 @@
         ]
       },
       {
-        "heading": "3 regioni — CH, DE, AT",
+        "heading": "4 regioni — CH, DE, AT, AU",
         "items": [
           "Svizzera: CHF, IVA 8,1%, polizza di versamento QR, arrotondamento ai 5 centesimi",
           "Germania: EUR, IVA 19%, export DATEV, fatture di storno, fattura elettronica ZUGFeRD/Factur-X",
           "Austria: EUR, IVA 20%, matrice di prezzo dedicata",
+          "Australia: AUD, GST 10%, stima grandine per pannello, per veicolo, triage o a ore",
           "Inversione contabile per i clienti UE con partita IVA"
         ]
       },

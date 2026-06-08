@@ -85,7 +85,7 @@
     "cards": [
       {
         "heading": "Calcul des dommages de grêle et de parking",
-        "desc": "4 matrices de prix (VFFS, grêle mixte Zurich, BVAT avec colonne dé-/remontage, Autriche) avec calcul en direct sur 14 panneaux. Dommages de parking : par panneau, forfait ou basé sur le temps."
+        "desc": "4 matrices de prix (VFFS, grêle mixte Zurich, BVAT avec colonne dé-/remontage, Autriche) avec calcul en direct sur 14 panneaux. Australie : estimation grêle par panneau, par véhicule, triage ou à l'heure. Dommages de parking : par panneau, forfait ou basé sur le temps."
       },
       {
         "heading": "Documents et factures manuelles",
@@ -221,11 +221,12 @@
         ]
       },
       {
-        "heading": "3 régions — CH, DE, AT",
+        "heading": "4 régions — CH, DE, AT, AU",
         "items": [
           "Suisse : CHF, TVA 8,1 %, bulletin de versement QR, arrondi aux 5 centimes",
           "Allemagne : EUR, TVA 19 %, export DATEV, factures d'annulation, facture électronique ZUGFeRD/Factur-X",
           "Autriche : EUR, TVA 20 %, matrice de prix dédiée",
+          "Australie : AUD, GST 10 %, estimation grêle par panneau, par véhicule, triage ou à l'heure",
           "Autoliquidation pour les clients de l'UE avec numéro de TVA"
         ]
       },

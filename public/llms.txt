@@ -4,7 +4,7 @@
 
 ## About
 
-PDR Kalk is built by Balmer Storm Solutions, a Swiss company founded by Dieter Balmer, a PDR technician with over 25 years of hail and park-damage repair experience. It runs locally on Windows and Android, keeps all data on the user's own device or NAS, and is sold as a one-time 5-year licence (CHF 550, approx. EUR 580) with a free 30-day trial. PDR Kalk is GDPR / revDSG compliant and targets workshops in Switzerland, Germany, and Austria.
+PDR Kalk is built by Balmer Storm Solutions, a Swiss company founded by Dieter Balmer, a PDR technician with over 25 years of hail and park-damage repair experience. It runs locally on Windows and Android, keeps all data on the user's own device or NAS, and is sold as a one-time 5-year licence (CHF 550, approx. EUR 580) with a free 30-day trial. PDR Kalk is GDPR / revDSG compliant and targets workshops in Switzerland, Germany, Austria, and Australia.
 
 ## Key facts
 
@@ -13,9 +13,10 @@ PDR Kalk is built by Balmer Storm Solutions, a Swiss company founded by Dieter B
 - Founder: Dieter Balmer
 - Pricing: CHF 550 one-time, 5-year licence (approx. CHF 9 / month); 30-day free trial, no credit card
 - Platforms: Windows, Android
-- Markets: Switzerland (CH), Germany (DE), Austria (AT)
+- Markets: Switzerland (CH), Germany (DE), Austria (AT), Australia (AU)
 - Languages: German, English, French, Italian
 - Tariff matrices: VFFS 2025 (CH), Zürich Mischhagel, BVAT (DE), Austria
+- Australia hail estimate: per panel, per vehicle, triage, or hours
 - Invoicing: Swiss QR-bill, ZUGFeRD / Factur-X (PDF/A-3 with embedded XML)
 - Accounting export: DATEV CSV, VAT export, open receivables as Excel
 - Compliance: GDPR / revDSG, EN 16931 e-invoice
@@ -30,7 +31,7 @@ PDR technicians traditionally estimate hail and park damage in spreadsheets, the
 
 ## Who it is for
 
-Independent PDR technicians, hail-repair workshops, and PDR subcontractors operating in Switzerland, Germany, and Austria who want a one-time-purchase tool that runs offline and keeps customer data on their own hardware.
+Independent PDR technicians, hail-repair workshops, and PDR subcontractors operating in Switzerland, Germany, Austria, and Australia who want a one-time-purchase tool that runs offline and keeps customer data on their own hardware.
 
 ## Pages
 
