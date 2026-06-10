@@ -16,6 +16,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+  const [activeId, setActiveId] = useState('');
   const langRef = useRef<HTMLDivElement>(null);
 
   const allLocales = routing.locales.map(code => ({code, label: code.toUpperCase()}));
@@ -24,6 +25,27 @@ export default function Navbar() {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', onScroll, {passive: true});
     return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  // Scroll-spy: highlight the nav link for whichever section is in view.
+  useEffect(() => {
+    const ids = ['features', 'screenshots', 'pricing', 'more', 'testimonials', 'contact'];
+    const sections = ids
+      .map(id => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null);
+    if (sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      entries => {
+        const top = entries
+          .filter(e => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+        if (top) setActiveId(top.target.id);
+      },
+      {rootMargin: '-80px 0px -55% 0px', threshold: 0},
+    );
+    sections.forEach(s => observer.observe(s));
+    return () => observer.disconnect();
   }, []);
 
   // Close lang dropdown on outside click
@@ -54,6 +76,7 @@ export default function Navbar() {
     {href: `${home}#testimonials`, label: t('testimonials')},
     {href: `${home}#contact`,      label: t('contact')},
   ];
+  const linkId = (href: string) => href.split('#')[1] ?? '';
 
   return (
     <header
@@ -115,7 +138,8 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="nav-link"
+                className={`nav-link${linkId(link.href) === activeId ? ' nav-link-active' : ''}`}
+                aria-current={linkId(link.href) === activeId ? 'true' : undefined}
                 style={{
                   fontFamily: 'Barlow Condensed, sans-serif',
                   fontWeight: 600,
@@ -302,6 +326,8 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
+              className={linkId(link.href) === activeId ? 'nav-link-active' : undefined}
+              aria-current={linkId(link.href) === activeId ? 'true' : undefined}
               style={{
                 display: 'flex',
                 alignItems: 'center',

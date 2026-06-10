@@ -13,6 +13,7 @@ import Testimonials from '@/components/Testimonials';
 import FinalCTA from '@/components/FinalCTA';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import BackToTop from '@/components/BackToTop';
 
 type Props = {
   params: Promise<{locale: string}>;
@@ -45,6 +46,7 @@ export default async function Home({params}: Props) {
         <FinalCTA />
         <Contact />
         <Footer />
+        <BackToTop />
       </main>
     </>
   );

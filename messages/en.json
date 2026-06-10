@@ -13,7 +13,8 @@
     "testimonials": "Testimonials",
     "contact": "Contact",
     "cta": "Buy Now",
-    "skipToContent": "Skip to content"
+    "skipToContent": "Skip to content",
+    "backToTop": "Back to top"
   },
   "hero": {
     "title": "Calculate hail damage.",
@@ -149,7 +150,7 @@
       { "file": "einstellungen2.jpg",              "caption": "Settings (2)" },
       { "file": "einstellungen3.jpg",              "caption": "Settings (3)" }
     ],
-    "initialCount": 8,
+    "initialCount": 6,
     "showMore": "See more screenshots",
     "showLess": "Show less"
   },
@@ -275,7 +276,8 @@
       { "feature": "DATEV / accounting export", "pdrKalk": true, "competitor": false, "competitorNote": "Extra charge" },
       { "feature": "Camera capture in-app", "pdrKalk": true, "competitor": false, "competitorNote": "No" }
     ],
-    "footnote": "* This feature is only supported on Microsoft devices."
+    "footnote": "* This feature is only supported on Microsoft devices.",
+    "toggle": "Show detailed comparison"
   },
   "pricing": {
     "title": "Buy once. Use forever.",

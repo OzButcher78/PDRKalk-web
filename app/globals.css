@@ -210,6 +210,19 @@ body {
 .nav-link:hover  { color: #fff !important; }
 .footer-link:hover { color: #fff !important; }
 
+/* Active nav link (scroll-spy) */
+.nav-link-active { color: #fff !important; position: relative; }
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: 0.25rem;
+  height: 2px;
+  background: var(--red);
+  border-radius: 2px;
+}
+
 /* Screenshot thumbnail hover — scoped to parent button */
 .screenshot-btn .screenshot-img  { transition: transform 0.35s ease; }
 .screenshot-btn .screenshot-play { opacity: 0; transition: opacity 0.25s; }
@@ -434,4 +447,69 @@ h1, h2, h3 {
 /* Scroll margin for sticky nav */
 [id] {
   scroll-margin-top: 80px;
+}
+
+/* ---- Back-to-top floating button ---- */
+.back-to-top {
+  opacity: 0;
+  transform: translateY(12px) scale(0.9);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease, background 0.2s ease;
+}
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+@media (hover: hover) {
+  .back-to-top:hover {
+    background: var(--ink-mid) !important;
+    border-color: var(--red) !important;
+    transform: translateY(-2px) scale(1.04);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top { transition: opacity 0.2s ease; }
+  .back-to-top.visible,
+  .back-to-top:hover { transform: none; }
+}
+
+/* ---- Comparison collapsible (native <details>) ---- */
+.comparison-summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0 auto 1.5rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 0.7rem 1.25rem;
+  width: fit-content;
+  transition: border-color 0.2s, color 0.2s;
+}
+.comparison-summary::-webkit-details-marker { display: none; }
+.comparison-summary::after {
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid var(--red);
+  border-bottom: 2px solid var(--red);
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+}
+.comparison-details[open] .comparison-summary::after { transform: rotate(-135deg); }
+.comparison-summary:hover { border-color: var(--red); }
+
+/* Print: hide nav-efficiency chrome */
+@media print {
+  .back-to-top { display: none !important; }
 }

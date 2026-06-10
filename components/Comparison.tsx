@@ -30,6 +30,10 @@ export default function Comparison() {
           <div className="gradient-line" style={{width: '60px', margin: '0 auto'}}/>
         </div>
 
+        {/* Collapsible detailed comparison — keeps the page short; full table one click away */}
+        <details className="comparison-details">
+          <summary className="comparison-summary">{t('toggle')}</summary>
+
         {/* Table */}
         <div style={{
           borderRadius: '10px',
@@ -147,6 +151,7 @@ export default function Comparison() {
             {footnote}
           </p>
         )}
+        </details>
       </div>
     </section>
   );

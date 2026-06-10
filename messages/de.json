@@ -13,7 +13,8 @@
     "testimonials": "Kundenstimmen",
     "contact": "Kontakt",
     "cta": "Jetzt kaufen",
-    "skipToContent": "Zum Inhalt springen"
+    "skipToContent": "Zum Inhalt springen",
+    "backToTop": "Nach oben"
   },
   "hero": {
     "title": "Hagelschaden kalkulieren.",
@@ -149,7 +150,7 @@
       { "file": "einstellungen2.jpg",              "caption": "Einstellungen (2)" },
       { "file": "einstellungen3.jpg",              "caption": "Einstellungen (3)" }
     ],
-    "initialCount": 8,
+    "initialCount": 6,
     "showMore": "Mehr Screenshots anzeigen",
     "showLess": "Weniger anzeigen"
   },
@@ -275,7 +276,8 @@
       { "feature": "DATEV / Buchhaltungsexport", "pdrKalk": true, "competitor": false, "competitorNote": "Aufpreis" },
       { "feature": "Kamera direkt in der App", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" }
     ],
-    "footnote": "* Diese Funktion wird nur auf Microsoft-Geräten unterstützt."
+    "footnote": "* Diese Funktion wird nur auf Microsoft-Geräten unterstützt.",
+    "toggle": "Detailvergleich anzeigen"
   },
   "pricing": {
     "title": "Einmal kaufen. Für immer nutzen.",

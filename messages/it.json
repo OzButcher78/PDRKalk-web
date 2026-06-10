@@ -13,7 +13,8 @@
     "testimonials": "Testimonianze",
     "contact": "Contatto",
     "cta": "Acquista",
-    "skipToContent": "Vai al contenuto"
+    "skipToContent": "Vai al contenuto",
+    "backToTop": "Torna su"
   },
   "hero": {
     "title": "Calcola i danni da grandine.",
@@ -149,7 +150,7 @@
       { "file": "einstellungen2.jpg",              "caption": "Impostazioni (2)" },
       { "file": "einstellungen3.jpg",              "caption": "Impostazioni (3)" }
     ],
-    "initialCount": 8,
+    "initialCount": 6,
     "showMore": "Vedi altre schermate",
     "showLess": "Mostra meno"
   },
@@ -275,7 +276,8 @@
       { "feature": "Export DATEV / contabile", "pdrKalk": true, "competitor": false, "competitorNote": "A pagamento" },
       { "feature": "Acquisizione foto nell'app", "pdrKalk": true, "competitor": false, "competitorNote": "No" }
     ],
-    "footnote": "* Questa funzione è supportata solo sui dispositivi Microsoft."
+    "footnote": "* Questa funzione è supportata solo sui dispositivi Microsoft.",
+    "toggle": "Mostra confronto dettagliato"
   },
   "pricing": {
     "title": "Acquista una volta. Usa per sempre.",

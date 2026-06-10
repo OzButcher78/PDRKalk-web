@@ -13,7 +13,8 @@
     "testimonials": "Témoignages",
     "contact": "Contact",
     "cta": "Acheter",
-    "skipToContent": "Aller au contenu"
+    "skipToContent": "Aller au contenu",
+    "backToTop": "Haut de page"
   },
   "hero": {
     "title": "Calculez les dommages de grêle.",
@@ -149,7 +150,7 @@
       { "file": "einstellungen2.jpg",              "caption": "Paramètres (2)" },
       { "file": "einstellungen3.jpg",              "caption": "Paramètres (3)" }
     ],
-    "initialCount": 8,
+    "initialCount": 6,
     "showMore": "Voir plus de captures d'écran",
     "showLess": "Afficher moins"
   },
@@ -275,7 +276,8 @@
       { "feature": "Export DATEV / comptable", "pdrKalk": true, "competitor": false, "competitorNote": "Supplément" },
       { "feature": "Capture photo dans l'application", "pdrKalk": true, "competitor": false, "competitorNote": "Non" }
     ],
-    "footnote": "* Cette fonction n'est prise en charge que sur les appareils Microsoft."
+    "footnote": "* Cette fonction n'est prise en charge que sur les appareils Microsoft.",
+    "toggle": "Voir le comparatif détaillé"
   },
   "pricing": {
     "title": "Achetez une fois. Utilisez pour toujours.",
