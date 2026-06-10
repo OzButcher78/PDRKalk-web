@@ -37,7 +37,7 @@
       "amount": "AUD $590",
       "suffix": "ONE-TIME — NO SUBSCRIPTION",
       "amountEur": "",
-      "vatNote": "Excl. GST. Pays for itself in ~8 months."
+      "vatNote": "Pays for itself in ~8 months."
     }
   },
   "timeSavings": {
@@ -264,7 +264,7 @@
       "price": "AUD $590",
       "priceSuffix": "ONE-TIME LICENCE",
       "priceEur": "≈ AUD $10/month over 5 years",
-      "vatNote": "All prices exclude GST.",
+      "vatNote": "",
       "features": [
         "No subscription fees",
         "No setup fees",
@@ -312,7 +312,7 @@
         { "feature": "Total over 5 years",     "competitor": "AUD ~$4,500",           "competitor2": "AUD ~$7,800",          "pdrKalk": "AUD $590" }
       ],
       "closing": "AUD $3,900–$7,200 saved over five years — PDR Kalk pays for itself in under eight months.",
-      "note": "DentMate pricing as publicly listed in June 2026: Solo AUD $74.99/month, 2–4 Techs AUD $129.99/month; larger tiers cost more. PDR Kalk price excludes GST."
+      "note": "DentMate pricing as publicly listed in June 2026: Solo AUD $74.99/month, 2–4 Techs AUD $129.99/month; larger tiers cost more."
     }
   },
   "testimonials": {

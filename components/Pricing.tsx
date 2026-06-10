@@ -155,7 +155,7 @@ export default function Pricing() {
                   lineHeight: 1.4,
                 }}>
                   <div>{lifetime.priceEur}</div>
-                  <div>{lifetime.vatNote}</div>
+                  {lifetime.vatNote && <div>{lifetime.vatNote}</div>}
                 </div>
               </div>
 
