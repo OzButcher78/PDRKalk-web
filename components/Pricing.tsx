@@ -31,11 +31,12 @@ export default function Pricing() {
 
   const comparisonTable = t.raw('comparisonTable') as {
     title: string;
-    headers: { feature: string; competitor: string; pdrKalk: string };
-    rows: Array<{ feature: string; competitor: string; pdrKalk: string }>;
+    headers: { feature: string; competitor: string; competitor2?: string; pdrKalk: string };
+    rows: Array<{ feature: string; competitor: string; competitor2?: string; pdrKalk: string }>;
     closing: string;
     note: string;
   };
+  const hasCompetitor2 = Boolean(comparisonTable.headers.competitor2);
 
   return (
     <section id="pricing" className="section-pad" style={{
@@ -430,7 +431,7 @@ export default function Pricing() {
               style={{
                 width: '100%',
                 borderCollapse: 'collapse',
-                minWidth: '480px',
+                minWidth: hasCompetitor2 ? '600px' : '480px',
                 background: '#fff',
                 fontFamily: 'Barlow, sans-serif',
                 fontSize: '0.9rem',
@@ -463,6 +464,20 @@ export default function Pricing() {
                   }}>
                     {comparisonTable.headers.competitor}
                   </th>
+                  {hasCompetitor2 && (
+                    <th style={{
+                      textAlign: 'center',
+                      fontFamily: 'Barlow Condensed, sans-serif',
+                      fontWeight: 700,
+                      fontSize: '0.8rem',
+                      letterSpacing: '0.1em',
+                      textTransform: 'uppercase' as const,
+                      color: 'var(--steel)',
+                      borderBottom: '2px solid rgba(255,255,255,0.08)',
+                    }}>
+                      {comparisonTable.headers.competitor2}
+                    </th>
+                  )}
                   <th style={{
                     textAlign: 'center',
                     fontFamily: 'Barlow Condensed, sans-serif',
@@ -503,6 +518,17 @@ export default function Pricing() {
                       }}>
                         {row.competitor}
                       </td>
+                      {hasCompetitor2 && (
+                        <td style={{
+                          textAlign: 'center',
+                          color: isCostRow ? 'var(--red)' : '#64748b',
+                          fontWeight: isLastRow ? 800 : isCostRow ? 600 : 400,
+                          borderBottom: '1px solid #e2e8f0',
+                          borderTop: isLastRow ? '2px solid #cbd5e1' : undefined,
+                        }}>
+                          {row.competitor2}
+                        </td>
+                      )}
                       <td style={{
                         textAlign: 'center',
                         color: '#166534',

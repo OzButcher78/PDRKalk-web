@@ -294,24 +294,25 @@
       "title": "5-Year Cost Comparison",
       "headers": {
         "feature": "Feature",
-        "competitor": "DentMate (subscription)",
+        "competitor": "DentMate Solo",
+        "competitor2": "DentMate 2–4 Techs",
         "pdrKalk": "PDR Kalk (one-time)"
       },
       "rows": [
-        { "feature": "Licence model",          "competitor": "Monthly subscription", "pdrKalk": "One-time licence" },
-        { "feature": "Ongoing fees",           "competitor": "Every month, forever",  "pdrKalk": "None after purchase" },
-        { "feature": "Per-tech / extra seats", "competitor": "Tiered by team size",   "pdrKalk": "Unlimited users included" },
-        { "feature": "Internet required",      "competitor": "Yes (cloud)",           "pdrKalk": "No — fully offline" },
-        { "feature": "Your data",              "competitor": "On their servers",      "pdrKalk": "Stays on your device" },
-        { "feature": "Cost year 1",            "competitor": "AUD ~$900",             "pdrKalk": "AUD $590" },
-        { "feature": "Cost year 2",            "competitor": "AUD ~$900",             "pdrKalk": "AUD $0" },
-        { "feature": "Cost year 3",            "competitor": "AUD ~$900",             "pdrKalk": "AUD $0" },
-        { "feature": "Cost year 4",            "competitor": "AUD ~$900",             "pdrKalk": "AUD $0" },
-        { "feature": "Cost year 5",            "competitor": "AUD ~$900",             "pdrKalk": "AUD $0" },
-        { "feature": "Total over 5 years",     "competitor": "AUD ~$4,500",           "pdrKalk": "AUD $590" }
+        { "feature": "Licence model",          "competitor": "Monthly subscription", "competitor2": "Monthly subscription", "pdrKalk": "One-time licence" },
+        { "feature": "Ongoing fees",           "competitor": "Every month, forever",  "competitor2": "Every month, forever", "pdrKalk": "None after purchase" },
+        { "feature": "Per-tech / extra seats", "competitor": "1 tech only",           "competitor2": "Up to 4 techs",        "pdrKalk": "Unlimited users included" },
+        { "feature": "Internet required",      "competitor": "Yes (cloud)",           "competitor2": "Yes (cloud)",          "pdrKalk": "No — fully offline" },
+        { "feature": "Your data",              "competitor": "On their servers",      "competitor2": "On their servers",     "pdrKalk": "Stays on your device" },
+        { "feature": "Cost year 1",            "competitor": "+ AUD ~$900",           "competitor2": "+ AUD ~$1,560",        "pdrKalk": "AUD $590" },
+        { "feature": "Cost year 2",            "competitor": "+ AUD ~$900",           "competitor2": "+ AUD ~$1,560",        "pdrKalk": "AUD $0" },
+        { "feature": "Cost year 3",            "competitor": "+ AUD ~$900",           "competitor2": "+ AUD ~$1,560",        "pdrKalk": "AUD $0" },
+        { "feature": "Cost year 4",            "competitor": "+ AUD ~$900",           "competitor2": "+ AUD ~$1,560",        "pdrKalk": "AUD $0" },
+        { "feature": "Cost year 5",            "competitor": "+ AUD ~$900",           "competitor2": "+ AUD ~$1,560",        "pdrKalk": "AUD $0" },
+        { "feature": "Total over 5 years",     "competitor": "AUD ~$4,500",           "competitor2": "AUD ~$7,800",          "pdrKalk": "AUD $590" }
       ],
-      "closing": "About AUD $3,900 saved over five years — PDR Kalk pays for itself in roughly eight months.",
-      "note": "DentMate pricing is the publicly listed solo tier (AUD $74.99/month) as of June 2026; team tiers cost significantly more. PDR Kalk price excludes GST."
+      "closing": "AUD $3,900–$7,200 saved over five years — PDR Kalk pays for itself in under eight months.",
+      "note": "DentMate pricing as publicly listed in June 2026: Solo AUD $74.99/month, 2–4 Techs AUD $129.99/month; larger tiers cost more. PDR Kalk price excludes GST."
     }
   },
   "testimonials": {
