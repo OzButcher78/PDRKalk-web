@@ -31,5 +31,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: {languages: privacyLanguages},
   }));
 
-  return [...home, ...privacy];
+  // Standalone Australian landing page — not a routing locale, so it is added
+  // explicitly and deliberately without hreflang links to the de/en/fr/it pages.
+  const au: MetadataRoute.Sitemap = [{
+    url: `${SITE_URL}/au/`,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: 1.0,
+  }];
+
+  return [...home, ...au, ...privacy];
 }

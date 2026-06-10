@@ -89,7 +89,13 @@
       "Bash(curl -s -o NUL -w \"HTTP %{http_code}\\\\nlast-modified: %{header_json}\\\\n\" https://pdrkalk.com/de)",
       "Bash(curl -sL https://pdrkalk.com/de)",
       "Bash(node -e \"for \\(const l of ['de','en','fr','it']\\) { const m = require\\('./messages/'+l+'.json'\\); const it = m.testimonials.items; console.log\\(l, 'testimonials.items:', it.length, '| nav.testimonials:', JSON.stringify\\(m.nav.testimonials\\), '| names:', it.map\\(x=>x.name\\).join\\(', '\\)\\); }\")",
-      "Bash(node -e ' *)"
+      "Bash(node -e ' *)",
+      "Bash(curl -sIL -o /dev/null -w \"%{http_code}\\\\n\" \"https://github.com/OzButcher78/pdrkalk/releases/download/android-v4.25.8/pdrkalk-android-4.25.8.apk\")",
+      "Bash(curl -sIL -o /dev/null -w \"%{http_code}\\\\n\" \"https://github.com/OzButcher78/pdrkalk/releases/download/v4.25.8/PDR-Kalk-Setup-4.25.8.exe\")",
+      "Bash(curl -sIL -o /dev/null -w \"%{http_code}\\\\n\" \"https://github.com/OzButcher78/pdrkalk/releases/download/v4.25.2/PDR-Kalk-Setup-4.25.2.exe\")",
+      "Bash(node -e \"for \\(const l of ['de','en','fr','it']\\){const d=require\\('./messages/'+l+'.json'\\); const ok = d.nav.backToTop && d.comparison.toggle && d.screenshots.initialCount===6; console.log\\(l, ok?'OK':'FAIL', '| backToTop:', JSON.stringify\\(d.nav.backToTop\\), '| toggle:', JSON.stringify\\(d.comparison.toggle\\), '| initialCount:', d.screenshots.initialCount\\);}\")",
+      "Bash(node -e \"console.log\\('next-intl', require\\('next-intl/package.json'\\).version\\)\")",
+      "Bash(node -e \"console.log\\('next-intl', require\\('next-intl/package.json'\\).version\\); console.log\\('use-intl', require\\('use-intl/package.json'\\).version\\)\")"
     ],
     "additionalDirectories": [
       "C:\\Users\\Dieter\\git\\PDRKalk-web\\public\\screenshots2",

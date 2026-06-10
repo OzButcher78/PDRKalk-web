@@ -66,12 +66,14 @@ const initialForm: FormState = {
   message: '',
 };
 
-export default function Contact() {
+export default function Contact({lockedCountry}: {lockedCountry?: string} = {}) {
   const t = useTranslations('contact');
   const [submitted, setSubmitted]   = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [sendError, setSendError]   = useState(false);
-  const [form, setForm]             = useState<FormState>(initialForm);
+  const [form, setForm]             = useState<FormState>(
+    lockedCountry ? {...initialForm, country: lockedCountry} : initialForm,
+  );
   const [errors, setErrors]         = useState<FormErrors>({});
 
   const refs = {
@@ -168,7 +170,7 @@ export default function Contact() {
 
       if (res.ok) {
         setSubmitted(true);
-        setForm(initialForm);
+        setForm(lockedCountry ? {...initialForm, country: lockedCountry} : initialForm);
         setErrors({});
       } else {
         setSendError(true);
@@ -464,7 +466,8 @@ export default function Contact() {
                   {renderInput('city', 'text', 'address-level2')}
                 </div>
 
-                {/* Country */}
+                {/* Country — hidden when locked to a single market (e.g. AU) */}
+                {!lockedCountry && (
                 <div style={{marginBottom: '1rem'}}>
                   <select
                     name="country"
@@ -499,6 +502,7 @@ export default function Contact() {
                   </select>
                   {errors.country && <span style={errorStyle}>{errors.country}</span>}
                 </div>
+                )}
 
                 {/* State (Australia only) */}
                 {form.country === 'au' && (

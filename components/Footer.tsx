@@ -4,15 +4,22 @@ import {useTranslations, useLocale} from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const REGION_FLAGS = ['ch', 'de', 'at', 'au'] as const;
+type RegionCode = 'ch' | 'de' | 'at' | 'au';
+const REGION_FLAGS: readonly RegionCode[] = ['ch', 'de', 'at', 'au'];
 
-export default function Footer() {
+type Props = {
+  regions?: readonly RegionCode[];
+  basePath?: string;
+  showPrivacy?: boolean;
+};
+
+export default function Footer({regions = REGION_FLAGS, basePath, showPrivacy = true}: Props = {}) {
   const t = useTranslations('footer');
   const nav = useTranslations('nav');
   const country = useTranslations('contact');
   const locale = useLocale();
 
-  const home = `/${locale}/`;
+  const home = basePath ?? `/${locale}/`;
   const links: Array<{key: 'features' | 'pricing' | 'contact'; href: string}> = [
     {key: 'features', href: `${home}#features`},
     {key: 'pricing',  href: `${home}#pricing`},
@@ -83,23 +90,25 @@ export default function Footer() {
               {nav(key)}
             </a>
           ))}
-          <Link
-            href={`/${locale}/privacy/`}
-            className="footer-link"
-            style={{
-              fontFamily: 'Barlow Condensed, sans-serif',
-              fontWeight: 600,
-              fontSize: '0.85rem',
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
-              color: 'var(--steel)',
-              textDecoration: 'none',
-              transition: 'color 0.2s',
-              padding: '0.25rem 0',
-            }}
-          >
-            {t('links.privacy')}
-          </Link>
+          {showPrivacy && (
+            <Link
+              href={`/${locale}/privacy/`}
+              className="footer-link"
+              style={{
+                fontFamily: 'Barlow Condensed, sans-serif',
+                fontWeight: 600,
+                fontSize: '0.85rem',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                color: 'var(--steel)',
+                textDecoration: 'none',
+                transition: 'color 0.2s',
+                padding: '0.25rem 0',
+              }}
+            >
+              {t('links.privacy')}
+            </Link>
+          )}
         </nav>
 
         {/* Copyright + tech note */}
@@ -132,7 +141,7 @@ export default function Footer() {
               marginBottom: '0.35rem',
             }}
           >
-            {REGION_FLAGS.map((code) => {
+            {regions.map((code) => {
               const label = country(`country_${code}` as 'country_ch' | 'country_de' | 'country_at' | 'country_au');
               return (
                 <Image

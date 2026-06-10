@@ -1,0 +1,451 @@
+{
+  "meta": {
+    "title": "PDR Kalk — Hail & Dent Estimating Software for Australian PDR Technicians",
+    "description": "Offline Windows & Android app for Australian PDR techs. Hail and dent estimates, GST tax invoices and reports. One-time AUD $590 — no subscription, unlike DentMate.",
+    "ogTitle": "PDR Kalk — PDR Estimating Software for Australia",
+    "ogDescription": "Professional hail & dent estimating for Australian PDR technicians. One-time price, no subscription."
+  },
+  "nav": {
+    "features": "Features",
+    "screenshots": "Screenshots",
+    "pricing": "Pricing",
+    "more": "More",
+    "testimonials": "Reviews",
+    "contact": "Contact",
+    "cta": "Buy Now",
+    "skipToContent": "Skip to content",
+    "backToTop": "Back to top"
+  },
+  "hero": {
+    "title": "Calculate hail damage.",
+    "titleAccent": "In minutes.",
+    "subtitle": "The estimating software for Australian PDR technicians. Professional reports and GST tax invoices — no cloud, no subscription.",
+    "ctaPrimary": "Try for free",
+    "ctaSecondary": "Discover features",
+    "screenshotAlt": "PDR Kalk Dashboard",
+    "videoTitle": "PDR Kalk — Product Video",
+    "downloadTrial": "Download 30-Day Trial",
+    "trustBar": [
+      "One-time price, no subscriptions",
+      "GST tax invoices",
+      "Works 100% offline"
+    ],
+    "regionsLabel": "Built for Australia:",
+    "regionsMore": "",
+    "demoComingSoon": "Demo Coming Soon",
+    "priceCallout": {
+      "amount": "AUD $590",
+      "suffix": "ONE-TIME — NO SUBSCRIPTION",
+      "amountEur": "",
+      "vatNote": "Excl. GST. Pays for itself in ~8 months."
+    }
+  },
+  "timeSavings": {
+    "title": "Time is Money — save with",
+    "titleAccent": "PDR Kalk!",
+    "cards": [
+      { "value": "1.5", "unit": "hours", "period": "per day" },
+      { "value": "33", "unit": "hours", "period": "per month" },
+      { "value": "396", "unit": "hours", "period": "per year" },
+      { "value": "1980", "unit": "hours", "period": "in 5 years" }
+    ],
+    "tagline": "Less paperwork. More time for what you do best.",
+    "disclaimer": "Based on 22 working days / month"
+  },
+  "problemSolution": {
+    "title": "Why PDR Kalk?",
+    "columns": [
+      {
+        "heading": "No more spreadsheets",
+        "desc": "Automatic calculation replaces manual work. No formatting, no copying, no errors."
+      },
+      {
+        "heading": "From estimate to invoice",
+        "desc": "One tool for the entire workflow — estimate, report, GST tax invoice and receipt."
+      },
+      {
+        "heading": "30–60 min. saved per job",
+        "desc": "Less paperwork, more repairs. The time savings pay off from day one."
+      },
+      {
+        "heading": "Tamper-proof audit trail",
+        "desc": "SHA-256 hash chain, automatic document versions and PDF snapshots — full traceability for every invoice."
+      },
+      {
+        "heading": "Accounting-ready exports",
+        "desc": "CSV and Excel exports for revenue, GST and open invoices — a clean handoff to your accountant."
+      },
+      {
+        "heading": "Local data backup",
+        "desc": "Full backup as ZIP on your device. Auto-save, smart restore — your data stays with you."
+      }
+    ]
+  },
+  "coreFeatures": {
+    "title": "What PDR Kalk can do",
+    "cards": [
+      {
+        "heading": "Hail & dent estimation",
+        "desc": "Estimate hail damage per panel, per vehicle, by triage, or by the hour, with live calculation across every panel. Dent & parking damage: per panel, flat rate, or time-based."
+      },
+      {
+        "heading": "Documents & GST invoices",
+        "desc": "Estimate, report, tax invoice and receipt — all as PDF with your logo and GST itemised. Plus credit notes, assignment declarations, free-form manual invoices and a one-click job-package ZIP."
+      },
+      {
+        "heading": "Insurance direct workflow",
+        "desc": "Guided 4-step process: damage entry, assignment declaration with digital signature, send to insurer, automatic split invoice — including in-person customer approval."
+      },
+      {
+        "heading": "Subcontractor workflow",
+        "desc": "Encrypted job transfer (AES-256), three compensation models with live split, dual-notify close-out, and duplicate-merge on re-import — complete audit trail between contractor and sub."
+      },
+      {
+        "heading": "Analytics dashboard",
+        "desc": "Business intelligence at a glance: revenue & cashflow, receivables by due-date bucket, top customers, top insurers, payment duration and a conversion funnel — all in AUD."
+      },
+      {
+        "heading": "Multi-device & local data",
+        "desc": "Sync the office PC, the workshop tablet and the accountant's PC through your own NAS or cloud — same data on every device. Shared-folder sync runs on Windows; Android tablets work standalone with the full feature set. Stays 100% local and offline — your data is yours."
+      }
+    ]
+  },
+  "screenshots": {
+    "title": "PDR Kalk in Action",
+    "subtitle": "Professional documents at the press of a button.",
+    "enlarge": "Enlarge {caption}",
+    "close": "Close",
+    "prev": "Previous image",
+    "next": "Next image",
+    "images": [
+      { "file": "dashboard.jpg",                "caption": "Dashboard — Jobs at a glance" },
+      { "file": "analysen1.jpg",                "caption": "Analytics dashboard — revenue & cashflow" },
+      { "file": "analysen2.jpg",                "caption": "Top customers & conversion funnel" },
+      { "file": "hagel-auftrag.jpg",            "caption": "Hail damage estimation" },
+      { "file": "parkschaden-erfassung.jpg",    "caption": "Dent damage — per-panel / flat / time-based" },
+      { "file": "manuel-rechungen.jpg",         "caption": "Manual invoice (no report required)" },
+      { "file": "Versicherung-Direkt.jpg",      "caption": "Insurance direct workflow — 4 steps" },
+      { "file": "kundebestatigung.jpg",         "caption": "In-person customer approval with signature" },
+      { "file": "Subzuweisen.jpg",              "caption": "Assign subcontractor — live split" },
+      { "file": "sub-verwalten.jpg",            "caption": "Manage subcontractor job" },
+      { "file": "Techniker-und-Dokumenten.jpg", "caption": "Documents panel per job" },
+      { "file": "email-doks.jpg",               "caption": "Email preview with multi-attachments" },
+      { "file": "verlauf.jpg",                  "caption": "Job timeline — unified case view" },
+      { "file": "audit.jpg",                    "caption": "Activity log & versions" },
+      { "file": "backup.jpg",                   "caption": "Backup, sub-import & demo data" },
+      { "file": "pdf-hagel.jpg",                "caption": "Hail report PDF" },
+      { "file": "pdf-park.jpg",                 "caption": "Dent damage report PDF" },
+      { "file": "pdf-rechnung.jpg",             "caption": "Tax invoice PDF" },
+      { "file": "pdf-photos.jpg",               "caption": "Photo documentation PDF" },
+      { "file": "hilfe.jpg",                    "caption": "Extensive in-app user manual" }
+    ],
+    "initialCount": 6,
+    "showMore": "See more screenshots",
+    "showLess": "Show less"
+  },
+  "secondaryFeatures": {
+    "title": "And even more...",
+    "groups": [
+      {
+        "heading": "Invoicing & payments",
+        "items": [
+          "Manual invoices without a report — share the same invoice counter",
+          "GST tax invoices with your ABN, logo and itemised GST",
+          "Payment tracking with partial payments and shortfall display",
+          "Invoice status (Created → Delivered → Paid) updated automatically",
+          "Credit notes, split invoices, cancellation with replacement"
+        ]
+      },
+      {
+        "heading": "Analytics & controlling",
+        "items": [
+          "Revenue and cashflow charts over any custom time range",
+          "Receivables aged into buckets (0–30, 31–60, 61–90, 90+ days)",
+          "Top customers, top insurers, avg. job value, avg. days to pay",
+          "Conversion funnel: Report → Accepted → Invoiced → Paid"
+        ]
+      },
+      {
+        "heading": "Job package & documents",
+        "items": [
+          "Job-package export — ZIP per job with report, invoice, assignment, photos, backup",
+          "Documents panel: attach any PDF to a job (assessment report, insurance confirmation…)",
+          "Email preview with multi-attachment picker across all job documents",
+          "In-person customer approval with digital signature on the device"
+        ]
+      },
+      {
+        "heading": "Subcontractor workflow",
+        "items": [
+          "Three compensation models: time rate, percentage, flat — with live split",
+          "Dual-notify close-out: both sub and contractor are informed automatically",
+          "Encrypted job transfer (AES-256) and sub-job import via the backup menu",
+          "Duplicate merge on re-import — no double entries"
+        ]
+      },
+      {
+        "heading": "Photos & vehicle",
+        "items": [
+          "QR-code mini server — upload photos straight from your phone into the job, no cable or login",
+          "Up to 12 photos per job with captions, integrated in the PDF report",
+          "Automatic compression in 3 quality levels, EXIF data (incl. GPS) is stripped",
+          "Damaged-parts selector L/R per panel with note"
+        ]
+      },
+      {
+        "heading": "Multi-device & NAS sync",
+        "items": [
+          "Run PDR Kalk on multiple devices — desktop in the office, tablet in the workshop, accountant from home",
+          "Shared-folder sync (NAS, OneDrive, Synology Drive) between your Windows devices — you control where your data lives",
+          "Android tablets run standalone with the full feature set — own local database, no shared-folder sync",
+          "Recommended for shared-folder sync: Windows PC, laptop or tablet 10\" or larger — Android tablets (Android 10+) for standalone use only"
+        ]
+      },
+      {
+        "heading": "Export, backup & accounting",
+        "items": [
+          "CSV and Excel exports: revenue, GST and open receivables",
+          "Full backup as ZIP (with / without photos) locally on your device",
+          "Smart restore — no duplicates, photos are picked up automatically",
+          "Audit trail export as JSON with SHA-256 verification"
+        ]
+      },
+      {
+        "heading": "Timeline, audit trail & email",
+        "items": [
+          "Job timeline / history — unified case view across report ↔ invoice",
+          "SHA-256 hash chain — every entry cryptographically linked",
+          "Automatic document versions and PDF snapshots on every status change",
+          "Direct SMTP sending with IMAP filing and delivery tracking"
+        ]
+      },
+      {
+        "heading": "Help & user manual",
+        "items": [
+          "Extensive user manual built directly into the app — searchable by topic",
+          "Section-specific guides: dashboard, analytics, invoices, email, subcontractors, insurance…",
+          "Step-by-step workflows with notes and tips",
+          "Dedicated sections on audit-trail compliance and keyboard navigation"
+        ]
+      }
+    ]
+  },
+  "comparison": {
+    "title": "Why PDR Kalk?",
+    "headers": {
+      "feature": "Feature",
+      "pdrKalk": "PDR Kalk",
+      "competitor": "Typical subscription software"
+    },
+    "rows": [
+      { "feature": "One-time payment", "pdrKalk": true, "competitor": false, "competitorNote": "Monthly" },
+      { "feature": "Works offline", "pdrKalk": true, "competitor": false, "competitorNote": "Cloud" },
+      { "feature": "Insurance direct workflow", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
+      { "feature": "Subcontractor workflow", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
+      { "feature": "Analytics dashboard (BI)", "pdrKalk": true, "competitor": false, "competitorNote": "Extra charge" },
+      { "feature": "Multi-device via your NAS", "pdrKalk": true, "competitor": false, "competitorNote": "Cloud only", "pdrKalkAsterisk": true },
+      { "feature": "Photo upload from your phone", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
+      { "feature": "GST tax invoices", "pdrKalk": true, "competitor": false, "competitorNote": "Basic" },
+      { "feature": "Unlimited users per licence", "pdrKalk": true, "competitor": false, "competitorNote": "Per-tech fees" },
+      { "feature": "Your data belongs to you", "pdrKalk": true, "competitor": false, "competitorNote": "On third-party servers" },
+      { "feature": "Native on Windows & Android", "pdrKalk": true, "competitor": false, "competitorNote": "Cloud only" },
+      { "feature": "Tamper-evident audit trail (SHA-256)", "pdrKalk": true, "competitor": false, "competitorNote": "Rare" },
+      { "feature": "Camera capture in-app", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
+      { "feature": "Your price never goes up", "pdrKalk": true, "competitor": false, "competitorNote": "Subscription can rise" }
+    ],
+    "footnote": "* Multi-device sync via a shared work folder is supported on Windows; Android tablets run standalone.",
+    "toggle": "Show detailed comparison"
+  },
+  "pricing": {
+    "title": "Buy once. Use forever.",
+    "lifetime": {
+      "badge": "RECOMMENDED",
+      "badgeNote": "One-Time Payment — No Subscription",
+      "price": "AUD $590",
+      "priceSuffix": "ONE-TIME LICENCE",
+      "priceEur": "≈ AUD $10/month over 5 years",
+      "vatNote": "All prices exclude GST.",
+      "features": [
+        "No subscription fees",
+        "No setup fees",
+        "No per-tech fees",
+        "Unlimited users",
+        "Small updates included *",
+        "Works offline"
+      ],
+      "note": "Best choice for long-term use. * Optional insurance-list updates may attract a small fee.",
+      "cta": "Buy Now"
+    },
+    "monthly": {
+      "badge": "Free Download",
+      "badgeNote": "30 days, no limits",
+      "price": "Free",
+      "priceSuffix": "30 days, no limits",
+      "features": [
+        "All features unlocked for 30 days",
+        "Direct download, start instantly",
+        "No subscription, no credit card",
+        "Optional upgrade to a full licence afterwards"
+      ],
+      "cta": "Download now",
+      "disclaimer": "Direct download — no sign-up required."
+    },
+    "comparisonTable": {
+      "title": "5-Year Cost Comparison",
+      "headers": {
+        "feature": "Feature",
+        "competitor": "DentMate (subscription)",
+        "pdrKalk": "PDR Kalk (one-time)"
+      },
+      "rows": [
+        { "feature": "Licence model",          "competitor": "Monthly subscription", "pdrKalk": "One-time licence" },
+        { "feature": "Ongoing fees",           "competitor": "Every month, forever",  "pdrKalk": "None after purchase" },
+        { "feature": "Per-tech / extra seats", "competitor": "Tiered by team size",   "pdrKalk": "Unlimited users included" },
+        { "feature": "Internet required",      "competitor": "Yes (cloud)",           "pdrKalk": "No — fully offline" },
+        { "feature": "Your data",              "competitor": "On their servers",      "pdrKalk": "Stays on your device" },
+        { "feature": "Cost year 1",            "competitor": "AUD ~$900",             "pdrKalk": "AUD $590" },
+        { "feature": "Cost year 2",            "competitor": "AUD ~$900",             "pdrKalk": "AUD $0" },
+        { "feature": "Cost year 3",            "competitor": "AUD ~$900",             "pdrKalk": "AUD $0" },
+        { "feature": "Cost year 4",            "competitor": "AUD ~$900",             "pdrKalk": "AUD $0" },
+        { "feature": "Cost year 5",            "competitor": "AUD ~$900",             "pdrKalk": "AUD $0" },
+        { "feature": "Total over 5 years",     "competitor": "AUD ~$4,500",           "pdrKalk": "AUD $590" }
+      ],
+      "closing": "About AUD $3,900 saved over five years — PDR Kalk pays for itself in roughly eight months.",
+      "note": "DentMate pricing is the publicly listed solo tier (AUD $74.99/month) as of June 2026; team tiers cost significantly more. PDR Kalk price excludes GST."
+    }
+  },
+  "testimonials": {
+    "title": "What technicians say",
+    "subtitle": "Real feedback from PDR professionals",
+    "prev": "Previous testimonial",
+    "next": "Next testimonial",
+    "goTo": "Go to testimonial {n}",
+    "rating": "{r} out of 5 stars",
+    "items": [
+      {
+        "quote": "As a PDR technician, PDR Kalk makes my work enormously easier. The software is clear, professionally structured and saves a lot of time every day when calculating hail and parking damage. I particularly appreciate the simple operation, the clean creation of reports and invoices, and the reliable calculations. You can tell immediately that it was developed by someone who knows the PDR trade from hands-on experience. Support is fast and competent. A clear recommendation for anyone who wants to work professionally and efficiently.",
+        "name": "Florian Huber",
+        "company": "Carrosserie Huber · Aber Tip Top",
+        "location": "Switzerland"
+      },
+      {
+        "quote": "In my view, PDR Kalk is the best hail and parking damage calculation software on the market. It impresses with extremely simple, intuitive operation and is available for both Windows and Android — ideal for flexible use in the office and on the road. Calculations can be created quickly and clearly, sent digitally straight away and seamlessly converted into invoices. A particular strength is the ability to cleanly divide work and let several technicians work together as subcontractors in one system, keeping full transparency over services, billing and responsibilities at all times. PDR Kalk saves an enormous amount of time, reduces errors and ensures a professional, structured workflow — from damage assessment to billing. For hail and parking damage businesses it's a real asset and hard to work without. A clear recommendation.",
+        "name": "Jürg Strähl",
+        "company": "Strähl Drücktechnik",
+        "location": "Switzerland"
+      },
+      {
+        "quote": "This professional calculation app helps businesses estimate parking and hail damage on vehicles quickly, precisely and without fuss. It impresses with its particularly simple operation and enables efficient damage capture. Stored lists of various insurers make processing even easier and ensure a structured, practical workflow. Thanks to pre-stored items, calculations can be created quickly and tailored individually, and you can add your own notes for special requirements. The result is a mature, professional product that reliably and effectively supports digital damage calculation.",
+        "name": "Sandro Sciuto",
+        "company": "Sciuto Drücktechnik",
+        "location": "Switzerland"
+      },
+      {
+        "quote": "Very good app with simple, clear operation. The functions are well thought out and make daily work noticeably easier. I find the ability to work with subcontractors and team members particularly practical. All in all, a reliable and professional solution. A clear recommendation!",
+        "name": "Dominik Nagy",
+        "location": "Austria"
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Ready to save time?",
+    "subtitle": "Start with PDR Kalk today and save hours every week.",
+    "cta": "Download now"
+  },
+  "download": {
+    "title": "Try free for 30 days",
+    "subtitle": "Direct download — no sign-up, no credit card. Full feature set for 30 days.",
+    "windows": {
+      "eyebrow": "For PC & laptop",
+      "name": "Microsoft Windows",
+      "system": "Windows 10 or 11",
+      "version": "Version 4.25.10",
+      "button": "Windows installer"
+    },
+    "android": {
+      "eyebrow": "For tablet",
+      "name": "Android",
+      "system": "Android 10 or newer",
+      "version": "Version 4.25.8",
+      "button": "Android APK"
+    },
+    "footnote": "Apple devices and smartphones are not supported."
+  },
+  "contact": {
+    "title": "Buy a Licence",
+    "subtitle": "Tried PDR Kalk and ready to buy? Fill in your details below — we'll get back to you within 24 hours.",
+    "platformNoticeTitle": "Which devices are supported?",
+    "platformNoticeBody": "PDR Kalk runs on Windows and Android tablets as well as on PCs and laptops. All features are available on Windows devices; Android tablets offer the full feature set except for multi-device synchronisation via a shared work folder. Apple devices and smartphones are not supported.",
+    "intentLegend": "What can we help with?",
+    "intent_buy": "Buy licence / Request invoice",
+    "intent_inquiry": "General inquiry",
+    "errorIntentRequired": "Please select an option",
+    "firstNamePlaceholder": "First name *",
+    "firstNameLabel": "First name",
+    "lastNamePlaceholder": "Last name *",
+    "lastNameLabel": "Last name",
+    "companyPlaceholder": "Company *",
+    "companyLabel": "Company",
+    "ownerPlaceholder": "Owner *",
+    "ownerLabel": "Owner",
+    "streetPlaceholder": "Street and number *",
+    "streetLabel": "Street",
+    "postalCodePlaceholder": "Postcode *",
+    "postalCodeLabel": "Postcode",
+    "cityPlaceholder": "Suburb / City *",
+    "cityLabel": "Suburb / City",
+    "countryLabel": "Country",
+    "countryPlaceholder": "Select country *",
+    "stateLabel": "State / Territory",
+    "statePlaceholder": "Select state / territory *",
+    "vatIdLabel": "ABN",
+    "vatIdPlaceholder": "ABN (if registered)",
+    "vatIdNote": "",
+    "errorVatIdRequired": "ABN required",
+    "phonePlaceholder": "Phone *",
+    "phoneLabel": "Phone",
+    "emailPlaceholder": "Email *",
+    "emailLabel": "Email",
+    "websitePlaceholder": "Website (if available)",
+    "websiteLabel": "Website",
+    "platformLegend": "Which device would you like to test on?",
+    "platform_windows": "Microsoft Windows",
+    "platform_android": "Android",
+    "platform_both": "Both",
+    "messagePlaceholder": "Notes or questions (optional)",
+    "messageLabel": "Notes",
+    "submit": "Request Licence",
+    "errorFirstNameRequired": "First name required",
+    "errorLastNameRequired": "Last name required",
+    "errorCompanyRequired": "Company required",
+    "errorOwnerRequired": "Owner name required",
+    "errorStreetRequired": "Street required",
+    "errorPostalCodeRequired": "Postcode required",
+    "errorCityRequired": "Suburb / City required",
+    "errorCountryRequired": "Please select a country",
+    "errorStateRequired": "Please select a state / territory",
+    "errorPhoneRequired": "Phone number required",
+    "errorEmailInvalid": "Valid email address required",
+    "errorPlatformRequired": "Please select a device",
+    "country_au": "Australia",
+    "sendError": "Failed to send. Please try again or email us directly at the address below.",
+    "submitting": "Sending…",
+    "success": "Request sent — we'll get back to you shortly!",
+    "emailUser": "info",
+    "emailDomain": "pdrkalk.ch"
+  },
+  "footer": {
+    "company": "Balmer Storm Solutions",
+    "tagline": "Made in Switzerland.",
+    "techNote": "Developed by a PDR technician with over 25 years of experience.",
+    "copyright": "© 2026 Balmer Storm Solutions. All rights reserved.",
+    "regions": "Available in",
+    "intl": "Built for Australian PDR technicians.",
+    "links": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "contact": "Contact",
+      "privacy": "Privacy"
+    }
+  }
+}

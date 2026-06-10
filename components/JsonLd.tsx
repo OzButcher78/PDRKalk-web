@@ -14,9 +14,24 @@ type Props = {
   locale: string;
   description: string;
   reviews?: ReviewItem[];
+  areaServed?: string[];
+  currency?: string;
+  price?: string;
+  homePath?: string;
+  reviewLanguage?: string;
 };
 
-export default function JsonLd({locale, description, reviews = []}: Props) {
+export default function JsonLd({
+  locale,
+  description,
+  reviews = [],
+  areaServed = ['CH', 'DE', 'AT', 'AU'],
+  currency = 'CHF',
+  price = '550',
+  homePath,
+  reviewLanguage = 'de',
+}: Props) {
+  const home = homePath ?? `/${locale}/`;
   const graph = [
     {
       '@type': 'Organization',
@@ -33,13 +48,13 @@ export default function JsonLd({locale, description, reviews = []}: Props) {
         '@type': 'Country',
         name: 'Switzerland',
       },
-      areaServed: ['CH', 'DE', 'AT', 'AU'],
+      areaServed,
       slogan: 'Made in Switzerland.',
     },
     {
       '@type': 'WebSite',
       '@id': WEBSITE_ID,
-      url: `${SITE_URL}/${locale}/`,
+      url: `${SITE_URL}${home}`,
       name: 'PDR Kalk',
       inLanguage: locale,
       publisher: {'@id': ORG_ID},
@@ -61,22 +76,21 @@ export default function JsonLd({locale, description, reviews = []}: Props) {
         {
           '@type': 'Offer',
           name: '5-year licence',
-          price: '550',
-          priceCurrency: 'CHF',
+          price,
+          priceCurrency: currency,
           availability: 'https://schema.org/InStock',
-          url: `${SITE_URL}/${locale}/#pricing`,
+          url: `${SITE_URL}${home}#pricing`,
         },
         {
           '@type': 'Offer',
           name: '30-day free trial',
           price: '0',
-          priceCurrency: 'CHF',
+          priceCurrency: currency,
           availability: 'https://schema.org/InStock',
-          url: `${SITE_URL}/${locale}/#pricing`,
+          url: `${SITE_URL}${home}#pricing`,
         },
       ],
       // Customer reviews — kept in sync with messages `testimonials.items`.
-      // Quotes are the customers' original German regardless of page locale.
       ...(reviews.length > 0 && {
         aggregateRating: {
           '@type': 'AggregateRating',
@@ -88,7 +102,7 @@ export default function JsonLd({locale, description, reviews = []}: Props) {
           '@type': 'Review',
           author: {'@type': 'Person', name: r.name},
           reviewBody: r.quote,
-          inLanguage: 'de',
+          inLanguage: reviewLanguage,
           reviewRating: {
             '@type': 'Rating',
             ratingValue: '5',

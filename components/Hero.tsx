@@ -13,7 +13,8 @@ const ANDROID_DOWNLOAD_URL =
   'https://github.com/OzButcher78/pdrkalk/releases/download/android-v4.25.8/pdrkalk-android-4.25.8.apk';
 const YOUTUBE_VIDEO_ID = 'YnwMff4CjB4';
 
-const REGION_FLAGS = ['ch', 'de', 'at', 'au'] as const;
+type RegionCode = 'ch' | 'de' | 'at' | 'au';
+const REGION_FLAGS: readonly RegionCode[] = ['ch', 'de', 'at', 'au'];
 
 const TRUST_ITEM_STYLE: React.CSSProperties = {
   fontFamily: 'Barlow Condensed, sans-serif',
@@ -35,7 +36,7 @@ const TRUST_DOT_STYLE: React.CSSProperties = {
   flexShrink: 0,
 };
 
-export default function Hero() {
+export default function Hero({regions = REGION_FLAGS}: {regions?: readonly RegionCode[]} = {}) {
   const t = useTranslations('hero');
   const country = useTranslations('contact');
   const trustBar = t.raw('trustBar') as string[];
@@ -196,7 +197,7 @@ export default function Hero() {
               <span className="trust-dot" style={TRUST_DOT_STYLE}/>
               {t('regionsLabel')}
               <span style={{display: 'inline-flex', gap: '0.3rem', alignItems: 'center', flexShrink: 0}}>
-                {REGION_FLAGS.map((code) => {
+                {regions.map((code) => {
                   const label = country(`country_${code}` as 'country_ch' | 'country_de' | 'country_at' | 'country_au');
                   return (
                     <Image
