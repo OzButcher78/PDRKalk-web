@@ -23,6 +23,15 @@ const AU_STATES: ReadonlyArray<{code: string; name: string}> = [
   {code: 'NT',  name: 'Northern Territory'},
 ];
 
+// EU member states (all COUNTRY_CODES except ch, au, gb). Orders from these
+// require a VAT ID so we can invoice under reverse charge — no Swiss MwSt.
+const EU_COUNTRY_CODES = new Set<string>([
+  'at', 'be', 'bg', 'hr', 'cy', 'cz', 'dk', 'ee', 'fi', 'fr', 'de', 'gr',
+  'hu', 'ie', 'it', 'lv', 'lt', 'lu', 'mt', 'nl', 'pl', 'pt', 'ro', 'sk',
+  'si', 'es', 'se',
+]);
+const isEuCountry = (code: string) => EU_COUNTRY_CODES.has(code);
+
 type Intent = '' | 'buy' | 'inquiry';
 
 type FormState = {
@@ -35,6 +44,7 @@ type FormState = {
   city: string;
   country: string;
   state: string;
+  vatId: string;
   email: string;
   message: string;
 };
@@ -51,6 +61,7 @@ const initialForm: FormState = {
   city: '',
   country: '',
   state: '',
+  vatId: '',
   email: '',
   message: '',
 };
@@ -73,13 +84,17 @@ export default function Contact() {
     city:       useRef<HTMLInputElement>(null),
     country:    useRef<HTMLSelectElement>(null),
     state:      useRef<HTMLSelectElement>(null),
+    vatId:      useRef<HTMLInputElement>(null),
     email:      useRef<HTMLInputElement>(null),
   };
 
   const update = (field: keyof FormState, value: string) => {
     setForm(prev => {
       const next = {...prev, [field]: value};
-      if (field === 'country' && value !== 'au') next.state = '';
+      if (field === 'country') {
+        if (value !== 'au') next.state = '';
+        if (!isEuCountry(value)) next.vatId = '';
+      }
       return next;
     });
     if (errors[field]) setErrors(prev => ({...prev, [field]: undefined}));
@@ -90,14 +105,19 @@ export default function Contact() {
     if (!form.intent)            errs.intent     = t('errorIntentRequired');
     if (!form.firstName.trim())  errs.firstName  = t('errorFirstNameRequired');
     if (!form.lastName.trim())   errs.lastName   = t('errorLastNameRequired');
-    if (!form.company.trim())    errs.company    = t('errorCompanyRequired');
-    if (!form.street.trim())     errs.street     = t('errorStreetRequired');
-    if (!form.postalCode.trim()) errs.postalCode = t('errorPostalCodeRequired');
-    if (!form.city.trim())       errs.city       = t('errorCityRequired');
-    if (!form.country)           errs.country    = t('errorCountryRequired');
-    if (form.country === 'au' && !form.state) errs.state = t('errorStateRequired');
     if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
       errs.email = t('errorEmailInvalid');
+    }
+    // Billing details are only needed when ordering a licence; an inquiry just
+    // needs a name and an email so we can reply.
+    if (form.intent === 'buy') {
+      if (!form.company.trim())    errs.company    = t('errorCompanyRequired');
+      if (!form.street.trim())     errs.street     = t('errorStreetRequired');
+      if (!form.postalCode.trim()) errs.postalCode = t('errorPostalCodeRequired');
+      if (!form.city.trim())       errs.city       = t('errorCityRequired');
+      if (!form.country)           errs.country    = t('errorCountryRequired');
+      if (form.country === 'au' && !form.state) errs.state = t('errorStateRequired');
+      if (isEuCountry(form.country) && !form.vatId.trim()) errs.vatId = t('errorVatIdRequired');
     }
     return errs;
   };
@@ -119,21 +139,26 @@ export default function Contact() {
 
     try {
       const intentLabel = form.intent ? t(`intent_${form.intent}` as 'intent_buy') : '';
-      const subjectTag = form.intent === 'buy' ? 'Licence Order' : 'Inquiry';
-      const payload = {
-        _subject: `[${subjectTag}] ${form.firstName} ${form.lastName} — ${form.company}`,
+      const isOrder = form.intent === 'buy';
+      const payload: Record<string, string> = {
+        _subject: isOrder
+          ? `[Licence Order] ${form.firstName} ${form.lastName} — ${form.company}`
+          : `[Inquiry] ${form.firstName} ${form.lastName}`,
         intent: intentLabel,
         firstName: form.firstName,
         lastName: form.lastName,
-        company: form.company,
-        street: form.street,
-        postalCode: form.postalCode,
-        city: form.city,
-        country: form.country ? t(`country_${form.country}` as 'country_ch') : '',
-        state: form.state,
         email: form.email,
         message: form.message,
       };
+      if (isOrder) {
+        payload.company = form.company;
+        payload.street = form.street;
+        payload.postalCode = form.postalCode;
+        payload.city = form.city;
+        payload.country = form.country ? t(`country_${form.country}` as 'country_ch') : '';
+        payload.state = form.state;
+        payload.vatId = form.vatId;
+      }
 
       const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method: 'POST',
@@ -362,7 +387,8 @@ export default function Contact() {
                         checked={selected}
                         onChange={() => {
                           setForm(prev => ({...prev, intent: value}));
-                          if (errors.intent) setErrors(prev => ({...prev, intent: undefined}));
+                          // Required fields differ per intent — drop any stale errors.
+                          setErrors({});
                         }}
                         style={{
                           position: 'absolute',
@@ -419,91 +445,112 @@ export default function Contact() {
               {renderInput('lastName',  'text', 'family-name')}
             </div>
 
-            {/* Company */}
-            <div style={{marginBottom: '1rem'}}>
-              {renderInput('company', 'text', 'organization')}
-            </div>
+            {/* Billing details — only needed when ordering a licence */}
+            {form.intent === 'buy' && (
+              <>
+                {/* Company */}
+                <div style={{marginBottom: '1rem'}}>
+                  {renderInput('company', 'text', 'organization')}
+                </div>
 
-            {/* Street */}
-            <div style={{marginBottom: '1rem'}}>
-              {renderInput('street', 'text', 'street-address')}
-            </div>
+                {/* Street */}
+                <div style={{marginBottom: '1rem'}}>
+                  {renderInput('street', 'text', 'street-address')}
+                </div>
 
-            {/* Postal code / City */}
-            <div className="contact-grid" style={{display: 'grid', gap: '1rem', marginBottom: '1rem'}}>
-              {renderInput('postalCode', 'text', 'postal-code')}
-              {renderInput('city', 'text', 'address-level2')}
-            </div>
+                {/* Postal code / City */}
+                <div className="contact-grid" style={{display: 'grid', gap: '1rem', marginBottom: '1rem'}}>
+                  {renderInput('postalCode', 'text', 'postal-code')}
+                  {renderInput('city', 'text', 'address-level2')}
+                </div>
 
-            {/* Country */}
-            <div style={{marginBottom: '1rem'}}>
-              <select
-                name="country"
-                ref={refs.country}
-                aria-label={t('countryLabel')}
-                autoComplete="country"
-                value={form.country}
-                onChange={e => update('country', e.target.value)}
-                className="contact-input"
-                style={{
-                  ...inputStyle,
-                  borderColor: fieldBorder('country'),
-                  appearance: 'none',
-                  backgroundImage:
-                    'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'8\' viewBox=\'0 0 12 8\'><path fill=\'%2394a3b8\' d=\'M6 8L0 0h12z\'/></svg>")',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'right 1rem center',
-                  paddingRight: '2.5rem',
-                  color: form.country ? '#fff' : 'rgba(255,255,255,0.5)',
-                  cursor: 'pointer',
-                }}
-                onFocus={e => { if (!errors.country) e.target.style.borderColor = 'var(--red)'; }}
-                onBlur={e => { if (!errors.country) e.target.style.borderColor = 'rgba(255,255,255,0.1)'; }}
-              >
-                <option value="" disabled>{t('countryPlaceholder')}</option>
-                {COUNTRY_CODES
-                  .map(code => ({code, name: t(`country_${code}` as 'country_ch')}))
-                  .sort((a, b) => a.name.localeCompare(b.name))
-                  .map(({code, name}) => (
-                    <option key={code} value={code} style={{color: '#000'}}>{name}</option>
-                  ))}
-              </select>
-              {errors.country && <span style={errorStyle}>{errors.country}</span>}
-            </div>
+                {/* Country */}
+                <div style={{marginBottom: '1rem'}}>
+                  <select
+                    name="country"
+                    ref={refs.country}
+                    aria-label={t('countryLabel')}
+                    autoComplete="country"
+                    value={form.country}
+                    onChange={e => update('country', e.target.value)}
+                    className="contact-input"
+                    style={{
+                      ...inputStyle,
+                      borderColor: fieldBorder('country'),
+                      appearance: 'none',
+                      backgroundImage:
+                        'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'8\' viewBox=\'0 0 12 8\'><path fill=\'%2394a3b8\' d=\'M6 8L0 0h12z\'/></svg>")',
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'right 1rem center',
+                      paddingRight: '2.5rem',
+                      color: form.country ? '#fff' : 'rgba(255,255,255,0.5)',
+                      cursor: 'pointer',
+                    }}
+                    onFocus={e => { if (!errors.country) e.target.style.borderColor = 'var(--red)'; }}
+                    onBlur={e => { if (!errors.country) e.target.style.borderColor = 'rgba(255,255,255,0.1)'; }}
+                  >
+                    <option value="" disabled>{t('countryPlaceholder')}</option>
+                    {COUNTRY_CODES
+                      .map(code => ({code, name: t(`country_${code}` as 'country_ch')}))
+                      .sort((a, b) => a.name.localeCompare(b.name))
+                      .map(({code, name}) => (
+                        <option key={code} value={code} style={{color: '#000'}}>{name}</option>
+                      ))}
+                  </select>
+                  {errors.country && <span style={errorStyle}>{errors.country}</span>}
+                </div>
 
-            {/* State (Australia only) */}
-            {form.country === 'au' && (
-              <div style={{marginBottom: '1rem'}}>
-                <select
-                  name="state"
-                  ref={refs.state}
-                  aria-label={t('stateLabel')}
-                  autoComplete="address-level1"
-                  value={form.state}
-                  onChange={e => update('state', e.target.value)}
-                  className="contact-input"
-                  style={{
-                    ...inputStyle,
-                    borderColor: fieldBorder('state'),
-                    appearance: 'none',
-                    backgroundImage:
-                      'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'8\' viewBox=\'0 0 12 8\'><path fill=\'%2394a3b8\' d=\'M6 8L0 0h12z\'/></svg>")',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'right 1rem center',
-                    paddingRight: '2.5rem',
-                    color: form.state ? '#fff' : 'rgba(255,255,255,0.5)',
-                    cursor: 'pointer',
-                  }}
-                  onFocus={e => { if (!errors.state) e.target.style.borderColor = 'var(--red)'; }}
-                  onBlur={e => { if (!errors.state) e.target.style.borderColor = 'rgba(255,255,255,0.1)'; }}
-                >
-                  <option value="" disabled>{t('statePlaceholder')}</option>
-                  {AU_STATES.map(({code, name}) => (
-                    <option key={code} value={code} style={{color: '#000'}}>{name} ({code})</option>
-                  ))}
-                </select>
-                {errors.state && <span style={errorStyle}>{errors.state}</span>}
-              </div>
+                {/* State (Australia only) */}
+                {form.country === 'au' && (
+                  <div style={{marginBottom: '1rem'}}>
+                    <select
+                      name="state"
+                      ref={refs.state}
+                      aria-label={t('stateLabel')}
+                      autoComplete="address-level1"
+                      value={form.state}
+                      onChange={e => update('state', e.target.value)}
+                      className="contact-input"
+                      style={{
+                        ...inputStyle,
+                        borderColor: fieldBorder('state'),
+                        appearance: 'none',
+                        backgroundImage:
+                          'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'8\' viewBox=\'0 0 12 8\'><path fill=\'%2394a3b8\' d=\'M6 8L0 0h12z\'/></svg>")',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundPosition: 'right 1rem center',
+                        paddingRight: '2.5rem',
+                        color: form.state ? '#fff' : 'rgba(255,255,255,0.5)',
+                        cursor: 'pointer',
+                      }}
+                      onFocus={e => { if (!errors.state) e.target.style.borderColor = 'var(--red)'; }}
+                      onBlur={e => { if (!errors.state) e.target.style.borderColor = 'rgba(255,255,255,0.1)'; }}
+                    >
+                      <option value="" disabled>{t('statePlaceholder')}</option>
+                      {AU_STATES.map(({code, name}) => (
+                        <option key={code} value={code} style={{color: '#000'}}>{name} ({code})</option>
+                      ))}
+                    </select>
+                    {errors.state && <span style={errorStyle}>{errors.state}</span>}
+                  </div>
+                )}
+
+                {/* VAT ID (EU customers only — enables reverse charge, no Swiss MwSt) */}
+                {isEuCountry(form.country) && (
+                  <div style={{marginBottom: '1rem'}}>
+                    {renderInput('vatId', 'text')}
+                    <p style={{
+                      fontFamily: 'Barlow, sans-serif',
+                      fontSize: '0.78rem',
+                      color: '#8fa8c8',
+                      margin: '0.4rem 0 0',
+                      lineHeight: 1.45,
+                    }}>
+                      {t('vatIdNote')}
+                    </p>
+                  </div>
+                )}
+              </>
             )}
 
             {/* Email */}
