@@ -382,14 +382,14 @@
       "eyebrow": "Für PC & Laptop",
       "name": "Microsoft Windows",
       "system": "Windows 10 oder 11",
-      "version": "Version 4.25.10",
+      "version": "Version 4.25.21",
       "button": "Windows-Installer"
     },
     "android": {
       "eyebrow": "Für Tablet",
       "name": "Android",
       "system": "Android 10 oder neuer",
-      "version": "Version 4.25.8",
+      "version": "Version 4.25.22",
       "button": "Android-APK"
     },
     "footnote": "Apple-Geräte und Smartphones werden nicht unterstützt."
