@@ -294,25 +294,25 @@
       "title": "5-Year Cost Comparison",
       "headers": {
         "feature": "Feature",
-        "competitor": "DentMate Solo",
-        "competitor2": "DentMate 2–4 Techs",
+        "competitor": "DentMate 2–4 Techs",
+        "competitor2": "iBodyshop Lite",
         "pdrKalk": "PDR Kalk (one-time)"
       },
       "rows": [
         { "feature": "Licence model",          "competitor": "Monthly subscription", "competitor2": "Monthly subscription", "pdrKalk": "One-time licence" },
         { "feature": "Ongoing fees",           "competitor": "Every month, forever",  "competitor2": "Every month, forever", "pdrKalk": "None after purchase" },
-        { "feature": "Per-tech / extra seats", "competitor": "1 tech only",           "competitor2": "Up to 4 techs",        "pdrKalk": "Unlimited users included" },
+        { "feature": "Per-tech / extra seats", "competitor": "Up to 4 techs",         "competitor2": "1 user only",          "pdrKalk": "Unlimited users included" },
         { "feature": "Internet required",      "competitor": "Yes (cloud)",           "competitor2": "Yes (cloud)",          "pdrKalk": "No — fully offline" },
         { "feature": "Your data",              "competitor": "On their servers",      "competitor2": "On their servers",     "pdrKalk": "Stays on your device" },
-        { "feature": "Cost year 1",            "competitor": "+ AUD ~$900",           "competitor2": "+ AUD ~$1,560",        "pdrKalk": "AUD $590" },
-        { "feature": "Cost year 2",            "competitor": "+ AUD ~$900",           "competitor2": "+ AUD ~$1,560",        "pdrKalk": "AUD $0" },
-        { "feature": "Cost year 3",            "competitor": "+ AUD ~$900",           "competitor2": "+ AUD ~$1,560",        "pdrKalk": "AUD $0" },
-        { "feature": "Cost year 4",            "competitor": "+ AUD ~$900",           "competitor2": "+ AUD ~$1,560",        "pdrKalk": "AUD $0" },
-        { "feature": "Cost year 5",            "competitor": "+ AUD ~$900",           "competitor2": "+ AUD ~$1,560",        "pdrKalk": "AUD $0" },
-        { "feature": "Total over 5 years",     "competitor": "AUD ~$4,500",           "competitor2": "AUD ~$7,800",          "pdrKalk": "AUD $590" }
+        { "feature": "Cost year 1",            "competitor": "+ AUD ~$1,560",         "competitor2": "+ AUD $1,320",         "pdrKalk": "AUD $590" },
+        { "feature": "Cost year 2",            "competitor": "+ AUD ~$1,560",         "competitor2": "+ AUD $1,320",         "pdrKalk": "AUD $0" },
+        { "feature": "Cost year 3",            "competitor": "+ AUD ~$1,560",         "competitor2": "+ AUD $1,320",         "pdrKalk": "AUD $0" },
+        { "feature": "Cost year 4",            "competitor": "+ AUD ~$1,560",         "competitor2": "+ AUD $1,320",         "pdrKalk": "AUD $0" },
+        { "feature": "Cost year 5",            "competitor": "+ AUD ~$1,560",         "competitor2": "+ AUD $1,320",         "pdrKalk": "AUD $0" },
+        { "feature": "Total over 5 years",     "competitor": "AUD ~$7,800",           "competitor2": "AUD $6,600",           "pdrKalk": "AUD $590" }
       ],
-      "closing": "AUD $3,900–$7,200 saved over five years — PDR Kalk pays for itself in under eight months.",
-      "note": "DentMate pricing as publicly listed in June 2026: Solo AUD $74.99/month, 2–4 Techs AUD $129.99/month; larger tiers cost more."
+      "closing": "AUD $6,000–$7,200 saved over five years — PDR Kalk pays for itself in under six months.",
+      "note": "Competitor pricing as publicly listed in June 2026: DentMate 2–4 Techs AUD $129.99/month, iBodyshop Lite AUD $110/month (ex-GST, 1 user). Larger tiers of both cost more."
     }
   },
   "testimonials": {
