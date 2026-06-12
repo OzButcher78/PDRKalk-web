@@ -40,6 +40,9 @@ export default function Hero({regions = REGION_FLAGS}: {regions?: readonly Regio
   const t = useTranslations('hero');
   const country = useTranslations('contact');
   const trustBar = t.raw('trustBar') as string[];
+  // AU landing has no localised product video yet — show the AU dashboard
+  // screenshot in the same framed slot until an Australian video exists.
+  const isAuLanding = regions.length === 1 && regions[0] === 'au';
 
   return (
     <section
@@ -246,7 +249,7 @@ export default function Hero({regions = REGION_FLAGS}: {regions?: readonly Regio
             filter: 'blur(20px)',
           }}/>
 
-          {/* YouTube product video */}
+          {/* AU landing shows the dashboard screenshot; other regions the YouTube video */}
           <div style={{
             position: 'relative',
             borderRadius: '10px',
@@ -258,22 +261,36 @@ export default function Hero({regions = REGION_FLAGS}: {regions?: readonly Regio
             background: '#000',
             aspectRatio: '16 / 9',
           }}>
-            <iframe
-              src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?rel=0&modestbranding=1`}
-              title={t('videoTitle')}
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-              style={{
-                position: 'absolute',
-                inset: 0,
-                width: '100%',
-                height: '100%',
-                border: 0,
-                display: 'block',
-              }}
-            />
+            {isAuLanding ? (
+              <Image
+                src="/screenshots/au/dashboard.jpg"
+                alt={t('videoTitle')}
+                fill
+                priority
+                sizes="(max-width: 640px) 100vw, 580px"
+                style={{
+                  objectFit: 'cover',
+                  objectPosition: 'top center',
+                }}
+              />
+            ) : (
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?rel=0&modestbranding=1`}
+                title={t('videoTitle')}
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  width: '100%',
+                  height: '100%',
+                  border: 0,
+                  display: 'block',
+                }}
+              />
+            )}
           </div>
 
           {/* Price callout */}
