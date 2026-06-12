@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     description: auMessages.meta.ogDescription,
     images: [
       {
-        url: '/screenshots/dashboard.jpg',
+        url: '/screenshots/au/dashboard.jpg',
         width: 1200,
         height: 630,
         alt: 'PDR Kalk Dashboard',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: auMessages.meta.ogTitle,
     description: auMessages.meta.ogDescription,
-    images: ['/screenshots/dashboard.jpg'],
+    images: ['/screenshots/au/dashboard.jpg'],
   },
   robots: {
     index: true,
