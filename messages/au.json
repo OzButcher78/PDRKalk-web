@@ -142,6 +142,7 @@
       { "file": "au/edit-contact-2.jpg",                "caption": "Customer rates, ABN & payment terms" },
       { "file": "au/settings-company-region.jpg",       "caption": "Settings — Australian region & company details" },
       { "file": "au/settings-finances-gst-abn.jpg",     "caption": "Settings — GST, ABN & triage tiers" },
+      { "file": "au/settings-parking-damage-tariff.jpg", "caption": "Settings — parking dent tariff & surcharges" },
       { "file": "au/settings-document-numbering.jpg",   "caption": "Settings — document numbering" },
       { "file": "au/settings-email-templates.jpg",      "caption": "Settings — email templates" },
       { "file": "au/settings-team-subcontractors.jpg",  "caption": "Settings — technicians & subcontractor workflow" },
