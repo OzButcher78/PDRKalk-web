@@ -15,7 +15,7 @@ PDR Kalk is built by Balmer Storm Solutions, a Swiss company founded by Dieter B
 - Platforms: Windows, Android
 - Markets: Switzerland (CH), Germany (DE), Austria (AT), Australia (AU)
 - Languages: German, English, French, Italian
-- Tariff matrices: VFFS 2025 (CH), Zürich Mischhagel, BVAT (DE), Austria
+- Tariff matrices: VFFS 2025 (CH), Zürich Mischhagel, German AW Matrix (DE), Austria
 - Australia hail estimate: per panel, per vehicle, triage, or hours
 - Invoicing: Swiss QR-bill, ZUGFeRD / Factur-X (PDF/A-3 with embedded XML)
 - Accounting export: DATEV CSV, VAT export, open receivables as Excel

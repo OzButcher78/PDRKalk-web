@@ -86,7 +86,7 @@
     "cards": [
       {
         "heading": "Hail & parking damage estimation",
-        "desc": "4 price matrices (VFFS, Zurich mixed-hail, BVAT with de-/remount column, Austria) with live calculation across 14 panels. Australia: hail estimate per panel, per vehicle, triage, or hours. Parking damage: per panel, flat rate, or time-based."
+        "desc": "4 price matrices (VFFS, Zurich mixed-hail, German AW Matrix with de-/remount column, Austria) with live calculation across 14 panels. Australia: hail estimate per panel, per vehicle, triage, or hours. Parking damage: per panel, flat rate, or time-based."
       },
       {
         "heading": "Documents & manual invoices",
@@ -108,7 +108,8 @@
         "heading": "Multi-device & local data",
         "desc": "Sync the office PC, the workshop tablet and the accountant's PC through your own NAS or cloud — same data on every device. Shared-folder sync runs on Windows; Android tablets work standalone with the full feature set. Stays 100% local, GDPR compliant, 4 languages."
       }
-    ]
+    ],
+    "disclaimer": "PDR Kalk includes a generic German AW-based calculation option. It is not affiliated with or endorsed by any association or third party."
   },
   "screenshots": {
     "title": "PDR Kalk in Action",
@@ -122,7 +123,7 @@
       { "file": "analysen1.jpg",                   "caption": "Analytics dashboard — revenue & cashflow" },
       { "file": "analysen2.jpg",                   "caption": "Top customers & conversion funnel" },
       { "file": "hagel-auftrag.jpg",               "caption": "Hail damage estimation (VFFS)" },
-      { "file": "hagel-auftragBVAT.jpg",           "caption": "Hail damage — BVAT with de-/remount" },
+      { "file": "hagel-auftrag-aw.jpg",            "caption": "Hail damage — German AW Matrix with de-/remount" },
       { "file": "parkschaden-erfassung.jpg",       "caption": "Parking damage — per-panel / flat / time-based" },
       { "file": "manuel-rechungen.jpg",            "caption": "Manual invoice (no report required)" },
       { "file": "Versicherung-Direkt.jpg",         "caption": "Insurance direct workflow — 4 steps" },

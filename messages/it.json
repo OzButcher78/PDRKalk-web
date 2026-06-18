@@ -86,7 +86,7 @@
     "cards": [
       {
         "heading": "Calcolo danni da grandine e parcheggio",
-        "desc": "4 matrici di prezzo (VFFS, grandine mista Zurigo, BVAT con colonna smontaggio/rimontaggio, Austria) con calcolo in tempo reale su 14 pannelli. Australia: stima grandine per pannello, per veicolo, triage o a ore. Danni da parcheggio: per pannello, forfait o a tempo."
+        "desc": "4 matrici di prezzo (VFFS, grandine mista Zurigo, matrice AW tedesca con colonna smontaggio/rimontaggio, Austria) con calcolo in tempo reale su 14 pannelli. Australia: stima grandine per pannello, per veicolo, triage o a ore. Danni da parcheggio: per pannello, forfait o a tempo."
       },
       {
         "heading": "Documenti e fatture manuali",
@@ -108,7 +108,8 @@
         "heading": "Multi-dispositivo e dati locali",
         "desc": "Sincronizza il PC dell'ufficio, il tablet dell'officina e il PC del contabile tramite il tuo NAS o cloud — gli stessi dati su ogni dispositivo. La sincronizzazione tramite cartella condivisa funziona su Windows; i tablet Android funzionano in autonomia con tutte le funzioni. Resta 100% locale, conforme al GDPR, 4 lingue."
       }
-    ]
+    ],
+    "disclaimer": "PDR Kalk include un'opzione di calcolo generica basata sulle AW tedesche. Non è affiliata né approvata da alcuna associazione o terza parte."
   },
   "screenshots": {
     "title": "PDR Kalk in azione",
@@ -122,7 +123,7 @@
       { "file": "analysen1.jpg",                   "caption": "Dashboard analitica — fatturato e flusso di cassa" },
       { "file": "analysen2.jpg",                   "caption": "Migliori clienti e imbuto di conversione" },
       { "file": "hagel-auftrag.jpg",               "caption": "Calcolo danni da grandine (VFFS)" },
-      { "file": "hagel-auftragBVAT.jpg",           "caption": "Danni da grandine — BVAT con smontaggio/rimontaggio" },
+      { "file": "hagel-auftrag-aw.jpg",            "caption": "Danni da grandine — matrice AW tedesca con smontaggio/rimontaggio" },
       { "file": "parkschaden-erfassung.jpg",       "caption": "Danni da parcheggio — per pannello / forfait / a tempo" },
       { "file": "manuel-rechungen.jpg",            "caption": "Fattura manuale (senza rapporto)" },
       { "file": "Versicherung-Direkt.jpg",         "caption": "Flusso diretto con l'assicurazione — 4 passaggi" },

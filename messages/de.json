@@ -86,7 +86,7 @@
     "cards": [
       {
         "heading": "Hagel- & Parkschadenkalkulation",
-        "desc": "4 Preismatrizen (VFFS, Zürich Mischhagel, BVAT mit De-/Montage-Spalte, Österreich) mit Live-Berechnung über 14 Panels. Australien: Hagelschätzung pro Panel, pro Fahrzeug, Triage oder stundenbasiert. Parkschaden wahlweise pro Panel, pauschal oder AW-basiert."
+        "desc": "4 Preismatrizen (VFFS, Zürich Mischhagel, Deutsche AW-Matrix mit De-/Montage-Spalte, Österreich) mit Live-Berechnung über 14 Panels. Australien: Hagelschätzung pro Panel, pro Fahrzeug, Triage oder stundenbasiert. Parkschaden wahlweise pro Panel, pauschal oder AW-basiert."
       },
       {
         "heading": "Dokumente & Manuelle Rechnungen",
@@ -108,7 +108,8 @@
         "heading": "Multi-Device & lokale Daten",
         "desc": "Synchronisieren Sie Office-PC, Werkstatt-Tablet und Buchhalter-PC über Ihre eigene NAS oder Cloud — gleicher Datenstand auf allen Geräten. Shared-Folder-Sync läuft auf Windows; Android-Tablets arbeiten eigenständig mit vollem Funktionsumfang. Bleibt 100% lokal, DSGVO-konform, 4 Sprachen."
       }
-    ]
+    ],
+    "disclaimer": "PDR Kalk enthält eine allgemeine deutsche AW-basierte Kalkulationsoption. Diese steht in keiner Verbindung zu einem Verband oder Dritten und wird von diesen nicht unterstützt oder freigegeben."
   },
   "screenshots": {
     "title": "PDR Kalk in Aktion",
@@ -122,7 +123,7 @@
       { "file": "analysen1.jpg",                   "caption": "Analysen-Dashboard — Umsatz & Cashflow" },
       { "file": "analysen2.jpg",                   "caption": "Top-Kunden & Konversions-Trichter" },
       { "file": "hagel-auftrag.jpg",               "caption": "Hagelschaden-Kalkulation (VFFS)" },
-      { "file": "hagel-auftragBVAT.jpg",           "caption": "Hagelschaden — BVAT mit De-/Montage" },
+      { "file": "hagel-auftrag-aw.jpg",            "caption": "Hagelschaden — Deutsche AW-Matrix mit De-/Montage" },
       { "file": "parkschaden-erfassung.jpg",       "caption": "Parkschaden — Pro-Teil / Pauschal / AW" },
       { "file": "manuel-rechungen.jpg",            "caption": "Manuelle Rechnung (ohne Rapport)" },
       { "file": "Versicherung-Direkt.jpg",         "caption": "Direkt-Versicherung in 4 Schritten" },

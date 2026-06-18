@@ -113,6 +113,20 @@ export default function CoreFeatures() {
             </div>
           ))}
         </div>
+
+        {t.has('disclaimer') && (
+          <p style={{
+            fontFamily: 'Barlow, sans-serif',
+            fontSize: '0.8rem',
+            color: '#94a3b8',
+            lineHeight: 1.6,
+            textAlign: 'center',
+            maxWidth: '640px',
+            margin: '2.5rem auto 0',
+          }}>
+            {t('disclaimer')}
+          </p>
+        )}
       </div>
     </section>
   );

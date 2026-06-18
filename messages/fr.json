@@ -86,7 +86,7 @@
     "cards": [
       {
         "heading": "Calcul des dommages de grêle et de parking",
-        "desc": "4 matrices de prix (VFFS, grêle mixte Zurich, BVAT avec colonne dé-/remontage, Autriche) avec calcul en direct sur 14 panneaux. Australie : estimation grêle par panneau, par véhicule, triage ou à l'heure. Dommages de parking : par panneau, forfait ou basé sur le temps."
+        "desc": "4 matrices de prix (VFFS, grêle mixte Zurich, matrice AW allemande avec colonne dé-/remontage, Autriche) avec calcul en direct sur 14 panneaux. Australie : estimation grêle par panneau, par véhicule, triage ou à l'heure. Dommages de parking : par panneau, forfait ou basé sur le temps."
       },
       {
         "heading": "Documents et factures manuelles",
@@ -108,7 +108,8 @@
         "heading": "Multi-appareils et données locales",
         "desc": "Synchronisez le PC du bureau, la tablette de l'atelier et le PC du comptable via votre propre NAS ou cloud — les mêmes données sur chaque appareil. La synchro par dossier partagé fonctionne sous Windows ; les tablettes Android fonctionnent de manière autonome avec toutes les fonctions. Reste 100 % local, conforme au RGPD, 4 langues."
       }
-    ]
+    ],
+    "disclaimer": "PDR Kalk inclut une option de calcul générique basée sur les AW allemandes. Elle n'est ni affiliée à, ni approuvée par une quelconque association ou un tiers."
   },
   "screenshots": {
     "title": "PDR Kalk en action",
@@ -122,7 +123,7 @@
       { "file": "analysen1.jpg",                   "caption": "Tableau de bord analytique — chiffre d'affaires et trésorerie" },
       { "file": "analysen2.jpg",                   "caption": "Meilleurs clients et entonnoir de conversion" },
       { "file": "hagel-auftrag.jpg",               "caption": "Calcul des dommages de grêle (VFFS)" },
-      { "file": "hagel-auftragBVAT.jpg",           "caption": "Dommages de grêle — BVAT avec dé-/remontage" },
+      { "file": "hagel-auftrag-aw.jpg",            "caption": "Dommages de grêle — matrice AW allemande avec dé-/remontage" },
       { "file": "parkschaden-erfassung.jpg",       "caption": "Dommages de parking — par panneau / forfait / au temps" },
       { "file": "manuel-rechungen.jpg",            "caption": "Facture manuelle (sans rapport)" },
       { "file": "Versicherung-Direkt.jpg",         "caption": "Flux direct avec l'assurance — 4 étapes" },
