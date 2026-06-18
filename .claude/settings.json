@@ -9,8 +9,6 @@
       "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('messages/de.json','utf8'\\)\\); console.log\\('de.json: valid'\\)\")",
       "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('messages/en.json','utf8'\\)\\); console.log\\('en.json: valid'\\)\")",
       "Read(//c/Users/Dieter/**)",
-      "Bash(cp \"/c/Users/Dieter/PDRKalk/PDR_Kalk_Funktionsuebersicht.pdf\" \"/c/Users/Dieter/git/PDRKalk-web/public/PDR_Kalk_Funktionsuebersicht.pdf\")",
-      "Bash(cp \"/c/Users/Dieter/PDRKalk/PDR_Kalk_Feature_Comparison.pdf\" \"/c/Users/Dieter/git/PDRKalk-web/public/PDR_Kalk_Feature_Comparison.pdf\")",
       "Bash(grep -qE \"Ready|ready in|Local:\" \"C:\\\\\\\\Users\\\\\\\\Dieter\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\claude\\\\\\\\c--Users-Dieter-git-PDRKalk-web\\\\\\\\16661fab-1b1e-4256-9131-53b154b7c762\\\\\\\\tasks\\\\\\\\blk0yh4ps.output\")",
       "WebFetch(domain:localhost)",
       "Bash(curl -s http://localhost:3000/de -o /tmp/hero-de.html)",
