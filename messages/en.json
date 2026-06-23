@@ -86,7 +86,7 @@
     "cards": [
       {
         "heading": "Hail & parking damage estimation",
-        "desc": "4 price matrices (VFFS, Zurich mixed-hail, German AW Matrix with de-/remount column, Austria) with live calculation across 14 panels. Australia: hail estimate per panel, per vehicle, triage, or hours. Parking damage: per panel, flat rate, or time-based."
+        "desc": "5 price matrices (VFFS, Zurich mixed-hail, German AW Matrix with de-/remount column, Austria, Belgium UPEX List) with live calculation across 14 panels. Australia: hail estimate per panel, per vehicle, triage, or hours. Parking damage: per panel, flat rate, or time-based."
       },
       {
         "heading": "Documents & manual invoices",
@@ -383,14 +383,14 @@
       "eyebrow": "For PC & laptop",
       "name": "Microsoft Windows",
       "system": "Windows 10 or 11",
-      "version": "Version 4.25.26",
+      "version": "Version 4.25.27",
       "button": "Windows installer"
     },
     "android": {
       "eyebrow": "For tablet",
       "name": "Android",
       "system": "Android 10 or newer",
-      "version": "Version 4.25.26",
+      "version": "Version 4.25.27",
       "button": "Android APK"
     },
     "footnote": "Apple devices and smartphones are not supported."

@@ -86,7 +86,7 @@
     "cards": [
       {
         "heading": "Calcul des dommages de grêle et de parking",
-        "desc": "4 matrices de prix (VFFS, grêle mixte Zurich, matrice AW allemande avec colonne dé-/remontage, Autriche) avec calcul en direct sur 14 panneaux. Australie : estimation grêle par panneau, par véhicule, triage ou à l'heure. Dommages de parking : par panneau, forfait ou basé sur le temps."
+        "desc": "5 matrices de prix (VFFS, grêle mixte Zurich, matrice AW allemande avec colonne dé-/remontage, Autriche, liste UPEX belge) avec calcul en direct sur 14 panneaux. Australie : estimation grêle par panneau, par véhicule, triage ou à l'heure. Dommages de parking : par panneau, forfait ou basé sur le temps."
       },
       {
         "heading": "Documents et factures manuelles",
@@ -383,14 +383,14 @@
       "eyebrow": "Pour PC et portable",
       "name": "Microsoft Windows",
       "system": "Windows 10 ou 11",
-      "version": "Version 4.25.26",
+      "version": "Version 4.25.27",
       "button": "Installateur Windows"
     },
     "android": {
       "eyebrow": "Pour tablette",
       "name": "Android",
       "system": "Android 10 ou plus récent",
-      "version": "Version 4.25.26",
+      "version": "Version 4.25.27",
       "button": "APK Android"
     },
     "footnote": "Les appareils Apple et les smartphones ne sont pas pris en charge."

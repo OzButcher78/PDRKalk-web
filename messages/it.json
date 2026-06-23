@@ -86,7 +86,7 @@
     "cards": [
       {
         "heading": "Calcolo danni da grandine e parcheggio",
-        "desc": "4 matrici di prezzo (VFFS, grandine mista Zurigo, matrice AW tedesca con colonna smontaggio/rimontaggio, Austria) con calcolo in tempo reale su 14 pannelli. Australia: stima grandine per pannello, per veicolo, triage o a ore. Danni da parcheggio: per pannello, forfait o a tempo."
+        "desc": "5 matrici di prezzo (VFFS, grandine mista Zurigo, matrice AW tedesca con colonna smontaggio/rimontaggio, Austria, lista UPEX belga) con calcolo in tempo reale su 14 pannelli. Australia: stima grandine per pannello, per veicolo, triage o a ore. Danni da parcheggio: per pannello, forfait o a tempo."
       },
       {
         "heading": "Documenti e fatture manuali",
@@ -383,14 +383,14 @@
       "eyebrow": "Per PC e portatile",
       "name": "Microsoft Windows",
       "system": "Windows 10 o 11",
-      "version": "Versione 4.25.26",
+      "version": "Versione 4.25.27",
       "button": "Installer Windows"
     },
     "android": {
       "eyebrow": "Per tablet",
       "name": "Android",
       "system": "Android 10 o più recente",
-      "version": "Versione 4.25.26",
+      "version": "Versione 4.25.27",
       "button": "APK Android"
     },
     "footnote": "I dispositivi Apple e gli smartphone non sono supportati."

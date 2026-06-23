@@ -86,7 +86,7 @@
     "cards": [
       {
         "heading": "Hagel- & Parkschadenkalkulation",
-        "desc": "4 Preismatrizen (VFFS, Zürich Mischhagel, Deutsche AW-Matrix mit De-/Montage-Spalte, Österreich) mit Live-Berechnung über 14 Panels. Australien: Hagelschätzung pro Panel, pro Fahrzeug, Triage oder stundenbasiert. Parkschaden wahlweise pro Panel, pauschal oder AW-basiert."
+        "desc": "5 Preismatrizen (VFFS, Zürich Mischhagel, Deutsche AW-Matrix mit De-/Montage-Spalte, Österreich, Belgische UPEX-Liste) mit Live-Berechnung über 14 Panels. Australien: Hagelschätzung pro Panel, pro Fahrzeug, Triage oder stundenbasiert. Parkschaden wahlweise pro Panel, pauschal oder AW-basiert."
       },
       {
         "heading": "Dokumente & Manuelle Rechnungen",
@@ -383,14 +383,14 @@
       "eyebrow": "Für PC & Laptop",
       "name": "Microsoft Windows",
       "system": "Windows 10 oder 11",
-      "version": "Version 4.25.26",
+      "version": "Version 4.25.27",
       "button": "Windows-Installer"
     },
     "android": {
       "eyebrow": "Für Tablet",
       "name": "Android",
       "system": "Android 10 oder neuer",
-      "version": "Version 4.25.26",
+      "version": "Version 4.25.27",
       "button": "Android-APK"
     },
     "footnote": "Apple-Geräte und Smartphones werden nicht unterstützt."
