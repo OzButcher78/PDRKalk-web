@@ -223,12 +223,14 @@
         ]
       },
       {
-        "heading": "4 Regionen — CH, DE, AT, AU",
+        "heading": "6 Regionen — CH, DE, AT, AU, BE, NL",
         "items": [
           "Schweiz: CHF, MwSt 8,1%, QR-Einzahlungsschein, 5-Rappen-Rundung",
           "Deutschland: EUR, MwSt 19%, DATEV-Export, Stornorechnung, ZUGFeRD/Factur-X E-Rechnung",
           "Österreich: EUR, USt 20%, eigene Preismatrix",
           "Australien: AUD, GST 10%, Hagelschätzung pro Panel, pro Fahrzeug, Triage oder stundenbasiert",
+          "Belgien: EUR, MwSt 21%, Belgische UPEX-Liste (UPEX 2015)",
+          "Niederlande: EUR, MwSt 21% (Hagelmatrix folgt)",
           "Reverse Charge bei EU-Kunden mit USt-IdNr"
         ]
       },

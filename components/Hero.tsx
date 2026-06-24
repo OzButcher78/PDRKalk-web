@@ -13,8 +13,8 @@ const ANDROID_DOWNLOAD_URL =
   'https://github.com/OzButcher78/pdrkalk/releases/download/android-v4.25.27/pdrkalk-android-4.25.27.apk';
 const YOUTUBE_VIDEO_ID = 'YnwMff4CjB4';
 
-type RegionCode = 'ch' | 'de' | 'at' | 'au';
-const REGION_FLAGS: readonly RegionCode[] = ['ch', 'de', 'at', 'au'];
+type RegionCode = 'ch' | 'de' | 'at' | 'au' | 'be' | 'nl';
+const REGION_FLAGS: readonly RegionCode[] = ['ch', 'de', 'at', 'au', 'be', 'nl'];
 
 const TRUST_ITEM_STYLE: React.CSSProperties = {
   fontFamily: 'Barlow Condensed, sans-serif',
@@ -201,7 +201,7 @@ export default function Hero({regions = REGION_FLAGS}: {regions?: readonly Regio
               {t('regionsLabel')}
               <span style={{display: 'inline-flex', gap: '0.3rem', alignItems: 'center', flexShrink: 0}}>
                 {regions.map((code) => {
-                  const label = country(`country_${code}` as 'country_ch' | 'country_de' | 'country_at' | 'country_au');
+                  const label = country(`country_${code}` as 'country_ch' | 'country_de' | 'country_at' | 'country_au' | 'country_be' | 'country_nl');
                   return (
                     <Image
                       key={code}

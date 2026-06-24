@@ -223,12 +223,14 @@
         ]
       },
       {
-        "heading": "4 régions — CH, DE, AT, AU",
+        "heading": "6 régions — CH, DE, AT, AU, BE, NL",
         "items": [
           "Suisse : CHF, TVA 8,1 %, bulletin de versement QR, arrondi aux 5 centimes",
           "Allemagne : EUR, TVA 19 %, export DATEV, factures d'annulation, facture électronique ZUGFeRD/Factur-X",
           "Autriche : EUR, TVA 20 %, matrice de prix dédiée",
           "Australie : AUD, GST 10 %, estimation grêle par panneau, par véhicule, triage ou à l'heure",
+          "Belgique : EUR, TVA 21 %, liste UPEX belge (UPEX 2015)",
+          "Pays-Bas : EUR, TVA 21 % (matrice grêle à venir)",
           "Autoliquidation pour les clients de l'UE avec numéro de TVA"
         ]
       },

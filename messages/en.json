@@ -223,12 +223,14 @@
         ]
       },
       {
-        "heading": "4 regions — CH, DE, AT, AU",
+        "heading": "6 regions — CH, DE, AT, AU, BE, NL",
         "items": [
           "Switzerland: CHF, VAT 8.1%, QR payment slip, 5-Rappen rounding",
           "Germany: EUR, VAT 19%, DATEV export, cancellation invoices, ZUGFeRD/Factur-X e-invoice",
           "Austria: EUR, VAT 20%, dedicated price matrix",
           "Australia: AUD, GST 10%, hail estimate per panel, per vehicle, triage, or hours",
+          "Belgium: EUR, VAT 21%, Belgium UPEX List (UPEX 2015)",
+          "Netherlands: EUR, VAT 21% (hail matrix coming soon)",
           "Reverse charge for EU customers with VAT ID"
         ]
       },

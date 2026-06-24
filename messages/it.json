@@ -223,12 +223,14 @@
         ]
       },
       {
-        "heading": "4 regioni — CH, DE, AT, AU",
+        "heading": "6 regioni — CH, DE, AT, AU, BE, NL",
         "items": [
           "Svizzera: CHF, IVA 8,1%, polizza di versamento QR, arrotondamento ai 5 centesimi",
           "Germania: EUR, IVA 19%, export DATEV, fatture di storno, fattura elettronica ZUGFeRD/Factur-X",
           "Austria: EUR, IVA 20%, matrice di prezzo dedicata",
           "Australia: AUD, GST 10%, stima grandine per pannello, per veicolo, triage o a ore",
+          "Belgio: EUR, IVA 21%, lista UPEX belga (UPEX 2015)",
+          "Paesi Bassi: EUR, IVA 21% (matrice grandine in arrivo)",
           "Inversione contabile per i clienti UE con partita IVA"
         ]
       },

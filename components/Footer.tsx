@@ -4,8 +4,8 @@ import {useTranslations, useLocale} from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 
-type RegionCode = 'ch' | 'de' | 'at' | 'au';
-const REGION_FLAGS: readonly RegionCode[] = ['ch', 'de', 'at', 'au'];
+type RegionCode = 'ch' | 'de' | 'at' | 'au' | 'be' | 'nl';
+const REGION_FLAGS: readonly RegionCode[] = ['ch', 'de', 'at', 'au', 'be', 'nl'];
 
 type Props = {
   regions?: readonly RegionCode[];
@@ -142,7 +142,7 @@ export default function Footer({regions = REGION_FLAGS, basePath, showPrivacy = 
             }}
           >
             {regions.map((code) => {
-              const label = country(`country_${code}` as 'country_ch' | 'country_de' | 'country_at' | 'country_au');
+              const label = country(`country_${code}` as 'country_ch' | 'country_de' | 'country_at' | 'country_au' | 'country_be' | 'country_nl');
               return (
                 <Image
                   key={code}
