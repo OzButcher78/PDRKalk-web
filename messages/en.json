@@ -106,7 +106,7 @@
       },
       {
         "heading": "Multi-device & local data",
-        "desc": "Sync the office PC, the workshop tablet and the accountant's PC through your own NAS or cloud — same data on every device. Shared-folder sync runs on Windows; Android tablets work standalone with the full feature set. Stays 100% local, GDPR compliant, 4 languages."
+        "desc": "Sync the office PC, the workshop tablet and the accountant's PC through your own NAS or cloud — same data on every device. Shared-folder sync runs on Windows; Android tablets work standalone with the full feature set. Stays 100% local, GDPR compliant, 5 languages."
       }
     ],
     "disclaimer": "PDR Kalk includes a generic German AW-based calculation option. It is not affiliated with or endorsed by any association or third party."
@@ -269,7 +269,7 @@
       { "feature": "QR photo upload from phone", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
       { "feature": "QR invoice", "pdrKalk": true, "competitor": false, "competitorNote": "Rare" },
       { "feature": "ZUGFeRD/Factur-X e-invoice", "pdrKalk": true, "competitor": false, "competitorNote": "Extra charge" },
-      { "feature": "4 languages", "pdrKalk": true, "competitor": false, "competitorNote": "DE only" },
+      { "feature": "5 languages", "pdrKalk": true, "competitor": false, "competitorNote": "DE only" },
       { "feature": "Your data belongs to you", "pdrKalk": true, "competitor": false, "competitorNote": "On third-party servers" },
       { "feature": "Native on Microsoft & Android", "pdrKalk": true, "competitor": false, "competitorNote": "Cloud only" },
       { "feature": "Unlimited users per license", "pdrKalk": true, "competitor": false, "competitorNote": "1 user (more at extra cost)" },

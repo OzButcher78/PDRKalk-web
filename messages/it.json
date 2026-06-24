@@ -106,7 +106,7 @@
       },
       {
         "heading": "Multi-dispositivo e dati locali",
-        "desc": "Sincronizza il PC dell'ufficio, il tablet dell'officina e il PC del contabile tramite il tuo NAS o cloud — gli stessi dati su ogni dispositivo. La sincronizzazione tramite cartella condivisa funziona su Windows; i tablet Android funzionano in autonomia con tutte le funzioni. Resta 100% locale, conforme al GDPR, 4 lingue."
+        "desc": "Sincronizza il PC dell'ufficio, il tablet dell'officina e il PC del contabile tramite il tuo NAS o cloud — gli stessi dati su ogni dispositivo. La sincronizzazione tramite cartella condivisa funziona su Windows; i tablet Android funzionano in autonomia con tutte le funzioni. Resta 100% locale, conforme al GDPR, 5 lingue."
       }
     ],
     "disclaimer": "PDR Kalk include un'opzione di calcolo generica basata sulle AW tedesche. Non è affiliata né approvata da alcuna associazione o terza parte."
@@ -269,7 +269,7 @@
       { "feature": "Caricamento foto via QR dal telefono", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
       { "feature": "Fattura QR", "pdrKalk": true, "competitor": false, "competitorNote": "Raro" },
       { "feature": "Fattura elettronica ZUGFeRD/Factur-X", "pdrKalk": true, "competitor": false, "competitorNote": "A pagamento" },
-      { "feature": "4 lingue", "pdrKalk": true, "competitor": false, "competitorNote": "Solo DE" },
+      { "feature": "5 lingue", "pdrKalk": true, "competitor": false, "competitorNote": "Solo DE" },
       { "feature": "I tuoi dati appartengono a te", "pdrKalk": true, "competitor": false, "competitorNote": "Su server di terzi" },
       { "feature": "Nativo su Microsoft e Android", "pdrKalk": true, "competitor": false, "competitorNote": "Solo cloud" },
       { "feature": "Utenti illimitati per licenza", "pdrKalk": true, "competitor": false, "competitorNote": "1 utente (altri a pagamento)" },

@@ -106,7 +106,7 @@
       },
       {
         "heading": "Multi-Device & lokale Daten",
-        "desc": "Synchronisieren Sie Office-PC, Werkstatt-Tablet und Buchhalter-PC über Ihre eigene NAS oder Cloud — gleicher Datenstand auf allen Geräten. Shared-Folder-Sync läuft auf Windows; Android-Tablets arbeiten eigenständig mit vollem Funktionsumfang. Bleibt 100% lokal, DSGVO-konform, 4 Sprachen."
+        "desc": "Synchronisieren Sie Office-PC, Werkstatt-Tablet und Buchhalter-PC über Ihre eigene NAS oder Cloud — gleicher Datenstand auf allen Geräten. Shared-Folder-Sync läuft auf Windows; Android-Tablets arbeiten eigenständig mit vollem Funktionsumfang. Bleibt 100% lokal, DSGVO-konform, 5 Sprachen."
       }
     ],
     "disclaimer": "PDR Kalk enthält eine allgemeine deutsche AW-basierte Kalkulationsoption. Diese steht in keiner Verbindung zu einem Verband oder Dritten und wird von diesen nicht unterstützt oder freigegeben."
@@ -269,7 +269,7 @@
       { "feature": "QR-Foto-Upload vom Smartphone", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" },
       { "feature": "QR-Rechnung", "pdrKalk": true, "competitor": false, "competitorNote": "Selten" },
       { "feature": "ZUGFeRD/Factur-X E-Rechnung", "pdrKalk": true, "competitor": false, "competitorNote": "Aufpreis" },
-      { "feature": "4 Sprachen", "pdrKalk": true, "competitor": false, "competitorNote": "Nur DE" },
+      { "feature": "5 Sprachen", "pdrKalk": true, "competitor": false, "competitorNote": "Nur DE" },
       { "feature": "Ihre Daten gehören Ihnen", "pdrKalk": true, "competitor": false, "competitorNote": "Auf fremden Servern" },
       { "feature": "Native auf Microsoft & Android", "pdrKalk": true, "competitor": false, "competitorNote": "Nur Cloud" },
       { "feature": "Unbegrenzte Nutzer pro Lizenz", "pdrKalk": true, "competitor": false, "competitorNote": "1 Nutzer (mehr gegen Aufpreis)" },
