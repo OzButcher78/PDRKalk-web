@@ -115,6 +115,21 @@ export default function OptionalAI() {
           }}>
             {t('subtitle')}
           </p>
+          <p className="fade-up-3" style={{
+            display: 'inline-block',
+            fontFamily: 'Barlow, sans-serif',
+            fontSize: '0.92rem',
+            lineHeight: 1.6,
+            color: '#bcd0ea',
+            background: 'rgba(37,99,235,0.08)',
+            border: '1px solid rgba(37,99,235,0.22)',
+            borderRadius: '10px',
+            padding: '0.7rem 1.1rem',
+            margin: '1.5rem auto 0',
+            maxWidth: '720px',
+          }}>
+            {t('vinNote')}
+          </p>
         </div>
 
         {/* Provider strip */}

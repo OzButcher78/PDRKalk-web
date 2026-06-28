@@ -115,6 +115,7 @@
     "badge": "Optional · KI",
     "title": "Weniger tippen. Die KI liest den Fahrzeugausweis.",
     "subtitle": "Fotografieren Sie den Fahrzeugausweis (CH) bzw. die Zulassungsbescheinigung (DE/AT) – die KI erkennt Marke, Modell, Jahr, Kennzeichen, Fahrgestellnummer und Erstzulassung und füllt die Felder im Rapport-Editor automatisch aus. Optional, standardmässig deaktiviert, mit Ihrem eigenen Anbieter-Schlüssel.",
+    "vinNote": "Der VIN-Scanner erfasst die Fahrgestellnummer ausserdem direkt vom Fahrzeug – komplett lokal auf dem Gerät (offline) oder über Ihren KI-Anbieter (online).",
     "providersLabel": "Sie wählen den KI-Anbieter – mit Ihrem eigenen Schlüssel",
     "providers": [
       { "name": "Infomaniak", "region": "CH", "recommended": true },
@@ -123,11 +124,11 @@
       { "name": "Anthropic", "region": "USA" }
     ],
     "recommendedLabel": "empfohlen · Schweizer Rechenzentren",
-    "providersNote": "US-Anbieter erst nach ausdrücklicher Bestätigung der grenzüberschreitenden Übermittlung – nie als stille Voreinstellung.",
+    "providersNote": "US-Anbieter nur, wenn Sie es ausdrücklich bestätigen – nie automatisch voreingestellt.",
     "pillars": [
       { "heading": "Persönliche Daten werden geschwärzt", "desc": "Vor dem Upload überdeckt die App Name und Adresse des Halters fest im Bild. Kamera-Hilfslinie und ein Pflicht-Kontrollschritt – manuelle Eingabe jederzeit möglich." },
       { "heading": "Ihr Schlüssel, direkt zum Anbieter", "desc": "Bring-your-own-key: Sie nutzen Ihren eigenen Anbieter-Schlüssel und zahlen direkt dort. Das Bild geht direkt von Ihrem Gerät zum Anbieter – nie über die Server von PDR Kalk." },
-      { "heading": "Konform & nachvollziehbar", "desc": "Freigabe erst nach Bestätigung von DPA, Trainings-Opt-out und Aufbewahrung. Audit-Log nur mit Metadaten – nie Bild, Schlüssel oder Feldwerte. Ausgelegt auf nFADP und DSGVO." }
+      { "heading": "Konform & nachvollziehbar", "desc": "Der Scan startet erst, wenn Sie ein paar Punkte bestätigt haben – etwa, dass Ihre Daten nicht fürs KI-Training genutzt werden und wie lange sie gespeichert bleiben. Aufgezeichnet wird nur, dass ein Scan stattfand – nie das Bild, Ihr Schlüssel oder die ausgelesenen Daten. Entwickelt nach Schweizer und EU-Datenschutz." }
     ],
     "framing": "Sobald Sie die Funktion aktivieren und nutzen, wird das geschwärzte Bild ausschliesslich an den von Ihnen gewählten Anbieter übermittelt – mit Ihrem Schlüssel, nie über PDR Kalk. Ohne Aktivierung verlässt nichts das Gerät.",
     "learnMore": "Mehr zu KI & Datenschutz"
@@ -298,7 +299,8 @@
       { "feature": "Unbegrenzte Nutzer pro Lizenz", "pdrKalk": true, "competitor": false, "competitorNote": "1 Nutzer (mehr gegen Aufpreis)" },
       { "feature": "Manipulationssicherer Audit-Trail (SHA-256)", "pdrKalk": true, "competitor": false, "competitorNote": "Selten" },
       { "feature": "DATEV / Buchhaltungsexport", "pdrKalk": true, "competitor": false, "competitorNote": "Aufpreis" },
-      { "feature": "Kamera direkt in der App", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" }
+      { "feature": "Kamera direkt in der App", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" },
+      { "feature": "KI-Scan: Fahrzeugausweis & VIN (optional)", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" }
     ],
     "footnote": "* Diese Funktion wird nur auf Microsoft-Geräten unterstützt.",
     "toggle": "Detailvergleich anzeigen"

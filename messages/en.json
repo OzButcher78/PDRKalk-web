@@ -115,6 +115,7 @@
     "badge": "Optional · AI",
     "title": "Type less. AI reads the vehicle registration.",
     "subtitle": "Photograph the registration document (CH Fahrzeugausweis / DE-AT Zulassungsbescheinigung) — the AI reads make, model, year, plate, VIN/chassis number and first registration and fills the fields in the report editor for you. Optional, off by default, using your own provider key.",
+    "vinNote": "The VIN scanner also reads the chassis number straight off the vehicle — entirely on the device (offline) or via your AI provider (online).",
     "providersLabel": "You choose the AI provider — with your own key",
     "providers": [
       { "name": "Infomaniak", "region": "CH", "recommended": true },
@@ -123,11 +124,11 @@
       { "name": "Anthropic", "region": "US" }
     ],
     "recommendedLabel": "recommended · Swiss data centres",
-    "providersNote": "US providers only after you explicitly acknowledge the cross-border transfer — never a silent default.",
+    "providersNote": "US providers only if you explicitly choose them — never set as the default.",
     "pillars": [
       { "heading": "Personal data is redacted", "desc": "Before upload, the app blacks out the holder's name and address directly in the image. On-camera framing guide plus a mandatory review step — manual entry always available." },
       { "heading": "Your key, straight to the provider", "desc": "Bring-your-own-key: you use your own provider key and pay them directly. The image goes from your device straight to the provider — never through PDR Kalk's servers." },
-      { "heading": "Compliant & auditable", "desc": "Runs only after you confirm DPA, training opt-out and retention. Audit log is metadata only — never the image, key, or field values. Designed around nFADP and GDPR." }
+      { "heading": "Compliant & auditable", "desc": "The scan starts only once you've confirmed a few things — for example that your data won't be used to train the AI, and how long it's kept. Only the fact that a scan happened is logged — never the image, your key, or the data read. Built around Swiss and EU data-protection law." }
     ],
     "framing": "Once you enable and use the feature, the redacted image is sent only to the provider you choose — with your key, never through PDR Kalk. Without activation, nothing leaves your device.",
     "learnMore": "More on AI & privacy"
@@ -298,7 +299,8 @@
       { "feature": "Unlimited users per license", "pdrKalk": true, "competitor": false, "competitorNote": "1 user (more at extra cost)" },
       { "feature": "Tamper-evident audit trail (SHA-256)", "pdrKalk": true, "competitor": false, "competitorNote": "Rare" },
       { "feature": "DATEV / accounting export", "pdrKalk": true, "competitor": false, "competitorNote": "Extra charge" },
-      { "feature": "Camera capture in-app", "pdrKalk": true, "competitor": false, "competitorNote": "No" }
+      { "feature": "Camera capture in-app", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
+      { "feature": "AI scan: registration & VIN (optional)", "pdrKalk": true, "competitor": false, "competitorNote": "No" }
     ],
     "footnote": "* This feature is only supported on Microsoft devices.",
     "toggle": "Show detailed comparison"

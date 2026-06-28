@@ -115,6 +115,7 @@
     "badge": "Optionnel · IA",
     "title": "Moins de saisie. L'IA lit le permis de circulation.",
     "subtitle": "Photographiez le permis de circulation (CH) ou le certificat d'immatriculation (DE/AT) – l'IA reconnaît la marque, le modèle, l'année, la plaque, le numéro de châssis et la première mise en circulation, et remplit automatiquement les champs dans l'éditeur de rapport. Optionnel, désactivé par défaut, avec votre propre clé de fournisseur.",
+    "vinNote": "Le scanner VIN lit également le numéro de châssis directement sur le véhicule – entièrement sur l'appareil (hors ligne) ou via votre fournisseur d'IA (en ligne).",
     "providersLabel": "Vous choisissez le fournisseur d'IA – avec votre propre clé",
     "providers": [
       { "name": "Infomaniak", "region": "CH", "recommended": true },
@@ -123,11 +124,11 @@
       { "name": "Anthropic", "region": "USA" }
     ],
     "recommendedLabel": "recommandé · centres de données suisses",
-    "providersNote": "Fournisseurs américains uniquement après confirmation explicite du transfert transfrontalier – jamais par défaut de manière silencieuse.",
+    "providersNote": "Fournisseurs américains uniquement si vous les choisissez explicitement – jamais activés par défaut.",
     "pillars": [
       { "heading": "Les données personnelles sont masquées", "desc": "Avant l'envoi, l'application masque le nom et l'adresse du détenteur directement dans l'image. Ligne de cadrage à la caméra et étape de contrôle obligatoire – saisie manuelle toujours possible." },
       { "heading": "Votre clé, directement au fournisseur", "desc": "Bring-your-own-key : vous utilisez votre propre clé de fournisseur et le payez directement. L'image va de votre appareil directement au fournisseur – jamais via les serveurs de PDR Kalk." },
-      { "heading": "Conforme et traçable", "desc": "Activation uniquement après confirmation du contrat de sous-traitance (DPA), de l'opt-out de l'entraînement des modèles et de la durée de conservation. Journal d'audit avec métadonnées uniquement – jamais l'image, la clé ou les valeurs des champs. Conçu selon la nLPD et le RGPD." }
+      { "heading": "Conforme et traçable", "desc": "Le scan ne démarre qu'une fois que vous avez confirmé quelques points – par exemple que vos données ne servent pas à entraîner l'IA et combien de temps elles sont conservées. Seul le fait qu'un scan a eu lieu est enregistré – jamais l'image, votre clé ou les données lues. Conçu selon le droit suisse et européen de la protection des données." }
     ],
     "framing": "Dès que vous activez et utilisez la fonction, l'image masquée est transmise exclusivement au fournisseur que vous avez choisi – avec votre clé, jamais via PDR Kalk. Sans activation, rien ne quitte l'appareil.",
     "learnMore": "En savoir plus sur l'IA et la confidentialité"
@@ -298,7 +299,8 @@
       { "feature": "Utilisateurs illimités par licence", "pdrKalk": true, "competitor": false, "competitorNote": "1 utilisateur (plus en supplément)" },
       { "feature": "Piste d'audit infalsifiable (SHA-256)", "pdrKalk": true, "competitor": false, "competitorNote": "Rare" },
       { "feature": "Export DATEV / comptable", "pdrKalk": true, "competitor": false, "competitorNote": "Supplément" },
-      { "feature": "Capture photo dans l'application", "pdrKalk": true, "competitor": false, "competitorNote": "Non" }
+      { "feature": "Capture photo dans l'application", "pdrKalk": true, "competitor": false, "competitorNote": "Non" },
+      { "feature": "Scan IA : permis de circulation et VIN (optionnel)", "pdrKalk": true, "competitor": false, "competitorNote": "Non" }
     ],
     "footnote": "* Cette fonction n'est prise en charge que sur les appareils Microsoft.",
     "toggle": "Voir le comparatif détaillé"
