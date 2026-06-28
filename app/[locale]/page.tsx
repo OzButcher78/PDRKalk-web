@@ -4,6 +4,7 @@ import Hero from '@/components/Hero';
 import TimeSavings from '@/components/TimeSavings';
 import ProblemSolution from '@/components/ProblemSolution';
 import CoreFeatures from '@/components/CoreFeatures';
+import OptionalAI from '@/components/OptionalAI';
 import Screenshots from '@/components/Screenshots';
 import SecondaryFeatures from '@/components/SecondaryFeatures';
 import Comparison from '@/components/Comparison';
@@ -37,6 +38,7 @@ export default async function Home({params}: Props) {
         <TimeSavings />
         <ProblemSolution />
         <CoreFeatures />
+        <OptionalAI />
         <Screenshots />
         <SecondaryFeatures />
         <Comparison />

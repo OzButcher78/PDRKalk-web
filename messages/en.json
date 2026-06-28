@@ -111,6 +111,27 @@
     ],
     "disclaimer": "PDR Kalk includes a generic German AW-based calculation option. It is not affiliated with or endorsed by any association or third party."
   },
+  "optionalAi": {
+    "badge": "Optional · AI",
+    "title": "Type less. AI reads the vehicle registration.",
+    "subtitle": "Photograph the registration document (CH Fahrzeugausweis / DE-AT Zulassungsbescheinigung) — the AI reads make, model, year, plate, VIN/chassis number and first registration and fills the fields in the report editor for you. Optional, off by default, using your own provider key.",
+    "providersLabel": "You choose the AI provider — with your own key",
+    "providers": [
+      { "name": "Infomaniak", "region": "CH", "recommended": true },
+      { "name": "Mistral AI", "region": "EU" },
+      { "name": "OpenAI", "region": "US" },
+      { "name": "Anthropic", "region": "US" }
+    ],
+    "recommendedLabel": "recommended · Swiss data centres",
+    "providersNote": "US providers only after you explicitly acknowledge the cross-border transfer — never a silent default.",
+    "pillars": [
+      { "heading": "Personal data is redacted", "desc": "Before upload, the app blacks out the holder's name and address directly in the image. On-camera framing guide plus a mandatory review step — manual entry always available." },
+      { "heading": "Your key, straight to the provider", "desc": "Bring-your-own-key: you use your own provider key and pay them directly. The image goes from your device straight to the provider — never through PDR Kalk's servers." },
+      { "heading": "Compliant & auditable", "desc": "Runs only after you confirm DPA, training opt-out and retention. Audit log is metadata only — never the image, key, or field values. Designed around nFADP and GDPR." }
+    ],
+    "framing": "Once you enable and use the feature, the redacted image is sent only to the provider you choose — with your key, never through PDR Kalk. Without activation, nothing leaves your device.",
+    "learnMore": "More on AI & privacy"
+  },
   "screenshots": {
     "title": "PDR Kalk in Action",
     "subtitle": "Professional documents at the press of a button.",
@@ -526,7 +547,18 @@
     "fingerprintTitle": "Technical note: device drift",
     "fingerprintBody": "On Windows 11 with MAC-address randomisation enabled, the device identifier may change over time. In rare cases this means the same device is recognised as a new one after a reinstall. If you need a legitimate second trial (e.g. after a hardware swap or restore), contact us at info@pdrkalk.ch and we will unlock it manually.",
     "appHelpTitle": "In-app help",
-    "appHelpBody": "A short summary of this information is also available directly in PDR Kalk under “Help → Trial privacy”."
+    "appHelpBody": "A short summary of this information is also available directly in PDR Kalk under “Help → Trial privacy”.",
+    "aiTitle": "Optional AI feature: vehicle-document scanner",
+    "aiBody": "PDR Kalk includes an optional, off-by-default vehicle-document scanner. When enabled, an external AI vision API reads the vehicle data from a photo of the registration and fills the fields in the report editor. You use your own API key (bring-your-own-key); PDR Kalk runs no AI of its own and never sees the image or the key. The image is sent from your device straight to the provider you choose — never through PDR Kalk's servers. The following applies:",
+    "aiItems": [
+      "Off by default — no image is transmitted unless you enable and use the feature.",
+      "Bring-your-own-key: you supply your provider's key; billing is directly with the provider.",
+      "Provider choice: Infomaniak (Switzerland, Swiss data centres), Mistral AI (EU/France), or — only after you explicitly acknowledge the cross-border transfer — OpenAI or Anthropic (US). It never silently switches to a US provider.",
+      "Automatic redaction: before upload, the app blacks out the holder's personal-data block (name and address) directly in the image (region-aware placement). An on-camera framing guide and a mandatory review step let you check the real photo before scanning.",
+      "Compliance checklist: the scanner runs only after you confirm a data-processing agreement (DPA), opt-out of model training, retention terms, and — for US providers — the cross-border transfer.",
+      "Metadata-only audit log: records provider, region, country, which fields were returned, success, and whether redaction was applied — never the image, key, or field values.",
+      "Designed around Swiss revFADP/nFADP and the EU GDPR."
+    ]
   },
   "footer": {
     "company": "Balmer Storm Solutions",

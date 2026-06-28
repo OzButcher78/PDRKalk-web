@@ -111,6 +111,27 @@
     ],
     "disclaimer": "PDR Kalk enthält eine allgemeine deutsche AW-basierte Kalkulationsoption. Diese steht in keiner Verbindung zu einem Verband oder Dritten und wird von diesen nicht unterstützt oder freigegeben."
   },
+  "optionalAi": {
+    "badge": "Optional · KI",
+    "title": "Weniger tippen. Die KI liest den Fahrzeugausweis.",
+    "subtitle": "Fotografieren Sie den Fahrzeugausweis (CH) bzw. die Zulassungsbescheinigung (DE/AT) – die KI erkennt Marke, Modell, Jahr, Kennzeichen, Fahrgestellnummer und Erstzulassung und füllt die Felder im Rapport-Editor automatisch aus. Optional, standardmässig deaktiviert, mit Ihrem eigenen Anbieter-Schlüssel.",
+    "providersLabel": "Sie wählen den KI-Anbieter – mit Ihrem eigenen Schlüssel",
+    "providers": [
+      { "name": "Infomaniak", "region": "CH", "recommended": true },
+      { "name": "Mistral AI", "region": "EU" },
+      { "name": "OpenAI", "region": "USA" },
+      { "name": "Anthropic", "region": "USA" }
+    ],
+    "recommendedLabel": "empfohlen · Schweizer Rechenzentren",
+    "providersNote": "US-Anbieter erst nach ausdrücklicher Bestätigung der grenzüberschreitenden Übermittlung – nie als stille Voreinstellung.",
+    "pillars": [
+      { "heading": "Persönliche Daten werden geschwärzt", "desc": "Vor dem Upload überdeckt die App Name und Adresse des Halters fest im Bild. Kamera-Hilfslinie und ein Pflicht-Kontrollschritt – manuelle Eingabe jederzeit möglich." },
+      { "heading": "Ihr Schlüssel, direkt zum Anbieter", "desc": "Bring-your-own-key: Sie nutzen Ihren eigenen Anbieter-Schlüssel und zahlen direkt dort. Das Bild geht direkt von Ihrem Gerät zum Anbieter – nie über die Server von PDR Kalk." },
+      { "heading": "Konform & nachvollziehbar", "desc": "Freigabe erst nach Bestätigung von DPA, Trainings-Opt-out und Aufbewahrung. Audit-Log nur mit Metadaten – nie Bild, Schlüssel oder Feldwerte. Ausgelegt auf nFADP und DSGVO." }
+    ],
+    "framing": "Sobald Sie die Funktion aktivieren und nutzen, wird das geschwärzte Bild ausschliesslich an den von Ihnen gewählten Anbieter übermittelt – mit Ihrem Schlüssel, nie über PDR Kalk. Ohne Aktivierung verlässt nichts das Gerät.",
+    "learnMore": "Mehr zu KI & Datenschutz"
+  },
   "screenshots": {
     "title": "PDR Kalk in Aktion",
     "subtitle": "Professionelle Dokumente auf Knopfdruck.",
@@ -526,7 +547,18 @@
     "fingerprintTitle": "Technischer Hinweis: Geräte-Drift",
     "fingerprintBody": "Auf Windows 11 mit aktiviertem MAC-Adress-Zufallsgenerator kann sich die Gerätekennung im Laufe der Zeit ändern. In seltenen Fällen kann es dadurch vorkommen, dass dasselbe Gerät nach einer Neuinstallation als anderes Gerät erkannt wird. Wenn Sie eine berechtigte zweite Trial benötigen (z. B. nach Hardware-Tausch oder Wiederherstellung), kontaktieren Sie uns bitte unter info@pdrkalk.ch — wir schalten Sie manuell frei.",
     "appHelpTitle": "In-App-Hilfe",
-    "appHelpBody": "Eine kurze Zusammenfassung dieser Informationen finden Sie auch direkt in PDR Kalk unter „Hilfe → Datenschutz Testversion“."
+    "appHelpBody": "Eine kurze Zusammenfassung dieser Informationen finden Sie auch direkt in PDR Kalk unter „Hilfe → Datenschutz Testversion“.",
+    "aiTitle": "Optionale KI-Funktion: Fahrzeugausweis-Scanner",
+    "aiBody": "PDR Kalk enthält einen optionalen, standardmässig deaktivierten Fahrzeugausweis-Scanner. Aktivieren Sie ihn, liest eine externe KI-Vision-API die Fahrzeugdaten aus dem fotografierten Ausweis und füllt die Felder im Rapport-Editor. Sie nutzen dafür Ihren eigenen API-Schlüssel (Bring-your-own-key); PDR Kalk betreibt selbst keine KI und sieht weder Bild noch Schlüssel. Das Bild wird direkt von Ihrem Gerät an den gewählten Anbieter übermittelt – nie über die Server von PDR Kalk. Es gilt:",
+    "aiItems": [
+      "Standardmässig deaktiviert – ohne Ihre Aktivierung und Nutzung wird kein Bild übermittelt.",
+      "Bring-your-own-key: Sie hinterlegen den Schlüssel Ihres Anbieters; die Abrechnung läuft direkt über den Anbieter.",
+      "Anbieterwahl: Infomaniak (Schweiz, Schweizer Rechenzentren), Mistral AI (EU/Frankreich) oder – nur nach ausdrücklicher Bestätigung der grenzüberschreitenden Übermittlung – OpenAI bzw. Anthropic (USA). Es wird nie still auf einen US-Anbieter umgestellt.",
+      "Automatische Schwärzung: Vor dem Upload überdeckt die App den Personendaten-Block des Halters (Name und Adresse) fest im Bild (regionsabhängige Platzierung). Kamera-Hilfslinie und ein Pflicht-Kontrollschritt erlauben die Prüfung am echten Foto vor dem Scan.",
+      "Freigabe-Checkliste: Der Scanner startet erst, wenn Sie Auftragsverarbeitung (DPA), Opt-out vom Modelltraining, Aufbewahrungsbedingungen und – bei US-Anbietern – die grenzüberschreitende Übermittlung bestätigt haben.",
+      "Audit-Log nur mit Metadaten: protokolliert werden Anbieter, Region, Land, zurückgegebene Felder, Erfolg und ob geschwärzt wurde – nie das Bild, der Schlüssel oder Feldwerte.",
+      "Ausgelegt auf das Schweizer revDSG/nFADP und die EU-DSGVO."
+    ]
   },
   "footer": {
     "company": "Balmer Storm Solutions",

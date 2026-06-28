@@ -111,6 +111,27 @@
     ],
     "disclaimer": "PDR Kalk include un'opzione di calcolo generica basata sulle AW tedesche. Non è affiliata né approvata da alcuna associazione o terza parte."
   },
+  "optionalAi": {
+    "badge": "Opzionale · IA",
+    "title": "Meno digitazione. L'IA legge la carta di circolazione.",
+    "subtitle": "Fotografate la carta di circolazione (CH) o il certificato di immatricolazione (DE/AT) – l'IA riconosce marca, modello, anno, targa, numero di telaio e prima immatricolazione e compila automaticamente i campi nell'editor del rapporto. Opzionale, disattivata per impostazione predefinita, con la vostra chiave del fornitore.",
+    "providersLabel": "Scegliete voi il fornitore di IA – con la vostra chiave",
+    "providers": [
+      { "name": "Infomaniak", "region": "CH", "recommended": true },
+      { "name": "Mistral AI", "region": "EU" },
+      { "name": "OpenAI", "region": "USA" },
+      { "name": "Anthropic", "region": "USA" }
+    ],
+    "recommendedLabel": "consigliato · data center svizzeri",
+    "providersNote": "Fornitori statunitensi solo dopo conferma esplicita del trasferimento transfrontaliero – mai come impostazione predefinita silenziosa.",
+    "pillars": [
+      { "heading": "I dati personali vengono oscurati", "desc": "Prima del caricamento, l'app copre nome e indirizzo del detentore direttamente nell'immagine. Linea guida sulla fotocamera e passaggio di controllo obbligatorio – inserimento manuale sempre possibile." },
+      { "heading": "La vostra chiave, direttamente al fornitore", "desc": "Bring-your-own-key: utilizzate la vostra chiave del fornitore e pagate direttamente lui. L'immagine va dal vostro dispositivo direttamente al fornitore – mai attraverso i server di PDR Kalk." },
+      { "heading": "Conforme e tracciabile", "desc": "Attivazione solo dopo conferma del contratto di trattamento (DPA), dell'opt-out dall'addestramento dei modelli e della conservazione. Registro di audit con soli metadati – mai l'immagine, la chiave o i valori dei campi. Progettato secondo la nLPD e il GDPR." }
+    ],
+    "framing": "Non appena attivate e utilizzate la funzione, l'immagine oscurata viene trasmessa esclusivamente al fornitore da voi scelto – con la vostra chiave, mai attraverso PDR Kalk. Senza attivazione, nulla lascia il dispositivo.",
+    "learnMore": "Maggiori informazioni su IA e privacy"
+  },
   "screenshots": {
     "title": "PDR Kalk in azione",
     "subtitle": "Documenti professionali con un clic.",
@@ -526,7 +547,18 @@
     "fingerprintTitle": "Nota tecnica: deriva del dispositivo",
     "fingerprintBody": "Su Windows 11 con la randomizzazione dell'indirizzo MAC attiva, l'identificatore del dispositivo può cambiare nel tempo. In rari casi ciò comporta che lo stesso dispositivo venga riconosciuto come nuovo dopo una reinstallazione. Se hai bisogno di una seconda prova legittima (ad es. dopo una sostituzione hardware o un ripristino), contattaci a info@pdrkalk.ch e la sbloccheremo manualmente.",
     "appHelpTitle": "Aiuto nell'app",
-    "appHelpBody": "Un breve riepilogo di queste informazioni è disponibile anche direttamente in PDR Kalk sotto «Aiuto → Privacy della prova»."
+    "appHelpBody": "Un breve riepilogo di queste informazioni è disponibile anche direttamente in PDR Kalk sotto «Aiuto → Privacy della prova».",
+    "aiTitle": "Funzione IA opzionale: scanner della carta di circolazione",
+    "aiBody": "PDR Kalk include uno scanner della carta di circolazione, opzionale e disattivato per impostazione predefinita. Quando lo attivate, un'API di visione IA esterna legge i dati del veicolo dalla foto della carta e compila i campi nell'editor del rapporto. Per farlo utilizzate la vostra chiave API (bring-your-own-key); PDR Kalk non gestisce alcuna IA e non vede né l'immagine né la chiave. L'immagine viene trasmessa dal vostro dispositivo direttamente al fornitore scelto – mai attraverso i server di PDR Kalk. Si applica quanto segue:",
+    "aiItems": [
+      "Disattivato per impostazione predefinita – nessuna immagine viene trasmessa senza la vostra attivazione e il vostro utilizzo.",
+      "Bring-your-own-key: inserite la chiave del vostro fornitore; la fatturazione avviene direttamente tramite il fornitore.",
+      "Scelta del fornitore: Infomaniak (Svizzera, data center svizzeri), Mistral AI (UE/Francia) oppure – solo dopo conferma esplicita del trasferimento transfrontaliero – OpenAI o Anthropic (USA). Non si passa mai a un fornitore statunitense in modo silenzioso.",
+      "Oscuramento automatico: prima del caricamento, l'app copre il blocco dei dati personali del detentore (nome e indirizzo) direttamente nell'immagine (posizionamento in base alla regione). Una linea guida sulla fotocamera e un passaggio di controllo obbligatorio consentono di verificare la foto reale prima della scansione.",
+      "Lista di controllo per la conformità: lo scanner si avvia solo dopo che avete confermato il contratto di trattamento (DPA), l'opt-out dall'addestramento dei modelli, le condizioni di conservazione e – per i fornitori statunitensi – il trasferimento transfrontaliero.",
+      "Registro di audit con soli metadati: vengono registrati fornitore, regione, paese, campi restituiti, esito e se è stato applicato l'oscuramento – mai l'immagine, la chiave o i valori dei campi.",
+      "Progettato secondo la nLPD svizzera e il GDPR dell'UE."
+    ]
   },
   "footer": {
     "company": "Balmer Storm Solutions",

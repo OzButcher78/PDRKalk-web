@@ -69,6 +69,7 @@ function PrivacyContent() {
   const t = useTranslations('privacy');
   const dataCollected = t.raw('dataCollectedItems') as string[];
   const dataNotCollected = t.raw('dataNotCollectedItems') as string[];
+  const aiItems = t.raw('aiItems') as string[];
 
   return (
     <article
@@ -122,6 +123,15 @@ function PrivacyContent() {
         </ul>
       </Section>
 
+      <Section title={t('aiTitle')} id="ai-privacy">
+        <p>{t('aiBody')}</p>
+        <ul style={{paddingLeft: '1.25rem'}}>
+          {aiItems.map((item, i) => (
+            <li key={i} style={{marginBottom: '0.4rem'}}>{item}</li>
+          ))}
+        </ul>
+      </Section>
+
       <Section title={t('purposeTitle')}>
         <p>{t('purposeBody')}</p>
       </Section>
@@ -165,9 +175,9 @@ function PrivacyContent() {
   );
 }
 
-function Section({title, children}: {title: string; children: React.ReactNode}) {
+function Section({title, id, children}: {title: string; id?: string; children: React.ReactNode}) {
   return (
-    <section style={{marginBottom: '2.5rem'}}>
+    <section id={id} style={{marginBottom: '2.5rem'}}>
       <h2
         style={{
           fontFamily: 'Barlow Condensed, sans-serif',
