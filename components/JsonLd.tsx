@@ -68,7 +68,7 @@ export default function JsonLd({
       applicationCategory: 'BusinessApplication',
       applicationSubCategory: 'Estimation and Invoicing Software',
       operatingSystem: 'Windows, Android',
-      softwareVersion: '4.25.27',
+      softwareVersion: '4.25.29',
       inLanguage: ['de', 'en', 'fr', 'it', 'nl'],
       author: {'@id': ORG_ID},
       publisher: {'@id': ORG_ID},

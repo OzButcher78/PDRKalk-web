@@ -90,7 +90,7 @@
       },
       {
         "heading": "Documents et factures manuelles",
-        "desc": "Devis, rapport, facture, facture QR suisse et facture électronique ZUGFeRD/Factur-X (PDF/A-3 avec XML intégré) pour l'Allemagne — le tout en PDF à votre logo. Plus notes de crédit, déclaration de cession, factures manuelles libres et archive ZIP par dossier en un clic."
+        "desc": "Devis, rapport, facture, facture QR suisse et facture électronique ZUGFeRD/Factur-X (PDF/A-3 avec XML intégré) pour l'Allemagne — le tout en PDF à votre logo. Plus notes de crédit, déclaration de cession, factures manuelles libres et archive ZIP par dossier en un clic. Elle produit aussi des contrats de location de véhicule de remplacement et des procès-verbaux de remise du véhicule — chacun avec signature, impression PDF et envoi par e-mail."
       },
       {
         "heading": "Flux direct avec l'assurance",
@@ -115,7 +115,7 @@
     "badge": "Optionnel · IA",
     "title": "Moins de saisie. L'IA lit le permis de circulation.",
     "subtitle": "Photographiez le permis de circulation (CH) ou le certificat d'immatriculation (DE/AT) – l'IA reconnaît la marque, le modèle, l'année, la plaque, le numéro de châssis et la première mise en circulation, et remplit automatiquement les champs dans l'éditeur de rapport. Optionnel, désactivé par défaut, avec votre propre clé de fournisseur.",
-    "vinNote": "Le scanner VIN lit également le numéro de châssis directement sur le véhicule – entièrement sur l'appareil (hors ligne) ou via votre fournisseur d'IA (en ligne).",
+    "vinNote": "Le scanner VIN lit le numéro de châssis directement sur le véhicule – le cadrage est librement ajustable pour une meilleure reconnaissance – ou vous le saisissez à la main. La lecture s'effectue sur l'appareil (hors ligne) ou via votre fournisseur d'IA (en ligne) ; la marque et l'année-modèle approximative sont ensuite déduites hors ligne du VIN.",
     "providersLabel": "Vous choisissez le fournisseur d'IA – avec votre propre clé",
     "providers": [
       { "name": "Infomaniak", "region": "CH", "recommended": true },
@@ -196,7 +196,8 @@
           "Graphiques de chiffre d'affaires et de trésorerie sur toute période personnalisée",
           "Créances classées par échéance (0–30, 31–60, 61–90, 90+ jours)",
           "Meilleurs clients, meilleurs assureurs, valeur moyenne par dossier, délai moyen de paiement",
-          "Entonnoir de conversion : Rapport → Accepté → Facturé → Payé"
+          "Entonnoir de conversion : Rapport → Accepté → Facturé → Payé",
+          "Analyse par technicien : cliquez sur un technicien pour voir tous ses dossiers — regroupés par semaine et copiables vers Excel en un clic"
         ]
       },
       {
@@ -205,7 +206,9 @@
           "Export d'archive de dossier — ZIP par dossier avec rapport, facture, cession, photos, sauvegarde",
           "Panneau de documents : joignez n'importe quel PDF à un dossier (expertise, confirmation d'assurance…)",
           "Aperçu d'e-mail avec sélecteur de pièces jointes multiples sur tous les documents du dossier",
-          "Accord du client sur place avec signature numérique sur l'appareil"
+          "Accord du client sur place avec signature numérique sur l'appareil",
+          "Contrat de location de véhicule de remplacement — créez-le depuis un dossier ou un rapport, signez, imprimez, envoyez par e-mail et facturez ; heures de prise en charge et de restitution en option pour une location à l'heure (CH & UE)",
+          "Procès-verbal de remise — faites signer au client la remise du véhicule terminé (kilométrage, niveau de carburant, signature), imprimez en PDF ou envoyez par e-mail"
         ]
       },
       {
@@ -300,6 +303,7 @@
       { "feature": "Piste d'audit infalsifiable (SHA-256)", "pdrKalk": true, "competitor": false, "competitorNote": "Rare" },
       { "feature": "Export DATEV / comptable", "pdrKalk": true, "competitor": false, "competitorNote": "Supplément" },
       { "feature": "Capture photo dans l'application", "pdrKalk": true, "competitor": false, "competitorNote": "Non" },
+      { "feature": "Contrat de location de véhicule de remplacement et procès-verbal de remise", "pdrKalk": true, "competitor": false, "competitorNote": "Non" },
       { "feature": "Scan IA : permis de circulation et VIN (optionnel)", "pdrKalk": true, "competitor": false, "competitorNote": "Non" }
     ],
     "footnote": "* Cette fonction n'est prise en charge que sur les appareils Microsoft.",
@@ -408,14 +412,14 @@
       "eyebrow": "Pour PC et portable",
       "name": "Microsoft Windows",
       "system": "Windows 10 ou 11",
-      "version": "Version 4.25.27",
+      "version": "Version 4.25.29",
       "button": "Installateur Windows"
     },
     "android": {
       "eyebrow": "Pour tablette",
       "name": "Android",
       "system": "Android 10 ou plus récent",
-      "version": "Version 4.25.27",
+      "version": "Version 4.25.29",
       "button": "APK Android"
     },
     "footnote": "Les appareils Apple et les smartphones ne sont pas pris en charge."

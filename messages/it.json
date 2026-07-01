@@ -90,7 +90,7 @@
       },
       {
         "heading": "Documenti e fatture manuali",
-        "desc": "Preventivo, rapporto, fattura, fattura QR svizzera e fattura elettronica ZUGFeRD/Factur-X (PDF/A-3 con XML incorporato) per la Germania — tutto in PDF con il tuo logo. Più note di credito, dichiarazione di cessione, fatture manuali libere e archivio ZIP per pratica con un clic."
+        "desc": "Preventivo, rapporto, fattura, fattura QR svizzera e fattura elettronica ZUGFeRD/Factur-X (PDF/A-3 con XML incorporato) per la Germania — tutto in PDF con il tuo logo. Più note di credito, dichiarazione di cessione, fatture manuali libere e archivio ZIP per pratica con un clic. Genera inoltre contratti di noleggio del veicolo sostitutivo e verbali di consegna del veicolo — ciascuno con firma, stampa PDF e invio via e-mail."
       },
       {
         "heading": "Flusso diretto con l'assicurazione",
@@ -115,7 +115,7 @@
     "badge": "Opzionale · IA",
     "title": "Meno digitazione. L'IA legge la carta di circolazione.",
     "subtitle": "Fotografate la carta di circolazione (CH) o il certificato di immatricolazione (DE/AT) – l'IA riconosce marca, modello, anno, targa, numero di telaio e prima immatricolazione e compila automaticamente i campi nell'editor del rapporto. Opzionale, disattivata per impostazione predefinita, con la vostra chiave del fornitore.",
-    "vinNote": "Lo scanner VIN legge inoltre il numero di telaio direttamente dal veicolo – interamente sul dispositivo (offline) o tramite il vostro fornitore di IA (online).",
+    "vinNote": "Lo scanner VIN legge il numero di telaio direttamente dal veicolo – il ritaglio è liberamente regolabile per un riconoscimento migliore – oppure lo digitate a mano. La lettura avviene sul dispositivo (offline) o tramite il vostro fornitore di IA (online); marca e anno-modello approssimativo vengono poi ricavati offline dal VIN.",
     "providersLabel": "Scegliete voi il fornitore di IA – con la vostra chiave",
     "providers": [
       { "name": "Infomaniak", "region": "CH", "recommended": true },
@@ -196,7 +196,8 @@
           "Grafici di fatturato e flusso di cassa su qualsiasi periodo personalizzato",
           "Crediti suddivisi per scadenza (0–30, 31–60, 61–90, 90+ giorni)",
           "Migliori clienti, migliori assicuratori, valore medio per pratica, giorni medi di pagamento",
-          "Imbuto di conversione: Rapporto → Accettato → Fatturato → Pagato"
+          "Imbuto di conversione: Rapporto → Accettato → Fatturato → Pagato",
+          "Analisi per tecnico: fai clic su un tecnico per vedere tutte le sue pratiche — raggruppate per settimana e copiabili in Excel con un clic"
         ]
       },
       {
@@ -205,7 +206,9 @@
           "Export archivio pratica — ZIP per pratica con rapporto, fattura, cessione, foto, backup",
           "Pannello documenti: allega qualsiasi PDF a una pratica (perizia, conferma assicurativa…)",
           "Anteprima e-mail con selettore di più allegati su tutti i documenti della pratica",
-          "Approvazione del cliente sul posto con firma digitale sul dispositivo"
+          "Approvazione del cliente sul posto con firma digitale sul dispositivo",
+          "Contratto di noleggio veicolo sostitutivo — crealo da una pratica o da un rapporto, firma, stampa, invia via e-mail e fattura; orari di ritiro e riconsegna opzionali per il noleggio a ore (CH & UE)",
+          "Verbale di consegna — fai firmare al cliente la consegna del veicolo ultimato (chilometraggio, livello carburante, firma), stampa in PDF o invia via e-mail"
         ]
       },
       {
@@ -300,6 +303,7 @@
       { "feature": "Audit trail a prova di manomissione (SHA-256)", "pdrKalk": true, "competitor": false, "competitorNote": "Raro" },
       { "feature": "Export DATEV / contabile", "pdrKalk": true, "competitor": false, "competitorNote": "A pagamento" },
       { "feature": "Acquisizione foto nell'app", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
+      { "feature": "Contratto di noleggio veicolo sostitutivo e verbale di consegna", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
       { "feature": "Scansione IA: carta di circolazione e VIN (opzionale)", "pdrKalk": true, "competitor": false, "competitorNote": "No" }
     ],
     "footnote": "* Questa funzione è supportata solo sui dispositivi Microsoft.",
@@ -408,14 +412,14 @@
       "eyebrow": "Per PC e portatile",
       "name": "Microsoft Windows",
       "system": "Windows 10 o 11",
-      "version": "Versione 4.25.27",
+      "version": "Versione 4.25.29",
       "button": "Installer Windows"
     },
     "android": {
       "eyebrow": "Per tablet",
       "name": "Android",
       "system": "Android 10 o più recente",
-      "version": "Versione 4.25.27",
+      "version": "Versione 4.25.29",
       "button": "APK Android"
     },
     "footnote": "I dispositivi Apple e gli smartphone non sono supportati."

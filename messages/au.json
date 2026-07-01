@@ -90,7 +90,7 @@
       },
       {
         "heading": "Documents & GST invoices",
-        "desc": "Estimate, report, tax invoice and receipt — all as PDF with your logo and GST itemised. Plus credit notes, assignment declarations, free-form manual invoices and a one-click job-package ZIP."
+        "desc": "Estimate, report, tax invoice and receipt — all as PDF with your logo and GST itemised. Plus credit notes, assignment declarations, free-form manual invoices and a one-click job-package ZIP. It also produces replacement-vehicle rental contracts and vehicle-handover protocols — each with signature, PDF print and email."
       },
       {
         "heading": "Insurance direct workflow",
@@ -175,7 +175,8 @@
           "Revenue and cashflow charts over any custom time range",
           "Receivables aged into buckets (0–30, 31–60, 61–90, 90+ days)",
           "Top customers, top insurers, avg. job value, avg. days to pay",
-          "Conversion funnel: Report → Accepted → Invoiced → Paid"
+          "Conversion funnel: Report → Accepted → Invoiced → Paid",
+          "Technician drill-down: click a technician to see all their jobs — grouped by week and copyable to Excel in one click"
         ]
       },
       {
@@ -184,7 +185,9 @@
           "Job-package export — ZIP per job with report, invoice, assignment, photos, backup",
           "Documents panel: attach any PDF to a job (assessment report, insurance confirmation…)",
           "Email preview with multi-attachment picker across all job documents",
-          "In-person customer approval with digital signature on the device"
+          "In-person customer approval with digital signature on the device",
+          "Replacement-vehicle rental contract — create from a job or report, sign, print, email and invoice; optional pickup and return times for hourly hire",
+          "Handover protocol — have the customer sign off on the finished vehicle (odometer, fuel level, signature), print as PDF or send by email"
         ]
       },
       {
@@ -202,7 +205,8 @@
           "QR-code mini server — upload photos straight from your phone into the job, no cable or login",
           "Up to 12 photos per job with captions, integrated in the PDF report",
           "Automatic compression in 3 quality levels, EXIF data (incl. GPS) is stripped",
-          "Damaged-parts selector L/R per panel with note"
+          "Damaged-parts selector L/R per panel with note",
+          "Scan or type the VIN — the crop is freely adjustable for better recognition; make and approximate model year are decoded offline"
         ]
       },
       {
@@ -264,6 +268,7 @@
       { "feature": "Native on Windows & Android", "pdrKalk": true, "competitor": false, "competitorNote": "Cloud only" },
       { "feature": "Tamper-evident audit trail (SHA-256)", "pdrKalk": true, "competitor": false, "competitorNote": "Rare" },
       { "feature": "Camera capture in-app", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
+      { "feature": "Replacement-vehicle rental contract & handover protocol", "pdrKalk": true, "competitor": false, "competitorNote": "No" },
       { "feature": "Your price never goes up", "pdrKalk": true, "competitor": false, "competitorNote": "Subscription can rise" }
     ],
     "footnote": "* Multi-device sync via a shared work folder is supported on Windows; Android tablets run standalone.",
@@ -373,14 +378,14 @@
       "eyebrow": "For PC & laptop",
       "name": "Microsoft Windows",
       "system": "Windows 10 or 11",
-      "version": "Version 4.25.27",
+      "version": "Version 4.25.29",
       "button": "Windows installer"
     },
     "android": {
       "eyebrow": "For tablet",
       "name": "Android",
       "system": "Android 10 or newer",
-      "version": "Version 4.25.27",
+      "version": "Version 4.25.29",
       "button": "Android APK"
     },
     "footnote": "Apple devices and smartphones are not supported."

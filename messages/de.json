@@ -90,7 +90,7 @@
       },
       {
         "heading": "Dokumente & Manuelle Rechnungen",
-        "desc": "Kostenvoranschlag, Rapport, Rechnung, Schweizer QR-Rechnung sowie ZUGFeRD/Factur-X E-Rechnung (PDF/A-3 mit eingebettetem XML) für Deutschland — als PDF mit Ihrem Logo. Plus Gutschrift, Abtretungserklärung, freie Manuelle Rechnungen und Job Package ZIP pro Auftrag."
+        "desc": "Kostenvoranschlag, Rapport, Rechnung, Schweizer QR-Rechnung sowie ZUGFeRD/Factur-X E-Rechnung (PDF/A-3 mit eingebettetem XML) für Deutschland — als PDF mit Ihrem Logo. Plus Gutschrift, Abtretungserklärung, freie Manuelle Rechnungen und Job Package ZIP pro Auftrag. Ausserdem Mietvertrag Ersatzwagen und Abnahmeprotokoll für die Fahrzeugübergabe — mit Unterschrift, PDF-Druck und E-Mail-Versand."
       },
       {
         "heading": "Versicherungs-Direktworkflow",
@@ -115,7 +115,7 @@
     "badge": "Optional · KI",
     "title": "Weniger tippen. Die KI liest den Fahrzeugausweis.",
     "subtitle": "Fotografieren Sie den Fahrzeugausweis (CH) bzw. die Zulassungsbescheinigung (DE/AT) – die KI erkennt Marke, Modell, Jahr, Kennzeichen, Fahrgestellnummer und Erstzulassung und füllt die Felder im Rapport-Editor automatisch aus. Optional, standardmässig deaktiviert, mit Ihrem eigenen Anbieter-Schlüssel.",
-    "vinNote": "Der VIN-Scanner erfasst die Fahrgestellnummer ausserdem direkt vom Fahrzeug – komplett lokal auf dem Gerät (offline) oder über Ihren KI-Anbieter (online).",
+    "vinNote": "Der VIN-Scanner erfasst die Fahrgestellnummer direkt vom Fahrzeug – der Bildausschnitt ist frei wählbar für bessere Erkennung – oder Sie tippen sie von Hand ein. Ausgelesen wird auf dem Gerät (offline) oder über Ihren KI-Anbieter (online); Marke und ungefähres Modelljahr werden anschliessend offline aus der VIN abgeleitet.",
     "providersLabel": "Sie wählen den KI-Anbieter – mit Ihrem eigenen Schlüssel",
     "providers": [
       { "name": "Infomaniak", "region": "CH", "recommended": true },
@@ -196,7 +196,8 @@
           "Umsatz- und Cashflow-Diagramme über frei wählbare Zeiträume",
           "Offene Forderungen gegliedert nach Fälligkeit (0–30, 31–60, 61–90, 90+)",
           "Top-Kunden, Top-Versicherungen, ∅ Auftragswert, ∅ Zahlungsdauer",
-          "Konversions-Trichter: Rapport → Angenommen → Verrechnet → Bezahlt"
+          "Konversions-Trichter: Rapport → Angenommen → Verrechnet → Bezahlt",
+          "Techniker-Analyse: Klick auf eine Technikerin/einen Techniker zeigt alle zugehörigen Aufträge — nach Woche gruppiert und per Klick nach Excel kopierbar"
         ]
       },
       {
@@ -205,7 +206,9 @@
           "Job Package Export — ZIP pro Auftrag mit Rapport, Rechnung, Abtretung, Fotos, Backup",
           "Dokumente-Panel: PDFs an Aufträge anhängen (z.B. Gutachten, Versicherungsbestätigung)",
           "E-Mail-Vorschau mit Mehrfach-Anhängen aus allen Auftragsdokumenten",
-          "Kundenfreigabe vor Ort mit digitaler Unterschrift auf dem Gerät"
+          "Kundenfreigabe vor Ort mit digitaler Unterschrift auf dem Gerät",
+          "Mietvertrag Ersatzwagen — aus Auftrag oder Rapport erstellen, unterschreiben, drucken, mailen und verrechnen; optional mit Abhol- und Rückgabezeit für stundenweise Vermietung (CH & EU)",
+          "Abnahmeprotokoll — die Übergabe des fertiggestellten Fahrzeugs vom Kunden quittieren lassen (Kilometerstand, Tankfüllung, Unterschrift), als PDF drucken oder per E-Mail senden"
         ]
       },
       {
@@ -300,6 +303,7 @@
       { "feature": "Manipulationssicherer Audit-Trail (SHA-256)", "pdrKalk": true, "competitor": false, "competitorNote": "Selten" },
       { "feature": "DATEV / Buchhaltungsexport", "pdrKalk": true, "competitor": false, "competitorNote": "Aufpreis" },
       { "feature": "Kamera direkt in der App", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" },
+      { "feature": "Mietvertrag Ersatzwagen & Abnahmeprotokoll", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" },
       { "feature": "KI-Scan: Fahrzeugausweis & VIN (optional)", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" }
     ],
     "footnote": "* Diese Funktion wird nur auf Microsoft-Geräten unterstützt.",
@@ -408,14 +412,14 @@
       "eyebrow": "Für PC & Laptop",
       "name": "Microsoft Windows",
       "system": "Windows 10 oder 11",
-      "version": "Version 4.25.27",
+      "version": "Version 4.25.29",
       "button": "Windows-Installer"
     },
     "android": {
       "eyebrow": "Für Tablet",
       "name": "Android",
       "system": "Android 10 oder neuer",
-      "version": "Version 4.25.27",
+      "version": "Version 4.25.29",
       "button": "Android-APK"
     },
     "footnote": "Apple-Geräte und Smartphones werden nicht unterstützt."
