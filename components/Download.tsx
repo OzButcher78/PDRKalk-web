@@ -7,7 +7,7 @@ const WINDOWS_DOWNLOAD_URL =
   'https://github.com/OzButcher78/pdrkalk/releases/download/v4.26.33/PDR-Kalk-Setup-4.26.33.exe';
 const ANDROID_DOWNLOAD_URL =
   process.env.NEXT_PUBLIC_ANDROID_DOWNLOAD_URL ||
-  'https://github.com/OzButcher78/pdrkalk/releases/download/android-v4.26.33/pdrkalk-android-4.26.33.apk';
+  'https://updates.pdrkalk.ch/pdrkalk-android-4.26.34.apk';
 
 type Platform = {
   key: 'windows' | 'android';
