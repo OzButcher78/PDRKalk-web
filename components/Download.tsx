@@ -4,10 +4,10 @@ import {useTranslations} from 'next-intl';
 
 const WINDOWS_DOWNLOAD_URL =
   process.env.NEXT_PUBLIC_WINDOWS_DOWNLOAD_URL ||
-  'https://updates.pdrkalk.ch/PDR-Kalk-Setup-4.26.40.exe';
+  'https://updates.pdrkalk.ch/PDR-Kalk-Setup-4.26.46.exe';
 const ANDROID_DOWNLOAD_URL =
   process.env.NEXT_PUBLIC_ANDROID_DOWNLOAD_URL ||
-  'https://updates.pdrkalk.ch/pdrkalk-android-4.26.40.apk';
+  'https://updates.pdrkalk.ch/pdrkalk-android-4.26.46.apk';
 
 type Platform = {
   key: 'windows' | 'android';
