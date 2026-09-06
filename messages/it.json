@@ -181,6 +181,17 @@
     "title": "E ancora di più...",
     "groups": [
       {
+        "icon": "hailparts",
+        "heading": "Editor grandine: parti, prestazioni esterne e tecnici",
+        "items": [
+          "Smontaggio/rimontaggio necessario — indicate con un clic quali parti il cliente smonta e rimonta da sé (17 parti comuni in selezione rapida, le altre digitate liberamente); appare come riga compatta su preventivo e rapporto di lavoro",
+          "Prestazioni esterne — registrate con il prezzo i lavori acquistati: verniciatura, carrozzeria, meccanica o wrapping; voce separata su rapporto e preventivo, con prezzi singoli nell'allegato PDF, inclusa nell'importo fatturato",
+          "Parti danneggiate con prezzi — a richiesta ogni parte danneggiata riceve un prezzo, comprese le righe digitate liberamente; commutabile per commessa, lo sconto cliente per impostazione predefinita non si applica alle parti (tabelle svizzera, austriaca e australiana)",
+          "Assegnazione tecnici — se più tecnici lavorano sullo stesso veicolo, assegnate ogni componente a chi l'ha eseguito; rapporto di lavoro e analisi del team mostrano la ripartizione reale invece del 50/50 forfettario (tariffe CH e AT)"
+        ]
+      },
+      {
+        "icon": "invoice",
         "heading": "Fatturazione e pagamenti",
         "items": [
           "Fatture manuali senza rapporto — condividono lo stesso contatore RE-",
@@ -191,6 +202,7 @@
         ]
       },
       {
+        "icon": "analytics",
         "heading": "Analisi e controllo di gestione",
         "items": [
           "Grafici di fatturato e flusso di cassa su qualsiasi periodo personalizzato",
@@ -201,6 +213,7 @@
         ]
       },
       {
+        "icon": "package",
         "heading": "Archivio pratica e documenti",
         "items": [
           "Export archivio pratica — ZIP per pratica con rapporto, fattura, cessione, foto, backup",
@@ -212,6 +225,7 @@
         ]
       },
       {
+        "icon": "users",
         "heading": "Flusso per subappaltatori",
         "items": [
           "Tre modelli di compenso: a tempo, a percentuale, a forfait — con ripartizione in tempo reale",
@@ -221,6 +235,7 @@
         ]
       },
       {
+        "icon": "camera",
         "heading": "Foto e veicolo",
         "items": [
           "Mini-server con codice QR — carica le foto direttamente dallo smartphone nella pratica, senza cavo né login",
@@ -230,6 +245,7 @@
         ]
       },
       {
+        "icon": "devices",
         "heading": "Multi-dispositivo e sincronizzazione NAS",
         "items": [
           "Usa PDR Kalk su più dispositivi — desktop in ufficio, tablet in officina, contabile da casa",
@@ -239,6 +255,7 @@
         ]
       },
       {
+        "icon": "backup",
         "heading": "Export, backup e contabilità",
         "items": [
           "Export DATEV (CSV), export IVA, export dei crediti aperti in formato Excel",
@@ -248,6 +265,7 @@
         ]
       },
       {
+        "icon": "globe",
         "heading": "6 regioni — CH, DE, AT, AU, BE, NL",
         "items": [
           "Svizzera: CHF, IVA 8,1%, polizza di versamento QR, arrotondamento ai 5 centesimi",
@@ -260,6 +278,7 @@
         ]
       },
       {
+        "icon": "timeline",
         "heading": "Cronologia, audit trail ed e-mail",
         "items": [
           "Cronologia / storico della pratica — vista unificata tra rapporto ↔ fattura",
@@ -269,6 +288,7 @@
         ]
       },
       {
+        "icon": "help",
         "heading": "Aiuto e manuale d'uso",
         "items": [
           "Manuale d'uso completo integrato direttamente nell'app — ricercabile per argomento",

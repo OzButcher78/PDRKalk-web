@@ -181,6 +181,17 @@
     "title": "And even more...",
     "groups": [
       {
+        "icon": "hailparts",
+        "heading": "Hail editor: parts, outsourced work & technicians",
+        "items": [
+          "Removal & refitting — record with a click which parts the customer removes and refits themselves (17 common parts as quick picks, one-offs typed in freely); shown as a compact line on the estimate and work report",
+          "Outsourced work — capture bought-in paint, panel-beating, mechanical or wrapping work with its price; a separate line on the report and estimate, itemised in the PDF appendix, included in the invoice total",
+          "Priced damaged parts — optionally give every damaged part a price, freely typed lines included; toggled per job, with the customer discount excluding parts by default (Swiss, Austrian and Australian tables)",
+          "Technician assignment — when several technicians work on one vehicle, assign each panel to the one who did it; work report and team analytics then show the real split instead of a flat 50/50 (CH and AT rates)"
+        ]
+      },
+      {
+        "icon": "invoice",
         "heading": "Invoicing & payments",
         "items": [
           "Manual invoices without a report — share the same RE- counter",
@@ -191,6 +202,7 @@
         ]
       },
       {
+        "icon": "analytics",
         "heading": "Analytics & controlling",
         "items": [
           "Revenue and cashflow charts over any custom time range",
@@ -201,6 +213,7 @@
         ]
       },
       {
+        "icon": "package",
         "heading": "Job package & documents",
         "items": [
           "Job-package export — ZIP per job with report, invoice, assignment, photos, backup",
@@ -212,6 +225,7 @@
         ]
       },
       {
+        "icon": "users",
         "heading": "Subcontractor workflow",
         "items": [
           "Three compensation models: time rate, percentage, flat — with live split",
@@ -221,6 +235,7 @@
         ]
       },
       {
+        "icon": "camera",
         "heading": "Photos & vehicle",
         "items": [
           "QR-code mini server — upload photos straight from your smartphone into the job, no cable or login",
@@ -230,6 +245,7 @@
         ]
       },
       {
+        "icon": "devices",
         "heading": "Multi-device & NAS sync",
         "items": [
           "Run PDR Kalk on multiple devices — desktop in the office, tablet in the workshop, accountant from home",
@@ -239,6 +255,7 @@
         ]
       },
       {
+        "icon": "backup",
         "heading": "Export, backup & accounting",
         "items": [
           "DATEV export (CSV), VAT export, open-receivables export as Excel",
@@ -248,6 +265,7 @@
         ]
       },
       {
+        "icon": "globe",
         "heading": "6 regions — CH, DE, AT, AU, BE, NL",
         "items": [
           "Switzerland: CHF, VAT 8.1%, QR payment slip, 5-Rappen rounding",
@@ -260,6 +278,7 @@
         ]
       },
       {
+        "icon": "timeline",
         "heading": "Timeline, audit trail & email",
         "items": [
           "Job timeline / history — unified case view across report ↔ invoice",
@@ -269,6 +288,7 @@
         ]
       },
       {
+        "icon": "help",
         "heading": "Help & user manual",
         "items": [
           "Extensive user manual built directly into the app — searchable by topic",

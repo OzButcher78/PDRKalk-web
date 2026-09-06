@@ -181,6 +181,17 @@
     "title": "Und noch mehr...",
     "groups": [
       {
+        "icon": "hailparts",
+        "heading": "Hagel-Editor: Teile, Fremdleistungen & Techniker",
+        "items": [
+          "De-/Montage erforderlich — per Klick festhalten, welche Teile der Kunde vor und nach der Reparatur selbst de- und montiert (17 gängige Teile als Schnellauswahl, einmalige Teile frei eintippbar); erscheint als kompakte Zeile auf Kostenvoranschlag und Arbeitsrapport",
+          "Fremdleistungen — zugekaufte Lackier-, Spengler-, Mechanik- oder Folierarbeiten mit Preis erfassen; eigene Position auf Rapport und Kostenvoranschlag, Einzelpreise im PDF-Anhang, im Rechnungsbetrag enthalten",
+          "Beschädigte Teile mit Preisen — auf Wunsch bekommt jedes beschädigte Teil einen Preis, auch frei eingetippte Zeilen; pro Auftrag umschaltbar, der Kundenrabatt gilt standardmässig nicht für die Teile (Schweizer, österreichische und australische Tabelle)",
+          "Techniker-Zuweisung — arbeiten mehrere Techniker am selben Fahrzeug, weisen Sie jedes Bauteil einzeln zu; Arbeitsrapport und Team-Auswertung zeigen die tatsächliche Aufteilung statt der pauschalen Hälfte-Hälfte-Annahme (CH- und AT-Tarif)"
+        ]
+      },
+      {
+        "icon": "invoice",
         "heading": "Rechnungswesen & Zahlungseingang",
         "items": [
           "Manuelle Rechnungen ohne Rapport — teilen dieselben RE-Nummern",
@@ -191,6 +202,7 @@
         ]
       },
       {
+        "icon": "analytics",
         "heading": "Analysen & Controlling",
         "items": [
           "Umsatz- und Cashflow-Diagramme über frei wählbare Zeiträume",
@@ -201,6 +213,7 @@
         ]
       },
       {
+        "icon": "package",
         "heading": "Job Package & Dokumente",
         "items": [
           "Job Package Export — ZIP pro Auftrag mit Rapport, Rechnung, Abtretung, Fotos, Backup",
@@ -212,6 +225,7 @@
         ]
       },
       {
+        "icon": "users",
         "heading": "Subunternehmer-Workflow",
         "items": [
           "Drei Vergütungsmodelle: AW-Satz, Prozent, Pauschale — mit Live-Aufteilung",
@@ -221,6 +235,7 @@
         ]
       },
       {
+        "icon": "camera",
         "heading": "Fotos & Fahrzeug",
         "items": [
           "QR-Code Mini-Server — Fotos vom Smartphone direkt in den Auftrag laden, ohne Kabel oder Login",
@@ -230,6 +245,7 @@
         ]
       },
       {
+        "icon": "devices",
         "heading": "Multi-Device & NAS-Sync",
         "items": [
           "Mit PDR Kalk auf mehreren Geräten arbeiten — Desktop im Büro, Tablet in der Werkstatt, Buchhalter zu Hause",
@@ -239,6 +255,7 @@
         ]
       },
       {
+        "icon": "backup",
         "heading": "Export, Backup & Buchhaltung",
         "items": [
           "DATEV-Export (CSV), MwSt-/USt-Export, Offene-Debitoren-Export als Excel",
@@ -248,6 +265,7 @@
         ]
       },
       {
+        "icon": "globe",
         "heading": "6 Regionen — CH, DE, AT, AU, BE, NL",
         "items": [
           "Schweiz: CHF, MwSt 8,1%, QR-Einzahlungsschein, 5-Rappen-Rundung",
@@ -260,6 +278,7 @@
         ]
       },
       {
+        "icon": "timeline",
         "heading": "Timeline, Audit-Trail & E-Mail",
         "items": [
           "Job Timeline / Historie — einheitliche Fallansicht über Rapport ↔ Rechnung",
@@ -269,6 +288,7 @@
         ]
       },
       {
+        "icon": "help",
         "heading": "Hilfe & Benutzerhandbuch",
         "items": [
           "Umfangreiches Benutzerhandbuch direkt in der App — durchsuchbar nach Thema",

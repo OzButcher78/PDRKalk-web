@@ -160,6 +160,16 @@
     "title": "And even more...",
     "groups": [
       {
+        "icon": "hailparts",
+        "heading": "Hail editor: parts, outsourced work & pricing",
+        "items": [
+          "Removal & refitting — record with a click which parts the customer removes and refits themselves (17 common parts as quick picks, one-offs typed in freely); shown as a compact line on the estimate and work report",
+          "Outsourced work — capture bought-in paint, panel-beating, mechanical or wrapping work with its price; a separate line on the report and estimate, itemised in the PDF appendix, included in the invoice total",
+          "Priced damaged parts — optionally give every damaged part a price, freely typed lines included; toggled per job, with the customer discount excluding parts by default"
+        ]
+      },
+      {
+        "icon": "invoice",
         "heading": "Invoicing & payments",
         "items": [
           "Manual invoices without a report — share the same invoice counter",
@@ -170,6 +180,7 @@
         ]
       },
       {
+        "icon": "analytics",
         "heading": "Analytics & controlling",
         "items": [
           "Revenue and cashflow charts over any custom time range",
@@ -180,6 +191,7 @@
         ]
       },
       {
+        "icon": "package",
         "heading": "Job package & documents",
         "items": [
           "Job-package export — ZIP per job with report, invoice, assignment, photos, backup",
@@ -191,6 +203,7 @@
         ]
       },
       {
+        "icon": "users",
         "heading": "Subcontractor workflow",
         "items": [
           "Three compensation models: time rate, percentage, flat — with live split",
@@ -200,6 +213,7 @@
         ]
       },
       {
+        "icon": "camera",
         "heading": "Photos & vehicle",
         "items": [
           "QR-code mini server — upload photos straight from your phone into the job, no cable or login",
@@ -210,6 +224,7 @@
         ]
       },
       {
+        "icon": "devices",
         "heading": "Multi-device & NAS sync",
         "items": [
           "Run PDR Kalk on multiple devices — desktop in the office, tablet in the workshop, accountant from home",
@@ -219,6 +234,7 @@
         ]
       },
       {
+        "icon": "backup",
         "heading": "Export, backup & accounting",
         "items": [
           "CSV and Excel exports: revenue, GST and open receivables",
@@ -228,6 +244,7 @@
         ]
       },
       {
+        "icon": "timeline",
         "heading": "Timeline, audit trail & email",
         "items": [
           "Job timeline / history — unified case view across report ↔ invoice",
@@ -237,6 +254,7 @@
         ]
       },
       {
+        "icon": "help",
         "heading": "Help & user manual",
         "items": [
           "Extensive user manual built directly into the app — searchable by topic",

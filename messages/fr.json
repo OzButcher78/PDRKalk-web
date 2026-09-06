@@ -181,6 +181,17 @@
     "title": "Et bien plus encore...",
     "groups": [
       {
+        "icon": "hailparts",
+        "heading": "Éditeur grêle : pièces, prestations externes et techniciens",
+        "items": [
+          "Dépose/repose nécessaire — indiquez d'un clic les pièces que le client dépose et repose lui-même (17 pièces courantes en sélection rapide, les autres saisies librement) ; affiché en une ligne compacte sur le devis et le rapport de travail",
+          "Prestations externes — saisissez avec leur prix les travaux achetés : peinture, tôlerie, mécanique ou covering ; poste distinct sur le rapport et le devis, détaillé en annexe PDF, inclus dans le montant facturé",
+          "Pièces endommagées avec prix — au besoin, chaque pièce endommagée reçoit un prix, lignes saisies librement comprises ; commutable par dossier, la remise client ne s'applique pas aux pièces par défaut (tarifs suisse, autrichien et australien)",
+          "Attribution des techniciens — si plusieurs techniciens interviennent sur le même véhicule, attribuez chaque pièce à celui qui l'a réalisée ; le rapport de travail et l'analyse d'équipe affichent la répartition réelle au lieu d'un partage 50/50 (tarifs CH et AT)"
+        ]
+      },
+      {
+        "icon": "invoice",
         "heading": "Facturation et paiements",
         "items": [
           "Factures manuelles sans rapport — partagent le même compteur RE-",
@@ -191,6 +202,7 @@
         ]
       },
       {
+        "icon": "analytics",
         "heading": "Analyse et contrôle de gestion",
         "items": [
           "Graphiques de chiffre d'affaires et de trésorerie sur toute période personnalisée",
@@ -201,6 +213,7 @@
         ]
       },
       {
+        "icon": "package",
         "heading": "Archive de dossier et documents",
         "items": [
           "Export d'archive de dossier — ZIP par dossier avec rapport, facture, cession, photos, sauvegarde",
@@ -212,6 +225,7 @@
         ]
       },
       {
+        "icon": "users",
         "heading": "Flux de sous-traitance",
         "items": [
           "Trois modèles de rémunération : au temps, au pourcentage, au forfait — avec répartition en direct",
@@ -221,6 +235,7 @@
         ]
       },
       {
+        "icon": "camera",
         "heading": "Photos et véhicule",
         "items": [
           "Mini-serveur par QR code — téléversez les photos directement depuis votre smartphone dans le dossier, sans câble ni connexion",
@@ -230,6 +245,7 @@
         ]
       },
       {
+        "icon": "devices",
         "heading": "Multi-appareils et synchro NAS",
         "items": [
           "Utilisez PDR Kalk sur plusieurs appareils — le bureau, la tablette à l'atelier, le comptable depuis chez lui",
@@ -239,6 +255,7 @@
         ]
       },
       {
+        "icon": "backup",
         "heading": "Export, sauvegarde et comptabilité",
         "items": [
           "Export DATEV (CSV), export TVA, export des créances ouvertes au format Excel",
@@ -248,6 +265,7 @@
         ]
       },
       {
+        "icon": "globe",
         "heading": "6 régions — CH, DE, AT, AU, BE, NL",
         "items": [
           "Suisse : CHF, TVA 8,1 %, bulletin de versement QR, arrondi aux 5 centimes",
@@ -260,6 +278,7 @@
         ]
       },
       {
+        "icon": "timeline",
         "heading": "Chronologie, piste d'audit et e-mail",
         "items": [
           "Chronologie / historique du dossier — vue unifiée entre rapport ↔ facture",
@@ -269,6 +288,7 @@
         ]
       },
       {
+        "icon": "help",
         "heading": "Aide et manuel d'utilisation",
         "items": [
           "Manuel d'utilisation complet intégré directement dans l'application — recherche par sujet",
