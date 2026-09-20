@@ -178,13 +178,35 @@
     "showLess": "Weniger anzeigen"
   },
   "secondaryFeatures": {
+    "upcoming": {
+      "badge": "Demnächst",
+      "title": "Kommt mit dem nächsten Update",
+      "note": "Aktuell in der Testversion 4.26.61 — Umfang und Details können sich bis zur Veröffentlichung noch ändern.",
+      "items": [
+        { "title": "Dokumentsprache", "desc": "Die App in der eigenen Sprache bedienen und Rechnungen, Rapporte und E-Mails trotzdem in der Sprache des Kunden verschicken. Umschalten mit einem Klick über das Globus-Symbol." },
+        { "title": "Hagel-Dokumentimport", "desc": "Hagelscanner-Dellenprotokolle und SilverDAT-Kalkulationen als PDF direkt in den Hagel-Editor übernehmen: Bauteile, Dellen, Fremdleistungen und Teilepreise werden automatisch ausgelesen. Alles lokal auf dem Gerät, nichts verlässt den Betrieb. Vorerst nur für die Schweiz." },
+        { "title": "Pauschal / Manuell in jedem Land", "desc": "Der Pauschal-Modus arbeitet neu unabhängig von der Tariftabelle; beschädigte Teile, Fremdleistungen und Nebenkosten stehen dabei überall zur Verfügung." },
+        { "title": "Geld-Karten auch in der Deutschen AW-Liste und der belgischen Tabelle", "desc": "Beschädigte Teile, Fremdleistungen und Nebenkosten lassen sich neu auch dort erfassen; bestehende Rapporte behalten ihre Zahlen." },
+        { "title": "De-/Montage als bepreisbare Positionsliste", "desc": "Statt einer blossen Spalte: einzelne De-/Montage-Positionen pro Rapport, wahlweise mit AW, Betrag oder als Pauschale, sauber auf dem Arbeitsrapport ausgewiesen." },
+        { "title": "Neue Nebenkosten-Karte", "desc": "Probefahrt, Reinigung und Entsorgung als eigener Block auf dem Hagel-Rapport, inklusive Ausweis auf Rapport und Rechnung." }
+      ]
+    },
     "title": "Und noch mehr...",
     "groups": [
+      {
+        "icon": "search",
+        "heading": "Dashboard & Suche",
+        "items": [
+          "Suche überall (Strg+K) — Aufträge, Rechnungen, Quittungen, Mietverträge und Kunden von überall finden und direkt öffnen",
+          "Unverrechnet-Radar — fertige, noch nicht verrechnete Aufträge erscheinen auf dem Dashboard mit einer Hinweis-Karte und einer Markierung in der Liste"
+        ]
+      },
       {
         "icon": "hailparts",
         "heading": "Hagel-Editor: Teile, Fremdleistungen & Techniker",
         "items": [
           "De-/Montage erforderlich — per Klick festhalten, welche Teile der Kunde vor und nach der Reparatur selbst de- und montiert (17 gängige Teile als Schnellauswahl, einmalige Teile frei eintippbar); erscheint als kompakte Zeile auf Kostenvoranschlag und Arbeitsrapport",
+          "Eigener De-/Montage-Ansatz — in den Einstellungen hinterlegen, pro Kunde im Adressbuch überschreibbar; wird auf dem Arbeitsrapport separat ausgewiesen",
           "Fremdleistungen — zugekaufte Lackier-, Spengler-, Mechanik- oder Folierarbeiten mit Preis erfassen; eigene Position auf Rapport und Kostenvoranschlag, Einzelpreise im PDF-Anhang, im Rechnungsbetrag enthalten",
           "Beschädigte Teile mit Preisen — auf Wunsch bekommt jedes beschädigte Teil einen Preis, auch frei eingetippte Zeilen; pro Auftrag umschaltbar, der Kundenrabatt gilt standardmässig nicht für die Teile (Schweizer, österreichische und australische Tabelle)",
           "Techniker-Zuweisung — arbeiten mehrere Techniker am selben Fahrzeug, weisen Sie jedes Bauteil einzeln zu; Arbeitsrapport und Team-Auswertung zeigen die tatsächliche Aufteilung statt der pauschalen Hälfte-Hälfte-Annahme (CH- und AT-Tarif)"
@@ -226,9 +248,14 @@
       },
       {
         "icon": "users",
-        "heading": "Subunternehmer-Workflow",
+        "heading": "Subunternehmer & Partnerbetriebe",
         "items": [
+          "Auftrag übergeben oder mit einem Partnerbetrieb teilen — der Auftrag geht als Datei an einen anderen PDR-Kalk-Betrieb und erscheint dort als eigener Auftrag mit dessen Nummer und Briefkopf",
           "Drei Vergütungsmodelle: AW-Satz, Prozent, Pauschale — mit Live-Aufteilung",
+          "Verbrauchsmaterial-Anteil beim Ansatz-Modell — der Auftraggeber legt fest, welchen Anteil des Verbrauchsmaterials der Sub erhält",
+          "Sub-Vergütung pro Auftrag anpassbar — bei einem erhaltenen Rapport lässt sich die Vergütung anpassen; das Fenster zeigt den Betrag des Subs, den eigenen Betrag und die Differenz",
+          "Konditionen direkt an den Sub senden — geänderte Konditionen aus dem Adressbuch zusenden; sie gelten ab dem nächsten Rapport",
+          "«Erhaltene Aufträge» für Subunternehmer — das Dashboard zeigt offene erhaltene Aufträge mit ihrer Vergütung",
           "Dual-notify-Abschluss: Sub und Auftraggeber werden automatisch informiert",
           "Verschlüsselter Auftragstransfer (AES-256) und Sub-Auftrag-Import via Backup-Menü",
           "Duplikat-Merge beim Rückimport — keine doppelten Einträge"
@@ -250,6 +277,7 @@
         "items": [
           "Mit PDR Kalk auf mehreren Geräten arbeiten — Desktop im Büro, Tablet in der Werkstatt, Buchhalter zu Hause",
           "Synchronisation über gemeinsamen Arbeitsordner (NAS, OneDrive, Synology Drive) zwischen Ihren Windows-Geräten — Sie kontrollieren wo Ihre Daten liegen",
+          "Geräte-Übersicht im Arbeitsordner — Einstellungen → Speicher zeigt, wann die anderen Geräte zuletzt aktiv waren; beim Ausstellen einer Rechnung erscheint ein Hinweis, wenn ein Gerät länger nicht abgeglichen wurde",
           "Android-Tablets laufen als eigenständige Geräte mit vollem Funktionsumfang — eigene lokale Datenbank, ohne Shared-Folder-Sync",
           "Empfohlen für Shared-Folder-Sync: Microsoft-PC, Laptop oder Windows-Tablet ab 10 Zoll — Android-Tablets (ab Android 10) nur für eigenständigen Einsatz"
         ]
@@ -284,7 +312,8 @@
           "Job Timeline / Historie — einheitliche Fallansicht über Rapport ↔ Rechnung",
           "SHA-256 Hash-Kette — jeder Eintrag kryptografisch verknüpft",
           "Automatische Dokumentversionen und PDF-Snapshots bei jeder Statusänderung",
-          "Direkter SMTP-Versand mit IMAP-Ablage und Versandverfolgung"
+          "Direkter SMTP-Versand mit IMAP-Ablage und Versandverfolgung",
+          "Frei wählbares Du-Grusswort in E-Mail-Vorlagen — z. B. «Hallo» oder «Sali» statt fest «Hoi»"
         ]
       },
       {
@@ -432,14 +461,14 @@
       "eyebrow": "Für PC & Laptop",
       "name": "Microsoft Windows",
       "system": "Windows 10 oder 11",
-      "version": "Version 4.26.46",
+      "version": "Version 4.26.59",
       "button": "Windows-Installer"
     },
     "android": {
       "eyebrow": "Für Tablet",
       "name": "Android",
       "system": "Android 10 oder neuer",
-      "version": "Version 4.26.46",
+      "version": "Version 4.26.59",
       "button": "Android-APK"
     },
     "footnote": "Apple-Geräte und Smartphones werden nicht unterstützt."

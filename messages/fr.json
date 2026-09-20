@@ -178,13 +178,35 @@
     "showLess": "Afficher moins"
   },
   "secondaryFeatures": {
+    "upcoming": {
+      "badge": "Bientôt",
+      "title": "Avec la prochaine mise à jour",
+      "note": "Actuellement dans la version de test 4.26.61 — le contenu et les détails peuvent encore évoluer d'ici la publication.",
+      "items": [
+        { "title": "Langue des documents", "desc": "Utilisez l'application dans votre langue et envoyez malgré tout factures, rapports et e-mails dans la langue de vos clients. Bascule en un clic via l'icône du globe." },
+        { "title": "Import de documents grêle", "desc": "Reprenez directement dans l'éditeur grêle les protocoles de bosses Hagelscanner et les calculs SilverDAT au format PDF : pièces, bosses, prestations externes et prix des pièces sont extraits automatiquement. Tout reste en local sur l'appareil, rien ne quitte l'atelier. Pour l'instant en Suisse uniquement." },
+        { "title": "Forfait / manuel dans chaque pays", "desc": "Le mode forfait fonctionne désormais indépendamment du tarif ; pièces endommagées, prestations externes et frais annexes y sont disponibles partout." },
+        { "title": "Cartes monétaires aussi dans la liste AW allemande et le tarif belge", "desc": "Pièces endommagées, prestations externes et frais annexes s'y saisissent désormais aussi ; les rapports existants conservent leurs montants." },
+        { "title": "Dépose/repose en liste de postes chiffrables", "desc": "Au lieu d'une simple colonne : des postes dépose/repose individuels par rapport, au choix en AW, en montant ou au forfait, clairement indiqués sur le rapport de travail." },
+        { "title": "Nouvelle carte frais annexes", "desc": "Essai routier, nettoyage et élimination en bloc distinct sur le rapport grêle, avec mention sur le rapport et la facture." }
+      ]
+    },
     "title": "Et bien plus encore...",
     "groups": [
+      {
+        "icon": "search",
+        "heading": "Tableau de bord et recherche",
+        "items": [
+          "Rechercher partout (Ctrl+K) — retrouver dossiers, factures, quittances, contrats de location et clients depuis n'importe où et les ouvrir directement",
+          "Radar des non-facturés — les dossiers terminés mais pas encore facturés apparaissent sur le tableau de bord avec une tuile d'alerte et une marque dans la liste"
+        ]
+      },
       {
         "icon": "hailparts",
         "heading": "Éditeur grêle : pièces, prestations externes et techniciens",
         "items": [
           "Dépose/repose nécessaire — indiquez d'un clic les pièces que le client dépose et repose lui-même (17 pièces courantes en sélection rapide, les autres saisies librement) ; affiché en une ligne compacte sur le devis et le rapport de travail",
+          "Taux dépose/repose propre — à définir dans les réglages, modifiable par client dans le carnet d'adresses ; indiqué séparément sur le rapport de travail",
           "Prestations externes — saisissez avec leur prix les travaux achetés : peinture, tôlerie, mécanique ou covering ; poste distinct sur le rapport et le devis, détaillé en annexe PDF, inclus dans le montant facturé",
           "Pièces endommagées avec prix — au besoin, chaque pièce endommagée reçoit un prix, lignes saisies librement comprises ; commutable par dossier, la remise client ne s'applique pas aux pièces par défaut (tarifs suisse, autrichien et australien)",
           "Attribution des techniciens — si plusieurs techniciens interviennent sur le même véhicule, attribuez chaque pièce à celui qui l'a réalisée ; le rapport de travail et l'analyse d'équipe affichent la répartition réelle au lieu d'un partage 50/50 (tarifs CH et AT)"
@@ -226,9 +248,14 @@
       },
       {
         "icon": "users",
-        "heading": "Flux de sous-traitance",
+        "heading": "Sous-traitance et ateliers partenaires",
         "items": [
+          "Transmettre un dossier ou le partager avec un atelier partenaire — le dossier part sous forme de fichier vers un autre atelier PDR Kalk et y apparaît comme dossier propre, avec son numéro et son en-tête",
           "Trois modèles de rémunération : au temps, au pourcentage, au forfait — avec répartition en direct",
+          "Part des consommables dans le modèle au temps — le donneur d'ordre définit la part des consommables revenant au sous-traitant",
+          "Rémunération du sous-traitant ajustable par dossier — sur un rapport reçu, la rémunération peut être ajustée ; la fenêtre affiche le montant du sous-traitant, le vôtre et la différence",
+          "Envoyer les conditions directement au sous-traitant — les conditions modifiées partent depuis le carnet d'adresses et valent à partir du prochain rapport",
+          "« Mandats reçus » pour les sous-traitants — le tableau de bord affiche les dossiers reçus encore ouverts avec leur rémunération",
           "Clôture à double notification : le sous-traitant et le donneur d'ordre sont informés automatiquement",
           "Transfert de dossier chiffré (AES-256) et import de dossier sous-traitant via le menu sauvegarde",
           "Fusion des doublons à la réimportation — pas de saisies en double"
@@ -250,6 +277,7 @@
         "items": [
           "Utilisez PDR Kalk sur plusieurs appareils — le bureau, la tablette à l'atelier, le comptable depuis chez lui",
           "Synchro par dossier partagé (NAS, OneDrive, Synology Drive) entre vos appareils Windows — vous décidez où vivent vos données",
+          "Aperçu des appareils du dossier de travail — Paramètres → Stockage indique quand les autres appareils ont été actifs pour la dernière fois ; à l'émission d'une facture, un avis signale un appareil qui ne s'est plus synchronisé depuis un moment",
           "Les tablettes Android fonctionnent de manière autonome avec toutes les fonctions — base de données locale propre, sans synchro par dossier partagé",
           "Recommandé pour la synchro par dossier partagé : PC Microsoft, ordinateur portable ou tablette Windows de 10\" ou plus — tablettes Android (Android 10+) pour un usage autonome uniquement"
         ]
@@ -284,7 +312,8 @@
           "Chronologie / historique du dossier — vue unifiée entre rapport ↔ facture",
           "Chaîne de hachage SHA-256 — chaque entrée liée cryptographiquement",
           "Versions de documents automatiques et instantanés PDF à chaque changement de statut",
-          "Envoi SMTP direct avec classement IMAP et suivi de remise"
+          "Envoi SMTP direct avec classement IMAP et suivi de remise",
+          "Mot d'accueil du tutoiement au choix dans les modèles d'e-mail — p. ex. « Hallo » ou « Sali » au lieu de « Hoi » fixe"
         ]
       },
       {
@@ -432,14 +461,14 @@
       "eyebrow": "Pour PC et portable",
       "name": "Microsoft Windows",
       "system": "Windows 10 ou 11",
-      "version": "Version 4.26.46",
+      "version": "Version 4.26.59",
       "button": "Installateur Windows"
     },
     "android": {
       "eyebrow": "Pour tablette",
       "name": "Android",
       "system": "Android 10 ou plus récent",
-      "version": "Version 4.26.46",
+      "version": "Version 4.26.59",
       "button": "APK Android"
     },
     "footnote": "Les appareils Apple et les smartphones ne sont pas pris en charge."

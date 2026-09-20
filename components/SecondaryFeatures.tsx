@@ -4,11 +4,18 @@ import {useTranslations} from 'next-intl';
 import {useState} from 'react';
 
 type FeatureGroup = { icon: string; heading: string; items: string[] };
+type UpcomingItem = { title: string; desc: string };
+type Upcoming = { badge: string; title: string; note: string; items: UpcomingItem[] };
 
 // Keyed by the `icon` field on each group in messages/*.json — /au ships a
 // different set of groups than the other locales, so a positional array would
 // hand the wrong icon to half the accordion.
 const groupIcons: Record<string, React.ReactElement> = {
+  /* magnifier — dashboard & search */
+  search: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" strokeWidth="1.5"/>
+    <path d="M15.5 15.5L21 21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+  </svg>,
   /* wrench — hail editor parts & assignments */
   hailparts: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
     <path d="M15.5 3.5a5 5 0 00-6 6.5L4 15.5a2.1 2.1 0 003 3l5.5-5.5a5 5 0 006.5-6l-3 3-2.5-2.5 3-3z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
@@ -74,6 +81,9 @@ const groupIcons: Record<string, React.ReactElement> = {
 export default function SecondaryFeatures() {
   const t = useTranslations('secondaryFeatures');
   const groups = t.raw('groups') as FeatureGroup[];
+  // Teaser for the next release. Copy lives in messages/*.json under
+  // secondaryFeatures.upcoming; /au ships a region-appropriate subset.
+  const upcoming = t.raw('upcoming') as Upcoming;
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggle = (i: number) => {
@@ -216,6 +226,77 @@ export default function SecondaryFeatures() {
               </div>
             );
           })}
+        </div>
+
+        {/* Coming-soon teaser */}
+        <div style={{
+          marginTop: '2.5rem',
+          padding: '1.5rem 1.5rem 1.25rem',
+          borderRadius: '8px',
+          border: '1px dashed rgba(37,99,235,0.45)',
+          background: 'linear-gradient(135deg, rgba(37,99,235,0.10) 0%, rgba(37,99,235,0.03) 100%)',
+        }}>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.75rem',
+            flexWrap: 'wrap',
+            marginBottom: '0.4rem',
+          }}>
+            <span style={{
+              fontFamily: 'Barlow Condensed, sans-serif',
+              fontWeight: 700,
+              fontSize: '0.72rem',
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+              color: '#fff',
+              background: 'var(--blue)',
+              borderRadius: '3px',
+              padding: '0.2rem 0.5rem',
+            }}>
+              {upcoming.badge}
+            </span>
+            <h3 style={{
+              fontFamily: 'Barlow Condensed, sans-serif',
+              fontWeight: 700,
+              fontSize: '1.15rem',
+              letterSpacing: '0.04em',
+              textTransform: 'uppercase',
+              color: '#fff',
+              margin: 0,
+            }}>
+              {upcoming.title}
+            </h3>
+          </div>
+          <p style={{
+            fontFamily: 'Barlow, sans-serif',
+            fontSize: '0.85rem',
+            color: 'var(--steel)',
+            margin: '0 0 1rem',
+          }}>
+            {upcoming.note}
+          </p>
+          <ul style={{
+            listStyle: 'none',
+            margin: 0,
+            padding: 0,
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
+            gap: '0.75rem 1.5rem',
+          }}>
+            {upcoming.items.map((item, i) => (
+              <li key={i} style={{
+                fontFamily: 'Barlow, sans-serif',
+                fontSize: '0.88rem',
+                color: '#8fa8c8',
+                lineHeight: 1.5,
+              }}>
+                <strong style={{color: '#fff', fontWeight: 600}}>{item.title}</strong>
+                {' — '}
+                {item.desc}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

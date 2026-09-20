@@ -178,13 +178,35 @@
     "showLess": "Mostra meno"
   },
   "secondaryFeatures": {
+    "upcoming": {
+      "badge": "Prossimamente",
+      "title": "In arrivo con il prossimo aggiornamento",
+      "note": "Attualmente nella versione di test 4.26.61 — contenuti e dettagli possono ancora cambiare prima della pubblicazione.",
+      "items": [
+        { "title": "Lingua dei documenti", "desc": "Usare l'app nella propria lingua e inviare comunque fatture, rapporti ed e-mail nella lingua del cliente. Si cambia con un clic tramite l'icona del globo." },
+        { "title": "Importazione di documenti grandine", "desc": "Acquisire direttamente nell'editor grandine i protocolli ammaccature Hagelscanner e i calcoli SilverDAT in PDF: componenti, ammaccature, prestazioni esterne e prezzi delle parti vengono letti automaticamente. Tutto in locale sul dispositivo, nulla lascia l'officina. Per ora solo per la Svizzera." },
+        { "title": "Forfait / manuale in ogni Paese", "desc": "La modalità forfait ora funziona indipendentemente dal tariffario; parti danneggiate, prestazioni esterne e costi accessori sono disponibili ovunque." },
+        { "title": "Schede importi anche nella lista AW tedesca e nel tariffario belga", "desc": "Parti danneggiate, prestazioni esterne e costi accessori si possono registrare ora anche lì; i rapporti esistenti mantengono i loro importi." },
+        { "title": "Smontaggio/rimontaggio come elenco di voci con prezzo", "desc": "Invece di una semplice colonna: singole voci di smontaggio/rimontaggio per rapporto, a scelta con AW, importo o forfait, indicate chiaramente sul rapporto di lavoro." },
+        { "title": "Nuova scheda costi accessori", "desc": "Prova su strada, pulizia e smaltimento come blocco separato sul rapporto grandine, con indicazione su rapporto e fattura." }
+      ]
+    },
     "title": "E ancora di più...",
     "groups": [
+      {
+        "icon": "search",
+        "heading": "Dashboard e ricerca",
+        "items": [
+          "Cerca ovunque (Ctrl+K) — trovare pratiche, fatture, quietanze, contratti di noleggio e clienti da qualsiasi punto e aprirli subito",
+          "Radar del non fatturato — le pratiche concluse ma non ancora fatturate compaiono sulla dashboard con un riquadro di avviso e una marca nell'elenco"
+        ]
+      },
       {
         "icon": "hailparts",
         "heading": "Editor grandine: parti, prestazioni esterne e tecnici",
         "items": [
           "Smontaggio/rimontaggio necessario — indicate con un clic quali parti il cliente smonta e rimonta da sé (17 parti comuni in selezione rapida, le altre digitate liberamente); appare come riga compatta su preventivo e rapporto di lavoro",
+          "Tariffa smontaggio/rimontaggio propria — da impostare nelle impostazioni, modificabile per cliente nella rubrica; indicata separatamente sul rapporto di lavoro",
           "Prestazioni esterne — registrate con il prezzo i lavori acquistati: verniciatura, carrozzeria, meccanica o wrapping; voce separata su rapporto e preventivo, con prezzi singoli nell'allegato PDF, inclusa nell'importo fatturato",
           "Parti danneggiate con prezzi — a richiesta ogni parte danneggiata riceve un prezzo, comprese le righe digitate liberamente; commutabile per commessa, lo sconto cliente per impostazione predefinita non si applica alle parti (tabelle svizzera, austriaca e australiana)",
           "Assegnazione tecnici — se più tecnici lavorano sullo stesso veicolo, assegnate ogni componente a chi l'ha eseguito; rapporto di lavoro e analisi del team mostrano la ripartizione reale invece del 50/50 forfettario (tariffe CH e AT)"
@@ -226,9 +248,14 @@
       },
       {
         "icon": "users",
-        "heading": "Flusso per subappaltatori",
+        "heading": "Subappaltatori e officine partner",
         "items": [
+          "Trasferire una pratica o condividerla con un'officina partner — la pratica viene inviata come file a un'altra officina PDR Kalk e vi compare come pratica propria, con il suo numero e la sua carta intestata",
           "Tre modelli di compenso: a tempo, a percentuale, a forfait — con ripartizione in tempo reale",
+          "Quota del materiale di consumo nel modello a tempo — il committente stabilisce quale quota del materiale di consumo spetta al sub",
+          "Compenso del sub modificabile per pratica — su un rapporto ricevuto il compenso può essere adattato; la finestra mostra l'importo del sub, il vostro e la differenza",
+          "Inviare le condizioni direttamente al sub — le condizioni modificate partono dalla rubrica e valgono dal prossimo rapporto",
+          "«Incarichi ricevuti» per subappaltatori — la dashboard mostra le pratiche ricevute ancora aperte con il loro compenso",
           "Chiusura con doppia notifica: subappaltatore e committente vengono informati automaticamente",
           "Trasferimento della pratica crittografato (AES-256) e importazione della pratica del subappaltatore dal menu backup",
           "Unione dei duplicati alla reimportazione — niente voci doppie"
@@ -250,6 +277,7 @@
         "items": [
           "Usa PDR Kalk su più dispositivi — desktop in ufficio, tablet in officina, contabile da casa",
           "Sincronizzazione tramite cartella condivisa (NAS, OneDrive, Synology Drive) tra i tuoi dispositivi Windows — decidi tu dove risiedono i dati",
+          "Panoramica dei dispositivi nella cartella di lavoro — Impostazioni → Archiviazione mostra quando gli altri dispositivi sono stati attivi l'ultima volta; all'emissione di una fattura compare un avviso se un dispositivo non si sincronizza da tempo",
           "I tablet Android funzionano in autonomia con tutte le funzioni — database locale proprio, senza sincronizzazione tramite cartella condivisa",
           "Consigliato per la sincronizzazione tramite cartella condivisa: PC Microsoft, portatile o tablet Windows da 10\" o più grande — tablet Android (Android 10+) solo per uso autonomo"
         ]
@@ -284,7 +312,8 @@
           "Cronologia / storico della pratica — vista unificata tra rapporto ↔ fattura",
           "Catena di hash SHA-256 — ogni voce collegata crittograficamente",
           "Versioni automatiche dei documenti e snapshot PDF a ogni cambio di stato",
-          "Invio SMTP diretto con archiviazione IMAP e monitoraggio della consegna"
+          "Invio SMTP diretto con archiviazione IMAP e monitoraggio della consegna",
+          "Parola di saluto del tu a libera scelta nei modelli e-mail — ad es. «Hallo» o «Sali» invece del fisso «Hoi»"
         ]
       },
       {
@@ -432,14 +461,14 @@
       "eyebrow": "Per PC e portatile",
       "name": "Microsoft Windows",
       "system": "Windows 10 o 11",
-      "version": "Versione 4.26.46",
+      "version": "Versione 4.26.59",
       "button": "Installer Windows"
     },
     "android": {
       "eyebrow": "Per tablet",
       "name": "Android",
       "system": "Android 10 o più recente",
-      "version": "Versione 4.26.46",
+      "version": "Versione 4.26.59",
       "button": "APK Android"
     },
     "footnote": "I dispositivi Apple e gli smartphone non sono supportati."

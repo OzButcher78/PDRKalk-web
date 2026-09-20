@@ -178,13 +178,35 @@
     "showLess": "Show less"
   },
   "secondaryFeatures": {
+    "upcoming": {
+      "badge": "Coming soon",
+      "title": "Coming with the next update",
+      "note": "Currently in test build 4.26.61 — scope and details may still change before release.",
+      "items": [
+        { "title": "Document language", "desc": "Use the app in your own language and still send invoices, work reports and emails in your customer’s language. Switch with one click via the globe icon." },
+        { "title": "Hail document import", "desc": "Take Hagelscanner dent protocols and SilverDAT calculations as PDF straight into the hail editor: panels, dents, outsourced work and part prices are read out automatically. Everything stays local on the device, nothing leaves your business. Switzerland only for now." },
+        { "title": "Flat rate / manual in every country", "desc": "Flat-rate mode now works independently of the pricing table; damaged parts, outsourced work and additional costs are available everywhere." },
+        { "title": "Money cards in the German AW list and the Belgian table too", "desc": "Damaged parts, outsourced work and additional costs can now be recorded there as well; existing reports keep their figures." },
+        { "title": "Removal & refitting as a priceable item list", "desc": "Instead of a single column: individual removal & refitting positions per report, with AW, an amount or a flat rate, shown cleanly on the work report." },
+        { "title": "New additional-costs card", "desc": "Test drive, cleaning and disposal as their own block on the hail report, shown on both report and invoice." }
+      ]
+    },
     "title": "And even more...",
     "groups": [
+      {
+        "icon": "search",
+        "heading": "Dashboard & search",
+        "items": [
+          "Search everywhere (Ctrl+K) — find jobs, invoices, receipts, rental contracts and customers from anywhere and open them directly",
+          "Uninvoiced radar — finished jobs that have not been invoiced yet show up on the dashboard with a reminder card and a mark in the list"
+        ]
+      },
       {
         "icon": "hailparts",
         "heading": "Hail editor: parts, outsourced work & technicians",
         "items": [
           "Removal & refitting — record with a click which parts the customer removes and refits themselves (17 common parts as quick picks, one-offs typed in freely); shown as a compact line on the estimate and work report",
+          "Separate removal & refitting rate — set it in Settings, override it per customer in the address book; shown separately on the work report",
           "Outsourced work — capture bought-in paint, panel-beating, mechanical or wrapping work with its price; a separate line on the report and estimate, itemised in the PDF appendix, included in the invoice total",
           "Priced damaged parts — optionally give every damaged part a price, freely typed lines included; toggled per job, with the customer discount excluding parts by default (Swiss, Austrian and Australian tables)",
           "Technician assignment — when several technicians work on one vehicle, assign each panel to the one who did it; work report and team analytics then show the real split instead of a flat 50/50 (CH and AT rates)"
@@ -226,9 +248,14 @@
       },
       {
         "icon": "users",
-        "heading": "Subcontractor workflow",
+        "heading": "Subcontractors & partner workshops",
         "items": [
+          "Hand a job over or share it with a partner workshop — the job travels as a file to another PDR Kalk business and arrives there as their own job, with their number and letterhead",
           "Three compensation models: time rate, percentage, flat — with live split",
+          "Consumables share in the time-rate model — the contractor sets which share of the consumables the sub receives",
+          "Sub payout adjustable per job — on a received report the payout can be adjusted; the window shows the sub’s amount, your amount and the difference",
+          "Send terms straight to the sub — changed terms go out from the address book and apply from the next report onwards",
+          "“Received jobs” for subcontractors — the dashboard lists open received jobs with their payout",
           "Dual-notify close-out: both sub and contractor are informed automatically",
           "Encrypted job transfer (AES-256) and sub-job import via the backup menu",
           "Duplicate merge on re-import — no double entries"
@@ -250,6 +277,7 @@
         "items": [
           "Run PDR Kalk on multiple devices — desktop in the office, tablet in the workshop, accountant from home",
           "Shared-folder sync (NAS, OneDrive, Synology Drive) between your Windows devices — you control where your data lives",
+          "Device overview in the working folder — Settings → Storage shows when the other devices were last active; when issuing an invoice you get a note if a device has not synced for a while",
           "Android tablets run standalone with the full feature set — own local database, no shared-folder sync",
           "Recommended for shared-folder sync: Microsoft PC, laptop or Windows tablet 10\" or larger — Android tablets (Android 10+) for standalone use only"
         ]
@@ -284,7 +312,8 @@
           "Job timeline / history — unified case view across report ↔ invoice",
           "SHA-256 hash chain — every entry cryptographically linked",
           "Automatic document versions and PDF snapshots on every status change",
-          "Direct SMTP sending with IMAP filing and delivery tracking"
+          "Direct SMTP sending with IMAP filing and delivery tracking",
+          "Free choice of informal greeting in email templates — e.g. “Hallo” or “Sali” instead of a fixed “Hoi”"
         ]
       },
       {
@@ -432,14 +461,14 @@
       "eyebrow": "For PC & laptop",
       "name": "Microsoft Windows",
       "system": "Windows 10 or 11",
-      "version": "Version 4.26.46",
+      "version": "Version 4.26.59",
       "button": "Windows installer"
     },
     "android": {
       "eyebrow": "For tablet",
       "name": "Android",
       "system": "Android 10 or newer",
-      "version": "Version 4.26.46",
+      "version": "Version 4.26.59",
       "button": "Android APK"
     },
     "footnote": "Apple devices and smartphones are not supported."
