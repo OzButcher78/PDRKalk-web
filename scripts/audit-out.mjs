@@ -110,8 +110,14 @@ for (const file of htmlFiles) {
   if (text.includes('MISSING_MESSAGE')) err(`${name}: MISSING_MESSAGE in the rendered text`);
   const literalKey = text.match(/\b(hero|nav|trust|demo|workflow|whatsNew|features|regions|integrations|documents|team|security|testimonials|pricing|faq|download|contact|footer|updates|pages|badges|screenshots)\.[a-zA-Z][\w.]*/);
   if (literalKey) err(`${name}: literal message key in text: ${literalKey[0]}`);
-  const placeholder = text.match(/\{(version|price|days|languages|n|caption|r|title)\}/);
+  const PLACEHOLDER_RE = /\{(version|price|priceEur|days|languages|years|n|caption|r|title)\}/;
+  const placeholder = text.match(PLACEHOLDER_RE);
   if (placeholder) err(`${name}: unexpanded placeholder in text: ${placeholder[0]}`);
+  // Several raw strings reach only an attribute (alt, aria-label, title).
+  for (const attrMatch of html.matchAll(/(?:alt|title|aria-label|content)="([^"]*)"/g)) {
+    const leak = attrMatch[1].match(PLACEHOLDER_RE);
+    if (leak) { err(`${name}: unexpanded placeholder in an attribute: ${leak[0]}`); break; }
+  }
 
   // --- SEO head
   const isErrorPage = name.startsWith('404') || name.startsWith('_not-found');
@@ -261,11 +267,23 @@ if (fs.existsSync(manifestPath)) {
   }
 }
 
-// CSS must self-host the fonts
-const cssDir = path.join(OUT, '_next', 'static', 'css');
-if (fs.existsSync(cssDir)) {
-  const css = fs.readdirSync(cssDir).filter(f => f.endsWith('.css'))
-    .map(f => fs.readFileSync(path.join(cssDir, f), 'utf8')).join('\n');
+// CSS must self-host the fonts. Turbopack emits stylesheets under
+// _next/static/chunks, not _next/static/css — walk the whole tree so the guard
+// cannot go quiet the next time Next changes where it puts them.
+const cssFiles = [];
+const walkCss = (dir) => {
+  if (!fs.existsSync(dir)) return;
+  for (const e of fs.readdirSync(dir, {withFileTypes: true})) {
+    const p = path.join(dir, e.name);
+    if (e.isDirectory()) walkCss(p);
+    else if (e.name.endsWith('.css')) cssFiles.push(p);
+  }
+};
+walkCss(path.join(OUT, '_next'));
+if (cssFiles.length === 0) {
+  err('no CSS emitted under out/_next — the font self-hosting check cannot run');
+} else {
+  const css = cssFiles.map(f => fs.readFileSync(f, 'utf8')).join('\n');
   if (!/@font-face/.test(css)) err('no @font-face in the emitted CSS — fonts are not self-hosted');
   if (/fonts\.googleapis\.com|fonts\.gstatic\.com/.test(css)) err('CSS still references Google Fonts');
 }

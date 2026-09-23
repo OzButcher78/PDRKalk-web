@@ -62,13 +62,23 @@ for (const loc of LOCALES.slice(1)) {
 }
 
 // --------------------------------------------------------- placeholder rules
-const KNOWN_PLACEHOLDERS = new Set(['version', 'price', 'days', 'languages', 'n', 'caption', 'r', 'title']);
+// Everything lib/interpolate.ts can expand, plus the ones passed to t() at the
+// call site. A placeholder outside this set would ship as literal text.
+const KNOWN_PLACEHOLDERS = new Set([
+  'version', 'price', 'priceEur', 'days', 'languages', 'years',
+  'n', 'caption', 'r', 'title',
+]);
 const placeholders = (s) => [...s.matchAll(/\{(\w+)\}/g)].map(m => m[1]).sort().join(',');
 
-for (const [key, value] of Object.entries(flat.de)) {
-  for (const p of value.matchAll(/\{(\w+)\}/g)) {
-    if (!KNOWN_PLACEHOLDERS.has(p[1])) err(`unknown placeholder {${p[1]}} in de.json → ${key}`);
+for (const loc of [...LOCALES, 'au']) {
+  for (const [key, value] of Object.entries(flat[loc])) {
+    for (const p of value.matchAll(/\{(\w+)\}/g)) {
+      if (!KNOWN_PLACEHOLDERS.has(p[1])) err(`unknown placeholder {${p[1]}} in ${loc}.json → ${key}`);
+    }
   }
+}
+
+for (const [key, value] of Object.entries(flat.de)) {
   for (const loc of LOCALES.slice(1)) {
     const other = flat[loc][key];
     if (other === undefined) continue;
@@ -81,7 +91,8 @@ for (const [key, value] of Object.entries(flat.de)) {
 // -------------------------------------------------------------- version rules
 for (const [loc, entries] of Object.entries(flat)) {
   for (const [key, value] of Object.entries(entries)) {
-    if (/\b4\.\d{1,2}\.\d{1,3}\b/.test(value) && !key.startsWith('whatsNew.items') && !key.startsWith('pages.')) {
+    // Only the hand-written What's New cards may name a version explicitly.
+    if (/\b4\.\d{1,2}\.\d{1,3}\b/.test(value) && !key.startsWith('whatsNew.items')) {
       err(`${loc}.json hard-codes a version in ${key}: "${value.slice(0, 60)}" — use {version}`);
     }
   }
@@ -137,8 +148,16 @@ for (const key of Object.keys(flat.de)) {
 }
 
 for (const [key, value] of Object.entries(flat.au)) {
-  if (/\.(company|name|location|file|code|key|icon|status)$/.test(key)) continue;
-  if (flat.de[key] !== undefined && flat.de[key] === value && value.length > 12 && /[äöüß]/i.test(value)) {
+  if (/\.(company|name|location|file|code|key|icon|status|version)$/.test(key)) continue;
+  // Identical to the German AND different from the English → almost certainly
+  // an untranslated string rather than a term both languages share.
+  if (
+    flat.de[key] !== undefined &&
+    flat.de[key] === value &&
+    value.length > 12 &&
+    flat.en[key] !== undefined &&
+    flat.en[key] !== value
+  ) {
     warn(`au.json still carries the German text for ${key}`);
   }
 }
@@ -146,6 +165,13 @@ for (const [key, value] of Object.entries(flat.au)) {
 // -------------------------------------------------------------------- releases
 const releasesSrc = fs.readFileSync(path.join(ROOT, 'data', 'releases.ts'), 'utf8');
 if (!/status:\s*'public'/.test(releasesSrc)) err('data/releases.ts has no public release — APP_VERSION cannot be derived');
+const releaseDates = [...releasesSrc.matchAll(/^\s{4}date:\s*'([^']+)'/gm)].map(m => m[1]);
+for (let i = 1; i < releaseDates.length; i++) {
+  if (releaseDates[i] > releaseDates[i - 1]) {
+    err(`data/releases.ts is not newest-first: ${releaseDates[i]} comes after ${releaseDates[i - 1]}`);
+    break;
+  }
+}
 for (const block of releasesSrc.split(/\n  \{\n/).slice(1)) {
   const version = block.match(/version:\s*'([^']+)'/)?.[1];
   if (version && !/items:\s*\[\s*\n\s*"/.test(block)) err(`release ${version} has no items`);
@@ -187,11 +213,18 @@ const escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 const segmentUsed = (seg) =>
   new RegExp(`['"\`.{]${escapeRe(seg)}['"\`}.,)\\s]`).test(source);
 
-// Keys built at runtime, e.g. t(`country_${code}`) or t(`${field}Label`).
+/**
+ * Keys built at runtime, e.g. t(`country_${code}`) or t(`${field}Label`).
+ * A literal whose static parts are all empty — two adjacent interpolations like
+ * `${a}${b}` — compiles to a regex that matches every key, which would turn the
+ * whole dead-key report into a silent no-op. Drop those.
+ */
 const dynamicPatterns = [...source.matchAll(/`([^`\n]*\$\{[^`\n]*)`/g)]
   .map(m => m[1])
   .filter(lit => /^[\w.${}\s]+$/.test(lit))
-  .map(lit => new RegExp(`^${lit.split(/\$\{[^}]*\}/).map(escapeRe).join('[\\w.]+')}$`));
+  .map(lit => lit.split(/\$\{[^}]*\}/))
+  .filter(parts => parts.some(part => part.trim().length > 0))
+  .map(parts => new RegExp(`^${parts.map(escapeRe).join('[\\w.]+')}$`));
 const builtDynamically = (tail) => dynamicPatterns.some(re => re.test(tail));
 
 const dead = leafKeys.filter(key => {
