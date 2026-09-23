@@ -2,8 +2,9 @@ import type {Metadata} from 'next';
 import JsonLd from '@/components/JsonLd';
 import AuIntlProvider from '@/components/AuIntlProvider';
 import auMessages from '@/messages/au.json';
+import {fontClass} from '@/app/fonts';
+import {PRICE_AUD, SITE_URL} from '@/lib/site';
 
-const SITE_URL = 'https://pdrkalk.ch';
 const AU_URL = `${SITE_URL}/au/`;
 
 // AU is a standalone, single-locale landing page — it is NOT one of the
@@ -39,10 +40,10 @@ export const metadata: Metadata = {
     description: auMessages.meta.ogDescription,
     images: [
       {
-        url: '/screenshots/au/dashboard.jpg',
+        url: '/og/au.jpg',
         width: 1200,
         height: 630,
-        alt: 'PDR Kalk Dashboard',
+        alt: 'PDR Kalk',
       },
     ],
   },
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: auMessages.meta.ogTitle,
     description: auMessages.meta.ogDescription,
-    images: ['/screenshots/au/dashboard.jpg'],
+    images: ['/og/au.jpg'],
   },
   robots: {
     index: true,
@@ -69,11 +70,7 @@ export const metadata: Metadata = {
 
 export default function AuLayout({children}: {children: React.ReactNode}) {
   return (
-    <html lang="en-AU" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      </head>
+    <html lang="en-AU" className={fontClass} suppressHydrationWarning>
       <body>
         {/* AuIntlProvider is a Client Component so /au stays fully static —
             the server variant of NextIntlClientProvider reads request headers
@@ -85,9 +82,10 @@ export default function AuLayout({children}: {children: React.ReactNode}) {
           reviews={auMessages.testimonials.items}
           areaServed={['AU']}
           currency="AUD"
-          price="590"
+          price={String(PRICE_AUD)}
           homePath="/au/"
           reviewLanguage="en"
+          featureList={auMessages.features.groups.map(g => g.heading)}
         />
       </body>
     </html>

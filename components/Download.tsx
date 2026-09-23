@@ -1,175 +1,90 @@
 'use client';
 
 import {useTranslations} from 'next-intl';
+import Image from 'next/image';
+import SectionHead from './SectionHead';
+import {
+  ANDROID_DOWNLOAD_URL,
+  APP_VERSION,
+  BUY_URL,
+  TRIAL_DAYS,
+  WINDOWS_DOWNLOAD_URL,
+  resolveCta,
+} from '@/lib/site';
 
-const WINDOWS_DOWNLOAD_URL =
-  process.env.NEXT_PUBLIC_WINDOWS_DOWNLOAD_URL ||
-  'https://updates.pdrkalk.ch/PDR-Kalk-Setup-4.26.63.exe';
-const ANDROID_DOWNLOAD_URL =
-  process.env.NEXT_PUBLIC_ANDROID_DOWNLOAD_URL ||
-  'https://updates.pdrkalk.ch/pdrkalk-android-4.26.63.apk';
-
-type Platform = {
-  key: 'windows' | 'android';
-  href: string;
-};
+type Platform = {key: 'windows' | 'android'; href: string; badge: string; w: number; h: number};
 
 const PLATFORMS: Platform[] = [
-  {key: 'windows', href: WINDOWS_DOWNLOAD_URL},
-  {key: 'android', href: ANDROID_DOWNLOAD_URL},
+  {key: 'windows', href: WINDOWS_DOWNLOAD_URL, badge: '/a-microsoft-352.png', w: 352, h: 114},
+  {key: 'android', href: ANDROID_DOWNLOAD_URL, badge: '/android-352.png', w: 352, h: 120},
 ];
 
-export default function Download() {
+export default function Download({home = '/'}: {home?: string} = {}) {
   const t = useTranslations('download');
+  const chips = t.raw('chips') as string[];
 
   return (
     <section
       id="download"
-      className="section-pad download-section"
-      style={{
-        background: 'var(--ink)',
-        padding: '6rem 1.5rem',
-        position: 'relative',
-        overflow: 'hidden',
-      }}
+      className="section theme-dark bg-glow-blue"
+      style={{background: 'var(--ink)'}}
+      aria-labelledby="download-title"
     >
-      <div style={{
-        position: 'absolute',
-        inset: 0,
-        background: 'radial-gradient(ellipse 50% 50% at 50% 50%, rgba(37,99,235,0.10) 0%, transparent 70%)',
-        pointerEvents: 'none',
-      }}/>
+      <div className="container--narrow">
+        <SectionHead
+          id="download-title"
+          eyebrow={t('eyebrow')}
+          title={t('title', {days: TRIAL_DAYS})}
+          lead={t('subtitle', {days: TRIAL_DAYS})}
+          center
+        />
 
-      <div style={{
-        maxWidth: '900px',
-        margin: '0 auto',
-        position: 'relative',
-        zIndex: 2,
-      }}>
-        <div style={{textAlign: 'center', marginBottom: '3rem'}}>
-          <h2 className="fade-up" style={{
-            fontFamily: 'Barlow Condensed, sans-serif',
-            fontWeight: 900,
-            fontSize: 'clamp(2rem, 4vw, 3rem)',
-            color: '#ffffff',
-            margin: '0 0 0.75rem',
-            letterSpacing: '-0.01em',
-          }}>
-            {t('title')}
-          </h2>
-          <div className="gradient-line" style={{width: '60px', margin: '0 auto 1rem'}}/>
-          <p className="fade-up-1" style={{
-            fontFamily: 'Barlow, sans-serif',
-            fontSize: '1.05rem',
-            color: '#8fa8c8',
-            maxWidth: '600px',
-            margin: '0 auto',
-            lineHeight: 1.6,
-          }}>
-            {t('subtitle')}
-          </p>
-        </div>
+        <div className="dl-cards">
+          {PLATFORMS.map(({key, href, badge, w, h}) => (
+            <div key={key} className="dl-card">
+              <span className="eyebrow">{t(`${key}.eyebrow`)}</span>
+              <h3 className="t-h3" style={{fontSize: 'clamp(1.4rem, 3vw, 1.85rem)'}}>{t(`${key}.name`)}</h3>
+              <p className="small" style={{margin: 0, color: 'var(--text-dark-mute)'}}>{t(`${key}.system`)}</p>
+              <p className="micro" style={{margin: 0, color: 'var(--text-light-mute)', fontVariantNumeric: 'tabular-nums'}}>
+                {t(`${key}.version`, {version: APP_VERSION})}
+              </p>
 
-        <div
-          className="download-cards"
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '1.5rem',
-            marginBottom: '1.5rem',
-          }}
-        >
-          {PLATFORMS.map(({key, href}, idx) => (
-            <div
-              key={key}
-              className={`fade-up-${idx + 2}`}
-              style={{
-                background: 'rgba(255,255,255,0.03)',
-                border: '1px solid rgba(255,255,255,0.08)',
-                borderRadius: '12px',
-                padding: 'clamp(1.5rem, 4vw, 2.25rem)',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                textAlign: 'center',
-              }}
-            >
-              <div style={{
-                fontFamily: 'Barlow Condensed, sans-serif',
-                fontWeight: 800,
-                fontSize: '0.78rem',
-                letterSpacing: '0.14em',
-                textTransform: 'uppercase',
-                color: 'var(--red)',
-                marginBottom: '0.6rem',
-              }}>
-                {t(`${key}.eyebrow`)}
-              </div>
-              <h3 style={{
-                fontFamily: 'Barlow Condensed, sans-serif',
-                fontWeight: 900,
-                fontSize: 'clamp(1.5rem, 3vw, 1.9rem)',
-                color: '#ffffff',
-                margin: '0 0 0.5rem',
-                letterSpacing: '-0.01em',
-              }}>
-                {t(`${key}.name`)}
-              </h3>
-              <p style={{
-                fontFamily: 'Barlow, sans-serif',
-                fontSize: '0.92rem',
-                color: '#8fa8c8',
-                margin: '0 0 0.4rem',
-                lineHeight: 1.5,
-              }}>
-                {t(`${key}.system`)}
-              </p>
-              <p style={{
-                fontFamily: 'Barlow, sans-serif',
-                fontSize: '0.8rem',
-                color: '#64748b',
-                margin: '0 0 1.75rem',
-                fontVariantNumeric: 'tabular-nums',
-              }}>
-                {t(`${key}.version`)}
-              </p>
               <a
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
                 download
-                className="btn-red download-btn"
-                style={{
-                  display: 'inline-block',
-                  fontFamily: 'Barlow Condensed, sans-serif',
-                  fontWeight: 800,
-                  fontSize: '1rem',
-                  letterSpacing: '0.1em',
-                  textTransform: 'uppercase',
-                  color: '#fff',
-                  background: 'var(--red)',
-                  textDecoration: 'none',
-                  padding: '0.95rem 1.75rem',
-                  borderRadius: '6px',
-                  transition: 'background 0.2s, transform 0.15s, box-shadow 0.2s',
-                  boxShadow: '0 4px 20px rgba(232,0,29,0.35)',
-                }}
+                aria-label={t(`${key}.button`)}
+                style={{display: 'block', lineHeight: 0}}
               >
-                {t(`${key}.button`)} ↓
+                <Image src={badge} alt="" width={w} height={h} className="dl-badge" aria-hidden />
+              </a>
+
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+                className="btn btn-red download-btn"
+              >
+                {t(`${key}.button`)} <span aria-hidden>↓</span>
               </a>
             </div>
           ))}
         </div>
 
-        <p style={{
-          textAlign: 'center',
-          fontFamily: 'Barlow, sans-serif',
-          fontSize: '0.85rem',
-          color: '#64748b',
-          fontStyle: 'italic',
-          margin: '1rem 0 0',
-        }}>
+        <ul className="dl-chips">
+          {chips.map(chip => <li key={chip}>{chip}</li>)}
+        </ul>
+
+        <p className="micro" style={{textAlign: 'center', marginTop: '1.5rem', color: 'var(--text-light-mute)', fontStyle: 'italic'}}>
           {t('footnote')}
+        </p>
+
+        <p style={{textAlign: 'center', marginTop: '1.25rem'}}>
+          <a href={resolveCta(BUY_URL, home)} className="link-more">
+            {t('buyHint')} <span aria-hidden>→</span>
+          </a>
         </p>
       </div>
     </section>
