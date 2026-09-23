@@ -45,10 +45,10 @@ export default function Integrations({showAi = true, locale}: Props = {}) {
           center
         />
 
-        <ol className="int-flow">
-          <li className="int-col">
-            <p className="int-col__label">{t('inLabel')}</p>
-            <ul>
+        <div className="int-flow">
+          <div className="int-col">
+            <p className="int-col__label" id="int-in">{t('inLabel')}</p>
+            <ul aria-labelledby="int-in">
               {flow.in.map((node, i) => (
                 <li key={i}>
                   {node.title}
@@ -58,23 +58,23 @@ export default function Integrations({showAi = true, locale}: Props = {}) {
                 </li>
               ))}
             </ul>
-          </li>
+          </div>
 
-          <li className="int-arrow" aria-hidden>{ChevronRight}</li>
+          <div className="int-arrow" aria-hidden>{ChevronRight}</div>
 
-          <li className="int-app" aria-hidden>
+          <div className="int-app" aria-hidden>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <picture>
               <source type="image/webp" srcSet="/logo-320.webp" />
               <img src="/logo-320.png" alt={t('appLabel')} width={320} height={86} style={{width: '100%', maxWidth: '190px', height: 'auto', display: 'block'}} />
             </picture>
-          </li>
+          </div>
 
-          <li className="int-arrow" aria-hidden>{ChevronRight}</li>
+          <div className="int-arrow" aria-hidden>{ChevronRight}</div>
 
-          <li className="int-col">
-            <p className="int-col__label">{t('outLabel')}</p>
-            <ul>
+          <div className="int-col">
+            <p className="int-col__label" id="int-out">{t('outLabel')}</p>
+            <ul aria-labelledby="int-out">
               {flow.out.map((node, i) => (
                 <li key={i}>
                   {node.title}
@@ -84,8 +84,8 @@ export default function Integrations({showAi = true, locale}: Props = {}) {
                 </li>
               ))}
             </ul>
-          </li>
-        </ol>
+          </div>
+        </div>
 
         <div className="int-tiles">
           {tiles.map(tile => (
