@@ -1,46 +1,76 @@
 # PDR Kalk
 
-> Offline desktop software for PDR (paintless dent repair) technicians: estimate hail and park damage, generate Swiss QR-bills and ZUGFeRD / Factur-X e-invoices, manage the full job-to-invoice workflow without a cloud or subscription.
+> Offline desktop software for PDR (paintless dent repair) technicians: estimate hail and parking damage, produce reports, Swiss QR-bills and ZUGFeRD / Factur-X e-invoices, and run the whole job-to-invoice workflow without a cloud or a subscription.
 
 ## About
 
-PDR Kalk is built by Balmer Storm Solutions, a Swiss company founded by Dieter Balmer, a PDR technician with over 25 years of hail and park-damage repair experience. It runs locally on Windows and Android, keeps all data on the user's own device or NAS, and is sold as a one-time 5-year licence (CHF 550, approx. EUR 580) with a free 30-day trial. PDR Kalk is GDPR / revDSG compliant and targets workshops in Switzerland, Germany, Austria, and Australia.
+PDR Kalk is built by Balmer Storm Solutions, a Swiss company founded by Dieter Balmer, a PDR technician with over 25 years of hail and parking-damage repair experience. It runs locally on Windows and Android, keeps all data on the user's own device or NAS, and is sold as a one-time perpetual licence (CHF 550, approx. EUR 580; AUD 590 on the Australian page) with a free 30-day trial. There is no expiry date and no renewal. PDR Kalk is GDPR / revDSG compliant and serves workshops in Switzerland, Germany, Austria, Belgium, the Netherlands and Australia.
 
 ## Key facts
 
 - Product: PDR Kalk desktop application
+- Current version: 4.26.63
 - Maker: Balmer Storm Solutions (Switzerland)
 - Founder: Dieter Balmer
-- Pricing: CHF 550 one-time, 5-year licence (approx. CHF 9 / month); 30-day free trial, no credit card
-- Platforms: Windows, Android
-- Markets: Switzerland (CH), Germany (DE), Austria (AT), Australia (AU)
-- Languages: German, English, French, Italian
-- Tariff matrices: VFFS 2025 (CH), Zürich Mischhagel, German AW Matrix (DE), Austria
-- Australia hail estimate: per panel, per vehicle, triage, or hours
-- Invoicing: Swiss QR-bill, ZUGFeRD / Factur-X (PDF/A-3 with embedded XML)
+- Pricing: one-time perpetual licence, CHF 550 (approx. EUR 580; AUD 590 on /au/). No expiry date, no monthly fee, no per-user cost. Minor updates included; optional insurance-list updates may attract a small fee
+- Trial: 30 days, full feature set, direct download, no sign-up and no credit card
+- Platforms: Windows 10/11 and Android 10+ (Apple devices and smartphones are not supported)
+- Markets: Switzerland (CH), Germany (DE), Austria (AT), Australia (AU), Belgium (BE), Netherlands (NL)
+- App interface languages: 7 (German, French, Italian, English, Dutch, Portuguese, Spanish)
+- Document language is chosen per document, independently of the app language
+- Tariff matrices: VFFS (CH), Zurich mixed hail (CH), German AW list with removal/refitting (DE), Austria, Belgium UPEX List (UPEX 2015). Netherlands hail matrix to follow
+- Australia hail estimating: per panel, per vehicle, triage tier or hourly
+- Invoicing: Swiss QR-bill, ZUGFeRD / Factur-X (PDF/A-3 with embedded XML, EN 16931), GST tax invoices on /au/
 - Accounting export: DATEV CSV, VAT export, open receivables as Excel
-- Compliance: GDPR / revDSG, EN 16931 e-invoice
-- Audit trail: SHA-256 hash chain, automatic versions, PDF snapshots
-- Sync: shared-folder sync via the user's own NAS or cloud — no vendor cloud
-- Data ownership: 100% local, full ZIP backup on device
+- Audit trail: SHA-256 hash chain, automatic document versions, PDF snapshots, JSON export
+- Sync: shared work folder on the user's own NAS, OneDrive or Synology Drive (Windows only); Android tablets run standalone
+- Data ownership: 100 % local, full ZIP backup on the device, no vendor cloud, no telemetry
 - Contact: info@pdrkalk.ch
+
+## What is new
+
+- Hail document import (released in 4.26.63, Switzerland first): PDR Kalk reads an existing hail-scanner dent protocol or SilverDAT calculation from a PDF that has a text layer, shows a review screen, and applies panels, dents, parts, removal/refitting items and additional costs after the user approves. Processed entirely on the device. It is not an interface to SilverDAT — it reads a PDF the user already has.
+- Document language: invoices, reports and emails go out in the customer's language, independent of the app language.
+- Fixed price / manual mode now works independently of the tariff table, in every country.
+- Optional AI scan for the vehicle registration and VIN: off by default, bring-your-own provider key. The holder's name and address are blacked out in the image, which then goes directly to the provider the user chose (Infomaniak CH recommended, Mistral AI EU, OpenAI or Anthropic USA only after explicit confirmation) — never through PDR Kalk's servers.
 
 ## What problem it solves
 
-PDR technicians traditionally estimate hail and park damage in spreadsheets, then re-enter data into separate tools for reports, invoices, and accounting. PDR Kalk replaces that chain with one offline application covering estimation, report generation, customer signature, insurance hand-off, subcontractor workflow, invoicing (including Swiss QR and German e-invoice), and accounting export — saving 30 to 60 minutes per job and removing transcription errors.
+PDR technicians traditionally estimate hail and parking damage in spreadsheets, then re-enter the same data into separate tools for reports, invoices and accounting. PDR Kalk replaces that chain with one offline application covering estimation, report generation, customer approval with a signature, insurance hand-off, the subcontractor workflow, invoicing (including the Swiss QR-bill and German e-invoice) and accounting export — saving 30 to 60 minutes per job and removing transcription errors.
 
 ## Who it is for
 
-Independent PDR technicians, hail-repair workshops, and PDR subcontractors operating in Switzerland, Germany, Austria, and Australia who want a one-time-purchase tool that runs offline and keeps customer data on their own hardware.
+Independent PDR technicians, hail-repair workshops and PDR subcontractors in Switzerland, Germany, Austria, Belgium, the Netherlands and Australia who want a one-time purchase that runs offline and keeps customer data on their own hardware.
 
 ## Pages
 
-- https://pdrkalk.ch/de/ — German home (default)
-- https://pdrkalk.ch/en/ — English home
-- https://pdrkalk.ch/fr/ — French home
-- https://pdrkalk.ch/it/ — Italian home
-- https://pdrkalk.ch/de/privacy/ — Privacy notice (DE)
-- https://pdrkalk.ch/en/privacy/ — Privacy notice (EN)
-- https://pdrkalk.ch/fr/privacy/ — Privacy notice (FR)
-- https://pdrkalk.ch/it/privacy/ — Privacy notice (IT)
+- https://pdrkalk.ch/de/ — home (de)
+- https://pdrkalk.ch/en/ — home (en)
+- https://pdrkalk.ch/fr/ — home (fr)
+- https://pdrkalk.ch/it/ — home (it)
+- https://pdrkalk.ch/au/ — Australian landing page (AUD, GST)
+- https://pdrkalk.ch/de/updates/ — release notes (de)
+- https://pdrkalk.ch/en/updates/ — release notes (en)
+- https://pdrkalk.ch/fr/updates/ — release notes (fr)
+- https://pdrkalk.ch/it/updates/ — release notes (it)
+- https://pdrkalk.ch/de/hagelkalkulation/ — feature page (de)
+- https://pdrkalk.ch/en/hail-estimating/ — feature page (en)
+- https://pdrkalk.ch/fr/calcul-grele/ — feature page (fr)
+- https://pdrkalk.ch/it/calcolo-grandine/ — feature page (it)
+- https://pdrkalk.ch/de/import/ — feature page (de)
+- https://pdrkalk.ch/en/import/ — feature page (en)
+- https://pdrkalk.ch/fr/import/ — feature page (fr)
+- https://pdrkalk.ch/it/import/ — feature page (it)
+- https://pdrkalk.ch/de/subunternehmer/ — feature page (de)
+- https://pdrkalk.ch/en/subcontractors/ — feature page (en)
+- https://pdrkalk.ch/fr/sous-traitants/ — feature page (fr)
+- https://pdrkalk.ch/it/subappaltatori/ — feature page (it)
+- https://pdrkalk.ch/de/ohne-abo/ — feature page (de)
+- https://pdrkalk.ch/en/no-subscription/ — feature page (en)
+- https://pdrkalk.ch/fr/sans-abonnement/ — feature page (fr)
+- https://pdrkalk.ch/it/senza-abbonamento/ — feature page (it)
+- https://pdrkalk.ch/de/privacy/ — privacy policy (de)
+- https://pdrkalk.ch/en/privacy/ — privacy policy (en)
+- https://pdrkalk.ch/fr/privacy/ — privacy policy (fr)
+- https://pdrkalk.ch/it/privacy/ — privacy policy (it)
 - https://pdrkalk.ch/sitemap.xml — sitemap

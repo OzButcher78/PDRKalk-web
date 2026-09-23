@@ -1,26 +1,45 @@
 import type {MetadataRoute} from 'next';
 import {routing} from '@/i18n/routing';
+import {PAGES} from '@/data/pages';
+import {SITE_URL} from '@/lib/site';
 
 export const dynamic = 'force-static';
 
-const SITE_URL = 'https://pdrkalk.ch';
+/** hreflang cluster for a path that is the same in every locale. */
+const cluster = (path: string) =>
+  Object.fromEntries(routing.locales.map(l => [l, `${SITE_URL}/${l}${path}`]));
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-
-  const homeLanguages = Object.fromEntries(
-    routing.locales.map(l => [l, `${SITE_URL}/${l}/`]),
-  );
-  const privacyLanguages = Object.fromEntries(
-    routing.locales.map(l => [l, `${SITE_URL}/${l}/privacy/`]),
-  );
 
   const home: MetadataRoute.Sitemap = routing.locales.map(locale => ({
     url: `${SITE_URL}/${locale}/`,
     lastModified: now,
     changeFrequency: 'monthly',
     priority: 1.0,
-    alternates: {languages: homeLanguages},
+    alternates: {languages: cluster('/')},
+  }));
+
+  const featurePages: MetadataRoute.Sitemap = routing.locales.flatMap(locale =>
+    PAGES.map(page => ({
+      url: `${SITE_URL}/${locale}/${page.slugs[locale] ?? page.slugs.de}/`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+      alternates: {
+        languages: Object.fromEntries(
+          routing.locales.map(l => [l, `${SITE_URL}/${l}/${page.slugs[l] ?? page.slugs.de}/`]),
+        ),
+      },
+    })),
+  );
+
+  const updates: MetadataRoute.Sitemap = routing.locales.map(locale => ({
+    url: `${SITE_URL}/${locale}/updates/`,
+    lastModified: now,
+    changeFrequency: 'weekly',
+    priority: 0.6,
+    alternates: {languages: cluster('/updates/')},
   }));
 
   const privacy: MetadataRoute.Sitemap = routing.locales.map(locale => ({
@@ -28,7 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: 'yearly',
     priority: 0.3,
-    alternates: {languages: privacyLanguages},
+    alternates: {languages: cluster('/privacy/')},
   }));
 
   // Standalone Australian landing page — not a routing locale, so it is added
@@ -40,5 +59,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 1.0,
   }];
 
-  return [...home, ...au, ...privacy];
+  return [...home, ...au, ...featurePages, ...updates, ...privacy];
 }
