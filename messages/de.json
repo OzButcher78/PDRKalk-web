@@ -1,427 +1,1068 @@
 {
   "meta": {
-    "title": "PDR Kalk — Professionelle Schadenerfassung für Dellentechniker",
-    "description": "PDR-Kalkulationssoftware für Hagel- und Parkschäden. Offline-Desktop-App mit Schweizer QR-Rechnung und ZUGFeRD/Factur-X. Einmalig CHF 550, keine Abos, DSGVO-konform.",
-    "ogTitle": "PDR Kalk — Hagel- und Parkschadenkalkulation",
-    "ogDescription": "Professionelle PDR-Kalkulationssoftware für Dellentechniker."
+    "title": "PDR Kalk – PDR-Kalkulationssoftware für Hagelschaden, ohne Abo",
+    "description": "PDR-Software für Dellentechniker: Hagelschaden kalkulieren (VFFS, Deutsche AW), Rapport & Rechnung mit QR/ZUGFeRD. Offline, Windows & Android, ohne Abo. 30 Tage gratis.",
+    "ogTitle": "Vom Schaden zur Rechnung. In Minuten.",
+    "ogDescription": "Die Software für PDR-Techniker und Hagel-Reparaturbetriebe: kalkulieren, Rapport, Kundenfreigabe, Versicherung, Rechnung und Auswertung — lokal auf Ihren Geräten, ohne Abo."
+  },
+  "badges": {
+    "new": "Neu",
+    "testing": "In Testphase",
+    "soon": "Demnächst",
+    "ai": "Optional · KI",
+    "windows": "Nur Windows",
+    "released": "Veröffentlicht",
+    "region": "Vorerst Schweiz"
   },
   "nav": {
     "features": "Funktionen",
-    "screenshots": "Screenshots",
+    "workflow": "Ablauf",
+    "whatsNew": "Neu",
     "pricing": "Preise",
-    "more": "Mehr",
-    "testimonials": "Kundenstimmen",
+    "faq": "FAQ",
     "contact": "Kontakt",
-    "cta": "Jetzt kaufen",
+    "updates": "Updates",
+    "try": "Testen",
+    "cta": "Kaufen",
+    "menu": "Menü",
+    "language": "Sprache",
     "skipToContent": "Zum Inhalt springen",
     "backToTop": "Nach oben"
   },
   "hero": {
-    "title": "Hagelschaden kalkulieren.",
+    "eyebrow": "PDR-Software · Windows & Android",
+    "title": "Vom Schaden zur Rechnung.",
     "titleAccent": "In Minuten.",
-    "subtitle": "Die Kalkulationssoftware für PDR-Techniker. Professionelle Rapporte und Rechnungen — ohne Cloud, ohne Abo.",
-    "ctaPrimary": "Kostenlos testen",
-    "ctaSecondary": "Funktionen entdecken",
-    "screenshotAlt": "PDR Kalk Dashboard",
-    "videoTitle": "PDR Kalk — Produktvideo",
-    "downloadTrial": "Download 30-Tage-Trial",
-    "trustBar": [
-      "Einmaliger Preis, keine laufenden Kosten",
-      "DSGVO-konform",
-      "ZUGFeRD/Factur-X/CH QR E-Rechnung"
-    ],
-    "regionsLabel": "Im Einsatz für:",
-    "regionsMore": "weitere auf Anfrage",
-    "demoComingSoon": "Demo demnächst verfügbar",
-    "priceCallout": {
-      "amount": "CHF 550",
-      "suffix": "FÜR 5 JAHRE! (ca. 9.-/Monat)",
-      "amountEur": "≈ EUR 580",
-      "vatNote": "Alle Preise exkl. MwSt."
-    }
-  },
-  "timeSavings": {
-    "title": "Zeit ist Geld — sparen Sie mit",
-    "titleAccent": "PDR Kalk!",
-    "cards": [
-      { "value": "1.5", "unit": "Stunden", "period": "pro Tag" },
-      { "value": "33", "unit": "Stunden", "period": "pro Monat" },
-      { "value": "396", "unit": "Stunden", "period": "pro Jahr" },
-      { "value": "1980", "unit": "Stunden", "period": "in 5 Jahren" }
-    ],
-    "tagline": "Weniger Büroarbeit. Mehr Zeit für das, was Sie am besten können.",
-    "disclaimer": "Basierend auf 22 Arbeitstagen / Monat"
-  },
-  "problemSolution": {
-    "title": "Warum PDR Kalk?",
-    "columns": [
-      {
-        "heading": "Schluss mit Excel-Tabellen",
-        "desc": "Automatische Berechnung ersetzt manuelle Arbeit. Kein Formatieren, kein Kopieren, keine Fehler."
-      },
-      {
-        "heading": "Vom Rapport bis zur Rechnung",
-        "desc": "Ein Werkzeug für den gesamten Workflow — Kalkulation, Rapport, Rechnung und Quittung."
-      },
-      {
-        "heading": "30–60 Min. gespart pro Auftrag",
-        "desc": "Weniger Papierkram, mehr Reparaturen. Die Zeitersparnis zahlt sich vom ersten Tag an aus."
-      },
-      {
-        "heading": "Manipulationssicherer Audit-Trail",
-        "desc": "SHA-256 Hash-Kette, automatische Dokumentversionen und PDF-Snapshots — lückenlose Nachvollziehbarkeit für jede Rechnung."
-      },
-      {
-        "heading": "DATEV & Buchhaltungsexport",
-        "desc": "DATEV-CSV, MwSt-Export und offene Debitoren als Excel — nahtlose Übergabe an Ihren Steuerberater."
-      },
-      {
-        "heading": "Lokale Datensicherung",
-        "desc": "Vollbackup als ZIP auf Ihrem Gerät. Auto-Speicherung, intelligente Wiederherstellung — Ihre Daten bleiben bei Ihnen."
-      }
-    ]
-  },
-  "coreFeatures": {
-    "title": "Was PDR Kalk kann",
-    "cards": [
-      {
-        "heading": "Hagel- & Parkschadenkalkulation",
-        "desc": "5 Preismatrizen (VFFS, Zürich Mischhagel, Deutsche AW-Matrix mit De-/Montage-Spalte, Österreich, Belgische UPEX-Liste) mit Live-Berechnung über 14 Panels. Australien: Hagelschätzung pro Panel, pro Fahrzeug, Triage oder stundenbasiert. Parkschaden wahlweise pro Panel, pauschal oder AW-basiert."
-      },
-      {
-        "heading": "Dokumente & Manuelle Rechnungen",
-        "desc": "Kostenvoranschlag, Rapport, Rechnung, Schweizer QR-Rechnung sowie ZUGFeRD/Factur-X E-Rechnung (PDF/A-3 mit eingebettetem XML) für Deutschland — als PDF mit Ihrem Logo. Plus Gutschrift, Abtretungserklärung, freie Manuelle Rechnungen und Job Package ZIP pro Auftrag. Ausserdem Mietvertrag Ersatzwagen und Abnahmeprotokoll für die Fahrzeugübergabe — mit Unterschrift, PDF-Druck und E-Mail-Versand."
-      },
-      {
-        "heading": "Versicherungs-Direktworkflow",
-        "desc": "Geführter 4-Schritt-Prozess: Schadenserfassung, Abtretungserklärung mit digitaler Unterschrift, Versand an Versicherung, automatische Split-Rechnungserstellung — inkl. Kundenfreigabe vor Ort."
-      },
-      {
-        "heading": "Subunternehmer-Workflow",
-        "desc": "Verschlüsselter Auftragstransfer (AES-256), drei Vergütungsmodelle mit Live-Aufteilung, dual-notify-Abschluss und Duplikat-Merge — lückenloser Audit-Trail zwischen Auftraggeber und Sub."
-      },
-      {
-        "heading": "Analysen-Dashboard",
-        "desc": "Business-Intelligence auf Knopfdruck: Umsatz & Cashflow, offene Forderungen nach Fälligkeit, Top-Kunden, Top-Versicherungen, Zahlungsdauer und Konversions-Trichter — mehrwährungsfähig."
-      },
-      {
-        "heading": "Multi-Device & lokale Daten",
-        "desc": "Synchronisieren Sie Office-PC, Werkstatt-Tablet und Buchhalter-PC über Ihre eigene NAS oder Cloud — gleicher Datenstand auf allen Geräten. Shared-Folder-Sync läuft auf Windows; Android-Tablets arbeiten eigenständig mit vollem Funktionsumfang. Bleibt 100% lokal, DSGVO-konform, 5 Sprachen."
-      }
-    ],
-    "disclaimer": "PDR Kalk enthält eine allgemeine deutsche AW-basierte Kalkulationsoption. Diese steht in keiner Verbindung zu einem Verband oder Dritten und wird von diesen nicht unterstützt oder freigegeben."
-  },
-  "optionalAi": {
-    "badge": "Optional · KI",
-    "title": "Weniger tippen. Die KI liest den Fahrzeugausweis.",
-    "subtitle": "Fotografieren Sie den Fahrzeugausweis (CH) bzw. die Zulassungsbescheinigung (DE/AT) – die KI erkennt Marke, Modell, Jahr, Kennzeichen, Fahrgestellnummer und Erstzulassung und füllt die Felder im Rapport-Editor automatisch aus. Optional, standardmässig deaktiviert, mit Ihrem eigenen Anbieter-Schlüssel.",
-    "vinNote": "Der VIN-Scanner erfasst die Fahrgestellnummer direkt vom Fahrzeug – der Bildausschnitt ist frei wählbar für bessere Erkennung – oder Sie tippen sie von Hand ein. Ausgelesen wird auf dem Gerät (offline) oder über Ihren KI-Anbieter (online); Marke und ungefähres Modelljahr werden anschliessend offline aus der VIN abgeleitet.",
-    "providersLabel": "Sie wählen den KI-Anbieter – mit Ihrem eigenen Schlüssel",
-    "providers": [
-      { "name": "Infomaniak", "region": "CH", "recommended": true },
-      { "name": "Mistral AI", "region": "EU" },
-      { "name": "OpenAI", "region": "USA" },
-      { "name": "Anthropic", "region": "USA" }
-    ],
-    "recommendedLabel": "empfohlen · Schweizer Rechenzentren",
-    "providersNote": "US-Anbieter nur, wenn Sie es ausdrücklich bestätigen – nie automatisch voreingestellt.",
-    "pillars": [
-      { "heading": "Persönliche Daten werden geschwärzt", "desc": "Vor dem Upload überdeckt die App Name und Adresse des Halters fest im Bild. Kamera-Hilfslinie und ein Pflicht-Kontrollschritt – manuelle Eingabe jederzeit möglich." },
-      { "heading": "Ihr Schlüssel, direkt zum Anbieter", "desc": "Bring-your-own-key: Sie nutzen Ihren eigenen Anbieter-Schlüssel und zahlen direkt dort. Das Bild geht direkt von Ihrem Gerät zum Anbieter – nie über die Server von PDR Kalk." },
-      { "heading": "Konform & nachvollziehbar", "desc": "Der Scan startet erst, wenn Sie ein paar Punkte bestätigt haben – etwa, dass Ihre Daten nicht fürs KI-Training genutzt werden und wie lange sie gespeichert bleiben. Aufgezeichnet wird nur, dass ein Scan stattfand – nie das Bild, Ihr Schlüssel oder die ausgelesenen Daten. Entwickelt nach Schweizer und EU-Datenschutz." }
-    ],
-    "framing": "Sobald Sie die Funktion aktivieren und nutzen, wird das geschwärzte Bild ausschliesslich an den von Ihnen gewählten Anbieter übermittelt – mit Ihrem Schlüssel, nie über PDR Kalk. Ohne Aktivierung verlässt nichts das Gerät.",
-    "learnMore": "Mehr zu KI & Datenschutz"
-  },
-  "screenshots": {
-    "title": "PDR Kalk in Aktion",
-    "subtitle": "Professionelle Dokumente auf Knopfdruck.",
-    "enlarge": "{caption} vergrössern",
-    "close": "Schliessen",
-    "prev": "Vorheriges Bild",
-    "next": "Nächstes Bild",
-    "images": [
-      { "file": "dashboard.jpg",                   "caption": "Dashboard — Aufträge im Überblick" },
-      { "file": "analysen1.jpg",                   "caption": "Analysen-Dashboard — Umsatz & Cashflow" },
-      { "file": "analysen2.jpg",                   "caption": "Top-Kunden & Konversions-Trichter" },
-      { "file": "hagel-auftrag.jpg",               "caption": "Hagelschaden-Kalkulation (VFFS)" },
-      { "file": "hagel-auftrag-aw.jpg",            "caption": "Hagelschaden — Deutsche AW-Matrix mit De-/Montage" },
-      { "file": "parkschaden-erfassung.jpg",       "caption": "Parkschaden — Pro-Teil / Pauschal / AW" },
-      { "file": "manuel-rechungen.jpg",            "caption": "Manuelle Rechnung (ohne Rapport)" },
-      { "file": "Versicherung-Direkt.jpg",         "caption": "Direkt-Versicherung in 4 Schritten" },
-      { "file": "kundebestatigung.jpg",            "caption": "Kundenfreigabe vor Ort mit Unterschrift" },
-      { "file": "Subzuweisen.jpg",                 "caption": "Subunternehmer zuweisen — Live-Aufteilung" },
-      { "file": "sub-verwalten.jpg",               "caption": "Subunternehmer-Auftrag verwalten" },
-      { "file": "Abtretungserklarung1.jpg",        "caption": "Abtretungserklärung an die Versicherung" },
-      { "file": "Techniker-und-Dokumenten.jpg",    "caption": "Dokumente-Panel pro Auftrag" },
-      { "file": "email-doks.jpg",                  "caption": "E-Mail-Vorschau mit Mehrfach-Anhängen" },
-      { "file": "verlauf.jpg",                     "caption": "Job Timeline — Zeitstrahl pro Fall" },
-      { "file": "audit.jpg",                       "caption": "Aktivitätsprotokoll & Versionen" },
-      { "file": "backup.jpg",                      "caption": "Backup, Sub-Import & Demodaten" },
-      { "file": "wiederherstellen.jpg",            "caption": "Intelligente Wiederherstellung" },
-      { "file": "hilfe.jpg",                       "caption": "Umfangreiches Benutzerhandbuch — in der App" },
-      { "file": "Teile-Notiz.jpg",                 "caption": "Beschädigte Teile & Notiz" },
-      { "file": "pdf-QR-rechnung.jpg",             "caption": "Schweizer QR-Rechnung" },
-      { "file": "hagel-auftrag2.jpg",              "caption": "Hagelschaden — Detailansicht" },
-      { "file": "pdf-hagel.jpg",                   "caption": "Hagelrapport PDF" },
-      { "file": "pdf-park.jpg",                    "caption": "Parkschadenrapport PDF" },
-      { "file": "pdf-rechnung.jpg",                "caption": "Rechnung PDF" },
-      { "file": "pdf-photos.jpg",                  "caption": "Fotodokumentation PDF" },
-      { "file": "arbeitsrapporte.jpg",             "caption": "Arbeitsrapporte" },
-      { "file": "adresse-buch.jpg",                "caption": "Adressbuch" },
-      { "file": "einstellungen1.jpg",              "caption": "Einstellungen (1)" },
-      { "file": "einstellungen2.jpg",              "caption": "Einstellungen (2)" },
-      { "file": "einstellungen3.jpg",              "caption": "Einstellungen (3)" }
-    ],
-    "initialCount": 6,
-    "showMore": "Mehr Screenshots anzeigen",
-    "showLess": "Weniger anzeigen"
-  },
-  "secondaryFeatures": {
-    "upcoming": {
-      "badge": "Demnächst",
-      "title": "Kommt mit dem nächsten Update",
-      "note": "Aktuell in der Testversion 4.26.61 — Umfang und Details können sich bis zur Veröffentlichung noch ändern.",
-      "items": [
-        { "title": "Dokumentsprache", "desc": "Die App in der eigenen Sprache bedienen und Rechnungen, Rapporte und E-Mails trotzdem in der Sprache des Kunden verschicken. Umschalten mit einem Klick über das Globus-Symbol." },
-        { "title": "Hagel-Dokumentimport", "desc": "Hagelscanner-Dellenprotokolle und SilverDAT-Kalkulationen als PDF direkt in den Hagel-Editor übernehmen: Bauteile, Dellen, Fremdleistungen und Teilepreise werden automatisch ausgelesen. Alles lokal auf dem Gerät, nichts verlässt den Betrieb. Vorerst nur für die Schweiz." },
-        { "title": "Pauschal / Manuell in jedem Land", "desc": "Der Pauschal-Modus arbeitet neu unabhängig von der Tariftabelle; beschädigte Teile, Fremdleistungen und Nebenkosten stehen dabei überall zur Verfügung." },
-        { "title": "Geld-Karten auch in der Deutschen AW-Liste und der belgischen Tabelle", "desc": "Beschädigte Teile, Fremdleistungen und Nebenkosten lassen sich neu auch dort erfassen; bestehende Rapporte behalten ihre Zahlen." },
-        { "title": "De-/Montage als bepreisbare Positionsliste", "desc": "Statt einer blossen Spalte: einzelne De-/Montage-Positionen pro Rapport, wahlweise mit AW, Betrag oder als Pauschale, sauber auf dem Arbeitsrapport ausgewiesen." },
-        { "title": "Neue Nebenkosten-Karte", "desc": "Probefahrt, Reinigung und Entsorgung als eigener Block auf dem Hagel-Rapport, inklusive Ausweis auf Rapport und Rechnung." }
-      ]
-    },
-    "title": "Und noch mehr...",
-    "groups": [
-      {
-        "icon": "search",
-        "heading": "Dashboard & Suche",
-        "items": [
-          "Suche überall (Strg+K) — Aufträge, Rechnungen, Quittungen, Mietverträge und Kunden von überall finden und direkt öffnen",
-          "Unverrechnet-Radar — fertige, noch nicht verrechnete Aufträge erscheinen auf dem Dashboard mit einer Hinweis-Karte und einer Markierung in der Liste"
-        ]
-      },
-      {
-        "icon": "hailparts",
-        "heading": "Hagel-Editor: Teile, Fremdleistungen & Techniker",
-        "items": [
-          "De-/Montage erforderlich — per Klick festhalten, welche Teile der Kunde vor und nach der Reparatur selbst de- und montiert (17 gängige Teile als Schnellauswahl, einmalige Teile frei eintippbar); erscheint als kompakte Zeile auf Kostenvoranschlag und Arbeitsrapport",
-          "Eigener De-/Montage-Ansatz — in den Einstellungen hinterlegen, pro Kunde im Adressbuch überschreibbar; wird auf dem Arbeitsrapport separat ausgewiesen",
-          "Fremdleistungen — zugekaufte Lackier-, Spengler-, Mechanik- oder Folierarbeiten mit Preis erfassen; eigene Position auf Rapport und Kostenvoranschlag, Einzelpreise im PDF-Anhang, im Rechnungsbetrag enthalten",
-          "Beschädigte Teile mit Preisen — auf Wunsch bekommt jedes beschädigte Teil einen Preis, auch frei eingetippte Zeilen; pro Auftrag umschaltbar, der Kundenrabatt gilt standardmässig nicht für die Teile (Schweizer, österreichische und australische Tabelle)",
-          "Techniker-Zuweisung — arbeiten mehrere Techniker am selben Fahrzeug, weisen Sie jedes Bauteil einzeln zu; Arbeitsrapport und Team-Auswertung zeigen die tatsächliche Aufteilung statt der pauschalen Hälfte-Hälfte-Annahme (CH- und AT-Tarif)"
-        ]
-      },
-      {
-        "icon": "invoice",
-        "heading": "Rechnungswesen & Zahlungseingang",
-        "items": [
-          "Manuelle Rechnungen ohne Rapport — teilen dieselben RE-Nummern",
-          "ZUGFeRD/Factur-X E-Rechnung (PDF/A-3 mit eingebettetem XML, EN 16931) — pflichtkonform für B2B in Deutschland",
-          "Zahlungseingang-Tracking mit Teilzahlungen und Fehlbetrag-Anzeige",
-          "Rechnungsstatus (Erstellt → Zugestellt → Bezahlt) automatisch aktualisiert",
-          "Gutschriften, Split-Rechnungen, Stornorechnung mit Ersatz"
-        ]
-      },
-      {
-        "icon": "analytics",
-        "heading": "Analysen & Controlling",
-        "items": [
-          "Umsatz- und Cashflow-Diagramme über frei wählbare Zeiträume",
-          "Offene Forderungen gegliedert nach Fälligkeit (0–30, 31–60, 61–90, 90+)",
-          "Top-Kunden, Top-Versicherungen, ∅ Auftragswert, ∅ Zahlungsdauer",
-          "Konversions-Trichter: Rapport → Angenommen → Verrechnet → Bezahlt",
-          "Techniker-Analyse: Klick auf eine Technikerin/einen Techniker zeigt alle zugehörigen Aufträge — nach Woche gruppiert und per Klick nach Excel kopierbar"
-        ]
-      },
-      {
-        "icon": "package",
-        "heading": "Job Package & Dokumente",
-        "items": [
-          "Job Package Export — ZIP pro Auftrag mit Rapport, Rechnung, Abtretung, Fotos, Backup",
-          "Dokumente-Panel: PDFs an Aufträge anhängen (z.B. Gutachten, Versicherungsbestätigung)",
-          "E-Mail-Vorschau mit Mehrfach-Anhängen aus allen Auftragsdokumenten",
-          "Kundenfreigabe vor Ort mit digitaler Unterschrift auf dem Gerät",
-          "Mietvertrag Ersatzwagen — aus Auftrag oder Rapport erstellen, unterschreiben, drucken, mailen und verrechnen; optional mit Abhol- und Rückgabezeit für stundenweise Vermietung (CH & EU)",
-          "Abnahmeprotokoll — die Übergabe des fertiggestellten Fahrzeugs vom Kunden quittieren lassen (Kilometerstand, Tankfüllung, Unterschrift), als PDF drucken oder per E-Mail senden"
-        ]
-      },
-      {
-        "icon": "users",
-        "heading": "Subunternehmer & Partnerbetriebe",
-        "items": [
-          "Auftrag übergeben oder mit einem Partnerbetrieb teilen — der Auftrag geht als Datei an einen anderen PDR-Kalk-Betrieb und erscheint dort als eigener Auftrag mit dessen Nummer und Briefkopf",
-          "Drei Vergütungsmodelle: AW-Satz, Prozent, Pauschale — mit Live-Aufteilung",
-          "Verbrauchsmaterial-Anteil beim Ansatz-Modell — der Auftraggeber legt fest, welchen Anteil des Verbrauchsmaterials der Sub erhält",
-          "Sub-Vergütung pro Auftrag anpassbar — bei einem erhaltenen Rapport lässt sich die Vergütung anpassen; das Fenster zeigt den Betrag des Subs, den eigenen Betrag und die Differenz",
-          "Konditionen direkt an den Sub senden — geänderte Konditionen aus dem Adressbuch zusenden; sie gelten ab dem nächsten Rapport",
-          "«Erhaltene Aufträge» für Subunternehmer — das Dashboard zeigt offene erhaltene Aufträge mit ihrer Vergütung",
-          "Dual-notify-Abschluss: Sub und Auftraggeber werden automatisch informiert",
-          "Verschlüsselter Auftragstransfer (AES-256) und Sub-Auftrag-Import via Backup-Menü",
-          "Duplikat-Merge beim Rückimport — keine doppelten Einträge"
-        ]
-      },
-      {
-        "icon": "camera",
-        "heading": "Fotos & Fahrzeug",
-        "items": [
-          "QR-Code Mini-Server — Fotos vom Smartphone direkt in den Auftrag laden, ohne Kabel oder Login",
-          "Bis zu 12 Fotos pro Auftrag mit Beschriftung, integriert im PDF-Rapport",
-          "Automatische Komprimierung in 3 Qualitätsstufen, EXIF-Daten (inkl. GPS) werden entfernt",
-          "Beschädigte-Teile-Auswahl L/R pro Panel mit Notiz"
-        ]
-      },
+    "subtitle": "Die Software für PDR-Techniker und Hagel-Reparaturbetriebe: Hagel- und Parkschäden kalkulieren, Rapport, Kundenfreigabe, Versicherung, Rechnung und Auswertung — lokal auf Ihren Geräten, ohne Abo.",
+    "ctaPrimary": "{days} Tage kostenlos testen",
+    "ctaSecondary": "Demo ansehen",
+    "tryNote": "Direkt-Download · keine Kreditkarte · keine Anmeldung",
+    "priceChip": "Dauerlizenz · einmalig CHF {price}",
+    "priceChipSub": "≈ EUR {priceEur} · exkl. MwSt.",
+    "trustChips": [
       {
         "icon": "devices",
-        "heading": "Multi-Device & NAS-Sync",
-        "items": [
-          "Mit PDR Kalk auf mehreren Geräten arbeiten — Desktop im Büro, Tablet in der Werkstatt, Buchhalter zu Hause",
-          "Synchronisation über gemeinsamen Arbeitsordner (NAS, OneDrive, Synology Drive) zwischen Ihren Windows-Geräten — Sie kontrollieren wo Ihre Daten liegen",
-          "Geräte-Übersicht im Arbeitsordner — Einstellungen → Speicher zeigt, wann die anderen Geräte zuletzt aktiv waren; beim Ausstellen einer Rechnung erscheint ein Hinweis, wenn ein Gerät länger nicht abgeglichen wurde",
-          "Android-Tablets laufen als eigenständige Geräte mit vollem Funktionsumfang — eigene lokale Datenbank, ohne Shared-Folder-Sync",
-          "Empfohlen für Shared-Folder-Sync: Microsoft-PC, Laptop oder Windows-Tablet ab 10 Zoll — Android-Tablets (ab Android 10) nur für eigenständigen Einsatz"
-        ]
+        "label": "Windows & Android"
       },
       {
-        "icon": "backup",
-        "heading": "Export, Backup & Buchhaltung",
-        "items": [
-          "DATEV-Export (CSV), MwSt-/USt-Export, Offene-Debitoren-Export als Excel",
-          "Vollbackup als ZIP (mit / ohne Fotos) lokal auf Ihrem Gerät",
-          "Intelligente Wiederherstellung — keine Duplikate, Fotos werden übernommen",
-          "Audit-Trail-Export als JSON mit SHA-256-Verifizierung"
-        ]
+        "icon": "wifiOff",
+        "label": "100 % offline"
+      },
+      {
+        "icon": "wallet",
+        "label": "Kein Abo"
       },
       {
         "icon": "globe",
-        "heading": "6 Regionen — CH, DE, AT, AU, BE, NL",
+        "label": "6 Länder"
+      },
+      {
+        "icon": "bolt",
+        "label": "Von PDR-Technikern"
+      }
+    ],
+    "stack": {
+      "base": "PDR Kalk – Dashboard: Aufträge, offene Rechnungen und Kennzahlen auf einen Blick",
+      "card": "PDR Kalk – Hagelkalkulation: Dellen pro Bauteil mit Live-Total",
+      "doc": "PDR Kalk – Rechnung als PDF mit eigenem Logo",
+      "labels": [
+        "Schaden",
+        "Kalkulation",
+        "Rechnung"
+      ]
+    },
+    "videoTitle": "PDR Kalk — Produktvideo"
+  },
+  "trust": {
+    "title": "Warum PDR Kalk",
+    "items": [
+      {
+        "value": "30–60",
+        "unit": "Min.",
+        "label": "gespart pro Auftrag",
+        "note": "Weniger Büroarbeit, mehr Reparaturen."
+      },
+      {
+        "value": "1×",
+        "unit": "",
+        "label": "bezahlen — Dauerlizenz",
+        "note": "Kein Abo, kein Ablaufdatum, keine Kosten pro weiterem Nutzer."
+      },
+      {
+        "value": "100",
+        "unit": "%",
+        "label": "offline nutzbar",
+        "note": "Ihre Daten bleiben auf Ihrem Gerät oder Ihrer NAS."
+      },
+      {
+        "value": "6",
+        "unit": "Länder",
+        "label": "{languages} App-Sprachen",
+        "note": "CH, DE, AT, AU, BE, NL — mit den richtigen Tarifen und Steuersätzen."
+      }
+    ],
+    "stats": [
+      {
+        "value": "1.5",
+        "unit": "Stunden",
+        "period": "pro Tag"
+      },
+      {
+        "value": "33",
+        "unit": "Stunden",
+        "period": "pro Monat"
+      },
+      {
+        "value": "396",
+        "unit": "Stunden",
+        "period": "pro Jahr"
+      }
+    ],
+    "disclaimer": "Zeitersparnis gerechnet auf 22 Arbeitstage pro Monat."
+  },
+  "demo": {
+    "eyebrow": "Demo",
+    "title": "PDR Kalk in 3 Minuten",
+    "lead": "Ein kurzer Durchgang durch den kompletten Ablauf — vom erfassten Hagelschaden bis zur fertigen Rechnung.",
+    "points": [
+      "Hagelschaden erfassen und live kalkulieren",
+      "Rapport und Kostenvoranschlag als PDF",
+      "Rechnung mit QR-Einzahlungsschein"
+    ],
+    "play": "Produktvideo abspielen"
+  },
+  "workflow": {
+    "eyebrow": "Ablauf",
+    "title": "Sieben Schritte. Ein Werkzeug. Keine Excel-Tabelle.",
+    "lead": "Jeder Schritt baut auf dem vorherigen auf — Sie geben nichts zweimal ein, und am Ende steht eine Rechnung, die zur Kalkulation passt.",
+    "stepLabel": "Schritt {n}",
+    "allScreenshots": "Alle {n} Screenshots ansehen",
+    "steps": [
+      {
+        "label": "Erfassen",
+        "title": "Fahrzeug & Schaden erfassen",
+        "benefit": "Einmal eintippen — alles Weitere ergibt sich aus diesen Angaben.",
+        "points": [
+          "Fahrzeugausweis scannen (optional KI) oder Fahrgestellnummer mit dem VIN-Scanner erfassen",
+          "Fotos per QR-Code direkt vom Smartphone in den Auftrag laden",
+          "Beschädigte Teile links/rechts pro Bauteil markieren, mit Notiz"
+        ],
+        "file": "Teile-Notiz.jpg",
+        "alt": "PDR Kalk – Schadenerfassung: beschädigte Teile pro Bauteil mit Notiz"
+      },
+      {
+        "label": "Kalkulieren",
+        "title": "Mit der Preismatrix Ihres Landes kalkulieren",
+        "benefit": "Das Total rechnet live mit — über alle 14 Bauteile.",
+        "points": [
+          "VFFS, Zürich Mischhagel, Deutsche AW-Liste, Österreich oder Belgische UPEX-Liste",
+          "Parkschaden pro Bauteil, pauschal oder AW-basiert",
+          "Teile, Fremdleistungen, De-/Montage und Nebenkosten direkt im Rapport"
+        ],
+        "file": "hagel-auftrag.jpg",
+        "alt": "PDR Kalk – Hagelkalkulation nach VFFS mit Dellenzahl pro Bauteil"
+      },
+      {
+        "label": "Rapport",
+        "title": "Rapport & Kostenvoranschlag",
+        "benefit": "Ein Klick — und das PDF trägt Ihr Logo.",
+        "points": [
+          "Kostenvoranschlag, Hagel- oder Parkschadenrapport und Arbeitsrapport",
+          "Fotodokumentation als eigenes PDF im Anhang",
+          "Dokumentsprache frei wählbar — unabhängig von der App-Sprache"
+        ],
+        "file": "arbeitsrapporte.jpg",
+        "alt": "PDR Kalk – Arbeitsrapport mit Positionen und Technikerzuteilung"
+      },
+      {
+        "label": "Freigabe",
+        "title": "Kundenfreigabe vor Ort",
+        "benefit": "Unterschrift auf dem Gerät — kein Ausdruck, kein Nachfassen.",
+        "points": [
+          "Kunde unterschreibt direkt auf Tablet oder Laptop",
+          "Freigabe wird im Auftrag und im Audit-Trail festgehalten",
+          "Per E-Mail versenden, mit Versandverfolgung"
+        ],
+        "file": "kundebestatigung.jpg",
+        "alt": "PDR Kalk – Kundenfreigabe mit digitaler Unterschrift auf dem Gerät"
+      },
+      {
+        "label": "Versicherung",
+        "title": "Versicherung in vier Schritten",
+        "benefit": "Abtretung, Versand und Split-Rechnung ohne Medienbruch.",
+        "points": [
+          "Geführter Direktworkflow: Schaden, Abtretung, Versand, Abrechnung",
+          "Abtretungserklärung mit digitaler Unterschrift",
+          "Automatische Split-Rechnung: Versicherung und Selbstbehalt getrennt"
+        ],
+        "file": "Versicherung-Direkt.jpg",
+        "alt": "PDR Kalk – Versicherungs-Direktworkflow in vier Schritten"
+      },
+      {
+        "label": "Rechnung",
+        "title": "Rechnung stellen",
+        "benefit": "Schweizer QR-Rechnung und ZUGFeRD/Factur-X ohne Zusatzprogramm.",
+        "points": [
+          "QR-Einzahlungsschein für die Schweiz, ZUGFeRD/Factur-X für Deutschland",
+          "Gutschrift, Split-, Storno- und manuelle Rechnungen mit denselben Nummern",
+          "Reverse Charge bei EU-Kunden mit USt-IdNr."
+        ],
+        "file": "pdf-QR-rechnung.jpg",
+        "alt": "PDR Kalk – Schweizer QR-Rechnung als PDF"
+      },
+      {
+        "label": "Auswertung",
+        "title": "Zahlung & Auswertung",
+        "benefit": "Sie sehen sofort, was offen ist und woher der Umsatz kommt.",
+        "points": [
+          "Zahlungseingang mit Teilzahlungen, Status wechselt automatisch",
+          "Offene Forderungen nach Fälligkeit, Top-Kunden und Top-Versicherungen",
+          "DATEV-CSV, MwSt.-Export und offene Debitoren als Excel"
+        ],
+        "file": "analysen1.jpg",
+        "alt": "PDR Kalk – Analysen-Dashboard mit Umsatz und Cashflow"
+      }
+    ]
+  },
+  "whatsNew": {
+    "eyebrow": "Neu",
+    "title": "Neu in PDR Kalk",
+    "lead": "PDR Kalk wächst mit der Praxis. Das hier ist seit der letzten Version dazugekommen.",
+    "versionChip": "Aktuelle Version {version}",
+    "allLink": "Alle Neuerungen",
+    "featured": {
+      "badges": [
+        "Neu in {version}",
+        "Vorerst Schweiz"
+      ],
+      "title": "Schon eine Kalkulation? Nicht zweimal eintippen.",
+      "desc": "Dellenprotokoll vom Hagelscanner oder SilverDAT-Kalkulation als PDF vorhanden? PDR Kalk liest die Zahlen direkt aus dem Dokument: Bauteile und Dellen pro Grössenklasse — bei SilverDAT-Kalkulationen zusätzlich Fahrzeugdaten, Teile mit Preisen, De-/Montage-Positionen und Nebenkosten. Sie prüfen die Übernahme in einer Kontrollansicht «Wird übernommen · Zu klären · Unverändert» und arbeiten weiter wie gewohnt: Rapport, Kundenfreigabe, Versicherung, Rechnung.",
+      "facts": [
+        "Liest PDFs mit Textebene — keine Scans oder Fotos",
+        "Auswertung vollständig auf Ihrem Gerät",
+        "Keine Schnittstelle zu SilverDAT — es wird ein vorhandenes PDF gelesen",
+        "Vorerst Schweiz (Region CH, Schweizer Tarif)",
+        "Einschalten unter Einstellungen → Hagelschaden"
+      ],
+      "flow": [
+        "Vorhandene Kalkulation",
+        "Importieren & prüfen",
+        "Rapport, Freigabe, Rechnung"
+      ],
+      "cta": "Mehr zum Import"
+    },
+    "items": [
+      {
+        "title": "Dokumentsprache",
+        "desc": "Die App in Ihrer Sprache bedienen und Rechnungen, Rapporte und E-Mails trotzdem in der Sprache des Kunden verschicken. Umschalten über das Globus-Symbol.",
+        "status": "new",
+        "version": "4.26.63"
+      },
+      {
+        "title": "Pauschal / Manuell in jedem Land",
+        "desc": "Der Pauschal-Modus arbeitet unabhängig von der Tariftabelle. Beschädigte Teile, Fremdleistungen und Nebenkosten stehen jetzt auch in der Deutschen AW-Liste und in der belgischen Tabelle zur Verfügung.",
+        "status": "new",
+        "version": "4.26.63"
+      },
+      {
+        "title": "Auftrag übergeben oder teilen",
+        "desc": "Einen Auftrag als Datei an einen Partnerbetrieb geben — dort erscheint er als eigener Auftrag mit dessen Nummer und Briefkopf. Ausserdem neu: «Suche überall» mit Strg+K.",
+        "status": "new",
+        "version": "4.26.59"
+      }
+    ],
+    "also": {
+      "title": "Ebenfalls neu",
+      "items": [
+        {
+          "title": "De-/Montage-Positionsliste",
+          "desc": "einzelne Positionen pro Rapport, wahlweise mit AW, Betrag oder als Pauschale"
+        },
+        {
+          "title": "Nebenkosten-Karte",
+          "desc": "Probefahrt, Reinigung und Entsorgung als eigener Block auf dem Hagel-Rapport"
+        },
+        {
+          "title": "Fahrzeugausweis-Scanner CH/EU",
+          "desc": "Umschalter für Schweizer Fahrzeugausweis oder EU-Zulassungsbescheinigung"
+        },
+        {
+          "title": "«Kunde erhält» pro Kunde",
+          "desc": "festlegen, ob der Kunde den Kunden-Rapport, den Versicherungs-Rapport oder beide bekommt"
+        },
+        {
+          "title": "Auftraggeber-Kunden auf der Sub-Seite",
+          "desc": "Kontaktangaben bearbeiten, Einträge ausblenden und Duplikate zusammenführen"
+        }
+      ]
+    }
+  },
+  "features": {
+    "eyebrow": "Funktionen",
+    "title": "Was PDR Kalk kann — nach Arbeitsschritt sortiert",
+    "lead": "Acht Bereiche, ein Programm. Jede Karte zeigt die wichtigsten Punkte; die vollständige Liste ist einen Klick entfernt.",
+    "allLabel": "Alle {n} Funktionen",
+    "expandAll": "Alle Funktionen im Detail",
+    "collapseAll": "Details einklappen",
+    "moreLabel": "Mehr zu {title}",
+    "disclaimer": "PDR Kalk enthält eine allgemeine deutsche AW-basierte Kalkulationsoption. Diese steht in keiner Verbindung zu einem Verband oder Dritten und wird von diesen nicht unterstützt oder freigegeben.",
+    "groups": [
+      {
+        "key": "capture",
+        "icon": "hailparts",
+        "heading": "Erfassen & Kalkulieren",
+        "summary": "Hagel- und Parkschäden mit der Preismatrix Ihres Landes — live gerechnet über 14 Bauteile.",
+        "page": "hail",
+        "badges": [
+          "Neu in {version}"
+        ],
+        "highlights": [
+          {
+            "t": "5 Preismatrizen",
+            "d": "VFFS, Zürich Mischhagel, Deutsche AW-Liste mit De-/Montage, Österreich und Belgische UPEX-Liste — Australien zusätzlich pro Panel, pro Fahrzeug, Triage oder stundenbasiert."
+          },
+          {
+            "t": "Parkschaden flexibel",
+            "d": "Pro Bauteil, pauschal oder AW-basiert — im Pauschal-Modus in jedem Land."
+          },
+          {
+            "t": "Fotos per QR-Code",
+            "d": "Bis zu 12 Fotos pro Auftrag direkt vom Smartphone, EXIF- und GPS-Daten werden entfernt."
+          },
+          {
+            "t": "Fahrzeugausweis & VIN",
+            "d": "Fahrzeugausweis scannen (optional KI, CH/EU-Umschalter) oder Fahrgestellnummer mit dem VIN-Scanner erfassen."
+          }
+        ],
         "items": [
-          "Schweiz: CHF, MwSt 8,1%, QR-Einzahlungsschein, 5-Rappen-Rundung",
-          "Deutschland: EUR, MwSt 19%, DATEV-Export, Stornorechnung, ZUGFeRD/Factur-X E-Rechnung",
-          "Österreich: EUR, USt 20%, eigene Preismatrix",
-          "Australien: AUD, GST 10%, Hagelschätzung pro Panel, pro Fahrzeug, Triage oder stundenbasiert",
-          "Belgien: EUR, MwSt 21%, Belgische UPEX-Liste (UPEX 2015)",
-          "Niederlande: EUR, MwSt 21% (Hagelmatrix folgt)",
-          "Reverse Charge bei EU-Kunden mit USt-IdNr"
+          {
+            "t": "Hagel-Dokumentimport",
+            "d": "Dellenprotokolle und SilverDAT-Kalkulationen als PDF einlesen statt abtippen — mit Kontrollansicht vor der Übernahme.",
+            "status": "new"
+          },
+          {
+            "t": "Pauschal / Manuell in jedem Land",
+            "d": "unabhängig von der Tariftabelle, mit Teilen, Fremdleistungen und Nebenkosten.",
+            "status": "new"
+          },
+          {
+            "t": "Geld-Karten in der Deutschen AW-Liste und in der belgischen Tabelle",
+            "d": "beschädigte Teile, Fremdleistungen und Nebenkosten auch dort erfassen; bestehende Rapporte behalten ihre Zahlen.",
+            "status": "new"
+          },
+          {
+            "t": "De-/Montage als Positionsliste",
+            "d": "einzelne Positionen pro Rapport, wahlweise mit AW, Betrag oder als Pauschale, sauber auf dem Arbeitsrapport ausgewiesen.",
+            "status": "new"
+          },
+          {
+            "t": "Nebenkosten-Karte",
+            "d": "Probefahrt, Reinigung und Entsorgung als eigener Block, ausgewiesen auf Rapport und Rechnung.",
+            "status": "new"
+          },
+          {
+            "t": "De-/Montage erforderlich",
+            "d": "festhalten, welche Teile der Kunde selbst de- und montiert — 17 gängige Teile als Schnellauswahl, einmalige Teile frei eintippbar."
+          },
+          {
+            "t": "Eigener De-/Montage-Ansatz",
+            "d": "in den Einstellungen hinterlegen, pro Kunde im Adressbuch überschreibbar."
+          },
+          {
+            "t": "Fremdleistungen",
+            "d": "zugekaufte Lackier-, Spengler-, Mechanik- oder Folierarbeiten mit Preis erfassen — eigene Position auf Rapport und Kostenvoranschlag."
+          },
+          {
+            "t": "Beschädigte Teile mit Preisen",
+            "d": "auf Wunsch bekommt jedes beschädigte Teil einen Preis; der Kundenrabatt gilt standardmässig nicht für Teile."
+          },
+          {
+            "t": "Teile-Auswahl L/R mit Notiz",
+            "d": "pro Bauteil links und rechts markieren und eine Notiz hinterlegen."
+          },
+          {
+            "t": "Fotokomprimierung in 3 Stufen",
+            "d": "Qualität pro Auftrag wählen, EXIF-Daten inklusive GPS werden entfernt."
+          },
+          {
+            "t": "Techniker-Zuweisung pro Bauteil",
+            "d": "arbeiten mehrere Techniker am selben Fahrzeug, zeigt der Arbeitsrapport die tatsächliche Aufteilung (CH- und AT-Tarif)."
+          }
         ]
       },
       {
-        "icon": "timeline",
-        "heading": "Timeline, Audit-Trail & E-Mail",
+        "key": "documents",
+        "icon": "package",
+        "heading": "Rapporte & Dokumente",
+        "summary": "Jedes Dokument, das ein PDR-Auftrag braucht — als PDF mit Ihrem Logo, zum Drucken oder Mailen.",
+        "highlights": [
+          {
+            "t": "Kostenvoranschlag, Rapport, Arbeitsrapport",
+            "d": "inklusive Fotodokumentation als eigenes PDF."
+          },
+          {
+            "t": "Abtretung, Mietvertrag, Abnahmeprotokoll",
+            "d": "Ersatzwagen auch stundenweise (CH & EU), Übergabe mit Kilometerstand, Tankfüllung und Unterschrift."
+          },
+          {
+            "t": "Job Package ZIP",
+            "d": "alle Dokumente eines Auftrags in einem Paket, plus Dokumente-Panel für eigene PDFs."
+          },
+          {
+            "t": "Dokumentsprache",
+            "d": "Rechnungen, Rapporte und E-Mails in der Sprache des Kunden — unabhängig von der App-Sprache."
+          }
+        ],
         "items": [
-          "Job Timeline / Historie — einheitliche Fallansicht über Rapport ↔ Rechnung",
-          "SHA-256 Hash-Kette — jeder Eintrag kryptografisch verknüpft",
-          "Automatische Dokumentversionen und PDF-Snapshots bei jeder Statusänderung",
-          "Direkter SMTP-Versand mit IMAP-Ablage und Versandverfolgung",
-          "Frei wählbares Du-Grusswort in E-Mail-Vorlagen — z. B. «Hallo» oder «Sali» statt fest «Hoi»"
+          {
+            "t": "Dokumentsprache",
+            "d": "pro Dokument umschaltbar über das Globus-Symbol.",
+            "status": "new"
+          },
+          {
+            "t": "Job Package Export",
+            "d": "ZIP pro Auftrag mit Rapport, Rechnung, Abtretung, Fotos und Backup."
+          },
+          {
+            "t": "Dokumente-Panel",
+            "d": "eigene PDFs an Aufträge anhängen, etwa Gutachten oder Versicherungsbestätigung."
+          },
+          {
+            "t": "E-Mail-Vorschau mit Mehrfach-Anhängen",
+            "d": "aus allen Auftragsdokumenten zusammenstellen."
+          },
+          {
+            "t": "Mietvertrag Ersatzwagen",
+            "d": "aus Auftrag oder Rapport erstellen, unterschreiben, drucken, mailen und verrechnen; optional mit Abhol- und Rückgabezeit für stundenweise Vermietung (CH & EU)."
+          },
+          {
+            "t": "Abnahmeprotokoll",
+            "d": "die Übergabe des fertigen Fahrzeugs quittieren lassen — Kilometerstand, Tankfüllung, Unterschrift."
+          },
+          {
+            "t": "Fotodokumentation als PDF",
+            "d": "bis zu 12 beschriftete Fotos, im Rapport integriert oder als eigenes Dokument."
+          }
         ]
       },
       {
-        "icon": "help",
-        "heading": "Hilfe & Benutzerhandbuch",
+        "key": "invoicing",
+        "icon": "invoice",
+        "heading": "Rechnung, Zahlung & Buchhaltung",
+        "summary": "Von der Rechnung über den Zahlungseingang bis zum Export für den Treuhänder.",
+        "highlights": [
+          {
+            "t": "QR-Rechnung & ZUGFeRD/Factur-X",
+            "d": "Schweizer QR-Einzahlungsschein und E-Rechnung als PDF/A-3 nach EN 16931."
+          },
+          {
+            "t": "Zahlungseingang mit Teilzahlungen",
+            "d": "Status wechselt automatisch: Erstellt → Zugestellt → Bezahlt."
+          },
+          {
+            "t": "Gutschrift, Split, Storno",
+            "d": "plus manuelle Rechnungen ohne Rapport — mit denselben Rechnungsnummern."
+          },
+          {
+            "t": "DATEV & Excel",
+            "d": "DATEV-CSV, MwSt.-/USt.-Export und offene Debitoren als Excel."
+          }
+        ],
         "items": [
-          "Umfangreiches Benutzerhandbuch direkt in der App — durchsuchbar nach Thema",
-          "Bereichsbezogene Anleitungen: Dashboard, Analysen, Rechnungen, E-Mail, Subunternehmer, Versicherung …",
-          "Schritt-für-Schritt-Workflows mit Hinweisen und Tipps",
-          "Eigener Abschnitt zur Revisionssicherheit und Tastaturnavigation"
+          {
+            "t": "Schweizer QR-Rechnung",
+            "d": "mit Einzahlungsschein, 5-Rappen-Rundung und Referenznummer."
+          },
+          {
+            "t": "ZUGFeRD/Factur-X E-Rechnung",
+            "d": "PDF/A-3 mit eingebettetem XML nach EN 16931 — erfüllt die E-Rechnungspflicht für B2B in Deutschland."
+          },
+          {
+            "t": "Zahlungseingang-Tracking",
+            "d": "Teilzahlungen erfassen, Fehlbetrag wird angezeigt."
+          },
+          {
+            "t": "Rechnungsstatus automatisch",
+            "d": "Erstellt → Zugestellt → Bezahlt, ohne Nachpflege."
+          },
+          {
+            "t": "Gutschriften, Split- und Stornorechnungen",
+            "d": "Storno mit Ersatzrechnung, Split für Versicherung und Selbstbehalt."
+          },
+          {
+            "t": "Manuelle Rechnungen ohne Rapport",
+            "d": "teilen dieselben Rechnungsnummern wie die übrigen Rechnungen."
+          },
+          {
+            "t": "DATEV-Export (CSV)",
+            "d": "plus MwSt.-/USt.-Export und Offene-Debitoren-Export als Excel."
+          },
+          {
+            "t": "Reverse Charge bei EU-Kunden",
+            "d": "Rechnung ohne Schweizer MwSt., wenn eine gültige USt-IdNr. hinterlegt ist."
+          }
+        ]
+      },
+      {
+        "key": "insurance",
+        "icon": "mail",
+        "heading": "Versicherung & Kunde",
+        "summary": "Der Direktworkflow mit der Versicherung — und alles, was zwischen Ihnen und dem Kunden läuft.",
+        "highlights": [
+          {
+            "t": "Direktworkflow in 4 Schritten",
+            "d": "Schadenerfassung, Abtretung, Versand, automatische Split-Rechnung."
+          },
+          {
+            "t": "Kundenfreigabe vor Ort",
+            "d": "mit digitaler Unterschrift direkt auf dem Gerät."
+          },
+          {
+            "t": "SMTP-Versand mit IMAP-Ablage",
+            "d": "inklusive Versandverfolgung und frei wählbarem Grusswort."
+          },
+          {
+            "t": "Adressbuch mit Konditionen",
+            "d": "Rabatte und Ansätze pro Kunde, Konditionen an Subunternehmer sendbar."
+          }
+        ],
+        "items": [
+          {
+            "t": "Versicherungs-Direktworkflow",
+            "d": "geführter 4-Schritt-Prozess von der Schadenerfassung bis zur Split-Rechnung."
+          },
+          {
+            "t": "Abtretungserklärung",
+            "d": "mit digitaler Unterschrift, als PDF druck- und versandfertig."
+          },
+          {
+            "t": "Kundenfreigabe vor Ort",
+            "d": "der Kunde bestätigt den Kostenvoranschlag auf Tablet oder Laptop."
+          },
+          {
+            "t": "Direkter SMTP-Versand",
+            "d": "mit IMAP-Ablage im gesendeten Ordner und Versandverfolgung."
+          },
+          {
+            "t": "Frei wählbares Grusswort",
+            "d": "in den E-Mail-Vorlagen, zum Beispiel «Hallo» oder «Sali» statt fest «Hoi»."
+          },
+          {
+            "t": "Adressbuch mit Konditionen pro Kunde",
+            "d": "eigener De-/Montage-Ansatz, Rabatte und «Kunde erhält» pro Eintrag."
+          },
+          {
+            "t": "«Kunde erhält» pro Kunde",
+            "d": "festlegen, ob der Kunde den Kunden-Rapport, den Versicherungs-Rapport oder beide bekommt.",
+            "status": "new"
+          }
+        ]
+      },
+      {
+        "key": "team",
+        "icon": "users",
+        "heading": "Team & Subunternehmer",
+        "summary": "Aufträge an Partnerbetriebe übergeben, fair abrechnen und den Überblick behalten.",
+        "page": "subcontractors",
+        "highlights": [
+          {
+            "t": "Auftrag übergeben oder teilen",
+            "d": "als verschlüsselte Datei an einen anderen PDR-Kalk-Betrieb — dort mit eigener Nummer und eigenem Briefkopf."
+          },
+          {
+            "t": "Drei Vergütungsmodelle",
+            "d": "AW-Satz, Prozent oder Pauschale, mit Live-Aufteilung und Verbrauchsmaterial-Anteil."
+          },
+          {
+            "t": "AES-256 und dual-notify",
+            "d": "verschlüsselter Transfer, beide Seiten werden beim Abschluss informiert."
+          },
+          {
+            "t": "Techniker-Zuweisung & Team-Auswertung",
+            "d": "pro Bauteil zuweisen, Auswertung nach Techniker mit Excel-Export."
+          }
+        ],
+        "items": [
+          {
+            "t": "Auftrag übergeben oder mit einem Partnerbetrieb teilen",
+            "d": "der Auftrag geht als Datei an einen anderen PDR-Kalk-Betrieb und erscheint dort als eigener Auftrag.",
+            "status": "new"
+          },
+          {
+            "t": "Drei Vergütungsmodelle",
+            "d": "AW-Satz, Prozent oder Pauschale — mit Live-Aufteilung im Fenster."
+          },
+          {
+            "t": "Verbrauchsmaterial-Anteil",
+            "d": "beim Ansatz-Modell legt der Auftraggeber fest, welchen Anteil der Sub erhält."
+          },
+          {
+            "t": "Sub-Vergütung pro Auftrag anpassbar",
+            "d": "das Fenster zeigt den Betrag des Subs, den eigenen Betrag und die Differenz."
+          },
+          {
+            "t": "Konditionen direkt an den Sub senden",
+            "d": "geänderte Konditionen aus dem Adressbuch zusenden; sie gelten ab dem nächsten Rapport."
+          },
+          {
+            "t": "«Erhaltene Aufträge»",
+            "d": "das Dashboard des Subunternehmers zeigt offene erhaltene Aufträge mit ihrer Vergütung."
+          },
+          {
+            "t": "Dual-notify-Abschluss",
+            "d": "Sub und Auftraggeber werden automatisch informiert."
+          },
+          {
+            "t": "Verschlüsselter Transfer (AES-256)",
+            "d": "Import des Sub-Auftrags über das Backup-Menü."
+          },
+          {
+            "t": "Duplikat-Merge beim Rückimport",
+            "d": "keine doppelten Einträge, auch nach mehreren Runden."
+          },
+          {
+            "t": "Auftraggeber-Kunden auf der Sub-Seite",
+            "d": "Kontaktangaben bearbeiten, Einträge ausblenden und doppelte Einträge zusammenführen.",
+            "status": "new"
+          }
+        ]
+      },
+      {
+        "key": "analytics",
+        "icon": "analytics",
+        "heading": "Analysen & Controlling",
+        "summary": "Business-Intelligence auf Knopfdruck — mehrwährungsfähig, ohne Zusatzmodul.",
+        "highlights": [
+          {
+            "t": "Umsatz & Cashflow",
+            "d": "über frei wählbare Zeiträume, mehrwährungsfähig."
+          },
+          {
+            "t": "Forderungen nach Fälligkeit",
+            "d": "0–30, 31–60, 61–90 und über 90 Tage."
+          },
+          {
+            "t": "Top-Kunden & Top-Versicherungen",
+            "d": "plus durchschnittlicher Auftragswert und Zahlungsdauer."
+          },
+          {
+            "t": "Konversions-Trichter",
+            "d": "Rapport → Angenommen → Verrechnet → Bezahlt."
+          }
+        ],
+        "items": [
+          {
+            "t": "Umsatz- und Cashflow-Diagramme",
+            "d": "über frei wählbare Zeiträume."
+          },
+          {
+            "t": "Offene Forderungen nach Fälligkeit",
+            "d": "0–30, 31–60, 61–90 und 90+ Tage."
+          },
+          {
+            "t": "Top-Kunden, Top-Versicherungen",
+            "d": "∅ Auftragswert und ∅ Zahlungsdauer."
+          },
+          {
+            "t": "Konversions-Trichter",
+            "d": "Rapport → Angenommen → Verrechnet → Bezahlt."
+          },
+          {
+            "t": "Techniker-Analyse",
+            "d": "ein Klick auf eine Technikerin oder einen Techniker zeigt alle zugehörigen Aufträge — nach Woche gruppiert und per Klick nach Excel kopierbar."
+          }
+        ]
+      },
+      {
+        "key": "workspace",
+        "icon": "search",
+        "heading": "Dashboard, Suche & Hilfe",
+        "summary": "Alles finden, nichts vergessen — und Hilfe, wenn Sie sie brauchen, direkt in der App.",
+        "highlights": [
+          {
+            "t": "Suche überall (Strg+K)",
+            "d": "Aufträge, Rechnungen, Quittungen, Mietverträge und Kunden von überall finden und direkt öffnen."
+          },
+          {
+            "t": "Unverrechnet-Radar",
+            "d": "fertige, noch nicht verrechnete Aufträge erscheinen auf dem Dashboard mit einer Hinweis-Karte."
+          },
+          {
+            "t": "Benutzerhandbuch in der App",
+            "d": "durchsuchbar nach Thema, mit Schritt-für-Schritt-Workflows."
+          },
+          {
+            "t": "Job Timeline",
+            "d": "einheitliche Fallansicht über Rapport und Rechnung hinweg."
+          }
+        ],
+        "items": [
+          {
+            "t": "Suche überall (Strg+K)",
+            "d": "von jedem Bildschirm aus, Treffer öffnen direkt den Datensatz."
+          },
+          {
+            "t": "Unverrechnet-Radar",
+            "d": "Hinweis-Karte auf dem Dashboard und Markierung in der Auftragsliste."
+          },
+          {
+            "t": "Benutzerhandbuch in der App",
+            "d": "durchsuchbar, mit Bereichsanleitungen zu Dashboard, Analysen, Rechnungen, E-Mail, Subunternehmer und Versicherung."
+          },
+          {
+            "t": "Schritt-für-Schritt-Workflows",
+            "d": "mit Hinweisen und Tipps aus der Praxis."
+          },
+          {
+            "t": "Abschnitt zu Revisionssicherheit und Tastaturnavigation",
+            "d": "damit Sie im Alltag ohne Maus arbeiten können."
+          },
+          {
+            "t": "Job Timeline / Historie",
+            "d": "Zeitstrahl pro Fall über Rapport ↔ Rechnung."
+          }
+        ]
+      },
+      {
+        "key": "data",
+        "icon": "devices",
+        "heading": "Geräte, Daten & Sicherheit",
+        "summary": "Windows und Android, 100 % lokal, mit Backup und manipulationssicherem Audit-Trail.",
+        "page": "noSubscription",
+        "highlights": [
+          {
+            "t": "Windows 10/11 & Android 10+",
+            "d": "100 % lokal, DSGVO- und revDSG-konform, ohne Anbieter-Cloud."
+          },
+          {
+            "t": "NAS- und Cloud-Ordner-Sync",
+            "d": "zwischen Ihren Windows-Geräten über NAS, OneDrive oder Synology Drive."
+          },
+          {
+            "t": "Vollbackup & intelligente Wiederherstellung",
+            "d": "ZIP mit oder ohne Fotos, Wiederherstellung ohne Duplikate."
+          },
+          {
+            "t": "Audit-Trail mit SHA-256",
+            "d": "Hash-Kette, automatische Dokumentversionen und PDF-Snapshots."
+          }
+        ],
+        "items": [
+          {
+            "t": "Windows 10/11 und Android 10+",
+            "d": "PC, Laptop, Windows-Tablet ab 10 Zoll und Android-Tablets."
+          },
+          {
+            "t": "Synchronisation über gemeinsamen Arbeitsordner",
+            "d": "NAS, OneDrive oder Synology Drive zwischen Ihren Windows-Geräten — Sie kontrollieren, wo die Daten liegen.",
+            "status": "windows"
+          },
+          {
+            "t": "Geräte-Übersicht im Arbeitsordner",
+            "d": "Einstellungen → Speicher zeigt, wann die anderen Geräte zuletzt aktiv waren."
+          },
+          {
+            "t": "Android-Tablets arbeiten eigenständig",
+            "d": "eigene lokale Datenbank mit vollem Funktionsumfang, ohne Shared-Folder-Sync."
+          },
+          {
+            "t": "Vollbackup als ZIP",
+            "d": "mit oder ohne Fotos, lokal auf Ihrem Gerät."
+          },
+          {
+            "t": "Intelligente Wiederherstellung",
+            "d": "keine Duplikate, Fotos werden übernommen."
+          },
+          {
+            "t": "Audit-Trail mit SHA-256-Hash-Kette",
+            "d": "jeder Eintrag kryptografisch mit dem vorherigen verknüpft."
+          },
+          {
+            "t": "Automatische Dokumentversionen und PDF-Snapshots",
+            "d": "bei jeder Statusänderung."
+          },
+          {
+            "t": "Audit-Trail-Export als JSON",
+            "d": "mit SHA-256-Verifizierung."
+          },
+          {
+            "t": "{languages} App-Sprachen",
+            "d": "Deutsch, Französisch, Italienisch, Englisch, Niederländisch, Portugiesisch und Spanisch."
+          }
         ]
       }
     ]
   },
-  "comparison": {
-    "title": "Warum PDR Kalk?",
-    "headers": {
-      "feature": "Merkmal",
-      "pdrKalk": "PDR Kalk",
-      "competitor": "Typische Abo-Software"
-    },
-    "rows": [
-      { "feature": "Einmalzahlung", "pdrKalk": true, "competitor": false, "competitorNote": "Monatlich" },
-      { "feature": "Funktioniert ohne Internet", "pdrKalk": true, "competitor": false, "competitorNote": "Cloud" },
-      { "feature": "Versicherungs-Direktworkflow", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" },
-      { "feature": "Subunternehmer-Workflow", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" },
-      { "feature": "Analysen-Dashboard (BI)", "pdrKalk": true, "competitor": false, "competitorNote": "Aufpreis" },
-      { "feature": "Multi-Device via Ihrer NAS", "pdrKalk": true, "competitor": false, "competitorNote": "Nur via Cloud", "pdrKalkAsterisk": true },
-      { "feature": "QR-Foto-Upload vom Smartphone", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" },
-      { "feature": "QR-Rechnung", "pdrKalk": true, "competitor": false, "competitorNote": "Selten" },
-      { "feature": "ZUGFeRD/Factur-X E-Rechnung", "pdrKalk": true, "competitor": false, "competitorNote": "Aufpreis" },
-      { "feature": "5 Sprachen", "pdrKalk": true, "competitor": false, "competitorNote": "Nur DE" },
-      { "feature": "Ihre Daten gehören Ihnen", "pdrKalk": true, "competitor": false, "competitorNote": "Auf fremden Servern" },
-      { "feature": "Native auf Microsoft & Android", "pdrKalk": true, "competitor": false, "competitorNote": "Nur Cloud" },
-      { "feature": "Unbegrenzte Nutzer pro Lizenz", "pdrKalk": true, "competitor": false, "competitorNote": "1 Nutzer (mehr gegen Aufpreis)" },
-      { "feature": "Manipulationssicherer Audit-Trail (SHA-256)", "pdrKalk": true, "competitor": false, "competitorNote": "Selten" },
-      { "feature": "DATEV / Buchhaltungsexport", "pdrKalk": true, "competitor": false, "competitorNote": "Aufpreis" },
-      { "feature": "Kamera direkt in der App", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" },
-      { "feature": "Mietvertrag Ersatzwagen & Abnahmeprotokoll", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" },
-      { "feature": "KI-Scan: Fahrzeugausweis & VIN (optional)", "pdrKalk": true, "competitor": false, "competitorNote": "Nein" }
-    ],
-    "footnote": "* Diese Funktion wird nur auf Microsoft-Geräten unterstützt.",
-    "toggle": "Detailvergleich anzeigen"
-  },
-  "pricing": {
-    "title": "Einmal kaufen. Für immer nutzen.",
-    "lifetime": {
-      "badge": "EMPFOHLEN",
-      "badgeNote": "Einmalzahlung — Kein Abo",
-      "price": "CHF 550",
-      "priceSuffix": "FÜR 5 JAHRE! (ca. 9.-/Monat)",
-      "priceEur": "≈ EUR 580",
-      "vatNote": "Alle Preise exkl. MwSt.",
-      "features": [
-        "Keine Abogebühren",
-        "Keine Einrichtungsgebühren",
-        "Keine laufenden Kosten",
-        "Unbegrenzte Nutzung",
-        "Kleine Updates inklusive *",
-        "Offline-fähig"
-      ],
-      "note": "Beste Wahl für langfristige Nutzung. * Optionale Versicherungslisten-Updates können eine kleine Gebühr verursachen.",
-      "cta": "Jetzt kaufen"
-    },
-    "monthly": {
-      "badge": "Gratis Download",
-      "badgeNote": "30 Tage uneingeschränkt",
-      "price": "Gratis",
-      "priceSuffix": "30 Tage uneingeschränkt",
-      "features": [
-        "Alle Funktionen für 30 Tage freigeschaltet",
-        "Direkt herunterladen, sofort starten",
-        "Kein Abo, keine Kreditkarte",
-        "Anschliessend optional Upgrade auf Dauerlizenz"
-      ],
-      "cta": "Jetzt herunterladen",
-      "disclaimer": "Direkt-Download — keine Anmeldung erforderlich."
-    },
-    "comparisonTable": {
-      "title": "5-Jahres-Kostenvergleich",
-      "headers": {
-        "feature": "Merkmal",
-        "competitor": "Anbieter B",
-        "pdrKalk": "PDR Kalk"
+  "regions": {
+    "eyebrow": "Länder",
+    "title": "6 Länder, die richtigen Tarife",
+    "lead": "Währung, Steuersatz, Rundung und Preismatrix stellen sich auf Ihr Land ein — ohne Nachrechnen von Hand.",
+    "reverseCharge": "Reverse Charge bei EU-Kunden mit USt-IdNr.",
+    "more": "weitere Länder auf Anfrage",
+    "items": [
+      {
+        "code": "ch",
+        "name": "Schweiz",
+        "facts": [
+          "CHF · MwSt. 8,1 %",
+          "QR-Einzahlungsschein, 5-Rappen-Rundung",
+          "VFFS und Zürich Mischhagel"
+        ]
       },
-      "rows": [
-        { "feature": "Lizenzmodell",                    "competitor": "Monatliches Abo",  "pdrKalk": "Einmalig" },
-        { "feature": "Einrichtungsgebühr",              "competitor": "Ja",               "pdrKalk": "Nein" },
-        { "feature": "Kosten pro weiterem Nutzer",      "competitor": "Ja",               "pdrKalk": "Nein" },
-        { "feature": "Cloud-basiert",                   "competitor": "Ja",               "pdrKalk": "Nein — lokal" },
-        { "feature": "Internetverbindung erforderlich", "competitor": "Ja",               "pdrKalk": "Nein" },
-        { "feature": "Kosten 1. Jahr",                   "competitor": "EUR 1'399 (mit Einrichtungsgebühr)", "pdrKalk": "CHF 550" },
-        { "feature": "Kosten 2. Jahr",                  "competitor": "EUR 1'100",        "pdrKalk": "CHF 0" },
-        { "feature": "Kosten 3. Jahr",                  "competitor": "EUR 1'100",        "pdrKalk": "CHF 0" },
-        { "feature": "Kosten 4. Jahr",                  "competitor": "EUR 1'100",        "pdrKalk": "CHF 0" },
-        { "feature": "Kosten 5. Jahr",                  "competitor": "EUR 1'100",        "pdrKalk": "CHF 0" },
-        { "feature": "Total nach 5 Jahren",             "competitor": "EUR 5'799",        "pdrKalk": "CHF 550" }
+      {
+        "code": "de",
+        "name": "Deutschland",
+        "facts": [
+          "EUR · MwSt. 19 %",
+          "DATEV-Export, Stornorechnung, ZUGFeRD/Factur-X",
+          "Deutsche AW-Liste mit De-/Montage"
+        ]
+      },
+      {
+        "code": "at",
+        "name": "Österreich",
+        "facts": [
+          "EUR · USt. 20 %",
+          "Eigene Preismatrix",
+          "Techniker-Zuweisung pro Bauteil"
+        ]
+      },
+      {
+        "code": "au",
+        "name": "Australien",
+        "facts": [
+          "AUD · GST 10 %",
+          "Pro Panel, pro Fahrzeug, Triage oder stundenbasiert",
+          "GST Tax Invoices"
+        ]
+      },
+      {
+        "code": "be",
+        "name": "Belgien",
+        "facts": [
+          "EUR · MwSt. 21 %",
+          "Belgische UPEX-Liste (UPEX 2015)",
+          "Geld-Karten in der belgischen Tabelle"
+        ]
+      },
+      {
+        "code": "nl",
+        "name": "Niederlande",
+        "facts": [
+          "EUR · MwSt. 21 %",
+          "Parkschaden pauschal oder pro Bauteil"
+        ],
+        "note": "Hagelmatrix folgt"
+      }
+    ]
+  },
+  "integrations": {
+    "eyebrow": "Import & Export",
+    "title": "Ihre bestehenden Werkzeuge. Ein PDR-Workflow.",
+    "lead": "Importieren. Weiterarbeiten. Fertig. PDR Kalk übernimmt, was Sie schon haben, und gibt weiter, was Ihre Buchhaltung braucht.",
+    "inLabel": "Kommt herein",
+    "outLabel": "Geht hinaus",
+    "appLabel": "PDR Kalk",
+    "detailLink": "Import im Detail",
+    "trademarkNote": "SilverDAT ist eine Marke ihrer jeweiligen Inhaber. PDR Kalk steht in keiner Verbindung zu SilverDAT und liest lediglich ein von Ihnen bereitgestelltes PDF.",
+    "flow": {
+      "in": [
+        {
+          "title": "SilverDAT-Kalkulation (PDF)",
+          "badge": "new",
+          "badgeLabel": "Neu · vorerst CH"
+        },
+        {
+          "title": "Hagelscanner-Dellenprotokoll (PDF)",
+          "badge": "new",
+          "badgeLabel": "Neu · vorerst CH"
+        },
+        {
+          "title": "Fahrzeugausweis & VIN",
+          "badge": "ai",
+          "badgeLabel": "Optional · KI"
+        },
+        {
+          "title": "Fotos vom Smartphone (QR)"
+        },
+        {
+          "title": "Aufträge von Partnerbetrieben (Datei)"
+        }
       ],
-      "closing": "Sparen Sie über fünf Jahre Tausende von Franken im Vergleich zu abonnementsbasierten Systemen.",
-      "note": "Alle Preise exkl. MwSt. Optionale Funktionserweiterungen oder Versicherungsupdates können gegen eine kleine Gebühr angeboten werden. Alle Vergleichswerte basieren auf öffentlich zugänglichen Preisinformationen (Stand Frühjahr 2026)."
+      "out": [
+        {
+          "title": "QR-Rechnung & ZUGFeRD/Factur-X"
+        },
+        {
+          "title": "Buchhaltung: DATEV-CSV, MwSt.-Export, Debitoren-Excel"
+        },
+        {
+          "title": "Job Package ZIP & Audit-Trail JSON"
+        },
+        {
+          "title": "NAS, OneDrive, Synology",
+          "badge": "windows",
+          "badgeLabel": "Nur Windows"
+        }
+      ]
+    },
+    "tiles": [
+      {
+        "key": "ai",
+        "title": "KI-Scan für Fahrzeugausweis & VIN",
+        "desc": "Optional, standardmässig aus. Eigener Anbieter-Schlüssel — das geschwärzte Bild geht direkt an den gewählten Anbieter, nie über PDR Kalk.",
+        "badge": "ai",
+        "chips": []
+      },
+      {
+        "key": "accounting",
+        "title": "Buchhaltung",
+        "desc": "Übergabe an Treuhand und Steuerberatung ohne Abtippen — Exporte in den Formaten, die dort erwartet werden.",
+        "chips": [
+          "DATEV-CSV",
+          "MwSt.-/USt.-Export",
+          "Debitoren-Excel"
+        ]
+      },
+      {
+        "key": "einvoice",
+        "title": "E-Rechnung & QR",
+        "desc": "Schweizer QR-Einzahlungsschein und ZUGFeRD/Factur-X als PDF/A-3 mit eingebettetem XML nach EN 16931.",
+        "chips": [
+          "QR-Rechnung",
+          "ZUGFeRD",
+          "Factur-X",
+          "EN 16931"
+        ]
+      },
+      {
+        "key": "nas",
+        "title": "NAS & Multi-Device",
+        "desc": "Gemeinsamer Arbeitsordner zwischen Ihren Windows-Geräten. Android-Tablets arbeiten eigenständig mit vollem Funktionsumfang.",
+        "badge": "windows",
+        "chips": [
+          "NAS",
+          "OneDrive",
+          "Synology Drive"
+        ]
+      }
+    ]
+  },
+  "documents": {
+    "eyebrow": "Dokumente",
+    "title": "Dokumente, die Kunden und Versicherungen überzeugen",
+    "lead": "Alles als PDF mit Ihrem Logo — zum Unterschreiben, Drucken oder Versenden per E-Mail.",
+    "note": "Mit Ihrem Logo, digitaler Unterschrift, PDF-Druck und E-Mail-Versand.",
+    "items": [
+      {
+        "file": "pdf-hagel.jpg",
+        "caption": "Hagelrapport"
+      },
+      {
+        "file": "pdf-park.jpg",
+        "caption": "Parkschadenrapport"
+      },
+      {
+        "file": "pdf-rechnung.jpg",
+        "caption": "Rechnung"
+      },
+      {
+        "file": "pdf-QR-rechnung.jpg",
+        "caption": "QR-Rechnung"
+      },
+      {
+        "file": "pdf-photos.jpg",
+        "caption": "Fotodokumentation"
+      },
+      {
+        "file": "Abtretungserklarung1.jpg",
+        "caption": "Abtretungserklärung"
+      }
+    ],
+    "more": {
+      "title": "Weitere Dokumente",
+      "items": [
+        "Kostenvoranschlag",
+        "Arbeitsrapport",
+        "Gutschrift",
+        "Split- und Stornorechnung",
+        "Mietvertrag Ersatzwagen",
+        "Abnahmeprotokoll",
+        "Job Package ZIP",
+        "ZUGFeRD/Factur-X"
+      ]
     }
+  },
+  "team": {
+    "eyebrow": "Betriebe & Teams",
+    "title": "Für Betriebe mit Team und Partnern",
+    "lead": "Ob eigene Techniker oder Partnerbetriebe: PDR Kalk hält fest, wer was gemacht hat — und was dafür vergütet wird.",
+    "blocks": [
+      {
+        "eyebrow": "Subunternehmer",
+        "title": "Aufträge übergeben, fair abrechnen",
+        "desc": "Ein Auftrag geht als verschlüsselte Datei an den Partnerbetrieb und erscheint dort als eigener Auftrag mit dessen Nummer und Briefkopf.",
+        "points": [
+          "Drei Vergütungsmodelle mit Live-Aufteilung im Fenster",
+          "AES-256-Transfer, dual-notify-Abschluss, Duplikat-Merge beim Rückimport",
+          "«Erhaltene Aufträge» auf dem Dashboard des Subunternehmers"
+        ],
+        "file": "Subzuweisen.jpg",
+        "alt": "PDR Kalk – Subunternehmer zuweisen mit Live-Aufteilung der Vergütung",
+        "file2": "sub-verwalten.jpg",
+        "alt2": "PDR Kalk – erhaltene Subunternehmer-Aufträge verwalten",
+        "linkLabel": "Mehr zum Subunternehmer-Workflow"
+      },
+      {
+        "eyebrow": "Auswertung",
+        "title": "Sehen, woher Umsatz und Zeit kommen",
+        "desc": "Das Analysen-Dashboard beantwortet die Fragen, die sonst am Jahresende auftauchen — jederzeit und mehrwährungsfähig.",
+        "points": [
+          "Umsatz und Cashflow über frei wählbare Zeiträume",
+          "Offene Forderungen nach Fälligkeit (0–30, 31–60, 61–90, 90+)",
+          "Team-Auswertung pro Techniker, per Klick nach Excel"
+        ],
+        "file": "analysen1.jpg",
+        "alt": "PDR Kalk – Analysen-Dashboard mit Umsatz, Cashflow und offenen Forderungen"
+      }
+    ]
+  },
+  "security": {
+    "eyebrow": "Daten & Sicherheit",
+    "title": "Ihre Daten. Ihr Gerät. Ihre Kontrolle.",
+    "lead": "PDR Kalk läuft lokal. Es gibt keine Anbieter-Cloud, keine Telemetrie und keinen Zwang, online zu sein.",
+    "aiNote": "KI-Scan optional · eigener Schlüssel · standardmässig aus",
+    "privacyLink": "Datenschutzerklärung lesen",
+    "items": [
+      {
+        "icon": "wifiOff",
+        "title": "100 % lokal & offline",
+        "desc": "Alle Aufträge, Fotos und Dokumente liegen auf Ihrem Gerät oder in Ihrem eigenen Arbeitsordner. Internet braucht es nur für die einmalige Trial-Aktivierung, den E-Mail-Versand und die optionale KI-Funktion."
+      },
+      {
+        "icon": "backup",
+        "title": "Backup & intelligente Wiederherstellung",
+        "desc": "Vollbackup als ZIP, wahlweise mit oder ohne Fotos. Die Wiederherstellung führt zusammen, statt zu duplizieren.",
+        "file": "backup.jpg",
+        "alt": "PDR Kalk – Backup-Einstellungen mit Vollbackup und Sub-Import"
+      },
+      {
+        "icon": "shield",
+        "title": "Manipulationssicherer Audit-Trail",
+        "desc": "SHA-256-Hash-Kette, automatische Dokumentversionen und PDF-Snapshots bei jeder Statusänderung. Export als JSON mit Verifizierung.",
+        "file": "audit.jpg",
+        "alt": "PDR Kalk – Aktivitätsprotokoll mit Dokumentversionen"
+      },
+      {
+        "icon": "lock",
+        "title": "DSGVO & revDSG",
+        "desc": "Keine Telemetrie, keine Anbieter-Cloud, keine Analyse-Cookies auf dieser Website. Aus Fotos werden EXIF- und GPS-Daten entfernt, bevor sie im Auftrag landen."
+      }
+    ]
   },
   "testimonials": {
     "title": "Das sagen Anwender",
     "subtitle": "Echte Rückmeldungen aus der PDR-Praxis",
-    "prev": "Vorherige Stimme",
-    "next": "Nächste Stimme",
-    "goTo": "Zur Stimme {n} wechseln",
     "rating": "{r} von 5 Sternen",
     "items": [
       {
@@ -447,28 +1088,366 @@
         "name": "Dominik Nagy",
         "location": "Österreich"
       }
+    ],
+    "readMore": "Weiterlesen",
+    "readLess": "Weniger anzeigen"
+  },
+  "pricing": {
+    "eyebrow": "Preise",
+    "title": "Einmal bezahlen. Unbegrenzt nutzen.",
+    "lead": "Dauerlizenz ohne Ablaufdatum. Keine monatlichen Gebühren, keine Kosten pro weiterem Nutzer.",
+    "comparisonToggle": "Vergleich mit Abo-Software anzeigen",
+    "licence": {
+      "badge": "Dauerlizenz",
+      "badgeNote": "Einmalzahlung — kein Abo, kein Ablaufdatum",
+      "price": "CHF {price}",
+      "priceSuffix": "einmalig",
+      "priceEur": "≈ EUR {priceEur}",
+      "vatNote": "Alle Preise exkl. MwSt.",
+      "illustration": "Über {years} Jahre gerechnet: ca. CHF 9 pro Monat",
+      "featuresTitle": "Enthalten",
+      "features": [
+        "Keine Abogebühren",
+        "Keine Einrichtungsgebühren",
+        "Keine Kosten pro weiterem Nutzer",
+        "Kein Ablaufdatum — keine Verlängerung nötig",
+        "Kleine Updates inklusive *",
+        "Offline-fähig"
+      ],
+      "notesTitle": "Gut zu wissen",
+      "notes": [
+        "EU-Firmen mit gültiger USt-IdNr.: Rechnung ohne Schweizer MwSt. (Reverse Charge)",
+        "Windows 10/11 und Android 10+ — Apple-Geräte und Smartphones werden nicht unterstützt",
+        "Subunternehmer und Partnerbetriebe brauchen eine eigene Installation"
+      ],
+      "cta": "Lizenz anfragen",
+      "ctaTrial": "{days} Tage kostenlos testen",
+      "note": "* Optionale Versicherungslisten-Updates können eine kleine Gebühr verursachen."
+    },
+    "journey": {
+      "title": "So kommen Sie zur Lizenz",
+      "steps": [
+        {
+          "t": "{days} Tage testen",
+          "d": "Alle Funktionen, keine Kreditkarte, keine Anmeldung. Die Testversion endet automatisch."
+        },
+        {
+          "t": "Lizenz anfragen",
+          "d": "Formular unten ausfüllen — Antwort meist innert 24 Stunden."
+        },
+        {
+          "t": "Rechnung per E-Mail",
+          "d": "Mit Schweizer MwSt. oder als Reverse Charge, wenn Sie eine USt-IdNr. angeben."
+        },
+        {
+          "t": "Lizenz in der App freischalten",
+          "d": "Nach Zahlungseingang erhalten Sie Ihre Lizenzangaben und schalten PDR Kalk damit frei."
+        }
+      ]
+    },
+    "comparison": {
+      "title": "Warum PDR Kalk?",
+      "headers": {
+        "feature": "Merkmal",
+        "pdrKalk": "PDR Kalk",
+        "competitor": "Typische Abo-Software"
+      },
+      "rows": [
+        {
+          "feature": "Einmalzahlung",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Monatlich"
+        },
+        {
+          "feature": "Funktioniert ohne Internet",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Cloud"
+        },
+        {
+          "feature": "Versicherungs-Direktworkflow",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Nein"
+        },
+        {
+          "feature": "Subunternehmer-Workflow",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Nein"
+        },
+        {
+          "feature": "Analysen-Dashboard (BI)",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Aufpreis"
+        },
+        {
+          "feature": "Multi-Device über Ihre NAS",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Nur via Cloud",
+          "pdrKalkAsterisk": true
+        },
+        {
+          "feature": "QR-Foto-Upload vom Smartphone",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Nein"
+        },
+        {
+          "feature": "QR-Rechnung",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Selten"
+        },
+        {
+          "feature": "ZUGFeRD/Factur-X E-Rechnung",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Aufpreis"
+        },
+        {
+          "feature": "{languages} Sprachen",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Nur DE"
+        },
+        {
+          "feature": "Ihre Daten gehören Ihnen",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Auf fremden Servern"
+        },
+        {
+          "feature": "Nativ auf Microsoft & Android",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Nur Cloud"
+        },
+        {
+          "feature": "Unbegrenzte Nutzer pro Lizenz",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "1 Nutzer (mehr gegen Aufpreis)"
+        },
+        {
+          "feature": "Manipulationssicherer Audit-Trail (SHA-256)",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Selten"
+        },
+        {
+          "feature": "DATEV / Buchhaltungsexport",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Aufpreis"
+        },
+        {
+          "feature": "Kamera direkt in der App",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Nein"
+        },
+        {
+          "feature": "Mietvertrag Ersatzwagen & Abnahmeprotokoll",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Nein"
+        },
+        {
+          "feature": "KI-Scan: Fahrzeugausweis & VIN (optional)",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Nein"
+        }
+      ],
+      "footnote": "* Diese Funktion wird nur auf Microsoft-Geräten unterstützt."
+    },
+    "costTable": {
+      "title": "{years}-Jahres-Kostenvergleich",
+      "headers": {
+        "feature": "Merkmal",
+        "competitor": "Anbieter B",
+        "pdrKalk": "PDR Kalk"
+      },
+      "rows": [
+        {
+          "feature": "Lizenzmodell",
+          "competitor": "Monatliches Abo",
+          "pdrKalk": "Einmalig"
+        },
+        {
+          "feature": "Einrichtungsgebühr",
+          "competitor": "Ja",
+          "pdrKalk": "Nein"
+        },
+        {
+          "feature": "Kosten pro weiterem Nutzer",
+          "competitor": "Ja",
+          "pdrKalk": "Nein"
+        },
+        {
+          "feature": "Cloud-basiert",
+          "competitor": "Ja",
+          "pdrKalk": "Nein — lokal"
+        },
+        {
+          "feature": "Internetverbindung erforderlich",
+          "competitor": "Ja",
+          "pdrKalk": "Nein"
+        },
+        {
+          "feature": "Kosten 1. Jahr",
+          "competitor": "EUR 1’399 (mit Einrichtungsgebühr)",
+          "pdrKalk": "CHF 550"
+        },
+        {
+          "feature": "Kosten 2. Jahr",
+          "competitor": "EUR 1’100",
+          "pdrKalk": "CHF 0"
+        },
+        {
+          "feature": "Kosten 3. Jahr",
+          "competitor": "EUR 1’100",
+          "pdrKalk": "CHF 0"
+        },
+        {
+          "feature": "Kosten 4. Jahr",
+          "competitor": "EUR 1’100",
+          "pdrKalk": "CHF 0"
+        },
+        {
+          "feature": "Kosten 5. Jahr",
+          "competitor": "EUR 1’100",
+          "pdrKalk": "CHF 0"
+        },
+        {
+          "feature": "Total nach 5 Jahren",
+          "competitor": "EUR 5’799",
+          "pdrKalk": "CHF 550"
+        }
+      ],
+      "closing": "Sparen Sie über fünf Jahre Tausende von Franken im Vergleich zu abonnementsbasierten Systemen.",
+      "note": "Alle Preise exkl. MwSt. Optionale Funktionserweiterungen oder Versicherungslisten-Updates können gegen eine kleine Gebühr angeboten werden. Alle Vergleichswerte basieren auf öffentlich zugänglichen Preisinformationen (Stand Frühjahr 2026)."
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Häufige Fragen",
+    "lead": "Was Betriebe vor dem Kauf am häufigsten wissen wollen.",
+    "items": [
+      {
+        "id": "licence",
+        "q": "Wie lange gilt die Lizenz?",
+        "a": "Es ist eine Dauerlizenz: einmal bezahlt, kein Ablaufdatum, keine monatlichen Gebühren. Die Angabe «ca. CHF 9 pro Monat» ist nur eine Rechenhilfe über fünf Jahre — danach wird nichts fällig."
+      },
+      {
+        "id": "price",
+        "q": "Was kostet PDR Kalk?",
+        "a": "CHF {price} einmalig, exkl. MwSt. (≈ EUR {priceEur}). Keine Einrichtungsgebühr, keine laufenden Kosten. EU-Firmen mit gültiger USt-IdNr. erhalten die Rechnung ohne Schweizer MwSt. (Reverse Charge)."
+      },
+      {
+        "id": "trial",
+        "q": "Wie funktioniert die Testversion?",
+        "a": "{days} Tage mit vollem Funktionsumfang, Direkt-Download ohne Anmeldung und ohne Kreditkarte. Die Testversion endet automatisch. Beim ersten Start erfolgt eine einmalige Online-Aktivierung (nur technische Daten, siehe Datenschutzerklärung), danach arbeitet die App offline. Eine Testversion pro Gerät."
+      },
+      {
+        "id": "buy",
+        "q": "Wie kaufe ich eine Lizenz?",
+        "a": "Füllen Sie das Formular «Lizenz kaufen» weiter unten aus. Sie erhalten die Rechnung meist innert 24 Stunden per E-Mail — eine Kreditkarte ist nicht nötig. Nach Zahlungseingang erhalten Sie Ihre Lizenzangaben und schalten PDR Kalk damit frei."
+      },
+      {
+        "id": "updates",
+        "q": "Sind Updates inklusive?",
+        "a": "Kleinere Updates sind inklusive. Optionale Versicherungs- oder Tariflisten-Updates können eine kleine Gebühr verursachen. Was neu ist, sehen Sie unter «Was ist neu?» in der App und auf der Updates-Seite dieser Website."
+      },
+      {
+        "id": "devices",
+        "q": "Auf welchen Geräten läuft PDR Kalk?",
+        "a": "Auf Windows 10 und 11 (PC, Laptop oder Windows-Tablet ab 10 Zoll) sowie auf Android-Tablets ab Android 10. Apple-Geräte und Smartphones werden nicht unterstützt; das Smartphone liefert per QR-Code lediglich die Fotos in den Auftrag."
+      },
+      {
+        "id": "multiDevice",
+        "q": "Kann ich auf mehreren Geräten arbeiten?",
+        "a": "Ja. Windows-Geräte synchronisieren über einen gemeinsamen Arbeitsordner (NAS, OneDrive, Synology Drive). Android-Tablets arbeiten eigenständig mit vollem Funktionsumfang. Unter Einstellungen → Speicher sehen Sie, wann die anderen Geräte zuletzt aktiv waren."
+      },
+      {
+        "id": "users",
+        "q": "Wie viele Nutzer oder Techniker sind enthalten?",
+        "a": "Unbegrenzt viele Nutzer pro Lizenz, keine Kosten pro Techniker. Techniker lassen sich pro Bauteil zuweisen. Subunternehmer und Partnerbetriebe arbeiten in ihrer eigenen Installation und brauchen daher eine eigene Lizenz."
+      },
+      {
+        "id": "data",
+        "q": "Wo liegen meine Daten?",
+        "a": "Zu 100 % lokal auf Ihrem Gerät oder in Ihrem eigenen Arbeitsordner (NAS). Es gibt keine Anbieter-Cloud und keine Telemetrie. Internet braucht es nur für die Trial-Aktivierung, den E-Mail-Versand und die optionale KI-Funktion."
+      },
+      {
+        "id": "backup",
+        "q": "Wie sichere ich meine Daten?",
+        "a": "Mit einem Vollbackup als ZIP, wahlweise mit oder ohne Fotos. Die intelligente Wiederherstellung führt zusammen, statt zu duplizieren. Pro Auftrag gibt es zusätzlich ein Job Package ZIP mit allen Dokumenten."
+      },
+      {
+        "id": "audit",
+        "q": "Ist PDR Kalk revisionssicher?",
+        "a": "Jede Änderung wird in einer SHA-256-Hash-Kette festgehalten; Dokumentversionen und PDF-Snapshots entstehen automatisch bei jeder Statusänderung. Der Audit-Trail lässt sich als JSON exportieren und verifizieren. Entwickelt nach DSGVO und revDSG."
+      },
+      {
+        "id": "ai",
+        "q": "Was macht die optionale KI-Funktion?",
+        "a": "Sie ist standardmässig ausgeschaltet. Wenn Sie sie aktivieren, fotografieren Sie den Fahrzeugausweis; Name und Adresse der Halterin oder des Halters werden im Bild geschwärzt. Das geschwärzte Bild geht mit Ihrem eigenen Anbieter-Schlüssel direkt an den von Ihnen gewählten Anbieter (Infomaniak in der Schweiz empfohlen, Mistral AI in der EU, OpenAI oder Anthropic in den USA nur nach ausdrücklicher Bestätigung) — nie über Server von PDR Kalk. Ohne Aktivierung verlässt nichts das Gerät."
+      },
+      {
+        "id": "import",
+        "q": "Kann ich SilverDAT-Kalkulationen oder Hagelscanner-Protokolle importieren?",
+        "a": "Ja, seit Version {version}, vorerst für die Schweiz (Region CH mit Schweizer Tarif; einschalten unter Einstellungen → Hagelschaden). PDR Kalk liest vorhandene PDFs mit Textebene — keine Scans oder Fotos — zeigt eine Kontrollansicht und übernimmt auf Ihre Freigabe Bauteile, Dellen, Teile, De-/Montage und Nebenkosten. Alles lokal. Es ist keine Schnittstelle zu SilverDAT, sondern das Lesen eines vorhandenen PDF."
+      },
+      {
+        "id": "countries",
+        "q": "Welche Länder und Tarife werden unterstützt?",
+        "a": "Schweiz (CHF, 8,1 %, QR-Rechnung; VFFS und Zürich Mischhagel), Deutschland (EUR, 19 %, DATEV, ZUGFeRD; Deutsche AW-Liste mit De-/Montage), Österreich (EUR, 20 %, eigene Matrix), Belgien (EUR, 21 %, Belgische UPEX-Liste), Australien (AUD, GST 10 %, pro Panel, pro Fahrzeug, Triage oder stundenbasiert) und die Niederlande (EUR, 21 %, Hagelmatrix folgt). Weitere Länder auf Anfrage. PDR Kalk enthält eine allgemeine deutsche AW-basierte Kalkulationsoption; diese steht in keiner Verbindung zu einem Verband oder Dritten."
+      },
+      {
+        "id": "invoices",
+        "q": "Welche Rechnungen kann ich erstellen?",
+        "a": "PDF-Rechnungen mit Ihrem Logo, die Schweizer QR-Rechnung, ZUGFeRD/Factur-X (PDF/A-3, EN 16931), Gutschriften, Split-Rechnungen, Stornorechnungen mit Ersatz und manuelle Rechnungen ohne Rapport. Zahlungseingänge lassen sich mit Teilzahlungen erfassen; für die Buchhaltung gibt es DATEV-CSV, MwSt.-Export und offene Debitoren als Excel."
+      },
+      {
+        "id": "languages",
+        "q": "In welchen Sprachen gibt es PDR Kalk?",
+        "a": "Die App-Oberfläche gibt es in {languages} Sprachen: Deutsch, Französisch, Italienisch, Englisch, Niederländisch, Portugiesisch und Spanisch. Seit Version {version} ist zusätzlich die Dokumentsprache frei wählbar — Rechnungen, Rapporte und E-Mails gehen in der Sprache des Kunden raus, unabhängig von der App-Sprache."
+      },
+      {
+        "id": "support",
+        "q": "Wie erhalte ich Hilfe?",
+        "a": "In der App finden Sie ein durchsuchbares Benutzerhandbuch mit Schritt-für-Schritt-Anleitungen zu jedem Bereich. Dazu gibt es E-Mail-Support unter info@pdrkalk.ch — die Antwort kommt meist innert 24 Stunden."
+      }
     ]
   },
-  "finalCta": {
-    "title": "Bereit, Zeit zu sparen?",
-    "subtitle": "Starten Sie noch heute mit PDR Kalk und sparen Sie Stunden pro Woche.",
-    "cta": "Jetzt herunterladen"
-  },
   "download": {
-    "title": "30 Tage gratis ausprobieren",
-    "subtitle": "Direkt herunterladen — keine Anmeldung, keine Kreditkarte. Voller Funktionsumfang für 30 Tage.",
+    "eyebrow": "Download",
+    "title": "Bereit? {days} Tage kostenlos testen.",
+    "subtitle": "Direkt herunterladen — keine Anmeldung, keine Kreditkarte. Voller Funktionsumfang für {days} Tage.",
+    "chips": [
+      "Kein Abo",
+      "Keine Kreditkarte",
+      "Keine Anmeldung",
+      "Endet automatisch"
+    ],
+    "buyHint": "Schon getestet? Lizenz anfragen",
     "windows": {
       "eyebrow": "Für PC & Laptop",
       "name": "Microsoft Windows",
       "system": "Windows 10 oder 11",
-      "version": "Version 4.26.63",
+      "version": "Version {version}",
       "button": "Windows-Installer"
     },
     "android": {
       "eyebrow": "Für Tablet",
       "name": "Android",
       "system": "Android 10 oder neuer",
-      "version": "Version 4.26.63",
+      "version": "Version {version}",
       "button": "Android-APK"
     },
     "footnote": "Apple-Geräte und Smartphones werden nicht unterstützt."
@@ -478,7 +1457,6 @@
     "subtitle": "Sie haben PDR Kalk getestet und möchten eine Lizenz erwerben? Tragen Sie Ihre Daten unten ein — wir melden uns meist innert 24 Stunden bei Ihnen.",
     "platformNoticeTitle": "Welche Geräte werden unterstützt?",
     "platformNoticeBody": "PDR Kalk läuft auf Microsoft- und Android-Tablets sowie auf PCs und Laptops. Alle Funktionen stehen auf Microsoft-Geräten zur Verfügung; Android-Tablets bieten den vollen Funktionsumfang mit Ausnahme der Mehrgeräte-Synchronisation über gemeinsamen Arbeitsordner. Apple-Geräte und Smartphones werden nicht unterstützt.",
-    "intentLegend": "Worum geht es?",
     "intent_buy": "Lizenz kaufen / Rechnung bestellen",
     "intent_inquiry": "Allgemeine Anfrage",
     "errorIntentRequired": "Bitte Anliegen auswählen",
@@ -488,8 +1466,6 @@
     "lastNameLabel": "Nachname",
     "companyPlaceholder": "Firma *",
     "companyLabel": "Firma",
-    "ownerPlaceholder": "Inhaber/in *",
-    "ownerLabel": "Inhaber/in",
     "streetPlaceholder": "Strasse und Hausnummer *",
     "streetLabel": "Strasse",
     "postalCodePlaceholder": "PLZ *",
@@ -502,33 +1478,22 @@
     "statePlaceholder": "Bundesstaat auswählen *",
     "vatIdLabel": "USt-IdNr.",
     "vatIdPlaceholder": "USt-IdNr. (z. B. DE123456789) *",
-    "vatIdNote": "Für Firmen in der EU: Mit gültiger USt-IdNr. stellen wir die Rechnung ohne Schweizer MwSt. aus (Reverse-Charge).",
+    "vatIdNote": "Für Firmen in der EU: Mit gültiger USt-IdNr. stellen wir die Rechnung ohne Schweizer MwSt. aus (Reverse Charge).",
     "errorVatIdRequired": "USt-IdNr. benötigt",
-    "phonePlaceholder": "Telefon *",
-    "phoneLabel": "Telefon",
     "emailPlaceholder": "E-Mail *",
     "emailLabel": "E-Mail",
-    "websitePlaceholder": "Webseite (falls vorhanden)",
-    "websiteLabel": "Webseite",
-    "platformLegend": "Auf welchem Gerät möchten Sie testen?",
-    "platform_windows": "Microsoft Windows",
-    "platform_android": "Android",
-    "platform_both": "Beides",
     "messagePlaceholder": "Anmerkungen oder Fragen (optional)",
     "messageLabel": "Anmerkungen",
     "submit": "Lizenz anfragen",
     "errorFirstNameRequired": "Vorname benötigt",
     "errorLastNameRequired": "Nachname benötigt",
     "errorCompanyRequired": "Firma benötigt",
-    "errorOwnerRequired": "Inhaber/in benötigt",
     "errorStreetRequired": "Strasse benötigt",
     "errorPostalCodeRequired": "PLZ benötigt",
     "errorCityRequired": "Ort benötigt",
     "errorCountryRequired": "Bitte Land auswählen",
     "errorStateRequired": "Bitte Bundesstaat auswählen",
-    "errorPhoneRequired": "Telefonnummer benötigt",
     "errorEmailInvalid": "Gültige E-Mail-Adresse benötigt",
-    "errorPlatformRequired": "Bitte Gerät auswählen",
     "country_ch": "Schweiz",
     "country_at": "Österreich",
     "country_au": "Australien",
@@ -560,24 +1525,43 @@
     "country_se": "Schweden",
     "country_gb": "Vereinigtes Königreich",
     "sendError": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut oder schreiben Sie direkt an die E-Mail-Adresse unten.",
-    "submitting": "Wird gesendet\u2026",
-    "success": "Antrag gesendet — wir melden uns in Kürze bei Ihnen!",
+    "submitting": "Wird gesendet…",
+    "success": "Antrag gesendet — wir melden uns in Kürze bei Ihnen.",
     "emailUser": "info",
-    "emailDomain": "pdrkalk.ch"
+    "emailDomain": "pdrkalk.ch",
+    "stepIntent": "Anliegen",
+    "stepContact": "Kontakt",
+    "stepBilling": "Rechnungsadresse"
+  },
+  "updates": {
+    "metaTitle": "Updates & Neuerungen | PDR Kalk",
+    "metaDescription": "Alle Versionen von PDR Kalk mit den jeweiligen Neuerungen, Verbesserungen und Korrekturen — von der aktuellen Version zurück.",
+    "title": "Updates & Neuerungen",
+    "intro": "Was in den letzten Versionen von PDR Kalk dazugekommen ist. Die aktuelle Version ist {version}.",
+    "publicBadge": "Veröffentlicht",
+    "testingBadge": "Testversion",
+    "testingNote": "Umfang und Details können sich bis zur Veröffentlichung noch ändern.",
+    "kinds": {
+      "new": "Neu",
+      "improved": "Verbessert",
+      "fix": "Korrekturen"
+    },
+    "backHome": "Zur Startseite",
+    "downloadLink": "Aktuelle Version herunterladen"
   },
   "privacy": {
     "metaTitle": "Datenschutz — PDR Kalk",
     "metaDescription": "Datenschutzerklärung zur Online-Trial-Aktivierung von PDR Kalk: welche Daten übermittelt werden, wofür und wie lange sie gespeichert werden. DSGVO- und revDSG-konform.",
     "title": "Datenschutzerklärung — Online-Trial-Aktivierung",
     "lastUpdated": "Stand: 16. Mai 2026",
-    "intro": "Wenn Sie PDR Kalk zum ersten Mal starten und „30 Tage testen“ wählen, übermitteln wir einmalig eine kleine Datenmenge an unseren Server, um die Trial-Version zu aktivieren. Damit verhindern wir, dass dieselbe Trial auf einem Gerät mehrfach hintereinander gestartet werden kann. Die Trial-Nutzung selbst läuft anschliessend vollständig offline — es findet keine weitere Übertragung statt.",
+    "intro": "Wenn Sie PDR Kalk zum ersten Mal starten und «30 Tage testen» wählen, übermitteln wir einmalig eine kleine Datenmenge an unseren Server, um die Trial-Version zu aktivieren. Damit verhindern wir, dass dieselbe Trial auf einem Gerät mehrfach hintereinander gestartet werden kann. Die Trial-Nutzung selbst läuft anschliessend vollständig offline — es findet keine weitere Übertragung statt.",
     "dataCollectedTitle": "Welche Daten werden übermittelt?",
     "dataCollectedIntro": "Bei der einmaligen Aktivierung sendet PDR Kalk an api.pdrkalk.ch:",
     "dataCollectedItems": [
       "Gerätekennung als Hashwert (HMAC-SHA256, einseitig — kein Klartext-Rückschluss möglich)",
       "Plattform (Windows oder Android) und App-Version",
       "Verkürzte IP-Adresse (IPv4 /24, IPv6 /48 — z. B. 203.0.113.0/24 statt 203.0.113.42)",
-      "Betriebssystem-Hauptversion (z. B. „Windows 11“ oder „Android 14“ — keine detaillierten User-Agent-Daten)",
+      "Betriebssystem-Hauptversion (z. B. «Windows 11» oder «Android 14» — keine detaillierten User-Agent-Daten)",
       "Zeitstempel der Aktivierung",
       "Nach der anschliessenden Region-Auswahl: die gewählte Region (CH, DE oder AT)"
     ],
@@ -594,7 +1578,7 @@
     "retentionTitle": "Aufbewahrungsdauer",
     "retentionBody": "Der Aktivierungs-Eintrag wird während der laufenden Trial (30 Tage) sowie für 30 Tage nach Trial-Ablauf gespeichert. Danach wird die verkürzte IP-Adresse aus dem Datensatz entfernt. Die Gerätekennung als Hashwert bleibt zur Missbrauchsvermeidung dauerhaft erhalten — sie enthält keine direkt personenbezogenen Daten.",
     "processorTitle": "Auftragsverarbeiter",
-    "processorBody": "Server-Infrastruktur: Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA. Cloudflare ist nach dem EU-US Data Privacy Framework (DPF) zertifiziert. Die Datenbank ist im Cloudflare-Rechenzentrums-Cluster „WEUR“ (Frankfurt / Amsterdam) konfiguriert; die Aktivierungsdaten werden daher im Regelfall ausschliesslich innerhalb der EU verarbeitet.",
+    "processorBody": "Server-Infrastruktur: Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA. Cloudflare ist nach dem EU-US Data Privacy Framework (DPF) zertifiziert. Die Datenbank ist im Cloudflare-Rechenzentrums-Cluster «WEUR» (Frankfurt / Amsterdam) konfiguriert; die Aktivierungsdaten werden daher im Regelfall ausschliesslich innerhalb der EU verarbeitet.",
     "rightsTitle": "Ihre Rechte (Auskunft, Löschung, Widerspruch)",
     "rightsBody": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung sowie Widerspruch. Wenden Sie sich dafür per E-Mail an:",
     "rightsContact": "dsr@pdrkalk.ch",
@@ -602,31 +1586,429 @@
     "fingerprintTitle": "Technischer Hinweis: Geräte-Drift",
     "fingerprintBody": "Auf Windows 11 mit aktiviertem MAC-Adress-Zufallsgenerator kann sich die Gerätekennung im Laufe der Zeit ändern. In seltenen Fällen kann es dadurch vorkommen, dass dasselbe Gerät nach einer Neuinstallation als anderes Gerät erkannt wird. Wenn Sie eine berechtigte zweite Trial benötigen (z. B. nach Hardware-Tausch oder Wiederherstellung), kontaktieren Sie uns bitte unter info@pdrkalk.ch — wir schalten Sie manuell frei.",
     "appHelpTitle": "In-App-Hilfe",
-    "appHelpBody": "Eine kurze Zusammenfassung dieser Informationen finden Sie auch direkt in PDR Kalk unter „Hilfe → Datenschutz Testversion“.",
+    "appHelpBody": "Eine kurze Zusammenfassung dieser Informationen finden Sie auch direkt in PDR Kalk unter «Hilfe → Datenschutz Testversion».",
     "aiTitle": "Optionale KI-Funktion: Fahrzeugausweis-Scanner",
-    "aiBody": "PDR Kalk enthält einen optionalen, standardmässig deaktivierten Fahrzeugausweis-Scanner. Aktivieren Sie ihn, liest eine externe KI-Vision-API die Fahrzeugdaten aus dem fotografierten Ausweis und füllt die Felder im Rapport-Editor. Sie nutzen dafür Ihren eigenen API-Schlüssel (Bring-your-own-key); PDR Kalk betreibt selbst keine KI und sieht weder Bild noch Schlüssel. Das Bild wird direkt von Ihrem Gerät an den gewählten Anbieter übermittelt – nie über die Server von PDR Kalk. Es gilt:",
+    "aiBody": "PDR Kalk enthält einen optionalen, standardmässig deaktivierten Fahrzeugausweis-Scanner. Aktivieren Sie ihn, liest eine externe KI-Vision-API die Fahrzeugdaten aus dem fotografierten Ausweis und füllt die Felder im Rapport-Editor. Sie nutzen dafür Ihren eigenen API-Schlüssel (Bring-your-own-key); PDR Kalk betreibt selbst keine KI und sieht weder Bild noch Schlüssel. Das Bild wird direkt von Ihrem Gerät an den gewählten Anbieter übermittelt — nie über die Server von PDR Kalk. Es gilt:",
     "aiItems": [
-      "Standardmässig deaktiviert – ohne Ihre Aktivierung und Nutzung wird kein Bild übermittelt.",
+      "Standardmässig deaktiviert — ohne Ihre Aktivierung und Nutzung wird kein Bild übermittelt.",
       "Bring-your-own-key: Sie hinterlegen den Schlüssel Ihres Anbieters; die Abrechnung läuft direkt über den Anbieter.",
-      "Anbieterwahl: Infomaniak (Schweiz, Schweizer Rechenzentren), Mistral AI (EU/Frankreich) oder – nur nach ausdrücklicher Bestätigung der grenzüberschreitenden Übermittlung – OpenAI bzw. Anthropic (USA). Es wird nie still auf einen US-Anbieter umgestellt.",
-      "Automatische Schwärzung: Vor dem Upload überdeckt die App den Personendaten-Block des Halters (Name und Adresse) fest im Bild (regionsabhängige Platzierung). Kamera-Hilfslinie und ein Pflicht-Kontrollschritt erlauben die Prüfung am echten Foto vor dem Scan.",
-      "Freigabe-Checkliste: Der Scanner startet erst, wenn Sie Auftragsverarbeitung (DPA), Opt-out vom Modelltraining, Aufbewahrungsbedingungen und – bei US-Anbietern – die grenzüberschreitende Übermittlung bestätigt haben.",
-      "Audit-Log nur mit Metadaten: protokolliert werden Anbieter, Region, Land, zurückgegebene Felder, Erfolg und ob geschwärzt wurde – nie das Bild, der Schlüssel oder Feldwerte.",
+      "Anbieterwahl: Infomaniak (Schweiz, Schweizer Rechenzentren), Mistral AI (EU/Frankreich) oder — nur nach ausdrücklicher Bestätigung der grenzüberschreitenden Übermittlung — OpenAI bzw. Anthropic (USA). Es wird nie still auf einen US-Anbieter umgestellt.",
+      "Automatische Schwärzung: Vor dem Upload überdeckt die App den Personendaten-Block des Halters (Name und Adresse) fest im Bild (regionsabhängige Platzierung). Eine Kamera-Hilfslinie und ein Pflicht-Kontrollschritt erlauben die Prüfung am echten Foto vor dem Scan.",
+      "Freigabe-Checkliste: Der Scanner startet erst, wenn Sie Auftragsverarbeitung (DPA), Opt-out vom Modelltraining, Aufbewahrungsbedingungen und — bei US-Anbietern — die grenzüberschreitende Übermittlung bestätigt haben.",
+      "Audit-Log nur mit Metadaten: protokolliert werden Anbieter, Region, Land, zurückgegebene Felder, Erfolg und ob geschwärzt wurde — nie das Bild, der Schlüssel oder Feldwerte.",
       "Ausgelegt auf das Schweizer revDSG/nFADP und die EU-DSGVO."
     ]
+  },
+  "screenshots": {
+    "enlarge": "{caption} vergrössern",
+    "close": "Schliessen",
+    "prev": "Vorheriges Bild",
+    "next": "Nächstes Bild",
+    "images": [
+      {
+        "file": "dashboard.jpg",
+        "caption": "Dashboard — Aufträge im Überblick"
+      },
+      {
+        "file": "analysen1.jpg",
+        "caption": "Analysen-Dashboard — Umsatz & Cashflow"
+      },
+      {
+        "file": "analysen2.jpg",
+        "caption": "Top-Kunden & Konversions-Trichter"
+      },
+      {
+        "file": "hagel-auftrag.jpg",
+        "caption": "Hagelschaden-Kalkulation (VFFS)"
+      },
+      {
+        "file": "hagel-auftrag-aw.jpg",
+        "caption": "Hagelschaden — Deutsche AW-Matrix mit De-/Montage"
+      },
+      {
+        "file": "parkschaden-erfassung.jpg",
+        "caption": "Parkschaden — Pro-Teil / Pauschal / AW"
+      },
+      {
+        "file": "manuel-rechungen.jpg",
+        "caption": "Manuelle Rechnung (ohne Rapport)"
+      },
+      {
+        "file": "Versicherung-Direkt.jpg",
+        "caption": "Direkt-Versicherung in 4 Schritten"
+      },
+      {
+        "file": "kundebestatigung.jpg",
+        "caption": "Kundenfreigabe vor Ort mit Unterschrift"
+      },
+      {
+        "file": "Subzuweisen.jpg",
+        "caption": "Subunternehmer zuweisen — Live-Aufteilung"
+      },
+      {
+        "file": "sub-verwalten.jpg",
+        "caption": "Subunternehmer-Auftrag verwalten"
+      },
+      {
+        "file": "Abtretungserklarung1.jpg",
+        "caption": "Abtretungserklärung an die Versicherung"
+      },
+      {
+        "file": "Techniker-und-Dokumenten.jpg",
+        "caption": "Dokumente-Panel pro Auftrag"
+      },
+      {
+        "file": "email-doks.jpg",
+        "caption": "E-Mail-Vorschau mit Mehrfach-Anhängen"
+      },
+      {
+        "file": "verlauf.jpg",
+        "caption": "Job Timeline — Zeitstrahl pro Fall"
+      },
+      {
+        "file": "audit.jpg",
+        "caption": "Aktivitätsprotokoll & Versionen"
+      },
+      {
+        "file": "backup.jpg",
+        "caption": "Backup, Sub-Import & Demodaten"
+      },
+      {
+        "file": "wiederherstellen.jpg",
+        "caption": "Intelligente Wiederherstellung"
+      },
+      {
+        "file": "hilfe.jpg",
+        "caption": "Umfangreiches Benutzerhandbuch — in der App"
+      },
+      {
+        "file": "Teile-Notiz.jpg",
+        "caption": "Beschädigte Teile & Notiz"
+      },
+      {
+        "file": "pdf-QR-rechnung.jpg",
+        "caption": "Schweizer QR-Rechnung"
+      },
+      {
+        "file": "hagel-auftrag2.jpg",
+        "caption": "Hagelschaden — Detailansicht"
+      },
+      {
+        "file": "pdf-hagel.jpg",
+        "caption": "Hagelrapport PDF"
+      },
+      {
+        "file": "pdf-park.jpg",
+        "caption": "Parkschadenrapport PDF"
+      },
+      {
+        "file": "pdf-rechnung.jpg",
+        "caption": "Rechnung PDF"
+      },
+      {
+        "file": "pdf-photos.jpg",
+        "caption": "Fotodokumentation PDF"
+      },
+      {
+        "file": "arbeitsrapporte.jpg",
+        "caption": "Arbeitsrapporte"
+      },
+      {
+        "file": "adresse-buch.jpg",
+        "caption": "Adressbuch"
+      },
+      {
+        "file": "einstellungen1.jpg",
+        "caption": "Einstellungen (1)"
+      },
+      {
+        "file": "einstellungen2.jpg",
+        "caption": "Einstellungen (2)"
+      },
+      {
+        "file": "einstellungen3.jpg",
+        "caption": "Einstellungen (3)"
+      }
+    ]
+  },
+  "optionalAi": {
+    "badge": "Optional · KI",
+    "providers": [
+      {
+        "name": "Infomaniak",
+        "region": "CH",
+        "recommended": true
+      },
+      {
+        "name": "Mistral AI",
+        "region": "EU"
+      },
+      {
+        "name": "OpenAI",
+        "region": "USA"
+      },
+      {
+        "name": "Anthropic",
+        "region": "USA"
+      }
+    ],
+    "recommendedLabel": "empfohlen · Schweizer Rechenzentren",
+    "providersNote": "US-Anbieter nur, wenn Sie es ausdrücklich bestätigen — nie automatisch voreingestellt.",
+    "learnMore": "Mehr zu KI & Datenschutz"
   },
   "footer": {
     "company": "Balmer Storm Solutions",
     "tagline": "Entwickelt in der Schweiz.",
     "techNote": "Entwickelt von einem PDR-Techniker mit über 25 Jahren Erfahrung.",
     "copyright": "© 2026 Balmer Storm Solutions. Alle Rechte vorbehalten.",
-    "regions": "Verfügbar in",
+    "regions": "Verfügbar in diesen Ländern",
     "intl": "Weitere Länder folgen.",
+    "versionLabel": "Version {version}",
+    "cols": {
+      "product": "Produkt",
+      "features": "Funktionen",
+      "legal": "Rechtliches & Updates"
+    },
     "links": {
       "features": "Funktionen",
+      "workflow": "Ablauf",
       "pricing": "Preise",
+      "faq": "FAQ",
+      "download": "Download",
+      "updates": "Updates",
       "contact": "Kontakt",
-      "privacy": "Datenschutz"
+      "privacy": "Datenschutz",
+      "windowsInstaller": "Windows-Installer",
+      "androidApk": "Android-APK"
+    }
+  },
+  "pages": {
+    "labels": {
+      "home": "Start",
+      "howItWorks": "So funktioniert’s",
+      "benefits": "Was Sie davon haben",
+      "allFeatures": "Alle Funktionen in diesem Bereich",
+      "screenshots": "Screenshots",
+      "faq": "Häufige Fragen",
+      "related": "Passt dazu",
+      "ctaTitle": "{days} Tage kostenlos testen",
+      "ctaLead": "Direkt herunterladen — keine Anmeldung, keine Kreditkarte.",
+      "ctaTrial": "Jetzt herunterladen",
+      "ctaBuy": "Lizenz anfragen",
+      "comparison": "Kostenvergleich",
+      "step": "Schritt {n}"
+    },
+    "hail": {
+      "metaTitle": "Hagelschaden kalkulieren: VFFS, Deutsche AW, UPEX | PDR Kalk",
+      "metaDescription": "Hagelschaden-Kalkulationssoftware für PDR-Techniker: VFFS, Zürich Mischhagel, Deutsche AW-Liste, Österreich, Belgische UPEX-Liste. Live-Berechnung, Rapport, Rechnung — offline, ohne Abo.",
+      "eyebrow": "Hagelkalkulation",
+      "title": "Hagelschaden kalkulieren — mit der Preismatrix Ihres Landes.",
+      "lead": "VFFS, Zürich Mischhagel, Deutsche AW-Liste mit De-/Montage, Österreich und die Belgische UPEX-Liste — live gerechnet über 14 Bauteile, mit Fotos, Teilen und Fremdleistungen. Vom Rapport bis zur Rechnung in einem Programm.",
+      "ctaSecondary": "Alle Funktionen ansehen",
+      "heroAlt": "PDR Kalk – Hagelkalkulation mit Dellenzahl pro Bauteil und Live-Total",
+      "benefits": [
+        {
+          "t": "Fünf Preismatrizen",
+          "d": "VFFS, Zürich Mischhagel, Deutsche AW-Liste mit De-/Montage, österreichische Matrix und Belgische UPEX-Liste (UPEX 2015)."
+        },
+        {
+          "t": "Live-Berechnung über 14 Bauteile",
+          "d": "Dellen pro Grössenklasse eintragen, das Total rechnet sofort mit — inklusive Zuschlägen und Rabatt."
+        },
+        {
+          "t": "Teile, Fremdleistungen, Nebenkosten",
+          "d": "Beschädigte Teile mit Preisen, zugekaufte Arbeiten und Nebenkosten stehen direkt im Rapport."
+        },
+        {
+          "t": "Pauschal oder AW, in jedem Land",
+          "d": "Der Pauschal-Modus arbeitet unabhängig von der Tariftabelle — auch für Parkschäden."
+        },
+        {
+          "t": "Fotos ohne Kabel",
+          "d": "Bis zu 12 Fotos per QR-Code vom Smartphone, EXIF- und GPS-Daten werden entfernt."
+        },
+        {
+          "t": "Direkt weiter zur Rechnung",
+          "d": "Rapport, Kundenfreigabe, Versicherung und Rechnung bauen auf derselben Kalkulation auf."
+        }
+      ],
+      "steps": [
+        {
+          "t": "Tarif wählen und Fahrzeug erfassen",
+          "d": "Land und Preismatrix stehen bereits richtig; Fahrzeugdaten kommen per Scan oder von Hand.",
+          "file": "hagel-auftrag.jpg"
+        },
+        {
+          "t": "Dellen pro Bauteil eintragen",
+          "d": "Das Total rechnet live mit. Teile, Fremdleistungen und De-/Montage erfassen Sie im selben Fenster.",
+          "file": "hagel-auftrag2.jpg"
+        },
+        {
+          "t": "Rapport, Freigabe, Rechnung",
+          "d": "Kostenvoranschlag und Rapport als PDF, Unterschrift auf dem Gerät, danach die Rechnung.",
+          "file": "pdf-hagel.jpg"
+        }
+      ],
+      "screenshotsTitle": "Aus der App"
+    },
+    "import": {
+      "metaTitle": "SilverDAT- & Hagelscanner-PDF importieren | PDR Kalk",
+      "metaDescription": "Vorhandene SilverDAT-Kalkulationen und Hagelscanner-Dellenprotokolle als PDF in PDR Kalk übernehmen statt abtippen — lokal ausgewertet, mit Kontrollansicht. Neu in Version {version}, vorerst Schweiz.",
+      "eyebrow": "Dokumentimport",
+      "title": "Hagelscanner-Daten noch von Hand abtippen?",
+      "lead": "PDR Kalk liest Dellenprotokolle und SilverDAT-Kalkulationen als PDF ein — lokal auf Ihrem Gerät, mit Kontrollansicht vor der Übernahme. Danach arbeiten Sie weiter wie gewohnt: Rapport, Kundenfreigabe, Versicherung, Rechnung.",
+      "ctaSecondary": "Mehr zur Hagelkalkulation",
+      "heroAlt": "PDR Kalk – Hagel-Editor nach der Übernahme einer importierten Kalkulation",
+      "benefits": [
+        {
+          "t": "Bauteile und Dellen pro Grössenklasse",
+          "d": "Aus dem Dellenprotokoll werden die Zahlen übernommen und gegen die Summen im Dokument geprüft."
+        },
+        {
+          "t": "SilverDAT zusätzlich",
+          "d": "Fahrzeugdaten und VIN, Teile mit Preisen, De-/Montage-Positionen und Nebenkosten."
+        },
+        {
+          "t": "Vollständig lokal",
+          "d": "Das PDF wird auf Ihrem Gerät gelesen. Es geht nichts an einen Server — auch nicht an unseren."
+        },
+        {
+          "t": "Keine Schnittstelle",
+          "d": "PDR Kalk liest ein PDF, das Sie ohnehin haben. Es braucht keinen Vertrag und keinen Zugang zu einem fremden System."
+        },
+        {
+          "t": "Kontrollansicht vor der Übernahme",
+          "d": "«Wird übernommen · Zu klären · Unverändert» — Sie entscheiden, was in den Rapport wandert."
+        },
+        {
+          "t": "Weitere Importe",
+          "d": "Fahrzeugausweis-Scan (optional KI), Fotos per QR-Code und Aufträge von Partnerbetrieben."
+        }
+      ],
+      "steps": [
+        {
+          "t": "PDF wählen",
+          "d": "Das Dokument braucht eine Textebene — Scans und Fotos funktionieren nicht. Den Dokumenttyp erkennt PDR Kalk selbst.",
+          "file": "hagel-auftrag.jpg"
+        },
+        {
+          "t": "Kontrollansicht prüfen",
+          "d": "Plausibilitätsprüfung über Dellensummen (≤ 25 mm, > 25 mm, > 50 mm) und Bauteilanzahl, gruppiert in «Wird übernommen · Zu klären · Unverändert».",
+          "file": "hagel-auftrag2.jpg"
+        },
+        {
+          "t": "Übernehmen und weiterarbeiten",
+          "d": "Die Zahlen landen im Hagel-Editor. Einschalten lässt sich die Funktion unter Einstellungen → Hagelschaden.",
+          "file": "pdf-hagel.jpg"
+        }
+      ],
+      "screenshotsTitle": "Aus der App"
+    },
+    "subcontractors": {
+      "metaTitle": "Subunternehmer-Workflow für PDR-Betriebe | PDR Kalk",
+      "metaDescription": "Aufträge an Subunternehmer und Partnerbetriebe übergeben: verschlüsselter Transfer, drei Vergütungsmodelle, Live-Aufteilung, Audit-Trail. PDR-Software ohne Abo für Windows & Android.",
+      "eyebrow": "Subunternehmer",
+      "title": "Subunternehmer & Partnerbetriebe: Aufträge teilen, fair abrechnen.",
+      "lead": "Auftrag als verschlüsselte Datei übergeben, drei Vergütungsmodelle mit Live-Aufteilung, dual-notify-Abschluss und ein lückenloser Audit-Trail — auf beiden Seiten in PDR Kalk.",
+      "ctaSecondary": "Lizenz anfragen",
+      "heroAlt": "PDR Kalk – Subunternehmer zuweisen mit Live-Aufteilung der Vergütung",
+      "benefits": [
+        {
+          "t": "Übergeben oder teilen",
+          "d": "Der Auftrag geht als Datei an einen anderen PDR-Kalk-Betrieb und erscheint dort mit dessen Nummer und Briefkopf."
+        },
+        {
+          "t": "Drei Vergütungsmodelle",
+          "d": "AW-Satz, Prozent oder Pauschale — die Aufteilung rechnet live mit, inklusive Verbrauchsmaterial-Anteil."
+        },
+        {
+          "t": "Pro Auftrag anpassbar",
+          "d": "Bei einem erhaltenen Rapport lässt sich die Vergütung ändern; das Fenster zeigt beide Beträge und die Differenz."
+        },
+        {
+          "t": "AES-256 und dual-notify",
+          "d": "Verschlüsselter Transfer, beide Seiten werden beim Abschluss automatisch informiert."
+        },
+        {
+          "t": "Duplikat-Merge",
+          "d": "Beim Rückimport entstehen keine doppelten Einträge — auch nach mehreren Runden nicht."
+        },
+        {
+          "t": "Team-Auswertung",
+          "d": "Techniker pro Bauteil zuweisen, Auswertung nach Techniker und Woche, per Klick nach Excel."
+        }
+      ],
+      "steps": [
+        {
+          "t": "Sub zuweisen",
+          "d": "Modell und Aufteilung wählen — der Betrag des Subs, Ihr Betrag und die Differenz stehen sofort da.",
+          "file": "Subzuweisen.jpg"
+        },
+        {
+          "t": "Der Sub arbeitet in seiner Installation",
+          "d": "Auf seinem Dashboard erscheinen «Erhaltene Aufträge» mit der vereinbarten Vergütung.",
+          "file": "sub-verwalten.jpg"
+        },
+        {
+          "t": "Abschluss und Auswertung",
+          "d": "Dual-notify informiert beide Seiten, der Rückimport führt zusammen statt zu duplizieren.",
+          "file": "analysen2.jpg"
+        }
+      ],
+      "screenshotsTitle": "Aus der App"
+    },
+    "noSubscription": {
+      "metaTitle": "PDR-Software ohne Abo — Dauerlizenz CHF 550 | PDR Kalk",
+      "metaDescription": "PDR-Kalkulationssoftware ohne Abo: Dauerlizenz für CHF 550 einmalig, kein Ablaufdatum, keine monatlichen Gebühren. Offline auf Windows & Android, Daten lokal. 30 Tage gratis testen.",
+      "eyebrow": "Ohne Abo",
+      "title": "PDR-Software ohne Abo — einmal bezahlen, unbegrenzt nutzen.",
+      "lead": "Dauerlizenz für CHF {price} (≈ EUR {priceEur}, exkl. MwSt.) — kein Ablaufdatum, keine monatlichen Gebühren, keine Kosten pro weiterem Nutzer. Offline auf Windows und Android; Ihre Daten bleiben bei Ihnen.",
+      "ctaSecondary": "Lizenz anfragen",
+      "heroAlt": "PDR Kalk – Dashboard mit Aufträgen, offenen Rechnungen und Kennzahlen",
+      "benefits": [
+        {
+          "t": "Einmalzahlung",
+          "d": "CHF {price} einmalig statt einer monatlichen Gebühr, die nie aufhört."
+        },
+        {
+          "t": "Kein Ablaufdatum",
+          "d": "Die Lizenz läuft nicht aus. Es gibt nichts zu verlängern und nichts zu kündigen."
+        },
+        {
+          "t": "Keine Kosten pro Nutzer",
+          "d": "Unbegrenzt viele Nutzer pro Lizenz, keine Zusatzkosten pro Techniker."
+        },
+        {
+          "t": "Funktioniert offline",
+          "d": "Kein Cloud-Zwang. Die App arbeitet lokal weiter, auch wenn das Netz ausfällt."
+        },
+        {
+          "t": "Ihre Daten bleiben bei Ihnen",
+          "d": "Auf Ihrem Gerät oder Ihrer NAS — keine Anbieter-Cloud, keine Telemetrie."
+        },
+        {
+          "t": "Kleine Updates inklusive",
+          "d": "Optionale Versicherungslisten-Updates können eine kleine Gebühr verursachen."
+        }
+      ],
+      "steps": [
+        {
+          "t": "{days} Tage testen",
+          "d": "Voller Funktionsumfang, ohne Anmeldung und ohne Kreditkarte — die Testversion endet automatisch.",
+          "file": "dashboard.jpg"
+        },
+        {
+          "t": "Lizenz anfragen, Rechnung erhalten",
+          "d": "Formular ausfüllen, Rechnung meist innert 24 Stunden; EU-Firmen mit USt-IdNr. ohne Schweizer MwSt.",
+          "file": "einstellungen1.jpg"
+        },
+        {
+          "t": "Weiterarbeiten — Backups in Ihrer Hand",
+          "d": "Vollbackup als ZIP auf Ihrem Gerät, intelligente Wiederherstellung ohne Duplikate.",
+          "file": "backup.jpg"
+        }
+      ],
+      "screenshotsTitle": "Aus der App"
     }
   }
 }
