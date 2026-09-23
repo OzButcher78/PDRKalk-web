@@ -3,6 +3,9 @@
 import {useTranslations} from 'next-intl';
 import {useState, useRef} from 'react';
 import ObfuscatedEmail from './ObfuscatedEmail';
+import SectionHead from './SectionHead';
+import {groupIcons} from '@/lib/icons';
+import {TRIAL_DAYS} from '@/lib/site';
 
 const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID || 'mlgwvvbo';
 
@@ -187,9 +190,9 @@ export default function Contact({lockedCountry}: {lockedCountry?: string} = {}) 
     width: '100%',
     background: 'rgba(255,255,255,0.05)',
     border: '1px solid rgba(255,255,255,0.1)',
-    borderRadius: '6px',
+    borderRadius: '8px',
     padding: '0.85rem 1rem',
-    fontFamily: 'Barlow, sans-serif',
+    fontFamily: 'var(--font-body)',
     fontSize: '0.95rem',
     color: '#fff',
     transition: 'border-color 0.2s',
@@ -197,7 +200,7 @@ export default function Contact({lockedCountry}: {lockedCountry?: string} = {}) 
   };
 
   const errorStyle = {
-    fontFamily: 'Barlow, sans-serif',
+    fontFamily: 'var(--font-body)',
     fontSize: '0.78rem',
     color: '#fc8181',
     marginTop: '0.3rem',
@@ -216,11 +219,15 @@ export default function Contact({lockedCountry}: {lockedCountry?: string} = {}) 
     inputMode?: 'text' | 'email' | 'tel' | 'url' | 'numeric',
   ) => (
     <div>
+      <label className="c-label" htmlFor={field}>{t(`${field}Label` as const)}</label>
       <input
+        id={field}
         type={type}
         name={field}
         ref={refs[field] as React.RefObject<HTMLInputElement>}
         aria-label={t(`${field}Label` as const)}
+        aria-invalid={errors[field] ? true : undefined}
+        aria-describedby={errors[field] ? `${field}-error` : undefined}
         autoComplete={autoComplete}
         inputMode={inputMode}
         placeholder={t(`${field}Placeholder` as const)}
@@ -231,413 +238,366 @@ export default function Contact({lockedCountry}: {lockedCountry?: string} = {}) 
         onFocus={e => { if (!errors[field]) e.target.style.borderColor = 'var(--red)'; }}
         onBlur={e => { if (!errors[field]) e.target.style.borderColor = 'rgba(255,255,255,0.1)'; }}
       />
-      {errors[field] && <span style={errorStyle}>{errors[field]}</span>}
+      {errors[field] && <span id={`${field}-error`} style={errorStyle}>{errors[field]}</span>}
     </div>
   );
 
+  const selectStyle = (field: 'country' | 'state', value: string) => ({
+    ...inputStyle,
+    borderColor: fieldBorder(field),
+    appearance: 'none' as const,
+    backgroundImage:
+      'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'8\' viewBox=\'0 0 12 8\'><path fill=\'%2394a3b8\' d=\'M6 8L0 0h12z\'/></svg>")',
+    backgroundRepeat: 'no-repeat' as const,
+    backgroundPosition: 'right 1rem center',
+    paddingRight: '2.5rem',
+    color: value ? '#fff' : 'rgba(255,255,255,0.5)',
+    cursor: 'pointer' as const,
+  });
+
   return (
-    <section id="contact" className="section-pad" style={{
-      background: 'var(--ink-mid)',
-      padding: '6rem 1.5rem',
-    }}>
-      <div style={{maxWidth: '720px', margin: '0 auto'}}>
-        {/* Header */}
-        <div style={{textAlign: 'center', marginBottom: '2.5rem'}}>
-          <h2 style={{
-            fontFamily: 'Barlow Condensed, sans-serif',
-            fontWeight: 900,
-            fontSize: 'clamp(2rem, 4vw, 3rem)',
-            color: '#ffffff',
-            margin: '0 0 0.75rem',
-          }}>
-            {t('title')}
-          </h2>
-          <div className="gradient-line" style={{width: '60px', margin: '0 auto 1rem'}}/>
-          <p style={{
-            fontFamily: 'Barlow, sans-serif',
-            fontSize: '1rem',
-            color: '#8fa8c8',
-            maxWidth: '520px',
-            margin: '0 auto',
-          }}>
-            {t('subtitle')}
-          </p>
-        </div>
+    <section
+      id="contact"
+      className="section theme-dark"
+      style={{background: 'var(--ink-mid)'}}
+      aria-labelledby="contact-title"
+    >
+      <div className="container--narrow">
+        <SectionHead id="contact-title" title={t('title')} lead={t('subtitle')} center />
 
-        {!submitted && (
-          <div className="platform-notice" style={{
-            background: 'rgba(37,99,235,0.08)',
-            border: '1px solid rgba(37,99,235,0.3)',
-            borderRadius: '10px',
-            padding: '1.1rem 1.25rem',
-            marginBottom: '2rem',
-            display: 'flex',
-            gap: '0.85rem',
-            alignItems: 'flex-start',
-          }}>
-            <div aria-hidden style={{
-              width: '32px', height: '32px',
-              flexShrink: 0,
-              borderRadius: '50%',
-              background: 'rgba(37,99,235,0.18)',
-              color: '#60a5fa',
-              fontFamily: 'Barlow Condensed, sans-serif',
-              fontWeight: 800,
-              fontSize: '1.1rem',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              marginTop: '2px',
-            }}>i</div>
-            <div>
-              <div style={{
-                fontFamily: 'Barlow Condensed, sans-serif',
-                fontWeight: 800,
-                fontSize: '0.95rem',
-                letterSpacing: '0.02em',
-                color: '#ffffff',
-                marginBottom: '0.3rem',
-                textTransform: 'uppercase',
-              }}>
-                {t('platformNoticeTitle')}
+        <div className="contact-layout">
+          <div>
+            {submitted ? (
+              <div
+                className="fade-up"
+                aria-live="polite"
+                role="status"
+                tabIndex={-1}
+                autoFocus
+                style={{
+                  textAlign: 'center',
+                  padding: '3rem 2rem',
+                  background: 'rgba(22,163,74,0.1)',
+                  border: '1px solid rgba(22,163,74,0.3)',
+                  borderRadius: '14px',
+                  minHeight: '320px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '1.25rem',
+                }}
+              >
+                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+                  <circle cx="28" cy="28" r="26" stroke="#22c55e" strokeWidth="2.5" />
+                  <path d="M17 29l8 8 15-16" stroke="#22c55e" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <p style={{
+                  fontFamily: 'var(--font-display)',
+                  fontWeight: 800,
+                  fontSize: '1.25rem',
+                  color: '#4ade80',
+                  letterSpacing: '0.03em',
+                  margin: 0,
+                }}>
+                  {t('success')}
+                </p>
               </div>
-              <p style={{
-                fontFamily: 'Barlow, sans-serif',
-                fontSize: '0.92rem',
-                lineHeight: 1.55,
-                color: '#cbd5e1',
-                margin: 0,
-              }}>
-                {t('platformNoticeBody')}
-              </p>
-            </div>
-          </div>
-        )}
+            ) : (
+              <form onSubmit={handleSubmit} className="fade-up" noValidate>
+                {/* Step 1 — Intent */}
+                <fieldset className="c-step">
+                  <legend className="c-legend">1 · {t('stepIntent')}</legend>
+                  <div className="contact-grid" style={{display: 'grid', gap: '0.75rem'}}>
+                    {(['buy', 'inquiry'] as const).map((value, idx) => {
+                      const selected = form.intent === value;
+                      return (
+                        <label
+                          key={value}
+                          className={`intent-card intent-card--${value}`}
+                          style={{
+                            background: selected ? 'rgba(232,0,29,0.08)' : 'rgba(255,255,255,0.05)',
+                            borderColor: selected
+                              ? 'var(--red)'
+                              : errors.intent
+                              ? 'rgba(252,129,129,0.6)'
+                              : 'rgba(255,255,255,0.1)',
+                          }}
+                        >
+                          <input
+                            type="radio"
+                            name="intent"
+                            value={value}
+                            ref={idx === 0 ? refs.intent : undefined}
+                            checked={selected}
+                            onChange={() => {
+                              setForm(prev => ({...prev, intent: value}));
+                              // Required fields differ per intent — drop any stale errors.
+                              setErrors({});
+                            }}
+                            style={{
+                              position: 'absolute',
+                              width: 1,
+                              height: 1,
+                              padding: 0,
+                              margin: -1,
+                              overflow: 'hidden',
+                              clip: 'rect(0,0,0,0)',
+                              border: 0,
+                            }}
+                          />
+                          <span
+                            aria-hidden
+                            style={{
+                              width: '18px',
+                              height: '18px',
+                              flexShrink: 0,
+                              borderRadius: '50%',
+                              border: `2px solid ${selected ? 'var(--red)' : 'rgba(255,255,255,0.4)'}`,
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              transition: 'border-color 0.15s',
+                            }}
+                          >
+                            {selected && (
+                              <span style={{width: '8px', height: '8px', borderRadius: '50%', background: 'var(--red)'}} />
+                            )}
+                          </span>
+                          <span aria-hidden style={{color: selected ? 'var(--red)' : 'var(--steel)', display: 'inline-flex'}}>
+                            {value === 'buy' ? groupIcons.wallet : groupIcons.mail}
+                          </span>
+                          <span style={{fontFamily: 'var(--font-body)', fontSize: '0.95rem', color: '#fff', lineHeight: 1.3}}>
+                            {t(`intent_${value}` as 'intent_buy')}
+                          </span>
+                        </label>
+                      );
+                    })}
+                  </div>
+                  {errors.intent && <span id="intent-error" style={errorStyle}>{errors.intent}</span>}
+                </fieldset>
 
-        {submitted ? (
-          <div
-            className="fade-up"
-            aria-live="polite"
-            role="status"
-            style={{
-              textAlign: 'center',
-              padding: '3rem 2rem',
-              background: 'rgba(22,163,74,0.1)',
-              border: '1px solid rgba(22,163,74,0.3)',
-              borderRadius: '10px',
-            }}
-          >
-            <div style={{fontSize: '2.5rem', marginBottom: '1rem', color: '#22c55e'}}>✓</div>
-            <p style={{
-              fontFamily: 'Barlow Condensed, sans-serif',
-              fontWeight: 700,
-              fontSize: '1.2rem',
-              color: '#4ade80',
-              letterSpacing: '0.04em',
-              margin: 0,
-            }}>
-              {t('success')}
-            </p>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="fade-up" noValidate>
-            {/* Intent — which is it? */}
-            <fieldset style={{
-              border: 'none',
-              padding: 0,
-              margin: '0 0 1.25rem',
-            }}>
-              <legend style={{
-                fontFamily: 'Barlow Condensed, sans-serif',
-                fontWeight: 800,
-                fontSize: '0.85rem',
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-                color: '#cbd5e1',
-                padding: 0,
-                marginBottom: '0.6rem',
-              }}>
-                {t('intentLegend')}
-              </legend>
-              <div className="contact-grid" style={{display: 'grid', gap: '0.75rem'}}>
-                {(['buy', 'inquiry'] as const).map((value, idx) => {
-                  const selected = form.intent === value;
-                  return (
-                    <label
-                      key={value}
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '0.75rem',
-                        background: selected ? 'rgba(232,0,29,0.08)' : 'rgba(255,255,255,0.05)',
-                        border: `1px solid ${
-                          selected
-                            ? 'var(--red)'
-                            : errors.intent
-                            ? 'rgba(252,129,129,0.6)'
-                            : 'rgba(255,255,255,0.1)'
-                        }`,
-                        borderRadius: '8px',
-                        padding: '0.85rem 1rem',
-                        cursor: 'pointer',
-                        transition: 'background 0.15s, border-color 0.15s',
-                      }}
-                    >
-                      <input
-                        type="radio"
-                        name="intent"
-                        value={value}
-                        ref={idx === 0 ? refs.intent : undefined}
-                        checked={selected}
-                        onChange={() => {
-                          setForm(prev => ({...prev, intent: value}));
-                          // Required fields differ per intent — drop any stale errors.
-                          setErrors({});
-                        }}
-                        style={{
-                          position: 'absolute',
-                          width: 1,
-                          height: 1,
-                          padding: 0,
-                          margin: -1,
-                          overflow: 'hidden',
-                          clip: 'rect(0,0,0,0)',
-                          border: 0,
-                        }}
-                      />
-                      <span
-                        aria-hidden
-                        style={{
-                          width: '18px',
-                          height: '18px',
-                          flexShrink: 0,
-                          borderRadius: '50%',
-                          border: `2px solid ${selected ? 'var(--red)' : 'rgba(255,255,255,0.4)'}`,
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          transition: 'border-color 0.15s',
-                        }}
+                {/* Step 2 — Contact details */}
+                <fieldset className="c-step">
+                  <legend className="c-legend">2 · {t('stepContact')}</legend>
+
+                  <div className="contact-grid" style={{display: 'grid', gap: '1rem', marginBottom: '1rem'}}>
+                    {renderInput('firstName', 'text', 'given-name')}
+                    {renderInput('lastName',  'text', 'family-name')}
+                  </div>
+                </fieldset>
+
+                {/* Billing details — only needed when ordering a licence */}
+                {form.intent === 'buy' && (
+                  <fieldset className="c-step">
+                    <legend className="c-legend">3 · {t('stepBilling')}</legend>
+
+                    {/* Company */}
+                    <div style={{marginBottom: '1rem'}}>
+                      {renderInput('company', 'text', 'organization')}
+                    </div>
+
+                    {/* Street */}
+                    <div style={{marginBottom: '1rem'}}>
+                      {renderInput('street', 'text', 'street-address')}
+                    </div>
+
+                    {/* Postal code / City */}
+                    <div className="contact-grid" style={{display: 'grid', gap: '1rem', marginBottom: '1rem'}}>
+                      {renderInput('postalCode', 'text', 'postal-code')}
+                      {renderInput('city', 'text', 'address-level2')}
+                    </div>
+
+                    {/* Country — hidden when locked to a single market (e.g. AU) */}
+                    {!lockedCountry && (
+                    <div style={{marginBottom: '1rem'}}>
+                      <label className="c-label" htmlFor="country">{t('countryLabel')}</label>
+                      <select
+                        id="country"
+                        name="country"
+                        ref={refs.country}
+                        aria-label={t('countryLabel')}
+                        aria-invalid={errors.country ? true : undefined}
+                        aria-describedby={errors.country ? 'country-error' : undefined}
+                        autoComplete="country"
+                        value={form.country}
+                        onChange={e => update('country', e.target.value)}
+                        className="contact-input"
+                        style={selectStyle('country', form.country)}
+                        onFocus={e => { if (!errors.country) e.target.style.borderColor = 'var(--red)'; }}
+                        onBlur={e => { if (!errors.country) e.target.style.borderColor = 'rgba(255,255,255,0.1)'; }}
                       >
-                        {selected && (
-                          <span style={{
-                            width: '8px',
-                            height: '8px',
-                            borderRadius: '50%',
-                            background: 'var(--red)',
-                          }}/>
-                        )}
-                      </span>
-                      <span style={{
-                        fontFamily: 'Barlow, sans-serif',
-                        fontSize: '0.95rem',
-                        color: '#fff',
-                        lineHeight: 1.3,
-                      }}>
-                        {t(`intent_${value}` as 'intent_buy')}
-                      </span>
-                    </label>
-                  );
-                })}
-              </div>
-              {errors.intent && <span style={errorStyle}>{errors.intent}</span>}
-            </fieldset>
+                        <option value="" disabled>{t('countryPlaceholder')}</option>
+                        {COUNTRY_CODES
+                          .map(code => ({code, name: t(`country_${code}` as 'country_ch')}))
+                          .sort((a, b) => a.name.localeCompare(b.name))
+                          .map(({code, name}) => (
+                            <option key={code} value={code} style={{color: '#000'}}>{name}</option>
+                          ))}
+                      </select>
+                      {errors.country && <span id="country-error" style={errorStyle}>{errors.country}</span>}
+                    </div>
+                    )}
 
-            {/* First / Last name */}
-            <div className="contact-grid" style={{display: 'grid', gap: '1rem', marginBottom: '1rem'}}>
-              {renderInput('firstName', 'text', 'given-name')}
-              {renderInput('lastName',  'text', 'family-name')}
-            </div>
+                    {/* State (Australia only) */}
+                    {form.country === 'au' && (
+                      <div style={{marginBottom: '1rem'}}>
+                        <label className="c-label" htmlFor="state">{t('stateLabel')}</label>
+                        <select
+                          id="state"
+                          name="state"
+                          ref={refs.state}
+                          aria-label={t('stateLabel')}
+                          aria-invalid={errors.state ? true : undefined}
+                          aria-describedby={errors.state ? 'state-error' : undefined}
+                          autoComplete="address-level1"
+                          value={form.state}
+                          onChange={e => update('state', e.target.value)}
+                          className="contact-input"
+                          style={selectStyle('state', form.state)}
+                          onFocus={e => { if (!errors.state) e.target.style.borderColor = 'var(--red)'; }}
+                          onBlur={e => { if (!errors.state) e.target.style.borderColor = 'rgba(255,255,255,0.1)'; }}
+                        >
+                          <option value="" disabled>{t('statePlaceholder')}</option>
+                          {AU_STATES.map(({code, name}) => (
+                            <option key={code} value={code} style={{color: '#000'}}>{name} ({code})</option>
+                          ))}
+                        </select>
+                        {errors.state && <span id="state-error" style={errorStyle}>{errors.state}</span>}
+                      </div>
+                    )}
 
-            {/* Billing details — only needed when ordering a licence */}
-            {form.intent === 'buy' && (
-              <>
-                {/* Company */}
+                    {/* VAT ID (EU customers only — enables reverse charge, no Swiss MwSt) */}
+                    {isEuCountry(form.country) && (
+                      <div style={{marginBottom: '1rem'}}>
+                        {renderInput('vatId', 'text')}
+                        <p className="micro" style={{color: '#8fa8c8', margin: '0.4rem 0 0'}}>
+                          {t('vatIdNote')}
+                        </p>
+                      </div>
+                    )}
+                  </fieldset>
+                )}
+
+                {/* Email */}
                 <div style={{marginBottom: '1rem'}}>
-                  {renderInput('company', 'text', 'organization')}
+                  {renderInput('email', 'email', 'email', 'email')}
                 </div>
 
-                {/* Street */}
-                <div style={{marginBottom: '1rem'}}>
-                  {renderInput('street', 'text', 'street-address')}
-                </div>
-
-                {/* Postal code / City */}
-                <div className="contact-grid" style={{display: 'grid', gap: '1rem', marginBottom: '1rem'}}>
-                  {renderInput('postalCode', 'text', 'postal-code')}
-                  {renderInput('city', 'text', 'address-level2')}
-                </div>
-
-                {/* Country — hidden when locked to a single market (e.g. AU) */}
-                {!lockedCountry && (
-                <div style={{marginBottom: '1rem'}}>
-                  <select
-                    name="country"
-                    ref={refs.country}
-                    aria-label={t('countryLabel')}
-                    autoComplete="country"
-                    value={form.country}
-                    onChange={e => update('country', e.target.value)}
+                {/* Message (optional) */}
+                <div style={{marginBottom: '1.25rem'}}>
+                  <label className="c-label" htmlFor="message">{t('messageLabel')}</label>
+                  <textarea
+                    id="message"
+                    rows={4}
+                    name="message"
+                    aria-label={t('messageLabel')}
+                    autoComplete="off"
+                    placeholder={t('messagePlaceholder')}
+                    value={form.message}
+                    onChange={e => update('message', e.target.value)}
                     className="contact-input"
                     style={{
                       ...inputStyle,
-                      borderColor: fieldBorder('country'),
-                      appearance: 'none',
-                      backgroundImage:
-                        'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'8\' viewBox=\'0 0 12 8\'><path fill=\'%2394a3b8\' d=\'M6 8L0 0h12z\'/></svg>")',
-                      backgroundRepeat: 'no-repeat',
-                      backgroundPosition: 'right 1rem center',
-                      paddingRight: '2.5rem',
-                      color: form.country ? '#fff' : 'rgba(255,255,255,0.5)',
-                      cursor: 'pointer',
+                      resize: 'vertical',
+                      minHeight: '110px',
+                      borderColor: 'rgba(255,255,255,0.1)',
                     }}
-                    onFocus={e => { if (!errors.country) e.target.style.borderColor = 'var(--red)'; }}
-                    onBlur={e => { if (!errors.country) e.target.style.borderColor = 'rgba(255,255,255,0.1)'; }}
-                  >
-                    <option value="" disabled>{t('countryPlaceholder')}</option>
-                    {COUNTRY_CODES
-                      .map(code => ({code, name: t(`country_${code}` as 'country_ch')}))
-                      .sort((a, b) => a.name.localeCompare(b.name))
-                      .map(({code, name}) => (
-                        <option key={code} value={code} style={{color: '#000'}}>{name}</option>
-                      ))}
-                  </select>
-                  {errors.country && <span style={errorStyle}>{errors.country}</span>}
+                    onFocus={e => e.target.style.borderColor = 'var(--red)'}
+                    onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
+                  />
                 </div>
+
+                {sendError && (
+                  <p role="alert" style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '0.85rem',
+                    color: '#fc8181',
+                    textAlign: 'center',
+                    marginBottom: '0.75rem',
+                  }}>
+                    {t('sendError')}
+                  </p>
                 )}
 
-                {/* State (Australia only) */}
-                {form.country === 'au' && (
-                  <div style={{marginBottom: '1rem'}}>
-                    <select
-                      name="state"
-                      ref={refs.state}
-                      aria-label={t('stateLabel')}
-                      autoComplete="address-level1"
-                      value={form.state}
-                      onChange={e => update('state', e.target.value)}
-                      className="contact-input"
-                      style={{
-                        ...inputStyle,
-                        borderColor: fieldBorder('state'),
-                        appearance: 'none',
-                        backgroundImage:
-                          'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'8\' viewBox=\'0 0 12 8\'><path fill=\'%2394a3b8\' d=\'M6 8L0 0h12z\'/></svg>")',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundPosition: 'right 1rem center',
-                        paddingRight: '2.5rem',
-                        color: form.state ? '#fff' : 'rgba(255,255,255,0.5)',
-                        cursor: 'pointer',
-                      }}
-                      onFocus={e => { if (!errors.state) e.target.style.borderColor = 'var(--red)'; }}
-                      onBlur={e => { if (!errors.state) e.target.style.borderColor = 'rgba(255,255,255,0.1)'; }}
-                    >
-                      <option value="" disabled>{t('statePlaceholder')}</option>
-                      {AU_STATES.map(({code, name}) => (
-                        <option key={code} value={code} style={{color: '#000'}}>{name} ({code})</option>
-                      ))}
-                    </select>
-                    {errors.state && <span style={errorStyle}>{errors.state}</span>}
-                  </div>
-                )}
-
-                {/* VAT ID (EU customers only — enables reverse charge, no Swiss MwSt) */}
-                {isEuCountry(form.country) && (
-                  <div style={{marginBottom: '1rem'}}>
-                    {renderInput('vatId', 'text')}
-                    <p style={{
-                      fontFamily: 'Barlow, sans-serif',
-                      fontSize: '0.78rem',
-                      color: '#8fa8c8',
-                      margin: '0.4rem 0 0',
-                      lineHeight: 1.45,
-                    }}>
-                      {t('vatIdNote')}
-                    </p>
-                  </div>
-                )}
-              </>
+                <button
+                  type="submit"
+                  disabled={submitting}
+                  className="btn btn-red btn--lg"
+                  style={{
+                    width: '100%',
+                    cursor: submitting ? 'wait' : 'pointer',
+                    opacity: submitting ? 0.7 : 1,
+                  }}
+                >
+                  {submitting ? t('submitting') : `${t('submit')} →`}
+                </button>
+              </form>
             )}
+          </div>
 
-            {/* Email */}
-            <div style={{marginBottom: '1rem'}}>
-              {renderInput('email', 'email', 'email', 'email')}
-            </div>
+          <aside className="contact-aside">
+            <ContactJourney />
 
-            {/* Message (optional) */}
-            <div style={{marginBottom: '1rem'}}>
-              <textarea
-                rows={4}
-                name="message"
-                aria-label={t('messageLabel')}
-                autoComplete="off"
-                placeholder={t('messagePlaceholder')}
-                value={form.message}
-                onChange={e => update('message', e.target.value)}
-                className="contact-input"
-                style={{
-                  ...inputStyle,
-                  resize: 'vertical',
-                  minHeight: '100px',
-                  borderColor: 'rgba(255,255,255,0.1)',
-                }}
-                onFocus={e => e.target.style.borderColor = 'var(--red)'}
-                onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
-              />
-            </div>
-
-            {sendError && (
-              <p style={{
-                fontFamily: 'Barlow, sans-serif',
-                fontSize: '0.85rem',
-                color: '#fc8181',
-                textAlign: 'center',
-                marginBottom: '0.75rem',
-              }}>
-                {t('sendError')}
-              </p>
-            )}
-
-            <button
-              type="submit"
-              disabled={submitting}
-              className="btn-red"
-              style={{
-                width: '100%',
-                fontFamily: 'Barlow Condensed, sans-serif',
-                fontWeight: 800,
-                fontSize: '1rem',
-                letterSpacing: '0.1em',
-                textTransform: 'uppercase',
-                color: '#fff',
-                background: 'var(--red)',
-                border: 'none',
-                borderRadius: '6px',
+            {!submitted && (
+              <div className="platform-notice" style={{
+                marginTop: '1.5rem',
+                background: 'rgba(37,99,235,0.08)',
+                border: '1px solid rgba(37,99,235,0.3)',
+                borderRadius: '10px',
                 padding: '1rem',
-                cursor: submitting ? 'wait' : 'pointer',
-                opacity: submitting ? 0.7 : 1,
-                transition: 'background 0.2s, transform 0.15s, opacity 0.2s',
-                boxShadow: '0 4px 20px rgba(232,0,29,0.25)',
-              }}
-            >
-              {submitting ? t('submitting') : `${t('submit')} →`}
-            </button>
-          </form>
-        )}
+              }}>
+                <div style={{
+                  fontFamily: 'var(--font-display)',
+                  fontWeight: 800,
+                  fontSize: '0.82rem',
+                  letterSpacing: '0.06em',
+                  color: '#ffffff',
+                  marginBottom: '0.35rem',
+                  textTransform: 'uppercase',
+                }}>
+                  {t('platformNoticeTitle')}
+                </div>
+                <p className="micro" style={{color: '#cbd5e1', margin: 0}}>
+                  {t('platformNoticeBody')}
+                </p>
+              </div>
+            )}
 
-        {/* Direct email */}
-        <p style={{
-          textAlign: 'center',
-          fontFamily: 'Barlow, sans-serif',
-          fontSize: '0.85rem',
-          color: '#64748b',
-          marginTop: '1.5rem',
-        }}>
-          <ObfuscatedEmail
-            user={t('emailUser')}
-            domain={t('emailDomain')}
-            style={{color: 'var(--steel)', textDecoration: 'none'}}
-          />
-        </p>
+            <p className="micro" style={{marginTop: '1.5rem', color: '#64748b'}}>
+              <ObfuscatedEmail
+                user={t('emailUser')}
+                domain={t('emailDomain')}
+                className="tap-link"
+                style={{color: 'var(--steel)', textDecoration: 'none'}}
+              />
+            </p>
+          </aside>
+        </div>
       </div>
     </section>
+  );
+}
+
+/**
+ * The "how you get your licence" mini-steps in the aside. Kept as its own
+ * component so Contact's frozen logic block does not need a second
+ * useTranslations() call.
+ */
+function ContactJourney() {
+  const p = useTranslations('pricing');
+  const journey = p.raw('journey') as {title: string; steps: Array<{t: string; d: string}>};
+  return (
+    <>
+      <h3 className="t-h3" style={{fontSize: '1.05rem', marginBottom: '1rem'}}>{journey.title}</h3>
+      <ol className="journey">
+        {journey.steps.map((step, i) => (
+          <li key={i} data-n={i + 1}>
+            <p className="journey-t">{p(`journey.steps.${i}.t`, {days: TRIAL_DAYS})}</p>
+            <p className="journey-d">{step.d}</p>
+          </li>
+        ))}
+      </ol>
+    </>
   );
 }
