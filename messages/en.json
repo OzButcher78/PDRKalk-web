@@ -85,7 +85,7 @@
       {
         "value": "1×",
         "unit": "",
-        "label": "payment — perpetual licence",
+        "label": "payment, use without limits",
         "note": "No subscription, no expiry date, no per-user costs."
       },
       {
@@ -97,8 +97,8 @@
       {
         "value": "6",
         "unit": "countries",
-        "label": "{languages} app languages",
-        "note": "CH, DE, AT, AU, BE, NL — with the right tariffs and tax rates."
+        "label": "with the right tariffs",
+        "note": "CH, DE, AT, AU, BE, NL · app in {languages} languages"
       }
     ],
     "stats": [
@@ -164,39 +164,39 @@
       },
       {
         "label": "Report",
-        "title": "Report and estimate",
+        "title": "Estimate & report",
         "benefit": "One click — and the PDF carries your logo.",
         "points": [
-          "Estimate, hail or parking damage report and work report",
+          "Estimate plus the hail or parking damage report as a PDF",
           "Photo documentation as its own PDF attachment",
           "Document language chosen freely — independent of the app language"
         ],
-        "file": "arbeitsrapporte.jpg",
-        "alt": "PDR Kalk – work report with line items and technician allocation"
+        "file": "pdf-hagel.jpg",
+        "alt": "PDR Kalk – hail report as a PDF with your own logo"
       },
       {
         "label": "Approval",
-        "title": "Customer approval on site",
+        "title": "Approval — by the customer or the insurer",
         "benefit": "Signed on the device — no printout, no chasing.",
         "points": [
-          "The customer signs directly on a tablet or laptop",
-          "The approval is stored in the job and in the audit trail",
-          "Send by email, with delivery tracking"
+          "The customer signs the estimate directly on a tablet or laptop",
+          "Insurance claim? Have the assignment of claim signed and send it to the insurer in the direct workflow",
+          "Every approval is stored in the job and in the audit trail"
         ],
         "file": "kundebestatigung.jpg",
         "alt": "PDR Kalk – customer approval with a digital signature on the device"
       },
       {
-        "label": "Insurer",
-        "title": "The insurer in four steps",
-        "benefit": "Assignment, dispatch and split invoice without a break in the chain.",
+        "label": "Repair",
+        "title": "Repair & handover",
+        "benefit": "Who did what — recorded before the car leaves the yard.",
         "points": [
-          "Guided direct workflow: damage, assignment of claim, dispatch, billing",
-          "Assignment of claim with a digital signature",
-          "Automatic split invoice: insurer and excess kept apart"
+          "Work report with technician allocation per panel",
+          "Courtesy car rental contract, also by the hour",
+          "Handover protocol with odometer, fuel level and signature"
         ],
-        "file": "Versicherung-Direkt.jpg",
-        "alt": "PDR Kalk – direct insurance workflow in four steps"
+        "file": "arbeitsrapporte.jpg",
+        "alt": "PDR Kalk – work report with line items and technician allocation"
       },
       {
         "label": "Invoice",
@@ -204,8 +204,8 @@
         "benefit": "Swiss QR invoice and ZUGFeRD/Factur-X without a second program.",
         "points": [
           "QR payment slip for Switzerland, ZUGFeRD/Factur-X for Germany",
-          "Credit notes, split, cancellation and manual invoices share the same numbering",
-          "Reverse charge for EU customers with a VAT ID"
+          "Split invoice for insurance claims: insurer and excess kept apart",
+          "Credit notes, cancellation and manual invoices share the same numbering"
         ],
         "file": "pdf-QR-rechnung.jpg",
         "alt": "PDR Kalk – Swiss QR invoice as a PDF"
@@ -1137,7 +1137,7 @@
         },
         {
           "t": "Invoice by email",
-          "d": "With Swiss VAT, or as reverse charge if you give us a VAT ID."
+          "d": "With Swiss VAT; EU companies with a VAT ID receive it without VAT (reverse charge)."
         },
         {
           "t": "Activate in the app",
@@ -1834,8 +1834,8 @@
       ],
       "steps": [
         {
-          "t": "Pick the tariff and record the vehicle",
-          "d": "Country and price matrix are already set correctly; vehicle data comes from a scan or from your keyboard.",
+          "t": "Record the vehicle, check the tariff",
+          "d": "Country and price matrix are preset; vehicle data comes from a scan or from your keyboard.",
           "file": "hagel-auftrag.jpg"
         },
         {
@@ -1887,8 +1887,8 @@
       ],
       "steps": [
         {
-          "t": "Pick the PDF",
-          "d": "The document needs a text layer — scans and photos will not work. PDR Kalk recognises the document type itself.",
+          "t": "Switch it on, pick the PDF",
+          "d": "Enable it once under Settings → Hail, then pick the PDF. It needs a text layer — scans and photos will not work; PDR Kalk recognises the document type itself.",
           "file": "hagel-auftrag.jpg"
         },
         {
@@ -1898,7 +1898,7 @@
         },
         {
           "t": "Apply it and carry on",
-          "d": "The figures land in the hail editor. Switch the feature on under Settings → Hail.",
+          "d": "The figures land in the hail editor; from there it is business as usual: report, approval, invoice.",
           "file": "pdf-hagel.jpg"
         }
       ],
@@ -1950,8 +1950,8 @@
           "file": "sub-verwalten.jpg"
         },
         {
-          "t": "Completion and analysis",
-          "d": "Dual notify informs both sides; the re-import merges rather than duplicates.",
+          "t": "Completion and re-import",
+          "d": "The sub closes the job and both sides are informed; the finished report comes back as a file and is read in without duplicates.",
           "file": "analysen2.jpg"
         }
       ],
@@ -1995,17 +1995,17 @@
         {
           "t": "Try it for {days} days",
           "d": "The full feature set, no sign-up and no credit card — the trial ends by itself.",
-          "file": "dashboard.jpg"
+          "file": "hagel-auftrag.jpg"
         },
         {
           "t": "Request a licence, receive the invoice",
           "d": "Fill in the form; the invoice usually arrives within 24 hours, without Swiss VAT for EU companies with a VAT ID.",
-          "file": "einstellungen1.jpg"
+          "file": "dashboard.jpg"
         },
         {
-          "t": "Carry on — backups in your hands",
-          "d": "A full backup as a ZIP on your device, with a smart restore that does not duplicate.",
-          "file": "backup.jpg"
+          "t": "Enter the licence, carry on",
+          "d": "Once payment arrives, enter the licence details under Settings; everything from the trial stays.",
+          "file": "einstellungen1.jpg"
         }
       ],
       "screenshotsTitle": "From the app"

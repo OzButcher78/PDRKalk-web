@@ -85,7 +85,7 @@
       {
         "value": "1×",
         "unit": "",
-        "label": "bezahlen — Dauerlizenz",
+        "label": "bezahlen, unbegrenzt nutzen",
         "note": "Kein Abo, kein Ablaufdatum, keine Kosten pro weiterem Nutzer."
       },
       {
@@ -97,8 +97,8 @@
       {
         "value": "6",
         "unit": "Länder",
-        "label": "{languages} App-Sprachen",
-        "note": "CH, DE, AT, AU, BE, NL — mit den richtigen Tarifen und Steuersätzen."
+        "label": "mit den richtigen Tarifen",
+        "note": "CH, DE, AT, AU, BE, NL · App in {languages} Sprachen"
       }
     ],
     "stats": [
@@ -163,40 +163,40 @@
         "alt": "PDR Kalk – Hagelkalkulation nach VFFS mit Dellenzahl pro Bauteil"
       },
       {
-        "label": "Rapport",
-        "title": "Rapport & Kostenvoranschlag",
+        "label": "Offerte",
+        "title": "Kostenvoranschlag & Rapport",
         "benefit": "Ein Klick — und das PDF trägt Ihr Logo.",
         "points": [
-          "Kostenvoranschlag, Hagel- oder Parkschadenrapport und Arbeitsrapport",
+          "Kostenvoranschlag sowie Hagel- oder Parkschadenrapport als PDF",
           "Fotodokumentation als eigenes PDF im Anhang",
           "Dokumentsprache frei wählbar — unabhängig von der App-Sprache"
         ],
-        "file": "arbeitsrapporte.jpg",
-        "alt": "PDR Kalk – Arbeitsrapport mit Positionen und Technikerzuteilung"
+        "file": "pdf-hagel.jpg",
+        "alt": "PDR Kalk – Hagelrapport als PDF mit eigenem Logo"
       },
       {
         "label": "Freigabe",
-        "title": "Kundenfreigabe vor Ort",
+        "title": "Freigabe — vom Kunden oder von der Versicherung",
         "benefit": "Unterschrift auf dem Gerät — kein Ausdruck, kein Nachfassen.",
         "points": [
-          "Kunde unterschreibt direkt auf Tablet oder Laptop",
-          "Freigabe wird im Auftrag und im Audit-Trail festgehalten",
-          "Per E-Mail versenden, mit Versandverfolgung"
+          "Der Kunde unterschreibt den Kostenvoranschlag direkt auf Tablet oder Laptop",
+          "Versicherungsfall? Abtretungserklärung unterschreiben lassen und im Direktworkflow an die Versicherung senden",
+          "Jede Freigabe wird im Auftrag und im Audit-Trail festgehalten"
         ],
         "file": "kundebestatigung.jpg",
         "alt": "PDR Kalk – Kundenfreigabe mit digitaler Unterschrift auf dem Gerät"
       },
       {
-        "label": "Versicherung",
-        "title": "Versicherung in vier Schritten",
-        "benefit": "Abtretung, Versand und Split-Rechnung ohne Medienbruch.",
+        "label": "Reparatur",
+        "title": "Reparatur & Übergabe",
+        "benefit": "Wer hat was gemacht — festgehalten, bevor das Auto vom Hof rollt.",
         "points": [
-          "Geführter Direktworkflow: Schaden, Abtretung, Versand, Abrechnung",
-          "Abtretungserklärung mit digitaler Unterschrift",
-          "Automatische Split-Rechnung: Versicherung und Selbstbehalt getrennt"
+          "Arbeitsrapport mit Techniker-Zuweisung pro Bauteil",
+          "Mietvertrag für den Ersatzwagen, auch stundenweise",
+          "Abnahmeprotokoll mit Kilometerstand, Tankfüllung und Unterschrift"
         ],
-        "file": "Versicherung-Direkt.jpg",
-        "alt": "PDR Kalk – Versicherungs-Direktworkflow in vier Schritten"
+        "file": "arbeitsrapporte.jpg",
+        "alt": "PDR Kalk – Arbeitsrapport mit Positionen und Technikerzuteilung"
       },
       {
         "label": "Rechnung",
@@ -204,8 +204,8 @@
         "benefit": "Schweizer QR-Rechnung und ZUGFeRD/Factur-X ohne Zusatzprogramm.",
         "points": [
           "QR-Einzahlungsschein für die Schweiz, ZUGFeRD/Factur-X für Deutschland",
-          "Gutschrift, Split-, Storno- und manuelle Rechnungen mit denselben Nummern",
-          "Reverse Charge bei EU-Kunden mit USt-IdNr."
+          "Split-Rechnung bei Versicherungsfällen: Versicherung und Selbstbehalt getrennt",
+          "Gutschrift, Storno und manuelle Rechnungen mit denselben Nummern"
         ],
         "file": "pdf-QR-rechnung.jpg",
         "alt": "PDR Kalk – Schweizer QR-Rechnung als PDF"
@@ -319,7 +319,7 @@
         "highlights": [
           {
             "t": "5 Preismatrizen",
-            "d": "VFFS, Zürich Mischhagel, Deutsche AW-Liste mit De-/Montage, Österreich und Belgische UPEX-Liste — Australien zusätzlich pro Panel, pro Fahrzeug, Triage oder stundenbasiert."
+            "d": "VFFS, Zürich Mischhagel, Deutsche AW-Liste mit De-/Montage, Österreich und Belgische UPEX-Liste — Australien zusätzlich pro Bauteil, pro Fahrzeug, Triage oder stundenbasiert."
           },
           {
             "t": "Parkschaden flexibel",
@@ -1137,7 +1137,7 @@
         },
         {
           "t": "Rechnung per E-Mail",
-          "d": "Mit Schweizer MwSt. oder als Reverse Charge, wenn Sie eine USt-IdNr. angeben."
+          "d": "Mit Schweizer MwSt.; EU-Firmen mit USt-IdNr. erhalten sie ohne MwSt. (Reverse Charge)."
         },
         {
           "t": "Lizenz in der App freischalten",
@@ -1406,7 +1406,7 @@
       {
         "id": "countries",
         "q": "Welche Länder und Tarife werden unterstützt?",
-        "a": "Schweiz (CHF, 8,1 %, QR-Rechnung; VFFS und Zürich Mischhagel), Deutschland (EUR, 19 %, DATEV, ZUGFeRD; Deutsche AW-Liste mit De-/Montage), Österreich (EUR, 20 %, eigene Matrix), Belgien (EUR, 21 %, Belgische UPEX-Liste), Australien (AUD, GST 10 %, pro Panel, pro Fahrzeug, Triage oder stundenbasiert) und die Niederlande (EUR, 21 %, Hagelmatrix folgt). Weitere Länder auf Anfrage. PDR Kalk enthält eine allgemeine deutsche AW-basierte Kalkulationsoption; diese steht in keiner Verbindung zu einem Verband oder Dritten."
+        "a": "Schweiz (CHF, 8,1 %, QR-Rechnung; VFFS und Zürich Mischhagel), Deutschland (EUR, 19 %, DATEV, ZUGFeRD; Deutsche AW-Liste mit De-/Montage), Österreich (EUR, 20 %, eigene Matrix), Belgien (EUR, 21 %, Belgische UPEX-Liste), Australien (AUD, GST 10 %, pro Bauteil, pro Fahrzeug, Triage oder stundenbasiert) und die Niederlande (EUR, 21 %, Hagelmatrix folgt). Weitere Länder auf Anfrage. PDR Kalk enthält eine allgemeine deutsche AW-basierte Kalkulationsoption; diese steht in keiner Verbindung zu einem Verband oder Dritten."
       },
       {
         "id": "invoices",
@@ -1834,8 +1834,8 @@
       ],
       "steps": [
         {
-          "t": "Tarif wählen und Fahrzeug erfassen",
-          "d": "Land und Preismatrix stehen bereits richtig; Fahrzeugdaten kommen per Scan oder von Hand.",
+          "t": "Fahrzeug erfassen, Tarif prüfen",
+          "d": "Land und Preismatrix sind voreingestellt; die Fahrzeugdaten kommen per Scan oder von Hand.",
           "file": "hagel-auftrag.jpg"
         },
         {
@@ -1887,8 +1887,8 @@
       ],
       "steps": [
         {
-          "t": "PDF wählen",
-          "d": "Das Dokument braucht eine Textebene — Scans und Fotos funktionieren nicht. Den Dokumenttyp erkennt PDR Kalk selbst.",
+          "t": "Funktion einschalten, PDF wählen",
+          "d": "Einmalig unter Einstellungen → Hagelschaden aktivieren, dann das PDF wählen. Es braucht eine Textebene — Scans und Fotos funktionieren nicht; den Dokumenttyp erkennt PDR Kalk selbst.",
           "file": "hagel-auftrag.jpg"
         },
         {
@@ -1898,7 +1898,7 @@
         },
         {
           "t": "Übernehmen und weiterarbeiten",
-          "d": "Die Zahlen landen im Hagel-Editor. Einschalten lässt sich die Funktion unter Einstellungen → Hagelschaden.",
+          "d": "Die Zahlen landen im Hagel-Editor; von dort geht es wie gewohnt weiter: Rapport, Freigabe, Rechnung.",
           "file": "pdf-hagel.jpg"
         }
       ],
@@ -1950,8 +1950,8 @@
           "file": "sub-verwalten.jpg"
         },
         {
-          "t": "Abschluss und Auswertung",
-          "d": "Dual-notify informiert beide Seiten, der Rückimport führt zusammen statt zu duplizieren.",
+          "t": "Abschluss und Rückimport",
+          "d": "Der Sub schliesst ab, beide Seiten werden informiert; der fertige Rapport kommt als Datei zurück und wird ohne Duplikate eingelesen.",
           "file": "analysen2.jpg"
         }
       ],
@@ -1995,17 +1995,17 @@
         {
           "t": "{days} Tage testen",
           "d": "Voller Funktionsumfang, ohne Anmeldung und ohne Kreditkarte — die Testversion endet automatisch.",
-          "file": "dashboard.jpg"
+          "file": "hagel-auftrag.jpg"
         },
         {
           "t": "Lizenz anfragen, Rechnung erhalten",
           "d": "Formular ausfüllen, Rechnung meist innert 24 Stunden; EU-Firmen mit USt-IdNr. ohne Schweizer MwSt.",
-          "file": "einstellungen1.jpg"
+          "file": "dashboard.jpg"
         },
         {
-          "t": "Weiterarbeiten — Backups in Ihrer Hand",
-          "d": "Vollbackup als ZIP auf Ihrem Gerät, intelligente Wiederherstellung ohne Duplikate.",
-          "file": "backup.jpg"
+          "t": "Lizenz eintragen, weiterarbeiten",
+          "d": "Nach Zahlungseingang tragen Sie die Lizenzangaben in den Einstellungen ein; alle Daten aus der Testphase bleiben erhalten.",
+          "file": "einstellungen1.jpg"
         }
       ],
       "screenshotsTitle": "Aus der App"

@@ -85,7 +85,7 @@
       {
         "value": "1×",
         "unit": "",
-        "label": "payé — licence perpétuelle",
+        "label": "paiement, usage illimité",
         "note": "Sans abonnement, sans date d'expiration, sans coût par utilisateur supplémentaire."
       },
       {
@@ -97,8 +97,8 @@
       {
         "value": "6",
         "unit": "pays",
-        "label": "{languages} langues d'interface",
-        "note": "CH, DE, AT, AU, BE, NL — avec les bons tarifs et taux de TVA."
+        "label": "avec les bons tarifs",
+        "note": "CH, DE, AT, AU, BE, NL · application en {languages} langues"
       }
     ],
     "stats": [
@@ -164,39 +164,39 @@
       },
       {
         "label": "Rapport",
-        "title": "Rapport et devis",
+        "title": "Devis et rapport",
         "benefit": "Un clic — et le PDF porte votre logo.",
         "points": [
-          "Devis, rapport grêle ou parking et rapport de travail",
+          "Devis et rapport grêle ou parking en PDF",
           "Documentation photo en PDF séparé",
           "Langue du document au choix — indépendante de la langue de l'application"
         ],
-        "file": "arbeitsrapporte.jpg",
-        "alt": "PDR Kalk – rapport de travail avec positions et attribution des techniciens"
+        "file": "pdf-hagel.jpg",
+        "alt": "PDR Kalk – rapport grêle en PDF avec votre logo"
       },
       {
         "label": "Accord",
-        "title": "Accord du client sur place",
+        "title": "Accord — du client ou de l'assurance",
         "benefit": "Signature sur l'appareil — sans impression, sans relance.",
         "points": [
-          "Le client signe directement sur la tablette ou le portable",
-          "L'accord est conservé dans le mandat et dans la piste d'audit",
-          "Envoi par e-mail, avec suivi d'envoi"
+          "Le client signe le devis directement sur la tablette ou le portable",
+          "Sinistre assurance ? Faire signer la cession de créance et l'envoyer à l'assurance dans le processus direct",
+          "Chaque accord est conservé dans le mandat et dans la piste d'audit"
         ],
         "file": "kundebestatigung.jpg",
         "alt": "PDR Kalk – accord du client avec signature numérique sur l'appareil"
       },
       {
-        "label": "Assurance",
-        "title": "L'assurance en quatre étapes",
-        "benefit": "Cession, envoi et facture séparée sans rupture de chaîne.",
+        "label": "Réparation",
+        "title": "Réparation et remise",
+        "benefit": "Qui a fait quoi — consigné avant que la voiture ne quitte l'atelier.",
         "points": [
-          "Processus direct guidé : dommage, cession de créance, envoi, facturation",
-          "Déclaration de cession avec signature numérique",
-          "Facture séparée automatique : assurance et franchise distinctes"
+          "Rapport de travail avec attribution des techniciens par élément",
+          "Contrat de location du véhicule de remplacement, aussi à l'heure",
+          "Procès-verbal de remise avec kilométrage, niveau de carburant et signature"
         ],
-        "file": "Versicherung-Direkt.jpg",
-        "alt": "PDR Kalk – processus direct avec l'assurance en quatre étapes"
+        "file": "arbeitsrapporte.jpg",
+        "alt": "PDR Kalk – rapport de travail avec positions et attribution des techniciens"
       },
       {
         "label": "Facture",
@@ -204,8 +204,8 @@
         "benefit": "Facture QR suisse et ZUGFeRD/Factur-X sans second logiciel.",
         "points": [
           "Bulletin QR pour la Suisse, ZUGFeRD/Factur-X pour l'Allemagne",
-          "Notes de crédit, factures séparées, annulations et factures manuelles partagent la même numérotation",
-          "Autoliquidation pour les clients de l'UE avec numéro de TVA intracommunautaire"
+          "Facture séparée pour les sinistres : assurance et franchise distinctes",
+          "Notes de crédit, annulations et factures manuelles avec la même numérotation"
         ],
         "file": "pdf-QR-rechnung.jpg",
         "alt": "PDR Kalk – facture QR suisse en PDF"
@@ -1137,7 +1137,7 @@
         },
         {
           "t": "Facture par e-mail",
-          "d": "Avec TVA suisse, ou en autoliquidation si vous indiquez un numéro de TVA."
+          "d": "Avec TVA suisse ; les entreprises de l'UE avec numéro de TVA intracommunautaire la reçoivent sans TVA (autoliquidation)."
         },
         {
           "t": "Activer la licence dans l'application",
@@ -1834,8 +1834,8 @@
       ],
       "steps": [
         {
-          "t": "Choisir le tarif et saisir le véhicule",
-          "d": "Le pays et la matrice sont déjà corrects ; les données du véhicule viennent d'un scan ou du clavier.",
+          "t": "Saisir le véhicule, vérifier le tarif",
+          "d": "Le pays et la matrice sont préréglés ; les données du véhicule viennent d'un scan ou du clavier.",
           "file": "hagel-auftrag.jpg"
         },
         {
@@ -1887,8 +1887,8 @@
       ],
       "steps": [
         {
-          "t": "Choisir le PDF",
-          "d": "Le document doit comporter une couche de texte — ni scans ni photos. PDR Kalk reconnaît lui-même le type de document.",
+          "t": "Activer, choisir le PDF",
+          "d": "Activez une fois sous Paramètres → Grêle, puis choisissez le PDF. Il doit comporter une couche de texte — ni scans ni photos ; PDR Kalk reconnaît lui-même le type de document.",
           "file": "hagel-auftrag.jpg"
         },
         {
@@ -1898,7 +1898,7 @@
         },
         {
           "t": "Reprendre et continuer",
-          "d": "Les chiffres arrivent dans l'éditeur grêle. La fonction s'active sous Paramètres → Grêle.",
+          "d": "Les chiffres arrivent dans l'éditeur grêle ; ensuite tout se déroule comme d'habitude : rapport, accord, facture.",
           "file": "pdf-hagel.jpg"
         }
       ],
@@ -1950,8 +1950,8 @@
           "file": "sub-verwalten.jpg"
         },
         {
-          "t": "Clôture et analyse",
-          "d": "La double notification informe les deux parties ; la réimportation fusionne au lieu de dupliquer.",
+          "t": "Clôture et réimportation",
+          "d": "Le sous-traitant clôture, les deux parties sont informées ; le rapport terminé revient sous forme de fichier et est importé sans doublons.",
           "file": "analysen2.jpg"
         }
       ],
@@ -1995,17 +1995,17 @@
         {
           "t": "Tester {days} jours",
           "d": "Toutes les fonctions, sans inscription ni carte de crédit — la version d'essai s'arrête d'elle-même.",
-          "file": "dashboard.jpg"
+          "file": "hagel-auftrag.jpg"
         },
         {
           "t": "Demander une licence, recevoir la facture",
           "d": "Remplissez le formulaire ; la facture arrive en général sous 24 heures, sans TVA suisse pour les entreprises de l'UE avec numéro de TVA.",
-          "file": "einstellungen1.jpg"
+          "file": "dashboard.jpg"
         },
         {
-          "t": "Continuer — vos sauvegardes chez vous",
-          "d": "Sauvegarde complète en ZIP sur votre appareil, restauration intelligente sans doublons.",
-          "file": "backup.jpg"
+          "t": "Saisir la licence, continuer",
+          "d": "Après réception du paiement, saisissez les données de licence dans les Paramètres ; toutes les données de la période d'essai sont conservées.",
+          "file": "einstellungen1.jpg"
         }
       ],
       "screenshotsTitle": "Dans l'application"

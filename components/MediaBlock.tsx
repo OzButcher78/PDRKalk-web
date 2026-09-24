@@ -45,7 +45,7 @@ export default function MediaBlock({
 }: Props) {
   const Heading = headingLevel === 2 ? 'h2' : 'h3';
   const media = (
-    <Shot file={file} alt={alt} sizes={sizes} ratio="4 / 3" />
+    <Shot file={file} alt={alt} sizes={sizes} />
   );
 
   return (
@@ -78,7 +78,7 @@ export default function MediaBlock({
         )}
         {file2 && alt2 && (
           <div className="media-block__second shot-frame">
-            <Shot file={file2} alt={alt2} sizes="22vw" ratio="4 / 3" />
+            <Shot file={file2} alt={alt2} sizes="22vw" />
           </div>
         )}
       </div>

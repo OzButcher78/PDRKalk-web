@@ -85,7 +85,7 @@
       {
         "value": "1×",
         "unit": "",
-        "label": "payment — one-time licence",
+        "label": "payment, use without limits",
         "note": "No subscription, no expiry date, no per-tech fees."
       },
       {
@@ -153,10 +153,10 @@
       },
       {
         "label": "Report",
-        "title": "Estimate and report",
+        "title": "Estimate & report",
         "benefit": "One click — and the PDF carries your logo.",
         "points": [
-          "Estimate, hail or dent report and work report",
+          "Estimate plus the hail or dent report as a PDF",
           "Photo documentation as its own PDF attachment",
           "Document language chosen freely — independent of the app language"
         ],
@@ -165,27 +165,27 @@
       },
       {
         "label": "Sign-off",
-        "title": "Customer sign-off on site",
+        "title": "Sign-off — by the customer or the insurer",
         "benefit": "Signed on the device — no printout, no chasing.",
         "points": [
-          "The customer signs directly on a tablet or laptop",
-          "The sign-off is stored in the job and in the audit trail",
-          "Send by email, with delivery tracking"
+          "The customer signs the estimate directly on a tablet or laptop",
+          "Insurance claim? Have the assignment of claim signed and send it to the insurer in the direct workflow",
+          "Every sign-off is stored in the job and in the audit trail"
         ],
         "file": "au/customer-sign-job.jpg",
         "alt": "PDR Kalk – customer sign-off with a digital signature on the device"
       },
       {
-        "label": "Insurer",
-        "title": "The insurer in four steps",
-        "benefit": "Assignment, dispatch and split invoice without a break in the chain.",
+        "label": "Repair",
+        "title": "Repair & handover",
+        "benefit": "Who did what — recorded before the car leaves the yard.",
         "points": [
-          "Guided direct workflow: damage, assignment of claim, dispatch, billing",
-          "Assignment of claim with a digital signature",
-          "Automatic split invoice: insurer and excess kept apart"
+          "Work report with technician allocation per panel",
+          "Courtesy car rental contract, also by the hour",
+          "Handover protocol with odometer, fuel level and signature"
         ],
-        "file": "au/direct-insurance-modal.jpg",
-        "alt": "PDR Kalk – direct insurance workflow in four steps"
+        "file": "au/jobs.jpg",
+        "alt": "PDR Kalk – jobs list with status, type and insurer"
       },
       {
         "label": "Tax invoice",
@@ -193,8 +193,8 @@
         "benefit": "GST itemised, ABN on the document, receipts included.",
         "points": [
           "GST tax invoices and receipts as a PDF with your logo",
-          "Credit notes, split, cancellation and manual invoices share the same numbering",
-          "Payments recorded with part payments"
+          "Split invoice for insurance claims: insurer and excess kept apart",
+          "Credit notes, cancellation and manual invoices share the same numbering"
         ],
         "file": "au/invoices.jpg",
         "alt": "PDR Kalk – invoice list with status and GST totals"

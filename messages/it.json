@@ -85,7 +85,7 @@
       {
         "value": "1×",
         "unit": "",
-        "label": "pagamento — licenza perpetua",
+        "label": "pagamento, uso illimitato",
         "note": "Senza abbonamento, senza scadenza, senza costi per utente."
       },
       {
@@ -97,8 +97,8 @@
       {
         "value": "6",
         "unit": "Paesi",
-        "label": "{languages} lingue dell'app",
-        "note": "CH, DE, AT, AU, BE, NL — con le tariffe e le aliquote corrette."
+        "label": "con le tariffe giuste",
+        "note": "CH, DE, AT, AU, BE, NL · app in {languages} lingue"
       }
     ],
     "stats": [
@@ -164,39 +164,39 @@
       },
       {
         "label": "Rapporto",
-        "title": "Rapporto e preventivo",
+        "title": "Preventivo e rapporto",
         "benefit": "Un clic — e il PDF porta il vostro logo.",
         "points": [
-          "Preventivo, rapporto grandine o parcheggio e rapporto di lavoro",
+          "Preventivo e rapporto grandine o parcheggio in PDF",
           "Documentazione fotografica come PDF separato",
           "Lingua del documento a scelta — indipendente dalla lingua dell'app"
         ],
-        "file": "arbeitsrapporte.jpg",
-        "alt": "PDR Kalk – rapporto di lavoro con posizioni e assegnazione dei tecnici"
+        "file": "pdf-hagel.jpg",
+        "alt": "PDR Kalk – rapporto grandine in PDF con il vostro logo"
       },
       {
         "label": "Approvazione",
-        "title": "Approvazione del cliente sul posto",
+        "title": "Approvazione — del cliente o dell'assicurazione",
         "benefit": "Firma sul dispositivo — senza stampe e senza solleciti.",
         "points": [
-          "Il cliente firma direttamente su tablet o portatile",
-          "L'approvazione resta nell'incarico e nella pista di controllo",
-          "Invio via e-mail, con tracciamento"
+          "Il cliente firma il preventivo direttamente su tablet o portatile",
+          "Sinistro assicurativo? Far firmare la cessione del credito e inviarla all'assicurazione nel flusso diretto",
+          "Ogni approvazione resta nell'incarico e nella pista di controllo"
         ],
         "file": "kundebestatigung.jpg",
         "alt": "PDR Kalk – approvazione del cliente con firma digitale sul dispositivo"
       },
       {
-        "label": "Assicurazione",
-        "title": "L'assicurazione in quattro passi",
-        "benefit": "Cessione, invio e fattura divisa senza interruzioni.",
+        "label": "Riparazione",
+        "title": "Riparazione e consegna",
+        "benefit": "Chi ha fatto cosa — registrato prima che l'auto lasci l'officina.",
         "points": [
-          "Flusso diretto guidato: danno, cessione del credito, invio, fatturazione",
-          "Dichiarazione di cessione con firma digitale",
-          "Fattura divisa automatica: assicurazione e franchigia separate"
+          "Rapporto di lavoro con assegnazione dei tecnici per elemento",
+          "Contratto di noleggio dell'auto sostitutiva, anche a ore",
+          "Verbale di consegna con chilometraggio, livello del carburante e firma"
         ],
-        "file": "Versicherung-Direkt.jpg",
-        "alt": "PDR Kalk – flusso diretto con l'assicurazione in quattro passi"
+        "file": "arbeitsrapporte.jpg",
+        "alt": "PDR Kalk – rapporto di lavoro con posizioni e assegnazione dei tecnici"
       },
       {
         "label": "Fattura",
@@ -204,8 +204,8 @@
         "benefit": "Fattura QR svizzera e ZUGFeRD/Factur-X senza un secondo programma.",
         "points": [
           "Polizza QR per la Svizzera, ZUGFeRD/Factur-X per la Germania",
-          "Note di credito, fatture divise, storni e fatture manuali condividono la stessa numerazione",
-          "Inversione contabile per clienti UE con partita IVA"
+          "Fattura divisa per i sinistri: assicurazione e franchigia separate",
+          "Note di credito, storni e fatture manuali con la stessa numerazione"
         ],
         "file": "pdf-QR-rechnung.jpg",
         "alt": "PDR Kalk – fattura QR svizzera in PDF"
@@ -1137,7 +1137,7 @@
         },
         {
           "t": "Fattura via e-mail",
-          "d": "Con IVA svizzera o in inversione contabile se indicate una partita IVA."
+          "d": "Con IVA svizzera; le aziende UE con partita IVA la ricevono senza IVA (inversione contabile)."
         },
         {
           "t": "Attivare la licenza nell'app",
@@ -1834,8 +1834,8 @@
       ],
       "steps": [
         {
-          "t": "Scegliere la tariffa e rilevare il veicolo",
-          "d": "Paese e matrice sono già corretti; i dati del veicolo arrivano da una scansione o da tastiera.",
+          "t": "Rilevare il veicolo, verificare la tariffa",
+          "d": "Paese e matrice sono preimpostati; i dati del veicolo arrivano da una scansione o da tastiera.",
           "file": "hagel-auftrag.jpg"
         },
         {
@@ -1887,8 +1887,8 @@
       ],
       "steps": [
         {
-          "t": "Scegliere il PDF",
-          "d": "Il documento deve avere un livello di testo — scansioni e foto non funzionano. PDR Kalk riconosce da solo il tipo di documento.",
+          "t": "Attivare, scegliere il PDF",
+          "d": "Attivate una volta in Impostazioni → Grandine, poi scegliete il PDF. Serve un livello di testo — scansioni e foto non funzionano; PDR Kalk riconosce da solo il tipo di documento.",
           "file": "hagel-auftrag.jpg"
         },
         {
@@ -1898,7 +1898,7 @@
         },
         {
           "t": "Acquisire e proseguire",
-          "d": "I numeri arrivano nell'editor grandine. La funzione si attiva in Impostazioni → Grandine.",
+          "d": "I numeri arrivano nell'editor grandine; da lì si prosegue come sempre: rapporto, approvazione, fattura.",
           "file": "pdf-hagel.jpg"
         }
       ],
@@ -1950,8 +1950,8 @@
           "file": "sub-verwalten.jpg"
         },
         {
-          "t": "Chiusura e analisi",
-          "d": "La doppia notifica informa entrambe le parti; la reimportazione unisce invece di duplicare.",
+          "t": "Chiusura e reimportazione",
+          "d": "Il sub chiude l'incarico ed entrambe le parti vengono informate; il rapporto finito torna come file e viene importato senza doppioni.",
           "file": "analysen2.jpg"
         }
       ],
@@ -1995,17 +1995,17 @@
         {
           "t": "Provare {days} giorni",
           "d": "Tutte le funzioni, senza registrazione e senza carta di credito — la prova termina da sola.",
-          "file": "dashboard.jpg"
+          "file": "hagel-auftrag.jpg"
         },
         {
           "t": "Richiedere la licenza, ricevere la fattura",
           "d": "Compilate il modulo; la fattura arriva di norma entro 24 ore, senza IVA svizzera per le aziende UE con partita IVA.",
-          "file": "einstellungen1.jpg"
+          "file": "dashboard.jpg"
         },
         {
-          "t": "Proseguire — i backup nelle vostre mani",
-          "d": "Backup completo in ZIP sul vostro dispositivo, ripristino intelligente senza doppioni.",
-          "file": "backup.jpg"
+          "t": "Inserire la licenza, proseguire",
+          "d": "Ricevuto il pagamento, inserite i dati di licenza nelle Impostazioni; tutti i dati del periodo di prova restano.",
+          "file": "einstellungen1.jpg"
         }
       ],
       "screenshotsTitle": "Dall'app"

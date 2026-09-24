@@ -3,6 +3,7 @@
 import {useLocale, useTranslations} from 'next-intl';
 import {useCountUp, formatCount} from '@/hooks/useCountUp';
 import {APP_LANGUAGE_COUNT} from '@/lib/site';
+import {interpolate} from '@/lib/interpolate';
 
 type Item = {value?: string; unit?: string; label: string; note?: string};
 type Stat = {value: string; unit: string; period: string};
@@ -40,7 +41,7 @@ export default function TrustBar() {
                 </span>
               )}
               <span className="trust-label">{t(`items.${i}.label`, {languages: APP_LANGUAGE_COUNT})}</span>
-              {item.note && <span className="trust-note">{item.note}</span>}
+              {item.note && <span className="trust-note">{interpolate(item.note)}</span>}
             </li>
           ))}
         </ul>

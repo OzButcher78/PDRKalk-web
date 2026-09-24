@@ -42,8 +42,6 @@ export default function Security({showPrivacy = true, locale}: {showPrivacy?: bo
                     file={item.file}
                     alt={item.alt}
                     sizes="(min-width: 1024px) 22vw, calc(100vw - 3rem)"
-                    ratio="4 / 3"
-                    objectPosition="top center"
                   />
                 </div>
               )}
