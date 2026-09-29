@@ -147,8 +147,8 @@
           "Envoyer les photos du smartphone directement dans le mandat par code QR",
           "Marquer les pièces endommagées à gauche/droite par élément, avec une note"
         ],
-        "file": "Teile-Notiz.jpg",
-        "alt": "PDR Kalk – saisie du dommage : pièces endommagées par élément avec note"
+        "file": "bauteil-waehlen.jpg",
+        "alt": "PDR Kalk – saisie du dommage : choix de l'élément endommagé sur le schéma du véhicule"
       },
       {
         "label": "Calcul",
@@ -196,7 +196,7 @@
           "Procès-verbal de remise avec kilométrage, niveau de carburant et signature"
         ],
         "file": "arbeitsrapporte.jpg",
-        "alt": "PDR Kalk – rapport de travail avec positions et attribution des techniciens"
+        "alt": "PDR Kalk – rapports de travail par statut : nouveau, en cours, terminé et facturé"
       },
       {
         "label": "Facture",
@@ -207,8 +207,8 @@
           "Facture séparée pour les sinistres : assurance et franchise distinctes",
           "Notes de crédit, annulations et factures manuelles avec la même numérotation"
         ],
-        "file": "pdf-QR-rechnung.jpg",
-        "alt": "PDR Kalk – facture QR suisse en PDF"
+        "file": "rechnungen.jpg",
+        "alt": "PDR Kalk – factures avec statut, échéance, note de crédit et annulation"
       },
       {
         "label": "Analyses",
@@ -220,7 +220,7 @@
           "DATEV CSV, export TVA et débiteurs ouverts en Excel"
         ],
         "file": "analysen1.jpg",
-        "alt": "PDR Kalk – tableau de bord des analyses avec chiffre d'affaires et trésorerie"
+        "alt": "PDR Kalk – analyses : chiffre d'affaires, encaissements, créances ouvertes et charge de l'équipe"
       }
     ]
   },
@@ -327,7 +327,7 @@
           },
           {
             "t": "Photos par code QR",
-            "d": "Jusqu'à 12 photos par mandat directement depuis le smartphone ; les données EXIF et GPS sont supprimées."
+            "d": "Jusqu'à 30 photos par mandat directement depuis le smartphone ; les données EXIF et GPS sont supprimées."
           },
           {
             "t": "Permis de circulation et VIN",
@@ -441,7 +441,7 @@
           },
           {
             "t": "Documentation photo en PDF",
-            "d": "jusqu'à 12 photos légendées, intégrées au rapport ou en document séparé."
+            "d": "jusqu'à 30 photos légendées, intégrées au rapport ou en document séparé."
           }
         ]
       },
@@ -977,6 +977,10 @@
       {
         "file": "Abtretungserklarung1.jpg",
         "caption": "Déclaration de cession"
+      },
+      {
+        "file": "pdf-mietvertrag.jpg",
+        "caption": "Contrat de location du véhicule de remplacement"
       }
     ],
     "more": {
@@ -986,7 +990,6 @@
         "Rapport de travail",
         "Note de crédit",
         "Facture séparée et facture d'annulation",
-        "Contrat de location du véhicule de remplacement",
         "Procès-verbal de remise",
         "Job package ZIP",
         "ZUGFeRD/Factur-X"
@@ -1010,7 +1013,7 @@
         "file": "Subzuweisen.jpg",
         "alt": "PDR Kalk – attribution d'un sous-traitant avec répartition en direct de la rémunération",
         "file2": "sub-verwalten.jpg",
-        "alt2": "PDR Kalk – gestion des mandats de sous-traitance reçus",
+        "alt2": "PDR Kalk – mandat de sous-traitance reçu chez le partenaire avec mandant, conditions et documents",
         "linkLabel": "En savoir plus sur le flux sous-traitants"
       },
       {
@@ -1610,14 +1613,6 @@
         "caption": "Tableau de bord — mandats en un coup d'œil"
       },
       {
-        "file": "analysen1.jpg",
-        "caption": "Tableau de bord analytique — chiffre d'affaires et trésorerie"
-      },
-      {
-        "file": "analysen2.jpg",
-        "caption": "Meilleurs clients et entonnoir de conversion"
-      },
-      {
         "file": "hagel-auftrag.jpg",
         "caption": "Calcul des dommages de grêle (VFFS)"
       },
@@ -1626,36 +1621,88 @@
         "caption": "Dommages de grêle — matrice AW allemande avec dépose/repose"
       },
       {
+        "file": "bauteil-waehlen.jpg",
+        "caption": "Choisir l'élément — schéma du véhicule cliquable"
+      },
+      {
         "file": "parkschaden-erfassung.jpg",
-        "caption": "Dommages de parking — par élément / forfait / AW"
+        "caption": "Dommages de parking — par élément, forfait, AW ou calcul intelligent"
       },
       {
-        "file": "manuel-rechungen.jpg",
-        "caption": "Facture manuelle (sans rapport)"
+        "file": "parkschaden-leistungen.jpg",
+        "caption": "Dommages de parking — prestations supplémentaires et total"
       },
       {
-        "file": "Versicherung-Direkt.jpg",
-        "caption": "Flux direct avec l'assurance — 4 étapes"
+        "file": "dokument-import.jpg",
+        "caption": "Import de documents — écran de contrôle avec vérification des totaux"
       },
       {
         "file": "kundebestatigung.jpg",
         "caption": "Accord du client sur place avec signature"
       },
       {
-        "file": "Subzuweisen.jpg",
-        "caption": "Attribuer un sous-traitant — répartition en direct"
-      },
-      {
-        "file": "sub-verwalten.jpg",
-        "caption": "Gérer le mandat de sous-traitance"
+        "file": "Versicherung-Direkt.jpg",
+        "caption": "Flux direct avec l'assurance — 4 étapes"
       },
       {
         "file": "Abtretungserklarung1.jpg",
         "caption": "Déclaration de cession à l'assureur"
       },
       {
-        "file": "Techniker-und-Dokumenten.jpg",
-        "caption": "Panneau de documents par mandat"
+        "file": "arbeitsrapporte.jpg",
+        "caption": "Rapports de travail par statut"
+      },
+      {
+        "file": "abnahmeprotokoll.jpg",
+        "caption": "Procès-verbal de remise — signé sur l'appareil"
+      },
+      {
+        "file": "ersatzwagen.jpg",
+        "caption": "Contrat de location du véhicule de remplacement — période, tarif journalier, signature"
+      },
+      {
+        "file": "rechnungen.jpg",
+        "caption": "Factures — statut, échéance, note de crédit et annulation"
+      },
+      {
+        "file": "manuel-rechungen.jpg",
+        "caption": "Facture manuelle (sans rapport)"
+      },
+      {
+        "file": "Subzuweisen.jpg",
+        "caption": "Attribuer un sous-traitant — répartition en direct"
+      },
+      {
+        "file": "sub-ohne-rapport.jpg",
+        "caption": "Mandat au sous-traitant — sans rapport"
+      },
+      {
+        "file": "sub-verwalten.jpg",
+        "caption": "Mandat reçu chez le partenaire"
+      },
+      {
+        "file": "sub-abrechnung.jpg",
+        "caption": "Décompte sous-traitant"
+      },
+      {
+        "file": "analysen1.jpg",
+        "caption": "Analyses — indicateurs et charge de l'équipe"
+      },
+      {
+        "file": "analysen2.jpg",
+        "caption": "Entonnoir de conversion, éléments endommagés et marques"
+      },
+      {
+        "file": "adresse-buch.jpg",
+        "caption": "Carnet d'adresses"
+      },
+      {
+        "file": "kunde-bearbeiten.jpg",
+        "caption": "Fiche client — pièces jointes et options par client"
+      },
+      {
+        "file": "dokumentsprache.jpg",
+        "caption": "Langue des documents — langue de l'app et des PDF au choix"
       },
       {
         "file": "email-doks.jpg",
@@ -1682,20 +1729,20 @@
         "caption": "Manuel d'utilisation intégré et complet"
       },
       {
-        "file": "Teile-Notiz.jpg",
-        "caption": "Pièces endommagées et note"
-      },
-      {
-        "file": "pdf-QR-rechnung.jpg",
-        "caption": "Facture QR suisse"
-      },
-      {
-        "file": "hagel-auftrag2.jpg",
-        "caption": "Dommages de grêle — vue détaillée"
+        "file": "einstellungen.jpg",
+        "caption": "Paramètres — tableaux tarifaires et grêle"
       },
       {
         "file": "pdf-hagel.jpg",
         "caption": "Rapport de grêle PDF"
+      },
+      {
+        "file": "pdf-hagel-teile.jpg",
+        "caption": "Rapport grêle — pièces et dépose/repose"
+      },
+      {
+        "file": "pdf-photos.jpg",
+        "caption": "Documentation photo PDF"
       },
       {
         "file": "pdf-park.jpg",
@@ -1706,28 +1753,12 @@
         "caption": "Facture PDF"
       },
       {
-        "file": "pdf-photos.jpg",
-        "caption": "Documentation photo PDF"
+        "file": "pdf-QR-rechnung.jpg",
+        "caption": "Facture QR suisse"
       },
       {
-        "file": "arbeitsrapporte.jpg",
-        "caption": "Rapports de travail"
-      },
-      {
-        "file": "adresse-buch.jpg",
-        "caption": "Carnet d'adresses"
-      },
-      {
-        "file": "einstellungen1.jpg",
-        "caption": "Paramètres (1)"
-      },
-      {
-        "file": "einstellungen2.jpg",
-        "caption": "Paramètres (2)"
-      },
-      {
-        "file": "einstellungen3.jpg",
-        "caption": "Paramètres (3)"
+        "file": "pdf-mietvertrag.jpg",
+        "caption": "Contrat de location PDF"
       }
     ]
   },
@@ -1825,7 +1856,7 @@
         },
         {
           "t": "Photos sans câble",
-          "d": "Jusqu'à 12 photos depuis le smartphone par code QR ; les données EXIF et GPS sont supprimées."
+          "d": "Jusqu'à 30 photos depuis le smartphone par code QR ; les données EXIF et GPS sont supprimées."
         },
         {
           "t": "Directement vers la facture",
@@ -1841,7 +1872,7 @@
         {
           "t": "Saisir les impacts par élément",
           "d": "Le total se recalcule en direct. Pièces, prestations externes et dépose/repose se saisissent dans la même fenêtre.",
-          "file": "hagel-auftrag2.jpg"
+          "file": "hagel-auftrag-aw.jpg"
         },
         {
           "t": "Rapport, accord, facture",
@@ -1858,7 +1889,7 @@
       "title": "Toujours en train de saisir les données du scanner grêle à la main ?",
       "lead": "PDR Kalk lit les protocoles d'impacts et les calculs SilverDAT en PDF — en local sur votre appareil, avec un écran de contrôle avant la reprise. Ensuite, vous continuez comme d'habitude : rapport, accord du client, assurance, facture.",
       "ctaSecondary": "En savoir plus sur le calcul grêle",
-      "heroAlt": "PDR Kalk – éditeur grêle après la reprise d'un calcul importé",
+      "heroAlt": "PDR Kalk – écran de contrôle de l'import : positions reconnues avec vérification des totaux",
       "benefits": [
         {
           "t": "Éléments et impacts par classe de taille",
@@ -1894,7 +1925,7 @@
         {
           "t": "Vérifier l'écran de contrôle",
           "d": "Contrôles de plausibilité sur les totaux d'impacts (≤ 25 mm, > 25 mm, > 50 mm) et le nombre d'éléments, regroupés en « Sera repris · À clarifier · Inchangé ».",
-          "file": "hagel-auftrag2.jpg"
+          "file": "dokument-import.jpg"
         },
         {
           "t": "Reprendre et continuer",
@@ -1952,7 +1983,7 @@
         {
           "t": "Clôture et réimportation",
           "d": "Le sous-traitant clôture, les deux parties sont informées ; le rapport terminé revient sous forme de fichier et est importé sans doublons.",
-          "file": "analysen2.jpg"
+          "file": "sub-abrechnung.jpg"
         }
       ],
       "screenshotsTitle": "Dans l'application"
@@ -2005,7 +2036,7 @@
         {
           "t": "Saisir la licence, continuer",
           "d": "Après réception du paiement, saisissez les données de licence dans les Paramètres ; toutes les données de la période d'essai sont conservées.",
-          "file": "einstellungen1.jpg"
+          "file": "einstellungen.jpg"
         }
       ],
       "screenshotsTitle": "Dans l'application"

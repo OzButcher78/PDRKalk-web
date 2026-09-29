@@ -27,7 +27,7 @@ export const PAGES: PageDef[] = [
     group: 'capture',
     faq: ['countries', 'invoices', 'import', 'trial', 'licence'],
     related: ['import', 'subcontractors'],
-    shots: ['hagel-auftrag.jpg', 'hagel-auftrag-aw.jpg', 'hagel-auftrag2.jpg', 'Teile-Notiz.jpg', 'pdf-hagel.jpg', 'arbeitsrapporte.jpg'],
+    shots: ['hagel-auftrag.jpg', 'hagel-auftrag-aw.jpg', 'dokument-import.jpg', 'pdf-hagel.jpg', 'pdf-hagel-teile.jpg', 'pdf-photos.jpg'],
   },
   {
     key: 'import',
@@ -36,7 +36,7 @@ export const PAGES: PageDef[] = [
     faq: ['import', 'ai', 'data', 'countries', 'trial'],
     related: ['hail'],
     badge: 'new',
-    shots: ['hagel-auftrag.jpg', 'hagel-auftrag2.jpg', 'Teile-Notiz.jpg', 'pdf-hagel.jpg'],
+    shots: ['dokument-import.jpg', 'hagel-auftrag.jpg', 'einstellungen.jpg', 'pdf-hagel.jpg'],
   },
   {
     key: 'subcontractors',
@@ -44,7 +44,7 @@ export const PAGES: PageDef[] = [
     group: 'team',
     faq: ['users', 'multiDevice', 'audit', 'licence', 'trial'],
     related: ['hail', 'noSubscription'],
-    shots: ['Subzuweisen.jpg', 'sub-verwalten.jpg', 'backup.jpg', 'analysen2.jpg', 'adresse-buch.jpg'],
+    shots: ['Subzuweisen.jpg', 'sub-ohne-rapport.jpg', 'sub-verwalten.jpg', 'sub-abrechnung.jpg', 'analysen1.jpg', 'adresse-buch.jpg'],
   },
   {
     key: 'noSubscription',
@@ -53,7 +53,7 @@ export const PAGES: PageDef[] = [
     faq: ['licence', 'price', 'updates', 'buy', 'trial', 'users'],
     related: ['subcontractors'],
     showPricingTables: true,
-    shots: ['dashboard.jpg', 'einstellungen1.jpg', 'backup.jpg', 'wiederherstellen.jpg'],
+    shots: ['dashboard.jpg', 'einstellungen.jpg', 'backup.jpg', 'wiederherstellen.jpg'],
   },
 ];
 

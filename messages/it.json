@@ -147,8 +147,8 @@
           "Inviare le foto dallo smartphone direttamente nell'incarico tramite codice QR",
           "Contrassegnare le parti danneggiate sinistra/destra per elemento, con una nota"
         ],
-        "file": "Teile-Notiz.jpg",
-        "alt": "PDR Kalk – rilevamento del danno: parti danneggiate per elemento con nota"
+        "file": "bauteil-waehlen.jpg",
+        "alt": "PDR Kalk – rilevamento del danno: scelta dell'elemento danneggiato sullo schema del veicolo"
       },
       {
         "label": "Calcolare",
@@ -196,7 +196,7 @@
           "Verbale di consegna con chilometraggio, livello del carburante e firma"
         ],
         "file": "arbeitsrapporte.jpg",
-        "alt": "PDR Kalk – rapporto di lavoro con posizioni e assegnazione dei tecnici"
+        "alt": "PDR Kalk – rapporti di lavoro per stato: nuovo, in lavorazione, concluso e fatturato"
       },
       {
         "label": "Fattura",
@@ -207,8 +207,8 @@
           "Fattura divisa per i sinistri: assicurazione e franchigia separate",
           "Note di credito, storni e fatture manuali con la stessa numerazione"
         ],
-        "file": "pdf-QR-rechnung.jpg",
-        "alt": "PDR Kalk – fattura QR svizzera in PDF"
+        "file": "rechnungen.jpg",
+        "alt": "PDR Kalk – fatture con stato, scadenza, nota di credito e storno"
       },
       {
         "label": "Analisi",
@@ -220,7 +220,7 @@
           "DATEV CSV, esportazione IVA e debitori aperti in Excel"
         ],
         "file": "analysen1.jpg",
-        "alt": "PDR Kalk – dashboard delle analisi con fatturato e flusso di cassa"
+        "alt": "PDR Kalk – analisi: fatturato, incassi, crediti aperti e carico del team"
       }
     ]
   },
@@ -327,7 +327,7 @@
           },
           {
             "t": "Foto tramite codice QR",
-            "d": "Fino a 12 foto per incarico direttamente dallo smartphone; i dati EXIF e GPS vengono rimossi."
+            "d": "Fino a 30 foto per incarico direttamente dallo smartphone; i dati EXIF e GPS vengono rimossi."
           },
           {
             "t": "Licenza di circolazione e VIN",
@@ -441,7 +441,7 @@
           },
           {
             "t": "Documentazione fotografica in PDF",
-            "d": "fino a 12 foto con didascalia, nel rapporto o come documento separato."
+            "d": "fino a 30 foto con didascalia, nel rapporto o come documento separato."
           }
         ]
       },
@@ -977,6 +977,10 @@
       {
         "file": "Abtretungserklarung1.jpg",
         "caption": "Dichiarazione di cessione"
+      },
+      {
+        "file": "pdf-mietvertrag.jpg",
+        "caption": "Contratto di noleggio dell'auto sostitutiva"
       }
     ],
     "more": {
@@ -986,7 +990,6 @@
         "Rapporto di lavoro",
         "Nota di credito",
         "Fattura divisa e storno",
-        "Contratto di noleggio dell'auto sostitutiva",
         "Verbale di consegna",
         "Job package ZIP",
         "ZUGFeRD/Factur-X"
@@ -1010,7 +1013,7 @@
         "file": "Subzuweisen.jpg",
         "alt": "PDR Kalk – assegnazione di un subappaltatore con ripartizione del compenso in tempo reale",
         "file2": "sub-verwalten.jpg",
-        "alt2": "PDR Kalk – gestione degli incarichi di subappalto ricevuti",
+        "alt2": "PDR Kalk – incarico di subappalto ricevuto presso il partner con committente, condizioni e documenti",
         "linkLabel": "Scoprite di più sul flusso subappaltatori"
       },
       {
@@ -1610,14 +1613,6 @@
         "caption": "Dashboard — incarichi a colpo d'occhio"
       },
       {
-        "file": "analysen1.jpg",
-        "caption": "Dashboard analitica — fatturato e flusso di cassa"
-      },
-      {
-        "file": "analysen2.jpg",
-        "caption": "Clienti principali e imbuto di conversione"
-      },
-      {
         "file": "hagel-auftrag.jpg",
         "caption": "Calcolo danni da grandine (VFFS)"
       },
@@ -1626,36 +1621,88 @@
         "caption": "Danni da grandine — lista AW tedesca con smontaggio/rimontaggio"
       },
       {
+        "file": "bauteil-waehlen.jpg",
+        "caption": "Scegliere l'elemento — schema del veicolo cliccabile"
+      },
+      {
         "file": "parkschaden-erfassung.jpg",
-        "caption": "Danni da parcheggio — per elemento / forfait / su base AW"
+        "caption": "Danni da parcheggio — per elemento, forfait, AW o calcolo smart"
       },
       {
-        "file": "manuel-rechungen.jpg",
-        "caption": "Fattura manuale (senza rapporto)"
+        "file": "parkschaden-leistungen.jpg",
+        "caption": "Danni da parcheggio — prestazioni aggiuntive e totale"
       },
       {
-        "file": "Versicherung-Direkt.jpg",
-        "caption": "Flusso diretto con l'assicurazione — 4 passi"
+        "file": "dokument-import.jpg",
+        "caption": "Import documenti — schermata di controllo con verifica dei totali"
       },
       {
         "file": "kundebestatigung.jpg",
         "caption": "Approvazione del cliente sul posto con firma"
       },
       {
-        "file": "Subzuweisen.jpg",
-        "caption": "Assegnazione del subappaltatore — ripartizione in tempo reale"
-      },
-      {
-        "file": "sub-verwalten.jpg",
-        "caption": "Gestione dell'incarico di subappalto"
+        "file": "Versicherung-Direkt.jpg",
+        "caption": "Flusso diretto con l'assicurazione — 4 passi"
       },
       {
         "file": "Abtretungserklarung1.jpg",
         "caption": "Dichiarazione di cessione all'assicuratore"
       },
       {
-        "file": "Techniker-und-Dokumenten.jpg",
-        "caption": "Pannello documenti per incarico"
+        "file": "arbeitsrapporte.jpg",
+        "caption": "Rapporti di lavoro per stato"
+      },
+      {
+        "file": "abnahmeprotokoll.jpg",
+        "caption": "Verbale di consegna — firmato sul dispositivo"
+      },
+      {
+        "file": "ersatzwagen.jpg",
+        "caption": "Contratto di noleggio dell'auto sostitutiva — periodo, tariffa giornaliera, firma"
+      },
+      {
+        "file": "rechnungen.jpg",
+        "caption": "Fatture — stato, scadenza, nota di credito e storno"
+      },
+      {
+        "file": "manuel-rechungen.jpg",
+        "caption": "Fattura manuale (senza rapporto)"
+      },
+      {
+        "file": "Subzuweisen.jpg",
+        "caption": "Assegnazione del subappaltatore — ripartizione in tempo reale"
+      },
+      {
+        "file": "sub-ohne-rapport.jpg",
+        "caption": "Incarico al sub — senza rapporto"
+      },
+      {
+        "file": "sub-verwalten.jpg",
+        "caption": "Incarico presso il partner"
+      },
+      {
+        "file": "sub-abrechnung.jpg",
+        "caption": "Conteggio subappaltatore"
+      },
+      {
+        "file": "analysen1.jpg",
+        "caption": "Analisi — indicatori e carico del team"
+      },
+      {
+        "file": "analysen2.jpg",
+        "caption": "Imbuto di conversione, elementi danneggiati e marche"
+      },
+      {
+        "file": "adresse-buch.jpg",
+        "caption": "Rubrica"
+      },
+      {
+        "file": "kunde-bearbeiten.jpg",
+        "caption": "Scheda cliente — allegati e-mail e opzioni per cliente"
+      },
+      {
+        "file": "dokumentsprache.jpg",
+        "caption": "Lingua dei documenti — lingua dell'app e dei PDF separate"
       },
       {
         "file": "email-doks.jpg",
@@ -1682,20 +1729,20 @@
         "caption": "Manuale d'uso integrato e completo"
       },
       {
-        "file": "Teile-Notiz.jpg",
-        "caption": "Parti danneggiate e nota"
-      },
-      {
-        "file": "pdf-QR-rechnung.jpg",
-        "caption": "Fattura QR svizzera"
-      },
-      {
-        "file": "hagel-auftrag2.jpg",
-        "caption": "Danni da grandine — vista dettagliata"
+        "file": "einstellungen.jpg",
+        "caption": "Impostazioni — tabelle tariffarie e grandine"
       },
       {
         "file": "pdf-hagel.jpg",
         "caption": "Rapporto grandine PDF"
+      },
+      {
+        "file": "pdf-hagel-teile.jpg",
+        "caption": "Rapporto grandine — parti e smontaggio/rimontaggio"
+      },
+      {
+        "file": "pdf-photos.jpg",
+        "caption": "Documentazione fotografica PDF"
       },
       {
         "file": "pdf-park.jpg",
@@ -1706,28 +1753,12 @@
         "caption": "Fattura PDF"
       },
       {
-        "file": "pdf-photos.jpg",
-        "caption": "Documentazione fotografica PDF"
+        "file": "pdf-QR-rechnung.jpg",
+        "caption": "Fattura QR svizzera"
       },
       {
-        "file": "arbeitsrapporte.jpg",
-        "caption": "Rapporti di lavoro"
-      },
-      {
-        "file": "adresse-buch.jpg",
-        "caption": "Rubrica"
-      },
-      {
-        "file": "einstellungen1.jpg",
-        "caption": "Impostazioni (1)"
-      },
-      {
-        "file": "einstellungen2.jpg",
-        "caption": "Impostazioni (2)"
-      },
-      {
-        "file": "einstellungen3.jpg",
-        "caption": "Impostazioni (3)"
+        "file": "pdf-mietvertrag.jpg",
+        "caption": "Contratto di noleggio PDF"
       }
     ]
   },
@@ -1825,7 +1856,7 @@
         },
         {
           "t": "Foto senza cavo",
-          "d": "Fino a 12 foto dallo smartphone tramite codice QR; i dati EXIF e GPS vengono rimossi."
+          "d": "Fino a 30 foto dallo smartphone tramite codice QR; i dati EXIF e GPS vengono rimossi."
         },
         {
           "t": "Direttamente verso la fattura",
@@ -1841,7 +1872,7 @@
         {
           "t": "Inserire i bolli per elemento",
           "d": "Il totale si aggiorna in tempo reale. Parti, prestazioni esterne e smontaggio/rimontaggio si registrano nella stessa finestra.",
-          "file": "hagel-auftrag2.jpg"
+          "file": "hagel-auftrag-aw.jpg"
         },
         {
           "t": "Rapporto, approvazione, fattura",
@@ -1858,7 +1889,7 @@
       "title": "State ancora digitando a mano i dati dello scanner grandine?",
       "lead": "PDR Kalk legge protocolli dei bolli e calcoli SilverDAT in PDF — in locale sul vostro dispositivo, con una schermata di controllo prima dell'acquisizione. Poi proseguite come sempre: rapporto, approvazione del cliente, assicurazione, fattura.",
       "ctaSecondary": "Scoprite di più sul calcolo grandine",
-      "heroAlt": "PDR Kalk – editor grandine dopo l'acquisizione di un calcolo importato",
+      "heroAlt": "PDR Kalk – schermata di controllo dell'import: posizioni riconosciute con verifica dei totali",
       "benefits": [
         {
           "t": "Elementi e bolli per classe di grandezza",
@@ -1894,7 +1925,7 @@
         {
           "t": "Verificare la schermata di controllo",
           "d": "Controlli di plausibilità su somme dei bolli (≤ 25 mm, > 25 mm, > 50 mm) e numero di elementi, raggruppati in «Verrà acquisito · Da chiarire · Invariato».",
-          "file": "hagel-auftrag2.jpg"
+          "file": "dokument-import.jpg"
         },
         {
           "t": "Acquisire e proseguire",
@@ -1952,7 +1983,7 @@
         {
           "t": "Chiusura e reimportazione",
           "d": "Il sub chiude l'incarico ed entrambe le parti vengono informate; il rapporto finito torna come file e viene importato senza doppioni.",
-          "file": "analysen2.jpg"
+          "file": "sub-abrechnung.jpg"
         }
       ],
       "screenshotsTitle": "Dall'app"
@@ -2005,7 +2036,7 @@
         {
           "t": "Inserire la licenza, proseguire",
           "d": "Ricevuto il pagamento, inserite i dati di licenza nelle Impostazioni; tutti i dati del periodo di prova restano.",
-          "file": "einstellungen1.jpg"
+          "file": "einstellungen.jpg"
         }
       ],
       "screenshotsTitle": "Dall'app"

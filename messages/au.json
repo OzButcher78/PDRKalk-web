@@ -289,7 +289,7 @@
           },
           {
             "t": "Photos by QR code",
-            "d": "Up to 12 photos per job straight from a phone; EXIF and GPS data are stripped."
+            "d": "Up to 30 photos per job straight from a phone; EXIF and GPS data are stripped."
           },
           {
             "t": "VIN scanner",
@@ -393,7 +393,7 @@
           },
           {
             "t": "Photo documentation as a PDF",
-            "d": "up to 12 captioned photos, inside the report or as a separate document."
+            "d": "up to 30 captioned photos, inside the report or as a separate document."
           }
         ]
       },

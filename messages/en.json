@@ -147,8 +147,8 @@
           "Send photos from your phone straight into the job via QR code",
           "Mark damaged parts left/right per panel, with a note"
         ],
-        "file": "Teile-Notiz.jpg",
-        "alt": "PDR Kalk – damage capture: damaged parts per panel with a note"
+        "file": "bauteil-waehlen.jpg",
+        "alt": "PDR Kalk – damage capture: picking the damaged panel on the vehicle diagram"
       },
       {
         "label": "Estimate",
@@ -196,7 +196,7 @@
           "Handover protocol with odometer, fuel level and signature"
         ],
         "file": "arbeitsrapporte.jpg",
-        "alt": "PDR Kalk – work report with line items and technician allocation"
+        "alt": "PDR Kalk – work reports by status: new, in progress, done and invoiced"
       },
       {
         "label": "Invoice",
@@ -207,8 +207,8 @@
           "Split invoice for insurance claims: insurer and excess kept apart",
           "Credit notes, cancellation and manual invoices share the same numbering"
         ],
-        "file": "pdf-QR-rechnung.jpg",
-        "alt": "PDR Kalk – Swiss QR invoice as a PDF"
+        "file": "rechnungen.jpg",
+        "alt": "PDR Kalk – invoices with status, due date, credit note and cancellation"
       },
       {
         "label": "Analytics",
@@ -220,7 +220,7 @@
           "DATEV CSV, VAT export and open receivables as Excel"
         ],
         "file": "analysen1.jpg",
-        "alt": "PDR Kalk – analytics dashboard with revenue and cash flow"
+        "alt": "PDR Kalk – analytics: revenue, payments received, open receivables and team utilisation"
       }
     ]
   },
@@ -327,7 +327,7 @@
           },
           {
             "t": "Photos by QR code",
-            "d": "Up to 12 photos per job straight from a phone; EXIF and GPS data are stripped."
+            "d": "Up to 30 photos per job straight from a phone; EXIF and GPS data are stripped."
           },
           {
             "t": "Registration & VIN",
@@ -441,7 +441,7 @@
           },
           {
             "t": "Photo documentation as a PDF",
-            "d": "up to 12 captioned photos, inside the report or as a separate document."
+            "d": "up to 30 captioned photos, inside the report or as a separate document."
           }
         ]
       },
@@ -977,6 +977,10 @@
       {
         "file": "Abtretungserklarung1.jpg",
         "caption": "Assignment of claim"
+      },
+      {
+        "file": "pdf-mietvertrag.jpg",
+        "caption": "Courtesy car rental contract"
       }
     ],
     "more": {
@@ -986,7 +990,6 @@
         "Work report",
         "Credit note",
         "Split and cancellation invoice",
-        "Courtesy car rental contract",
         "Handover protocol",
         "Job package ZIP",
         "ZUGFeRD/Factur-X"
@@ -1010,7 +1013,7 @@
         "file": "Subzuweisen.jpg",
         "alt": "PDR Kalk – assigning a subcontractor with a live split of the payment",
         "file2": "sub-verwalten.jpg",
-        "alt2": "PDR Kalk – managing received subcontractor jobs",
+        "alt2": "PDR Kalk – received sub job at the partner business with client, terms and documents",
         "linkLabel": "More about the subcontractor workflow"
       },
       {
@@ -1610,14 +1613,6 @@
         "caption": "Dashboard — jobs at a glance"
       },
       {
-        "file": "analysen1.jpg",
-        "caption": "Analytics dashboard — revenue & cash flow"
-      },
-      {
-        "file": "analysen2.jpg",
-        "caption": "Top customers & conversion funnel"
-      },
-      {
         "file": "hagel-auftrag.jpg",
         "caption": "Hail damage estimation (VFFS)"
       },
@@ -1626,36 +1621,88 @@
         "caption": "Hail damage — German AW list with removal/refitting"
       },
       {
+        "file": "bauteil-waehlen.jpg",
+        "caption": "Pick a panel — clickable vehicle diagram"
+      },
+      {
         "file": "parkschaden-erfassung.jpg",
-        "caption": "Parking damage — per panel / fixed price / AW-based"
+        "caption": "Parking damage — per panel, fixed price, AW or smart calculation"
       },
       {
-        "file": "manuel-rechungen.jpg",
-        "caption": "Manual invoice (no report required)"
+        "file": "parkschaden-leistungen.jpg",
+        "caption": "Parking damage — additional services & total"
       },
       {
-        "file": "Versicherung-Direkt.jpg",
-        "caption": "Direct insurance workflow — 4 steps"
+        "file": "dokument-import.jpg",
+        "caption": "Document import — review screen with totals check"
       },
       {
         "file": "kundebestatigung.jpg",
         "caption": "In-person customer approval with signature"
       },
       {
-        "file": "Subzuweisen.jpg",
-        "caption": "Assign subcontractor — live split"
-      },
-      {
-        "file": "sub-verwalten.jpg",
-        "caption": "Manage subcontractor job"
+        "file": "Versicherung-Direkt.jpg",
+        "caption": "Direct insurance workflow — 4 steps"
       },
       {
         "file": "Abtretungserklarung1.jpg",
         "caption": "Assignment of claim to the insurer"
       },
       {
-        "file": "Techniker-und-Dokumenten.jpg",
-        "caption": "Documents panel per job"
+        "file": "arbeitsrapporte.jpg",
+        "caption": "Work reports by status"
+      },
+      {
+        "file": "abnahmeprotokoll.jpg",
+        "caption": "Handover protocol — signed on the device"
+      },
+      {
+        "file": "ersatzwagen.jpg",
+        "caption": "Courtesy car rental contract — period, daily rate, signature"
+      },
+      {
+        "file": "rechnungen.jpg",
+        "caption": "Invoices — status, due date, credit note & cancellation"
+      },
+      {
+        "file": "manuel-rechungen.jpg",
+        "caption": "Manual invoice (no report required)"
+      },
+      {
+        "file": "Subzuweisen.jpg",
+        "caption": "Assign subcontractor — live split"
+      },
+      {
+        "file": "sub-ohne-rapport.jpg",
+        "caption": "Job to a sub — without a report"
+      },
+      {
+        "file": "sub-verwalten.jpg",
+        "caption": "Sub job at the partner business"
+      },
+      {
+        "file": "sub-abrechnung.jpg",
+        "caption": "Subcontractor statement"
+      },
+      {
+        "file": "analysen1.jpg",
+        "caption": "Analytics — key figures & team utilisation"
+      },
+      {
+        "file": "analysen2.jpg",
+        "caption": "Conversion funnel, damaged panels & makes"
+      },
+      {
+        "file": "adresse-buch.jpg",
+        "caption": "Address book"
+      },
+      {
+        "file": "kunde-bearbeiten.jpg",
+        "caption": "Customer record — e-mail attachments & per-customer options"
+      },
+      {
+        "file": "dokumentsprache.jpg",
+        "caption": "Document language — app and PDF language chosen separately"
       },
       {
         "file": "email-doks.jpg",
@@ -1682,20 +1729,20 @@
         "caption": "Extensive in-app user manual"
       },
       {
-        "file": "Teile-Notiz.jpg",
-        "caption": "Damaged parts & note"
-      },
-      {
-        "file": "pdf-QR-rechnung.jpg",
-        "caption": "Swiss QR invoice"
-      },
-      {
-        "file": "hagel-auftrag2.jpg",
-        "caption": "Hail damage — detail view"
+        "file": "einstellungen.jpg",
+        "caption": "Settings — tariff tables & hail"
       },
       {
         "file": "pdf-hagel.jpg",
         "caption": "Hail report PDF"
+      },
+      {
+        "file": "pdf-hagel-teile.jpg",
+        "caption": "Hail report — parts & removal/refitting"
+      },
+      {
+        "file": "pdf-photos.jpg",
+        "caption": "Photo documentation PDF"
       },
       {
         "file": "pdf-park.jpg",
@@ -1706,28 +1753,12 @@
         "caption": "Invoice PDF"
       },
       {
-        "file": "pdf-photos.jpg",
-        "caption": "Photo documentation PDF"
+        "file": "pdf-QR-rechnung.jpg",
+        "caption": "Swiss QR invoice"
       },
       {
-        "file": "arbeitsrapporte.jpg",
-        "caption": "Work reports"
-      },
-      {
-        "file": "adresse-buch.jpg",
-        "caption": "Address book"
-      },
-      {
-        "file": "einstellungen1.jpg",
-        "caption": "Settings (1)"
-      },
-      {
-        "file": "einstellungen2.jpg",
-        "caption": "Settings (2)"
-      },
-      {
-        "file": "einstellungen3.jpg",
-        "caption": "Settings (3)"
+        "file": "pdf-mietvertrag.jpg",
+        "caption": "Courtesy car rental contract PDF"
       }
     ]
   },
@@ -1825,7 +1856,7 @@
         },
         {
           "t": "Photos without a cable",
-          "d": "Up to 12 photos from a phone by QR code; EXIF and GPS data are stripped."
+          "d": "Up to 30 photos from a phone by QR code; EXIF and GPS data are stripped."
         },
         {
           "t": "Straight on to the invoice",
@@ -1841,7 +1872,7 @@
         {
           "t": "Enter dents per panel",
           "d": "The total updates live. Parts, outsourced work and removal/refitting are recorded in the same window.",
-          "file": "hagel-auftrag2.jpg"
+          "file": "hagel-auftrag-aw.jpg"
         },
         {
           "t": "Report, approval, invoice",
@@ -1858,7 +1889,7 @@
       "title": "Still typing hail-scanner figures by hand?",
       "lead": "PDR Kalk reads dent protocols and SilverDAT calculations from a PDF — locally on your device, with a review screen before anything is applied. After that you carry on as usual: report, customer approval, insurer, invoice.",
       "ctaSecondary": "More about hail estimating",
-      "heroAlt": "PDR Kalk – hail editor after an imported calculation has been applied",
+      "heroAlt": "PDR Kalk – document import review screen: recognised items with a totals check",
       "benefits": [
         {
           "t": "Panels and dents per size band",
@@ -1894,7 +1925,7 @@
         {
           "t": "Check the review screen",
           "d": "Plausibility checks over dent totals (≤ 25 mm, > 25 mm, > 50 mm) and panel counts, grouped as “Will be applied · To clarify · Unchanged”.",
-          "file": "hagel-auftrag2.jpg"
+          "file": "dokument-import.jpg"
         },
         {
           "t": "Apply it and carry on",
@@ -1952,7 +1983,7 @@
         {
           "t": "Completion and re-import",
           "d": "The sub closes the job and both sides are informed; the finished report comes back as a file and is read in without duplicates.",
-          "file": "analysen2.jpg"
+          "file": "sub-abrechnung.jpg"
         }
       ],
       "screenshotsTitle": "From the app"
@@ -2005,7 +2036,7 @@
         {
           "t": "Enter the licence, carry on",
           "d": "Once payment arrives, enter the licence details under Settings; everything from the trial stays.",
-          "file": "einstellungen1.jpg"
+          "file": "einstellungen.jpg"
         }
       ],
       "screenshotsTitle": "From the app"

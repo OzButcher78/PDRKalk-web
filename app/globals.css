@@ -1215,6 +1215,10 @@ button.shot-frame { padding: 0; cursor: zoom-in; }
    ========================================================================== */
 
 .docs-fan {
+  /* seven pages: width w, overlap o → row = w + 6(w − o); each caption gets
+     the pitch (w − o) so neighbours never collide */
+  --fan-w: clamp(132px, 14.6vw, 210px);
+  --fan-o: calc(var(--fan-w) * 0.28);
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -1223,9 +1227,9 @@ button.shot-frame { padding: 0; cursor: zoom-in; }
   padding: 2.5rem 0 1rem;
 }
 .docs-fan > li {
-  width: 220px;
-  flex: 0 0 220px;
-  margin-left: -56px;
+  width: var(--fan-w);
+  flex: 0 0 var(--fan-w);
+  margin-left: calc(var(--fan-o) * -1);
 }
 .docs-fan .doc-page {
   transform: rotate(var(--r, 0deg)) translateY(var(--y, 0));
@@ -1237,15 +1241,19 @@ button.shot-frame { padding: 0; cursor: zoom-in; }
 .docs-fan .doc-caption {
   position: relative;
   z-index: 20;
-  margin-top: 3rem;
+  margin: 3rem auto 0;
+  max-width: calc(var(--fan-w) - var(--fan-o));
+  hyphens: auto;
+  overflow-wrap: break-word;
 }
 .docs-fan > li:first-child { margin-left: 0; }
-.docs-fan > li:nth-child(1) { --r: -10deg; --y: 22px; z-index: 1; }
-.docs-fan > li:nth-child(2) { --r: -6deg;  --y: 10px; z-index: 2; }
-.docs-fan > li:nth-child(3) { --r: -2deg;  --y: 2px;  z-index: 3; }
-.docs-fan > li:nth-child(4) { --r: 2deg;   --y: 2px;  z-index: 4; }
-.docs-fan > li:nth-child(5) { --r: 6deg;   --y: 10px; z-index: 5; }
-.docs-fan > li:nth-child(6) { --r: 10deg;  --y: 22px; z-index: 6; }
+.docs-fan > li:nth-child(1) { --r: -12deg; --y: 26px; z-index: 1; }
+.docs-fan > li:nth-child(2) { --r: -8deg;  --y: 14px; z-index: 2; }
+.docs-fan > li:nth-child(3) { --r: -4deg;  --y: 5px;  z-index: 3; }
+.docs-fan > li:nth-child(4) { --r: 0deg;   --y: 0;    z-index: 4; }
+.docs-fan > li:nth-child(5) { --r: 4deg;   --y: 5px;  z-index: 5; }
+.docs-fan > li:nth-child(6) { --r: 8deg;   --y: 14px; z-index: 6; }
+.docs-fan > li:nth-child(7) { --r: 12deg;  --y: 26px; z-index: 7; }
 @media (hover: hover) {
   .docs-fan > li:hover .doc-page,
   .docs-fan > li:focus-within .doc-page {
@@ -1947,7 +1955,7 @@ h1, h2, h3 { text-wrap: balance; }
   .journey { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
   .journey > li { padding: 3rem 0 0; }
   .journey > li::after { left: 34px; right: 0; top: 17px; bottom: auto; width: auto; height: 2px; }
-  .docs-fan > li { width: 190px; flex-basis: 190px; margin-left: -48px; }
+  .docs-fan .doc-caption { font-size: 0.74rem; }
 }
 
 @media (max-width: 768px) {
@@ -1992,7 +2000,7 @@ h1, h2, h3 { text-wrap: balance; }
   .docs-fan .doc-page { transform: none; }
   .docs-fan > li:hover .doc-page,
   .docs-fan > li:focus-within .doc-page { transform: translateY(-8px) scale(1.03); }
-  .docs-fan .doc-caption { margin-top: 0.5rem; }
+  .docs-fan .doc-caption { margin-top: 0.5rem; max-width: none; font-size: 0.82rem; }
 
   .wn-grid { grid-template-columns: 1fr; }
   .wn-featured { grid-column: span 1; }

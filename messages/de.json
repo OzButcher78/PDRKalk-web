@@ -147,8 +147,8 @@
           "Fotos per QR-Code direkt vom Smartphone in den Auftrag laden",
           "Beschädigte Teile links/rechts pro Bauteil markieren, mit Notiz"
         ],
-        "file": "Teile-Notiz.jpg",
-        "alt": "PDR Kalk – Schadenerfassung: beschädigte Teile pro Bauteil mit Notiz"
+        "file": "bauteil-waehlen.jpg",
+        "alt": "PDR Kalk – Schadenerfassung: beschädigtes Bauteil auf der Fahrzeugskizze wählen"
       },
       {
         "label": "Kalkulieren",
@@ -196,7 +196,7 @@
           "Abnahmeprotokoll mit Kilometerstand, Tankfüllung und Unterschrift"
         ],
         "file": "arbeitsrapporte.jpg",
-        "alt": "PDR Kalk – Arbeitsrapport mit Positionen und Technikerzuteilung"
+        "alt": "PDR Kalk – Arbeitsrapporte nach Status: Neu, In Arbeit, Erledigt und verrechnet"
       },
       {
         "label": "Rechnung",
@@ -207,8 +207,8 @@
           "Split-Rechnung bei Versicherungsfällen: Versicherung und Selbstbehalt getrennt",
           "Gutschrift, Storno und manuelle Rechnungen mit denselben Nummern"
         ],
-        "file": "pdf-QR-rechnung.jpg",
-        "alt": "PDR Kalk – Schweizer QR-Rechnung als PDF"
+        "file": "rechnungen.jpg",
+        "alt": "PDR Kalk – Rechnungen mit Status, Fälligkeit, Gutschrift und Storno"
       },
       {
         "label": "Auswertung",
@@ -220,7 +220,7 @@
           "DATEV-CSV, MwSt.-Export und offene Debitoren als Excel"
         ],
         "file": "analysen1.jpg",
-        "alt": "PDR Kalk – Analysen-Dashboard mit Umsatz und Cashflow"
+        "alt": "PDR Kalk – Analysen: Umsatz, Zahlungseingänge, offene Forderungen und Team-Auslastung"
       }
     ]
   },
@@ -327,7 +327,7 @@
           },
           {
             "t": "Fotos per QR-Code",
-            "d": "Bis zu 12 Fotos pro Auftrag direkt vom Smartphone, EXIF- und GPS-Daten werden entfernt."
+            "d": "Bis zu 30 Fotos pro Auftrag direkt vom Smartphone, EXIF- und GPS-Daten werden entfernt."
           },
           {
             "t": "Fahrzeugausweis & VIN",
@@ -441,7 +441,7 @@
           },
           {
             "t": "Fotodokumentation als PDF",
-            "d": "bis zu 12 beschriftete Fotos, im Rapport integriert oder als eigenes Dokument."
+            "d": "bis zu 30 beschriftete Fotos, im Rapport integriert oder als eigenes Dokument."
           }
         ]
       },
@@ -977,6 +977,10 @@
       {
         "file": "Abtretungserklarung1.jpg",
         "caption": "Abtretungserklärung"
+      },
+      {
+        "file": "pdf-mietvertrag.jpg",
+        "caption": "Mietvertrag Ersatzwagen"
       }
     ],
     "more": {
@@ -986,7 +990,6 @@
         "Arbeitsrapport",
         "Gutschrift",
         "Split- und Stornorechnung",
-        "Mietvertrag Ersatzwagen",
         "Abnahmeprotokoll",
         "Job Package ZIP",
         "ZUGFeRD/Factur-X"
@@ -1010,7 +1013,7 @@
         "file": "Subzuweisen.jpg",
         "alt": "PDR Kalk – Subunternehmer zuweisen mit Live-Aufteilung der Vergütung",
         "file2": "sub-verwalten.jpg",
-        "alt2": "PDR Kalk – erhaltene Subunternehmer-Aufträge verwalten",
+        "alt2": "PDR Kalk – erhaltener Sub-Auftrag beim Partnerbetrieb mit Auftraggeber, Konditionen und Dokumenten",
         "linkLabel": "Mehr zum Subunternehmer-Workflow"
       },
       {
@@ -1610,14 +1613,6 @@
         "caption": "Dashboard — Aufträge im Überblick"
       },
       {
-        "file": "analysen1.jpg",
-        "caption": "Analysen-Dashboard — Umsatz & Cashflow"
-      },
-      {
-        "file": "analysen2.jpg",
-        "caption": "Top-Kunden & Konversions-Trichter"
-      },
-      {
         "file": "hagel-auftrag.jpg",
         "caption": "Hagelschaden-Kalkulation (VFFS)"
       },
@@ -1626,36 +1621,88 @@
         "caption": "Hagelschaden — Deutsche AW-Matrix mit De-/Montage"
       },
       {
+        "file": "bauteil-waehlen.jpg",
+        "caption": "Bauteil wählen — Fahrzeugskizze zum Anklicken"
+      },
+      {
         "file": "parkschaden-erfassung.jpg",
-        "caption": "Parkschaden — Pro-Teil / Pauschal / AW"
+        "caption": "Parkschaden — pro Teil, pauschal, AW oder Smart-Berechnung"
       },
       {
-        "file": "manuel-rechungen.jpg",
-        "caption": "Manuelle Rechnung (ohne Rapport)"
+        "file": "parkschaden-leistungen.jpg",
+        "caption": "Parkschaden — Zusatzleistungen & Total"
       },
       {
-        "file": "Versicherung-Direkt.jpg",
-        "caption": "Direkt-Versicherung in 4 Schritten"
+        "file": "dokument-import.jpg",
+        "caption": "Dokumentimport — Kontrollansicht mit Summenprüfung"
       },
       {
         "file": "kundebestatigung.jpg",
         "caption": "Kundenfreigabe vor Ort mit Unterschrift"
       },
       {
-        "file": "Subzuweisen.jpg",
-        "caption": "Subunternehmer zuweisen — Live-Aufteilung"
-      },
-      {
-        "file": "sub-verwalten.jpg",
-        "caption": "Subunternehmer-Auftrag verwalten"
+        "file": "Versicherung-Direkt.jpg",
+        "caption": "Direkt-Versicherung in 4 Schritten"
       },
       {
         "file": "Abtretungserklarung1.jpg",
         "caption": "Abtretungserklärung an die Versicherung"
       },
       {
-        "file": "Techniker-und-Dokumenten.jpg",
-        "caption": "Dokumente-Panel pro Auftrag"
+        "file": "arbeitsrapporte.jpg",
+        "caption": "Arbeitsrapporte nach Status"
+      },
+      {
+        "file": "abnahmeprotokoll.jpg",
+        "caption": "Abnahmeprotokoll — Übergabe mit Unterschrift"
+      },
+      {
+        "file": "ersatzwagen.jpg",
+        "caption": "Mietvertrag Ersatzwagen — Zeitraum, Tagessatz, Unterschrift"
+      },
+      {
+        "file": "rechnungen.jpg",
+        "caption": "Rechnungen — Status, Fälligkeit, Gutschrift & Storno"
+      },
+      {
+        "file": "manuel-rechungen.jpg",
+        "caption": "Manuelle Rechnung (ohne Rapport)"
+      },
+      {
+        "file": "Subzuweisen.jpg",
+        "caption": "Subunternehmer zuweisen — Live-Aufteilung"
+      },
+      {
+        "file": "sub-ohne-rapport.jpg",
+        "caption": "Auftrag an Sub — ohne Rapport"
+      },
+      {
+        "file": "sub-verwalten.jpg",
+        "caption": "Sub-Auftrag beim Partnerbetrieb"
+      },
+      {
+        "file": "sub-abrechnung.jpg",
+        "caption": "Subunternehmer-Abrechnung"
+      },
+      {
+        "file": "analysen1.jpg",
+        "caption": "Analysen — Kennzahlen & Team-Auslastung"
+      },
+      {
+        "file": "analysen2.jpg",
+        "caption": "Konversions-Trichter, Schadenteile & Marken"
+      },
+      {
+        "file": "adresse-buch.jpg",
+        "caption": "Adressbuch"
+      },
+      {
+        "file": "kunde-bearbeiten.jpg",
+        "caption": "Kundenkarte — E-Mail-Anhänge & Optionen pro Kunde"
+      },
+      {
+        "file": "dokumentsprache.jpg",
+        "caption": "Dokumentsprache — App- und PDF-Sprache getrennt wählen"
       },
       {
         "file": "email-doks.jpg",
@@ -1682,20 +1729,20 @@
         "caption": "Umfangreiches Benutzerhandbuch — in der App"
       },
       {
-        "file": "Teile-Notiz.jpg",
-        "caption": "Beschädigte Teile & Notiz"
-      },
-      {
-        "file": "pdf-QR-rechnung.jpg",
-        "caption": "Schweizer QR-Rechnung"
-      },
-      {
-        "file": "hagel-auftrag2.jpg",
-        "caption": "Hagelschaden — Detailansicht"
+        "file": "einstellungen.jpg",
+        "caption": "Einstellungen — Tariftabellen & Hagelschaden"
       },
       {
         "file": "pdf-hagel.jpg",
         "caption": "Hagelrapport PDF"
+      },
+      {
+        "file": "pdf-hagel-teile.jpg",
+        "caption": "Hagelrapport — Ersatzteile & De-/Montage"
+      },
+      {
+        "file": "pdf-photos.jpg",
+        "caption": "Fotodokumentation PDF"
       },
       {
         "file": "pdf-park.jpg",
@@ -1706,28 +1753,12 @@
         "caption": "Rechnung PDF"
       },
       {
-        "file": "pdf-photos.jpg",
-        "caption": "Fotodokumentation PDF"
+        "file": "pdf-QR-rechnung.jpg",
+        "caption": "Schweizer QR-Rechnung"
       },
       {
-        "file": "arbeitsrapporte.jpg",
-        "caption": "Arbeitsrapporte"
-      },
-      {
-        "file": "adresse-buch.jpg",
-        "caption": "Adressbuch"
-      },
-      {
-        "file": "einstellungen1.jpg",
-        "caption": "Einstellungen (1)"
-      },
-      {
-        "file": "einstellungen2.jpg",
-        "caption": "Einstellungen (2)"
-      },
-      {
-        "file": "einstellungen3.jpg",
-        "caption": "Einstellungen (3)"
+        "file": "pdf-mietvertrag.jpg",
+        "caption": "Mietvertrag Ersatzwagen PDF"
       }
     ]
   },
@@ -1825,7 +1856,7 @@
         },
         {
           "t": "Fotos ohne Kabel",
-          "d": "Bis zu 12 Fotos per QR-Code vom Smartphone, EXIF- und GPS-Daten werden entfernt."
+          "d": "Bis zu 30 Fotos per QR-Code vom Smartphone, EXIF- und GPS-Daten werden entfernt."
         },
         {
           "t": "Direkt weiter zur Rechnung",
@@ -1841,7 +1872,7 @@
         {
           "t": "Dellen pro Bauteil eintragen",
           "d": "Das Total rechnet live mit. Teile, Fremdleistungen und De-/Montage erfassen Sie im selben Fenster.",
-          "file": "hagel-auftrag2.jpg"
+          "file": "hagel-auftrag-aw.jpg"
         },
         {
           "t": "Rapport, Freigabe, Rechnung",
@@ -1858,7 +1889,7 @@
       "title": "Hagelscanner-Daten noch von Hand abtippen?",
       "lead": "PDR Kalk liest Dellenprotokolle und SilverDAT-Kalkulationen als PDF ein — lokal auf Ihrem Gerät, mit Kontrollansicht vor der Übernahme. Danach arbeiten Sie weiter wie gewohnt: Rapport, Kundenfreigabe, Versicherung, Rechnung.",
       "ctaSecondary": "Mehr zur Hagelkalkulation",
-      "heroAlt": "PDR Kalk – Hagel-Editor nach der Übernahme einer importierten Kalkulation",
+      "heroAlt": "PDR Kalk – Kontrollansicht des Dokumentimports: erkannte Positionen mit Summenprüfung",
       "benefits": [
         {
           "t": "Bauteile und Dellen pro Grössenklasse",
@@ -1894,7 +1925,7 @@
         {
           "t": "Kontrollansicht prüfen",
           "d": "Plausibilitätsprüfung über Dellensummen (≤ 25 mm, > 25 mm, > 50 mm) und Bauteilanzahl, gruppiert in «Wird übernommen · Zu klären · Unverändert».",
-          "file": "hagel-auftrag2.jpg"
+          "file": "dokument-import.jpg"
         },
         {
           "t": "Übernehmen und weiterarbeiten",
@@ -1952,7 +1983,7 @@
         {
           "t": "Abschluss und Rückimport",
           "d": "Der Sub schliesst ab, beide Seiten werden informiert; der fertige Rapport kommt als Datei zurück und wird ohne Duplikate eingelesen.",
-          "file": "analysen2.jpg"
+          "file": "sub-abrechnung.jpg"
         }
       ],
       "screenshotsTitle": "Aus der App"
@@ -2005,7 +2036,7 @@
         {
           "t": "Lizenz eintragen, weiterarbeiten",
           "d": "Nach Zahlungseingang tragen Sie die Lizenzangaben in den Einstellungen ein; alle Daten aus der Testphase bleiben erhalten.",
-          "file": "einstellungen1.jpg"
+          "file": "einstellungen.jpg"
         }
       ],
       "screenshotsTitle": "Aus der App"
