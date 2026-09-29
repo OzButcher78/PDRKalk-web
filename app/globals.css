@@ -1116,7 +1116,16 @@ button.shot-frame { padding: 0; cursor: zoom-in; }
   gap: 0.55rem;
   height: 100%;
 }
-.rg-tile img { height: 20px; width: auto; border-radius: 2px; box-shadow: 0 0 0 1px rgba(255,255,255,0.18); }
+/* flex-column child: without align-self the flag is stretched to the tile
+   width and smeared into a bar */
+.rg-tile img {
+  align-self: flex-start;
+  flex: 0 0 auto;
+  height: 24px;
+  width: auto;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.22), 0 6px 14px -8px rgba(0,0,0,0.7);
+}
 .rg-name {
   font-family: var(--font-display);
   font-weight: 800;

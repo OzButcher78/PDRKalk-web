@@ -39,7 +39,7 @@ export default function Regions() {
                   title={country(`country_${item.code}` as 'country_ch')}
                   width={209}
                   height={125}
-                  style={{height: '20px', width: 'auto'}}
+                  style={{height: '24px', width: 'auto'}}
                 />
                 <span className="rg-name">{item.name}</span>
                 <ul className="rg-facts">
