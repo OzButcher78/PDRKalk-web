@@ -1404,7 +1404,7 @@
       {
         "id": "import",
         "q": "Kann ich SilverDAT-Kalkulationen oder Hagelscanner-Protokolle importieren?",
-        "a": "Ja, seit Version {version}, vorerst für die Schweiz (Region CH mit Schweizer Tarif; einschalten unter Einstellungen → Hagelschaden). PDR Kalk liest vorhandene PDFs mit Textebene — keine Scans oder Fotos — zeigt eine Kontrollansicht und übernimmt auf Ihre Freigabe Bauteile, Dellen, Teile, De-/Montage und Nebenkosten. Alles lokal. Es ist keine Schnittstelle zu SilverDAT, sondern das Lesen eines vorhandenen PDF."
+        "a": "Ja, vorerst für die Schweiz (Region CH mit Schweizer Tarif; einschalten unter Einstellungen → Hagelschaden). PDR Kalk liest vorhandene PDFs mit Textebene — keine Scans oder Fotos — zeigt eine Kontrollansicht und übernimmt auf Ihre Freigabe Bauteile, Dellen, Teile, De-/Montage und Nebenkosten. Alles lokal. Es ist keine Schnittstelle zu SilverDAT, sondern das Lesen eines vorhandenen PDF."
       },
       {
         "id": "countries",
@@ -1419,7 +1419,7 @@
       {
         "id": "languages",
         "q": "In welchen Sprachen gibt es PDR Kalk?",
-        "a": "Die App-Oberfläche gibt es in {languages} Sprachen: Deutsch, Französisch, Italienisch, Englisch, Niederländisch, Portugiesisch und Spanisch. Seit Version {version} ist zusätzlich die Dokumentsprache frei wählbar — Rechnungen, Rapporte und E-Mails gehen in der Sprache des Kunden raus, unabhängig von der App-Sprache."
+        "a": "Die App-Oberfläche gibt es in {languages} Sprachen: Deutsch, Französisch, Italienisch, Englisch, Niederländisch, Portugiesisch und Spanisch. Zusätzlich ist die Dokumentsprache frei wählbar — Rechnungen, Rapporte und E-Mails gehen in der Sprache des Kunden raus, unabhängig von der App-Sprache."
       },
       {
         "id": "support",
@@ -1997,7 +1997,7 @@
     },
     "import": {
       "metaTitle": "SilverDAT- & Hagelscanner-PDF importieren | PDR Kalk",
-      "metaDescription": "Vorhandene SilverDAT-Kalkulationen und Hagelscanner-Dellenprotokolle als PDF in PDR Kalk übernehmen statt abtippen — lokal ausgewertet, mit Kontrollansicht. Neu in Version {version}, vorerst Schweiz.",
+      "metaDescription": "Vorhandene SilverDAT-Kalkulationen und Hagelscanner-Dellenprotokolle als PDF in PDR Kalk übernehmen statt abtippen — lokal ausgewertet, mit Kontrollansicht. Vorerst Schweiz.",
       "eyebrow": "Dokumentimport",
       "title": "Hagelscanner-Daten noch von Hand abtippen?",
       "lead": "PDR Kalk liest Dellenprotokolle und SilverDAT-Kalkulationen als PDF ein — lokal auf Ihrem Gerät, mit Kontrollansicht vor der Übernahme. Danach arbeiten Sie weiter wie gewohnt: Rapport, Kundenfreigabe, Versicherung, Rechnung.",

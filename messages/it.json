@@ -1404,7 +1404,7 @@
       {
         "id": "import",
         "q": "Posso importare calcoli SilverDAT o protocolli dello scanner grandine?",
-        "a": "Sì, dalla versione {version}, per ora in Svizzera (regione CH con tariffa svizzera; da attivare in Impostazioni → Grandine). PDR Kalk legge PDF esistenti dotati di livello di testo — non scansioni o foto — mostra una schermata di controllo e, dopo la vostra approvazione, acquisisce elementi, bolli, parti, smontaggio/rimontaggio e costi accessori. Tutto in locale. Non è un'interfaccia con SilverDAT, ma la lettura di un PDF che già possedete."
+        "a": "Sì, per ora in Svizzera (regione CH con tariffa svizzera; da attivare in Impostazioni → Grandine). PDR Kalk legge PDF esistenti dotati di livello di testo — non scansioni o foto — mostra una schermata di controllo e, dopo la vostra approvazione, acquisisce elementi, bolli, parti, smontaggio/rimontaggio e costi accessori. Tutto in locale. Non è un'interfaccia con SilverDAT, ma la lettura di un PDF che già possedete."
       },
       {
         "id": "countries",
@@ -1419,7 +1419,7 @@
       {
         "id": "languages",
         "q": "In quali lingue è disponibile PDR Kalk?",
-        "a": "L'interfaccia è disponibile in {languages} lingue: tedesco, francese, italiano, inglese, olandese, portoghese e spagnolo. Dalla versione {version} anche la lingua dei documenti è liberamente selezionabile — fatture, rapporti ed e-mail partono nella lingua del cliente, indipendentemente dalla lingua dell'app."
+        "a": "L'interfaccia è disponibile in {languages} lingue: tedesco, francese, italiano, inglese, olandese, portoghese e spagnolo. Inoltre anche la lingua dei documenti è liberamente selezionabile — fatture, rapporti ed e-mail partono nella lingua del cliente, indipendentemente dalla lingua dell'app."
       },
       {
         "id": "support",
@@ -1997,7 +1997,7 @@
     },
     "import": {
       "metaTitle": "Importare PDF SilverDAT e dello scanner grandine | PDR Kalk",
-      "metaDescription": "Acquisire in PDR Kalk calcoli SilverDAT e protocolli dei bolli esistenti in PDF invece di digitarli — elaborazione locale, con schermata di controllo. Novità della versione {version}, per ora in Svizzera.",
+      "metaDescription": "Acquisire in PDR Kalk calcoli SilverDAT e protocolli dei bolli esistenti in PDF invece di digitarli — elaborazione locale, con schermata di controllo. Per ora in Svizzera.",
       "eyebrow": "Import documenti",
       "title": "State ancora digitando a mano i dati dello scanner grandine?",
       "lead": "PDR Kalk legge protocolli dei bolli e calcoli SilverDAT in PDF — in locale sul vostro dispositivo, con una schermata di controllo prima dell'acquisizione. Poi proseguite come sempre: rapporto, approvazione del cliente, assicurazione, fattura.",

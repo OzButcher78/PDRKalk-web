@@ -176,7 +176,7 @@ for (const file of htmlFiles) {
     }
 
     // download section: exactly two installer anchors with the right attributes
-    const downloadAnchors = [...html.matchAll(/<a\b[^>]*href="(https:\/\/updates\.pdrkalk\.ch\/[^"]+)"[^>]*>/g)];
+    const downloadAnchors = [...html.matchAll(/<a\b[^>]*href="(https:\/\/github\.com\/OzButcher78\/pdrkalk\/releases\/download\/[^"]+)"[^>]*>/g)];
     const inDownloadCard = downloadAnchors.filter(a => /download/.test(a[0]) && /class="btn btn-red/.test(a[0]));
     if (inDownloadCard.length !== 2) err(`${name}: expected 2 installer buttons, found ${inDownloadCard.length}`);
     for (const a of downloadAnchors) {

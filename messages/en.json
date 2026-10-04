@@ -1404,7 +1404,7 @@
       {
         "id": "import",
         "q": "Can I import SilverDAT calculations or hail-scanner protocols?",
-        "a": "Yes, since version {version}, for Switzerland first (CH region with the Swiss tariff; switch it on under Settings → Hail). PDR Kalk reads existing PDFs that have a text layer — not scans or photos — shows a review screen and, once you approve, applies panels, dents, parts, removal/refitting and additional costs. All locally. It is not an interface to SilverDAT; it reads a PDF you already have."
+        "a": "Yes, for Switzerland first (CH region with the Swiss tariff; switch it on under Settings → Hail). PDR Kalk reads existing PDFs that have a text layer — not scans or photos — shows a review screen and, once you approve, applies panels, dents, parts, removal/refitting and additional costs. All locally. It is not an interface to SilverDAT; it reads a PDF you already have."
       },
       {
         "id": "countries",
@@ -1419,7 +1419,7 @@
       {
         "id": "languages",
         "q": "Which languages is PDR Kalk available in?",
-        "a": "The app interface comes in {languages} languages: German, French, Italian, English, Dutch, Portuguese and Spanish. Since version {version} the document language can also be chosen freely — invoices, reports and emails go out in the customer's language, independent of the app language."
+        "a": "The app interface comes in {languages} languages: German, French, Italian, English, Dutch, Portuguese and Spanish. The document language can also be chosen freely — invoices, reports and emails go out in the customer's language, independent of the app language."
       },
       {
         "id": "support",
@@ -1997,7 +1997,7 @@
     },
     "import": {
       "metaTitle": "Import SilverDAT & hail-scanner PDFs | PDR Kalk",
-      "metaDescription": "Bring existing SilverDAT calculations and hail-scanner dent protocols into PDR Kalk as a PDF instead of typing them — processed locally, with a review screen. New in version {version}, Switzerland first.",
+      "metaDescription": "Bring existing SilverDAT calculations and hail-scanner dent protocols into PDR Kalk as a PDF instead of typing them — processed locally, with a review screen. Switzerland first.",
       "eyebrow": "Document import",
       "title": "Still typing hail-scanner figures by hand?",
       "lead": "PDR Kalk reads dent protocols and SilverDAT calculations from a PDF — locally on your device, with a review screen before anything is applied. After that you carry on as usual: report, customer approval, insurer, invoice.",

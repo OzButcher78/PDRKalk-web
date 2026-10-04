@@ -23,13 +23,16 @@ export const TEST_VERSION = newestBy('testing')?.version ?? null;
 
 export const SITE_URL = 'https://pdrkalk.ch';
 
+/** Installers are GitHub release assets: tag v{version} (Windows), android-v{version} (APK). */
+const RELEASES = 'https://github.com/OzButcher78/pdrkalk/releases/download';
+
 export const WINDOWS_DOWNLOAD_URL =
   process.env.NEXT_PUBLIC_WINDOWS_DOWNLOAD_URL ||
-  `https://updates.pdrkalk.ch/PDR-Kalk-Setup-${APP_VERSION}.exe`;
+  `${RELEASES}/v${APP_VERSION}/PDR-Kalk-Setup-${APP_VERSION}.exe`;
 
 export const ANDROID_DOWNLOAD_URL =
   process.env.NEXT_PUBLIC_ANDROID_DOWNLOAD_URL ||
-  `https://updates.pdrkalk.ch/pdrkalk-android-${APP_VERSION}.apk`;
+  `${RELEASES}/android-v${APP_VERSION}/pdrkalk-android-${APP_VERSION}.apk`;
 
 /** The binding order page, relative to the page home (/de/order/, /au/order/). */
 export const ORDER_PATH = 'order/';

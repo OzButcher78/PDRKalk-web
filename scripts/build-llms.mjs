@@ -65,7 +65,7 @@ PDR Kalk is built by Balmer Storm Solutions, a Swiss company founded by Dieter B
 
 ## What is new
 
-- Hail document import (released in ${APP_VERSION}, Switzerland first): PDR Kalk reads an existing hail-scanner dent protocol or SilverDAT calculation from a PDF that has a text layer, shows a review screen, and applies panels, dents, parts, removal/refitting items and additional costs after the user approves. Processed entirely on the device. It is not an interface to SilverDAT — it reads a PDF the user already has.
+- Hail document import (since 4.26.63, Switzerland first): PDR Kalk reads an existing hail-scanner dent protocol or SilverDAT calculation from a PDF that has a text layer, shows a review screen, and applies panels, dents, parts, removal/refitting items and additional costs after the user approves. Processed entirely on the device. It is not an interface to SilverDAT — it reads a PDF the user already has.
 - Document language: invoices, reports and emails go out in the customer's language, independent of the app language.
 - Fixed price / manual mode now works independently of the tariff table, in every country.
 - Optional AI scan for the vehicle registration and VIN: off by default, bring-your-own provider key. The holder's name and address are blacked out in the image, which then goes directly to the provider the user chose (Infomaniak CH recommended, Mistral AI EU, OpenAI or Anthropic USA only after explicit confirmation) — never through PDR Kalk's servers.

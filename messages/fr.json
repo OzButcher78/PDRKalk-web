@@ -1404,7 +1404,7 @@
       {
         "id": "import",
         "q": "Puis-je importer des calculs SilverDAT ou des protocoles de scanner grêle ?",
-        "a": "Oui, depuis la version {version}, d'abord pour la Suisse (région CH avec tarif suisse ; à activer sous Paramètres → Grêle). PDR Kalk lit les PDF existants dotés d'une couche de texte — ni scans ni photos — affiche un écran de contrôle et, après votre validation, reprend les éléments, les impacts, les pièces, la dépose/repose et les frais annexes. Le tout en local. Il ne s'agit pas d'une interface avec SilverDAT, mais de la lecture d'un PDF que vous possédez déjà."
+        "a": "Oui, d'abord pour la Suisse (région CH avec tarif suisse ; à activer sous Paramètres → Grêle). PDR Kalk lit les PDF existants dotés d'une couche de texte — ni scans ni photos — affiche un écran de contrôle et, après votre validation, reprend les éléments, les impacts, les pièces, la dépose/repose et les frais annexes. Le tout en local. Il ne s'agit pas d'une interface avec SilverDAT, mais de la lecture d'un PDF que vous possédez déjà."
       },
       {
         "id": "countries",
@@ -1419,7 +1419,7 @@
       {
         "id": "languages",
         "q": "Dans quelles langues PDR Kalk existe-t-il ?",
-        "a": "L'interface existe en {languages} langues : allemand, français, italien, anglais, néerlandais, portugais et espagnol. Depuis la version {version}, la langue des documents se choisit librement — factures, rapports et e-mails partent dans la langue du client, indépendamment de la langue de l'application."
+        "a": "L'interface existe en {languages} langues : allemand, français, italien, anglais, néerlandais, portugais et espagnol. En outre, la langue des documents se choisit librement — factures, rapports et e-mails partent dans la langue du client, indépendamment de la langue de l'application."
       },
       {
         "id": "support",
@@ -1997,7 +1997,7 @@
     },
     "import": {
       "metaTitle": "Importer des PDF SilverDAT et scanner grêle | PDR Kalk",
-      "metaDescription": "Reprendre dans PDR Kalk les calculs SilverDAT et les protocoles d'impacts existants en PDF au lieu de les saisir — traitement local, avec écran de contrôle. Nouveau dans la version {version}, pour l'instant en Suisse.",
+      "metaDescription": "Reprendre dans PDR Kalk les calculs SilverDAT et les protocoles d'impacts existants en PDF au lieu de les saisir — traitement local, avec écran de contrôle. Pour l'instant en Suisse.",
       "eyebrow": "Import de documents",
       "title": "Toujours en train de saisir les données du scanner grêle à la main ?",
       "lead": "PDR Kalk lit les protocoles d'impacts et les calculs SilverDAT en PDF — en local sur votre appareil, avec un écran de contrôle avant la reprise. Ensuite, vous continuez comme d'habitude : rapport, accord du client, assurance, facture.",

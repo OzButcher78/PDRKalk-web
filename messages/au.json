@@ -1278,7 +1278,7 @@
       {
         "id": "languages",
         "q": "Which languages is PDR Kalk available in?",
-        "a": "The app interface is in English for Australia and is available in {languages} languages in total. Since version {version} the document language can also be chosen freely — invoices, reports and emails go out in the customer's language, independent of the app language."
+        "a": "The app interface is in English for Australia and is available in {languages} languages in total. The document language can also be chosen freely — invoices, reports and emails go out in the customer's language, independent of the app language."
       },
       {
         "id": "support",
