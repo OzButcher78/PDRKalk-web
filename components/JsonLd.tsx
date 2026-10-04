@@ -1,4 +1,11 @@
-const SITE_URL = 'https://pdrkalk.ch';
+import {
+  ANDROID_DOWNLOAD_URL,
+  APP_LANGUAGES,
+  APP_VERSION,
+  SITE_URL,
+  WINDOWS_DOWNLOAD_URL,
+} from '@/lib/site';
+
 const ORG_ID = `${SITE_URL}/#organization`;
 const SOFTWARE_ID = `${SITE_URL}/#software`;
 const WEBSITE_ID = `${SITE_URL}/#website`;
@@ -19,19 +26,33 @@ type Props = {
   price?: string;
   homePath?: string;
   reviewLanguage?: string;
+  /** Group headings, rendered as the SoftwareApplication featureList. */
+  featureList?: string[];
 };
+
+function Script({data}: {data: unknown}) {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{__html: JSON.stringify(data)}}
+    />
+  );
+}
 
 export default function JsonLd({
   locale,
   description,
   reviews = [],
-  areaServed = ['CH', 'DE', 'AT', 'AU'],
+  areaServed = ['CH', 'DE', 'AT', 'AU', 'BE', 'NL'],
   currency = 'CHF',
   price = '550',
   homePath,
   reviewLanguage = 'de',
+  featureList,
 }: Props) {
   const home = homePath ?? `/${locale}/`;
+  const isAu = home === '/au/';
+
   const graph = [
     {
       '@type': 'Organization',
@@ -67,15 +88,18 @@ export default function JsonLd({
       description,
       applicationCategory: 'BusinessApplication',
       applicationSubCategory: 'Estimation and Invoicing Software',
-      operatingSystem: 'Windows, Android',
-      softwareVersion: '4.26.69',
-      inLanguage: ['de', 'en', 'fr', 'it', 'nl'],
+      operatingSystem: 'Windows 10, Windows 11, Android 10+',
+      softwareVersion: APP_VERSION,
+      downloadUrl: [WINDOWS_DOWNLOAD_URL, ANDROID_DOWNLOAD_URL],
+      ...(isAu ? {} : {releaseNotes: `${SITE_URL}/${locale}/updates/`}),
+      inLanguage: [...APP_LANGUAGES],
+      ...(featureList && featureList.length > 0 && {featureList}),
       author: {'@id': ORG_ID},
       publisher: {'@id': ORG_ID},
       offers: [
         {
           '@type': 'Offer',
-          name: '5-year licence',
+          name: 'Perpetual licence (one-time payment)',
           price,
           priceCurrency: currency,
           availability: 'https://schema.org/InStock',
@@ -87,7 +111,7 @@ export default function JsonLd({
           price: '0',
           priceCurrency: currency,
           availability: 'https://schema.org/InStock',
-          url: `${SITE_URL}${home}#pricing`,
+          url: `${SITE_URL}${home}#download`,
         },
       ],
       // Customer reviews — kept in sync with messages `testimonials.items`.
@@ -113,15 +137,41 @@ export default function JsonLd({
     },
   ];
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@graph': graph,
-  };
+  return <Script data={{'@context': 'https://schema.org', '@graph': graph}} />;
+}
 
+/** Rendered by every page that shows an FAQ accordion. */
+export function FaqJsonLd({items}: {items: Array<{q: string; a: string}>}) {
+  if (items.length === 0) return null;
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}}
+    <Script
+      data={{
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: items.map(item => ({
+          '@type': 'Question',
+          name: item.q,
+          acceptedAnswer: {'@type': 'Answer', text: item.a},
+        })),
+      }}
+    />
+  );
+}
+
+/** Rendered by the feature pages and the updates page. */
+export function BreadcrumbJsonLd({items}: {items: Array<{name: string; url: string}>}) {
+  return (
+    <Script
+      data={{
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items.map((item, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: item.name,
+          item: `${SITE_URL}${item.url}`,
+        })),
+      }}
     />
   );
 }

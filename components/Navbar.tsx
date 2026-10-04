@@ -3,10 +3,11 @@
 import {useTranslations, useLocale} from 'next-intl';
 import {useRouter, usePathname} from 'next/navigation';
 import {useState, useEffect, useRef} from 'react';
-import Image from 'next/image';
 import {routing} from '@/i18n/routing';
+import {NAV_BUY_URL, TRIAL_URL} from '@/lib/site';
+import {pageBySlug} from '@/data/pages';
 
-const BUY_URL = process.env.NEXT_PUBLIC_BUY_URL || '#pricing';
+const SPY_IDS = ['features', 'workflow', 'whats-new', 'pricing', 'faq', 'contact'];
 
 export default function Navbar() {
   const t = useTranslations('nav');
@@ -18,6 +19,7 @@ export default function Navbar() {
   const [langOpen, setLangOpen] = useState(false);
   const [activeId, setActiveId] = useState('');
   const langRef = useRef<HTMLDivElement>(null);
+  const langToggleRef = useRef<HTMLButtonElement>(null);
 
   const allLocales = routing.locales.map(code => ({code, label: code.toUpperCase()}));
 
@@ -29,8 +31,7 @@ export default function Navbar() {
 
   // Scroll-spy: highlight the nav link for whichever section is in view.
   useEffect(() => {
-    const ids = ['features', 'screenshots', 'pricing', 'more', 'testimonials', 'contact'];
-    const sections = ids
+    const sections = SPY_IDS
       .map(id => document.getElementById(id))
       .filter((el): el is HTMLElement => el !== null);
     if (sections.length === 0) return;
@@ -48,33 +49,52 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, []);
 
-  // Close lang dropdown on outside click
+  // Close lang dropdown on outside click; Escape closes both overlays.
   useEffect(() => {
-    if (!langOpen) return;
     const onClick = (e: MouseEvent) => {
-      if (langRef.current && !langRef.current.contains(e.target as Node)) {
-        setLangOpen(false);
-      }
+      if (langOpen && langRef.current && !langRef.current.contains(e.target as Node)) setLangOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== 'Escape') return;
+      // Closing the popup unmounts whatever had focus — hand it back to the
+      // toggle instead of dropping the user at the top of the document.
+      if (langOpen) langToggleRef.current?.focus();
+      setLangOpen(false);
+      setMenuOpen(false);
     };
     document.addEventListener('click', onClick);
-    return () => document.removeEventListener('click', onClick);
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('click', onClick);
+      document.removeEventListener('keydown', onKey);
+    };
   }, [langOpen]);
 
+  /**
+   * Keep the visitor on the same page when switching language. Feature pages
+   * have per-locale slugs, so the second segment is translated through the
+   * registry; static segments (privacy, updates) stay as they are.
+   */
   const switchToLocale = (next: string) => {
     const segments = pathname.split('/');
     segments[1] = next;
+    const slug = segments[2];
+    if (slug) {
+      const page = pageBySlug(locale, slug);
+      if (page) segments[2] = page.slugs[next] ?? slug;
+    }
     router.push(segments.join('/') || `/${next}`);
     setLangOpen(false);
   };
 
   const home = `/${locale}/`;
   const navLinks = [
-    {href: `${home}#features`,     label: t('features')},
-    {href: `${home}#screenshots`,  label: t('screenshots')},
-    {href: `${home}#pricing`,      label: t('pricing')},
-    {href: `${home}#more`,         label: t('more')},
-    {href: `${home}#testimonials`, label: t('testimonials')},
-    {href: `${home}#contact`,      label: t('contact')},
+    {href: `${home}#features`,   label: t('features')},
+    {href: `${home}#workflow`,   label: t('workflow')},
+    {href: `${home}#whats-new`,  label: t('whatsNew')},
+    {href: `${home}#pricing`,    label: t('pricing')},
+    {href: `${home}#faq`,        label: t('faq')},
+    {href: `${home}#contact`,    label: t('contact')},
   ];
   const linkId = (href: string) => href.split('#')[1] ?? '';
 
@@ -100,57 +120,33 @@ export default function Navbar() {
         justifyContent: 'space-between',
         gap: '1rem',
       }}>
-        {/* Logo */}
-        <a
-          href={home}
-          className="nav-logo"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.75rem',
-            textDecoration: 'none',
-            flexShrink: 0,
-          }}
-        >
-          <Image
-            src="/logo.png"
-            alt="PDR Kalk Logo"
-            width={200}
-            height={54}
-            style={{objectFit: 'contain'}}
-            priority
-          />
+        <a href={home} className="nav-logo" style={{display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0}}>
+          <picture>
+            <source type="image/webp" srcSet="/logo-320.webp" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo-320.png" alt="PDR Kalk" width={320} height={86} style={{height: '44px', width: 'auto', display: 'block'}} />
+          </picture>
         </a>
 
-        {/* Desktop nav links */}
-        <ul
-          className="hidden-mobile"
-          style={{
-            display: 'flex',
-            gap: '0.25rem',
-            listStyle: 'none',
-            margin: 0,
-            padding: 0,
-            alignItems: 'center',
-          }}
-        >
+        <ul className="hidden-mobile" style={{display: 'flex', gap: '0.15rem', listStyle: 'none', margin: 0, padding: 0, alignItems: 'center'}}>
           {navLinks.map(link => (
             <li key={link.href}>
               <a
                 href={link.href}
                 className={`nav-link${linkId(link.href) === activeId ? ' nav-link-active' : ''}`}
-                aria-current={linkId(link.href) === activeId ? 'true' : undefined}
+                aria-current={linkId(link.href) === activeId ? 'location' : undefined}
                 style={{
-                  fontFamily: 'Barlow Condensed, sans-serif',
+                  fontFamily: 'var(--font-display)',
                   fontWeight: 600,
-                  fontSize: '0.95rem',
+                  fontSize: '0.92rem',
                   letterSpacing: '0.06em',
                   textTransform: 'uppercase',
                   color: 'var(--steel)',
                   textDecoration: 'none',
-                  padding: '0.5rem 0.75rem',
+                  padding: '0.5rem 0.6rem',
                   borderRadius: '4px',
                   display: 'inline-block',
+                  whiteSpace: 'nowrap',
                 }}
               >
                 {link.label}
@@ -159,17 +155,18 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Right side controls */}
-        <div style={{display: 'flex', alignItems: 'center', gap: '0.75rem', flexShrink: 0}}>
-          {/* Lang switcher dropdown */}
+        <div style={{display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0}}>
           <div ref={langRef} style={{position: 'relative'}}>
             <button
+              ref={langToggleRef}
               onClick={() => setLangOpen(!langOpen)}
               className="nav-link"
               aria-expanded={langOpen}
-              aria-label="Language"
+              aria-haspopup="true"
+              aria-controls="lang-menu"
+              aria-label={t('language')}
               style={{
-                fontFamily: 'Barlow Condensed, sans-serif',
+                fontFamily: 'var(--font-display)',
                 fontWeight: 700,
                 fontSize: '0.85rem',
                 letterSpacing: '0.1em',
@@ -189,15 +186,12 @@ export default function Navbar() {
               }}
             >
               {locale.toUpperCase()}
-              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true" style={{
-                transition: 'transform 0.2s',
-                transform: langOpen ? 'rotate(180deg)' : 'none',
-              }}>
-                <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true" style={{transition: 'transform 0.2s', transform: langOpen ? 'rotate(180deg)' : 'none'}}>
+                <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
             {langOpen && (
-              <div style={{
+              <div id="lang-menu" role="group" aria-label={t('language')} style={{
                 position: 'absolute',
                 top: 'calc(100% + 6px)',
                 right: 0,
@@ -217,7 +211,7 @@ export default function Navbar() {
                     style={{
                       display: 'block',
                       width: '100%',
-                      fontFamily: 'Barlow Condensed, sans-serif',
+                      fontFamily: 'var(--font-display)',
                       fontWeight: code === locale ? 800 : 600,
                       fontSize: '0.85rem',
                       letterSpacing: '0.1em',
@@ -229,20 +223,8 @@ export default function Navbar() {
                       cursor: 'pointer',
                       textAlign: 'center',
                       textTransform: 'uppercase',
-                      transition: 'background 0.15s, color 0.15s',
                     }}
-                    onMouseEnter={e => {
-                      if (code !== locale) {
-                        e.currentTarget.style.background = 'rgba(255,255,255,0.06)';
-                        e.currentTarget.style.color = '#fff';
-                      }
-                    }}
-                    onMouseLeave={e => {
-                      if (code !== locale) {
-                        e.currentTarget.style.background = 'transparent';
-                        e.currentTarget.style.color = 'var(--steel)';
-                      }
-                    }}
+                    aria-current={code === locale ? 'true' : undefined}
                   >
                     {label}
                   </button>
@@ -251,37 +233,20 @@ export default function Navbar() {
             )}
           </div>
 
-          {/* CTA */}
-          <a
-            href={BUY_URL}
-            className="btn-red hidden-mobile"
-            style={{
-              fontFamily: 'Barlow Condensed, sans-serif',
-              fontWeight: 700,
-              fontSize: '0.9rem',
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
-              color: '#fff',
-              background: 'var(--red)',
-              border: 'none',
-              borderRadius: '5px',
-              padding: '0.5rem 1.1rem',
-              textDecoration: 'none',
-              cursor: 'pointer',
-              transition: 'background 0.2s, transform 0.15s, box-shadow 0.2s',
-              display: 'inline-block',
-              whiteSpace: 'nowrap',
-            }}
-          >
+          <a href={`${home}${TRIAL_URL}`} className="btn btn-ghost btn--sm hidden-mobile" style={{whiteSpace: 'nowrap'}}>
+            {t('try')}
+          </a>
+
+          <a href={NAV_BUY_URL.startsWith('#') ? `${home}${NAV_BUY_URL}` : NAV_BUY_URL} className="btn btn-red btn--sm hidden-mobile" style={{whiteSpace: 'nowrap'}}>
             {t('cta')}
           </a>
 
-          {/* Mobile hamburger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="show-mobile"
-            aria-label="Menu"
+            aria-label={t('menu')}
             aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
             style={{
               flexDirection: 'column',
               gap: '5px',
@@ -308,67 +273,51 @@ export default function Navbar() {
                   : i === 2 ? 'translateY(-7px) rotate(-45deg)'
                   : 'scaleX(0)'
                   : 'none',
-              }}/>
+              }} />
             ))}
           </button>
         </div>
       </nav>
 
-      {/* Mobile menu */}
       {menuOpen && (
-        <div style={{
-          background: 'var(--ink)',
-          borderTop: '1px solid rgba(232,0,29,0.2)',
-          padding: '0.4rem 1.25rem 0.85rem',
-        }}>
+        <div id="mobile-menu" style={{background: 'var(--ink)', borderTop: '1px solid rgba(232,0,29,0.2)', padding: '0.4rem 1.25rem 1rem'}}>
           {navLinks.map(link => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
               className={linkId(link.href) === activeId ? 'nav-link-active' : undefined}
-              aria-current={linkId(link.href) === activeId ? 'true' : undefined}
+              aria-current={linkId(link.href) === activeId ? 'location' : undefined}
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                fontFamily: 'Barlow Condensed, sans-serif',
+                fontFamily: 'var(--font-display)',
                 fontWeight: 700,
                 fontSize: '0.95rem',
                 letterSpacing: '0.06em',
                 textTransform: 'uppercase',
                 color: '#fff',
                 textDecoration: 'none',
-                padding: '0.55rem 0',
+                padding: '0.6rem 0',
                 borderBottom: '1px solid rgba(255,255,255,0.07)',
-                minHeight: '40px',
+                minHeight: '44px',
               }}
             >
               {link.label}
             </a>
           ))}
-          <a
-            href={BUY_URL}
-            onClick={() => setMenuOpen(false)}
-            className="btn-red"
-            style={{
-              display: 'block',
-              textAlign: 'center',
-              fontFamily: 'Barlow Condensed, sans-serif',
-              fontWeight: 800,
-              fontSize: '0.95rem',
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
-              color: '#fff',
-              background: 'var(--red)',
-              textDecoration: 'none',
-              padding: '0.65rem 1rem',
-              borderRadius: '5px',
-              marginTop: '0.75rem',
-              transition: 'background 0.2s',
-            }}
-          >
-            {t('cta')} →
-          </a>
+          <div style={{display: 'grid', gap: '0.6rem', marginTop: '0.9rem'}}>
+            <a href={`${home}${TRIAL_URL}`} onClick={() => setMenuOpen(false)} className="btn btn-ghost">
+              {t('try')}
+            </a>
+            <a
+              href={NAV_BUY_URL.startsWith('#') ? `${home}${NAV_BUY_URL}` : NAV_BUY_URL}
+              onClick={() => setMenuOpen(false)}
+              className="btn btn-red"
+            >
+              {t('cta')} <span aria-hidden>→</span>
+            </a>
+          </div>
         </div>
       )}
     </header>

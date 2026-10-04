@@ -3,9 +3,9 @@ import {useTranslations} from 'next-intl';
 import {getTranslations, setRequestLocale} from 'next-intl/server';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import BackToTop from '@/components/BackToTop';
 import {routing} from '@/i18n/routing';
-
-const SITE_URL = 'https://pdrkalk.ch';
+import {pageMetadata} from '@/lib/seo';
 
 type Props = {
   params: Promise<{locale: string}>;
@@ -19,28 +19,13 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
   const {locale} = await params;
   const t = await getTranslations({locale, namespace: 'privacy'});
 
-  const languages: Record<string, string> = {
-    'x-default': `${SITE_URL}/de/privacy/`,
-  };
-  for (const l of routing.locales) {
-    languages[l] = `${SITE_URL}/${l}/privacy/`;
-  }
-
-  return {
+  return pageMetadata({
+    locale,
+    path: '/privacy/',
     title: t('metaTitle'),
     description: t('metaDescription'),
-    alternates: {
-      canonical: `${SITE_URL}/${locale}/privacy/`,
-      languages,
-    },
-    openGraph: {
-      type: 'article',
-      url: `${SITE_URL}/${locale}/privacy/`,
-      title: t('metaTitle'),
-      description: t('metaDescription'),
-    },
-    robots: {index: true, follow: true},
-  };
+    type: 'article',
+  });
 }
 
 export default async function PrivacyPage({params}: Props) {
@@ -61,6 +46,7 @@ export default async function PrivacyPage({params}: Props) {
         <PrivacyContent />
       </main>
       <Footer />
+      <BackToTop />
     </>
   );
 }
@@ -76,13 +62,13 @@ function PrivacyContent() {
       style={{
         maxWidth: '760px',
         margin: '0 auto',
-        fontFamily: 'Barlow, sans-serif',
+        fontFamily: 'var(--font-body)',
         lineHeight: 1.7,
       }}
     >
       <h1
         style={{
-          fontFamily: 'Barlow Condensed, sans-serif',
+          fontFamily: 'var(--font-display)',
           fontSize: '2.4rem',
           fontWeight: 800,
           letterSpacing: '0.02em',
@@ -149,12 +135,13 @@ function PrivacyContent() {
         <p style={{margin: '0.75rem 0'}}>
           <a
             href={`mailto:${t('rightsContact')}`}
+            className="tap-link"
             style={{
               color: 'var(--red)',
               fontWeight: 700,
               fontSize: '1.05rem',
               textDecoration: 'none',
-              fontFamily: 'Barlow Condensed, sans-serif',
+              fontFamily: 'var(--font-display)',
               letterSpacing: '0.04em',
             }}
           >
@@ -180,7 +167,7 @@ function Section({title, id, children}: {title: string; id?: string; children: R
     <section id={id} style={{marginBottom: '2.5rem'}}>
       <h2
         style={{
-          fontFamily: 'Barlow Condensed, sans-serif',
+          fontFamily: 'var(--font-display)',
           fontSize: '1.5rem',
           fontWeight: 700,
           letterSpacing: '0.03em',

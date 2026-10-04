@@ -1,427 +1,1071 @@
 {
   "meta": {
-    "title": "PDR Kalk — Logiciel de calcul des dommages de grêle et de parking pour techniciens DSP",
-    "description": "Application de bureau hors ligne pour techniciens en débosselage sans peinture. Devis grêle et parking, rapports et factures QR suisses / ZUGFeRD. Paiement unique de CHF 550, sans abonnement, conforme au RGPD.",
-    "ogTitle": "PDR Kalk — Calcul des dommages de grêle et de parking",
-    "ogDescription": "Logiciel professionnel de calcul PDR pour techniciens en débosselage."
+    "title": "PDR Kalk – Logiciel de calcul DSP pour grêle, sans abonnement",
+    "description": "Logiciel PDR/DSP pour débosselage sans peinture : calcul grêle (VFFS, AW allemande, UPEX), rapports et factures QR/ZUGFeRD. Hors ligne, Windows & Android, sans abonnement. 30 jours gratuits.",
+    "ogTitle": "Du dommage à la facture. En quelques minutes.",
+    "ogDescription": "Le logiciel des techniciens DSP et des ateliers grêle : calcul, rapport, accord du client, assurance, facture et analyses — en local sur vos appareils, sans abonnement."
+  },
+  "badges": {
+    "new": "Nouveau",
+    "testing": "En test",
+    "soon": "Bientôt",
+    "ai": "Optionnel · IA",
+    "windows": "Windows uniquement",
+    "released": "Publié",
+    "region": "Suisse pour l'instant"
   },
   "nav": {
     "features": "Fonctions",
-    "screenshots": "Captures d'écran",
-    "pricing": "Tarifs",
-    "more": "Plus",
-    "testimonials": "Témoignages",
+    "workflow": "Déroulement",
+    "whatsNew": "Nouveau",
+    "pricing": "Prix",
+    "faq": "FAQ",
     "contact": "Contact",
+    "updates": "Mises à jour",
+    "try": "Essayer",
     "cta": "Acheter",
+    "menu": "Menu",
+    "language": "Langue",
     "skipToContent": "Aller au contenu",
     "backToTop": "Haut de page"
   },
   "hero": {
-    "title": "Calculez les dommages de grêle.",
+    "eyebrow": "Logiciel DSP · Windows & Android",
+    "title": "Du dommage à la facture.",
     "titleAccent": "En quelques minutes.",
-    "subtitle": "Le logiciel de calcul pour techniciens DSP. Rapports et factures professionnels — sans cloud, sans abonnement.",
-    "ctaPrimary": "Essai gratuit",
-    "ctaSecondary": "Découvrir les fonctions",
-    "screenshotAlt": "Tableau de bord PDR Kalk",
-    "videoTitle": "PDR Kalk — Vidéo du produit",
-    "downloadTrial": "Télécharger l'essai 30 jours",
-    "trustBar": [
-      "Prix unique, aucun frais récurrent",
-      "Conforme au RGPD",
-      "Facture électronique ZUGFeRD/Factur-X/QR CH"
-    ],
-    "regionsLabel": "Utilisé en :",
-    "regionsMore": "autres sur demande",
-    "demoComingSoon": "Démo bientôt disponible",
-    "priceCallout": {
-      "amount": "CHF 550",
-      "suffix": "POUR 5 ANS ! (env. CHF 9/mois)",
-      "amountEur": "≈ EUR 580",
-      "vatNote": "Tous les prix s'entendent hors TVA."
-    }
-  },
-  "timeSavings": {
-    "title": "Le temps, c'est de l'argent — économisez avec",
-    "titleAccent": "PDR Kalk !",
-    "cards": [
-      { "value": "1.5", "unit": "heures", "period": "par jour" },
-      { "value": "33", "unit": "heures", "period": "par mois" },
-      { "value": "396", "unit": "heures", "period": "par an" },
-      { "value": "1980", "unit": "heures", "period": "sur 5 ans" }
-    ],
-    "tagline": "Moins de paperasse. Plus de temps pour ce que vous faites de mieux.",
-    "disclaimer": "Sur la base de 22 jours ouvrés / mois"
-  },
-  "problemSolution": {
-    "title": "Pourquoi PDR Kalk ?",
-    "columns": [
-      {
-        "heading": "Fini les tableurs",
-        "desc": "Le calcul automatique remplace le travail manuel. Pas de mise en forme, pas de copier-coller, pas d'erreurs."
-      },
-      {
-        "heading": "Du rapport à la facture",
-        "desc": "Un seul outil pour tout le flux de travail — devis, rapport, facture et quittance."
-      },
-      {
-        "heading": "30 à 60 min. économisées par dossier",
-        "desc": "Moins de paperasse, plus de réparations. Les gains de temps sont rentables dès le premier jour."
-      },
-      {
-        "heading": "Piste d'audit infalsifiable",
-        "desc": "Chaîne de hachage SHA-256, versions de documents automatiques et instantanés PDF — traçabilité complète pour chaque facture."
-      },
-      {
-        "heading": "Export DATEV et comptable",
-        "desc": "CSV DATEV, export TVA et créances ouvertes au format Excel — transmission fluide à votre fiduciaire."
-      },
-      {
-        "heading": "Sauvegarde locale des données",
-        "desc": "Sauvegarde complète au format ZIP sur votre appareil. Enregistrement automatique, restauration intelligente — vos données restent chez vous."
-      }
-    ]
-  },
-  "coreFeatures": {
-    "title": "Ce que PDR Kalk sait faire",
-    "cards": [
-      {
-        "heading": "Calcul des dommages de grêle et de parking",
-        "desc": "5 matrices de prix (VFFS, grêle mixte Zurich, matrice AW allemande avec colonne dé-/remontage, Autriche, liste UPEX belge) avec calcul en direct sur 14 panneaux. Australie : estimation grêle par panneau, par véhicule, triage ou à l'heure. Dommages de parking : par panneau, forfait ou basé sur le temps."
-      },
-      {
-        "heading": "Documents et factures manuelles",
-        "desc": "Devis, rapport, facture, facture QR suisse et facture électronique ZUGFeRD/Factur-X (PDF/A-3 avec XML intégré) pour l'Allemagne — le tout en PDF à votre logo. Plus notes de crédit, déclaration de cession, factures manuelles libres et archive ZIP par dossier en un clic. Elle produit aussi des contrats de location de véhicule de remplacement et des procès-verbaux de remise du véhicule — chacun avec signature, impression PDF et envoi par e-mail."
-      },
-      {
-        "heading": "Flux direct avec l'assurance",
-        "desc": "Processus guidé en 4 étapes : saisie du dommage, déclaration de cession avec signature numérique, envoi à l'assureur, facture fractionnée automatique — y compris l'accord du client sur place."
-      },
-      {
-        "heading": "Flux de sous-traitance",
-        "desc": "Transfert de dossier chiffré (AES-256), trois modèles de rémunération avec répartition en direct, clôture à double notification et fusion des doublons à la réimportation — piste d'audit complète entre donneur d'ordre et sous-traitant."
-      },
-      {
-        "heading": "Tableau de bord analytique",
-        "desc": "Business intelligence en un coup d'œil : chiffre d'affaires et trésorerie, créances par échéance, meilleurs clients, meilleurs assureurs, délai de paiement et entonnoir de conversion — multidevise."
-      },
-      {
-        "heading": "Multi-appareils et données locales",
-        "desc": "Synchronisez le PC du bureau, la tablette de l'atelier et le PC du comptable via votre propre NAS ou cloud — les mêmes données sur chaque appareil. La synchro par dossier partagé fonctionne sous Windows ; les tablettes Android fonctionnent de manière autonome avec toutes les fonctions. Reste 100 % local, conforme au RGPD, 5 langues."
-      }
-    ],
-    "disclaimer": "PDR Kalk inclut une option de calcul générique basée sur les AW allemandes. Elle n'est ni affiliée à, ni approuvée par une quelconque association ou un tiers."
-  },
-  "optionalAi": {
-    "badge": "Optionnel · IA",
-    "title": "Moins de saisie. L'IA lit le permis de circulation.",
-    "subtitle": "Photographiez le permis de circulation (CH) ou le certificat d'immatriculation (DE/AT) – l'IA reconnaît la marque, le modèle, l'année, la plaque, le numéro de châssis et la première mise en circulation, et remplit automatiquement les champs dans l'éditeur de rapport. Optionnel, désactivé par défaut, avec votre propre clé de fournisseur.",
-    "vinNote": "Le scanner VIN lit le numéro de châssis directement sur le véhicule – le cadrage est librement ajustable pour une meilleure reconnaissance – ou vous le saisissez à la main. La lecture s'effectue sur l'appareil (hors ligne) ou via votre fournisseur d'IA (en ligne) ; la marque et l'année-modèle approximative sont ensuite déduites hors ligne du VIN.",
-    "providersLabel": "Vous choisissez le fournisseur d'IA – avec votre propre clé",
-    "providers": [
-      { "name": "Infomaniak", "region": "CH", "recommended": true },
-      { "name": "Mistral AI", "region": "EU" },
-      { "name": "OpenAI", "region": "USA" },
-      { "name": "Anthropic", "region": "USA" }
-    ],
-    "recommendedLabel": "recommandé · centres de données suisses",
-    "providersNote": "Fournisseurs américains uniquement si vous les choisissez explicitement – jamais activés par défaut.",
-    "pillars": [
-      { "heading": "Les données personnelles sont masquées", "desc": "Avant l'envoi, l'application masque le nom et l'adresse du détenteur directement dans l'image. Ligne de cadrage à la caméra et étape de contrôle obligatoire – saisie manuelle toujours possible." },
-      { "heading": "Votre clé, directement au fournisseur", "desc": "Bring-your-own-key : vous utilisez votre propre clé de fournisseur et le payez directement. L'image va de votre appareil directement au fournisseur – jamais via les serveurs de PDR Kalk." },
-      { "heading": "Conforme et traçable", "desc": "Le scan ne démarre qu'une fois que vous avez confirmé quelques points – par exemple que vos données ne servent pas à entraîner l'IA et combien de temps elles sont conservées. Seul le fait qu'un scan a eu lieu est enregistré – jamais l'image, votre clé ou les données lues. Conçu selon le droit suisse et européen de la protection des données." }
-    ],
-    "framing": "Dès que vous activez et utilisez la fonction, l'image masquée est transmise exclusivement au fournisseur que vous avez choisi – avec votre clé, jamais via PDR Kalk. Sans activation, rien ne quitte l'appareil.",
-    "learnMore": "En savoir plus sur l'IA et la confidentialité"
-  },
-  "screenshots": {
-    "title": "PDR Kalk en action",
-    "subtitle": "Des documents professionnels en un clic.",
-    "enlarge": "Agrandir {caption}",
-    "close": "Fermer",
-    "prev": "Image précédente",
-    "next": "Image suivante",
-    "images": [
-      { "file": "dashboard.jpg",                   "caption": "Tableau de bord — dossiers en un coup d'œil" },
-      { "file": "analysen1.jpg",                   "caption": "Tableau de bord analytique — chiffre d'affaires et trésorerie" },
-      { "file": "analysen2.jpg",                   "caption": "Meilleurs clients et entonnoir de conversion" },
-      { "file": "hagel-auftrag.jpg",               "caption": "Calcul des dommages de grêle (VFFS)" },
-      { "file": "hagel-auftrag-aw.jpg",            "caption": "Dommages de grêle — matrice AW allemande avec dé-/remontage" },
-      { "file": "parkschaden-erfassung.jpg",       "caption": "Dommages de parking — par panneau / forfait / au temps" },
-      { "file": "manuel-rechungen.jpg",            "caption": "Facture manuelle (sans rapport)" },
-      { "file": "Versicherung-Direkt.jpg",         "caption": "Flux direct avec l'assurance — 4 étapes" },
-      { "file": "kundebestatigung.jpg",            "caption": "Accord du client sur place avec signature" },
-      { "file": "Subzuweisen.jpg",                 "caption": "Attribuer un sous-traitant — répartition en direct" },
-      { "file": "sub-verwalten.jpg",               "caption": "Gérer le dossier de sous-traitance" },
-      { "file": "Abtretungserklarung1.jpg",        "caption": "Déclaration de cession à l'assureur" },
-      { "file": "Techniker-und-Dokumenten.jpg",    "caption": "Panneau de documents par dossier" },
-      { "file": "email-doks.jpg",                  "caption": "Aperçu d'e-mail avec pièces jointes multiples" },
-      { "file": "verlauf.jpg",                     "caption": "Chronologie du dossier — vue unifiée" },
-      { "file": "audit.jpg",                       "caption": "Journal d'activité et versions" },
-      { "file": "backup.jpg",                      "caption": "Sauvegarde, import sous-traitant et données de démo" },
-      { "file": "wiederherstellen.jpg",            "caption": "Restauration intelligente" },
-      { "file": "hilfe.jpg",                       "caption": "Manuel d'utilisation intégré et complet" },
-      { "file": "Teile-Notiz.jpg",                 "caption": "Pièces endommagées et note" },
-      { "file": "pdf-QR-rechnung.jpg",             "caption": "Facture QR suisse" },
-      { "file": "hagel-auftrag2.jpg",              "caption": "Dommages de grêle — vue détaillée" },
-      { "file": "pdf-hagel.jpg",                   "caption": "Rapport de grêle PDF" },
-      { "file": "pdf-park.jpg",                    "caption": "Rapport de dommages de parking PDF" },
-      { "file": "pdf-rechnung.jpg",                "caption": "Facture PDF" },
-      { "file": "pdf-photos.jpg",                  "caption": "Documentation photo PDF" },
-      { "file": "arbeitsrapporte.jpg",             "caption": "Rapports de travail" },
-      { "file": "adresse-buch.jpg",                "caption": "Carnet d'adresses" },
-      { "file": "einstellungen1.jpg",              "caption": "Paramètres (1)" },
-      { "file": "einstellungen2.jpg",              "caption": "Paramètres (2)" },
-      { "file": "einstellungen3.jpg",              "caption": "Paramètres (3)" }
-    ],
-    "initialCount": 6,
-    "showMore": "Voir plus de captures d'écran",
-    "showLess": "Afficher moins"
-  },
-  "secondaryFeatures": {
-    "upcoming": {
-      "badge": "Bientôt",
-      "title": "Avec la prochaine mise à jour",
-      "note": "Actuellement dans la version de test 4.26.61 — le contenu et les détails peuvent encore évoluer d'ici la publication.",
-      "items": [
-        { "title": "Langue des documents", "desc": "Utilisez l'application dans votre langue et envoyez malgré tout factures, rapports et e-mails dans la langue de vos clients. Bascule en un clic via l'icône du globe." },
-        { "title": "Import de documents grêle", "desc": "Reprenez directement dans l'éditeur grêle les protocoles de bosses Hagelscanner et les calculs SilverDAT au format PDF : pièces, bosses, prestations externes et prix des pièces sont extraits automatiquement. Tout reste en local sur l'appareil, rien ne quitte l'atelier. Pour l'instant en Suisse uniquement." },
-        { "title": "Forfait / manuel dans chaque pays", "desc": "Le mode forfait fonctionne désormais indépendamment du tarif ; pièces endommagées, prestations externes et frais annexes y sont disponibles partout." },
-        { "title": "Cartes monétaires aussi dans la liste AW allemande et le tarif belge", "desc": "Pièces endommagées, prestations externes et frais annexes s'y saisissent désormais aussi ; les rapports existants conservent leurs montants." },
-        { "title": "Dépose/repose en liste de postes chiffrables", "desc": "Au lieu d'une simple colonne : des postes dépose/repose individuels par rapport, au choix en AW, en montant ou au forfait, clairement indiqués sur le rapport de travail." },
-        { "title": "Nouvelle carte frais annexes", "desc": "Essai routier, nettoyage et élimination en bloc distinct sur le rapport grêle, avec mention sur le rapport et la facture." }
-      ]
-    },
-    "title": "Et bien plus encore...",
-    "groups": [
-      {
-        "icon": "search",
-        "heading": "Tableau de bord et recherche",
-        "items": [
-          "Rechercher partout (Ctrl+K) — retrouver dossiers, factures, quittances, contrats de location et clients depuis n'importe où et les ouvrir directement",
-          "Radar des non-facturés — les dossiers terminés mais pas encore facturés apparaissent sur le tableau de bord avec une tuile d'alerte et une marque dans la liste"
-        ]
-      },
-      {
-        "icon": "hailparts",
-        "heading": "Éditeur grêle : pièces, prestations externes et techniciens",
-        "items": [
-          "Dépose/repose nécessaire — indiquez d'un clic les pièces que le client dépose et repose lui-même (17 pièces courantes en sélection rapide, les autres saisies librement) ; affiché en une ligne compacte sur le devis et le rapport de travail",
-          "Taux dépose/repose propre — à définir dans les réglages, modifiable par client dans le carnet d'adresses ; indiqué séparément sur le rapport de travail",
-          "Prestations externes — saisissez avec leur prix les travaux achetés : peinture, tôlerie, mécanique ou covering ; poste distinct sur le rapport et le devis, détaillé en annexe PDF, inclus dans le montant facturé",
-          "Pièces endommagées avec prix — au besoin, chaque pièce endommagée reçoit un prix, lignes saisies librement comprises ; commutable par dossier, la remise client ne s'applique pas aux pièces par défaut (tarifs suisse, autrichien et australien)",
-          "Attribution des techniciens — si plusieurs techniciens interviennent sur le même véhicule, attribuez chaque pièce à celui qui l'a réalisée ; le rapport de travail et l'analyse d'équipe affichent la répartition réelle au lieu d'un partage 50/50 (tarifs CH et AT)"
-        ]
-      },
-      {
-        "icon": "invoice",
-        "heading": "Facturation et paiements",
-        "items": [
-          "Factures manuelles sans rapport — partagent le même compteur RE-",
-          "Facture électronique ZUGFeRD/Factur-X (PDF/A-3 avec XML intégré, EN 16931) — conforme à l'obligation B2B allemande",
-          "Suivi des paiements avec paiements partiels et affichage du solde",
-          "Statut de facture (Créée → Remise → Payée) mis à jour automatiquement",
-          "Notes de crédit, factures fractionnées, annulation avec remplacement"
-        ]
-      },
-      {
-        "icon": "analytics",
-        "heading": "Analyse et contrôle de gestion",
-        "items": [
-          "Graphiques de chiffre d'affaires et de trésorerie sur toute période personnalisée",
-          "Créances classées par échéance (0–30, 31–60, 61–90, 90+ jours)",
-          "Meilleurs clients, meilleurs assureurs, valeur moyenne par dossier, délai moyen de paiement",
-          "Entonnoir de conversion : Rapport → Accepté → Facturé → Payé",
-          "Analyse par technicien : cliquez sur un technicien pour voir tous ses dossiers — regroupés par semaine et copiables vers Excel en un clic"
-        ]
-      },
-      {
-        "icon": "package",
-        "heading": "Archive de dossier et documents",
-        "items": [
-          "Export d'archive de dossier — ZIP par dossier avec rapport, facture, cession, photos, sauvegarde",
-          "Panneau de documents : joignez n'importe quel PDF à un dossier (expertise, confirmation d'assurance…)",
-          "Aperçu d'e-mail avec sélecteur de pièces jointes multiples sur tous les documents du dossier",
-          "Accord du client sur place avec signature numérique sur l'appareil",
-          "Contrat de location de véhicule de remplacement — créez-le depuis un dossier ou un rapport, signez, imprimez, envoyez par e-mail et facturez ; heures de prise en charge et de restitution en option pour une location à l'heure (CH & UE)",
-          "Procès-verbal de remise — faites signer au client la remise du véhicule terminé (kilométrage, niveau de carburant, signature), imprimez en PDF ou envoyez par e-mail"
-        ]
-      },
-      {
-        "icon": "users",
-        "heading": "Sous-traitance et ateliers partenaires",
-        "items": [
-          "Transmettre un dossier ou le partager avec un atelier partenaire — le dossier part sous forme de fichier vers un autre atelier PDR Kalk et y apparaît comme dossier propre, avec son numéro et son en-tête",
-          "Trois modèles de rémunération : au temps, au pourcentage, au forfait — avec répartition en direct",
-          "Part des consommables dans le modèle au temps — le donneur d'ordre définit la part des consommables revenant au sous-traitant",
-          "Rémunération du sous-traitant ajustable par dossier — sur un rapport reçu, la rémunération peut être ajustée ; la fenêtre affiche le montant du sous-traitant, le vôtre et la différence",
-          "Envoyer les conditions directement au sous-traitant — les conditions modifiées partent depuis le carnet d'adresses et valent à partir du prochain rapport",
-          "« Mandats reçus » pour les sous-traitants — le tableau de bord affiche les dossiers reçus encore ouverts avec leur rémunération",
-          "Clôture à double notification : le sous-traitant et le donneur d'ordre sont informés automatiquement",
-          "Transfert de dossier chiffré (AES-256) et import de dossier sous-traitant via le menu sauvegarde",
-          "Fusion des doublons à la réimportation — pas de saisies en double"
-        ]
-      },
-      {
-        "icon": "camera",
-        "heading": "Photos et véhicule",
-        "items": [
-          "Mini-serveur par QR code — téléversez les photos directement depuis votre smartphone dans le dossier, sans câble ni connexion",
-          "Jusqu'à 12 photos par dossier avec légendes, intégrées au rapport PDF",
-          "Compression automatique en 3 niveaux de qualité, les données EXIF (dont GPS) sont supprimées",
-          "Sélecteur de pièces endommagées G/D par panneau avec note"
-        ]
-      },
+    "subtitle": "Le logiciel des techniciens DSP (débosselage sans peinture) et des ateliers grêle : calculer les dommages de grêle et de parking, établir le rapport, obtenir l'accord du client, traiter avec l'assurance, facturer et analyser — en local sur vos appareils, sans abonnement.",
+    "ctaPrimary": "Essayer {days} jours gratuitement",
+    "ctaSecondary": "Voir la démo",
+    "tryNote": "Téléchargement direct · sans carte de crédit · sans inscription",
+    "priceChip": "Licence perpétuelle · CHF {price} en paiement unique",
+    "priceChipSub": "hors TVA · entreprises UE : EUR {priceEur}",
+    "trustChips": [
       {
         "icon": "devices",
-        "heading": "Multi-appareils et synchro NAS",
-        "items": [
-          "Utilisez PDR Kalk sur plusieurs appareils — le bureau, la tablette à l'atelier, le comptable depuis chez lui",
-          "Synchro par dossier partagé (NAS, OneDrive, Synology Drive) entre vos appareils Windows — vous décidez où vivent vos données",
-          "Aperçu des appareils du dossier de travail — Paramètres → Stockage indique quand les autres appareils ont été actifs pour la dernière fois ; à l'émission d'une facture, un avis signale un appareil qui ne s'est plus synchronisé depuis un moment",
-          "Les tablettes Android fonctionnent de manière autonome avec toutes les fonctions — base de données locale propre, sans synchro par dossier partagé",
-          "Recommandé pour la synchro par dossier partagé : PC Microsoft, ordinateur portable ou tablette Windows de 10\" ou plus — tablettes Android (Android 10+) pour un usage autonome uniquement"
-        ]
+        "label": "Windows & Android"
       },
       {
-        "icon": "backup",
-        "heading": "Export, sauvegarde et comptabilité",
-        "items": [
-          "Export DATEV (CSV), export TVA, export des créances ouvertes au format Excel",
-          "Sauvegarde complète au format ZIP (avec / sans photos) localement sur votre appareil",
-          "Restauration intelligente — sans doublons, les photos sont reprises automatiquement",
-          "Export de la piste d'audit au format JSON avec vérification SHA-256"
-        ]
+        "icon": "wifiOff",
+        "label": "100 % hors ligne"
+      },
+      {
+        "icon": "wallet",
+        "label": "Sans abonnement"
       },
       {
         "icon": "globe",
-        "heading": "6 régions — CH, DE, AT, AU, BE, NL",
+        "label": "6 pays"
+      },
+      {
+        "icon": "bolt",
+        "label": "Conçu par des techniciens"
+      }
+    ],
+    "stack": {
+      "base": "PDR Kalk – tableau de bord : mandats, factures ouvertes et indicateurs en un coup d'œil",
+      "card": "PDR Kalk – calcul grêle : nombre d'impacts par élément avec total en direct",
+      "doc": "PDR Kalk – facture en PDF avec votre logo",
+      "labels": [
+        "Dommage",
+        "Calcul",
+        "Facture"
+      ]
+    },
+    "videoTitle": "PDR Kalk — vidéo de présentation"
+  },
+  "trust": {
+    "title": "Pourquoi PDR Kalk",
+    "items": [
+      {
+        "value": "30–60",
+        "unit": "min",
+        "label": "économisées par mandat",
+        "note": "Moins de paperasse, plus de réparations."
+      },
+      {
+        "value": "1×",
+        "unit": "",
+        "label": "paiement, usage illimité",
+        "note": "Sans abonnement, sans date d'expiration, sans coût par utilisateur supplémentaire."
+      },
+      {
+        "value": "100",
+        "unit": "%",
+        "label": "utilisable hors ligne",
+        "note": "Vos données restent sur votre appareil ou votre propre NAS."
+      },
+      {
+        "value": "6",
+        "unit": "pays",
+        "label": "avec les bons tarifs",
+        "note": "CH, DE, AT, AU, BE, NL · application en {languages} langues"
+      }
+    ],
+    "stats": [
+      {
+        "value": "1.5",
+        "unit": "heures",
+        "period": "par jour"
+      },
+      {
+        "value": "33",
+        "unit": "heures",
+        "period": "par mois"
+      },
+      {
+        "value": "396",
+        "unit": "heures",
+        "period": "par an"
+      }
+    ],
+    "disclaimer": "Gain de temps calculé sur 22 jours ouvrables par mois."
+  },
+  "demo": {
+    "eyebrow": "Démo",
+    "title": "PDR Kalk en 3 minutes",
+    "lead": "Un parcours rapide du déroulement complet — du dommage de grêle saisi jusqu'à la facture terminée.",
+    "points": [
+      "Saisir un dommage de grêle et le calculer en direct",
+      "Rapport et devis en PDF",
+      "Facture avec bulletin de versement QR"
+    ],
+    "play": "Lancer la vidéo de présentation"
+  },
+  "workflow": {
+    "eyebrow": "Déroulement",
+    "title": "Sept étapes. Un seul outil. Aucun tableur.",
+    "lead": "Chaque étape s'appuie sur la précédente : rien n'est saisi deux fois, et la facture finale correspond au calcul initial.",
+    "stepLabel": "Étape {n}",
+    "allScreenshots": "Voir les {n} captures d'écran",
+    "steps": [
+      {
+        "label": "Saisie",
+        "title": "Saisir le véhicule et le dommage",
+        "benefit": "Saisi une fois — tout le reste en découle.",
+        "points": [
+          "Scanner le permis de circulation (IA optionnelle) ou saisir le VIN avec le scanner",
+          "Envoyer les photos du smartphone directement dans le mandat par code QR",
+          "Marquer les pièces endommagées à gauche/droite par élément, avec une note"
+        ],
+        "file": "bauteil-waehlen.jpg",
+        "alt": "PDR Kalk – saisie du dommage : choix de l'élément endommagé sur le schéma du véhicule"
+      },
+      {
+        "label": "Calcul",
+        "title": "Calculer avec la matrice tarifaire de votre pays",
+        "benefit": "Le total se recalcule en direct — sur les 14 éléments.",
+        "points": [
+          "VFFS, grêle mixte Zurich, liste AW allemande, Autriche ou liste UPEX belge",
+          "Dommage de parking par élément, au forfait ou sur base AW",
+          "Pièces, prestations externes, dépose/repose et frais annexes dans le même rapport"
+        ],
+        "file": "hagel-auftrag.jpg",
+        "alt": "PDR Kalk – calcul grêle selon VFFS avec nombre d'impacts par élément"
+      },
+      {
+        "label": "Rapport",
+        "title": "Devis et rapport",
+        "benefit": "Un clic — et le PDF porte votre logo.",
+        "points": [
+          "Devis et rapport grêle ou parking en PDF",
+          "Documentation photo en PDF séparé",
+          "Langue du document au choix — indépendante de la langue de l'application"
+        ],
+        "file": "pdf-hagel.jpg",
+        "alt": "PDR Kalk – rapport grêle en PDF avec votre logo"
+      },
+      {
+        "label": "Accord",
+        "title": "Accord — du client ou de l'assurance",
+        "benefit": "Signature sur l'appareil — sans impression, sans relance.",
+        "points": [
+          "Le client signe le devis directement sur la tablette ou le portable",
+          "Sinistre assurance ? Faire signer la cession de créance et l'envoyer à l'assurance dans le processus direct",
+          "Chaque accord est conservé dans le mandat et dans la piste d'audit"
+        ],
+        "file": "kundebestatigung.jpg",
+        "alt": "PDR Kalk – accord du client avec signature numérique sur l'appareil"
+      },
+      {
+        "label": "Réparation",
+        "title": "Réparation et remise",
+        "benefit": "Qui a fait quoi — consigné avant que la voiture ne quitte l'atelier.",
+        "points": [
+          "Rapport de travail avec attribution des techniciens par élément",
+          "Contrat de location du véhicule de remplacement, aussi à l'heure",
+          "Procès-verbal de remise avec kilométrage, niveau de carburant et signature"
+        ],
+        "file": "arbeitsrapporte.jpg",
+        "alt": "PDR Kalk – rapports de travail par statut : nouveau, en cours, terminé et facturé"
+      },
+      {
+        "label": "Facture",
+        "title": "Établir la facture",
+        "benefit": "Facture QR suisse et ZUGFeRD/Factur-X sans second logiciel.",
+        "points": [
+          "Bulletin QR pour la Suisse, ZUGFeRD/Factur-X pour l'Allemagne",
+          "Facture séparée pour les sinistres : assurance et franchise distinctes",
+          "Notes de crédit, annulations et factures manuelles avec la même numérotation"
+        ],
+        "file": "rechnungen.jpg",
+        "alt": "PDR Kalk – factures avec statut, échéance, note de crédit et annulation"
+      },
+      {
+        "label": "Analyses",
+        "title": "Paiement et analyses",
+        "benefit": "Vous voyez immédiatement ce qui est ouvert et d'où vient le chiffre d'affaires.",
+        "points": [
+          "Encaissements avec paiements partiels ; le statut change automatiquement",
+          "Créances par échéance, meilleurs clients et meilleures assurances",
+          "DATEV CSV, export TVA et débiteurs ouverts en Excel"
+        ],
+        "file": "analysen1.jpg",
+        "alt": "PDR Kalk – analyses : chiffre d'affaires, encaissements, créances ouvertes et charge de l'équipe"
+      }
+    ]
+  },
+  "whatsNew": {
+    "eyebrow": "Nouveau",
+    "title": "Nouveau dans PDR Kalk",
+    "lead": "PDR Kalk évolue avec le métier. Voici ce qui est arrivé depuis la dernière version.",
+    "versionChip": "Version actuelle {version}",
+    "allLink": "Toutes les nouveautés",
+    "featured": {
+      "badges": [
+        "Nouveau dans {version}",
+        "Suisse pour l'instant"
+      ],
+      "title": "Déjà un calcul ? Ne le saisissez pas deux fois.",
+      "desc": "Vous avez un protocole d'impacts d'un scanner grêle ou un calcul SilverDAT en PDF ? PDR Kalk lit les chiffres directement dans le document : éléments et nombre d'impacts par classe de taille — pour les calculs SilverDAT également les données du véhicule, les pièces avec leurs prix, les positions de dépose/repose et les frais annexes. Vous vérifiez la reprise dans un écran de contrôle « Sera repris · À clarifier · Inchangé » et vous continuez comme d'habitude : rapport, accord du client, assurance, facture.",
+      "facts": [
+        "Lit les PDF avec couche de texte — ni scans ni photos",
+        "Traitement entièrement sur votre appareil",
+        "Aucune interface avec SilverDAT — un PDF existant est lu",
+        "Pour l'instant la Suisse (région CH, tarif suisse)",
+        "À activer sous Paramètres → Grêle"
+      ],
+      "flow": [
+        "Calcul existant",
+        "Importer et vérifier",
+        "Rapport, accord, facture"
+      ],
+      "cta": "En savoir plus sur l'import"
+    },
+    "items": [
+      {
+        "title": "Langue des documents",
+        "desc": "Utiliser l'application dans votre langue et envoyer malgré tout factures, rapports et e-mails dans la langue du client. Bascule via l'icône du globe.",
+        "status": "new",
+        "version": "4.26.63"
+      },
+      {
+        "title": "Forfait / manuel dans chaque pays",
+        "desc": "Le mode forfait fonctionne désormais indépendamment de la table tarifaire. Pièces endommagées, prestations externes et frais annexes sont aussi disponibles dans la liste AW allemande et la table belge.",
+        "status": "new",
+        "version": "4.26.63"
+      },
+      {
+        "title": "Transmettre ou partager un mandat",
+        "desc": "Envoyer un mandat sous forme de fichier à un atelier partenaire — il y apparaît comme son propre mandat, avec son numéro et son en-tête. Plus la recherche partout avec Ctrl+K.",
+        "status": "new",
+        "version": "4.26.59"
+      }
+    ],
+    "also": {
+      "title": "Également nouveau",
+      "items": [
+        {
+          "title": "Dépose/repose en liste de positions",
+          "desc": "positions individuelles par rapport, au choix en AW, en montant ou au forfait"
+        },
+        {
+          "title": "Carte des frais annexes",
+          "desc": "course d'essai, nettoyage et élimination dans un bloc dédié du rapport grêle"
+        },
+        {
+          "title": "Scanner du permis de circulation CH/UE",
+          "desc": "bascule entre permis suisse et certificat d'immatriculation de l'UE"
+        },
+        {
+          "title": "« Le client reçoit » par client",
+          "desc": "définir si le client reçoit le rapport client, le rapport assurance ou les deux"
+        },
+        {
+          "title": "Clients du donneur d'ordre côté sous-traitant",
+          "desc": "modifier les coordonnées, masquer des entrées et fusionner les doublons"
+        }
+      ]
+    }
+  },
+  "features": {
+    "eyebrow": "Fonctions",
+    "title": "Ce que fait PDR Kalk — classé par étape de travail",
+    "lead": "Huit domaines, un seul programme. Chaque carte montre l'essentiel ; la liste complète est à un clic.",
+    "allLabel": "Les {n} fonctions",
+    "expandAll": "Toutes les fonctions en détail",
+    "collapseAll": "Réduire les détails",
+    "moreLabel": "En savoir plus sur {title}",
+    "disclaimer": "PDR Kalk propose une option de calcul générale basée sur les AW allemandes. Elle n'est liée à aucune association ni à un tiers et n'est ni soutenue ni approuvée par ceux-ci.",
+    "groups": [
+      {
+        "key": "capture",
+        "icon": "hailparts",
+        "heading": "Saisir et calculer",
+        "summary": "Dommages de grêle et de parking avec la matrice tarifaire de votre pays — calcul en direct sur 14 éléments.",
+        "page": "hail",
+        "badges": [
+          "Nouveau dans {version}"
+        ],
+        "highlights": [
+          {
+            "t": "Cinq matrices tarifaires",
+            "d": "VFFS, grêle mixte Zurich, liste AW allemande avec dépose/repose, Autriche et liste UPEX belge — pour l'Australie également par élément, par véhicule, triage ou à l'heure."
+          },
+          {
+            "t": "Dommage de parking souple",
+            "d": "Par élément, au forfait ou sur base AW — en mode forfait dans chaque pays."
+          },
+          {
+            "t": "Photos par code QR",
+            "d": "Jusqu'à 30 photos par mandat directement depuis le smartphone ; les données EXIF et GPS sont supprimées."
+          },
+          {
+            "t": "Permis de circulation et VIN",
+            "d": "Scanner le permis (IA optionnelle, bascule CH/UE) ou saisir le VIN avec le scanner."
+          }
+        ],
         "items": [
-          "Suisse : CHF, TVA 8,1 %, bulletin de versement QR, arrondi aux 5 centimes",
-          "Allemagne : EUR, TVA 19 %, export DATEV, factures d'annulation, facture électronique ZUGFeRD/Factur-X",
-          "Autriche : EUR, TVA 20 %, matrice de prix dédiée",
-          "Australie : AUD, GST 10 %, estimation grêle par panneau, par véhicule, triage ou à l'heure",
-          "Belgique : EUR, TVA 21 %, liste UPEX belge (UPEX 2015)",
-          "Pays-Bas : EUR, TVA 21 % (matrice grêle à venir)",
-          "Autoliquidation pour les clients de l'UE avec numéro de TVA"
+          {
+            "t": "Import de documents grêle",
+            "d": "lire les protocoles d'impacts et les calculs SilverDAT en PDF au lieu de les saisir — avec un écran de contrôle avant la reprise.",
+            "status": "new"
+          },
+          {
+            "t": "Forfait / manuel dans chaque pays",
+            "d": "indépendamment de la table tarifaire, avec pièces, prestations externes et frais annexes.",
+            "status": "new"
+          },
+          {
+            "t": "Cartes de montants dans la liste AW allemande et la table belge",
+            "d": "y saisir aussi pièces endommagées, prestations externes et frais annexes ; les rapports existants conservent leurs chiffres.",
+            "status": "new"
+          },
+          {
+            "t": "Dépose/repose en liste de positions",
+            "d": "positions individuelles par rapport, au choix en AW, en montant ou au forfait, clairement indiquées sur le rapport de travail.",
+            "status": "new"
+          },
+          {
+            "t": "Carte des frais annexes",
+            "d": "course d'essai, nettoyage et élimination dans un bloc dédié, indiqué sur le rapport et la facture.",
+            "status": "new"
+          },
+          {
+            "t": "Dépose/repose nécessaire",
+            "d": "noter quelles pièces le client dépose et repose lui-même — 17 pièces courantes en sélection rapide, pièces ponctuelles saisies librement."
+          },
+          {
+            "t": "Votre propre taux de dépose/repose",
+            "d": "enregistré dans les paramètres, modifiable par client dans le carnet d'adresses."
+          },
+          {
+            "t": "Prestations externes",
+            "d": "saisir avec leur prix les travaux de peinture, carrosserie, mécanique ou covering achetés — position propre sur le rapport et le devis."
+          },
+          {
+            "t": "Pièces endommagées avec prix",
+            "d": "chaque pièce endommagée peut recevoir un prix ; par défaut, la remise client ne s'applique pas aux pièces."
+          },
+          {
+            "t": "Sélection des pièces G/D avec note",
+            "d": "marquer gauche et droite par élément et ajouter une note."
+          },
+          {
+            "t": "Compression des photos en 3 niveaux",
+            "d": "qualité au choix par mandat ; les données EXIF, GPS incluses, sont supprimées."
+          },
+          {
+            "t": "Attribution des techniciens par élément",
+            "d": "lorsque plusieurs techniciens travaillent sur le même véhicule, le rapport de travail montre la répartition réelle (tarifs CH et AT)."
+          }
         ]
       },
       {
-        "icon": "timeline",
-        "heading": "Chronologie, piste d'audit et e-mail",
+        "key": "documents",
+        "icon": "package",
+        "heading": "Rapports et documents",
+        "summary": "Tous les documents d'un mandat DSP — en PDF avec votre logo, prêts à imprimer ou à envoyer.",
+        "highlights": [
+          {
+            "t": "Devis, rapport, rapport de travail",
+            "d": "documentation photo comprise, en PDF séparé."
+          },
+          {
+            "t": "Cession, contrat de location, procès-verbal",
+            "d": "véhicule de remplacement aussi à l'heure (CH & UE), remise avec kilométrage, niveau de carburant et signature."
+          },
+          {
+            "t": "Job package ZIP",
+            "d": "tous les documents d'un mandat dans un seul paquet, plus un panneau pour vos propres PDF."
+          },
+          {
+            "t": "Langue des documents",
+            "d": "factures, rapports et e-mails dans la langue du client — indépendamment de la langue de l'application."
+          }
+        ],
         "items": [
-          "Chronologie / historique du dossier — vue unifiée entre rapport ↔ facture",
-          "Chaîne de hachage SHA-256 — chaque entrée liée cryptographiquement",
-          "Versions de documents automatiques et instantanés PDF à chaque changement de statut",
-          "Envoi SMTP direct avec classement IMAP et suivi de remise",
-          "Mot d'accueil du tutoiement au choix dans les modèles d'e-mail — p. ex. « Hallo » ou « Sali » au lieu de « Hoi » fixe"
+          {
+            "t": "Langue des documents",
+            "d": "commutable par document via l'icône du globe.",
+            "status": "new"
+          },
+          {
+            "t": "Export Job package",
+            "d": "un ZIP par mandat avec rapport, facture, cession, photos et sauvegarde."
+          },
+          {
+            "t": "Panneau documents",
+            "d": "joindre vos propres PDF à un mandat, par exemple une expertise ou une confirmation d'assurance."
+          },
+          {
+            "t": "Aperçu e-mail avec pièces jointes multiples",
+            "d": "composé à partir de tous les documents du mandat."
+          },
+          {
+            "t": "Contrat de location du véhicule de remplacement",
+            "d": "créer depuis un mandat ou un rapport, signer, imprimer, envoyer et facturer ; en option avec heures de prise en charge et de restitution pour une location horaire (CH & UE)."
+          },
+          {
+            "t": "Procès-verbal de remise",
+            "d": "faire signer la remise du véhicule terminé — kilométrage, niveau de carburant, signature."
+          },
+          {
+            "t": "Documentation photo en PDF",
+            "d": "jusqu'à 30 photos légendées, intégrées au rapport ou en document séparé."
+          }
         ]
       },
       {
-        "icon": "help",
-        "heading": "Aide et manuel d'utilisation",
+        "key": "invoicing",
+        "icon": "invoice",
+        "heading": "Facturation, paiement et comptabilité",
+        "summary": "De la facture à l'encaissement jusqu'à l'export attendu par votre fiduciaire.",
+        "highlights": [
+          {
+            "t": "Facture QR et ZUGFeRD/Factur-X",
+            "d": "bulletin QR suisse et facture électronique en PDF/A-3 selon EN 16931."
+          },
+          {
+            "t": "Encaissement avec paiements partiels",
+            "d": "le statut évolue automatiquement : Créée → Envoyée → Payée."
+          },
+          {
+            "t": "Note de crédit, facture séparée, annulation",
+            "d": "plus les factures manuelles sans rapport — avec la même numérotation."
+          },
+          {
+            "t": "DATEV et Excel",
+            "d": "DATEV CSV, export TVA et débiteurs ouverts en Excel."
+          }
+        ],
         "items": [
-          "Manuel d'utilisation complet intégré directement dans l'application — recherche par sujet",
-          "Guides par section : tableau de bord, analyses, factures, e-mail, sous-traitants, assurance…",
-          "Flux de travail étape par étape avec remarques et conseils",
-          "Sections dédiées à la conformité de la piste d'audit et à la navigation au clavier"
+          {
+            "t": "Facture QR suisse",
+            "d": "avec bulletin de versement, arrondi à 5 centimes et numéro de référence."
+          },
+          {
+            "t": "Facture électronique ZUGFeRD/Factur-X",
+            "d": "PDF/A-3 avec XML intégré selon EN 16931 — conforme pour le B2B en Allemagne."
+          },
+          {
+            "t": "Suivi des encaissements",
+            "d": "saisir les paiements partiels ; le solde manquant est affiché."
+          },
+          {
+            "t": "Statut de facture automatique",
+            "d": "Créée → Envoyée → Payée, sans saisie supplémentaire."
+          },
+          {
+            "t": "Notes de crédit, factures séparées et annulations",
+            "d": "annulation avec facture de remplacement, séparation entre assurance et franchise."
+          },
+          {
+            "t": "Factures manuelles sans rapport",
+            "d": "avec la même numérotation que les autres factures."
+          },
+          {
+            "t": "Export DATEV (CSV)",
+            "d": "plus export TVA et export des débiteurs ouverts en Excel."
+          },
+          {
+            "t": "Autoliquidation pour les clients de l'UE",
+            "d": "facture sans TVA suisse lorsqu'un numéro de TVA intracommunautaire valide est enregistré."
+          }
+        ]
+      },
+      {
+        "key": "insurance",
+        "icon": "mail",
+        "heading": "Assurance et client",
+        "summary": "Le processus direct avec l'assurance — et tout ce qui se passe entre vous et le client.",
+        "highlights": [
+          {
+            "t": "Processus direct en 4 étapes",
+            "d": "saisie du dommage, cession de créance, envoi, facture séparée automatique."
+          },
+          {
+            "t": "Accord du client sur place",
+            "d": "avec signature numérique directement sur l'appareil."
+          },
+          {
+            "t": "Envoi SMTP avec classement IMAP",
+            "d": "suivi d'envoi inclus et formule de salutation au choix."
+          },
+          {
+            "t": "Carnet d'adresses avec conditions",
+            "d": "remises et taux par client, conditions transmissibles au sous-traitant."
+          }
+        ],
+        "items": [
+          {
+            "t": "Processus direct avec l'assurance",
+            "d": "un parcours guidé en 4 étapes, de la saisie du dommage à la facture séparée."
+          },
+          {
+            "t": "Déclaration de cession",
+            "d": "avec signature numérique, prête à imprimer ou à envoyer en PDF."
+          },
+          {
+            "t": "Accord du client sur place",
+            "d": "le client valide le devis sur une tablette ou un portable."
+          },
+          {
+            "t": "Envoi SMTP direct",
+            "d": "avec classement IMAP dans les éléments envoyés et suivi d'envoi."
+          },
+          {
+            "t": "Formule de salutation au choix",
+            "d": "dans les modèles d'e-mail, par exemple « Bonjour » ou « Salut »."
+          },
+          {
+            "t": "Carnet d'adresses avec conditions par client",
+            "d": "taux de dépose/repose propre, remises et « le client reçoit » par entrée."
+          },
+          {
+            "t": "« Le client reçoit » par client",
+            "d": "définir si le client reçoit le rapport client, le rapport assurance ou les deux.",
+            "status": "new"
+          }
+        ]
+      },
+      {
+        "key": "team",
+        "icon": "users",
+        "heading": "Équipe et sous-traitants",
+        "summary": "Confier des mandats à des ateliers partenaires, les rémunérer équitablement et garder la vue d'ensemble.",
+        "page": "subcontractors",
+        "highlights": [
+          {
+            "t": "Transmettre ou partager un mandat",
+            "d": "sous forme de fichier chiffré vers un autre atelier PDR Kalk — il y apparaît avec son numéro et son en-tête."
+          },
+          {
+            "t": "Trois modèles de rémunération",
+            "d": "taux AW, pourcentage ou forfait, avec répartition en direct et part du matériel consommable."
+          },
+          {
+            "t": "AES-256 et double notification",
+            "d": "transfert chiffré ; les deux parties sont informées à la clôture."
+          },
+          {
+            "t": "Attribution des techniciens et analyse d'équipe",
+            "d": "attribuer par élément, analyser par technicien, exporter vers Excel."
+          }
+        ],
+        "items": [
+          {
+            "t": "Transmettre un mandat ou le partager avec un atelier partenaire",
+            "d": "le mandat part sous forme de fichier vers un autre atelier PDR Kalk et y apparaît comme son propre mandat.",
+            "status": "new"
+          },
+          {
+            "t": "Trois modèles de rémunération",
+            "d": "taux AW, pourcentage ou forfait — avec répartition en direct dans la fenêtre."
+          },
+          {
+            "t": "Part du matériel consommable",
+            "d": "dans le modèle au taux, le donneur d'ordre définit la part qui revient au sous-traitant."
+          },
+          {
+            "t": "Rémunération ajustable par mandat",
+            "d": "la fenêtre affiche le montant du sous-traitant, le vôtre et la différence."
+          },
+          {
+            "t": "Envoyer les conditions directement au sous-traitant",
+            "d": "transmettre des conditions modifiées depuis le carnet d'adresses ; elles s'appliquent dès le rapport suivant."
+          },
+          {
+            "t": "« Mandats reçus »",
+            "d": "le tableau de bord du sous-traitant affiche les mandats reçus ouverts avec leur rémunération."
+          },
+          {
+            "t": "Clôture avec double notification",
+            "d": "sous-traitant et donneur d'ordre sont informés automatiquement."
+          },
+          {
+            "t": "Transfert chiffré (AES-256)",
+            "d": "import du mandat sous-traité via le menu de sauvegarde."
+          },
+          {
+            "t": "Fusion des doublons à la réimportation",
+            "d": "aucune entrée en double, même après plusieurs allers-retours."
+          },
+          {
+            "t": "Clients du donneur d'ordre côté sous-traitant",
+            "d": "modifier les coordonnées, masquer des entrées et fusionner les doublons.",
+            "status": "new"
+          }
+        ]
+      },
+      {
+        "key": "analytics",
+        "icon": "analytics",
+        "heading": "Analyses et pilotage",
+        "summary": "De la business intelligence en un clic — multidevise, sans module supplémentaire.",
+        "highlights": [
+          {
+            "t": "Chiffre d'affaires et trésorerie",
+            "d": "sur les périodes de votre choix, en plusieurs devises."
+          },
+          {
+            "t": "Créances par échéance",
+            "d": "0–30, 31–60, 61–90 et plus de 90 jours."
+          },
+          {
+            "t": "Meilleurs clients et assurances",
+            "d": "plus valeur moyenne des mandats et délai moyen de paiement."
+          },
+          {
+            "t": "Entonnoir de conversion",
+            "d": "Rapport → Accepté → Facturé → Payé."
+          }
+        ],
+        "items": [
+          {
+            "t": "Graphiques de chiffre d'affaires et de trésorerie",
+            "d": "sur les périodes de votre choix."
+          },
+          {
+            "t": "Créances ouvertes par échéance",
+            "d": "0–30, 31–60, 61–90 et plus de 90 jours."
+          },
+          {
+            "t": "Meilleurs clients, meilleures assurances",
+            "d": "valeur moyenne des mandats et délai moyen de paiement."
+          },
+          {
+            "t": "Entonnoir de conversion",
+            "d": "Rapport → Accepté → Facturé → Payé."
+          },
+          {
+            "t": "Analyse par technicien",
+            "d": "un clic sur un technicien affiche tous ses mandats — groupés par semaine et copiables vers Excel."
+          }
+        ]
+      },
+      {
+        "key": "workspace",
+        "icon": "search",
+        "heading": "Tableau de bord, recherche et aide",
+        "summary": "Tout trouver, ne rien oublier — et de l'aide dans l'application quand il le faut.",
+        "highlights": [
+          {
+            "t": "Recherche partout (Ctrl+K)",
+            "d": "trouver mandats, factures, quittances, contrats de location et clients depuis n'importe où et les ouvrir directement."
+          },
+          {
+            "t": "Radar des mandats non facturés",
+            "d": "les mandats terminés mais non facturés apparaissent sur le tableau de bord avec une carte de rappel."
+          },
+          {
+            "t": "Manuel d'utilisation dans l'application",
+            "d": "consultable par thème, avec des procédures pas à pas."
+          },
+          {
+            "t": "Chronologie du mandat",
+            "d": "une vue unique du cas, du rapport à la facture."
+          }
+        ],
+        "items": [
+          {
+            "t": "Recherche partout (Ctrl+K)",
+            "d": "depuis n'importe quel écran ; un résultat ouvre directement la fiche."
+          },
+          {
+            "t": "Radar des mandats non facturés",
+            "d": "carte de rappel sur le tableau de bord et marquage dans la liste."
+          },
+          {
+            "t": "Manuel d'utilisation dans l'application",
+            "d": "consultable, avec des guides pour le tableau de bord, les analyses, les factures, l'e-mail, les sous-traitants et les assurances."
+          },
+          {
+            "t": "Procédures pas à pas",
+            "d": "avec remarques et astuces issues de la pratique."
+          },
+          {
+            "t": "Section sur la conformité et la navigation au clavier",
+            "d": "pour travailler sans quitter le clavier."
+          },
+          {
+            "t": "Chronologie / historique du mandat",
+            "d": "une frise par cas, du rapport à la facture."
+          }
+        ]
+      },
+      {
+        "key": "data",
+        "icon": "devices",
+        "heading": "Appareils, données et sécurité",
+        "summary": "Windows et Android, 100 % local, avec sauvegarde et piste d'audit infalsifiable.",
+        "page": "noSubscription",
+        "highlights": [
+          {
+            "t": "Windows 10/11 et Android 10+",
+            "d": "100 % local, conforme au RGPD et à la nLPD, sans cloud du fournisseur."
+          },
+          {
+            "t": "Synchronisation NAS et dossier cloud",
+            "d": "entre vos appareils Windows via NAS, OneDrive ou Synology Drive."
+          },
+          {
+            "t": "Sauvegarde complète et restauration intelligente",
+            "d": "ZIP avec ou sans photos ; la restauration fusionne au lieu de dupliquer."
+          },
+          {
+            "t": "Piste d'audit avec SHA-256",
+            "d": "chaîne de hachage, versions de documents et instantanés PDF automatiques."
+          }
+        ],
+        "items": [
+          {
+            "t": "Windows 10/11 et Android 10+",
+            "d": "PC, portable, tablette Windows dès 10 pouces et tablettes Android."
+          },
+          {
+            "t": "Synchronisation via un dossier de travail partagé",
+            "d": "NAS, OneDrive ou Synology Drive entre vos appareils Windows — vous décidez où sont vos données.",
+            "status": "windows"
+          },
+          {
+            "t": "Aperçu des appareils dans le dossier de travail",
+            "d": "Paramètres → Stockage indique quand les autres appareils ont été actifs pour la dernière fois."
+          },
+          {
+            "t": "Les tablettes Android fonctionnent de façon autonome",
+            "d": "base de données locale propre avec toutes les fonctions, sans synchronisation par dossier partagé."
+          },
+          {
+            "t": "Sauvegarde complète en ZIP",
+            "d": "avec ou sans photos, en local sur votre appareil."
+          },
+          {
+            "t": "Restauration intelligente",
+            "d": "aucun doublon ; les photos sont reprises."
+          },
+          {
+            "t": "Piste d'audit avec chaîne de hachage SHA-256",
+            "d": "chaque entrée est liée cryptographiquement à la précédente."
+          },
+          {
+            "t": "Versions de documents et instantanés PDF automatiques",
+            "d": "à chaque changement de statut."
+          },
+          {
+            "t": "Export de la piste d'audit en JSON",
+            "d": "avec vérification SHA-256."
+          },
+          {
+            "t": "{languages} langues d'interface",
+            "d": "allemand, français, italien, anglais, néerlandais, portugais et espagnol."
+          }
         ]
       }
     ]
   },
-  "comparison": {
-    "title": "Pourquoi PDR Kalk ?",
-    "headers": {
-      "feature": "Fonction",
-      "pdrKalk": "PDR Kalk",
-      "competitor": "Logiciel sur abonnement typique"
-    },
-    "rows": [
-      { "feature": "Paiement unique", "pdrKalk": true, "competitor": false, "competitorNote": "Mensuel" },
-      { "feature": "Fonctionne hors ligne", "pdrKalk": true, "competitor": false, "competitorNote": "Cloud" },
-      { "feature": "Flux direct avec l'assurance", "pdrKalk": true, "competitor": false, "competitorNote": "Non" },
-      { "feature": "Flux de sous-traitance", "pdrKalk": true, "competitor": false, "competitorNote": "Non" },
-      { "feature": "Tableau de bord analytique (BI)", "pdrKalk": true, "competitor": false, "competitorNote": "Supplément" },
-      { "feature": "Multi-appareils via votre NAS", "pdrKalk": true, "competitor": false, "competitorNote": "Cloud uniquement", "pdrKalkAsterisk": true },
-      { "feature": "Téléversement photo par QR depuis le téléphone", "pdrKalk": true, "competitor": false, "competitorNote": "Non" },
-      { "feature": "Facture QR", "pdrKalk": true, "competitor": false, "competitorNote": "Rare" },
-      { "feature": "Facture électronique ZUGFeRD/Factur-X", "pdrKalk": true, "competitor": false, "competitorNote": "Supplément" },
-      { "feature": "5 langues", "pdrKalk": true, "competitor": false, "competitorNote": "DE uniquement" },
-      { "feature": "Vos données vous appartiennent", "pdrKalk": true, "competitor": false, "competitorNote": "Sur des serveurs tiers" },
-      { "feature": "Natif sur Microsoft et Android", "pdrKalk": true, "competitor": false, "competitorNote": "Cloud uniquement" },
-      { "feature": "Utilisateurs illimités par licence", "pdrKalk": true, "competitor": false, "competitorNote": "1 utilisateur (plus en supplément)" },
-      { "feature": "Piste d'audit infalsifiable (SHA-256)", "pdrKalk": true, "competitor": false, "competitorNote": "Rare" },
-      { "feature": "Export DATEV / comptable", "pdrKalk": true, "competitor": false, "competitorNote": "Supplément" },
-      { "feature": "Capture photo dans l'application", "pdrKalk": true, "competitor": false, "competitorNote": "Non" },
-      { "feature": "Contrat de location de véhicule de remplacement et procès-verbal de remise", "pdrKalk": true, "competitor": false, "competitorNote": "Non" },
-      { "feature": "Scan IA : permis de circulation et VIN (optionnel)", "pdrKalk": true, "competitor": false, "competitorNote": "Non" }
-    ],
-    "footnote": "* Cette fonction n'est prise en charge que sur les appareils Microsoft.",
-    "toggle": "Voir le comparatif détaillé"
-  },
-  "pricing": {
-    "title": "Achetez une fois. Utilisez pour toujours.",
-    "lifetime": {
-      "badge": "RECOMMANDÉ",
-      "badgeNote": "Paiement unique — sans abonnement",
-      "price": "CHF 550",
-      "priceSuffix": "POUR 5 ANS ! (env. CHF 9/mois)",
-      "priceEur": "≈ EUR 580",
-      "vatNote": "Tous les prix s'entendent hors TVA.",
-      "features": [
-        "Aucun frais d'abonnement",
-        "Aucun frais d'installation",
-        "Aucun frais récurrent",
-        "Utilisation illimitée",
-        "Petites mises à jour incluses *",
-        "Fonctionne hors ligne"
-      ],
-      "note": "Le meilleur choix pour une utilisation à long terme. * Les mises à jour facultatives des listes d'assurance peuvent entraîner de petits frais.",
-      "cta": "Acheter"
-    },
-    "monthly": {
-      "badge": "Téléchargement gratuit",
-      "badgeNote": "30 jours, sans limites",
-      "price": "Gratuit",
-      "priceSuffix": "30 jours, sans limites",
-      "features": [
-        "Toutes les fonctions débloquées pendant 30 jours",
-        "Téléchargement direct, démarrage immédiat",
-        "Sans abonnement, sans carte bancaire",
-        "Passage facultatif à une licence complète ensuite"
-      ],
-      "cta": "Télécharger maintenant",
-      "disclaimer": "Téléchargement direct — aucune inscription requise."
-    },
-    "comparisonTable": {
-      "title": "Comparaison des coûts sur 5 ans",
-      "headers": {
-        "feature": "Fonction",
-        "competitor": "Concurrent B",
-        "pdrKalk": "PDR Kalk"
+  "regions": {
+    "eyebrow": "Pays",
+    "title": "6 pays, les bons tarifs",
+    "lead": "Devise, taux de TVA, arrondi et matrice tarifaire s'adaptent à votre pays — sans recalcul manuel.",
+    "reverseCharge": "Autoliquidation pour les clients de l'UE avec numéro de TVA intracommunautaire",
+    "more": "autres pays sur demande",
+    "items": [
+      {
+        "code": "ch",
+        "name": "Suisse",
+        "facts": [
+          "CHF · TVA 8,1 %",
+          "Bulletin QR, arrondi à 5 centimes",
+          "VFFS et grêle mixte Zurich"
+        ]
       },
-      "rows": [
-        { "feature": "Modèle de licence",          "competitor": "Abonnement mensuel",   "pdrKalk": "Paiement unique" },
-        { "feature": "Frais d'installation",        "competitor": "Oui",                  "pdrKalk": "Non" },
-        { "feature": "Frais par utilisateur supplémentaire", "competitor": "Oui",         "pdrKalk": "Non" },
-        { "feature": "Basé sur le cloud",           "competitor": "Oui",                  "pdrKalk": "Non — local" },
-        { "feature": "Internet requis",             "competitor": "Oui",                  "pdrKalk": "Non" },
-        { "feature": "Coût année 1",                "competitor": "EUR 1 399 (frais d'installation inclus)", "pdrKalk": "CHF 550" },
-        { "feature": "Coût année 2",                "competitor": "EUR 1 100",            "pdrKalk": "CHF 0" },
-        { "feature": "Coût année 3",                "competitor": "EUR 1 100",            "pdrKalk": "CHF 0" },
-        { "feature": "Coût année 4",                "competitor": "EUR 1 100",            "pdrKalk": "CHF 0" },
-        { "feature": "Coût année 5",                "competitor": "EUR 1 100",            "pdrKalk": "CHF 0" },
-        { "feature": "Total après 5 ans",          "competitor": "EUR 5 799",            "pdrKalk": "CHF 550" }
+      {
+        "code": "de",
+        "name": "Allemagne",
+        "facts": [
+          "EUR · TVA 19 %",
+          "Export DATEV, facture d'annulation, ZUGFeRD/Factur-X",
+          "Liste AW allemande avec dépose/repose"
+        ]
+      },
+      {
+        "code": "at",
+        "name": "Autriche",
+        "facts": [
+          "EUR · TVA 20 %",
+          "Matrice tarifaire propre",
+          "Attribution des techniciens par élément"
+        ]
+      },
+      {
+        "code": "au",
+        "name": "Australie",
+        "facts": [
+          "AUD · GST 10 %",
+          "Par élément, par véhicule, triage ou à l'heure",
+          "Factures GST"
+        ]
+      },
+      {
+        "code": "be",
+        "name": "Belgique",
+        "facts": [
+          "EUR · TVA 21 %",
+          "Liste UPEX belge (UPEX 2015)",
+          "Cartes de montants dans la table belge"
+        ]
+      },
+      {
+        "code": "nl",
+        "name": "Pays-Bas",
+        "facts": [
+          "EUR · TVA 21 %",
+          "Dommage de parking au forfait ou par élément"
+        ],
+        "note": "Matrice grêle à venir"
+      }
+    ]
+  },
+  "integrations": {
+    "eyebrow": "Import et export",
+    "title": "Vos outils existants. Un seul flux DSP.",
+    "lead": "Importer. Continuer. Terminé. PDR Kalk reprend ce que vous avez déjà et transmet ce dont votre comptabilité a besoin.",
+    "inLabel": "Entrées",
+    "outLabel": "Sorties",
+    "appLabel": "PDR Kalk",
+    "detailLink": "L'import en détail",
+    "trademarkNote": "SilverDAT est une marque de son titulaire respectif. PDR Kalk n'est pas affilié à SilverDAT et se contente de lire un PDF que vous fournissez.",
+    "flow": {
+      "in": [
+        {
+          "title": "Calcul SilverDAT (PDF)",
+          "badge": "new",
+          "badgeLabel": "Nouveau · Suisse pour l'instant"
+        },
+        {
+          "title": "Protocole d'impacts du scanner grêle (PDF)",
+          "badge": "new",
+          "badgeLabel": "Nouveau · Suisse pour l'instant"
+        },
+        {
+          "title": "Permis de circulation et VIN",
+          "badge": "ai",
+          "badgeLabel": "Optionnel · IA"
+        },
+        {
+          "title": "Photos du smartphone (QR)"
+        },
+        {
+          "title": "Mandats d'ateliers partenaires (fichier)"
+        }
       ],
-      "closing": "Économisez des milliers de CHF sur cinq ans par rapport aux systèmes sur abonnement.",
-      "note": "Tous les prix s'entendent hors TVA. Des améliorations de fonctions facultatives ou des mises à jour d'assurance peuvent être proposées moyennant de petits frais. Tous les chiffres de comparaison reposent sur des informations tarifaires publiques (au printemps 2026)."
+      "out": [
+        {
+          "title": "Facture QR et ZUGFeRD/Factur-X"
+        },
+        {
+          "title": "Comptabilité : DATEV CSV, TVA, débiteurs Excel"
+        },
+        {
+          "title": "Job package ZIP et piste d'audit JSON"
+        },
+        {
+          "title": "NAS, OneDrive, Synology",
+          "badge": "windows",
+          "badgeLabel": "Windows uniquement"
+        }
+      ]
+    },
+    "tiles": [
+      {
+        "key": "ai",
+        "title": "Scan IA du permis et du VIN",
+        "desc": "Optionnel et désactivé par défaut. Votre propre clé de fournisseur — l'image caviardée part directement vers le fournisseur choisi, jamais via PDR Kalk.",
+        "badge": "ai",
+        "chips": []
+      },
+      {
+        "key": "accounting",
+        "title": "Comptabilité",
+        "desc": "Transmission à la fiduciaire sans ressaisie — des exports dans les formats attendus.",
+        "chips": [
+          "DATEV CSV",
+          "Export TVA",
+          "Débiteurs Excel"
+        ]
+      },
+      {
+        "key": "einvoice",
+        "title": "Facture électronique et QR",
+        "desc": "Bulletin QR suisse et ZUGFeRD/Factur-X en PDF/A-3 avec XML intégré selon EN 16931.",
+        "chips": [
+          "Facture QR",
+          "ZUGFeRD",
+          "Factur-X",
+          "EN 16931"
+        ]
+      },
+      {
+        "key": "nas",
+        "title": "NAS et multi-appareils",
+        "desc": "Un dossier de travail partagé entre vos appareils Windows. Les tablettes Android fonctionnent de façon autonome, avec toutes les fonctions.",
+        "badge": "windows",
+        "chips": [
+          "NAS",
+          "OneDrive",
+          "Synology Drive"
+        ]
+      }
+    ]
+  },
+  "documents": {
+    "eyebrow": "Documents",
+    "title": "Des documents qui convainquent clients et assurances",
+    "lead": "Tout en PDF avec votre logo — à signer, à imprimer ou à envoyer par e-mail.",
+    "note": "Avec votre logo, signature numérique, impression PDF et envoi par e-mail.",
+    "items": [
+      {
+        "file": "pdf-hagel.jpg",
+        "caption": "Rapport grêle"
+      },
+      {
+        "file": "pdf-park.jpg",
+        "caption": "Rapport parking"
+      },
+      {
+        "file": "pdf-rechnung.jpg",
+        "caption": "Facture"
+      },
+      {
+        "file": "pdf-QR-rechnung.jpg",
+        "caption": "Facture QR"
+      },
+      {
+        "file": "pdf-photos.jpg",
+        "caption": "Documentation photo"
+      },
+      {
+        "file": "Abtretungserklarung1.jpg",
+        "caption": "Déclaration de cession"
+      },
+      {
+        "file": "pdf-mietvertrag.jpg",
+        "caption": "Contrat de location du véhicule de remplacement"
+      }
+    ],
+    "more": {
+      "title": "Autres documents",
+      "items": [
+        "Devis",
+        "Rapport de travail",
+        "Note de crédit",
+        "Facture séparée et facture d'annulation",
+        "Procès-verbal de remise",
+        "Job package ZIP",
+        "ZUGFeRD/Factur-X"
+      ]
     }
+  },
+  "team": {
+    "eyebrow": "Ateliers et équipes",
+    "title": "Pour les ateliers avec équipe et partenaires",
+    "lead": "Techniciens internes ou ateliers partenaires : PDR Kalk retient qui a fait quoi — et ce qui est rémunéré pour cela.",
+    "blocks": [
+      {
+        "eyebrow": "Sous-traitants",
+        "title": "Transmettre les mandats, rémunérer équitablement",
+        "desc": "Un mandat part sous forme de fichier chiffré vers l'atelier partenaire et y apparaît comme son propre mandat, avec son numéro et son en-tête.",
+        "points": [
+          "Trois modèles de rémunération avec répartition en direct",
+          "Transfert AES-256, clôture avec double notification, fusion des doublons",
+          "« Mandats reçus » sur le tableau de bord du sous-traitant"
+        ],
+        "file": "Subzuweisen.jpg",
+        "alt": "PDR Kalk – attribution d'un sous-traitant avec répartition en direct de la rémunération",
+        "file2": "sub-verwalten.jpg",
+        "alt2": "PDR Kalk – mandat de sous-traitance reçu chez le partenaire avec mandant, conditions et documents",
+        "linkLabel": "En savoir plus sur le flux sous-traitants"
+      },
+      {
+        "eyebrow": "Analyses",
+        "title": "Voir d'où viennent le chiffre d'affaires et le temps",
+        "desc": "Le tableau de bord des analyses répond aux questions qui, sinon, n'apparaissent qu'en fin d'année — à tout moment et en plusieurs devises.",
+        "points": [
+          "Chiffre d'affaires et trésorerie sur les périodes de votre choix",
+          "Créances ouvertes par échéance (0–30, 31–60, 61–90, 90+)",
+          "Analyse d'équipe par technicien, un clic vers Excel"
+        ],
+        "file": "analysen1.jpg",
+        "alt": "PDR Kalk – tableau de bord des analyses avec chiffre d'affaires, trésorerie et créances ouvertes"
+      }
+    ]
+  },
+  "security": {
+    "eyebrow": "Données et sécurité",
+    "title": "Vos données. Votre appareil. Votre contrôle.",
+    "lead": "PDR Kalk fonctionne en local. Pas de cloud du fournisseur, pas de télémétrie, aucune obligation d'être en ligne.",
+    "aiNote": "Scan IA optionnel · votre propre clé · désactivé par défaut",
+    "privacyLink": "Lire la déclaration de confidentialité",
+    "items": [
+      {
+        "icon": "wifiOff",
+        "title": "100 % local et hors ligne",
+        "desc": "Mandats, photos et documents restent sur votre appareil ou dans votre propre dossier de travail. Internet n'est nécessaire que pour l'activation unique de la version d'essai, l'envoi d'e-mails et la fonction IA optionnelle."
+      },
+      {
+        "icon": "backup",
+        "title": "Sauvegarde et restauration intelligente",
+        "desc": "Sauvegarde complète en ZIP, avec ou sans photos. La restauration fusionne au lieu de dupliquer.",
+        "file": "backup.jpg",
+        "alt": "PDR Kalk – paramètres de sauvegarde avec sauvegarde complète et import sous-traitant"
+      },
+      {
+        "icon": "shield",
+        "title": "Piste d'audit infalsifiable",
+        "desc": "Chaîne de hachage SHA-256, versions de documents et instantanés PDF automatiques à chaque changement de statut. Export en JSON avec vérification.",
+        "file": "audit.jpg",
+        "alt": "PDR Kalk – journal d'activité avec versions de documents"
+      },
+      {
+        "icon": "lock",
+        "title": "RGPD et nLPD",
+        "desc": "Pas de télémétrie, pas de cloud du fournisseur, aucun cookie d'analyse sur ce site. Les données EXIF et GPS sont supprimées des photos avant qu'elles n'arrivent dans le mandat."
+      }
+    ]
   },
   "testimonials": {
     "title": "Ce que disent les techniciens",
     "subtitle": "Avis de professionnels du débosselage",
-    "prev": "Témoignage précédent",
-    "next": "Témoignage suivant",
-    "goTo": "Aller au témoignage {n}",
     "rating": "{r} sur 5 étoiles",
     "items": [
       {
@@ -447,39 +1091,376 @@
         "name": "Dominik Nagy",
         "location": "Autriche"
       }
+    ],
+    "readMore": "Lire la suite",
+    "readLess": "Afficher moins"
+  },
+  "pricing": {
+    "eyebrow": "Prix",
+    "title": "Payez une fois. Utilisez sans limite.",
+    "lead": "Licence perpétuelle sans date d'expiration. Aucun frais mensuel, aucun coût par utilisateur supplémentaire.",
+    "comparisonToggle": "Afficher la comparaison avec les logiciels par abonnement",
+    "licence": {
+      "badge": "Licence perpétuelle",
+      "badgeNote": "Paiement unique — sans abonnement, sans date d'expiration",
+      "price": "CHF {price}",
+      "priceSuffix": "paiement unique",
+      "priceEur": "Entreprises UE : EUR {priceEur}",
+      "vatNote": "Tous les prix hors TVA.",
+      "illustration": "Réparti sur {years} ans : environ CHF 9 par mois",
+      "featuresTitle": "Compris",
+      "features": [
+        "Aucun frais d'abonnement",
+        "Aucun frais d'installation",
+        "Aucun coût par utilisateur supplémentaire",
+        "Aucune date d'expiration — rien à renouveler",
+        "Petites mises à jour comprises *",
+        "Fonctionne hors ligne"
+      ],
+      "notesTitle": "Bon à savoir",
+      "notes": [
+        "Entreprises de l'UE avec numéro de TVA intracommunautaire valide : facture sans TVA suisse (autoliquidation)",
+        "Windows 10/11 et Android 10+ — les appareils Apple et les smartphones ne sont pas pris en charge",
+        "Les sous-traitants et ateliers partenaires ont besoin de leur propre installation"
+      ],
+      "cta": "Commander une licence",
+      "ctaTrial": "Essayer {days} jours gratuitement",
+      "note": "* Les mises à jour optionnelles des listes d'assurances peuvent entraîner de petits frais."
+    },
+    "journey": {
+      "title": "Comment obtenir votre licence",
+      "steps": [
+        {
+          "t": "Tester {days} jours",
+          "d": "Toutes les fonctions, sans carte de crédit ni inscription. La version d'essai s'arrête d'elle-même."
+        },
+        {
+          "t": "Commander une licence",
+          "d": "Remplissez le formulaire de commande — la commande est ferme."
+        },
+        {
+          "t": "Facture par e-mail",
+          "d": "En général sous 24 heures, payable par virement bancaire dans les {paymentDays} jours. Avec TVA suisse ; les entreprises de l'UE avec numéro de TVA intracommunautaire la reçoivent sans TVA (autoliquidation)."
+        },
+        {
+          "t": "Activer la licence dans l'application",
+          "d": "Après réception du paiement, vous recevez vos données de licence et débloquez PDR Kalk avec celles-ci."
+        }
+      ]
+    },
+    "comparison": {
+      "title": "Pourquoi PDR Kalk ?",
+      "headers": {
+        "feature": "Critère",
+        "pdrKalk": "PDR Kalk",
+        "competitor": "Logiciel sur abonnement typique"
+      },
+      "rows": [
+        {
+          "feature": "Paiement unique",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Mensuel"
+        },
+        {
+          "feature": "Fonctionne hors ligne",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Cloud"
+        },
+        {
+          "feature": "Flux direct avec l'assurance",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Non"
+        },
+        {
+          "feature": "Flux de sous-traitance",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Non"
+        },
+        {
+          "feature": "Tableau de bord analytique (BI)",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Supplément"
+        },
+        {
+          "feature": "Multi-appareils via votre NAS",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Cloud uniquement",
+          "pdrKalkAsterisk": true
+        },
+        {
+          "feature": "Téléversement photo par QR depuis le téléphone",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Non"
+        },
+        {
+          "feature": "Facture QR",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Rare"
+        },
+        {
+          "feature": "Facture électronique ZUGFeRD/Factur-X",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Supplément"
+        },
+        {
+          "feature": "{languages} langues",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "DE uniquement"
+        },
+        {
+          "feature": "Vos données vous appartiennent",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Sur des serveurs tiers"
+        },
+        {
+          "feature": "Natif sur Microsoft et Android",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Cloud uniquement"
+        },
+        {
+          "feature": "Utilisateurs illimités par licence",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "1 utilisateur (plus en supplément)"
+        },
+        {
+          "feature": "Piste d'audit infalsifiable (SHA-256)",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Rare"
+        },
+        {
+          "feature": "Export DATEV / comptable",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Supplément"
+        },
+        {
+          "feature": "Capture photo dans l'application",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Non"
+        },
+        {
+          "feature": "Contrat de location de véhicule de remplacement et procès-verbal de remise",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Non"
+        },
+        {
+          "feature": "Scan IA : permis de circulation et VIN (optionnel)",
+          "pdrKalk": true,
+          "competitor": false,
+          "competitorNote": "Non"
+        }
+      ],
+      "footnote": "* Cette fonction n'est prise en charge que sur les appareils Microsoft."
+    },
+    "costTable": {
+      "title": "Comparaison des coûts sur {years} ans",
+      "headers": {
+        "feature": "Critère",
+        "competitor": "Concurrent B",
+        "pdrKalk": "PDR Kalk"
+      },
+      "rows": [
+        {
+          "feature": "Modèle de licence",
+          "competitor": "Abonnement mensuel",
+          "pdrKalk": "Paiement unique"
+        },
+        {
+          "feature": "Frais d'installation",
+          "competitor": "Oui",
+          "pdrKalk": "Non"
+        },
+        {
+          "feature": "Frais par utilisateur supplémentaire",
+          "competitor": "Oui",
+          "pdrKalk": "Non"
+        },
+        {
+          "feature": "Basé sur le cloud",
+          "competitor": "Oui",
+          "pdrKalk": "Non — local"
+        },
+        {
+          "feature": "Internet requis",
+          "competitor": "Oui",
+          "pdrKalk": "Non"
+        },
+        {
+          "feature": "Coût année 1",
+          "competitor": "EUR 1 399 (frais d'installation inclus)",
+          "pdrKalk": "CHF 550"
+        },
+        {
+          "feature": "Coût année 2",
+          "competitor": "EUR 1 100",
+          "pdrKalk": "CHF 0"
+        },
+        {
+          "feature": "Coût année 3",
+          "competitor": "EUR 1 100",
+          "pdrKalk": "CHF 0"
+        },
+        {
+          "feature": "Coût année 4",
+          "competitor": "EUR 1 100",
+          "pdrKalk": "CHF 0"
+        },
+        {
+          "feature": "Coût année 5",
+          "competitor": "EUR 1 100",
+          "pdrKalk": "CHF 0"
+        },
+        {
+          "feature": "Total après 5 ans",
+          "competitor": "EUR 5 799",
+          "pdrKalk": "CHF 550"
+        }
+      ],
+      "closing": "Économisez des milliers de CHF sur cinq ans par rapport aux systèmes sur abonnement.",
+      "note": "Tous les prix s'entendent hors TVA. Des extensions de fonctions facultatives ou des mises à jour des listes d'assurances peuvent être proposées moyennant de petits frais. Tous les chiffres de comparaison reposent sur des informations tarifaires publiques (état au printemps 2026)."
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions fréquentes",
+    "lead": "Ce que les ateliers veulent le plus souvent savoir avant d'acheter.",
+    "items": [
+      {
+        "id": "licence",
+        "q": "Combien de temps la licence est-elle valable ?",
+        "a": "C'est une licence perpétuelle : payée une fois, sans date d'expiration et sans frais mensuels. La mention « environ CHF 9 par mois » n'est qu'une aide au calcul sur cinq ans — rien n'est dû ensuite."
+      },
+      {
+        "id": "price",
+        "q": "Combien coûte PDR Kalk ?",
+        "a": "CHF {price} en paiement unique, hors TVA. Les entreprises de l'UE disposant d'un numéro de TVA intracommunautaire valide paient EUR {priceEur} et reçoivent une facture sans TVA suisse (autoliquidation). Aucun frais d'installation, aucun coût récurrent."
+      },
+      {
+        "id": "trial",
+        "q": "Comment fonctionne la version d'essai ?",
+        "a": "{days} jours avec toutes les fonctions, téléchargement direct sans inscription ni carte de crédit. La version d'essai s'arrête d'elle-même. Au premier démarrage, une activation en ligne unique a lieu (données techniques uniquement, voir la déclaration de confidentialité) ; ensuite l'application fonctionne hors ligne. Une version d'essai par appareil."
+      },
+      {
+        "id": "buy",
+        "q": "Comment acheter une licence ?",
+        "a": "Via le formulaire « Commander une licence ». La commande est ferme ; vous recevez la facture par e-mail, en général sous 24 heures, payable par virement bancaire dans les {paymentDays} jours — aucune carte de crédit nécessaire. Après réception du paiement, vous recevez vos données de licence et débloquez PDR Kalk avec celles-ci."
+      },
+      {
+        "id": "updates",
+        "q": "Les mises à jour sont-elles comprises ?",
+        "a": "Les petites mises à jour sont comprises. Les mises à jour optionnelles des listes d'assurances ou de tarifs peuvent entraîner de petits frais. Les nouveautés figurent sous « Quoi de neuf ? » dans l'application et sur la page des mises à jour de ce site."
+      },
+      {
+        "id": "devices",
+        "q": "Sur quels appareils PDR Kalk fonctionne-t-il ?",
+        "a": "Sur Windows 10 et 11 (PC, portable ou tablette Windows dès 10 pouces) ainsi que sur les tablettes Android dès Android 10. Les appareils Apple et les smartphones ne sont pas pris en charge ; le smartphone sert uniquement à envoyer les photos dans le mandat par code QR."
+      },
+      {
+        "id": "multiDevice",
+        "q": "Puis-je travailler sur plusieurs appareils ?",
+        "a": "Oui. Les appareils Windows se synchronisent via un dossier de travail partagé (NAS, OneDrive, Synology Drive). Les tablettes Android fonctionnent de façon autonome, avec toutes les fonctions. Paramètres → Stockage indique quand les autres appareils ont été actifs pour la dernière fois."
+      },
+      {
+        "id": "users",
+        "q": "Combien d'utilisateurs ou de techniciens sont compris ?",
+        "a": "Un nombre illimité d'utilisateurs par licence, sans coût par technicien. Les techniciens peuvent être attribués par élément. Les sous-traitants et ateliers partenaires travaillent dans leur propre installation et ont donc besoin de leur propre licence."
+      },
+      {
+        "id": "data",
+        "q": "Où sont mes données ?",
+        "a": "À 100 % en local, sur votre appareil ou dans votre propre dossier de travail (NAS). Il n'y a ni cloud du fournisseur ni télémétrie. Internet n'est nécessaire que pour l'activation de la version d'essai, l'envoi d'e-mails et la fonction IA optionnelle."
+      },
+      {
+        "id": "backup",
+        "q": "Comment sauvegarder mes données ?",
+        "a": "Avec une sauvegarde complète en ZIP, avec ou sans photos. La restauration intelligente fusionne au lieu de dupliquer. Chaque mandat dispose en plus d'un Job package ZIP contenant tous ses documents."
+      },
+      {
+        "id": "audit",
+        "q": "PDR Kalk est-il conforme aux exigences de révision ?",
+        "a": "Chaque modification est consignée dans une chaîne de hachage SHA-256 ; les versions de documents et les instantanés PDF sont créés automatiquement à chaque changement de statut. La piste d'audit peut être exportée en JSON et vérifiée. Conçu selon le RGPD et la nLPD."
+      },
+      {
+        "id": "ai",
+        "q": "Que fait la fonction IA optionnelle ?",
+        "a": "Elle est désactivée par défaut. Si vous l'activez, vous photographiez le permis de circulation ; le nom et l'adresse du détenteur sont caviardés dans l'image. L'image caviardée part ensuite, avec votre propre clé de fournisseur, directement vers le fournisseur que vous avez choisi (Infomaniak en Suisse recommandé, Mistral AI dans l'UE, OpenAI ou Anthropic aux États-Unis uniquement après confirmation explicite) — jamais via les serveurs de PDR Kalk. Sans activation, rien ne quitte l'appareil."
+      },
+      {
+        "id": "import",
+        "q": "Puis-je importer des calculs SilverDAT ou des protocoles de scanner grêle ?",
+        "a": "Oui, d'abord pour la Suisse (région CH avec tarif suisse ; à activer sous Paramètres → Grêle). PDR Kalk lit les PDF existants dotés d'une couche de texte — ni scans ni photos — affiche un écran de contrôle et, après votre validation, reprend les éléments, les impacts, les pièces, la dépose/repose et les frais annexes. Le tout en local. Il ne s'agit pas d'une interface avec SilverDAT, mais de la lecture d'un PDF que vous possédez déjà."
+      },
+      {
+        "id": "countries",
+        "q": "Quels pays et tarifs sont pris en charge ?",
+        "a": "Suisse (CHF, 8,1 %, facture QR ; VFFS et grêle mixte Zurich), Allemagne (EUR, 19 %, DATEV, ZUGFeRD ; liste AW allemande avec dépose/repose), Autriche (EUR, 20 %, matrice propre), Belgique (EUR, 21 %, liste UPEX belge), Australie (AUD, GST 10 %, par élément, par véhicule, triage ou à l'heure) et Pays-Bas (EUR, 21 %, matrice grêle à venir). Autres pays sur demande. PDR Kalk propose une option de calcul générale basée sur les AW allemandes ; elle n'est liée à aucune association ni à un tiers."
+      },
+      {
+        "id": "invoices",
+        "q": "Quelles factures puis-je établir ?",
+        "a": "Des factures PDF avec votre logo, la facture QR suisse, ZUGFeRD/Factur-X (PDF/A-3, EN 16931), des notes de crédit, des factures séparées, des factures d'annulation avec remplacement et des factures manuelles sans rapport. Les encaissements peuvent inclure des paiements partiels ; pour la comptabilité, il y a DATEV CSV, un export TVA et les débiteurs ouverts en Excel."
+      },
+      {
+        "id": "languages",
+        "q": "Dans quelles langues PDR Kalk existe-t-il ?",
+        "a": "L'interface existe en {languages} langues : allemand, français, italien, anglais, néerlandais, portugais et espagnol. En outre, la langue des documents se choisit librement — factures, rapports et e-mails partent dans la langue du client, indépendamment de la langue de l'application."
+      },
+      {
+        "id": "support",
+        "q": "Comment obtenir de l'aide ?",
+        "a": "L'application contient un manuel d'utilisation consultable, avec des guides pas à pas pour chaque domaine. S'y ajoute une assistance par e-mail à info@pdrkalk.ch — la réponse arrive en général sous 24 heures."
+      }
     ]
   },
-  "finalCta": {
-    "title": "Prêt à gagner du temps ?",
-    "subtitle": "Commencez avec PDR Kalk dès aujourd'hui et gagnez des heures chaque semaine.",
-    "cta": "Télécharger maintenant"
-  },
   "download": {
-    "title": "Essai gratuit de 30 jours",
-    "subtitle": "Téléchargement direct — sans inscription, sans carte bancaire. Toutes les fonctions pendant 30 jours.",
+    "eyebrow": "Téléchargement",
+    "title": "Prêt ? Essayez {days} jours gratuitement.",
+    "subtitle": "Téléchargement direct — sans inscription, sans carte de crédit. Toutes les fonctions pendant {days} jours.",
+    "chips": [
+      "Sans abonnement",
+      "Sans carte de crédit",
+      "Sans inscription",
+      "S'arrête automatiquement"
+    ],
+    "buyHint": "Déjà testé ? Commander une licence",
     "windows": {
       "eyebrow": "Pour PC et portable",
       "name": "Microsoft Windows",
       "system": "Windows 10 ou 11",
-      "version": "Version 4.26.69",
+      "version": "Version {version}",
       "button": "Installateur Windows"
     },
     "android": {
       "eyebrow": "Pour tablette",
       "name": "Android",
       "system": "Android 10 ou plus récent",
-      "version": "Version 4.26.69",
+      "version": "Version {version}",
       "button": "APK Android"
     },
     "footnote": "Les appareils Apple et les smartphones ne sont pas pris en charge."
   },
   "contact": {
-    "title": "Acheter une licence",
-    "subtitle": "Vous avez essayé PDR Kalk et souhaitez l'acheter ? Remplissez vos coordonnées ci-dessous — nous vous répondrons sous 24 heures.",
-    "platformNoticeTitle": "Quels appareils sont pris en charge ?",
-    "platformNoticeBody": "PDR Kalk fonctionne sur les tablettes Microsoft et Android ainsi que sur PC et portables. Toutes les fonctions sont disponibles sur les appareils Microsoft ; les tablettes Android offrent toutes les fonctions sauf la synchronisation multi-appareils via un dossier de travail partagé. Les appareils Apple et les smartphones ne sont pas pris en charge.",
-    "intentLegend": "Comment pouvons-nous vous aider ?",
-    "intent_buy": "Acheter une licence / demander une facture",
+    "title": "Commander ou nous écrire",
+    "subtitle": "Commandez une licence ou posez-nous une question — nous répondons en général sous 24 heures.",
+    "platformNoticeTitle": "Quels appareils sont pris en charge ?",
+    "platformNoticeBody": "PDR Kalk fonctionne sur les tablettes Microsoft et Android ainsi que sur PC et portables. Toutes les fonctions sont disponibles sur les appareils Microsoft ; les tablettes Android offrent toutes les fonctions sauf la synchronisation multi-appareils via un dossier de travail partagé. Les appareils Apple et les smartphones ne sont pas pris en charge.",
+    "intent_buy": "Commander une licence",
     "intent_inquiry": "Demande générale",
     "errorIntentRequired": "Veuillez sélectionner une option",
     "firstNamePlaceholder": "Prénom *",
@@ -488,8 +1469,6 @@
     "lastNameLabel": "Nom",
     "companyPlaceholder": "Entreprise *",
     "companyLabel": "Entreprise",
-    "ownerPlaceholder": "Propriétaire *",
-    "ownerLabel": "Propriétaire",
     "streetPlaceholder": "Rue et numéro *",
     "streetLabel": "Rue",
     "postalCodePlaceholder": "Code postal *",
@@ -499,36 +1478,25 @@
     "countryLabel": "Pays",
     "countryPlaceholder": "Sélectionnez un pays *",
     "stateLabel": "État/Région",
-    "statePlaceholder": "Sélectionnez un état *",
+    "statePlaceholder": "Sélectionnez un État *",
     "vatIdLabel": "N° de TVA",
     "vatIdPlaceholder": "N° de TVA (p. ex. DE123456789) *",
-    "vatIdNote": "Pour les entreprises de l'UE : avec un numéro de TVA valide, nous facturons sans TVA suisse (autoliquidation).",
+    "vatIdNote": "Pour les entreprises de l'UE : avec un numéro de TVA intracommunautaire valide, nous facturons sans TVA suisse (autoliquidation).",
     "errorVatIdRequired": "N° de TVA requis",
-    "phonePlaceholder": "Téléphone *",
-    "phoneLabel": "Téléphone",
     "emailPlaceholder": "E-mail *",
     "emailLabel": "E-mail",
-    "websitePlaceholder": "Site web (si disponible)",
-    "websiteLabel": "Site web",
-    "platformLegend": "Sur quel appareil souhaitez-vous tester ?",
-    "platform_windows": "Microsoft Windows",
-    "platform_android": "Android",
-    "platform_both": "Les deux",
     "messagePlaceholder": "Remarques ou questions (facultatif)",
     "messageLabel": "Remarques",
-    "submit": "Demander une licence",
+    "submit": "Envoyer la demande",
     "errorFirstNameRequired": "Prénom requis",
     "errorLastNameRequired": "Nom requis",
     "errorCompanyRequired": "Entreprise requise",
-    "errorOwnerRequired": "Nom du propriétaire requis",
     "errorStreetRequired": "Rue requise",
     "errorPostalCodeRequired": "Code postal requis",
     "errorCityRequired": "Ville requise",
     "errorCountryRequired": "Veuillez sélectionner un pays",
-    "errorStateRequired": "Veuillez sélectionner un état",
-    "errorPhoneRequired": "Numéro de téléphone requis",
+    "errorStateRequired": "Veuillez sélectionner un État",
     "errorEmailInvalid": "Adresse e-mail valide requise",
-    "errorPlatformRequired": "Veuillez sélectionner un appareil",
     "country_ch": "Suisse",
     "country_at": "Autriche",
     "country_au": "Australie",
@@ -561,27 +1529,158 @@
     "country_gb": "Royaume-Uni",
     "sendError": "Échec de l'envoi. Veuillez réessayer ou nous écrire directement à l'adresse ci-dessous.",
     "submitting": "Envoi en cours…",
-    "success": "Demande envoyée — nous vous répondrons sous peu !",
+    "success": "Message envoyé — nous vous répondrons sous peu.",
     "emailUser": "info",
-    "emailDomain": "pdrkalk.ch"
+    "emailDomain": "pdrkalk.ch",
+    "stepIntent": "Votre demande",
+    "stepContact": "Contact",
+    "stepBilling": "Adresse de facturation"
+  },
+  "order": {
+    "metaTitle": "Commander une licence | PDR Kalk",
+    "metaDescription": "Commandez ferme votre licence perpétuelle PDR Kalk : CHF {price} plus TVA, ou EUR {priceEur} sans TVA pour les entreprises de l'UE. Facture par e-mail, payable par virement bancaire dans les {paymentDays} jours.",
+    "crumbHome": "Accueil",
+    "title": "Commander une licence",
+    "lead": "Commandez ici ferme votre licence perpétuelle PDR Kalk. Vous recevez la facture par e-mail et payez par virement bancaire ; la licence suit après réception du paiement.",
+    "terms": {
+      "title": "Conditions de licence et de paiement",
+      "versionLabel": "Version",
+      "seller": "Vendeur : Balmer Storm Solutions, Suisse",
+      "items": [
+        {
+          "t": "Commande ferme",
+          "d": "En cliquant sur « Commander avec obligation de paiement », vous commandez ferme une licence PDR Kalk. La vente s'adresse exclusivement aux clients professionnels (B2B)."
+        },
+        {
+          "t": "Prix",
+          "d": "Suisse : CHF {price} plus TVA de 8,1 %. Entreprises de l'UE avec numéro de TVA intracommunautaire valide : EUR {priceEur} sans TVA (autoliquidation)."
+        },
+        {
+          "t": "Paiement",
+          "d": "Vous recevez la facture par e-mail. Elle est payable par virement bancaire dans les {paymentDays} jours à compter de la date de facturation."
+        },
+        {
+          "t": "Livraison",
+          "d": "La licence est émise après réception du paiement intégral et vous est envoyée par e-mail."
+        },
+        {
+          "t": "Étendue de la licence",
+          "d": "Licence permanente, à durée illimitée et sans abonnement, pour un usage professionnel par une entreprise. Elle peut être installée et utilisée sur un nombre illimité d'appareils du titulaire."
+        },
+        {
+          "t": "Liée à l'entreprise",
+          "d": "La licence est liée définitivement à l'entreprise et à l'adresse indiquées lors de la commande. La raison sociale et l'adresse ne peuvent plus être modifiées après l'émission ; la licence n'est pas transférable à une autre entreprise."
+        },
+        {
+          "t": "Pas de retour",
+          "d": "PDR Kalk peut être testé gratuitement et sans engagement pendant {days} jours avant l'achat. Il n'existe donc aucun droit de rétractation, de retour ou de remboursement. Les droits légaux en cas de défauts (garantie) demeurent réservés."
+        },
+        {
+          "t": "Mises à jour",
+          "d": "Les mises à jour courantes sont incluses gratuitement. Des modules complémentaires plus importants peuvent être proposés en option contre une petite redevance ; leur achat est facultatif."
+        },
+        {
+          "t": "Fonctions d'IA",
+          "d": "Les fonctions d'IA intégrées sont optionnelles et peuvent reposer sur des services d'IA en constante évolution. Elles nécessitent votre propre clé API auprès du fournisseur choisi ; la configuration et les coûts sont à la charge du client. La disponibilité, la précision et le fonctionnement ne sont pas garantis."
+        },
+        {
+          "t": "Droit applicable et for",
+          "d": "Le droit suisse est applicable. Le for juridique est Schaffhouse, Suisse."
+        }
+      ]
+    },
+    "form": {
+      "billingHint": "La licence est émise définitivement à ce nom d'entreprise et à cette adresse. Aucune modification n'est possible par la suite — veuillez vérifier attentivement.",
+      "stepNotes": "Remarques",
+      "stepConfirm": "Commande",
+      "consent": "Je commande pour l'entreprise indiquée ci-dessus et j'accepte les <terms>conditions de licence et de paiement</terms>.",
+      "errorConsentRequired": "Veuillez confirmer la commande et les conditions.",
+      "submit": "Commander avec obligation de paiement"
+    },
+    "price": {
+      "pick": "Le prix dépend du pays de l'adresse de facturation :",
+      "ch": "Suisse : CHF {price} plus TVA de 8,1 %",
+      "eu": "Entreprises de l'UE avec numéro de TVA : EUR {priceEur} sans TVA",
+      "licence": "Licence",
+      "vatCh": "TVA 8,1 %",
+      "total": "Total",
+      "noteEu": "Sans TVA (autoliquidation)",
+      "noteGb": "Sans TVA suisse",
+      "noteAu": "La GST s'applique et figure sur la facture",
+      "lineNone": "CHF {price} plus TVA · UE : EUR {priceEur}",
+      "lineCh": "CHF {amount} TVA incluse",
+      "lineEu": "EUR {amount} sans TVA",
+      "lineGb": "EUR {amount} sans TVA suisse",
+      "lineAu": "AUD {amount}, GST applicable"
+    },
+    "summary": {
+      "title": "Votre commande",
+      "product": "Licence PDR Kalk – utilisation permanente et illimitée dans le temps pour une entreprise.",
+      "productShort": "Licence perpétuelle PDR Kalk",
+      "lineTerm": "payable dans les {paymentDays} jours"
+    },
+    "next": {
+      "title": "La suite",
+      "steps": [
+        {
+          "t": "Facture par e-mail",
+          "d": "En général sous 24 heures, à l'adresse indiquée."
+        },
+        {
+          "t": "Paiement dans les {paymentDays} jours",
+          "d": "Par virement bancaire sur le compte indiqué sur la facture."
+        },
+        {
+          "t": "Activer la licence",
+          "d": "Après réception du paiement, vous recevez vos données de licence et les saisissez dans l'application ; toutes les données de la période d'essai sont conservées."
+        }
+      ]
+    },
+    "success": {
+      "title": "Commande reçue — merci de votre confiance en PDR Kalk.",
+      "invoice": "La facture vous parvient en général sous 24 heures par e-mail à {email}.",
+      "term": "Elle est payable par virement bancaire dans les {paymentDays} jours à compter de la date de facturation.",
+      "licence": "Après réception du paiement, vous recevez vos données de licence par e-mail.",
+      "backHome": "Retour à l'accueil"
+    },
+    "forward": {
+      "text": "Les licences se commandent via le formulaire de commande — avec prix, délai de paiement et conditions de licence en un coup d'œil.",
+      "cta": "Vers la commande"
+    }
+  },
+  "updates": {
+    "metaTitle": "Mises à jour et nouveautés | PDR Kalk",
+    "metaDescription": "Toutes les versions de PDR Kalk avec leurs nouveautés, améliorations et corrections — de la version actuelle aux précédentes.",
+    "title": "Mises à jour et nouveautés",
+    "intro": "Ce qui est arrivé dans les dernières versions de PDR Kalk. La version actuelle est la {version}.",
+    "publicBadge": "Publiée",
+    "testingBadge": "Version de test",
+    "testingNote": "L'étendue et les détails peuvent encore changer avant la publication.",
+    "kinds": {
+      "new": "Nouveau",
+      "improved": "Amélioré",
+      "fix": "Corrections"
+    },
+    "backHome": "Retour à l'accueil",
+    "downloadLink": "Télécharger la version actuelle"
   },
   "privacy": {
     "metaTitle": "Confidentialité — PDR Kalk",
-    "metaDescription": "Déclaration de confidentialité relative à l'activation de l'essai en ligne de PDR Kalk : quelles données sont transmises, dans quel but et combien de temps elles sont conservées. Conforme au RGPD et à la nLPD.",
+    "metaDescription": "Déclaration de confidentialité relative à l'activation de l'essai en ligne de PDR Kalk : quelles données sont transmises, dans quel but et combien de temps elles sont conservées. Conforme au RGPD et à la nLPD.",
     "title": "Déclaration de confidentialité — activation de l'essai en ligne",
-    "lastUpdated": "Dernière mise à jour : 16 mai 2026",
-    "intro": "Lorsque vous lancez PDR Kalk pour la première fois et choisissez « Démarrer l'essai de 30 jours », nous envoyons une fois une petite quantité de données à notre serveur pour activer l'essai. Cela empêche de relancer plusieurs fois le même essai sur un seul appareil. L'essai lui-même fonctionne ensuite entièrement hors ligne — aucune autre donnée n'est transmise.",
+    "lastUpdated": "Dernière mise à jour : 16 mai 2026",
+    "intro": "Lorsque vous lancez PDR Kalk pour la première fois et choisissez « Démarrer l'essai de 30 jours », nous envoyons une fois une petite quantité de données à notre serveur pour activer l'essai. Cela empêche de relancer plusieurs fois le même essai sur un seul appareil. L'essai lui-même fonctionne ensuite entièrement hors ligne — aucune autre donnée n'est transmise.",
     "dataCollectedTitle": "Quelles données nous transmettons",
-    "dataCollectedIntro": "Lors de la première activation, PDR Kalk envoie à api.pdrkalk.ch :",
+    "dataCollectedIntro": "Lors de la première activation, PDR Kalk envoie à api.pdrkalk.ch :",
     "dataCollectedItems": [
       "Un identifiant d'appareil sous forme de valeur de hachage (HMAC-SHA256, à sens unique — non réversible en clair)",
       "La plateforme (Windows ou Android) et la version de l'application",
       "Une adresse IP tronquée (IPv4 /24, IPv6 /48 — p. ex. 203.0.113.0/24 au lieu de 203.0.113.42)",
-      "La version majeure du système d'exploitation (p. ex. « Windows 11 » ou « Android 14 » — aucune donnée user-agent détaillée)",
+      "La version majeure du système d'exploitation (p. ex. « Windows 11 » ou « Android 14 » — aucune donnée user-agent détaillée)",
       "L'horodatage de l'activation",
-      "Après la sélection de région qui suit : la région choisie (CH, DE ou AT)"
+      "Après la sélection de région qui suit : la région choisie (CH, DE ou AT)"
     ],
-    "dataNotCollectedTitle": "Ce que nous ne transmettons PAS :",
+    "dataNotCollectedTitle": "Ce que nous ne transmettons PAS :",
     "dataNotCollectedItems": [
       "Aucun nom, adresse e-mail ou adresse postale",
       "Aucune donnée d'entreprise, de client, de rapport ou de facture",
@@ -594,39 +1693,466 @@
     "retentionTitle": "Durée de conservation",
     "retentionBody": "L'enregistrement d'activation est conservé pendant l'essai actif (30 jours) et pendant 30 jours après son expiration. Ensuite, l'adresse IP tronquée est supprimée de l'enregistrement. Le hachage de l'identifiant d'appareil est conservé de manière permanente à des fins de prévention des abus — il ne contient aucune donnée directement personnelle.",
     "processorTitle": "Sous-traitant",
-    "processorBody": "Infrastructure serveur : Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis. Cloudflare est certifié dans le cadre du EU-US Data Privacy Framework (DPF). La base de données est configurée dans le cluster WEUR de Cloudflare (Francfort / Amsterdam) ; les données d'activation sont donc normalement traitées exclusivement au sein de l'UE.",
+    "processorBody": "Infrastructure serveur : Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis. Cloudflare est certifié au titre de l'EU-US Data Privacy Framework (DPF). La base de données est configurée dans le cluster WEUR de Cloudflare (Francfort / Amsterdam) ; les données d'activation sont donc normalement traitées exclusivement au sein de l'UE.",
     "rightsTitle": "Vos droits (accès, suppression, opposition)",
-    "rightsBody": "Vous disposez d'un droit d'accès, de rectification, de suppression, de limitation du traitement et d'opposition. Pour exercer ces droits, contactez-nous par e-mail à :",
+    "rightsBody": "Vous disposez d'un droit d'accès, de rectification, de suppression, de limitation du traitement et d'opposition. Pour exercer ces droits, contactez-nous par e-mail à :",
     "rightsContact": "dsr@pdrkalk.ch",
     "rightsContactNote": "Veuillez indiquer votre jeton d'activation (visible dans la boîte de dialogue de licence de l'application) afin que nous puissions localiser votre enregistrement sans ambiguïté.",
-    "fingerprintTitle": "Note technique : dérive d'appareil",
+    "fingerprintTitle": "Note technique : dérive d'appareil",
     "fingerprintBody": "Sous Windows 11 avec la randomisation d'adresse MAC activée, l'identifiant d'appareil peut changer au fil du temps. Dans de rares cas, le même appareil est alors reconnu comme un nouvel appareil après une réinstallation. Si vous avez besoin d'un deuxième essai légitime (p. ex. après un changement de matériel ou une restauration), contactez-nous à info@pdrkalk.ch et nous le débloquerons manuellement.",
     "appHelpTitle": "Aide dans l'application",
-    "appHelpBody": "Un bref résumé de ces informations est également disponible directement dans PDR Kalk sous « Aide → Confidentialité de l'essai ».",
-    "aiTitle": "Fonction IA optionnelle : scanner du permis de circulation",
-    "aiBody": "PDR Kalk inclut un scanner du permis de circulation, optionnel et désactivé par défaut. Lorsque vous l'activez, une API de vision IA externe lit les données du véhicule à partir de la photo du permis et remplit les champs dans l'éditeur de rapport. Vous utilisez pour cela votre propre clé API (bring-your-own-key) ; PDR Kalk n'exploite aucune IA et ne voit ni l'image ni la clé. L'image est transmise de votre appareil directement au fournisseur choisi – jamais via les serveurs de PDR Kalk. Les principes suivants s'appliquent :",
+    "appHelpBody": "Un bref résumé de ces informations est également disponible directement dans PDR Kalk sous « Aide → Confidentialité de l'essai ».",
+    "aiTitle": "Fonction IA optionnelle : scanner du permis de circulation",
+    "aiBody": "PDR Kalk inclut un scanner du permis de circulation, optionnel et désactivé par défaut. Lorsque vous l'activez, une API de vision IA externe lit les données du véhicule à partir de la photo du permis et remplit les champs dans l'éditeur de rapport. Vous utilisez pour cela votre propre clé API (bring-your-own-key) ; PDR Kalk n'exploite aucune IA et ne voit ni l'image ni la clé. L'image est transmise de votre appareil directement au fournisseur choisi — jamais via les serveurs de PDR Kalk. Les principes suivants s'appliquent :",
     "aiItems": [
-      "Désactivé par défaut – aucune image n'est transmise sans votre activation et votre utilisation.",
-      "Bring-your-own-key : vous renseignez la clé de votre fournisseur ; la facturation se fait directement auprès du fournisseur.",
-      "Choix du fournisseur : Infomaniak (Suisse, centres de données suisses), Mistral AI (UE/France) ou – uniquement après confirmation explicite du transfert transfrontalier – OpenAI ou Anthropic (USA). Le passage à un fournisseur américain ne se fait jamais de manière silencieuse.",
-      "Masquage automatique : avant l'envoi, l'application masque le bloc de données personnelles du détenteur (nom et adresse) directement dans l'image (placement selon la région). Une ligne de cadrage à la caméra et une étape de contrôle obligatoire permettent de vérifier la photo réelle avant le scan.",
-      "Liste de contrôle de conformité : le scanner ne démarre qu'après confirmation du contrat de sous-traitance (DPA), de l'opt-out de l'entraînement des modèles, des conditions de conservation et – pour les fournisseurs américains – du transfert transfrontalier.",
-      "Journal d'audit avec métadonnées uniquement : sont enregistrés le fournisseur, la région, le pays, les champs renvoyés, le succès et si un masquage a été appliqué – jamais l'image, la clé ou les valeurs des champs.",
+      "Désactivé par défaut — aucune image n'est transmise sans votre activation et votre utilisation.",
+      "Bring-your-own-key : vous renseignez la clé de votre fournisseur ; la facturation se fait directement auprès du fournisseur.",
+      "Choix du fournisseur : Infomaniak (Suisse, centres de données suisses), Mistral AI (UE/France) ou — uniquement après confirmation explicite du transfert transfrontalier — OpenAI ou Anthropic (USA). Le passage à un fournisseur américain ne se fait jamais de manière silencieuse.",
+      "Masquage automatique : avant l'envoi, l'application masque le bloc de données personnelles du détenteur (nom et adresse) directement dans l'image (placement selon la région). Une ligne de cadrage à la caméra et une étape de contrôle obligatoire permettent de vérifier la photo réelle avant le scan.",
+      "Liste de contrôle de conformité : le scanner ne démarre qu'après confirmation du contrat de sous-traitance (DPA), de l'opt-out de l'entraînement des modèles, des conditions de conservation et — pour les fournisseurs américains — du transfert transfrontalier.",
+      "Journal d'audit avec métadonnées uniquement : sont enregistrés le fournisseur, la région, le pays, les champs renvoyés, le succès et si un masquage a été appliqué — jamais l'image, la clé ou les valeurs des champs.",
       "Conçu selon la nLPD suisse et le RGPD de l'UE."
     ]
   },
+  "screenshots": {
+    "enlarge": "Agrandir {caption}",
+    "close": "Fermer",
+    "prev": "Image précédente",
+    "next": "Image suivante",
+    "images": [
+      {
+        "file": "dashboard.jpg",
+        "caption": "Tableau de bord — mandats en un coup d'œil"
+      },
+      {
+        "file": "hagel-auftrag.jpg",
+        "caption": "Calcul des dommages de grêle (VFFS)"
+      },
+      {
+        "file": "hagel-auftrag-aw.jpg",
+        "caption": "Dommages de grêle — matrice AW allemande avec dépose/repose"
+      },
+      {
+        "file": "bauteil-waehlen.jpg",
+        "caption": "Choisir l'élément — schéma du véhicule cliquable"
+      },
+      {
+        "file": "parkschaden-erfassung.jpg",
+        "caption": "Dommages de parking — par élément, forfait, AW ou calcul intelligent"
+      },
+      {
+        "file": "parkschaden-leistungen.jpg",
+        "caption": "Dommages de parking — prestations supplémentaires et total"
+      },
+      {
+        "file": "dokument-import.jpg",
+        "caption": "Import de documents — écran de contrôle avec vérification des totaux"
+      },
+      {
+        "file": "kundebestatigung.jpg",
+        "caption": "Accord du client sur place avec signature"
+      },
+      {
+        "file": "Versicherung-Direkt.jpg",
+        "caption": "Flux direct avec l'assurance — 4 étapes"
+      },
+      {
+        "file": "Abtretungserklarung1.jpg",
+        "caption": "Déclaration de cession à l'assureur"
+      },
+      {
+        "file": "arbeitsrapporte.jpg",
+        "caption": "Rapports de travail par statut"
+      },
+      {
+        "file": "abnahmeprotokoll.jpg",
+        "caption": "Procès-verbal de remise — signé sur l'appareil"
+      },
+      {
+        "file": "ersatzwagen.jpg",
+        "caption": "Contrat de location du véhicule de remplacement — période, tarif journalier, signature"
+      },
+      {
+        "file": "rechnungen.jpg",
+        "caption": "Factures — statut, échéance, note de crédit et annulation"
+      },
+      {
+        "file": "manuel-rechungen.jpg",
+        "caption": "Facture manuelle (sans rapport)"
+      },
+      {
+        "file": "Subzuweisen.jpg",
+        "caption": "Attribuer un sous-traitant — répartition en direct"
+      },
+      {
+        "file": "sub-ohne-rapport.jpg",
+        "caption": "Mandat au sous-traitant — sans rapport"
+      },
+      {
+        "file": "sub-verwalten.jpg",
+        "caption": "Mandat reçu chez le partenaire"
+      },
+      {
+        "file": "sub-abrechnung.jpg",
+        "caption": "Décompte sous-traitant"
+      },
+      {
+        "file": "analysen1.jpg",
+        "caption": "Analyses — indicateurs et charge de l'équipe"
+      },
+      {
+        "file": "analysen2.jpg",
+        "caption": "Entonnoir de conversion, éléments endommagés et marques"
+      },
+      {
+        "file": "adresse-buch.jpg",
+        "caption": "Carnet d'adresses"
+      },
+      {
+        "file": "kunde-bearbeiten.jpg",
+        "caption": "Fiche client — pièces jointes et options par client"
+      },
+      {
+        "file": "dokumentsprache.jpg",
+        "caption": "Langue des documents — langue de l'app et des PDF au choix"
+      },
+      {
+        "file": "email-doks.jpg",
+        "caption": "Aperçu d'e-mail avec pièces jointes multiples"
+      },
+      {
+        "file": "verlauf.jpg",
+        "caption": "Chronologie du mandat — vue unifiée"
+      },
+      {
+        "file": "audit.jpg",
+        "caption": "Journal d'activité et versions"
+      },
+      {
+        "file": "backup.jpg",
+        "caption": "Sauvegarde, import sous-traitant et données de démo"
+      },
+      {
+        "file": "wiederherstellen.jpg",
+        "caption": "Restauration intelligente"
+      },
+      {
+        "file": "hilfe.jpg",
+        "caption": "Manuel d'utilisation intégré et complet"
+      },
+      {
+        "file": "einstellungen.jpg",
+        "caption": "Paramètres — tableaux tarifaires et grêle"
+      },
+      {
+        "file": "pdf-hagel.jpg",
+        "caption": "Rapport de grêle PDF"
+      },
+      {
+        "file": "pdf-hagel-teile.jpg",
+        "caption": "Rapport grêle — pièces et dépose/repose"
+      },
+      {
+        "file": "pdf-photos.jpg",
+        "caption": "Documentation photo PDF"
+      },
+      {
+        "file": "pdf-park.jpg",
+        "caption": "Rapport de dommages de parking PDF"
+      },
+      {
+        "file": "pdf-rechnung.jpg",
+        "caption": "Facture PDF"
+      },
+      {
+        "file": "pdf-QR-rechnung.jpg",
+        "caption": "Facture QR suisse"
+      },
+      {
+        "file": "pdf-mietvertrag.jpg",
+        "caption": "Contrat de location PDF"
+      }
+    ]
+  },
+  "optionalAi": {
+    "badge": "Optionnel · IA",
+    "providers": [
+      {
+        "name": "Infomaniak",
+        "region": "CH",
+        "recommended": true
+      },
+      {
+        "name": "Mistral AI",
+        "region": "EU"
+      },
+      {
+        "name": "OpenAI",
+        "region": "USA"
+      },
+      {
+        "name": "Anthropic",
+        "region": "USA"
+      }
+    ],
+    "recommendedLabel": "recommandé · centres de données suisses",
+    "providersNote": "Fournisseurs américains uniquement si vous les choisissez explicitement — jamais activés par défaut.",
+    "learnMore": "En savoir plus sur l'IA et la confidentialité"
+  },
   "footer": {
     "company": "Balmer Storm Solutions",
-    "tagline": "Conçu en Suisse.",
-    "techNote": "Développé par un technicien DSP fort de plus de 25 ans d'expérience.",
+    "tagline": "Développé en Suisse.",
+    "techNote": "Développé par un technicien DSP avec plus de 25 ans d'expérience.",
     "copyright": "© 2026 Balmer Storm Solutions. Tous droits réservés.",
-    "regions": "Disponible en",
-    "intl": "D'autres pays arrivent bientôt.",
+    "regions": "Disponible dans ces pays",
+    "intl": "D'autres pays suivront.",
+    "versionLabel": "Version {version}",
+    "cols": {
+      "product": "Produit",
+      "features": "Fonctions",
+      "legal": "Mentions légales et mises à jour"
+    },
     "links": {
       "features": "Fonctions",
-      "pricing": "Tarifs",
+      "workflow": "Déroulement",
+      "pricing": "Prix",
+      "faq": "FAQ",
+      "download": "Téléchargement",
+      "updates": "Mises à jour",
       "contact": "Contact",
-      "privacy": "Confidentialité"
+      "order": "Commander une licence",
+      "privacy": "Confidentialité",
+      "windowsInstaller": "Installateur Windows",
+      "androidApk": "APK Android"
+    }
+  },
+  "pages": {
+    "labels": {
+      "home": "Accueil",
+      "howItWorks": "Comment ça marche",
+      "benefits": "Ce que vous y gagnez",
+      "allFeatures": "Toutes les fonctions de ce domaine",
+      "screenshots": "Captures d'écran",
+      "faq": "Questions fréquentes",
+      "related": "À voir aussi",
+      "ctaTitle": "Essayer {days} jours gratuitement",
+      "ctaLead": "Téléchargement direct — sans inscription, sans carte de crédit.",
+      "ctaTrial": "Télécharger maintenant",
+      "ctaBuy": "Commander une licence",
+      "comparison": "Comparatif des coûts",
+      "step": "Étape {n}"
+    },
+    "hail": {
+      "metaTitle": "Calcul des dommages de grêle : VFFS, AW allemande, UPEX | PDR Kalk",
+      "metaDescription": "Logiciel de calcul des dommages de grêle pour techniciens DSP : VFFS, grêle mixte Zurich, liste AW allemande, Autriche, liste UPEX belge. Calcul en direct, rapport, facture — hors ligne, sans abonnement.",
+      "eyebrow": "Calcul grêle",
+      "title": "Calculer un dommage de grêle — avec la matrice tarifaire de votre pays.",
+      "lead": "VFFS, grêle mixte Zurich, liste AW allemande avec dépose/repose, Autriche et liste UPEX belge — calcul en direct sur 14 éléments, avec photos, pièces et prestations externes. Du rapport à la facture dans un seul programme.",
+      "ctaSecondary": "Voir toutes les fonctions",
+      "heroAlt": "PDR Kalk – calcul grêle avec nombre d'impacts par élément et total en direct",
+      "benefits": [
+        {
+          "t": "Cinq matrices tarifaires",
+          "d": "VFFS, grêle mixte Zurich, liste AW allemande avec dépose/repose, matrice autrichienne et liste UPEX belge (UPEX 2015)."
+        },
+        {
+          "t": "Calcul en direct sur 14 éléments",
+          "d": "Saisissez les impacts par classe de taille et le total se met à jour immédiatement — suppléments et remise compris."
+        },
+        {
+          "t": "Pièces, prestations externes, frais annexes",
+          "d": "Pièces endommagées avec prix, travaux achetés et frais annexes figurent directement dans le rapport."
+        },
+        {
+          "t": "Forfait ou AW, dans chaque pays",
+          "d": "Le mode forfait fonctionne indépendamment de la table tarifaire — pour les dommages de parking aussi."
+        },
+        {
+          "t": "Photos sans câble",
+          "d": "Jusqu'à 30 photos depuis le smartphone par code QR ; les données EXIF et GPS sont supprimées."
+        },
+        {
+          "t": "Directement vers la facture",
+          "d": "Rapport, accord du client, assurance et facture s'appuient sur le même calcul."
+        }
+      ],
+      "steps": [
+        {
+          "t": "Saisir le véhicule, vérifier le tarif",
+          "d": "Le pays et la matrice sont préréglés ; les données du véhicule viennent d'un scan ou du clavier.",
+          "file": "hagel-auftrag.jpg"
+        },
+        {
+          "t": "Saisir les impacts par élément",
+          "d": "Le total se recalcule en direct. Pièces, prestations externes et dépose/repose se saisissent dans la même fenêtre.",
+          "file": "hagel-auftrag-aw.jpg"
+        },
+        {
+          "t": "Rapport, accord, facture",
+          "d": "Devis et rapport en PDF, signature sur l'appareil, puis la facture.",
+          "file": "pdf-hagel.jpg"
+        }
+      ],
+      "screenshotsTitle": "Dans l'application"
+    },
+    "import": {
+      "metaTitle": "Importer des PDF SilverDAT et scanner grêle | PDR Kalk",
+      "metaDescription": "Reprendre dans PDR Kalk les calculs SilverDAT et les protocoles d'impacts existants en PDF au lieu de les saisir — traitement local, avec écran de contrôle. Pour l'instant en Suisse.",
+      "eyebrow": "Import de documents",
+      "title": "Toujours en train de saisir les données du scanner grêle à la main ?",
+      "lead": "PDR Kalk lit les protocoles d'impacts et les calculs SilverDAT en PDF — en local sur votre appareil, avec un écran de contrôle avant la reprise. Ensuite, vous continuez comme d'habitude : rapport, accord du client, assurance, facture.",
+      "ctaSecondary": "En savoir plus sur le calcul grêle",
+      "heroAlt": "PDR Kalk – écran de contrôle de l'import : positions reconnues avec vérification des totaux",
+      "benefits": [
+        {
+          "t": "Éléments et impacts par classe de taille",
+          "d": "Les chiffres du protocole d'impacts sont repris et vérifiés par rapport aux totaux du document."
+        },
+        {
+          "t": "SilverDAT en plus",
+          "d": "Données du véhicule et VIN, pièces avec prix, positions de dépose/repose et frais annexes."
+        },
+        {
+          "t": "Entièrement local",
+          "d": "Le PDF est lu sur votre appareil. Rien ne part vers un serveur — pas même le nôtre."
+        },
+        {
+          "t": "Aucune interface",
+          "d": "PDR Kalk lit un PDF que vous possédez déjà. Aucun contrat ni accès à un système tiers n'est nécessaire."
+        },
+        {
+          "t": "Contrôle avant la reprise",
+          "d": "« Sera repris · À clarifier · Inchangé » — vous décidez de ce qui entre dans le rapport."
+        },
+        {
+          "t": "D'autres imports",
+          "d": "Scan du permis de circulation (IA optionnelle), photos par code QR et mandats d'ateliers partenaires."
+        }
+      ],
+      "steps": [
+        {
+          "t": "Activer, choisir le PDF",
+          "d": "Activez une fois sous Paramètres → Grêle, puis choisissez le PDF. Il doit comporter une couche de texte — ni scans ni photos ; PDR Kalk reconnaît lui-même le type de document.",
+          "file": "hagel-auftrag.jpg"
+        },
+        {
+          "t": "Vérifier l'écran de contrôle",
+          "d": "Contrôles de plausibilité sur les totaux d'impacts (≤ 25 mm, > 25 mm, > 50 mm) et le nombre d'éléments, regroupés en « Sera repris · À clarifier · Inchangé ».",
+          "file": "dokument-import.jpg"
+        },
+        {
+          "t": "Reprendre et continuer",
+          "d": "Les chiffres arrivent dans l'éditeur grêle ; ensuite tout se déroule comme d'habitude : rapport, accord, facture.",
+          "file": "pdf-hagel.jpg"
+        }
+      ],
+      "screenshotsTitle": "Dans l'application"
+    },
+    "subcontractors": {
+      "metaTitle": "Flux sous-traitants pour ateliers DSP | PDR Kalk",
+      "metaDescription": "Confier des mandats à des sous-traitants et ateliers partenaires : transfert chiffré, trois modèles de rémunération, répartition en direct, piste d'audit. Logiciel DSP sans abonnement pour Windows et Android.",
+      "eyebrow": "Sous-traitants",
+      "title": "Sous-traitants et ateliers partenaires : partager les mandats, rémunérer équitablement.",
+      "lead": "Transmettre un mandat sous forme de fichier chiffré, choisir parmi trois modèles de rémunération avec répartition en direct, clôturer avec double notification et conserver une piste d'audit complète — des deux côtés, dans PDR Kalk.",
+      "ctaSecondary": "Commander une licence",
+      "heroAlt": "PDR Kalk – attribution d'un sous-traitant avec répartition en direct de la rémunération",
+      "benefits": [
+        {
+          "t": "Transmettre ou partager",
+          "d": "Le mandat part sous forme de fichier vers un autre atelier PDR Kalk et y apparaît avec son numéro et son en-tête."
+        },
+        {
+          "t": "Trois modèles de rémunération",
+          "d": "Taux AW, pourcentage ou forfait — la répartition se calcule en direct, part du matériel consommable comprise."
+        },
+        {
+          "t": "Ajustable par mandat",
+          "d": "Sur un rapport reçu, la rémunération peut être modifiée ; la fenêtre montre les deux montants et la différence."
+        },
+        {
+          "t": "AES-256 et double notification",
+          "d": "Transfert chiffré ; les deux parties sont informées automatiquement à la clôture."
+        },
+        {
+          "t": "Fusion des doublons",
+          "d": "La réimportation ne crée aucune entrée en double — même après plusieurs allers-retours."
+        },
+        {
+          "t": "Analyse d'équipe",
+          "d": "Attribuer les techniciens par élément, analyser par technicien et par semaine, un clic vers Excel."
+        }
+      ],
+      "steps": [
+        {
+          "t": "Attribuer le sous-traitant",
+          "d": "Choisir le modèle et la répartition — le montant du sous-traitant, le vôtre et la différence s'affichent aussitôt.",
+          "file": "Subzuweisen.jpg"
+        },
+        {
+          "t": "Le sous-traitant travaille dans son installation",
+          "d": "Les « mandats reçus » apparaissent sur son tableau de bord avec la rémunération convenue.",
+          "file": "sub-verwalten.jpg"
+        },
+        {
+          "t": "Clôture et réimportation",
+          "d": "Le sous-traitant clôture, les deux parties sont informées ; le rapport terminé revient sous forme de fichier et est importé sans doublons.",
+          "file": "sub-abrechnung.jpg"
+        }
+      ],
+      "screenshotsTitle": "Dans l'application"
+    },
+    "noSubscription": {
+      "metaTitle": "Logiciel DSP sans abonnement — CHF 550 | PDR Kalk",
+      "metaDescription": "Logiciel de calcul DSP sans abonnement : licence perpétuelle à CHF 550 en paiement unique, sans date d'expiration, sans frais mensuels. Hors ligne sur Windows et Android, données en local. 30 jours gratuits.",
+      "eyebrow": "Sans abonnement",
+      "title": "Logiciel DSP sans abonnement — payez une fois, utilisez sans limite.",
+      "lead": "Licence perpétuelle à CHF {price} hors TVA (entreprises UE : EUR {priceEur}) — sans date d'expiration, sans frais mensuels, sans coût par utilisateur supplémentaire. Hors ligne sur Windows et Android ; vos données restent chez vous.",
+      "ctaSecondary": "Commander une licence",
+      "heroAlt": "PDR Kalk – tableau de bord avec mandats, factures ouvertes et indicateurs",
+      "benefits": [
+        {
+          "t": "Paiement unique",
+          "d": "CHF {price} en paiement unique, au lieu d'un abonnement mensuel qui ne s'arrête jamais."
+        },
+        {
+          "t": "Sans date d'expiration",
+          "d": "La licence n'expire pas. Il n'y a rien à renouveler et rien à résilier."
+        },
+        {
+          "t": "Sans coût par utilisateur",
+          "d": "Un nombre illimité d'utilisateurs par licence, sans supplément par technicien."
+        },
+        {
+          "t": "Fonctionne hors ligne",
+          "d": "Aucune obligation de cloud. L'application continue en local, même sans connexion."
+        },
+        {
+          "t": "Vos données restent chez vous",
+          "d": "Sur votre appareil ou votre NAS — pas de cloud du fournisseur, pas de télémétrie."
+        },
+        {
+          "t": "Petites mises à jour comprises",
+          "d": "Les mises à jour optionnelles des listes d'assurances peuvent entraîner de petits frais."
+        }
+      ],
+      "steps": [
+        {
+          "t": "Tester {days} jours",
+          "d": "Toutes les fonctions, sans inscription ni carte de crédit — la version d'essai s'arrête d'elle-même.",
+          "file": "hagel-auftrag.jpg"
+        },
+        {
+          "t": "Commander une licence, recevoir la facture",
+          "d": "Remplissez le formulaire de commande ; la facture arrive en général sous 24 heures et est payable dans les {paymentDays} jours. Sans TVA suisse pour les entreprises de l'UE avec numéro de TVA.",
+          "file": "dashboard.jpg"
+        },
+        {
+          "t": "Saisir la licence, continuer",
+          "d": "Après réception du paiement, saisissez les données de licence dans les Paramètres ; toutes les données de la période d'essai sont conservées.",
+          "file": "einstellungen.jpg"
+        }
+      ],
+      "screenshotsTitle": "Dans l'application"
     }
   }
 }

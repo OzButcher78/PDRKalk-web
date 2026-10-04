@@ -1,575 +1,106 @@
 'use client';
 
 import {useTranslations} from 'next-intl';
+import SectionHead from './SectionHead';
+import ComparisonTables from './ComparisonTables';
+import {BUY_URL, PRICE_CHF, TRIAL_DAYS, TRIAL_URL, resolveCta} from '@/lib/site';
+import {interpolate} from '@/lib/interpolate';
 
-const BUY_URL = process.env.NEXT_PUBLIC_BUY_URL || '#contact';
+type Licence = {
+  badge: string;
+  badgeNote: string;
+  price: string;
+  priceSuffix: string;
+  priceEur: string;
+  vatNote: string;
+  illustration: string;
+  featuresTitle: string;
+  features: string[];
+  notesTitle: string;
+  notes: string[];
+  cta: string;
+  ctaTrial: string;
+  note: string;
+};
+type Journey = {title: string; steps: Array<{t: string; d: string}>};
 
-export default function Pricing() {
+export default function Pricing({home = '/'}: {home?: string} = {}) {
   const t = useTranslations('pricing');
-
-  const lifetime = t.raw('lifetime') as {
-    badge: string;
-    badgeNote: string;
-    price: string;
-    priceSuffix: string;
-    priceEur: string;
-    vatNote: string;
-    features: string[];
-    note: string;
-    cta: string;
-  };
-
-  const monthly = t.raw('monthly') as {
-    badge: string;
-    badgeNote: string;
-    price: string;
-    priceSuffix: string;
-    features: string[];
-    cta: string;
-    disclaimer: string;
-  };
-
-  const comparisonTable = t.raw('comparisonTable') as {
-    title: string;
-    headers: { feature: string; competitor: string; competitor2?: string; pdrKalk: string };
-    rows: Array<{ feature: string; competitor: string; competitor2?: string; pdrKalk: string }>;
-    closing: string;
-    note: string;
-  };
-  const hasCompetitor2 = Boolean(comparisonTable.headers.competitor2);
+  const licence = t.raw('licence') as Licence;
+  const journey = t.raw('journey') as Journey;
 
   return (
-    <section id="pricing" className="section-pad" style={{
-      background: '#ffffff',
-      padding: '6rem 1.5rem',
-      position: 'relative',
-    }}>
-      <div style={{maxWidth: '900px', margin: '0 auto'}}>
+    <section id="pricing" className="section theme-light" style={{background: '#fff'}} aria-labelledby="pricing-title">
+      <div className="container">
+        <SectionHead
+          id="pricing-title"
+          eyebrow={t('eyebrow')}
+          title={t('title')}
+          lead={t('lead')}
+          center
+        />
 
-        {/* Header */}
-        <div style={{textAlign: 'center', marginBottom: '1rem'}}>
-          <h2 style={{
-            fontFamily: 'Barlow Condensed, sans-serif',
-            fontWeight: 900,
-            fontSize: 'clamp(2rem, 4vw, 3rem)',
-            color: 'var(--ink)',
-            margin: '0 0 0.75rem',
-          }}>
-            {t('title')}
-          </h2>
-          <div className="gradient-line" style={{width: '60px', margin: '0 auto'}}/>
-        </div>
+        <div className="price-layout">
+          <div className="price-card">
+            <div className="price-card__bar" aria-hidden />
+            <div className="price-card__body">
+              <div className="ruler" style={{color: '#fff', marginBottom: '1.5rem'}} aria-hidden />
 
-        {/* Two pricing cards */}
-        <div
-          className="pricing-cards"
-          style={{display: 'grid', gap: '1.5rem', marginBottom: '3rem'}}
-        >
+              <div style={{textAlign: 'center'}}>
+                <span className="badge badge--new">{licence.badge}</span>
+                <p className="micro" style={{margin: '0.6rem 0 1.4rem', color: 'var(--steel)'}}>{licence.badgeNote}</p>
 
-          {/* Dauerlizenz card (dark) */}
-          <div
-            className="fade-up-1"
-            style={{
-              background: 'var(--ink)',
-              borderRadius: '12px',
-              overflow: 'hidden',
-              boxShadow: '0 24px 60px rgba(10,15,30,0.25)',
-              display: 'flex',
-              flexDirection: 'column',
-            }}
-          >
-            {/* Top accent bar */}
-            <div style={{
-              height: '4px',
-              background: 'linear-gradient(90deg, var(--red), var(--blue))',
-            }}/>
-
-            <div style={{
-              padding: 'clamp(1.5rem, 4vw, 2.5rem)',
-              display: 'flex',
-              flexDirection: 'column',
-              flexGrow: 1,
-            }}>
-              {/* Badge */}
-              <div style={{marginBottom: '0.5rem', textAlign: 'center'}}>
-                <span style={{
-                  display: 'inline-block',
-                  background: 'rgba(232,0,29,0.12)',
-                  border: '1px solid rgba(232,0,29,0.3)',
-                  borderRadius: '3px',
-                  padding: '0.3rem 0.9rem',
-                  fontFamily: 'Barlow Condensed, sans-serif',
-                  fontWeight: 700,
-                  fontSize: '0.78rem',
-                  letterSpacing: '0.14em',
-                  textTransform: 'uppercase' as const,
-                  color: '#ff4455',
-                }}>
-                  {lifetime.badge}
-                </span>
-              </div>
-              <div style={{
-                textAlign: 'center',
-                fontFamily: 'Barlow, sans-serif',
-                fontSize: '0.75rem',
-                color: 'var(--steel)',
-                letterSpacing: '0.06em',
-                marginBottom: '1.5rem',
-              }}>
-                {lifetime.badgeNote}
+                <p className="price-amount" style={{margin: 0}}>
+                  {t('licence.price', {price: PRICE_CHF})}
+                </p>
+                <p className="price-suffix" style={{margin: '0.4rem 0 0'}}>{licence.priceSuffix}</p>
+                <p className="micro" style={{margin: '1rem 0 0', color: 'var(--steel)'}}>
+                  {interpolate(licence.priceEur)}
+                  {licence.vatNote && <><br />{licence.vatNote}</>}
+                </p>
+                <p className="micro" style={{margin: '0.6rem 0 0', color: 'var(--green-glow)'}}>{interpolate(licence.illustration)}</p>
               </div>
 
-              {/* Price */}
-              <div style={{textAlign: 'center', marginBottom: '2rem'}}>
-                <div style={{
-                  fontFamily: 'Barlow Condensed, sans-serif',
-                  fontWeight: 900,
-                  fontSize: 'clamp(2.5rem, 5vw, 4rem)',
-                  color: '#34d399',
-                  lineHeight: 1,
-                  letterSpacing: '-0.02em',
-                  fontVariantNumeric: 'tabular-nums',
-                  textShadow: '0 0 10px rgba(52,211,153,0.4), 0 0 22px rgba(52,211,153,0.25)',
-                }}>
-                  {lifetime.price}
+              <div className="price-lists">
+                <div>
+                  <p className="price-list-title">{licence.featuresTitle}</p>
+                  <ul className="ul-check ul-check--tick" style={{color: 'var(--text-dark-mute)'}}>
+                    {licence.features.map((f, i) => <li key={i}>{interpolate(f)}</li>)}
+                  </ul>
                 </div>
-                <div style={{
-                  fontFamily: 'Barlow Condensed, sans-serif',
-                  fontWeight: 700,
-                  fontSize: 'clamp(1rem, 1.6vw, 1.2rem)',
-                  color: '#34d399',
-                  marginTop: '0.5rem',
-                  textTransform: 'uppercase' as const,
-                  letterSpacing: '0.08em',
-                  textShadow: '0 0 8px rgba(52,211,153,0.45)',
-                }}>
-                  {lifetime.priceSuffix}
-                </div>
-                <div style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontWeight: 500,
-                  fontSize: '0.85rem',
-                  color: '#94a3b8',
-                  marginTop: '1rem',
-                  letterSpacing: '0.02em',
-                  lineHeight: 1.4,
-                }}>
-                  <div>{lifetime.priceEur}</div>
-                  {lifetime.vatNote && <div>{lifetime.vatNote}</div>}
+                <div>
+                  <p className="price-list-title">{licence.notesTitle}</p>
+                  <ul className="ul-check" style={{color: 'var(--text-dark-mute)'}}>
+                    {licence.notes.map((n, i) => <li key={i}>{interpolate(n)}</li>)}
+                  </ul>
                 </div>
               </div>
 
-              {/* Divider */}
-              <div style={{
-                height: '1px',
-                background: 'rgba(255,255,255,0.07)',
-                marginBottom: '1.5rem',
-              }}/>
+              <div className="price-ctas">
+                <a href={resolveCta(BUY_URL, home)} className="btn btn-red btn--lg">{licence.cta}</a>
+                <a href={resolveCta(TRIAL_URL, home)} className="btn btn-ghost">
+                  {t('licence.ctaTrial', {days: TRIAL_DAYS})}
+                </a>
+              </div>
 
-              {/* Features */}
-              <ul style={{
-                listStyle: 'none',
-                margin: '0 0 2rem',
-                padding: 0,
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0.65rem',
-                flexGrow: 1,
-              }}>
-                {lifetime.features.map((feat, i) => (
-                  <li key={i} style={{
-                    display: 'flex',
-                    alignItems: 'flex-start',
-                    gap: '0.5rem',
-                    fontFamily: 'Barlow, sans-serif',
-                    fontSize: '0.88rem',
-                    color: '#94a3b8',
-                    lineHeight: 1.4,
-                  }}>
-                    <span style={{
-                      color: 'var(--green)',
-                      fontWeight: 700,
-                      flexShrink: 0,
-                      fontSize: '0.95rem',
-                      marginTop: '0.05rem',
-                    }}>✓</span>
-                    {feat}
-                  </li>
-                ))}
-              </ul>
-
-              {/* CTA */}
-              <a
-                href={BUY_URL}
-                className="btn-red pricing-cta"
-                style={{
-                  display: 'block',
-                  textAlign: 'center',
-                  fontFamily: 'Barlow Condensed, sans-serif',
-                  fontWeight: 800,
-                  fontSize: '1.1rem',
-                  letterSpacing: '0.1em',
-                  textTransform: 'uppercase' as const,
-                  color: '#fff',
-                  background: 'var(--red)',
-                  textDecoration: 'none',
-                  padding: '1rem',
-                  borderRadius: '6px',
-                  transition: 'background 0.2s, transform 0.15s, box-shadow 0.2s',
-                  boxShadow: '0 4px 20px rgba(232,0,29,0.3)',
-                  boxSizing: 'border-box',
-                  whiteSpace: 'normal',
-                }}
-              >
-                {lifetime.cta} →
-              </a>
-
-              {/* Note */}
-              <p style={{
-                textAlign: 'center',
-                fontFamily: 'Barlow, sans-serif',
-                fontSize: '0.82rem',
-                color: '#64748b',
-                fontStyle: 'italic',
-                margin: '1rem 0 0',
-              }}>
-                {lifetime.note}
-              </p>
+              <p className="micro" style={{margin: '1rem 0 0', color: 'var(--steel)', fontStyle: 'italic'}}>{licence.note}</p>
             </div>
           </div>
 
-          {/* Monatslizenz card (light) */}
-          <div
-            className="fade-up-2"
-            style={{
-              background: '#ffffff',
-              borderRadius: '12px',
-              overflow: 'hidden',
-              boxShadow: '0 8px 32px rgba(10,15,30,0.10)',
-              border: '1px solid #e2e8f0',
-              display: 'flex',
-              flexDirection: 'column',
-            }}
-          >
-            {/* Top accent bar */}
-            <div style={{
-              height: '4px',
-              background: 'var(--steel)',
-            }}/>
-
-            <div style={{
-              padding: 'clamp(1.5rem, 4vw, 2.5rem)',
-              display: 'flex',
-              flexDirection: 'column',
-              flexGrow: 1,
-            }}>
-              {/* Badge */}
-              <div style={{marginBottom: '0.5rem', textAlign: 'center'}}>
-                <span style={{
-                  display: 'inline-block',
-                  background: 'rgba(148,163,184,0.12)',
-                  border: '1px solid rgba(148,163,184,0.4)',
-                  borderRadius: '3px',
-                  padding: '0.3rem 0.9rem',
-                  fontFamily: 'Barlow Condensed, sans-serif',
-                  fontWeight: 700,
-                  fontSize: '0.78rem',
-                  letterSpacing: '0.14em',
-                  textTransform: 'uppercase' as const,
-                  color: '#475569',
-                }}>
-                  {monthly.badge}
-                </span>
-              </div>
-              <div style={{
-                textAlign: 'center',
-                fontFamily: 'Barlow, sans-serif',
-                fontSize: '0.75rem',
-                color: '#64748b',
-                letterSpacing: '0.06em',
-                marginBottom: '1.5rem',
-              }}>
-                {monthly.badgeNote}
-              </div>
-
-              {/* Price */}
-              <div style={{textAlign: 'center', marginBottom: '2rem'}}>
-                <div style={{
-                  fontFamily: 'Barlow Condensed, sans-serif',
-                  fontWeight: 900,
-                  fontSize: 'clamp(2.5rem, 5vw, 4rem)',
-                  color: 'var(--ink)',
-                  lineHeight: 1,
-                  letterSpacing: '-0.02em',
-                  fontVariantNumeric: 'tabular-nums',
-                }}>
-                  {monthly.price}
-                </div>
-                <div style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontSize: '0.9rem',
-                  color: '#64748b',
-                  marginTop: '0.35rem',
-                  textTransform: 'uppercase' as const,
-                  letterSpacing: '0.08em',
-                }}>
-                  {monthly.priceSuffix}
-                </div>
-              </div>
-
-              {/* Divider */}
-              <div style={{
-                height: '1px',
-                background: '#e2e8f0',
-                marginBottom: '1.5rem',
-              }}/>
-
-              {/* Features */}
-              <ul style={{
-                listStyle: 'none',
-                margin: '0 0 2rem',
-                padding: 0,
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0.65rem',
-                flexGrow: 1,
-              }}>
-                {monthly.features.map((feat, i) => (
-                  <li key={i} style={{
-                    display: 'flex',
-                    alignItems: 'flex-start',
-                    gap: '0.5rem',
-                    fontFamily: 'Barlow, sans-serif',
-                    fontSize: '0.88rem',
-                    color: '#475569',
-                    lineHeight: 1.4,
-                  }}>
-                    <span style={{
-                      color: 'var(--steel)',
-                      fontWeight: 700,
-                      flexShrink: 0,
-                      fontSize: '0.95rem',
-                      marginTop: '0.05rem',
-                    }}>✓</span>
-                    {feat}
-                  </li>
-                ))}
-              </ul>
-
-              {/* Ghost CTA */}
-              <a
-                href="#download"
-                className="btn-ghost-dark pricing-cta"
-                style={{
-                  display: 'block',
-                  textAlign: 'center',
-                  fontFamily: 'Barlow Condensed, sans-serif',
-                  fontWeight: 800,
-                  fontSize: '1.1rem',
-                  letterSpacing: '0.1em',
-                  textTransform: 'uppercase' as const,
-                  color: 'var(--ink)',
-                  background: 'transparent',
-                  textDecoration: 'none',
-                  padding: '1rem',
-                  borderRadius: '6px',
-                  border: '2px solid #cbd5e1',
-                  transition: 'border-color 0.2s, transform 0.15s',
-                  boxSizing: 'border-box',
-                  whiteSpace: 'normal',
-                }}
-              >
-                {monthly.cta} →
-              </a>
-
-              {/* Disclaimer */}
-              <p style={{
-                textAlign: 'center',
-                fontFamily: 'Barlow, sans-serif',
-                fontSize: '0.78rem',
-                color: '#94a3b8',
-                fontStyle: 'italic',
-                margin: '1rem 0 0',
-              }}>
-                {monthly.disclaimer}
-              </p>
-            </div>
+          <div>
+            <h3 className="t-h3" style={{marginBottom: '1.25rem'}}>{journey.title}</h3>
+            <ol className="journey">
+              {journey.steps.map((step, i) => (
+                <li key={i} data-n={i + 1}>
+                  <p className="journey-t">{t(`journey.steps.${i}.t`, {days: TRIAL_DAYS})}</p>
+                  <p className="journey-d">{interpolate(step.d)}</p>
+                </li>
+              ))}
+            </ol>
           </div>
         </div>
 
-        {/* 5-Year cost comparison table */}
-        <div>
-          <style>{`
-            .comparison-table th,
-            .comparison-table td { padding: 0.85rem 1rem; }
-            @media (max-width: 768px) {
-              .comparison-table th,
-              .comparison-table td { padding: 0.6rem 0.5rem; font-size: 0.8rem; }
-            }
-          `}</style>
-
-          <h3 style={{
-            fontFamily: 'Barlow Condensed, sans-serif',
-            fontWeight: 900,
-            fontSize: 'clamp(1.4rem, 3vw, 1.8rem)',
-            color: 'var(--ink)',
-            margin: '0 0 1.25rem',
-            textAlign: 'center',
-            letterSpacing: '-0.01em',
-          }}>
-            {comparisonTable.title}
-          </h3>
-
-          <div style={{
-            overflowX: 'auto',
-            maxWidth: '100%',
-            borderRadius: '8px',
-            boxShadow: '0 2px 12px rgba(10,15,30,0.07)',
-          }}>
-            <table
-              className="comparison-table"
-              style={{
-                width: '100%',
-                borderCollapse: 'collapse',
-                minWidth: hasCompetitor2 ? '600px' : '480px',
-                background: '#fff',
-                fontFamily: 'Barlow, sans-serif',
-                fontSize: '0.9rem',
-                fontVariantNumeric: 'tabular-nums',
-              }}
-            >
-              <thead>
-                <tr style={{background: 'var(--ink)'}}>
-                  <th style={{
-                    textAlign: 'left',
-                    fontFamily: 'Barlow Condensed, sans-serif',
-                    fontWeight: 700,
-                    fontSize: '0.8rem',
-                    letterSpacing: '0.1em',
-                    textTransform: 'uppercase' as const,
-                    color: 'var(--steel)',
-                    borderBottom: '2px solid rgba(255,255,255,0.08)',
-                  }}>
-                    {comparisonTable.headers.feature}
-                  </th>
-                  <th style={{
-                    textAlign: 'center',
-                    fontFamily: 'Barlow Condensed, sans-serif',
-                    fontWeight: 700,
-                    fontSize: '0.8rem',
-                    letterSpacing: '0.1em',
-                    textTransform: 'uppercase' as const,
-                    color: 'var(--steel)',
-                    borderBottom: '2px solid rgba(255,255,255,0.08)',
-                  }}>
-                    {comparisonTable.headers.competitor}
-                  </th>
-                  {hasCompetitor2 && (
-                    <th style={{
-                      textAlign: 'center',
-                      fontFamily: 'Barlow Condensed, sans-serif',
-                      fontWeight: 700,
-                      fontSize: '0.8rem',
-                      letterSpacing: '0.1em',
-                      textTransform: 'uppercase' as const,
-                      color: 'var(--steel)',
-                      borderBottom: '2px solid rgba(255,255,255,0.08)',
-                    }}>
-                      {comparisonTable.headers.competitor2}
-                    </th>
-                  )}
-                  <th style={{
-                    textAlign: 'center',
-                    fontFamily: 'Barlow Condensed, sans-serif',
-                    fontWeight: 700,
-                    fontSize: '0.85rem',
-                    letterSpacing: '0.1em',
-                    textTransform: 'uppercase' as const,
-                    color: '#4ade80',
-                    borderBottom: '2px solid var(--green)',
-                    borderLeft: '2px solid rgba(22,163,74,0.3)',
-                    background: 'rgba(22,163,74,0.07)',
-                  }}>
-                    {comparisonTable.headers.pdrKalk}
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparisonTable.rows.map((row, i) => {
-                  const isEven = i % 2 === 0;
-                  const isCostRow = i >= 5;
-                  const isLastRow = i === comparisonTable.rows.length - 1;
-                  return (
-                    <tr key={i} style={{background: isEven ? '#fff' : '#f8fafc'}}>
-                      <td style={{
-                        color: '#475569',
-                        fontWeight: isLastRow ? 800 : 500,
-                        borderBottom: '1px solid #e2e8f0',
-                        borderTop: isLastRow ? '2px solid #cbd5e1' : undefined,
-                      }}>
-                        {row.feature}
-                      </td>
-                      <td style={{
-                        textAlign: 'center',
-                        color: isCostRow ? 'var(--red)' : '#64748b',
-                        fontWeight: isLastRow ? 800 : isCostRow ? 600 : 400,
-                        borderBottom: '1px solid #e2e8f0',
-                        borderTop: isLastRow ? '2px solid #cbd5e1' : undefined,
-                      }}>
-                        {row.competitor}
-                      </td>
-                      {hasCompetitor2 && (
-                        <td style={{
-                          textAlign: 'center',
-                          color: isCostRow ? 'var(--red)' : '#64748b',
-                          fontWeight: isLastRow ? 800 : isCostRow ? 600 : 400,
-                          borderBottom: '1px solid #e2e8f0',
-                          borderTop: isLastRow ? '2px solid #cbd5e1' : undefined,
-                        }}>
-                          {row.competitor2}
-                        </td>
-                      )}
-                      <td style={{
-                        textAlign: 'center',
-                        color: '#166534',
-                        fontWeight: isLastRow ? 900 : 700,
-                        fontSize: isLastRow ? '1.05em' : undefined,
-                        borderBottom: '1px solid #bbf7d0',
-                        borderLeft: '2px solid rgba(22,163,74,0.25)',
-                        background: 'rgba(22,163,74,0.07)',
-                        borderTop: isLastRow ? '2px solid #16a34a' : undefined,
-                      }}>
-                        {row.pdrKalk}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-
-          <p style={{
-            textAlign: 'center',
-            fontFamily: 'Barlow, sans-serif',
-            fontSize: '0.95rem',
-            fontWeight: 600,
-            color: '#475569',
-            margin: '1.5rem 0 0.5rem',
-          }}>
-            {comparisonTable.closing}
-          </p>
-
-          <p style={{
-            textAlign: 'center',
-            fontFamily: 'Barlow, sans-serif',
-            fontSize: '0.78rem',
-            color: '#94a3b8',
-            fontStyle: 'italic',
-            margin: '0.5rem 0 0',
-          }}>
-            {comparisonTable.note}
-          </p>
-        </div>
+        <ComparisonTables />
       </div>
     </section>
   );
