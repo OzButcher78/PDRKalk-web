@@ -25,6 +25,8 @@ const SITE = 'https://pdrkalk.ch';
 const pages = [
   ...LOCALES.map(l => `- ${SITE}/${l}/ — home (${l})`),
   `- ${SITE}/au/ — Australian landing page (AUD, GST)`,
+  ...LOCALES.map(l => `- ${SITE}/${l}/order/ — licence order form with terms (${l})`),
+  `- ${SITE}/au/order/ — Australian licence order form (AUD, GST)`,
   ...LOCALES.map(l => `- ${SITE}/${l}/updates/ — release notes (${l})`),
   ...slugBlocks.flatMap(slugs => LOCALES.map(l => `- ${SITE}/${l}/${slugs[l]}/ — feature page (${l})`)),
   ...LOCALES.map(l => `- ${SITE}/${l}/privacy/ — privacy policy (${l})`),
@@ -37,7 +39,7 @@ const txt = `# PDR Kalk
 
 ## About
 
-PDR Kalk is built by Balmer Storm Solutions, a Swiss company founded by Dieter Balmer, a PDR technician with over 25 years of hail and parking-damage repair experience. It runs locally on Windows and Android, keeps all data on the user's own device or NAS, and is sold as a one-time perpetual licence (CHF 550, approx. EUR 580; AUD 590 on the Australian page) with a free 30-day trial. There is no expiry date and no renewal. PDR Kalk is GDPR / revDSG compliant and serves workshops in Switzerland, Germany, Austria, Belgium, the Netherlands and Australia.
+PDR Kalk is built by Balmer Storm Solutions, a Swiss company founded by Dieter Balmer, a PDR technician with over 25 years of hail and parking-damage repair experience. It runs locally on Windows and Android, keeps all data on the user's own device or NAS, and is sold as a one-time perpetual licence (CHF 550 plus Swiss VAT; EUR 580 for EU companies with a VAT ID; AUD 590 on the Australian page) with a free 30-day trial. There is no expiry date and no renewal. PDR Kalk is GDPR / revDSG compliant and serves workshops in Switzerland, Germany, Austria, Belgium, the Netherlands and Australia.
 
 ## Key facts
 
@@ -45,7 +47,8 @@ PDR Kalk is built by Balmer Storm Solutions, a Swiss company founded by Dieter B
 - Current version: ${APP_VERSION}
 - Maker: Balmer Storm Solutions (Switzerland)
 - Founder: Dieter Balmer
-- Pricing: one-time perpetual licence, CHF 550 (approx. EUR 580; AUD 590 on /au/). No expiry date, no monthly fee, no per-user cost. Minor updates included; optional insurance-list updates may attract a small fee
+- Pricing: one-time perpetual licence, CHF 550 plus 8.1 % Swiss VAT; EUR 580 for EU companies with a VAT ID (reverse charge, no VAT); AUD 590 on /au/. No expiry date, no monthly fee, no per-user cost. Minor updates included; optional insurance-list updates may attract a small fee
+- How to buy: binding order through the order page (/de/order/, /en/order/, /fr/order/, /it/order/, /au/order/), business customers only; invoice by email, payable by bank transfer within 14 days; licence details are sent once payment has arrived. No refunds — the 30-day trial is the test period
 - Trial: 30 days, full feature set, direct download, no sign-up and no credit card
 - Platforms: Windows 10/11 and Android 10+ (Apple devices and smartphones are not supported)
 - Markets: Switzerland (CH), Germany (DE), Austria (AT), Australia (AU), Belgium (BE), Netherlands (NL)

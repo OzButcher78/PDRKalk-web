@@ -5,7 +5,8 @@ import {useState, useRef} from 'react';
 import ObfuscatedEmail from './ObfuscatedEmail';
 import SectionHead from './SectionHead';
 import {groupIcons} from '@/lib/icons';
-import {TRIAL_DAYS} from '@/lib/site';
+import {interpolate} from '@/lib/interpolate';
+import {BUY_URL, TRIAL_DAYS, resolveCta} from '@/lib/site';
 
 const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID || 'mlgwvvbo';
 
@@ -242,19 +243,6 @@ export default function Contact({lockedCountry}: {lockedCountry?: string} = {}) 
     </div>
   );
 
-  const selectStyle = (field: 'country' | 'state', value: string) => ({
-    ...inputStyle,
-    borderColor: fieldBorder(field),
-    appearance: 'none' as const,
-    backgroundImage:
-      'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'8\' viewBox=\'0 0 12 8\'><path fill=\'%2394a3b8\' d=\'M6 8L0 0h12z\'/></svg>")',
-    backgroundRepeat: 'no-repeat' as const,
-    backgroundPosition: 'right 1rem center',
-    paddingRight: '2.5rem',
-    color: value ? '#fff' : 'rgba(255,255,255,0.5)',
-    cursor: 'pointer' as const,
-  });
-
   return (
     <section
       id="contact"
@@ -377,6 +365,14 @@ export default function Contact({lockedCountry}: {lockedCountry?: string} = {}) 
                   {errors.intent && <span id="intent-error" style={errorStyle}>{errors.intent}</span>}
                 </fieldset>
 
+                {/* Orders go through the order page (terms, price, payment
+                    term); this form only handles enquiries from here on. The
+                    buy branch in validate()/handleSubmit is frozen and now
+                    unreachable from the UI. */}
+                {form.intent === 'buy' ? (
+                  <ContactOrderForward />
+                ) : (
+                <>
                 {/* Step 2 — Contact details */}
                 <fieldset className="c-step">
                   <legend className="c-legend">2 · {t('stepContact')}</legend>
@@ -386,98 +382,6 @@ export default function Contact({lockedCountry}: {lockedCountry?: string} = {}) 
                     {renderInput('lastName',  'text', 'family-name')}
                   </div>
                 </fieldset>
-
-                {/* Billing details — only needed when ordering a licence */}
-                {form.intent === 'buy' && (
-                  <fieldset className="c-step">
-                    <legend className="c-legend">3 · {t('stepBilling')}</legend>
-
-                    {/* Company */}
-                    <div style={{marginBottom: '1rem'}}>
-                      {renderInput('company', 'text', 'organization')}
-                    </div>
-
-                    {/* Street */}
-                    <div style={{marginBottom: '1rem'}}>
-                      {renderInput('street', 'text', 'street-address')}
-                    </div>
-
-                    {/* Postal code / City */}
-                    <div className="contact-grid" style={{display: 'grid', gap: '1rem', marginBottom: '1rem'}}>
-                      {renderInput('postalCode', 'text', 'postal-code')}
-                      {renderInput('city', 'text', 'address-level2')}
-                    </div>
-
-                    {/* Country — hidden when locked to a single market (e.g. AU) */}
-                    {!lockedCountry && (
-                    <div style={{marginBottom: '1rem'}}>
-                      <label className="c-label" htmlFor="country">{t('countryLabel')}</label>
-                      <select
-                        id="country"
-                        name="country"
-                        ref={refs.country}
-                        aria-label={t('countryLabel')}
-                        aria-invalid={errors.country ? true : undefined}
-                        aria-describedby={errors.country ? 'country-error' : undefined}
-                        autoComplete="country"
-                        value={form.country}
-                        onChange={e => update('country', e.target.value)}
-                        className="contact-input"
-                        style={selectStyle('country', form.country)}
-                        onFocus={e => { if (!errors.country) e.target.style.borderColor = 'var(--red)'; }}
-                        onBlur={e => { if (!errors.country) e.target.style.borderColor = 'rgba(255,255,255,0.1)'; }}
-                      >
-                        <option value="" disabled>{t('countryPlaceholder')}</option>
-                        {COUNTRY_CODES
-                          .map(code => ({code, name: t(`country_${code}` as 'country_ch')}))
-                          .sort((a, b) => a.name.localeCompare(b.name))
-                          .map(({code, name}) => (
-                            <option key={code} value={code} style={{color: '#000'}}>{name}</option>
-                          ))}
-                      </select>
-                      {errors.country && <span id="country-error" style={errorStyle}>{errors.country}</span>}
-                    </div>
-                    )}
-
-                    {/* State (Australia only) */}
-                    {form.country === 'au' && (
-                      <div style={{marginBottom: '1rem'}}>
-                        <label className="c-label" htmlFor="state">{t('stateLabel')}</label>
-                        <select
-                          id="state"
-                          name="state"
-                          ref={refs.state}
-                          aria-label={t('stateLabel')}
-                          aria-invalid={errors.state ? true : undefined}
-                          aria-describedby={errors.state ? 'state-error' : undefined}
-                          autoComplete="address-level1"
-                          value={form.state}
-                          onChange={e => update('state', e.target.value)}
-                          className="contact-input"
-                          style={selectStyle('state', form.state)}
-                          onFocus={e => { if (!errors.state) e.target.style.borderColor = 'var(--red)'; }}
-                          onBlur={e => { if (!errors.state) e.target.style.borderColor = 'rgba(255,255,255,0.1)'; }}
-                        >
-                          <option value="" disabled>{t('statePlaceholder')}</option>
-                          {AU_STATES.map(({code, name}) => (
-                            <option key={code} value={code} style={{color: '#000'}}>{name} ({code})</option>
-                          ))}
-                        </select>
-                        {errors.state && <span id="state-error" style={errorStyle}>{errors.state}</span>}
-                      </div>
-                    )}
-
-                    {/* VAT ID (EU customers only — enables reverse charge, no Swiss MwSt) */}
-                    {isEuCountry(form.country) && (
-                      <div style={{marginBottom: '1rem'}}>
-                        {renderInput('vatId', 'text')}
-                        <p className="micro" style={{color: '#8fa8c8', margin: '0.4rem 0 0'}}>
-                          {t('vatIdNote')}
-                        </p>
-                      </div>
-                    )}
-                  </fieldset>
-                )}
 
                 {/* Email */}
                 <div style={{marginBottom: '1rem'}}>
@@ -532,6 +436,8 @@ export default function Contact({lockedCountry}: {lockedCountry?: string} = {}) 
                 >
                   {submitting ? t('submitting') : `${t('submit')} →`}
                 </button>
+                </>
+                )}
               </form>
             )}
           </div>
@@ -594,10 +500,28 @@ function ContactJourney() {
         {journey.steps.map((step, i) => (
           <li key={i} data-n={i + 1}>
             <p className="journey-t">{p(`journey.steps.${i}.t`, {days: TRIAL_DAYS})}</p>
-            <p className="journey-d">{step.d}</p>
+            <p className="journey-d">{interpolate(step.d)}</p>
           </li>
         ))}
       </ol>
     </>
+  );
+}
+
+/**
+ * Replaces the enquiry fields once the "order" card is picked. The link is
+ * relative on purpose: Contact only renders on a home page (/de/, /au/), and
+ * its frozen signature cannot take a `home` prop, so the browser resolves
+ * `order/` against the current home — /de/order/, /au/order/.
+ */
+function ContactOrderForward() {
+  const o = useTranslations('order');
+  return (
+    <div className="order-forward fade-up">
+      <p>{o('forward.text')}</p>
+      <a href={resolveCta(BUY_URL, '')} className="btn btn-red btn--lg" style={{width: '100%'}}>
+        {o('forward.cta')} <span aria-hidden>→</span>
+      </a>
+    </div>
   );
 }

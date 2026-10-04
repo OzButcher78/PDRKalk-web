@@ -2,8 +2,9 @@ import {
   APP_LANGUAGE_COUNT,
   APP_VERSION,
   COST_HORIZON_YEARS,
+  PAYMENT_TERM_DAYS,
   PRICE_CHF,
-  PRICE_EUR_APPROX,
+  PRICE_EUR,
   TRIAL_DAYS,
 } from './site';
 
@@ -17,8 +18,9 @@ import {
 export const SITE_VALUES: Record<string, string | number> = {
   version: APP_VERSION,
   price: PRICE_CHF,
-  priceEur: PRICE_EUR_APPROX,
+  priceEur: PRICE_EUR,
   days: TRIAL_DAYS,
+  paymentDays: PAYMENT_TERM_DAYS,
   languages: APP_LANGUAGE_COUNT,
   years: COST_HORIZON_YEARS,
 };

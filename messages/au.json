@@ -998,7 +998,7 @@
         "Windows 10/11 and Android 10+ — Apple devices and smartphones are not supported",
         "Subcontractors and partner workshops need their own installation"
       ],
-      "cta": "Request a licence",
+      "cta": "Order a licence",
       "ctaTrial": "Try it free for {days} days",
       "note": "* Optional insurance list updates may attract a small fee."
     },
@@ -1010,12 +1010,12 @@
           "d": "Every feature, no credit card, no sign-up. The trial ends by itself."
         },
         {
-          "t": "Request a licence",
-          "d": "Fill in the form below — an answer usually arrives within 24 hours."
+          "t": "Order a licence",
+          "d": "Fill in the order form — the order is binding."
         },
         {
           "t": "Invoice by email",
-          "d": "A tax invoice with GST itemised; no credit card needed."
+          "d": "A tax invoice with GST itemised, usually within 24 hours, payable by bank transfer within {paymentDays} days."
         },
         {
           "t": "Activate in the app",
@@ -1228,7 +1228,7 @@
       {
         "id": "buy",
         "q": "How do I buy a licence?",
-        "a": "Fill in the “Buy a licence” form further down. You usually receive the tax invoice by email within 24 hours — no credit card needed. Once payment arrives you receive your licence details and unlock PDR Kalk with them."
+        "a": "Through the “Order a licence” form. The order is binding; you usually receive the tax invoice by email within 24 hours, payable by bank transfer within {paymentDays} days — no credit card needed. Once payment arrives you receive your licence details and unlock PDR Kalk with them."
       },
       {
         "id": "updates",
@@ -1297,7 +1297,7 @@
       "No sign-up",
       "Ends by itself"
     ],
-    "buyHint": "Already tried it? Request a licence",
+    "buyHint": "Already tried it? Order a licence",
     "windows": {
       "eyebrow": "For PC & laptop",
       "name": "Microsoft Windows",
@@ -1315,11 +1315,11 @@
     "footnote": "Apple devices and smartphones are not supported."
   },
   "contact": {
-    "title": "Buy a licence",
-    "subtitle": "Tried PDR Kalk and ready to buy? Fill in your details below — we'll get back to you within 24 hours.",
+    "title": "Order or ask a question",
+    "subtitle": "Order a licence or ask us anything — we usually reply within 24 hours.",
     "platformNoticeTitle": "Which devices are supported?",
     "platformNoticeBody": "PDR Kalk runs on Windows and Android tablets as well as on PCs and laptops. All features are available on Windows devices; Android tablets offer the full feature set except for multi-device synchronisation via a shared work folder. Apple devices and smartphones are not supported.",
-    "intent_buy": "Buy licence / Request invoice",
+    "intent_buy": "Order a licence",
     "intent_inquiry": "General enquiry",
     "errorIntentRequired": "Please select an option",
     "firstNamePlaceholder": "First name *",
@@ -1346,7 +1346,7 @@
     "emailLabel": "Email",
     "messagePlaceholder": "Notes or questions (optional)",
     "messageLabel": "Notes",
-    "submit": "Request a licence",
+    "submit": "Send enquiry",
     "errorFirstNameRequired": "First name required",
     "errorLastNameRequired": "Last name required",
     "errorCompanyRequired": "Company required",
@@ -1359,12 +1359,113 @@
     "country_au": "Australia",
     "sendError": "Failed to send. Please try again or email us directly at the address below.",
     "submitting": "Sending…",
-    "success": "Request sent — we'll get back to you shortly.",
+    "success": "Message sent — we'll get back to you shortly.",
     "emailUser": "info",
     "emailDomain": "pdrkalk.ch",
     "stepIntent": "Your request",
     "stepContact": "Contact",
     "stepBilling": "Billing address"
+  },
+  "order": {
+    "metaTitle": "Order a licence | PDR Kalk Australia",
+    "metaDescription": "Place a binding order for a PDR Kalk one-time licence: AUD $590, GST applies. Tax invoice by email, payable by bank transfer within {paymentDays} days.",
+    "crumbHome": "Home",
+    "title": "Order a licence",
+    "lead": "Place a binding order for your PDR Kalk one-time licence here. You receive the tax invoice by email and pay by bank transfer; the licence follows once payment has arrived.",
+    "terms": {
+      "title": "Licence and payment terms",
+      "versionLabel": "Version",
+      "seller": "Seller: Balmer Storm Solutions, Switzerland",
+      "items": [
+        {
+          "t": "Binding order",
+          "d": "By clicking “Place binding order” you place a binding order for a PDR Kalk licence. Sales are to business customers only (B2B)."
+        },
+        {
+          "t": "Price",
+          "d": "AUD $590, GST applies and is itemised on your tax invoice."
+        },
+        {
+          "t": "Payment",
+          "d": "You receive the tax invoice by email. It is payable by bank transfer within {paymentDays} days of the invoice date."
+        },
+        {
+          "t": "Delivery",
+          "d": "The licence is issued once payment has been received in full and is sent to you by email."
+        },
+        {
+          "t": "Scope of the licence",
+          "d": "A one-time licence with no expiry date and no subscription, for commercial use by one business. It may be installed and used on any number of the licensee's devices."
+        },
+        {
+          "t": "Tied to the business",
+          "d": "The licence is permanently tied to the business and address given in the order. The business name and address cannot be changed after issue, and the licence cannot be transferred to another business."
+        },
+        {
+          "t": "No change-of-mind refunds",
+          "d": "PDR Kalk can be tested free of charge and without obligation for {days} days before purchase. There are therefore no refunds for change of mind. This does not affect your rights under the Australian Consumer Law."
+        },
+        {
+          "t": "Updates",
+          "d": "Regular updates are included free of charge. Larger add-on modules may be offered optionally for a small fee; buying them is voluntary."
+        },
+        {
+          "t": "AI features",
+          "d": "Any built-in AI features are optional, may not be available in every region and may rely on evolving AI services. They require your own API key from the chosen provider; setup and costs are the customer's responsibility. Availability, accuracy and behaviour are not guaranteed."
+        },
+        {
+          "t": "Governing law and jurisdiction",
+          "d": "Swiss law applies. The place of jurisdiction is Schaffhausen, Switzerland."
+        }
+      ]
+    },
+    "form": {
+      "billingHint": "The licence is issued permanently to this business name and address. It cannot be changed later — please check carefully.",
+      "stepNotes": "Notes",
+      "stepConfirm": "Order",
+      "consent": "I am ordering for the business named above and accept the <terms>licence and payment terms</terms>.",
+      "errorConsentRequired": "Please confirm the order and the terms.",
+      "submit": "Place binding order"
+    },
+    "price": {
+      "licence": "Licence",
+      "noteAu": "GST applies and is itemised on your tax invoice",
+      "lineAu": "AUD ${amount}, GST applies"
+    },
+    "summary": {
+      "title": "Your order",
+      "product": "PDR Kalk licence – ongoing use with no expiry date for one business.",
+      "productShort": "PDR Kalk one-time licence",
+      "lineTerm": "payable within {paymentDays} days"
+    },
+    "next": {
+      "title": "What happens next",
+      "steps": [
+        {
+          "t": "Tax invoice by email",
+          "d": "Usually within 24 hours, to the address you entered."
+        },
+        {
+          "t": "Payment within {paymentDays} days",
+          "d": "By bank transfer to the account shown on the tax invoice."
+        },
+        {
+          "t": "Unlock the licence",
+          "d": "Once payment arrives you receive your licence details and enter them in the app; everything from the trial stays in place."
+        }
+      ]
+    },
+    "success": {
+      "title": "Order received — thank you for choosing PDR Kalk.",
+      "invoice": "The tax invoice is usually sent by email to {email} within 24 hours.",
+      "term": "It is payable by bank transfer within {paymentDays} days of the invoice date.",
+      "licence": "Once payment has arrived you receive your licence details by email.",
+      "backHome": "Back to the home page"
+    },
+    "forward": {
+      "text": "Licences are ordered through the order form — with price, payment term and licence terms at a glance.",
+      "cta": "Go to the order form"
+    }
   },
   "screenshots": {
     "enlarge": "Enlarge {caption}",
@@ -1527,6 +1628,7 @@
       "download": "Download",
       "updates": "Updates",
       "contact": "Contact",
+      "order": "Order a licence",
       "privacy": "Privacy",
       "windowsInstaller": "Windows installer",
       "androidApk": "Android APK"

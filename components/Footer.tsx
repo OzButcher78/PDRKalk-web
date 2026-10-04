@@ -7,6 +7,7 @@ import ObfuscatedEmail from './ObfuscatedEmail';
 import {
   ANDROID_DOWNLOAD_URL,
   APP_VERSION,
+  ORDER_PATH,
   WINDOWS_DOWNLOAD_URL,
 } from '@/lib/site';
 import {PAGES, pageHref, type PageKey} from '@/data/pages';
@@ -29,8 +30,8 @@ export default function Footer({regions = REGION_FLAGS, basePath, showPrivacy = 
   const locale = useLocale();
 
   const home = basePath ?? `/${locale}/`;
-  // /au has no subpages, so the feature column is only rendered for the
-  // routing locales (where `basePath` is not overridden).
+  // /au has no feature pages (only /au/order/), so the feature column is only
+  // rendered for the routing locales (where `basePath` is not overridden).
   const showPages = !basePath;
 
   const productLinks: Array<{key: string; href: string}> = [
@@ -115,6 +116,9 @@ export default function Footer({regions = REGION_FLAGS, basePath, showPrivacy = 
                 <a href={ANDROID_DOWNLOAD_URL} className="footer-link" style={LINK_STYLE} target="_blank" rel="noopener noreferrer" download>
                   {t('links.androidApk')}
                 </a>
+              </li>
+              <li>
+                <a href={`${home}${ORDER_PATH}`} className="footer-link" style={LINK_STYLE}>{t('links.order')}</a>
               </li>
               <li>
                 <a href={`${home}#contact`} className="footer-link" style={LINK_STYLE}>{t('links.contact')}</a>

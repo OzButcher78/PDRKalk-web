@@ -7,8 +7,8 @@
  * level skips, no leaked MISSING_MESSAGE / `namespace.key` / `{placeholder}`
  * text, canonical + hreflang + og:url + og:image, parsable JSON-LD with the
  * expected softwareVersion and two offers, the download anchors, the contact
- * form markup, the required section ids, and that every internal href/src
- * resolves inside out/.
+ * form markup, the order form + terms on /{locale}/order/ and /au/order/, the
+ * required section ids, and that every internal href/src resolves inside out/.
  *
  * Plus, once per build: out/_redirects matches public/_redirects, out/404.html
  * has a document shell, the sitemap <loc> set equals the emitted pages, the
@@ -108,9 +108,9 @@ for (const file of htmlFiles) {
   // --- leaked message plumbing
   const text = textOnly(html);
   if (text.includes('MISSING_MESSAGE')) err(`${name}: MISSING_MESSAGE in the rendered text`);
-  const literalKey = text.match(/\b(hero|nav|trust|demo|workflow|whatsNew|features|regions|integrations|documents|team|security|testimonials|pricing|faq|download|contact|footer|updates|pages|badges|screenshots)\.[a-zA-Z][\w.]*/);
+  const literalKey = text.match(/\b(hero|nav|trust|demo|workflow|whatsNew|features|regions|integrations|documents|team|security|testimonials|pricing|faq|download|contact|footer|updates|pages|badges|screenshots|order)\.[a-zA-Z][\w.]*/);
   if (literalKey) err(`${name}: literal message key in text: ${literalKey[0]}`);
-  const PLACEHOLDER_RE = /\{(version|price|priceEur|days|languages|years|n|caption|r|title)\}/;
+  const PLACEHOLDER_RE = /\{(version|price|priceEur|days|languages|years|paymentDays|n|caption|r|title|amount|email)\}/;
   const placeholder = text.match(PLACEHOLDER_RE);
   if (placeholder) err(`${name}: unexpanded placeholder in text: ${placeholder[0]}`);
   // Several raw strings reach only an attribute (alt, aria-label, title).
@@ -203,6 +203,14 @@ for (const file of htmlFiles) {
     if (!/\[at\]/.test(html)) err(`${name}: obfuscated e-mail fallback is missing`);
   }
 
+  // --- order page: terms + form with the consent checkbox
+  if (/^\/(de|en|fr|it|au)\/order\/$/.test(url)) {
+    const form = html.match(/<form\b[^>]*>/)?.[0];
+    if (!form || !/noValidate|novalidate/.test(form)) err(`${name}: order form missing or without noValidate`);
+    if ((html.match(/\sid="terms"/g) ?? []).length !== 1) err(`${name}: expected exactly one id="terms"`);
+    if (!/<input\b(?=[^>]*type="checkbox")(?=[^>]*name="consent")[^>]*>/.test(html)) err(`${name}: consent checkbox is missing`);
+  }
+
   // --- internal links resolve
   const refs = [
     ...[...html.matchAll(/<a\b[^>]*href="([^"]+)"/g)].map(m => m[1]),
@@ -230,6 +238,11 @@ for (const file of htmlFiles) {
 }
 
 // ------------------------------------------------------------- once per build
+// The desktop app's «Bestellen» link and every buy CTA point at these.
+for (const seg of [...LOCALES, 'au']) {
+  if (!pageUrls.has(`/${seg}/order/`)) err(`/${seg}/order/ was not emitted`);
+}
+
 const redirectsOut = path.join(OUT, '_redirects');
 const redirectsSrc = path.join(ROOT, 'public', '_redirects');
 if (!fs.existsSync(redirectsOut)) err('out/_redirects is missing');

@@ -65,8 +65,8 @@ for (const loc of LOCALES.slice(1)) {
 // Everything lib/interpolate.ts can expand, plus the ones passed to t() at the
 // call site. A placeholder outside this set would ship as literal text.
 const KNOWN_PLACEHOLDERS = new Set([
-  'version', 'price', 'priceEur', 'days', 'languages', 'years',
-  'n', 'caption', 'r', 'title',
+  'version', 'price', 'priceEur', 'days', 'languages', 'years', 'paymentDays',
+  'n', 'caption', 'r', 'title', 'amount', 'email',
 ]);
 const placeholders = (s) => [...s.matchAll(/\{(\w+)\}/g)].map(m => m[1]).sort().join(',');
 
@@ -104,11 +104,12 @@ for (const [loc, entries] of Object.entries(flat)) {
 }
 
 // ---------------------------------------------------------------- /au coverage
-// Namespaces read by the components that app/au/page.tsx composes.
+// Namespaces read by the components that app/au/page.tsx and
+// app/au/order/page.tsx compose.
 const AU_NAMESPACES = [
   'meta', 'badges', 'nav', 'hero', 'trust', 'workflow', 'whatsNew', 'features',
   'regions', 'integrations', 'documents', 'team', 'security', 'testimonials',
-  'pricing', 'faq', 'download', 'contact', 'screenshots', 'footer',
+  'pricing', 'faq', 'download', 'contact', 'screenshots', 'footer', 'order',
 ];
 // Keys that /au deliberately omits (guarded with t.has or a prop).
 const AU_OPTIONAL = [
@@ -139,6 +140,8 @@ const AU_OPTIONAL = [
   /^testimonials\.items\./,
   /^download\.chips\./,
   /^contact\.country_(?!au)/,
+  // /au/order/ is locked to Australia: the CH/EU/UK price lines never render.
+  /^order\.price\.(pick|ch|eu|vatCh|total|noteEu|noteGb|lineNone|lineCh|lineEu|lineGb)$/,
 ];
 for (const key of Object.keys(flat.de)) {
   const ns = key.split('.')[0];

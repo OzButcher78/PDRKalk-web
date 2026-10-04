@@ -37,6 +37,8 @@ unless the redirect itself is meant to change.
 | `/au/` | `app/au/page.tsx` — standalone, **not** a routing locale |
 | `/{locale}/privacy/` | `app/[locale]/privacy/page.tsx` |
 | `/{locale}/updates/` | `app/[locale]/updates/page.tsx` (data: `data/releases.ts`) |
+| `/{locale}/order/` | `app/[locale]/order/page.tsx` → `components/Order.tsx` |
+| `/au/order/` | `app/au/order/page.tsx` — static metadata from `au.json`, `lockedCountry="au"` |
 | `/{locale}/{slug}/` | `app/[locale]/[slug]/page.tsx` → `components/FeaturePage.tsx`, slugs from `data/pages.ts` |
 | `404` | `app/not-found.tsx` — renders its own `<html>/<body>` |
 
@@ -57,7 +59,11 @@ unless the redirect itself is meant to change.
 
 ### Source of truth
 
-- `lib/site.ts` — versions, download URLs, CTA targets, prices, `resolveCta()`.
+- `lib/site.ts` — versions, download URLs, CTA targets, prices, `resolveCta()`, and
+  the order constants: `ORDER_PATH`, `PAYMENT_TERM_DAYS` (→ `{paymentDays}`),
+  `VAT_RATE_CH` (the terms copy carries "8,1 %" literally — change both) and
+  `TERMS_VERSION` (sent with every order; bump it whenever `order.terms` changes).
+  `PRICE_EUR` is the real EU price, not a conversion — never write "≈".
 - `data/releases.ts` — release notes, copied verbatim from the desktop app's
   `src/data/changelog.ts`. `APP_VERSION` = newest entry with `status: 'public'`,
   `TEST_VERSION` = newest `'testing'` or `null`.
@@ -83,6 +89,10 @@ Rules the prebuild checker enforces:
 - `download.*.version` and `footer.versionLabel` must contain `{version}`;
 - every key the `/au` components read exists in `au.json` (exceptions are listed in
   `AU_OPTIONAL` in the script — add there when a block is genuinely optional).
+
+A new placeholder goes into `SITE_VALUES` (`lib/interpolate.ts`, if site-wide),
+`KNOWN_PLACEHOLDERS` (`scripts/check-messages.mjs`) and `PLACEHOLDER_RE`
+(`scripts/audit-out.mjs`). `{amount}` and `{email}` are call-site only (order page).
 
 **Placeholders only expand through `t()`.** Anything read with `t.raw()` (arrays,
 nested objects) comes back verbatim, so run it through `interpolate()` from
@@ -113,6 +123,19 @@ ads and external links point at them):
 import ai documents team data testimonials pricing comparison faq download contact`
 
 `#pricing`, `#contact` and `#download` are hard-frozen.
+
+### Orders vs enquiries
+
+Licences are ordered on the order page (`components/Order.tsx`): terms
+(`order.terms`, German is authoritative), billing form, required consent checkbox,
+price by billing country (CH: CHF + 8.1 % VAT; EU: EUR, VAT ID required, reverse
+charge; UK: EUR, no Swiss VAT; AU: AUD, GST). It posts to the same Formspree form
+with the same `[Licence Order] …` subject and keys as the old buy payload, plus
+`price`, `paymentTerm`, `termsAccepted` and `page`. `Contact.tsx` handles
+enquiries only: its "order" card shows a hand-off panel linking to `order/`
+(relative — Contact cannot take a `home` prop). The buy branch in Contact's frozen
+logic is now unreachable; leave it in place. The order page deliberately breaks
+the colour roles: green H1, red (`--red-on-dark`) sub headings — the owner's choice.
 
 ### Contact.tsx is frozen above `const inputStyle = {`
 
@@ -176,9 +199,11 @@ Render screenshots through `components/Shot.tsx` so the srcset stays honest.
 ## Links & CTAs
 
 - Every internal link ends with a trailing slash.
-- `BUY_URL` (`#contact`), `NAV_BUY_URL` (`#pricing`) and `TRIAL_URL` (`#download`)
-  come from `lib/site.ts`; wrap hash CTAs in `resolveCta(url, home)` so they work
-  from a subpage and from `/au/`.
+- `BUY_URL` (`order/`), `NAV_BUY_URL` (`#pricing`) and `TRIAL_URL` (`#download`)
+  come from `lib/site.ts`; wrap hash and relative CTAs in `resolveCta(url, home)`
+  so they work from a subpage and from `/au/` (absolute URLs pass through).
+- The desktop app's trial banner links to `/{locale}/#contact`; keep the order
+  hand-off in Contact until the app points at `order/` directly.
 - The locale switcher maps feature-page slugs through `pageBySlug` so switching
   language stays on the same page.
 

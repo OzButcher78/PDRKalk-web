@@ -2,7 +2,7 @@
 
 import {useTranslations} from 'next-intl';
 import {useState, useEffect} from 'react';
-import {BUY_URL, TRIAL_URL} from '@/lib/site';
+import {BUY_URL, TRIAL_URL, resolveCta} from '@/lib/site';
 
 // AU is a standalone, single-locale landing page: no language switcher and
 // in-page anchor links (no `/${locale}/` prefix). This is why it forks Navbar
@@ -10,8 +10,10 @@ import {BUY_URL, TRIAL_URL} from '@/lib/site';
 // segment, which on `/au/` would send the visitor to `/de/`.
 
 const SPY_IDS = ['features', 'workflow', 'whats-new', 'pricing', 'faq', 'contact'];
+const AU_HOME = '/au/';
 
-export default function AuNavbar() {
+/** `home` prefixes the anchor links — `/au/` on a subpage, '' on /au/ itself. */
+export default function AuNavbar({home = ''}: {home?: string} = {}) {
   const t = useTranslations('nav');
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -49,13 +51,15 @@ export default function AuNavbar() {
   }, []);
 
   const navLinks = [
-    {href: '#features',  label: t('features')},
-    {href: '#workflow',  label: t('workflow')},
-    {href: '#whats-new', label: t('whatsNew')},
-    {href: '#pricing',   label: t('pricing')},
-    {href: '#faq',       label: t('faq')},
-    {href: '#contact',   label: t('contact')},
+    {href: `${home}#features`,  label: t('features')},
+    {href: `${home}#workflow`,  label: t('workflow')},
+    {href: `${home}#whats-new`, label: t('whatsNew')},
+    {href: `${home}#pricing`,   label: t('pricing')},
+    {href: `${home}#faq`,       label: t('faq')},
+    {href: `${home}#contact`,   label: t('contact')},
   ];
+  const trialHref = resolveCta(TRIAL_URL, home);
+  const buyHref = resolveCta(BUY_URL, AU_HOME);
   const linkId = (href: string) => href.split('#')[1] ?? '';
 
   return (
@@ -80,7 +84,7 @@ export default function AuNavbar() {
         justifyContent: 'space-between',
         gap: '1rem',
       }}>
-        <a href="#hero" className="nav-logo" style={{display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0}}>
+        <a href={`${home}#hero`} className="nav-logo" style={{display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0}}>
           <picture>
             <source type="image/webp" srcSet="/logo-320.webp" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -116,10 +120,10 @@ export default function AuNavbar() {
         </ul>
 
         <div style={{display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0}}>
-          <a href={TRIAL_URL} className="btn btn-ghost btn--sm hidden-mobile" style={{whiteSpace: 'nowrap'}}>
+          <a href={trialHref} className="btn btn-ghost btn--sm hidden-mobile" style={{whiteSpace: 'nowrap'}}>
             {t('try')}
           </a>
-          <a href={BUY_URL} className="btn btn-red btn--sm hidden-mobile" style={{whiteSpace: 'nowrap'}}>
+          <a href={buyHref} className="btn btn-red btn--sm hidden-mobile" style={{whiteSpace: 'nowrap'}}>
             {t('cta')}
           </a>
 
@@ -189,8 +193,8 @@ export default function AuNavbar() {
             </a>
           ))}
           <div style={{display: 'grid', gap: '0.6rem', marginTop: '0.9rem'}}>
-            <a href={TRIAL_URL} onClick={() => setMenuOpen(false)} className="btn btn-ghost">{t('try')}</a>
-            <a href={BUY_URL} onClick={() => setMenuOpen(false)} className="btn btn-red">
+            <a href={trialHref} onClick={() => setMenuOpen(false)} className="btn btn-ghost">{t('try')}</a>
+            <a href={buyHref} onClick={() => setMenuOpen(false)} className="btn btn-red">
               {t('cta')} <span aria-hidden>→</span>
             </a>
           </div>

@@ -38,7 +38,7 @@
     "ctaSecondary": "Demo ansehen",
     "tryNote": "Direkt-Download · keine Kreditkarte · keine Anmeldung",
     "priceChip": "Dauerlizenz · einmalig CHF {price}",
-    "priceChipSub": "≈ EUR {priceEur} · exkl. MwSt.",
+    "priceChipSub": "exkl. MwSt. · EU-Firmen: EUR {priceEur}",
     "trustChips": [
       {
         "icon": "devices",
@@ -1105,7 +1105,7 @@
       "badgeNote": "Einmalzahlung — kein Abo, kein Ablaufdatum",
       "price": "CHF {price}",
       "priceSuffix": "einmalig",
-      "priceEur": "≈ EUR {priceEur}",
+      "priceEur": "EU-Firmen: EUR {priceEur}",
       "vatNote": "Alle Preise exkl. MwSt.",
       "illustration": "Über {years} Jahre gerechnet: ca. CHF 9 pro Monat",
       "featuresTitle": "Enthalten",
@@ -1123,7 +1123,7 @@
         "Windows 10/11 und Android 10+ — Apple-Geräte und Smartphones werden nicht unterstützt",
         "Subunternehmer und Partnerbetriebe brauchen eine eigene Installation"
       ],
-      "cta": "Lizenz anfragen",
+      "cta": "Lizenz bestellen",
       "ctaTrial": "{days} Tage kostenlos testen",
       "note": "* Optionale Versicherungslisten-Updates können eine kleine Gebühr verursachen."
     },
@@ -1135,12 +1135,12 @@
           "d": "Alle Funktionen, keine Kreditkarte, keine Anmeldung. Die Testversion endet automatisch."
         },
         {
-          "t": "Lizenz anfragen",
-          "d": "Formular unten ausfüllen — Antwort meist innert 24 Stunden."
+          "t": "Lizenz bestellen",
+          "d": "Bestellformular ausfüllen — die Bestellung ist verbindlich."
         },
         {
           "t": "Rechnung per E-Mail",
-          "d": "Mit Schweizer MwSt.; EU-Firmen mit USt-IdNr. erhalten sie ohne MwSt. (Reverse Charge)."
+          "d": "Meist innert 24 Stunden, zahlbar innert {paymentDays} Tagen per Banküberweisung. Mit Schweizer MwSt.; EU-Firmen mit USt-IdNr. erhalten sie ohne MwSt. (Reverse Charge)."
         },
         {
           "t": "Lizenz in der App freischalten",
@@ -1349,7 +1349,7 @@
       {
         "id": "price",
         "q": "Was kostet PDR Kalk?",
-        "a": "CHF {price} einmalig, exkl. MwSt. (≈ EUR {priceEur}). Keine Einrichtungsgebühr, keine laufenden Kosten. EU-Firmen mit gültiger USt-IdNr. erhalten die Rechnung ohne Schweizer MwSt. (Reverse Charge)."
+        "a": "CHF {price} einmalig, exkl. MwSt. EU-Firmen mit gültiger USt-IdNr. zahlen EUR {priceEur} und erhalten die Rechnung ohne Schweizer MwSt. (Reverse Charge). Keine Einrichtungsgebühr, keine laufenden Kosten."
       },
       {
         "id": "trial",
@@ -1359,7 +1359,7 @@
       {
         "id": "buy",
         "q": "Wie kaufe ich eine Lizenz?",
-        "a": "Füllen Sie das Formular «Lizenz kaufen» weiter unten aus. Sie erhalten die Rechnung meist innert 24 Stunden per E-Mail — eine Kreditkarte ist nicht nötig. Nach Zahlungseingang erhalten Sie Ihre Lizenzangaben und schalten PDR Kalk damit frei."
+        "a": "Über das Bestellformular «Lizenz bestellen». Die Bestellung ist verbindlich; Sie erhalten die Rechnung meist innert 24 Stunden per E-Mail, zahlbar innert {paymentDays} Tagen per Banküberweisung — eine Kreditkarte ist nicht nötig. Nach Zahlungseingang erhalten Sie Ihre Lizenzangaben und schalten PDR Kalk damit frei."
       },
       {
         "id": "updates",
@@ -1438,7 +1438,7 @@
       "Keine Anmeldung",
       "Endet automatisch"
     ],
-    "buyHint": "Schon getestet? Lizenz anfragen",
+    "buyHint": "Schon getestet? Lizenz bestellen",
     "windows": {
       "eyebrow": "Für PC & Laptop",
       "name": "Microsoft Windows",
@@ -1456,11 +1456,11 @@
     "footnote": "Apple-Geräte und Smartphones werden nicht unterstützt."
   },
   "contact": {
-    "title": "Lizenz kaufen",
-    "subtitle": "Sie haben PDR Kalk getestet und möchten eine Lizenz erwerben? Tragen Sie Ihre Daten unten ein — wir melden uns meist innert 24 Stunden bei Ihnen.",
+    "title": "Bestellen oder anfragen",
+    "subtitle": "Lizenz bestellen oder eine Frage stellen — wir antworten meist innert 24 Stunden.",
     "platformNoticeTitle": "Welche Geräte werden unterstützt?",
     "platformNoticeBody": "PDR Kalk läuft auf Microsoft- und Android-Tablets sowie auf PCs und Laptops. Alle Funktionen stehen auf Microsoft-Geräten zur Verfügung; Android-Tablets bieten den vollen Funktionsumfang mit Ausnahme der Mehrgeräte-Synchronisation über gemeinsamen Arbeitsordner. Apple-Geräte und Smartphones werden nicht unterstützt.",
-    "intent_buy": "Lizenz kaufen / Rechnung bestellen",
+    "intent_buy": "Lizenz bestellen",
     "intent_inquiry": "Allgemeine Anfrage",
     "errorIntentRequired": "Bitte Anliegen auswählen",
     "firstNamePlaceholder": "Vorname *",
@@ -1487,7 +1487,7 @@
     "emailLabel": "E-Mail",
     "messagePlaceholder": "Anmerkungen oder Fragen (optional)",
     "messageLabel": "Anmerkungen",
-    "submit": "Lizenz anfragen",
+    "submit": "Anfrage senden",
     "errorFirstNameRequired": "Vorname benötigt",
     "errorLastNameRequired": "Nachname benötigt",
     "errorCompanyRequired": "Firma benötigt",
@@ -1529,12 +1529,124 @@
     "country_gb": "Vereinigtes Königreich",
     "sendError": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut oder schreiben Sie direkt an die E-Mail-Adresse unten.",
     "submitting": "Wird gesendet…",
-    "success": "Antrag gesendet — wir melden uns in Kürze bei Ihnen.",
+    "success": "Nachricht gesendet — wir melden uns in Kürze bei Ihnen.",
     "emailUser": "info",
     "emailDomain": "pdrkalk.ch",
     "stepIntent": "Anliegen",
     "stepContact": "Kontakt",
     "stepBilling": "Rechnungsadresse"
+  },
+  "order": {
+    "metaTitle": "Lizenz bestellen | PDR Kalk",
+    "metaDescription": "PDR Kalk Dauerlizenz verbindlich bestellen: CHF {price} zzgl. MwSt., EU-Firmen EUR {priceEur} ohne MwSt. Rechnung per E-Mail, zahlbar innert {paymentDays} Tagen per Banküberweisung.",
+    "crumbHome": "Start",
+    "title": "Lizenz bestellen",
+    "lead": "Hier bestellen Sie Ihre PDR Kalk Dauerlizenz verbindlich. Sie erhalten die Rechnung per E-Mail und zahlen per Banküberweisung; die Lizenz folgt nach Zahlungseingang.",
+    "terms": {
+      "title": "Lizenz- und Zahlungsbedingungen",
+      "versionLabel": "Fassung",
+      "seller": "Anbieterin: Balmer Storm Solutions, Schweiz",
+      "items": [
+        {
+          "t": "Verbindliche Bestellung",
+          "d": "Mit «Kostenpflichtig bestellen» bestellen Sie verbindlich eine PDR Kalk Lizenz. Der Verkauf erfolgt an Geschäftskunden (B2B)."
+        },
+        {
+          "t": "Preis",
+          "d": "Schweiz: CHF {price} zuzüglich 8,1 % MwSt. EU-Firmen mit gültiger USt-IdNr.: EUR {priceEur} ohne MwSt. (Reverse Charge)."
+        },
+        {
+          "t": "Zahlung",
+          "d": "Sie erhalten die Rechnung per E-Mail. Sie ist innert {paymentDays} Tagen ab Rechnungsdatum per Banküberweisung zahlbar."
+        },
+        {
+          "t": "Lieferung",
+          "d": "Die Lizenz wird nach vollständigem Zahlungseingang ausgestellt und per E-Mail zugestellt."
+        },
+        {
+          "t": "Lizenzumfang",
+          "d": "Dauerhafte, unbefristete und nicht abonnementgebundene Lizenz zur gewerblichen Nutzung für einen Betrieb. Sie darf auf beliebig vielen Geräten des Lizenznehmers installiert und genutzt werden."
+        },
+        {
+          "t": "Bindung an den Betrieb",
+          "d": "Die Lizenz ist fest an das bei der Bestellung angegebene Unternehmen und dessen Adresse gebunden. Firmenname und Adresse können nach Ausstellung nicht geändert werden; die Lizenz ist nicht auf ein anderes Unternehmen übertragbar."
+        },
+        {
+          "t": "Keine Rückgabe",
+          "d": "PDR Kalk kann vor dem Kauf {days} Tage kostenlos und unverbindlich getestet werden. Ein Widerrufs-, Rückgabe- oder Rückerstattungsrecht besteht deshalb nicht. Die gesetzlichen Rechte bei Mängeln (Gewährleistung) bleiben unberührt."
+        },
+        {
+          "t": "Updates",
+          "d": "Normale Updates sind kostenlos inbegriffen. Grössere Zusatzmodule können optional gegen eine kleine Gebühr angeboten werden; ihr Kauf ist freiwillig."
+        },
+        {
+          "t": "KI-Funktionen",
+          "d": "Integrierte KI-Funktionen sind optional und können auf sich weiterentwickelnden KI-Diensten basieren. Sie benötigen einen eigenen API-Schlüssel des gewählten Anbieters; Einrichtung und Kosten liegen beim Kunden. Verfügbarkeit, Genauigkeit und Funktionsweise werden nicht garantiert."
+        },
+        {
+          "t": "Recht und Gerichtsstand",
+          "d": "Es gilt schweizerisches Recht. Gerichtsstand ist Schaffhausen, Schweiz."
+        }
+      ]
+    },
+    "form": {
+      "billingHint": "Die Lizenz wird fest auf diesen Firmennamen und diese Adresse ausgestellt. Eine spätere Änderung ist nicht möglich — bitte genau prüfen.",
+      "stepNotes": "Anmerkungen",
+      "stepConfirm": "Bestellung",
+      "consent": "Ich bestelle für das oben genannte Unternehmen und akzeptiere die <terms>Lizenz- und Zahlungsbedingungen</terms>.",
+      "errorConsentRequired": "Bitte bestätigen Sie die Bestellung und die Bedingungen.",
+      "submit": "Kostenpflichtig bestellen"
+    },
+    "price": {
+      "pick": "Der Preis richtet sich nach dem Land der Rechnungsadresse:",
+      "ch": "Schweiz: CHF {price} zzgl. 8,1 % MwSt.",
+      "eu": "EU-Firmen mit USt-IdNr.: EUR {priceEur} ohne MwSt.",
+      "licence": "Lizenz",
+      "vatCh": "MwSt. 8,1 %",
+      "total": "Total",
+      "noteEu": "Ohne MwSt. (Reverse Charge)",
+      "noteGb": "Ohne Schweizer MwSt.",
+      "noteAu": "GST fällt an und wird auf der Rechnung ausgewiesen",
+      "lineNone": "CHF {price} zzgl. MwSt. · EU: EUR {priceEur}",
+      "lineCh": "CHF {amount} inkl. MwSt.",
+      "lineEu": "EUR {amount} ohne MwSt.",
+      "lineGb": "EUR {amount} ohne Schweizer MwSt.",
+      "lineAu": "AUD {amount}, GST fällt an"
+    },
+    "summary": {
+      "title": "Ihre Bestellung",
+      "product": "PDR Kalk Lizenz – dauerhafte und unbefristete Nutzung für einen Betrieb.",
+      "productShort": "PDR Kalk Dauerlizenz",
+      "lineTerm": "zahlbar innert {paymentDays} Tagen"
+    },
+    "next": {
+      "title": "So geht es weiter",
+      "steps": [
+        {
+          "t": "Rechnung per E-Mail",
+          "d": "Meist innert 24 Stunden an die angegebene Adresse."
+        },
+        {
+          "t": "Zahlung innert {paymentDays} Tagen",
+          "d": "Per Banküberweisung auf das Konto, das auf der Rechnung steht."
+        },
+        {
+          "t": "Lizenz freischalten",
+          "d": "Nach Zahlungseingang erhalten Sie die Lizenzangaben und tragen sie in der App ein; alle Daten aus der Testphase bleiben erhalten."
+        }
+      ]
+    },
+    "success": {
+      "title": "Bestellung eingegangen — besten Dank für Ihr Vertrauen in PDR Kalk.",
+      "invoice": "Die Rechnung kommt meist innert 24 Stunden per E-Mail an {email}.",
+      "term": "Sie ist innert {paymentDays} Tagen ab Rechnungsdatum per Banküberweisung zahlbar.",
+      "licence": "Nach Zahlungseingang erhalten Sie Ihre Lizenzangaben per E-Mail.",
+      "backHome": "Zurück zur Startseite"
+    },
+    "forward": {
+      "text": "Lizenzen bestellen Sie über das Bestellformular — mit Preis, Zahlungsfrist und Lizenzbedingungen auf einen Blick.",
+      "cta": "Zur Bestellung"
+    }
   },
   "updates": {
     "metaTitle": "Updates & Neuerungen | PDR Kalk",
@@ -1808,6 +1920,7 @@
       "download": "Download",
       "updates": "Updates",
       "contact": "Kontakt",
+      "order": "Lizenz bestellen",
       "privacy": "Datenschutz",
       "windowsInstaller": "Windows-Installer",
       "androidApk": "Android-APK"
@@ -1825,7 +1938,7 @@
       "ctaTitle": "{days} Tage kostenlos testen",
       "ctaLead": "Direkt herunterladen — keine Anmeldung, keine Kreditkarte.",
       "ctaTrial": "Jetzt herunterladen",
-      "ctaBuy": "Lizenz anfragen",
+      "ctaBuy": "Lizenz bestellen",
       "comparison": "Kostenvergleich",
       "step": "Schritt {n}"
     },
@@ -1941,7 +2054,7 @@
       "eyebrow": "Subunternehmer",
       "title": "Subunternehmer & Partnerbetriebe: Aufträge teilen, fair abrechnen.",
       "lead": "Auftrag als verschlüsselte Datei übergeben, drei Vergütungsmodelle mit Live-Aufteilung, dual-notify-Abschluss und ein lückenloser Audit-Trail — auf beiden Seiten in PDR Kalk.",
-      "ctaSecondary": "Lizenz anfragen",
+      "ctaSecondary": "Lizenz bestellen",
       "heroAlt": "PDR Kalk – Subunternehmer zuweisen mit Live-Aufteilung der Vergütung",
       "benefits": [
         {
@@ -1993,8 +2106,8 @@
       "metaDescription": "PDR-Kalkulationssoftware ohne Abo: Dauerlizenz für CHF 550 einmalig, kein Ablaufdatum, keine monatlichen Gebühren. Offline auf Windows & Android, Daten lokal. 30 Tage gratis testen.",
       "eyebrow": "Ohne Abo",
       "title": "PDR-Software ohne Abo — einmal bezahlen, unbegrenzt nutzen.",
-      "lead": "Dauerlizenz für CHF {price} (≈ EUR {priceEur}, exkl. MwSt.) — kein Ablaufdatum, keine monatlichen Gebühren, keine Kosten pro weiterem Nutzer. Offline auf Windows und Android; Ihre Daten bleiben bei Ihnen.",
-      "ctaSecondary": "Lizenz anfragen",
+      "lead": "Dauerlizenz für CHF {price} exkl. MwSt. (EU-Firmen: EUR {priceEur}) — kein Ablaufdatum, keine monatlichen Gebühren, keine Kosten pro weiterem Nutzer. Offline auf Windows und Android; Ihre Daten bleiben bei Ihnen.",
+      "ctaSecondary": "Lizenz bestellen",
       "heroAlt": "PDR Kalk – Dashboard mit Aufträgen, offenen Rechnungen und Kennzahlen",
       "benefits": [
         {
@@ -2029,8 +2142,8 @@
           "file": "hagel-auftrag.jpg"
         },
         {
-          "t": "Lizenz anfragen, Rechnung erhalten",
-          "d": "Formular ausfüllen, Rechnung meist innert 24 Stunden; EU-Firmen mit USt-IdNr. ohne Schweizer MwSt.",
+          "t": "Lizenz bestellen, Rechnung erhalten",
+          "d": "Bestellformular ausfüllen; die Rechnung kommt meist innert 24 Stunden und ist innert {paymentDays} Tagen zahlbar. EU-Firmen mit USt-IdNr. ohne Schweizer MwSt.",
           "file": "dashboard.jpg"
         },
         {

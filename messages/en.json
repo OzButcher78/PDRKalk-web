@@ -38,7 +38,7 @@
     "ctaSecondary": "Watch the demo",
     "tryNote": "Direct download · no credit card · no sign-up",
     "priceChip": "Perpetual licence · CHF {price} one-time",
-    "priceChipSub": "≈ EUR {priceEur} · excl. VAT",
+    "priceChipSub": "excl. VAT · EU companies: EUR {priceEur}",
     "trustChips": [
       {
         "icon": "devices",
@@ -1105,7 +1105,7 @@
       "badgeNote": "One-time payment — no subscription, no expiry date",
       "price": "CHF {price}",
       "priceSuffix": "one-time",
-      "priceEur": "≈ EUR {priceEur}",
+      "priceEur": "EU companies: EUR {priceEur}",
       "vatNote": "All prices excl. VAT.",
       "illustration": "Spread over {years} years: about CHF 9 per month",
       "featuresTitle": "Included",
@@ -1123,7 +1123,7 @@
         "Windows 10/11 and Android 10+ — Apple devices and smartphones are not supported",
         "Subcontractors and partner workshops need their own installation"
       ],
-      "cta": "Request a licence",
+      "cta": "Order a licence",
       "ctaTrial": "Try it free for {days} days",
       "note": "* Optional insurance list updates may incur a small fee."
     },
@@ -1135,12 +1135,12 @@
           "d": "Every feature, no credit card, no sign-up. The trial ends by itself."
         },
         {
-          "t": "Request a licence",
-          "d": "Fill in the form below — an answer usually arrives within 24 hours."
+          "t": "Order a licence",
+          "d": "Fill in the order form — the order is binding."
         },
         {
           "t": "Invoice by email",
-          "d": "With Swiss VAT; EU companies with a VAT ID receive it without VAT (reverse charge)."
+          "d": "Usually within 24 hours, payable by bank transfer within {paymentDays} days. With Swiss VAT; EU companies with a VAT ID receive it without VAT (reverse charge)."
         },
         {
           "t": "Activate in the app",
@@ -1349,7 +1349,7 @@
       {
         "id": "price",
         "q": "What does PDR Kalk cost?",
-        "a": "CHF {price} one-time, excl. VAT (≈ EUR {priceEur}). No setup fee, no running costs. EU companies with a valid VAT ID are invoiced without Swiss VAT (reverse charge)."
+        "a": "CHF {price} one-time, excl. VAT. EU companies with a valid VAT ID pay EUR {priceEur} and are invoiced without Swiss VAT (reverse charge). No setup fee, no running costs."
       },
       {
         "id": "trial",
@@ -1359,7 +1359,7 @@
       {
         "id": "buy",
         "q": "How do I buy a licence?",
-        "a": "Fill in the “Buy a licence” form further down. You usually receive the invoice by email within 24 hours — no credit card needed. Once payment arrives you receive your licence details and unlock PDR Kalk with them."
+        "a": "Through the “Order a licence” form. The order is binding; you usually receive the invoice by email within 24 hours, payable by bank transfer within {paymentDays} days — no credit card needed. Once payment arrives you receive your licence details and unlock PDR Kalk with them."
       },
       {
         "id": "updates",
@@ -1438,7 +1438,7 @@
       "No sign-up",
       "Ends by itself"
     ],
-    "buyHint": "Already tried it? Request a licence",
+    "buyHint": "Already tried it? Order a licence",
     "windows": {
       "eyebrow": "For PC & laptop",
       "name": "Microsoft Windows",
@@ -1456,11 +1456,11 @@
     "footnote": "Apple devices and smartphones are not supported."
   },
   "contact": {
-    "title": "Buy a licence",
-    "subtitle": "Tried PDR Kalk and ready to buy? Fill in your details below — we'll get back to you within 24 hours.",
+    "title": "Order or ask a question",
+    "subtitle": "Order a licence or ask us anything — we usually reply within 24 hours.",
     "platformNoticeTitle": "Which devices are supported?",
     "platformNoticeBody": "PDR Kalk runs on Windows and Android tablets as well as on PCs and laptops. All features are available on Windows devices; Android tablets offer the full feature set except for multi-device synchronisation via a shared work folder. Apple devices and smartphones are not supported.",
-    "intent_buy": "Buy licence / Request invoice",
+    "intent_buy": "Order a licence",
     "intent_inquiry": "General enquiry",
     "errorIntentRequired": "Please select an option",
     "firstNamePlaceholder": "First name *",
@@ -1487,7 +1487,7 @@
     "emailLabel": "Email",
     "messagePlaceholder": "Notes or questions (optional)",
     "messageLabel": "Notes",
-    "submit": "Request a licence",
+    "submit": "Send enquiry",
     "errorFirstNameRequired": "First name required",
     "errorLastNameRequired": "Last name required",
     "errorCompanyRequired": "Company required",
@@ -1529,12 +1529,124 @@
     "country_gb": "United Kingdom",
     "sendError": "Failed to send. Please try again or email us directly at the address below.",
     "submitting": "Sending…",
-    "success": "Request sent — we'll get back to you shortly.",
+    "success": "Message sent — we'll get back to you shortly.",
     "emailUser": "info",
     "emailDomain": "pdrkalk.ch",
     "stepIntent": "Your request",
     "stepContact": "Contact",
     "stepBilling": "Billing address"
+  },
+  "order": {
+    "metaTitle": "Order a licence | PDR Kalk",
+    "metaDescription": "Place a binding order for a PDR Kalk perpetual licence: CHF {price} plus VAT, or EUR {priceEur} without VAT for EU companies. Invoice by email, payable by bank transfer within {paymentDays} days.",
+    "crumbHome": "Home",
+    "title": "Order a licence",
+    "lead": "Place a binding order for your PDR Kalk perpetual licence here. You receive the invoice by email and pay by bank transfer; the licence follows once payment has arrived.",
+    "terms": {
+      "title": "Licence and payment terms",
+      "versionLabel": "Version",
+      "seller": "Seller: Balmer Storm Solutions, Switzerland",
+      "items": [
+        {
+          "t": "Binding order",
+          "d": "By clicking “Place binding order” you place a binding order for a PDR Kalk licence. Sales are to business customers only (B2B)."
+        },
+        {
+          "t": "Price",
+          "d": "Switzerland: CHF {price} plus 8.1 % VAT. EU companies with a valid VAT ID: EUR {priceEur} without VAT (reverse charge)."
+        },
+        {
+          "t": "Payment",
+          "d": "You receive the invoice by email. It is payable by bank transfer within {paymentDays} days of the invoice date."
+        },
+        {
+          "t": "Delivery",
+          "d": "The licence is issued once payment has been received in full and is sent to you by email."
+        },
+        {
+          "t": "Scope of the licence",
+          "d": "A permanent, perpetual licence with no subscription, for commercial use by one business. It may be installed and used on any number of the licensee's devices."
+        },
+        {
+          "t": "Tied to the business",
+          "d": "The licence is permanently tied to the company and address given in the order. The company name and address cannot be changed after issue, and the licence cannot be transferred to another company."
+        },
+        {
+          "t": "No returns",
+          "d": "PDR Kalk can be tested free of charge and without obligation for {days} days before purchase. There is therefore no right of withdrawal, return or refund. Statutory warranty rights for defects remain unaffected."
+        },
+        {
+          "t": "Updates",
+          "d": "Regular updates are included free of charge. Larger add-on modules may be offered optionally for a small fee; buying them is voluntary."
+        },
+        {
+          "t": "AI features",
+          "d": "Built-in AI features are optional and may rely on evolving AI services. They require your own API key from the chosen provider; setup and costs are the customer's responsibility. Availability, accuracy and behaviour are not guaranteed."
+        },
+        {
+          "t": "Governing law and jurisdiction",
+          "d": "Swiss law applies. The place of jurisdiction is Schaffhausen, Switzerland."
+        }
+      ]
+    },
+    "form": {
+      "billingHint": "The licence is issued permanently to this company name and address. It cannot be changed later — please check carefully.",
+      "stepNotes": "Notes",
+      "stepConfirm": "Order",
+      "consent": "I am ordering for the company named above and accept the <terms>licence and payment terms</terms>.",
+      "errorConsentRequired": "Please confirm the order and the terms.",
+      "submit": "Place binding order"
+    },
+    "price": {
+      "pick": "The price depends on the country of the billing address:",
+      "ch": "Switzerland: CHF {price} plus 8.1 % VAT",
+      "eu": "EU companies with a VAT ID: EUR {priceEur} without VAT",
+      "licence": "Licence",
+      "vatCh": "VAT 8.1 %",
+      "total": "Total",
+      "noteEu": "Without VAT (reverse charge)",
+      "noteGb": "Without Swiss VAT",
+      "noteAu": "GST applies and is itemised on the invoice",
+      "lineNone": "CHF {price} plus VAT · EU: EUR {priceEur}",
+      "lineCh": "CHF {amount} incl. VAT",
+      "lineEu": "EUR {amount} without VAT",
+      "lineGb": "EUR {amount} without Swiss VAT",
+      "lineAu": "AUD {amount}, GST applies"
+    },
+    "summary": {
+      "title": "Your order",
+      "product": "PDR Kalk licence – permanent, perpetual use for one business.",
+      "productShort": "PDR Kalk perpetual licence",
+      "lineTerm": "payable within {paymentDays} days"
+    },
+    "next": {
+      "title": "What happens next",
+      "steps": [
+        {
+          "t": "Invoice by email",
+          "d": "Usually within 24 hours, to the address you entered."
+        },
+        {
+          "t": "Payment within {paymentDays} days",
+          "d": "By bank transfer to the account shown on the invoice."
+        },
+        {
+          "t": "Unlock the licence",
+          "d": "Once payment arrives you receive your licence details and enter them in the app; everything from the trial stays in place."
+        }
+      ]
+    },
+    "success": {
+      "title": "Order received — thank you for choosing PDR Kalk.",
+      "invoice": "The invoice is usually sent by email to {email} within 24 hours.",
+      "term": "It is payable by bank transfer within {paymentDays} days of the invoice date.",
+      "licence": "Once payment has arrived you receive your licence details by email.",
+      "backHome": "Back to the home page"
+    },
+    "forward": {
+      "text": "Licences are ordered through the order form — with price, payment term and licence terms at a glance.",
+      "cta": "Go to the order form"
+    }
   },
   "updates": {
     "metaTitle": "Updates & what's new | PDR Kalk",
@@ -1808,6 +1920,7 @@
       "download": "Download",
       "updates": "Updates",
       "contact": "Contact",
+      "order": "Order a licence",
       "privacy": "Privacy",
       "windowsInstaller": "Windows installer",
       "androidApk": "Android APK"
@@ -1825,7 +1938,7 @@
       "ctaTitle": "Try it free for {days} days",
       "ctaLead": "Direct download — no sign-up, no credit card.",
       "ctaTrial": "Download now",
-      "ctaBuy": "Request a licence",
+      "ctaBuy": "Order a licence",
       "comparison": "Cost comparison",
       "step": "Step {n}"
     },
@@ -1941,7 +2054,7 @@
       "eyebrow": "Subcontractors",
       "title": "Subcontractors & partner workshops: share jobs, settle them fairly.",
       "lead": "Hand a job over as an encrypted file, use one of three payment models with a live split, close it with dual notification and keep an unbroken audit trail — on both sides, in PDR Kalk.",
-      "ctaSecondary": "Request a licence",
+      "ctaSecondary": "Order a licence",
       "heroAlt": "PDR Kalk – assigning a subcontractor with a live split of the payment",
       "benefits": [
         {
@@ -1993,8 +2106,8 @@
       "metaDescription": "PDR estimating software without a subscription: perpetual licence for CHF 550 one-time, no expiry date, no monthly fees. Offline on Windows & Android, data stays local. Free 30-day trial.",
       "eyebrow": "No subscription",
       "title": "PDR software without a subscription — pay once, use without limits.",
-      "lead": "A perpetual licence for CHF {price} (≈ EUR {priceEur}, excl. VAT) — no expiry date, no monthly fees, no cost per additional user. Offline on Windows and Android; your data stays with you.",
-      "ctaSecondary": "Request a licence",
+      "lead": "A perpetual licence for CHF {price} excl. VAT (EU companies: EUR {priceEur}) — no expiry date, no monthly fees, no cost per additional user. Offline on Windows and Android; your data stays with you.",
+      "ctaSecondary": "Order a licence",
       "heroAlt": "PDR Kalk – dashboard with jobs, open invoices and key figures",
       "benefits": [
         {
@@ -2029,8 +2142,8 @@
           "file": "hagel-auftrag.jpg"
         },
         {
-          "t": "Request a licence, receive the invoice",
-          "d": "Fill in the form; the invoice usually arrives within 24 hours, without Swiss VAT for EU companies with a VAT ID.",
+          "t": "Order a licence, receive the invoice",
+          "d": "Fill in the order form; the invoice usually arrives within 24 hours and is payable within {paymentDays} days. EU companies with a VAT ID pay no Swiss VAT.",
           "file": "dashboard.jpg"
         },
         {

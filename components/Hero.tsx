@@ -4,7 +4,7 @@ import {useTranslations} from 'next-intl';
 import Image from 'next/image';
 import Shot from './Shot';
 import {groupIcons} from '@/lib/icons';
-import {PRICE_CHF, PRICE_EUR_APPROX, TRIAL_DAYS, TRIAL_URL} from '@/lib/site';
+import {PRICE_CHF, PRICE_EUR, TRIAL_DAYS, TRIAL_URL} from '@/lib/site';
 
 type RegionCode = 'ch' | 'de' | 'at' | 'au' | 'be' | 'nl';
 const REGION_FLAGS: readonly RegionCode[] = ['ch', 'de', 'at', 'au', 'be', 'nl'];
@@ -60,7 +60,7 @@ export default function Hero({regions = REGION_FLAGS, demoHref = '#demo'}: Props
               <span className="hero-price__dot trust-dot" aria-hidden />
               {t('priceChip', {price: PRICE_CHF})}
             </p>
-            <p className="hero-price__sub micro">{t('priceChipSub', {priceEur: PRICE_EUR_APPROX})}</p>
+            <p className="hero-price__sub micro">{t('priceChipSub', {priceEur: PRICE_EUR})}</p>
           </div>
 
           <ul className="hero-chips fade-up-5">

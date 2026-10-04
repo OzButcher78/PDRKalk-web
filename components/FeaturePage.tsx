@@ -11,7 +11,7 @@ import ComparisonTables from '@/components/ComparisonTables';
 import ScreenshotStrip from '@/components/ScreenshotStrip';
 import {BreadcrumbJsonLd, FaqJsonLd} from '@/components/JsonLd';
 import {interpolate} from '@/lib/interpolate';
-import {TRIAL_DAYS} from '@/lib/site';
+import {BUY_URL, TRIAL_DAYS, resolveCta} from '@/lib/site';
 import {PAGES, pageHref, type PageDef} from '@/data/pages';
 import type {Group} from '@/components/FeatureGroups';
 
@@ -68,7 +68,7 @@ export default async function FeaturePage({page, locale}: {page: PageDef; locale
                   <a href={`${home}#download`} className="btn btn-red btn--lg">
                     {labels('ctaTitle', {days: TRIAL_DAYS})}
                   </a>
-                  <a href={page.key === 'hail' ? `${home}#features` : `${home}#contact`} className="btn btn-ghost btn--lg">
+                  <a href={page.key === 'hail' ? `${home}#features` : resolveCta(BUY_URL, home)} className="btn btn-ghost btn--lg">
                     {t('ctaSecondary')}
                   </a>
                 </div>
@@ -156,7 +156,7 @@ export default async function FeaturePage({page, locale}: {page: PageDef; locale
             <p className="lead" style={{margin: '1rem auto 1.75rem'}}>{labels('ctaLead')}</p>
             <div className="hero-ctas" style={{justifyContent: 'center', marginTop: 0}}>
               <a href={`${home}#download`} className="btn btn-red btn--lg">{labels('ctaTrial')}</a>
-              <a href={`${home}#contact`} className="btn btn-ghost btn--lg">{labels('ctaBuy')}</a>
+              <a href={resolveCta(BUY_URL, home)} className="btn btn-ghost btn--lg">{labels('ctaBuy')}</a>
             </div>
           </div>
         </section>

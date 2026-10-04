@@ -38,7 +38,7 @@
     "ctaSecondary": "Guardate la demo",
     "tryNote": "Download diretto · senza carta di credito · senza registrazione",
     "priceChip": "Licenza perpetua · CHF {price} una tantum",
-    "priceChipSub": "≈ EUR {priceEur} · IVA esclusa",
+    "priceChipSub": "IVA esclusa · aziende UE: EUR {priceEur}",
     "trustChips": [
       {
         "icon": "devices",
@@ -1105,7 +1105,7 @@
       "badgeNote": "Pagamento unico — senza abbonamento, senza scadenza",
       "price": "CHF {price}",
       "priceSuffix": "una tantum",
-      "priceEur": "≈ EUR {priceEur}",
+      "priceEur": "Aziende UE: EUR {priceEur}",
       "vatNote": "Tutti i prezzi IVA esclusa.",
       "illustration": "Distribuito su {years} anni: circa CHF 9 al mese",
       "featuresTitle": "Incluso",
@@ -1123,7 +1123,7 @@
         "Windows 10/11 e Android 10+ — i dispositivi Apple e gli smartphone non sono supportati",
         "Subappaltatori e officine partner necessitano di una propria installazione"
       ],
-      "cta": "Richiedete una licenza",
+      "cta": "Ordinare una licenza",
       "ctaTrial": "Provate {days} giorni gratis",
       "note": "* Gli aggiornamenti opzionali delle liste assicurative possono comportare un piccolo costo."
     },
@@ -1135,12 +1135,12 @@
           "d": "Tutte le funzioni, senza carta di credito e senza registrazione. La versione di prova termina da sola."
         },
         {
-          "t": "Richiedere la licenza",
-          "d": "Compilate il modulo qui sotto — di norma rispondiamo entro 24 ore."
+          "t": "Ordinare la licenza",
+          "d": "Compilate il modulo d'ordine — l'ordine è vincolante."
         },
         {
           "t": "Fattura via e-mail",
-          "d": "Con IVA svizzera; le aziende UE con partita IVA la ricevono senza IVA (inversione contabile)."
+          "d": "Di norma entro 24 ore, pagabile con bonifico bancario entro {paymentDays} giorni. Con IVA svizzera; le aziende UE con partita IVA la ricevono senza IVA (inversione contabile)."
         },
         {
           "t": "Attivare la licenza nell'app",
@@ -1349,7 +1349,7 @@
       {
         "id": "price",
         "q": "Quanto costa PDR Kalk?",
-        "a": "CHF {price} una tantum, IVA esclusa (≈ EUR {priceEur}). Nessun costo di attivazione, nessun costo ricorrente. Le aziende UE con partita IVA valida ricevono la fattura senza IVA svizzera (inversione contabile)."
+        "a": "CHF {price} una tantum, IVA esclusa. Le aziende UE con partita IVA valida pagano EUR {priceEur} e ricevono la fattura senza IVA svizzera (inversione contabile). Nessun costo di attivazione, nessun costo ricorrente."
       },
       {
         "id": "trial",
@@ -1359,7 +1359,7 @@
       {
         "id": "buy",
         "q": "Come acquisto una licenza?",
-        "a": "Compilate il modulo «Acquistate una licenza» più in basso. Di norma ricevete la fattura via e-mail entro 24 ore — non serve una carta di credito. Ricevuto il pagamento, riceverete i dati di licenza con cui sbloccare PDR Kalk."
+        "a": "Tramite il modulo «Ordinare una licenza». L'ordine è vincolante; di norma ricevete la fattura via e-mail entro 24 ore, pagabile con bonifico bancario entro {paymentDays} giorni — non serve una carta di credito. Ricevuto il pagamento, riceverete i dati di licenza con cui sbloccare PDR Kalk."
       },
       {
         "id": "updates",
@@ -1438,7 +1438,7 @@
       "Senza registrazione",
       "Termina da sola"
     ],
-    "buyHint": "Già provato? Richiedete una licenza",
+    "buyHint": "Già provato? Ordinate una licenza",
     "windows": {
       "eyebrow": "Per PC e portatile",
       "name": "Microsoft Windows",
@@ -1456,11 +1456,11 @@
     "footnote": "I dispositivi Apple e gli smartphone non sono supportati."
   },
   "contact": {
-    "title": "Acquistate una licenza",
-    "subtitle": "Avete provato PDR Kalk e volete acquistarlo? Compilate i vostri dati qui sotto — vi rispondiamo entro 24 ore.",
+    "title": "Ordinare o chiedere",
+    "subtitle": "Ordinate una licenza o fateci una domanda — di norma rispondiamo entro 24 ore.",
     "platformNoticeTitle": "Quali dispositivi sono supportati?",
     "platformNoticeBody": "PDR Kalk funziona su tablet Microsoft e Android nonché su PC e portatili. Tutte le funzioni sono disponibili sui dispositivi Microsoft; i tablet Android offrono tutte le funzioni tranne la sincronizzazione multi-dispositivo tramite una cartella di lavoro condivisa. I dispositivi Apple e gli smartphone non sono supportati.",
-    "intent_buy": "Acquisto licenza / richiesta fattura",
+    "intent_buy": "Ordinare una licenza",
     "intent_inquiry": "Richiesta generica",
     "errorIntentRequired": "Selezionate un'opzione",
     "firstNamePlaceholder": "Nome *",
@@ -1487,7 +1487,7 @@
     "emailLabel": "E-mail",
     "messagePlaceholder": "Note o domande (facoltativo)",
     "messageLabel": "Note",
-    "submit": "Richiedete la licenza",
+    "submit": "Inviate la richiesta",
     "errorFirstNameRequired": "Nome obbligatorio",
     "errorLastNameRequired": "Cognome obbligatorio",
     "errorCompanyRequired": "Azienda obbligatoria",
@@ -1529,12 +1529,124 @@
     "country_gb": "Regno Unito",
     "sendError": "Invio non riuscito. Riprovate o scriveteci direttamente all'indirizzo qui sotto.",
     "submitting": "Invio in corso…",
-    "success": "Richiesta inviata — vi rispondiamo a breve.",
+    "success": "Messaggio inviato — vi rispondiamo a breve.",
     "emailUser": "info",
     "emailDomain": "pdrkalk.ch",
     "stepIntent": "La vostra richiesta",
     "stepContact": "Contatto",
     "stepBilling": "Indirizzo di fatturazione"
+  },
+  "order": {
+    "metaTitle": "Ordinare una licenza | PDR Kalk",
+    "metaDescription": "Ordinate in modo vincolante la vostra licenza perpetua PDR Kalk: CHF {price} più IVA, oppure EUR {priceEur} senza IVA per le aziende UE. Fattura via e-mail, pagabile con bonifico bancario entro {paymentDays} giorni.",
+    "crumbHome": "Home",
+    "title": "Ordinare una licenza",
+    "lead": "Qui ordinate in modo vincolante la vostra licenza perpetua PDR Kalk. Ricevete la fattura via e-mail e pagate con bonifico bancario; la licenza segue dopo il ricevimento del pagamento.",
+    "terms": {
+      "title": "Condizioni di licenza e di pagamento",
+      "versionLabel": "Versione",
+      "seller": "Venditore: Balmer Storm Solutions, Svizzera",
+      "items": [
+        {
+          "t": "Ordine vincolante",
+          "d": "Cliccando su «Ordina con obbligo di pagamento» effettuate un ordine vincolante per una licenza PDR Kalk. La vendita è riservata ai clienti commerciali (B2B)."
+        },
+        {
+          "t": "Prezzo",
+          "d": "Svizzera: CHF {price} più IVA 8,1 %. Aziende UE con partita IVA valida: EUR {priceEur} senza IVA (inversione contabile)."
+        },
+        {
+          "t": "Pagamento",
+          "d": "Ricevete la fattura via e-mail. È pagabile con bonifico bancario entro {paymentDays} giorni dalla data della fattura."
+        },
+        {
+          "t": "Consegna",
+          "d": "La licenza viene emessa dopo il ricevimento del pagamento completo e inviata via e-mail."
+        },
+        {
+          "t": "Portata della licenza",
+          "d": "Licenza permanente, a tempo indeterminato e senza abbonamento, per l'uso commerciale da parte di un'azienda. Può essere installata e utilizzata su un numero illimitato di dispositivi del licenziatario."
+        },
+        {
+          "t": "Vincolo all'azienda",
+          "d": "La licenza è vincolata in modo definitivo all'azienda e all'indirizzo indicati nell'ordine. Ragione sociale e indirizzo non possono essere modificati dopo l'emissione; la licenza non è trasferibile a un'altra azienda."
+        },
+        {
+          "t": "Nessuna restituzione",
+          "d": "PDR Kalk può essere provato gratuitamente e senza impegno per {days} giorni prima dell'acquisto. Non sussiste pertanto alcun diritto di recesso, restituzione o rimborso. Restano salvi i diritti di legge in caso di difetti (garanzia)."
+        },
+        {
+          "t": "Aggiornamenti",
+          "d": "Gli aggiornamenti ordinari sono inclusi gratuitamente. Moduli aggiuntivi più ampi possono essere offerti in via facoltativa a fronte di un piccolo importo; il loro acquisto è volontario."
+        },
+        {
+          "t": "Funzioni IA",
+          "d": "Le funzioni IA integrate sono facoltative e possono basarsi su servizi di IA in continua evoluzione. Richiedono una chiave API propria presso il fornitore scelto; configurazione e costi sono a carico del cliente. Disponibilità, precisione e funzionamento non sono garantiti."
+        },
+        {
+          "t": "Diritto applicabile e foro",
+          "d": "Si applica il diritto svizzero. Il foro competente è Sciaffusa, Svizzera."
+        }
+      ]
+    },
+    "form": {
+      "billingHint": "La licenza viene emessa in modo definitivo a questa ragione sociale e a questo indirizzo. Una modifica successiva non è possibile — verificate con attenzione.",
+      "stepNotes": "Note",
+      "stepConfirm": "Ordine",
+      "consent": "Ordino per l'azienda indicata sopra e accetto le <terms>condizioni di licenza e di pagamento</terms>.",
+      "errorConsentRequired": "Confermate l'ordine e le condizioni.",
+      "submit": "Ordina con obbligo di pagamento"
+    },
+    "price": {
+      "pick": "Il prezzo dipende dal paese dell'indirizzo di fatturazione:",
+      "ch": "Svizzera: CHF {price} più IVA 8,1 %",
+      "eu": "Aziende UE con partita IVA: EUR {priceEur} senza IVA",
+      "licence": "Licenza",
+      "vatCh": "IVA 8,1 %",
+      "total": "Totale",
+      "noteEu": "Senza IVA (inversione contabile)",
+      "noteGb": "Senza IVA svizzera",
+      "noteAu": "La GST si applica ed è indicata in fattura",
+      "lineNone": "CHF {price} più IVA · UE: EUR {priceEur}",
+      "lineCh": "CHF {amount} IVA inclusa",
+      "lineEu": "EUR {amount} senza IVA",
+      "lineGb": "EUR {amount} senza IVA svizzera",
+      "lineAu": "AUD {amount}, si applica la GST"
+    },
+    "summary": {
+      "title": "Il vostro ordine",
+      "product": "Licenza PDR Kalk – utilizzo permanente e a tempo indeterminato per un'azienda.",
+      "productShort": "Licenza perpetua PDR Kalk",
+      "lineTerm": "pagabile entro {paymentDays} giorni"
+    },
+    "next": {
+      "title": "Come si procede",
+      "steps": [
+        {
+          "t": "Fattura via e-mail",
+          "d": "Di norma entro 24 ore, all'indirizzo indicato."
+        },
+        {
+          "t": "Pagamento entro {paymentDays} giorni",
+          "d": "Con bonifico bancario sul conto indicato in fattura."
+        },
+        {
+          "t": "Attivare la licenza",
+          "d": "Ricevuto il pagamento, ricevete i dati di licenza e li inserite nell'app; tutti i dati del periodo di prova restano disponibili."
+        }
+      ]
+    },
+    "success": {
+      "title": "Ordine ricevuto — grazie per la fiducia in PDR Kalk.",
+      "invoice": "Di norma la fattura arriva entro 24 ore via e-mail a {email}.",
+      "term": "È pagabile con bonifico bancario entro {paymentDays} giorni dalla data della fattura.",
+      "licence": "Ricevuto il pagamento, riceverete i dati di licenza via e-mail.",
+      "backHome": "Torna alla home"
+    },
+    "forward": {
+      "text": "Le licenze si ordinano tramite il modulo d'ordine — con prezzo, termine di pagamento e condizioni di licenza a colpo d'occhio.",
+      "cta": "Al modulo d'ordine"
+    }
   },
   "updates": {
     "metaTitle": "Aggiornamenti e novità | PDR Kalk",
@@ -1808,6 +1920,7 @@
       "download": "Download",
       "updates": "Aggiornamenti",
       "contact": "Contatto",
+      "order": "Ordinare una licenza",
       "privacy": "Privacy",
       "windowsInstaller": "Installer Windows",
       "androidApk": "APK Android"
@@ -1825,7 +1938,7 @@
       "ctaTitle": "Provate {days} giorni gratis",
       "ctaLead": "Download diretto — senza registrazione, senza carta di credito.",
       "ctaTrial": "Scaricate ora",
-      "ctaBuy": "Richiedete una licenza",
+      "ctaBuy": "Ordinare una licenza",
       "comparison": "Confronto dei costi",
       "step": "Passo {n}"
     },
@@ -1941,7 +2054,7 @@
       "eyebrow": "Subappaltatori",
       "title": "Subappaltatori e officine partner: condividere gli incarichi, conteggiare in modo equo.",
       "lead": "Trasferire un incarico come file cifrato, scegliere fra tre modelli di compenso con ripartizione in tempo reale, chiudere con doppia notifica e mantenere una pista di controllo completa — su entrambi i lati, in PDR Kalk.",
-      "ctaSecondary": "Richiedete una licenza",
+      "ctaSecondary": "Ordinare una licenza",
       "heroAlt": "PDR Kalk – assegnazione di un subappaltatore con ripartizione del compenso in tempo reale",
       "benefits": [
         {
@@ -1993,8 +2106,8 @@
       "metaDescription": "Software di calcolo PDR senza abbonamento: licenza perpetua a CHF 550 una tantum, senza scadenza, senza canoni mensili. Offline su Windows e Android, dati in locale. 30 giorni di prova gratuita.",
       "eyebrow": "Senza abbonamento",
       "title": "Software PDR senza abbonamento — pagate una volta, usate senza limiti.",
-      "lead": "Licenza perpetua a CHF {price} (≈ EUR {priceEur}, IVA esclusa) — senza scadenza, senza canoni mensili, senza costi per utente aggiuntivo. Offline su Windows e Android; i vostri dati restano con voi.",
-      "ctaSecondary": "Richiedete una licenza",
+      "lead": "Licenza perpetua a CHF {price} IVA esclusa (aziende UE: EUR {priceEur}) — senza scadenza, senza canoni mensili, senza costi per utente aggiuntivo. Offline su Windows e Android; i vostri dati restano con voi.",
+      "ctaSecondary": "Ordinare una licenza",
       "heroAlt": "PDR Kalk – dashboard con incarichi, fatture aperte e indicatori",
       "benefits": [
         {
@@ -2029,8 +2142,8 @@
           "file": "hagel-auftrag.jpg"
         },
         {
-          "t": "Richiedere la licenza, ricevere la fattura",
-          "d": "Compilate il modulo; la fattura arriva di norma entro 24 ore, senza IVA svizzera per le aziende UE con partita IVA.",
+          "t": "Ordinare la licenza, ricevere la fattura",
+          "d": "Compilate il modulo d'ordine; la fattura arriva di norma entro 24 ore ed è pagabile entro {paymentDays} giorni. Senza IVA svizzera per le aziende UE con partita IVA.",
           "file": "dashboard.jpg"
         },
         {
