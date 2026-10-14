@@ -9,7 +9,7 @@ PDR Kalk is built by Balmer Storm Solutions, a Swiss company founded by Dieter B
 ## Key facts
 
 - Product: PDR Kalk desktop application
-- Current version: 4.27.0
+- Current version: 4.27.2
 - Maker: Balmer Storm Solutions (Switzerland)
 - Founder: Dieter Balmer
 - Pricing: one-time perpetual licence, CHF 550 plus 8.1 % Swiss VAT; EUR 580 for EU companies with a VAT ID (reverse charge, no VAT); AUD 590 on /au/. No expiry date, no monthly fee, no per-user cost. Minor updates included; optional insurance-list updates may attract a small fee
