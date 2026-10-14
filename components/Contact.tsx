@@ -1,12 +1,13 @@
 'use client';
 
-import {useTranslations} from 'next-intl';
+import {useLocale, useTranslations} from 'next-intl';
 import {useState, useRef} from 'react';
 import ObfuscatedEmail from './ObfuscatedEmail';
 import SectionHead from './SectionHead';
+import TermsLinks from './TermsLinks';
 import {groupIcons} from '@/lib/icons';
 import {interpolate} from '@/lib/interpolate';
-import {BUY_URL, TRIAL_DAYS, resolveCta} from '@/lib/site';
+import {BUY_URL, TERMS_PATH, TRIAL_DAYS, resolveCta, termsPdfFor} from '@/lib/site';
 
 const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID || 'mlgwvvbo';
 
@@ -424,6 +425,8 @@ export default function Contact({lockedCountry}: {lockedCountry?: string} = {}) 
                   </p>
                 )}
 
+                <ContactTermsLinks />
+
                 <button
                   type="submit"
                   disabled={submitting}
@@ -524,4 +527,16 @@ function ContactOrderForward() {
       </a>
     </div>
   );
+}
+
+/**
+ * The "read the terms · terms as PDF" line above the send button. The frozen
+ * Contact signature cannot take a `home` prop, so the terms page is linked
+ * relatively, exactly like ContactOrderForward (`terms/` resolves to
+ * /de/terms/ or /au/terms/), and the PDF is picked by the provider locale
+ * (`en-AU` on /au maps to TERMS_PDF.au).
+ */
+function ContactTermsLinks() {
+  const locale = useLocale();
+  return <TermsLinks termsHref={TERMS_PATH} pdfHref={termsPdfFor(locale)} />;
 }

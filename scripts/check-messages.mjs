@@ -110,6 +110,7 @@ const AU_NAMESPACES = [
   'meta', 'badges', 'nav', 'hero', 'trust', 'workflow', 'whatsNew', 'features',
   'regions', 'integrations', 'documents', 'team', 'security', 'testimonials',
   'pricing', 'faq', 'download', 'contact', 'screenshots', 'footer', 'order',
+  'terms',
 ];
 // Keys that /au deliberately omits (guarded with t.has or a prop).
 const AU_OPTIONAL = [
@@ -123,6 +124,7 @@ const AU_OPTIONAL = [
   /^documents\.more\.items\./,
   /^features\.groups\./,             // AU ships its own group copy
   /^faq\.items\./,                   // AU ships a 15-question subset
+  /^terms\.sections\./,              // AU ships its own clause set (AUD, GST, ACL)
   /^whatsNew\.items\./,
   /^whatsNew\.also\.items\./,
   /^team\.blocks\./,

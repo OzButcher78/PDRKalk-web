@@ -3,6 +3,7 @@
 import {useTranslations} from 'next-intl';
 import {useEffect, useRef, useState} from 'react';
 import ObfuscatedEmail from './ObfuscatedEmail';
+import TermsLinks from './TermsLinks';
 import {interpolate} from '@/lib/interpolate';
 import {
   ORDER_PATH,
@@ -10,6 +11,7 @@ import {
   PRICE_AUD,
   PRICE_CHF,
   PRICE_EUR,
+  TERMS_PATH,
   TERMS_VERSION,
   VAT_RATE_CH,
 } from '@/lib/site';
@@ -108,7 +110,16 @@ const TERMS_MARK = <span className="order-mark" aria-hidden="true">*</span>;
  * Contact.tsx keeps handling enquiries — its logic is frozen, so the order
  * lives here.
  */
-export default function Order({home, lockedCountry}: {home: string; lockedCountry?: string}) {
+type Props = {
+  /** Page home, `/de/` or `/au/`: prefixes the order and terms paths. */
+  home: string;
+  /** Root-relative PDF copy of the terms for this page (lib/site.ts TERMS_PDF). */
+  pdfHref: string;
+  /** Fixes the billing country: `au` on /au/order/. */
+  lockedCountry?: string;
+};
+
+export default function Order({home, pdfHref, lockedCountry}: Props) {
   const t = useTranslations('order');
   const c = useTranslations('contact');
 
@@ -461,6 +472,8 @@ export default function Order({home, lockedCountry}: {home: string; lockedCountr
                 <span>
                   {t.rich('form.consent', {
                     terms: chunks => <><a href="#terms">{chunks}</a>{TERMS_MARK}</>,
+                    // New tab: following it must not lose the half-filled form.
+                    agb: chunks => <a href={`${home}${TERMS_PATH}`} target="_blank" rel="noopener noreferrer">{chunks}</a>,
                   })}
                 </span>
               </label>
@@ -471,6 +484,8 @@ export default function Order({home, lockedCountry}: {home: string; lockedCountr
               </p>
 
               {sendError && <p role="alert" className="order-send-error">{c('sendError')}</p>}
+
+              <TermsLinks termsHref={`${home}${TERMS_PATH}`} pdfHref={pdfHref} />
 
               <button
                 type="submit"
@@ -494,6 +509,15 @@ export default function Order({home, lockedCountry}: {home: string; lockedCountr
               </li>
             ))}
           </ol>
+          <p className="micro order-terms__meta">
+            {t.rich('terms.fullTerms', {
+              link: chunks => (
+                <a href={`${home}${TERMS_PATH}`} target="_blank" rel="noopener noreferrer" style={{color: 'var(--steel)', textDecoration: 'underline'}}>
+                  {chunks}<span className="sr-only"> {t('termsLinks.newTab')}</span>
+                </a>
+              ),
+            })}
+          </p>
           <p className="micro order-terms__meta">
             {t('terms.versionLabel')} {TERMS_VERSION} · {t('terms.seller')} ·{' '}
             <ObfuscatedEmail user={c('emailUser')} domain={c('emailDomain')} className="tap-link" style={{color: 'var(--steel)'}} />

@@ -26,6 +26,7 @@ PDR Kalk is built by Balmer Storm Solutions, a Swiss company founded by Dieter B
 - Audit trail: SHA-256 hash chain, automatic document versions, PDF snapshots, JSON export
 - Sync: shared work folder on the user's own NAS, OneDrive or Synology Drive (Windows only); Android tablets run standalone
 - Data ownership: 100 % local, full ZIP backup on the device, no vendor cloud, no telemetry
+- Support: searchable in-app manual and demo data; questions by email to info@pdrkalk.ch are answered on a best-effort basis — no IT support is owed (see the terms and conditions)
 - Contact: info@pdrkalk.ch
 
 ## What is new
@@ -79,4 +80,9 @@ Independent PDR technicians, hail-repair workshops and PDR subcontractors in Swi
 - https://pdrkalk.ch/en/privacy/ — privacy policy (en)
 - https://pdrkalk.ch/fr/privacy/ — privacy policy (fr)
 - https://pdrkalk.ch/it/privacy/ — privacy policy (it)
+- https://pdrkalk.ch/de/terms/ — general terms and conditions (de), with a PDF copy
+- https://pdrkalk.ch/en/terms/ — general terms and conditions (en), with a PDF copy
+- https://pdrkalk.ch/fr/terms/ — general terms and conditions (fr), with a PDF copy
+- https://pdrkalk.ch/it/terms/ — general terms and conditions (it), with a PDF copy
+- https://pdrkalk.ch/au/terms/ — Australian terms and conditions (AUD, GST, Australian Consumer Law), with a PDF copy
 - https://pdrkalk.ch/sitemap.xml — sitemap

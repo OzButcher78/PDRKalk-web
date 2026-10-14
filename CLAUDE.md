@@ -10,6 +10,7 @@ npm run build    # prebuild checker → next build → postbuild audit
 npm run check    # both guard scripts against the current out/
 npm run images   # regenerate WebP/OG/logo/icon assets (outputs are committed)
 npm run llms     # regenerate public/llms.txt from lib/site.ts + data/
+npm run terms:pdf # render the terms (messages/*.json) to public/terms/*.pdf — needs Edge/Chrome; outputs are committed
 npm run preview  # wrangler dev — serves out/ the way Cloudflare does
 npm run deploy   # build + wrangler deploy (the owner runs this, not the agent)
 ```
@@ -36,6 +37,8 @@ unless the redirect itself is meant to change.
 | `/de/ /en/ /fr/ /it/` | `app/[locale]/page.tsx` |
 | `/au/` | `app/au/page.tsx` — standalone, **not** a routing locale |
 | `/{locale}/privacy/` | `app/[locale]/privacy/page.tsx` |
+| `/{locale}/terms/` | `app/[locale]/terms/page.tsx` → `components/Terms.tsx` (copy: `terms` namespace; PDF link from `TERMS_PDF`) |
+| `/au/terms/` | `app/au/terms/page.tsx` — static metadata from `au.json`, its own clause set (AUD, GST, Australian Consumer Law) |
 | `/{locale}/updates/` | `app/[locale]/updates/page.tsx` (data: `data/releases.ts`) |
 | `/{locale}/order/` | `app/[locale]/order/page.tsx` → `components/Order.tsx` |
 | `/au/order/` | `app/au/order/page.tsx` — static metadata from `au.json`, `lockedCountry="au"` |
@@ -62,7 +65,10 @@ unless the redirect itself is meant to change.
 - `lib/site.ts` — versions, download URLs, CTA targets, prices, `resolveCta()`, and
   the order constants: `ORDER_PATH`, `PAYMENT_TERM_DAYS` (→ `{paymentDays}`),
   `VAT_RATE_CH` (the terms copy carries "8,1 %" literally — change both) and
-  `TERMS_VERSION` (sent with every order; bump it whenever `order.terms` changes).
+  `TERMS_VERSION` (sent with every order and printed on the terms page + PDFs;
+  bump it whenever `order.terms` or the `terms` namespace changes, then
+  `npm run terms:pdf` and commit `public/terms/*.pdf`), `TERMS_PATH` and
+  `TERMS_PDF` (the per-locale PDF paths).
   `PRICE_EUR` is the real EU price, not a conversion — never write "≈".
 - `data/releases.ts` — release notes, copied verbatim from the desktop app's
   `src/data/changelog.ts`. `APP_VERSION` = newest entry with `status: 'public'`,
@@ -89,6 +95,9 @@ Rules the prebuild checker enforces:
 - `download.*.version` and `footer.versionLabel` must contain `{version}`;
 - every key the `/au` components read exists in `au.json` (exceptions are listed in
   `AU_OPTIONAL` in the script — add there when a block is genuinely optional).
+- `terms.sections` keeps the same shape in de/en/fr/it (section count, clause count,
+  string vs `{text, bullets}`) because the checker compares array indices; `au.json`
+  carries its own clause set (`AU_OPTIONAL`). German is the governing text (clause 19.4).
 
 A new placeholder goes into `SITE_VALUES` (`lib/interpolate.ts`, if site-wide),
 `KNOWN_PLACEHOLDERS` (`scripts/check-messages.mjs`) and `PLACEHOLDER_RE`
@@ -136,6 +145,12 @@ enquiries only: its "order" card shows a hand-off panel linking to `order/`
 (relative — Contact cannot take a `home` prop). The buy branch in Contact's frozen
 logic is now unreachable; leave it in place. The order page deliberately breaks
 the colour roles: green H1, red (`--red-on-dark`) sub headings — the owner's choice.
+
+`components/TermsLinks.tsx` puts "read the terms · terms as PDF" (`order.termsLinks`,
+both in a new tab) directly above both submit buttons; the audit checks it on every
+home and order page. `Order` gets `pdfHref` from its page. Contact links `terms/`
+relatively and picks the PDF with `termsPdfFor(useLocale())`, because its signature
+is frozen.
 
 ### Contact.tsx is frozen above `const inputStyle = {`
 

@@ -108,7 +108,7 @@ for (const file of htmlFiles) {
   // --- leaked message plumbing
   const text = textOnly(html);
   if (text.includes('MISSING_MESSAGE')) err(`${name}: MISSING_MESSAGE in the rendered text`);
-  const literalKey = text.match(/\b(hero|nav|trust|demo|workflow|whatsNew|features|regions|integrations|documents|team|security|testimonials|pricing|faq|download|contact|footer|updates|pages|badges|screenshots|order)\.[a-zA-Z][\w.]*/);
+  const literalKey = text.match(/\b(hero|nav|trust|demo|workflow|whatsNew|features|regions|integrations|documents|team|security|testimonials|pricing|faq|download|contact|footer|updates|pages|badges|screenshots|order|terms)\.[a-zA-Z][\w.]*/);
   if (literalKey) err(`${name}: literal message key in text: ${literalKey[0]}`);
   const PLACEHOLDER_RE = /\{(version|price|priceEur|days|languages|years|paymentDays|n|caption|r|title|amount|email)\}/;
   const placeholder = text.match(PLACEHOLDER_RE);
@@ -209,6 +209,31 @@ for (const file of htmlFiles) {
     if (!form || !/noValidate|novalidate/.test(form)) err(`${name}: order form missing or without noValidate`);
     if ((html.match(/\sid="terms"/g) ?? []).length !== 1) err(`${name}: expected exactly one id="terms"`);
     if (!/<input\b(?=[^>]*type="checkbox")(?=[^>]*name="consent")[^>]*>/.test(html)) err(`${name}: consent checkbox is missing`);
+  }
+
+  // --- terms one click away above both submit buttons (contact form, order
+  // page): the terms page and this page's own PDF, each in a new tab so a
+  // half-filled form survives. A relative href is not covered by the link check
+  // below, so the target page is checked here.
+  const termsLine = url.match(/^\/(de|en|fr|it|au)\/(order\/)?$/);
+  if (termsLine) {
+    const [, s, isOrder] = termsLine;
+    const block = html.match(/<p class="order-terms-links">([\s\S]*?)<\/p>/)?.[1];
+    if (!block) err(`${name}: terms link line above the submit button is missing`);
+    else {
+      const anchors = block.match(/<a\b[^>]*>/g) ?? [];
+      const hrefs = anchors.map(a => attr(a, 'href') ?? '');
+      const page = isOrder ? `/${s}/terms/` : 'terms/';
+      if (!hrefs.includes(page)) err(`${name}: terms link line does not link ${page}`);
+      if (!fs.existsSync(path.join(OUT, s, 'terms', 'index.html'))) err(`${name}: /${s}/terms/ was not emitted`);
+      const pdf = new RegExp(`^/terms/pdrkalk-[a-z]+-${s}\.pdf$`);
+      if (!hrefs.some(h => pdf.test(h))) err(`${name}: terms link line does not link the ${s} PDF`);
+      for (const a of anchors) {
+        if (!/target="_blank"/.test(a) || !/rel="noopener noreferrer"/.test(a)) {
+          err(`${name}: terms link without target="_blank" rel="noopener noreferrer"`);
+        }
+      }
+    }
   }
 
   // --- internal links resolve

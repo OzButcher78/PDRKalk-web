@@ -30,6 +30,8 @@ const pages = [
   ...LOCALES.map(l => `- ${SITE}/${l}/updates/ — release notes (${l})`),
   ...slugBlocks.flatMap(slugs => LOCALES.map(l => `- ${SITE}/${l}/${slugs[l]}/ — feature page (${l})`)),
   ...LOCALES.map(l => `- ${SITE}/${l}/privacy/ — privacy policy (${l})`),
+  ...LOCALES.map(l => `- ${SITE}/${l}/terms/ — general terms and conditions (${l}), with a PDF copy`),
+  `- ${SITE}/au/terms/ — Australian terms and conditions (AUD, GST, Australian Consumer Law), with a PDF copy`,
   `- ${SITE}/sitemap.xml — sitemap`,
 ];
 
@@ -61,6 +63,7 @@ PDR Kalk is built by Balmer Storm Solutions, a Swiss company founded by Dieter B
 - Audit trail: SHA-256 hash chain, automatic document versions, PDF snapshots, JSON export
 - Sync: shared work folder on the user's own NAS, OneDrive or Synology Drive (Windows only); Android tablets run standalone
 - Data ownership: 100 % local, full ZIP backup on the device, no vendor cloud, no telemetry
+- Support: searchable in-app manual and demo data; questions by email to info@pdrkalk.ch are answered on a best-effort basis — no IT support is owed (see the terms and conditions)
 - Contact: info@pdrkalk.ch
 
 ## What is new

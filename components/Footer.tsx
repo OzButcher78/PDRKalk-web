@@ -8,6 +8,7 @@ import {
   ANDROID_DOWNLOAD_URL,
   APP_VERSION,
   ORDER_PATH,
+  TERMS_PATH,
   WINDOWS_DOWNLOAD_URL,
 } from '@/lib/site';
 import {PAGES, pageHref, type PageKey} from '@/data/pages';
@@ -100,6 +101,11 @@ export default function Footer({regions = REGION_FLAGS, basePath, showPrivacy = 
                   </Link>
                 </li>
               )}
+              <li>
+                <Link href={`${home}${TERMS_PATH}`} className="footer-link" style={LINK_STYLE}>
+                  {t('links.terms')}
+                </Link>
+              </li>
               {showPages && (
                 <li>
                   <Link href={`/${locale}/updates/`} className="footer-link" style={LINK_STYLE}>

@@ -66,10 +66,37 @@ export const VAT_RATE_CH = 0.081;
 export const PAYMENT_TERM_DAYS = 14;
 
 /**
- * Sent with every order so the email records which terms text was accepted.
- * Bump it whenever `order.terms` changes in any message file.
+ * Sent with every order so the email records which terms text was accepted,
+ * and printed on the terms page and in the PDFs. Bump it whenever `order.terms`
+ * or the `terms` namespace changes in any message file, then run
+ * `npm run terms:pdf`.
  */
-export const TERMS_VERSION = '2026-10';
+export const TERMS_VERSION = '2026-10-14';
+
+/** The full terms page, relative to the page home (/de/terms/, /au/terms/). */
+export const TERMS_PATH = 'terms/';
+
+/**
+ * PDF copies of the terms under public/terms/, rendered from the `terms`
+ * namespace by `npm run terms:pdf` (outputs are committed). The terms page
+ * links to them and the owner attaches them to every licence invoice.
+ */
+export const TERMS_PDF: Record<string, string> = {
+  de: '/terms/pdrkalk-agb-de.pdf',
+  en: '/terms/pdrkalk-terms-en.pdf',
+  fr: '/terms/pdrkalk-cg-fr.pdf',
+  it: '/terms/pdrkalk-cg-it.pdf',
+  au: '/terms/pdrkalk-terms-au.pdf',
+};
+
+/**
+ * TERMS_PDF for the locale that useLocale() reports: the routing locales map
+ * directly, /au renders with the provider locale `en-AU`. Pages pass
+ * TERMS_PDF[locale] explicitly; this exists for Contact, whose frozen
+ * signature cannot take a prop.
+ */
+export const termsPdfFor = (locale: string): string =>
+  TERMS_PDF[locale === 'en-AU' ? 'au' : locale] ?? TERMS_PDF.de;
 
 /**
  * Cost-comparison horizon. This is an illustration only — the licence itself

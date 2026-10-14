@@ -10,6 +10,7 @@
     "check": "node scripts/check-messages.mjs && node scripts/audit-out.mjs",
     "images": "node scripts/optimize-images.mjs",
     "llms": "node scripts/build-llms.mjs",
+    "terms:pdf": "node scripts/terms-pdf.mjs",
     "preview": "wrangler dev",
     "deploy": "npm run build && wrangler deploy",
     "start": "next start"
@@ -25,6 +26,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "puppeteer-core": "^25.13.0",
     "sharp": "^0.34.5",
     "tailwindcss": "^4",
     "typescript": "^5",

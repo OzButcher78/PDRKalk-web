@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import BackToTop from '@/components/BackToTop';
 import {BreadcrumbJsonLd} from '@/components/JsonLd';
 import {interpolate} from '@/lib/interpolate';
-import {ORDER_PATH, SITE_URL} from '@/lib/site';
+import {ORDER_PATH, SITE_URL, TERMS_PDF} from '@/lib/site';
 import auMessages from '@/messages/au.json';
 
 const HOME = '/au/';
@@ -43,7 +43,7 @@ export default function AuOrderPage() {
       <a href="#order-title" className="skip-link">{auMessages.nav.skipToContent}</a>
       <AuNavbar home={HOME} />
       <main>
-        <Order home={HOME} lockedCountry="au" />
+        <Order home={HOME} pdfHref={TERMS_PDF.au} lockedCountry="au" />
       </main>
       <Footer regions={['au']} basePath={HOME} showPrivacy={false} />
       <BackToTop />

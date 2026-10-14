@@ -1,7 +1,7 @@
 import type {MetadataRoute} from 'next';
 import {routing} from '@/i18n/routing';
 import {PAGES} from '@/data/pages';
-import {ORDER_PATH, SITE_URL} from '@/lib/site';
+import {ORDER_PATH, SITE_URL, TERMS_PATH} from '@/lib/site';
 
 export const dynamic = 'force-static';
 
@@ -58,6 +58,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: {languages: cluster('/privacy/')},
   }));
 
+  const terms: MetadataRoute.Sitemap = routing.locales.map(locale => ({
+    url: `${SITE_URL}/${locale}/${TERMS_PATH}`,
+    lastModified: now,
+    changeFrequency: 'yearly',
+    priority: 0.3,
+    alternates: {languages: cluster(`/${TERMS_PATH}`)},
+  }));
+
   // Standalone Australian landing page — not a routing locale, so it is added
   // explicitly and deliberately without hreflang links to the de/en/fr/it pages.
   const au: MetadataRoute.Sitemap = [
@@ -73,7 +81,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.5,
     },
+    {
+      url: `${SITE_URL}/au/${TERMS_PATH}`,
+      lastModified: now,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
   ];
 
-  return [...home, ...au, ...featurePages, ...updates, ...order, ...privacy];
+  return [...home, ...au, ...featurePages, ...updates, ...order, ...privacy, ...terms];
 }

@@ -8,7 +8,7 @@ import {BreadcrumbJsonLd} from '@/components/JsonLd';
 import {routing} from '@/i18n/routing';
 import {pageMetadata} from '@/lib/seo';
 import {interpolate} from '@/lib/interpolate';
-import {ORDER_PATH} from '@/lib/site';
+import {ORDER_PATH, TERMS_PDF} from '@/lib/site';
 
 type Props = {params: Promise<{locale: string}>};
 
@@ -42,7 +42,7 @@ export default async function OrderPage({params}: Props) {
       <Navbar />
 
       <main>
-        <Order home={home} />
+        <Order home={home} pdfHref={TERMS_PDF[locale]} />
       </main>
 
       <Footer />

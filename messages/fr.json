@@ -1424,7 +1424,7 @@
       {
         "id": "support",
         "q": "Comment obtenir de l'aide ?",
-        "a": "L'application contient un manuel d'utilisation consultable, avec des guides pas à pas pour chaque domaine. S'y ajoute une assistance par e-mail à info@pdrkalk.ch — la réponse arrive en général sous 24 heures."
+        "a": "L’application contient un manuel d’utilisation consultable, avec des guides pas à pas pour chaque domaine, ainsi que des données de démonstration pour essayer. Nous répondons dans la mesure du possible aux questions envoyées à info@pdrkalk.ch, en général sous 24 heures — il n’existe aucun droit à un support informatique (voir les CG)."
       }
     ]
   },
@@ -1546,6 +1546,7 @@
       "title": "Conditions de licence et de paiement",
       "versionLabel": "Version",
       "seller": "Vendeur : Balmer Storm Solutions, Suisse",
+      "fullTerms": "Les <link>conditions générales (CG)</link> complètes s’appliquent en complément ; elles sont jointes en PDF à chaque facture.",
       "items": [
         {
           "t": "Commande ferme",
@@ -1584,6 +1585,10 @@
           "d": "Les fonctions d'IA intégrées sont optionnelles et peuvent reposer sur des services d'IA en constante évolution. Elles nécessitent votre propre clé API auprès du fournisseur choisi ; la configuration et les coûts sont à la charge du client. La disponibilité, la précision et le fonctionnement ne sont pas garantis."
         },
         {
+          "t": "Aide, tarifs et responsabilité",
+          "d": "Aucun support informatique n’est dû ; la prise en main se fait via la version d’essai, les données de démonstration et le manuel intégré, l’aide par e-mail est facultative. Les tarifs et calculs sont des outils — le client vérifie chaque document sortant. La responsabilité est exclue dans la mesure permise par la loi. Détails dans les CG."
+        },
+        {
           "t": "Droit applicable et for",
           "d": "Le droit suisse est applicable. Le for juridique est Schaffhouse, Suisse."
         }
@@ -1593,7 +1598,7 @@
       "billingHint": "La licence est émise définitivement à ce nom d'entreprise et à cette adresse. Aucune modification n'est possible par la suite — veuillez vérifier attentivement.",
       "stepNotes": "Remarques",
       "stepConfirm": "Commande",
-      "consent": "Je commande pour l'entreprise indiquée ci-dessus et j'accepte les <terms>conditions de licence et de paiement</terms>.",
+      "consent": "Je commande pour l’entreprise indiquée ci-dessus et j’accepte les <terms>conditions de licence et de paiement</terms> ainsi que les <agb>conditions générales</agb>.",
       "errorConsentRequired": "Veuillez confirmer la commande et les conditions.",
       "submit": "Commander avec obligation de paiement"
     },
@@ -1642,6 +1647,11 @@
       "term": "Elle est payable par virement bancaire dans les {paymentDays} jours à compter de la date de facturation.",
       "licence": "Après réception du paiement, vous recevez vos données de licence par e-mail.",
       "backHome": "Retour à l'accueil"
+    },
+    "termsLinks": {
+      "read": "Lire les CG",
+      "pdf": "CG en PDF",
+      "newTab": "(s’ouvre dans un nouvel onglet)"
     },
     "forward": {
       "text": "Les licences se commandent via le formulaire de commande — avec prix, délai de paiement et conditions de licence en un coup d'œil.",
@@ -1712,6 +1722,223 @@
       "Liste de contrôle de conformité : le scanner ne démarre qu'après confirmation du contrat de sous-traitance (DPA), de l'opt-out de l'entraînement des modèles, des conditions de conservation et — pour les fournisseurs américains — du transfert transfrontalier.",
       "Journal d'audit avec métadonnées uniquement : sont enregistrés le fournisseur, la région, le pays, les champs renvoyés, le succès et si un masquage a été appliqué — jamais l'image, la clé ou les valeurs des champs.",
       "Conçu selon la nLPD suisse et le RGPD de l'UE."
+    ]
+  },
+  "terms": {
+    "metaTitle": "Conditions générales — PDR Kalk",
+    "metaDescription": "Conditions générales de PDR Kalk : licence perpétuelle, version d’essai, commande et paiement, pas de remboursement, aide sans support informatique, tarifs et calculs, fonctions d’IA, garantie et responsabilité.",
+    "crumbHome": "Accueil",
+    "title": "Conditions générales (CG)",
+    "lastUpdated": "Dernière mise à jour : 14 octobre 2026",
+    "versionLabel": "Version",
+    "intro": "Les présentes CG régissent la version d’essai, l’achat et l’utilisation du logiciel PDR Kalk pour Windows et Android. Elles s’appliquent aux entreprises et aux indépendants (B2B). En commandant ou en utilisant PDR Kalk, vous acceptez les présentes CG.",
+    "sellerTitle": "Fournisseur",
+    "sellerLines": [
+      "Balmer Storm Solutions",
+      "Dieter Balmer",
+      "Suisse",
+      "info@pdrkalk.ch"
+    ],
+    "pdfLabel": "Télécharger les CG en PDF",
+    "pdfNote": "Cette version est jointe en PDF à chaque facture de licence.",
+    "privacyLink": "Déclaration de confidentialité",
+    "pdfPage": "Page",
+    "pdfOf": "sur",
+    "sections": [
+      {
+        "id": "scope",
+        "title": "Fournisseur et champ d’application",
+        "items": [
+          "PDR Kalk est fourni par Balmer Storm Solutions, Dieter Balmer, Suisse (ci-après « nous »). Contact : info@pdrkalk.ch.",
+          "Les présentes CG s’appliquent à la version d’essai, à l’achat d’une licence, aux mises à jour et aux éventuels modules complémentaires de PDR Kalk. Elles s’appliquent exclusivement aux entreprises et aux indépendants (B2B) ; PDR Kalk n’est pas vendu aux consommateurs.",
+          "Les « conditions de licence et de paiement » de la page de commande résument les présentes CG et en font partie. Les conditions propres du client ne s’appliquent que si nous les avons acceptées par écrit."
+        ]
+      },
+      {
+        "id": "licence",
+        "title": "Licence",
+        "items": [
+          "Après réception du paiement intégral, vous recevez une licence perpétuelle, non exclusive et non transférable pour utiliser PDR Kalk aux fins commerciales propres d’une entreprise. Il n’y a ni abonnement, ni date d’expiration, ni coût par utilisateur ou technicien.",
+          "La licence peut être installée sur un nombre illimité d’appareils appartenant à l’entreprise titulaire et utilisés par son personnel.",
+          "La licence est liée définitivement à la raison sociale et à l’adresse indiquées lors de la commande ; toutes deux figurent sur vos documents et ne peuvent plus être modifiées après l’émission. Vérifiez soigneusement vos données avant d’envoyer la commande ; nous corrigeons les fautes de frappe manifestes avant l’émission si vous nous les signalez.",
+          "La licence n’est pas transférable à une autre entreprise. Les sous-traitants, ateliers partenaires et donneurs d’ordre travaillent dans leur propre installation et ont besoin de leur propre licence.",
+          "En cas de changement de raison sociale, de déménagement, de vente ou de succession de l’entreprise, nous pouvons, sur demande et à notre libre appréciation, émettre une licence de remplacement. Il n’existe aucun droit à cet égard ; aucun remboursement n’est effectué.",
+          "Vous recevez les données de licence par e-mail. Conservez-les en lieu sûr ; elles seront nécessaires lors d’un changement d’appareil ou d’une réinstallation. Sur demande, nous renvoyons les mêmes données de licence à l’entreprise titulaire.",
+          "Sont notamment interdits : la transmission, la location ou la publication de la licence ou du logiciel ; le contournement ou la suppression du contrôle de licence ; la rétro-ingénierie au-delà de ce que la loi impérative autorise ; le démarrage répété de la version d’essai en contournant le lien à l’appareil. En cas de violation, nous pouvons retirer la licence ; aucun remboursement n’est effectué."
+        ]
+      },
+      {
+        "id": "trial",
+        "title": "Version d’essai",
+        "items": [
+          "PDR Kalk peut être testé gratuitement pendant {days} jours avec toutes ses fonctions, une version d’essai par appareil. La version d’essai prend fin automatiquement ; vos données sont conservées et redeviennent accessibles avec une licence.",
+          "La période d’essai sert à vérifier l’adéquation, les fonctions, les tarifs, les documents et la configuration requise pour votre entreprise. Ce qui pouvait être vérifié pendant l’essai ne constitue pas ultérieurement un motif de remboursement.",
+          "Au premier démarrage, une activation en ligne unique transmet des données techniques (voir la déclaration de confidentialité). Il n’existe aucun droit à une seconde période d’essai ; dans les cas justifiés, par exemple après un remplacement de matériel, nous débloquons manuellement sur demande."
+        ]
+      },
+      {
+        "id": "order",
+        "title": "Commande, prix, paiement et livraison",
+        "items": [
+          "Une commande passée via le formulaire de commande sur pdrkalk.ch constitue une offre ferme. Le contrat est conclu lorsque nous confirmons la commande par la facture. Nous pouvons refuser une commande sans indication de motifs.",
+          "Prix : Suisse CHF {price} plus TVA de 8,1 % ; entreprises de l’UE avec un numéro de TVA intracommunautaire valide EUR {priceEur} sans TVA (autoliquidation, TVA due par le preneur) ; autres pays selon l’indication sur la page de commande. Le prix affiché au moment de la commande s’applique ; les prix peuvent changer pour les commandes futures.",
+          "La facture est envoyée par e-mail et est payable par virement bancaire dans les {paymentDays} jours à compter de la date de facturation, sans déduction. Les frais bancaires sont à la charge du client.",
+          "La licence est émise après réception du paiement intégral et livrée par e-mail. Aucun droit à la licence n’existe avant la réception du paiement ; une version d’essai arrivant à échéance n’est pas prolongée par une commande.",
+          "Si le paiement reste impayé 14 jours après un rappel, nous pouvons nous retirer du contrat.",
+          "Le client est responsable de l’exactitude de ses données, en particulier du numéro de TVA. Si une donnée s’avère erronée et qu’il en résulte pour nous une obligation fiscale, nous facturons la TVA a posteriori."
+        ]
+      },
+      {
+        "id": "no-refund",
+        "title": "Pas de rétractation, pas de remboursement",
+        "items": [
+          "PDR Kalk pouvant être testé gratuitement pendant {days} jours avant l’achat, il n’existe aucun droit de rétractation, de retour ou de remboursement. Les droits en cas de défauts selon le chiffre 14 demeurent réservés.",
+          {
+            "text": "En particulier, les circonstances suivantes ne donnent droit ni à un remboursement ni à une réduction du prix :",
+            "bullets": [
+              "le fait que le logiciel ne plaise pas, l’absence de besoin, ou une fonction que PDR Kalk n’offre pas ou offre différemment ;",
+              "des appareils ou systèmes d’exploitation inadaptés ou non pris en charge, par exemple les appareils Apple, les smartphones ou des versions plus anciennes de Windows et d’Android ;",
+              "la cessation, la vente, le changement de raison sociale, le déménagement ou la succession de l’entreprise ;",
+              "un changement d’appareil, une panne, une réinstallation ou la perte des données de licence ;",
+              "des modifications de tarifs, de listes de prix ou de prescriptions par des assureurs, des associations, des donneurs d’ordre ou d’autres tiers ;",
+              "des modifications, restrictions ou cessations de services tiers tels que fournisseurs d’IA, services d’e-mail, stockages cloud, systèmes d’exploitation ou canaux de distribution d’applications ;",
+              "des erreurs de manipulation, une perte de données, l’absence de sauvegardes ou une configuration défectueuse du dossier de travail, du NAS, de l’e-mail ou de la synchronisation ;",
+              "la fin du développement, de l’offre de mises à jour ou de l’aide selon le chiffre 13 ;",
+              "le retrait de la licence pour violation des présentes CG."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "support",
+        "title": "Aide et assistance",
+        "items": [
+          "Nous ne fournissons aucun support informatique et aucune prestation d’installation, de formation, sur site ou de télémaintenance.",
+          "La prise en main de PDR Kalk incombe au client. La version d’essai avec données de démonstration et le manuel d’utilisation intégré et consultable (« Aide ») sont à disposition à cet effet.",
+          "Nous répondons dans la mesure du possible aux questions envoyées par e-mail à info@pdrkalk.ch. Il n’existe aucun droit à une réponse, à un délai de réponse, à une résolution du problème ou à une fonction déterminée. Les indications sur les délais de réponse habituels sont des valeurs d’expérience, non un engagement.",
+          "Ne relèvent notamment pas de notre aide : le matériel, le système d’exploitation, le réseau et le NAS, les comptes e-mail et accès SMTP, les stockages cloud, les imprimantes, les comptes et clés auprès de fournisseurs d’IA, ainsi que les questions comptables, fiscales et juridiques.",
+          "Une assistance plus étendue peut être convenue et facturée séparément."
+        ]
+      },
+      {
+        "id": "tariffs",
+        "title": "Tarifs, tables de prix et calculs",
+        "items": [
+          "PDR Kalk est un outil de calcul et de documentation. Les tables de tarifs et de prix intégrées (par exemple VFFS, grêle mixte Zurich, liste AW allemande, matrice autrichienne, UPEX) reflètent des valeurs de référence de la branche au moment de leur intégration. Elles n’ont aucun lien avec un assureur, une association ou un autre tiers et n’ont été ni autorisées ni vérifiées par eux.",
+          "Les assureurs, associations et donneurs d’ordre peuvent modifier à tout moment les tarifs, listes de prix et prescriptions. Nous nous efforçons de maintenir les tables à jour, sans toutefois le garantir. Des actualisations peuvent être proposées sous forme de mise à jour ou de module complémentaire payant ; il n’existe aucune obligation à cet égard.",
+          "Tous les calculs, unités de travail, suppléments, arrondis et montants sont des propositions. Le client vérifie chaque document qui quitte PDR Kalk – devis, rapports, factures, notes de crédit, quittances, décomptes aux sous-traitants ou donneurs d’ordre, exports – quant à son exactitude, son exhaustivité et son adéquation avant de l’envoyer. Il en assume seul la responsabilité envers ses clients, assureurs, sous-traitants, donneurs d’ordre et autorités.",
+          "Nous ne répondons pas des dommages résultant de tarifs ou prescriptions modifiés, d’erreurs ou d’inexactitudes dans les tables, de saisies erronées ou de documents transmis sans vérification – en particulier pas des rémunérations perdues, réductions ou demandes de restitution d’assureurs ou de clients."
+        ]
+      },
+      {
+        "id": "tax",
+        "title": "Impôts, facturation et exports comptables",
+        "items": [
+          "Les taux de TVA, les règles fiscales (par exemple autoliquidation, franchise des petites entreprises, lieu de la prestation), les mentions obligatoires des factures, la QR-facture, les formats de facture électronique tels que ZUGFeRD/Factur-X ainsi que les exports DATEV et TVA sont mis en œuvre en toute bonne foi et constituent des outils. PDR Kalk ne fournit aucun conseil fiscal, juridique ou comptable.",
+          "Le client est responsable du traitement fiscal correct de ses opérations, du respect des règles de facturation et de conservation de son pays et de la coordination avec sa fiduciaire ou son conseiller fiscal. Il n’est pas garanti qu’une banque, un destinataire, un logiciel comptable ou une autorité accepte un document ou un export."
+        ]
+      },
+      {
+        "id": "ai",
+        "title": "Fonctions d’IA",
+        "items": [
+          "PDR Kalk contient des fonctions d’IA optionnelles, désactivées par défaut, telles que le scanner de permis de circulation et de VIN ou la lecture de photos de calculs. Elles utilisent des services d’IA externes avec la propre clé API du client (« bring your own key »). Le contrat, la configuration, les coûts et l’examen de protection des données auprès du fournisseur d’IA incombent au client.",
+          "Nous ne garantissons ni la disponibilité, ni l’exactitude, ni l’exhaustivité, ni le fonctionnement des résultats de l’IA. Le client vérifie chaque champ reconnu avant de l’utiliser.",
+          "Les fournisseurs d’IA peuvent à tout moment modifier ou cesser leurs modèles, interfaces, prix et conditions. Une fonction d’IA peut de ce fait être limitée, fonctionner différemment ou disparaître entièrement. Cela échappe à notre contrôle ; il n’en résulte aucune obligation d’adaptation, aucune responsabilité ni aucun remboursement.",
+          "Le client reste responsable de la protection des données, en particulier du caviardage des données personnelles avant tout envoi et du choix d’un fournisseur conforme à ses obligations légales."
+        ]
+      },
+      {
+        "id": "import",
+        "title": "Import de documents",
+        "items": [
+          "L’import de protocoles de bosses, de calculs SilverDAT ou Audatex lit des fichiers PDF ou des photos existants du client. Il ne s’agit ni d’une interface avec ces systèmes ni d’un produit de leurs fabricants ; les marques citées appartiennent à leurs titulaires respectifs.",
+          "Le résultat de lecture peut être incomplet ou erroné, en particulier avec des variantes d’impression différentes. Le client vérifie l’import dans la vue de contrôle et après la reprise. La fonction est signalée comme expérimentale ; sa disponibilité et son étendue peuvent changer."
+        ]
+      },
+      {
+        "id": "data",
+        "title": "Données, sauvegarde et utilisation multi-appareils",
+        "items": [
+          "PDR Kalk enregistre les données localement sur l’appareil ou dans le dossier de travail choisi par le client, par exemple sur un NAS ou dans un dossier cloud. Nous n’avons aucun accès à ces données et n’en conservons aucune copie.",
+          "Le client est responsable des sauvegardes régulières, de leur conservation et de la vérification de leur restaurabilité. PDR Kalk met des fonctions de sauvegarde à disposition ; leur configuration et leur contrôle incombent au client.",
+          "L’utilisation multi-appareils via un dossier de travail partagé suppose une infrastructure fiable exploitée par le client. Nous ne répondons pas des pertes de données ou conflits dus à des problèmes de réseau, de NAS, de cloud ou de synchronisation, à un travail simultané en dehors des processus prévus ou à la perte de clés de chiffrement, par exemple pour les fichiers de mandats de sous-traitance."
+        ]
+      },
+      {
+        "id": "platforms",
+        "title": "Configuration requise et services tiers",
+        "items": [
+          "PDR Kalk fonctionne sous Windows 10/11 et sur les tablettes Android à partir d’Android 10. Les appareils Apple et les smartphones ne sont pas pris en charge. Certaines fonctions ne sont disponibles que sur une plateforme, par exemple la synchronisation multi-appareils uniquement sous Windows. L’état pendant la période d’essai ou au moment de la commande fait foi.",
+          "Les fonctions faisant intervenir des tiers – envoi d’e-mails via le serveur de messagerie du client, stockages cloud et NAS, WebDAV, imprimantes, mises à jour du système d’exploitation, canaux de distribution d’applications, services d’IA – dépendent de ces tiers. Nous ne répondons pas de leur disponibilité, de leurs modifications ou de leur cessation."
+        ]
+      },
+      {
+        "id": "updates",
+        "title": "Mises à jour et développement",
+        "items": [
+          "Les mises à jour courantes avec corrections et améliorations sont incluses gratuitement tant que nous les proposons. Il n’existe aucun droit à des fonctions ou des dates déterminées ni à une durée déterminée de l’offre de mises à jour. Les annonces et feuilles de route sont sans engagement.",
+          "Des modules complémentaires plus importants et des actualisations de tarifs peuvent être proposés en option contre une redevance ; leur achat est facultatif.",
+          "Les mises à jour peuvent modifier ou supprimer des fonctions lorsque des raisons techniques, juridiques ou liées à des tiers l’exigent. Le client installe les mises à jour dans un délai raisonnable ; nous ne corrigeons pas les erreurs de versions obsolètes déjà corrigées dans la version actuelle.",
+          "Nous pouvons à tout moment cesser le développement, l’offre de mises à jour et l’aide. Une licence acquise reste valable ; PDR Kalk continue de fonctionner hors ligne. Il n’en résulte aucun droit à remboursement."
+        ]
+      },
+      {
+        "id": "warranty",
+        "title": "Garantie",
+        "items": [
+          "PDR Kalk est fourni dans la version actuelle au moment de la commande, telle qu’elle a pu être testée pendant la période d’essai. Un logiciel n’est jamais totalement exempt d’erreurs ; nous ne garantissons pas que PDR Kalk fonctionne sans interruption ni erreur ou qu’il convienne à un usage particulier.",
+          "Les défauts qui entravent de manière substantielle l’usage prévu par le contrat doivent nous être signalés par e-mail avec une description reproductible. Nous y remédions, à notre choix, par une mise à jour, une solution de contournement ou une indication dans un délai raisonnable.",
+          "Si la réparation d’un défaut substantiel échoue définitivement, le client peut réduire le prix de la licence de manière appropriée ou se retirer du contrat. Tout autre droit de garantie est exclu dans la mesure permise par la loi.",
+          "Ne constituent notamment pas des défauts : les écarts par rapport à des attentes qui pouvaient être vérifiées pendant la période d’essai ; les conséquences de saisies erronées, d’une mauvaise configuration, de matériel non pris en charge, de services tiers, de versions obsolètes ou d’interventions du client ; les modifications de tarifs ou de prescriptions de tiers."
+        ]
+      },
+      {
+        "id": "liability",
+        "title": "Responsabilité",
+        "items": [
+          "Dans la mesure permise par la loi, notre responsabilité est exclue. Cela vaut en particulier pour les dommages indirects et consécutifs, le manque à gagner, la perte de données, l’interruption d’exploitation, les coûts d’un achat de remplacement, les rappels d’impôts et les amendes, ainsi que pour les prétentions que des clients, assureurs, sous-traitants, donneurs d’ordre ou autorités font valoir contre le client.",
+          "Demeure réservée la responsabilité pour les dommages résultant d’un dol ou d’une faute grave, ainsi que toute responsabilité qui ne peut être exclue selon le droit applicable.",
+          "Lorsqu’une responsabilité existe, elle est limitée, par sinistre et au total, au montant payé pour la licence concernée.",
+          "Le client nous libère des prétentions de tiers fondées sur son utilisation de PDR Kalk, ses documents ou ses données."
+        ]
+      },
+      {
+        "id": "ip",
+        "title": "Propriété intellectuelle",
+        "items": [
+          "Tous les droits sur PDR Kalk – logiciel, interfaces, textes, structures de tables, modèles et documentation – nous restent acquis. La licence ne transfère aucun droit au-delà de l’utilisation selon le chiffre 2.",
+          "Les données, documents et photos que le client crée avec PDR Kalk appartiennent au client.",
+          "Les marques de tiers, telles que SilverDAT, Audatex, DATEV, Synology ou OneDrive, appartiennent à leurs titulaires. PDR Kalk n’est lié ni à elles ni à un assureur ou une association."
+        ]
+      },
+      {
+        "id": "privacy",
+        "title": "Protection des données",
+        "items": [
+          "PDR Kalk traite les données commerciales localement ; nous ne collectons aucune donnée d’utilisation et n’exploitons aucun cloud. La déclaration de confidentialité sur pdrkalk.ch et dans l’application décrit quelles données sont transmises lors de l’activation de la version d’essai, lors de la recherche de mises à jour ou lors de l’utilisation volontaire de services tiers.",
+          "Le client est responsable, au sens du droit de la protection des données (nLPD, RGPD), des données personnelles de ses clients, détenteurs de véhicules, collaborateurs et partenaires, en particulier lors de l’envoi d’e-mails, du stockage dans le cloud et de l’utilisation de services d’IA."
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "Modification des présentes CG",
+        "items": [
+          "Un achat est régi par la version que le client a acceptée lors de la commande. Elle est consignée avec la commande et jointe à la facture.",
+          "Nous pouvons modifier les présentes CG pour les commandes futures, les modules complémentaires et la version d’essai. La version actuelle est disponible sur pdrkalk.ch."
+        ]
+      },
+      {
+        "id": "final",
+        "title": "Dispositions finales",
+        "items": [
+          "Le droit suisse est applicable, à l’exclusion de la Convention des Nations Unies sur les contrats de vente internationale de marchandises (CVIM) et des règles de conflit de lois.",
+          "Le for exclusif est Schaffhouse, Suisse, sauf si le droit impératif prescrit un autre for.",
+          "Si une disposition est nulle, les autres restent valables. La disposition nulle est remplacée par une disposition valable qui se rapproche le plus de son but économique.",
+          "Les présentes CG existent en allemand, anglais, français et italien. En cas de divergence, la version allemande fait foi.",
+          "Les communications sont envoyées par e-mail à l’adresse indiquée lors de la commande ou à info@pdrkalk.ch."
+        ]
+      }
     ]
   },
   "screenshots": {
@@ -1922,6 +2149,7 @@
       "contact": "Contact",
       "order": "Commander une licence",
       "privacy": "Confidentialité",
+      "terms": "Conditions générales",
       "windowsInstaller": "Installateur Windows",
       "androidApk": "APK Android"
     }

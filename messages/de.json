@@ -1424,7 +1424,7 @@
       {
         "id": "support",
         "q": "Wie erhalte ich Hilfe?",
-        "a": "In der App finden Sie ein durchsuchbares Benutzerhandbuch mit Schritt-für-Schritt-Anleitungen zu jedem Bereich. Dazu gibt es E-Mail-Support unter info@pdrkalk.ch — die Antwort kommt meist innert 24 Stunden."
+        "a": "In der App finden Sie ein durchsuchbares Benutzerhandbuch mit Schritt-für-Schritt-Anleitungen zu jedem Bereich, dazu Demo-Daten zum Ausprobieren. Fragen per E-Mail an info@pdrkalk.ch beantworten wir nach Möglichkeit, meist innert 24 Stunden — ein Anspruch auf IT-Support besteht nicht (siehe AGB)."
       }
     ]
   },
@@ -1546,6 +1546,7 @@
       "title": "Lizenz- und Zahlungsbedingungen",
       "versionLabel": "Fassung",
       "seller": "Anbieterin: Balmer Storm Solutions, Schweiz",
+      "fullTerms": "Ergänzend gelten die vollständigen <link>Allgemeinen Geschäftsbedingungen (AGB)</link>; sie liegen jeder Rechnung als PDF bei.",
       "items": [
         {
           "t": "Verbindliche Bestellung",
@@ -1584,6 +1585,10 @@
           "d": "Integrierte KI-Funktionen sind optional und können auf sich weiterentwickelnden KI-Diensten basieren. Sie benötigen einen eigenen API-Schlüssel des gewählten Anbieters; Einrichtung und Kosten liegen beim Kunden. Verfügbarkeit, Genauigkeit und Funktionsweise werden nicht garantiert."
         },
         {
+          "t": "Hilfe, Tarife und Haftung",
+          "d": "Es wird kein IT-Support geschuldet; die Einarbeitung erfolgt über Testversion, Demo-Daten und das integrierte Handbuch, E-Mail-Hilfe ist freiwillig. Tarife und Berechnungen sind Hilfsmittel — jedes ausgehende Dokument prüft der Kunde selbst. Die Haftung ist ausgeschlossen, soweit gesetzlich zulässig. Einzelheiten in den AGB."
+        },
+        {
           "t": "Recht und Gerichtsstand",
           "d": "Es gilt schweizerisches Recht. Gerichtsstand ist Schaffhausen, Schweiz."
         }
@@ -1593,7 +1598,7 @@
       "billingHint": "Die Lizenz wird fest auf diesen Firmennamen und diese Adresse ausgestellt. Eine spätere Änderung ist nicht möglich — bitte genau prüfen.",
       "stepNotes": "Anmerkungen",
       "stepConfirm": "Bestellung",
-      "consent": "Ich bestelle für das oben genannte Unternehmen und akzeptiere die <terms>Lizenz- und Zahlungsbedingungen</terms>.",
+      "consent": "Ich bestelle für das oben genannte Unternehmen und akzeptiere die <terms>Lizenz- und Zahlungsbedingungen</terms> sowie die <agb>Allgemeinen Geschäftsbedingungen</agb>.",
       "errorConsentRequired": "Bitte bestätigen Sie die Bestellung und die Bedingungen.",
       "submit": "Kostenpflichtig bestellen"
     },
@@ -1642,6 +1647,11 @@
       "term": "Sie ist innert {paymentDays} Tagen ab Rechnungsdatum per Banküberweisung zahlbar.",
       "licence": "Nach Zahlungseingang erhalten Sie Ihre Lizenzangaben per E-Mail.",
       "backHome": "Zurück zur Startseite"
+    },
+    "termsLinks": {
+      "read": "AGB lesen",
+      "pdf": "AGB als PDF",
+      "newTab": "(öffnet in neuem Tab)"
     },
     "forward": {
       "text": "Lizenzen bestellen Sie über das Bestellformular — mit Preis, Zahlungsfrist und Lizenzbedingungen auf einen Blick.",
@@ -1712,6 +1722,223 @@
       "Freigabe-Checkliste: Der Scanner startet erst, wenn Sie Auftragsverarbeitung (DPA), Opt-out vom Modelltraining, Aufbewahrungsbedingungen und — bei US-Anbietern — die grenzüberschreitende Übermittlung bestätigt haben.",
       "Audit-Log nur mit Metadaten: protokolliert werden Anbieter, Region, Land, zurückgegebene Felder, Erfolg und ob geschwärzt wurde — nie das Bild, der Schlüssel oder Feldwerte.",
       "Ausgelegt auf das Schweizer revDSG/nFADP und die EU-DSGVO."
+    ]
+  },
+  "terms": {
+    "metaTitle": "AGB — PDR Kalk",
+    "metaDescription": "Allgemeine Geschäftsbedingungen für PDR Kalk: Dauerlizenz, Testversion, Bestellung und Zahlung, kein Widerruf, Hilfe ohne IT-Support, Tarife und Berechnungen, KI-Funktionen, Gewährleistung und Haftung.",
+    "crumbHome": "Start",
+    "title": "Allgemeine Geschäftsbedingungen (AGB)",
+    "lastUpdated": "Stand: 14. Oktober 2026",
+    "versionLabel": "Fassung",
+    "intro": "Diese AGB regeln die Testversion, den Kauf und die Nutzung der Software PDR Kalk für Windows und Android. Sie gelten gegenüber Unternehmen und Selbständigen (B2B). Mit der Bestellung oder der Nutzung von PDR Kalk akzeptieren Sie diese AGB.",
+    "sellerTitle": "Anbieterin",
+    "sellerLines": [
+      "Balmer Storm Solutions",
+      "Dieter Balmer",
+      "Schweiz",
+      "info@pdrkalk.ch"
+    ],
+    "pdfLabel": "AGB als PDF herunterladen",
+    "pdfNote": "Diese Fassung liegt jeder Lizenzrechnung als PDF bei.",
+    "privacyLink": "Datenschutzerklärung",
+    "pdfPage": "Seite",
+    "pdfOf": "von",
+    "sections": [
+      {
+        "id": "scope",
+        "title": "Anbieterin und Geltungsbereich",
+        "items": [
+          "Anbieterin von PDR Kalk ist Balmer Storm Solutions, Dieter Balmer, Schweiz (nachfolgend «wir»). Kontakt: info@pdrkalk.ch.",
+          "Diese AGB gelten für die Testversion, den Kauf einer Lizenz, Updates sowie allfällige Zusatzmodule von PDR Kalk. Sie gelten ausschliesslich gegenüber Unternehmen und Selbständigen (B2B); ein Verkauf an Konsumentinnen und Konsumenten findet nicht statt.",
+          "Die «Lizenz- und Zahlungsbedingungen» auf der Bestellseite fassen diese AGB zusammen und sind Teil davon. Abweichende Bedingungen des Kunden gelten nur, wenn wir ihnen schriftlich zugestimmt haben."
+        ]
+      },
+      {
+        "id": "licence",
+        "title": "Lizenz",
+        "items": [
+          "Mit vollständiger Zahlung erhalten Sie eine zeitlich unbefristete, nicht ausschliessliche und nicht übertragbare Lizenz, PDR Kalk für die eigenen gewerblichen Zwecke eines Betriebs zu nutzen. Es gibt kein Abo, kein Ablaufdatum und keine Kosten pro Nutzer oder Techniker.",
+          "Die Lizenz darf auf beliebig vielen Geräten installiert werden, die dem lizenzierten Betrieb gehören und von dessen Mitarbeitenden genutzt werden.",
+          "Die Lizenz ist fest an den bei der Bestellung angegebenen Firmennamen und die Adresse gebunden; beide erscheinen auf Ihren Dokumenten und können nach der Ausstellung nicht geändert werden. Prüfen Sie die Angaben vor dem Absenden der Bestellung genau; offensichtliche Schreibfehler korrigieren wir auf Hinweis vor der Ausstellung.",
+          "Die Lizenz ist nicht auf einen anderen Betrieb übertragbar. Subunternehmer, Partnerbetriebe und Auftraggeber arbeiten in ihrer eigenen Installation und benötigen eine eigene Lizenz.",
+          "Bei Umfirmierung, Umzug, Verkauf oder Nachfolge des Betriebs können wir auf Anfrage und nach eigenem Ermessen eine Ersatzlizenz ausstellen. Ein Anspruch darauf besteht nicht; eine Rückerstattung erfolgt nicht.",
+          "Sie erhalten die Lizenzangaben per E-Mail. Bewahren Sie sie sicher auf; sie werden bei einem Gerätewechsel oder einer Neuinstallation erneut benötigt. Auf Anfrage senden wir dieselben Lizenzangaben an den lizenzierten Betrieb erneut zu.",
+          "Nicht gestattet sind insbesondere: Weitergabe, Vermietung oder Veröffentlichung der Lizenz oder der Software; Umgehen oder Entfernen der Lizenzprüfung; Rückentwicklung (Reverse Engineering) ausser im gesetzlich zwingenden Umfang; das mehrfache Starten der Testversion durch Umgehen der Gerätebindung. Bei einem Verstoss können wir die Lizenz entziehen; eine Rückerstattung erfolgt nicht."
+        ]
+      },
+      {
+        "id": "trial",
+        "title": "Testversion",
+        "items": [
+          "PDR Kalk kann {days} Tage kostenlos mit vollem Funktionsumfang getestet werden, eine Testversion pro Gerät. Die Testversion endet automatisch; Ihre Daten bleiben erhalten und sind mit einer Lizenz wieder zugänglich.",
+          "Die Testphase dient dazu, Eignung, Funktionsumfang, Tarife, Dokumente und Systemvoraussetzungen für Ihren Betrieb zu prüfen. Was in der Testphase geprüft werden konnte, ist später kein Grund für eine Rückerstattung.",
+          "Beim ersten Start erfolgt eine einmalige Online-Aktivierung mit technischen Daten (siehe Datenschutzerklärung). Ein Anspruch auf eine zweite Testphase besteht nicht; in begründeten Fällen, etwa nach einem Hardwaretausch, schalten wir auf Anfrage manuell frei."
+        ]
+      },
+      {
+        "id": "order",
+        "title": "Bestellung, Preis, Zahlung und Lieferung",
+        "items": [
+          "Eine Bestellung über das Bestellformular auf pdrkalk.ch ist ein verbindliches Angebot. Der Vertrag kommt zustande, wenn wir die Bestellung mit der Rechnung bestätigen. Wir dürfen eine Bestellung ohne Angabe von Gründen ablehnen.",
+          "Preise: Schweiz CHF {price} zuzüglich 8,1 % MwSt.; EU-Unternehmen mit gültiger USt-IdNr. EUR {priceEur} ohne MwSt. (Reverse Charge, Steuerschuld beim Leistungsempfänger); andere Länder gemäss Angabe auf der Bestellseite. Es gilt der bei der Bestellung angezeigte Preis; Preisänderungen für künftige Bestellungen bleiben vorbehalten.",
+          "Die Rechnung wird per E-Mail zugestellt und ist innert {paymentDays} Tagen ab Rechnungsdatum per Banküberweisung ohne Abzug zahlbar. Bankspesen trägt der Kunde.",
+          "Die Lizenz wird nach vollständigem Zahlungseingang ausgestellt und per E-Mail geliefert. Vor dem Zahlungseingang besteht kein Anspruch auf die Lizenz; eine ablaufende Testversion verlängert sich durch eine Bestellung nicht.",
+          "Bleibt die Zahlung nach einer Mahnung weitere 14 Tage aus, können wir vom Vertrag zurücktreten.",
+          "Der Kunde ist für die Richtigkeit seiner Angaben verantwortlich, insbesondere der USt-IdNr. Erweist sich eine Angabe als falsch und entsteht uns daraus eine Steuerpflicht, stellen wir die MwSt. nach."
+        ]
+      },
+      {
+        "id": "no-refund",
+        "title": "Kein Widerruf, keine Rückerstattung",
+        "items": [
+          "Da PDR Kalk vor dem Kauf {days} Tage kostenlos getestet werden kann, besteht kein Widerrufs-, Rückgabe- oder Rückerstattungsrecht. Die Rechte bei Mängeln nach Ziffer 14 bleiben unberührt.",
+          {
+            "text": "Insbesondere begründen folgende Umstände keinen Anspruch auf Rückerstattung oder Minderung:",
+            "bullets": [
+              "Nichtgefallen, fehlender Bedarf oder eine Funktion, die PDR Kalk nicht oder anders bietet;",
+              "ungeeignete oder nicht unterstützte Geräte und Betriebssysteme, etwa Apple-Geräte, Smartphones oder ältere Windows- und Android-Versionen;",
+              "Geschäftsaufgabe, Verkauf, Umfirmierung, Umzug oder Nachfolge des Betriebs;",
+              "Gerätewechsel, Defekt, Neuinstallation oder Verlust der Lizenzangaben;",
+              "Änderungen von Tarifen, Preislisten oder Vorgaben durch Versicherer, Verbände, Auftraggeber oder andere Dritte;",
+              "Änderungen, Einschränkungen oder Einstellung von Drittdiensten wie KI-Anbietern, E-Mail-Diensten, Cloud-Speichern, Betriebssystemen oder App-Vertriebswegen;",
+              "Bedienfehler, Datenverlust, fehlende Sicherungen oder eine fehlerhafte Einrichtung von Arbeitsordner, NAS, E-Mail oder Synchronisation;",
+              "das Ende der Weiterentwicklung, des Update-Angebots oder der Hilfe nach Ziffer 13;",
+              "der Entzug der Lizenz wegen eines Verstosses gegen diese AGB."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "support",
+        "title": "Hilfe und Support",
+        "items": [
+          "Wir erbringen keinen IT- oder Computer-Support und keine Einrichtungs-, Schulungs-, Vor-Ort- oder Fernwartungsleistungen.",
+          "Die Einarbeitung in PDR Kalk ist Sache des Kunden. Dafür stehen die Testversion mit Demo-Daten und das integrierte, durchsuchbare Benutzerhandbuch («Hilfe») zur Verfügung.",
+          "Fragen per E-Mail an info@pdrkalk.ch beantworten wir nach Möglichkeit. Ein Anspruch auf eine Antwort, eine Antwortzeit, eine Problemlösung oder eine bestimmte Funktion besteht nicht. Angaben zu üblichen Antwortzeiten sind Erfahrungswerte, keine Zusage.",
+          "Nicht Gegenstand unserer Hilfe sind insbesondere Hardware, Betriebssystem, Netzwerk und NAS, E-Mail-Konten und SMTP-Zugänge, Cloud-Speicher, Drucker, Konten und Schlüssel bei KI-Anbietern sowie buchhalterische, steuerliche und rechtliche Fragen.",
+          "Weitergehende Unterstützung kann separat vereinbart und verrechnet werden."
+        ]
+      },
+      {
+        "id": "tariffs",
+        "title": "Tarife, Preistabellen und Berechnungen",
+        "items": [
+          "PDR Kalk ist ein Kalkulations- und Dokumentationswerkzeug. Die hinterlegten Tarif- und Preistabellen (etwa VFFS, Zürich Mischhagel, Deutsche AW-Liste, Österreich-Matrix, UPEX) geben Branchenrichtwerte zum Zeitpunkt ihrer Aufnahme wieder. Sie stehen in keiner Verbindung zu einem Versicherer, Verband oder anderen Dritten und sind von diesen weder autorisiert noch geprüft.",
+          "Versicherer, Verbände und Auftraggeber können Tarife, Preislisten und Vorgaben jederzeit ändern. Wir bemühen uns, die Tabellen aktuell zu halten, übernehmen dafür aber keine Gewähr. Aktualisierungen können als Update oder als kostenpflichtiges Zusatzmodul angeboten werden; eine Pflicht dazu besteht nicht.",
+          "Alle Berechnungen, Arbeitswerte, Zuschläge, Rundungen und Beträge sind Vorschläge. Der Kunde prüft jedes Dokument, das PDR Kalk verlässt – Kostenvoranschläge, Rapporte, Rechnungen, Gutschriften, Quittungen, Abrechnungen an Subunternehmer oder Auftraggeber, Exporte – vor dem Versand auf Richtigkeit, Vollständigkeit und Angemessenheit. Er trägt dafür allein die Verantwortung gegenüber seinen Kunden, Versicherern, Subunternehmern, Auftraggebern und Behörden.",
+          "Wir haften nicht für Schäden aus geänderten Tarifen oder Vorgaben, aus Fehlern oder Ungenauigkeiten in Tabellen, aus falschen Eingaben oder aus ungeprüft weitergegebenen Dokumenten – insbesondere nicht für entgangene Vergütungen, Kürzungen oder Rückforderungen durch Versicherer oder Kunden."
+        ]
+      },
+      {
+        "id": "tax",
+        "title": "Steuern, Rechnungsstellung und Buchhaltungsexporte",
+        "items": [
+          "MwSt.-Sätze, Steuerregeln (etwa Reverse Charge, Kleinunternehmerregelung, Leistungsort), Rechnungspflichtangaben, QR-Rechnung, E-Rechnungsformate wie ZUGFeRD/Factur-X sowie DATEV- und MwSt.-Exporte werden nach bestem Wissen umgesetzt und sind Hilfsmittel. PDR Kalk erbringt keine Steuer-, Rechts- oder Buchhaltungsberatung.",
+          "Der Kunde ist für die korrekte steuerliche Behandlung seiner Geschäftsfälle, die Einhaltung der Rechnungs- und Aufbewahrungsvorschriften seines Landes und die Abstimmung mit seinem Treuhänder oder Steuerberater verantwortlich. Dass eine Bank, ein Empfänger, eine Buchhaltungssoftware oder eine Behörde ein Dokument oder einen Export annimmt, wird nicht garantiert."
+        ]
+      },
+      {
+        "id": "ai",
+        "title": "KI-Funktionen",
+        "items": [
+          "PDR Kalk enthält optionale, standardmässig ausgeschaltete KI-Funktionen, etwa den Fahrzeugausweis- und VIN-Scanner oder das Lesen von Kalkulationsfotos. Sie nutzen externe KI-Dienste mit einem eigenen API-Schlüssel des Kunden («Bring your own key»). Vertrag, Einrichtung, Kosten und Datenschutzprüfung gegenüber dem KI-Anbieter liegen beim Kunden.",
+          "Für Verfügbarkeit, Genauigkeit, Vollständigkeit und Funktionsweise der KI-Ergebnisse übernehmen wir keine Gewähr. Der Kunde prüft jedes erkannte Feld, bevor er es verwendet.",
+          "KI-Anbieter können Modelle, Schnittstellen, Preise und Bedingungen jederzeit ändern oder einstellen. Dadurch kann eine KI-Funktion eingeschränkt sein, anders arbeiten oder ganz entfallen. Das liegt ausserhalb unseres Einflusses; eine Anpassungspflicht, Haftung oder Rückerstattung ergibt sich daraus nicht.",
+          "Der Kunde bleibt für den Datenschutz verantwortlich, insbesondere für die Schwärzung von Personendaten vor einem Upload und für die Wahl eines Anbieters, der seinen gesetzlichen Pflichten entspricht."
+        ]
+      },
+      {
+        "id": "import",
+        "title": "Dokumentenimport",
+        "items": [
+          "Der Import von Dellenprotokollen, SilverDAT- oder Audatex-Kalkulationen liest vorhandene PDF-Dateien oder Fotos des Kunden. Es handelt sich weder um eine Schnittstelle zu diesen Systemen noch um ein Produkt ihrer Hersteller; genannte Marken gehören ihren jeweiligen Inhabern.",
+          "Das Leseergebnis kann unvollständig oder fehlerhaft sein, insbesondere bei abweichenden Druckvarianten. Der Kunde prüft den Import in der Kontrollansicht und nach der Übernahme. Die Funktion ist als experimentell gekennzeichnet; Verfügbarkeit und Umfang können sich ändern."
+        ]
+      },
+      {
+        "id": "data",
+        "title": "Daten, Sicherung und Mehrgeräte-Betrieb",
+        "items": [
+          "PDR Kalk speichert Daten lokal auf dem Gerät oder im vom Kunden gewählten Arbeitsordner, etwa auf einem NAS oder in einem Cloud-Ordner. Wir haben keinen Zugriff auf diese Daten und führen keine Kopien.",
+          "Der Kunde ist für regelmässige Sicherungen, deren Aufbewahrung und die Prüfung der Wiederherstellbarkeit verantwortlich. PDR Kalk stellt dafür Sicherungsfunktionen bereit; Einrichtung und Kontrolle liegen beim Kunden.",
+          "Der Mehrgeräte-Betrieb über einen gemeinsamen Arbeitsordner setzt eine vom Kunden betriebene, zuverlässige Infrastruktur voraus. Für Datenverluste oder Konflikte aus Netzwerk-, NAS-, Cloud- oder Synchronisationsproblemen, aus gleichzeitigem Arbeiten ausserhalb der vorgesehenen Abläufe oder aus dem Verlust von Verschlüsselungsschlüsseln, etwa für Sub-Auftragsdateien, haften wir nicht."
+        ]
+      },
+      {
+        "id": "platforms",
+        "title": "Systemvoraussetzungen und Drittdienste",
+        "items": [
+          "PDR Kalk läuft auf Windows 10/11 und auf Android-Tablets ab Android 10. Apple-Geräte und Smartphones werden nicht unterstützt. Einzelne Funktionen stehen nur auf einer Plattform zur Verfügung, etwa die Mehrgeräte-Synchronisation nur auf Windows. Massgebend ist der Stand in der Testphase beziehungsweise bei der Bestellung.",
+          "Funktionen, die Dritte einbinden – E-Mail-Versand über den Mailserver des Kunden, Cloud- und NAS-Speicher, WebDAV, Drucker, Betriebssystem-Updates, App-Vertriebswege, KI-Dienste – hängen von diesen Dritten ab. Für deren Verfügbarkeit, Änderungen oder Einstellung haften wir nicht."
+        ]
+      },
+      {
+        "id": "updates",
+        "title": "Updates und Weiterentwicklung",
+        "items": [
+          "Laufende Updates mit Korrekturen und Verbesserungen sind kostenlos inbegriffen, solange wir sie anbieten. Ein Anspruch auf bestimmte Funktionen, Termine oder eine bestimmte Dauer des Update-Angebots besteht nicht. Ankündigungen und Roadmaps sind unverbindlich.",
+          "Grössere Zusatzmodule und Tarifaktualisierungen können optional gegen eine Gebühr angeboten werden; ihr Kauf ist freiwillig.",
+          "Updates können Funktionen ändern oder entfernen, wenn dies technisch, rechtlich oder durch Dritte bedingt ist. Der Kunde spielt Updates in angemessener Zeit ein; für Fehler in veralteten Versionen, die in der aktuellen Version behoben sind, leisten wir keine Nachbesserung.",
+          "Wir können die Weiterentwicklung, das Update-Angebot und die Hilfe jederzeit einstellen. Eine erworbene Lizenz bleibt gültig; PDR Kalk arbeitet offline weiter. Daraus entsteht kein Rückerstattungsanspruch."
+        ]
+      },
+      {
+        "id": "warranty",
+        "title": "Gewährleistung",
+        "items": [
+          "PDR Kalk wird in der bei der Bestellung aktuellen Fassung bereitgestellt, so wie es in der Testphase geprüft werden konnte. Software ist nie völlig fehlerfrei; wir gewährleisten nicht, dass PDR Kalk ununterbrochen oder fehlerfrei läuft oder für einen bestimmten Zweck geeignet ist.",
+          "Mängel, die den vertraglich vorgesehenen Gebrauch wesentlich beeinträchtigen, sind uns mit einer nachvollziehbaren Beschreibung per E-Mail zu melden. Wir beheben sie nach unserer Wahl durch ein Update, eine Umgehungslösung oder einen Hinweis innert angemessener Frist.",
+          "Schlägt die Nachbesserung eines wesentlichen Mangels endgültig fehl, kann der Kunde den Lizenzpreis angemessen mindern oder vom Vertrag zurücktreten. Weitergehende Gewährleistungsrechte sind ausgeschlossen, soweit gesetzlich zulässig.",
+          "Keine Mängel sind insbesondere: Abweichungen von Erwartungen, die in der Testphase prüfbar waren; Folgen von Fehleingaben, Fehlkonfiguration, nicht unterstützter Hardware, Drittdiensten, veralteten Versionen oder Eingriffen des Kunden; Änderungen von Tarifen oder Vorgaben Dritter."
+        ]
+      },
+      {
+        "id": "liability",
+        "title": "Haftung",
+        "items": [
+          "Soweit gesetzlich zulässig, ist unsere Haftung ausgeschlossen. Dies gilt insbesondere für indirekte Schäden und Folgeschäden, entgangenen Gewinn, Datenverlust, Betriebsunterbruch, Kosten einer Ersatzbeschaffung, Steuernachforderungen und Bussen sowie für Ansprüche, die Kunden, Versicherer, Subunternehmer, Auftraggeber oder Behörden gegen den Kunden erheben.",
+          "Unberührt bleibt die Haftung für Schäden aus rechtswidriger Absicht oder grober Fahrlässigkeit sowie jede Haftung, die nach anwendbarem Recht nicht ausgeschlossen werden kann.",
+          "Soweit eine Haftung besteht, ist sie je Schadenfall und insgesamt auf den für die betroffene Lizenz bezahlten Betrag begrenzt.",
+          "Der Kunde stellt uns von Ansprüchen Dritter frei, die auf seiner Nutzung von PDR Kalk, seinen Dokumenten oder seinen Daten beruhen."
+        ]
+      },
+      {
+        "id": "ip",
+        "title": "Geistiges Eigentum",
+        "items": [
+          "Alle Rechte an PDR Kalk – Software, Oberflächen, Texte, Tabellenstrukturen, Vorlagen und Dokumentation – verbleiben bei uns. Die Lizenz überträgt keine Rechte, die über die Nutzung nach Ziffer 2 hinausgehen.",
+          "Daten, Dokumente und Fotos, die der Kunde mit PDR Kalk erstellt, gehören dem Kunden.",
+          "Marken Dritter, etwa SilverDAT, Audatex, DATEV, Synology oder OneDrive, gehören ihren Inhabern. PDR Kalk ist weder mit ihnen noch mit einem Versicherer oder Verband verbunden."
+        ]
+      },
+      {
+        "id": "privacy",
+        "title": "Datenschutz",
+        "items": [
+          "PDR Kalk verarbeitet Geschäftsdaten lokal; wir erheben keine Nutzungsdaten und betreiben keine Cloud. Welche Daten bei der Aktivierung der Testversion, beim Abruf von Updates oder bei der freiwilligen Nutzung von Drittdiensten übertragen werden, beschreibt die Datenschutzerklärung auf pdrkalk.ch und in der App.",
+          "Für die Personendaten seiner Kunden, Fahrzeughalter, Mitarbeitenden und Partner ist der Kunde datenschutzrechtlich verantwortlich (revDSG, DSGVO), insbesondere beim E-Mail-Versand, bei der Cloud-Ablage und bei KI-Diensten."
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "Änderungen dieser AGB",
+        "items": [
+          "Für einen Kauf gilt die Fassung, die der Kunde bei der Bestellung akzeptiert hat. Sie wird mit der Bestellung festgehalten und mit der Rechnung mitgeliefert.",
+          "Wir können diese AGB für künftige Bestellungen, Zusatzmodule und die Testversion ändern. Die aktuelle Fassung ist auf pdrkalk.ch abrufbar."
+        ]
+      },
+      {
+        "id": "final",
+        "title": "Schlussbestimmungen",
+        "items": [
+          "Es gilt schweizerisches Recht unter Ausschluss des UN-Kaufrechts (CISG) und der Kollisionsnormen.",
+          "Ausschliesslicher Gerichtsstand ist Schaffhausen, Schweiz, soweit nicht zwingendes Recht einen anderen Gerichtsstand vorschreibt.",
+          "Sollte eine Bestimmung unwirksam sein, bleibt der Rest wirksam. Die unwirksame Bestimmung wird durch eine wirksame ersetzt, die ihrem wirtschaftlichen Zweck am nächsten kommt.",
+          "Diese AGB liegen in Deutsch, Englisch, Französisch und Italienisch vor. Bei Abweichungen ist die deutsche Fassung massgebend.",
+          "Mitteilungen erfolgen per E-Mail an die bei der Bestellung angegebene Adresse beziehungsweise an info@pdrkalk.ch."
+        ]
+      }
     ]
   },
   "screenshots": {
@@ -1922,6 +2149,7 @@
       "contact": "Kontakt",
       "order": "Lizenz bestellen",
       "privacy": "Datenschutz",
+      "terms": "AGB",
       "windowsInstaller": "Windows-Installer",
       "androidApk": "Android-APK"
     }

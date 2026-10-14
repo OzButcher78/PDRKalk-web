@@ -1883,6 +1883,24 @@ button.shot-frame { padding: 0; cursor: zoom-in; }
   color: var(--text-dark-mute);
 }
 .order-line strong { color: #fff; font-weight: 600; }
+/* Terms links directly above the submit button (order page + contact form) */
+.order-terms-links {
+  margin: 0 0 0.6rem;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--text-dark-mute);
+}
+.order-terms-links a {
+  display: inline-block;
+  padding: 0.35rem 0.15rem;
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.order-terms-links a:hover { text-decoration-thickness: 2px; }
+.order-terms-links a:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; border-radius: 2px; }
 .order-send-error {
   margin: 0 0 0.75rem;
   text-align: center;
