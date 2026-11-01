@@ -25,6 +25,48 @@ export type Release = {
 // Newest first.
 export const releases: Release[] = [
   {
+    id: '2026-10-29',
+    date: '2026-10-29',
+    version: '4.27.8',
+    status: 'testing',
+    items: [
+      "Neu: Komplettbackup auf dem Tablet — wird als Ordner in Dokumente → PDR Kalk Backups abgelegt, mit der Datensicherung und allen Fotos, wie am PC; vor dem Start zeigt es die Grösse und prüft den freien Platz, und ist der Arbeitsordner nicht erreichbar, lassen sich ausdrücklich nur die Daten sichern.",
+      "Neu: Lizenzdatei exportieren — am PC unter Einstellungen → Betrieb eine Kopie der Lizenzdatei speichern; das Komplettbackup am PC enthält sie zusätzlich.",
+      "Verbessert: Auftrag übernehmen — ein übernommener Auftrag behält Währung, Stundenansatz und Rabatt des Absenders; Pauschal-Aufträge lassen sich in allen Regionen ausser Australien übernehmen.",
+      "Verbessert: Technische Basis — der PC-Unterbau (Electron) ist auf die aktuelle Version 45 aktualisiert; enthält die Sicherheitskorrekturen von Chromium und Node.",
+      "Fix: Hagel — ein Bauteil mit manuell eingetragener AW zeigt nur noch den Hinweis zur manuellen Eingabe; die Regeln der Tariftabelle (i) erklären gemischte Dellengrössen einfacher und mit Einheiten; in den Emiraten zählt der Pauschal-Betrag auch nach einem Wechsel der Methode.",
+      "Fix: Fotoarchiv — Sicherung in einen Ordner, der noch nicht vollständig synchronisiert ist.",
+      "Fix: Rechnungen — eine noch nicht versandte Rechnung übernimmt Fahrzeug und Kennzeichen aus dem Rapport; eine versandte Rechnung behält beide.",
+    ],
+    itemsEn: [
+      "New: full backup on the tablet — saved as a folder in Documents → PDR Kalk Backups with the data backup and all photos, as on the PC; before it starts it shows the size and checks the free space, and if the work folder cannot be reached you can choose to back up the data only.",
+      "New: export license file — save a copy of your license file on the PC under Settings → Company; the full backup on the PC also contains it.",
+      "Improved: taking over a job — a job taken over keeps the sender's currency, hourly rate and discount; flat-rate jobs can be taken over in every region except Australia.",
+      "Improved: technical foundation — the PC platform (Electron) is updated to the current version 45, including the security fixes of Chromium and Node.",
+      "Fix: hail — a panel with a manually entered AW now shows only the manual-entry notice; the tariff table rules (i) explain mixed dent sizes more simply and with units; in the Emirates the flat-rate amount counts after a change of method too.",
+      "Fix: photo archive — backing up into a folder that is not fully synchronised yet.",
+      "Fix: invoices — an invoice not yet sent takes the vehicle and plate from the report; a sent invoice keeps both.",
+    ],
+    itemsFr: [
+      "Nouveau : sauvegarde complète sur la tablette — enregistrée comme dossier dans Documents → PDR Kalk Backups, avec la sauvegarde des données et toutes les photos, comme sur le PC ; avant le démarrage, elle indique sa taille et vérifie l'espace libre, et si le dossier de travail n'est pas accessible, on peut choisir de sauvegarder uniquement les données.",
+      "Nouveau : exporter le fichier de licence — enregistrer une copie du fichier de licence sur le PC sous Paramètres → Entreprise ; la sauvegarde complète sur le PC la contient aussi.",
+      "Amélioré : reprendre un mandat — un mandat repris garde la devise, le taux horaire et le rabais de l'expéditeur ; les mandats forfaitaires peuvent être repris dans toutes les régions sauf l'Australie.",
+      "Amélioré : base technique — la plateforme PC (Electron) passe à la version actuelle 45, avec les correctifs de sécurité de Chromium et de Node.",
+      "Correctif : grêle — un élément avec des AW saisies manuellement n'affiche plus que la mention de saisie manuelle ; les règles du tarif (i) expliquent plus simplement les tailles de bosses mixtes, avec les unités ; aux Émirats, le montant forfaitaire compte aussi après un changement de méthode.",
+      "Correctif : archive photos — sauvegarde dans un dossier pas encore entièrement synchronisé.",
+      "Correctif : factures — une facture pas encore envoyée reprend le véhicule et la plaque du rapport ; une facture envoyée conserve les deux.",
+    ],
+    itemsIt: [
+      "Nuovo: backup completo sul tablet — salvato come cartella in Documenti → PDR Kalk Backups, con il backup dei dati e tutte le foto, come sul PC; prima dell'avvio mostra la dimensione e verifica lo spazio libero, e se la cartella di lavoro non è raggiungibile si può scegliere di salvare solo i dati.",
+      "Nuovo: esporta file di licenza — salvare una copia del file di licenza sul PC in Impostazioni → Azienda; anche il backup completo sul PC la contiene.",
+      "Migliorato: rilevare un incarico — un incarico rilevato mantiene valuta, tariffa oraria e sconto del mittente; gli incarichi forfettari si possono rilevare in tutte le regioni tranne l'Australia.",
+      "Migliorato: base tecnica — la piattaforma PC (Electron) è aggiornata alla versione attuale 45, con le correzioni di sicurezza di Chromium e Node.",
+      "Correzione: grandine — un elemento con AW inserite manualmente mostra solo l'avviso di inserimento manuale; le regole della tabella tariffaria (i) spiegano in modo più semplice le grandezze miste, con le unità; negli Emirati l'importo forfettario conta anche dopo un cambio di metodo.",
+      "Correzione: archivio foto — salvataggio in una cartella non ancora completamente sincronizzata.",
+      "Correzione: fatture — una fattura non ancora inviata riprende veicolo e targa dal rapporto; una fattura inviata li mantiene entrambi.",
+    ],
+  },
+  {
     id: '2026-10-28',
     date: '2026-10-28',
     version: '4.27.7',
