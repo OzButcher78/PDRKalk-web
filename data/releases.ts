@@ -25,6 +25,40 @@ export type Release = {
 // Newest first.
 export const releases: Release[] = [
   {
+    id: '2026-11-01',
+    date: '2026-11-01',
+    version: '4.27.9',
+    status: 'testing',
+    items: [
+      "Neu: Arbeitsordner — PDR Kalk legt beim ersten Start am PC automatisch einen lokalen Arbeitsordner in Dokumente an; bestehende Installationen ohne Arbeitsordner werden einmalig gefragt und können ihre Fotos mit einem Klick dorthin übernehmen.",
+      "Verbessert: Mehrere Geräte — Abtretungen, Versicherungs-Workflows, Sub-Aufträge und Sub-Abrechnungen werden beim Speichern mit dem Stand im Arbeitsordner zusammengeführt statt ihn zu ersetzen; gleichzeitige Änderungen zweier Geräte gehen nicht mehr verloren. Die Tabellendateien werden einmalig neu geschrieben.",
+      "Verbessert: Diagnose-Bericht — nennt am PC die installierte Sicherheitssoftware und misst beim Senden des Berichts, ob das Ablegen einer Sicherung im Sicherungsordner blockiert wird.",
+      "Verbessert: Dokumentimport — in den Emiraten zeigt der Hagel-Editor die Import-Schaltfläche bei manueller Methode ausgegraut mit Hinweis, statt sie zu verbergen.",
+      "Fix: Datensicherung am PC — hält ein Sync-Programm oder Virenscanner die fertig geschriebene Sicherung länger fest oder blockiert das Umbenennen ganz, wird sie jetzt trotzdem abgelegt statt mit «Zugriff verweigert» oder einer Zeitüberschreitung abzubrechen.",
+    ],
+    itemsEn: [
+      "New: work folder — on its first start on the PC, PDR Kalk now creates a local work folder in Documents by itself; existing installations without a work folder are asked once and can move their photos there with one click.",
+      "Improved: several devices — assignments, insurance workflows, sub jobs and sub statements are merged with the state in the work folder when saved instead of replacing it; simultaneous changes on two devices are no longer lost. The table files are rewritten once.",
+      "Improved: diagnostic report — on the PC it names the installed security software and, when the report is sent, measures whether saving a backup into the backup folder is being blocked.",
+      "Improved: document import — in the Emirates the hail editor now shows the import button greyed out with a hint on a manual method instead of hiding it.",
+      "Fix: data backup on the PC — if a sync program or virus scanner holds on to the finished backup for longer or blocks renaming it altogether, it is now saved anyway instead of stopping with “access denied” or a timeout.",
+    ],
+    itemsFr: [
+      "Nouveau : dossier de travail — au premier démarrage sur le PC, PDR Kalk crée automatiquement un dossier de travail local dans Documents ; les installations existantes sans dossier de travail sont consultées une seule fois et peuvent y transférer leurs photos en un clic.",
+      "Amélioré : plusieurs appareils — les cessions, les dossiers d'assurance, les mandats de sous-traitance et les décomptes de sous-traitance sont fusionnés à l'enregistrement avec l'état du dossier de travail au lieu de le remplacer ; les modifications simultanées de deux appareils ne sont plus perdues. Les fichiers de tables sont réécrits une fois.",
+      "Amélioré : rapport de diagnostic — sur le PC, il indique le logiciel de sécurité installé et mesure, à l'envoi du rapport, si l'enregistrement d'une sauvegarde dans le dossier de sauvegarde est bloqué.",
+      "Amélioré : import de documents — aux Émirats, l'éditeur de grêle affiche le bouton d'import grisé avec une indication lorsqu'une méthode manuelle est choisie, au lieu de le masquer.",
+      "Correctif : sauvegarde des données sur le PC — si un programme de synchronisation ou un antivirus retient plus longtemps la sauvegarde terminée ou en bloque complètement le renommage, elle est désormais quand même enregistrée au lieu de s'interrompre avec « Accès refusé » ou un dépassement de délai.",
+    ],
+    itemsIt: [
+      "Novità: cartella di lavoro — al primo avvio sul PC, PDR Kalk crea automaticamente una cartella di lavoro locale in Documenti; le installazioni esistenti senza cartella di lavoro ricevono una sola richiesta e possono trasferirvi le foto con un clic.",
+      "Migliorato: più dispositivi — cessioni, pratiche assicurative, incarichi ai subappaltatori e conteggi dei subappaltatori vengono uniti al salvataggio con lo stato nella cartella di lavoro invece di sostituirlo; le modifiche simultanee di due dispositivi non vanno più perse. I file delle tabelle vengono riscritti una volta.",
+      "Migliorato: rapporto di diagnostica — sul PC indica il software di sicurezza installato e misura, all'invio del rapporto, se il salvataggio di un backup nella cartella dei backup viene bloccato.",
+      "Migliorato: importazione documenti — negli Emirati l'editor grandine mostra il pulsante di importazione disattivato con un'indicazione quando è scelto un metodo manuale, invece di nasconderlo.",
+      "Correzione: backup dei dati sul PC — se un programma di sincronizzazione o un antivirus trattiene più a lungo il backup completato o ne blocca del tutto la ridenominazione, ora viene comunque salvato invece di interrompersi con «Accesso negato» o un timeout.",
+    ],
+  },
+  {
     id: '2026-10-29',
     date: '2026-10-29',
     version: '4.27.8',
