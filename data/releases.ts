@@ -25,6 +25,28 @@ export type Release = {
 // Newest first.
 export const releases: Release[] = [
   {
+    id: '2026-11-12',
+    date: '2026-11-12',
+    version: '4.27.13',
+    status: 'testing',
+    items: [
+      "Neu: Rechnung — die Detailzeile unter dem Fahrzeug kennt zwei weitere Platzhalter: {SchadenNr} und {PolicenNr} (Einstellungen → Dokumente).",
+      "Verbessert: Direkt-Versicherung — Teile, Fremdleistungen und Nebenkosten erscheinen auf neu erstellten Rechnungen als je eine Zeile «davon …» unter dem Gesamttotal gemäss Rapport, sobald ein Betrag vorhanden ist.",
+    ],
+    itemsEn: [
+      "New: invoice — the detail line under the vehicle knows two more placeholders: {ClaimNo} and {PolicyNo} (Settings → Documents).",
+      "Improved: direct insurance billing — parts, third-party services and ancillary costs appear on newly created invoices as one “of which …” line each under the grand total per report, as soon as there is an amount.",
+    ],
+    itemsFr: [
+      "Nouveau : facture — la ligne de détail sous le véhicule connaît deux espaces réservés de plus : {SchadenNr} et {PolicenNr} (Paramètres → Documents).",
+      "Amélioré : facturation directe à l'assurance — les pièces, les prestations externes et les frais annexes apparaissent sur les factures nouvellement créées, chacun sur une ligne «dont …» sous le total selon rapport, dès qu'un montant existe.",
+    ],
+    itemsIt: [
+      "Novità: fattura — la riga di dettaglio sotto il veicolo conosce due segnaposto in più: {SchadenNr} e {PolicenNr} (Impostazioni → Documenti).",
+      "Migliorato: fatturazione diretta all'assicurazione — parti, prestazioni esterne e spese accessorie compaiono sulle fatture create da ora in poi, ciascuna su una riga «di cui …» sotto il totale secondo rapporto, non appena è presente un importo.",
+    ],
+  },
+  {
     id: '2026-11-11-pre12',
     date: '2026-11-11',
     version: '4.27.12',
