@@ -25,6 +25,32 @@ export type Release = {
 // Newest first.
 export const releases: Release[] = [
   {
+    id: '2026-11-14',
+    date: '2026-11-14',
+    version: '4.27.14',
+    status: 'testing',
+    items: [
+      "Verbessert: Dokumentenliste — ein Filter, der Einträge ausblendet, ist farblich hinterlegt (Zeitraum, Status, Typ, Versicherung, Kunde, Suche); die leere Liste nennt die Filter als Grund und setzt sie mit einem Klick zurück.",
+      "Verbessert: Verlauf — die Anhänge der Fertigmeldung sind einzeln benannt (Übernahme-Datei, Arbeitsrapport, Rechnung); bei eigenen Aufträgen steht «Fertigmeldung gesendet mit Rechnung …» statt «Abweichung».",
+      "Fix: Sub-Auftrag — eine Rechnung, die direkt aus dem Sub-Auftrag an den Auftraggeber gesendet wird, gilt jetzt als zugestellt (Status, Fälligkeit, Versand-Haken); bisher blieb sie auf «Erstellt». Bereits so versendete Rechnungen bitte von Hand auf «Zugestellt» setzen.",
+    ],
+    itemsEn: [
+      "Improved: documents list — a filter that hides entries is tinted (period, status, type, insurance, customer, search); the empty list names the filters as the reason and resets them in one click.",
+      "Improved: history — the attachments of the completion report are named one by one (transfer file, work report, invoice); for your own jobs it reads “Completion report sent with invoice …” instead of “Deviation”.",
+      "Fix: subcontract job — an invoice sent to the Auftraggeber directly from the subcontract job now counts as delivered (status, due date, sent tick); until now it stayed on “Invoice Created”. Please set invoices already sent this way to “Invoice Delivered” by hand.",
+    ],
+    itemsFr: [
+      "Amélioré : liste des documents — un filtre qui masque des entrées est mis en couleur (période, statut, type, assurance, client, recherche) ; la liste vide indique les filtres comme raison et les réinitialise en un clic.",
+      "Amélioré : historique — les pièces jointes de l'avis de fin sont nommées une à une (fichier de transfert, rapport de travail, facture) ; pour vos propres mandats, on lit «Avis d'achèvement envoyé avec la facture …» au lieu de «Écart».",
+      "Correctif : mandat de sous-traitance — une facture envoyée au donneur d'ordre directement depuis le mandat de sous-traitance est désormais considérée comme remise (statut, échéance, coche d'envoi) ; jusqu'ici elle restait sur «Facture créée». Veuillez passer à la main sur «Facture remise» les factures déjà envoyées de cette manière.",
+    ],
+    itemsIt: [
+      "Migliorato: elenco documenti — un filtro che nasconde delle voci è evidenziato a colori (periodo, stato, tipo, assicurazione, cliente, ricerca); l'elenco vuoto indica i filtri come motivo e li reimposta con un clic.",
+      "Migliorato: cronologia — gli allegati della comunicazione di fine lavoro sono nominati uno per uno (file di trasferimento, rapporto di lavoro, fattura); per i propri incarichi si legge «Avviso di completamento inviato con la fattura …» invece di «Deviazione».",
+      "Correzione: incarico in subappalto — una fattura inviata al committente direttamente dall'incarico in subappalto ora risulta consegnata (stato, scadenza, spunta di invio); finora restava su «Fattura creata». Le fatture già inviate in questo modo vanno impostate a mano su «Fattura consegnata».",
+    ],
+  },
+  {
     id: '2026-11-12',
     date: '2026-11-12',
     version: '4.27.13',
