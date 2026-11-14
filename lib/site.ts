@@ -71,7 +71,7 @@ export const PAYMENT_TERM_DAYS = 14;
  * or the `terms` namespace changes in any message file, then run
  * `npm run terms:pdf`.
  */
-export const TERMS_VERSION = '2026-10-14';
+export const TERMS_VERSION = '2026-11-14';
 
 /** The full terms page, relative to the page home (/de/terms/, /au/terms/). */
 export const TERMS_PATH = 'terms/';

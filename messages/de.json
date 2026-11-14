@@ -1545,7 +1545,7 @@
     "terms": {
       "title": "Lizenz- und Zahlungsbedingungen",
       "versionLabel": "Fassung",
-      "seller": "Anbieterin: Balmer Storm Solutions, Schweiz",
+      "seller": "Anbieterin: Balmer Storm Solutions, Oberer Hof 2, 8214 Gächlingen, Schweiz",
       "fullTerms": "Ergänzend gelten die vollständigen <link>Allgemeinen Geschäftsbedingungen (AGB)</link>; sie liegen jeder Rechnung als PDF bei.",
       "items": [
         {
@@ -1690,6 +1690,8 @@
             "lines": [
               "Balmer Storm Solutions",
               "Inhaber: Dieter Balmer",
+              "Oberer Hof 2",
+              "8214 Gächlingen",
               "Schweiz",
               "UID: CHE-375.250.746"
             ]
@@ -1991,6 +1993,8 @@
             "lines": [
               "Balmer Storm Solutions",
               "Inhaber: Dieter Balmer",
+              "Oberer Hof 2",
+              "8214 Gächlingen",
               "Schweiz"
             ]
           }
@@ -2028,6 +2032,8 @@
             "lines": [
               "Dieter Balmer",
               "Balmer Storm Solutions",
+              "Oberer Hof 2",
+              "8214 Gächlingen",
               "Schweiz"
             ]
           }
@@ -2061,14 +2067,17 @@
     "metaDescription": "Allgemeine Geschäftsbedingungen für PDR Kalk: Dauerlizenz, Testversion, Bestellung und Zahlung, kein Widerruf, Hilfe ohne IT-Support, Tarife und Berechnungen, KI-Funktionen, Gewährleistung und Haftung.",
     "crumbHome": "Start",
     "title": "Allgemeine Geschäftsbedingungen (AGB)",
-    "lastUpdated": "Stand: 14. Oktober 2026",
+    "lastUpdated": "Stand: 14. November 2026",
     "versionLabel": "Fassung",
     "intro": "Diese AGB regeln die Testversion, den Kauf und die Nutzung der Software PDR Kalk für Windows und Android. Sie gelten gegenüber Unternehmen und Selbständigen (B2B). Mit der Bestellung oder der Nutzung von PDR Kalk akzeptieren Sie diese AGB.",
     "sellerTitle": "Anbieterin",
     "sellerLines": [
       "Balmer Storm Solutions",
       "Dieter Balmer",
+      "Oberer Hof 2",
+      "8214 Gächlingen",
       "Schweiz",
+      "UID: CHE-375.250.746",
       "info@pdrkalk.ch"
     ],
     "pdfLabel": "AGB als PDF herunterladen",
@@ -2081,7 +2090,7 @@
         "id": "scope",
         "title": "Anbieterin und Geltungsbereich",
         "items": [
-          "Anbieterin von PDR Kalk ist Balmer Storm Solutions, Dieter Balmer, Schweiz (nachfolgend «wir»). Kontakt: info@pdrkalk.ch.",
+          "Anbieterin von PDR Kalk ist Balmer Storm Solutions, Dieter Balmer, Oberer Hof 2, 8214 Gächlingen, Schweiz (nachfolgend «wir»). Kontakt: info@pdrkalk.ch.",
           "Diese AGB gelten für die Testversion, den Kauf einer Lizenz, Updates sowie allfällige Zusatzmodule von PDR Kalk. Sie gelten ausschliesslich gegenüber Unternehmen und Selbständigen (B2B); ein Verkauf an Konsumentinnen und Konsumenten findet nicht statt.",
           "Die «Lizenz- und Zahlungsbedingungen» auf der Bestellseite fassen diese AGB zusammen und sind Teil davon. Abweichende Bedingungen des Kunden gelten nur, wenn wir ihnen schriftlich zugestimmt haben."
         ]
@@ -2249,7 +2258,7 @@
         "title": "Datenschutz",
         "items": [
           "PDR Kalk verarbeitet Geschäftsdaten lokal; wir erheben keine Nutzungsdaten und betreiben keine Cloud. Welche Daten bei der Aktivierung der Testversion, beim Abruf von Updates oder bei der freiwilligen Nutzung von Drittdiensten übertragen werden, beschreibt die Datenschutzerklärung auf pdrkalk.ch und in der App.",
-          "Für die Personendaten seiner Kunden, Fahrzeughalter, Mitarbeitenden und Partner ist der Kunde datenschutzrechtlich verantwortlich (revDSG, DSGVO), insbesondere beim E-Mail-Versand, bei der Cloud-Ablage und bei KI-Diensten."
+          "Für die Personendaten seiner Kunden, Fahrzeughalter, Mitarbeitenden und Partner ist der Kunde datenschutzrechtlich verantwortlich (DSG, DSGVO), insbesondere beim E-Mail-Versand, bei der Cloud-Ablage und bei KI-Diensten."
         ]
       },
       {

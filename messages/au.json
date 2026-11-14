@@ -1375,7 +1375,7 @@
     "terms": {
       "title": "Licence and payment terms",
       "versionLabel": "Version",
-      "seller": "Seller: Balmer Storm Solutions, Switzerland",
+      "seller": "Seller: Balmer Storm Solutions, Oberer Hof 2, 8214 Gächlingen, Switzerland",
       "fullTerms": "The full <link>general terms and conditions</link> apply in addition; they are attached to every tax invoice as a PDF.",
       "items": [
         {
@@ -1482,14 +1482,17 @@
     "metaDescription": "General terms and conditions for PDR Kalk in Australia: perpetual licence, trial, ordering and payment, no change-of-mind refunds, help without IT support, tariffs and calculations, AI features, warranty and liability.",
     "crumbHome": "Home",
     "title": "General terms and conditions",
-    "lastUpdated": "Last updated: 14 October 2026",
+    "lastUpdated": "Last updated: 14 November 2026",
     "versionLabel": "Version",
     "intro": "These terms govern the trial, the purchase and the use of the PDR Kalk software for Windows and Android. They apply to businesses (B2B). By ordering or using PDR Kalk you accept these terms.",
     "sellerTitle": "Provider",
     "sellerLines": [
       "Balmer Storm Solutions",
       "Dieter Balmer",
+      "Oberer Hof 2",
+      "8214 Gächlingen",
       "Switzerland",
+      "Business ID (UID): CHE-375.250.746",
       "info@pdrkalk.ch"
     ],
     "pdfLabel": "Download the terms as PDF",
@@ -1502,7 +1505,7 @@
         "id": "scope",
         "title": "Provider and scope",
         "items": [
-          "PDR Kalk is provided by Balmer Storm Solutions, Dieter Balmer, Switzerland (“we”). Contact: info@pdrkalk.ch.",
+          "PDR Kalk is provided by Balmer Storm Solutions, Dieter Balmer, Oberer Hof 2, 8214 Gächlingen, Switzerland (“we”). Contact: info@pdrkalk.ch.",
           "These terms apply to the trial, the purchase of a licence, updates and any add-on modules of PDR Kalk. They apply to business customers only (B2B); PDR Kalk is not sold to consumers for personal, domestic or household use.",
           "The “licence and payment terms” on the order page summarise these terms and form part of them. The customer’s own terms apply only if we have agreed to them in writing."
         ]

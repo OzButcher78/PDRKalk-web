@@ -1545,7 +1545,7 @@
     "terms": {
       "title": "Condizioni di licenza e di pagamento",
       "versionLabel": "Versione",
-      "seller": "Venditore: Balmer Storm Solutions, Svizzera",
+      "seller": "Venditore: Balmer Storm Solutions, Oberer Hof 2, 8214 Gächlingen, Svizzera",
       "fullTerms": "Si applicano inoltre le <link>condizioni generali (CG)</link> complete; sono allegate in PDF a ogni fattura.",
       "items": [
         {
@@ -1690,6 +1690,8 @@
             "lines": [
               "Balmer Storm Solutions",
               "Titolare: Dieter Balmer",
+              "Oberer Hof 2",
+              "8214 Gächlingen",
               "Svizzera",
               "Numero d'identificazione delle imprese (IDI): CHE-375.250.746"
             ]
@@ -1991,6 +1993,8 @@
             "lines": [
               "Balmer Storm Solutions",
               "Titolare: Dieter Balmer",
+              "Oberer Hof 2",
+              "8214 Gächlingen",
               "Svizzera"
             ]
           }
@@ -2028,6 +2032,8 @@
             "lines": [
               "Dieter Balmer",
               "Balmer Storm Solutions",
+              "Oberer Hof 2",
+              "8214 Gächlingen",
               "Svizzera"
             ]
           }
@@ -2061,14 +2067,17 @@
     "metaDescription": "Condizioni generali di PDR Kalk: licenza perpetua, versione di prova, ordine e pagamento, nessun rimborso, assistenza senza supporto informatico, tariffe e calcoli, funzioni IA, garanzia e responsabilità.",
     "crumbHome": "Home",
     "title": "Condizioni generali (CG)",
-    "lastUpdated": "Ultimo aggiornamento: 14 ottobre 2026",
+    "lastUpdated": "Ultimo aggiornamento: 14 novembre 2026",
     "versionLabel": "Versione",
     "intro": "Le presenti CG disciplinano la versione di prova, l’acquisto e l’uso del software PDR Kalk per Windows e Android. Si applicano ad aziende e lavoratori autonomi (B2B). Ordinando o utilizzando PDR Kalk accettate le presenti CG.",
     "sellerTitle": "Fornitore",
     "sellerLines": [
       "Balmer Storm Solutions",
       "Dieter Balmer",
+      "Oberer Hof 2",
+      "8214 Gächlingen",
       "Svizzera",
+      "IDI: CHE-375.250.746",
       "info@pdrkalk.ch"
     ],
     "pdfLabel": "Scaricare le CG in PDF",
@@ -2081,7 +2090,7 @@
         "id": "scope",
         "title": "Fornitore e ambito di applicazione",
         "items": [
-          "PDR Kalk è fornito da Balmer Storm Solutions, Dieter Balmer, Svizzera (di seguito «noi»). Contatto: info@pdrkalk.ch.",
+          "PDR Kalk è fornito da Balmer Storm Solutions, Dieter Balmer, Oberer Hof 2, 8214 Gächlingen, Svizzera (di seguito «noi»). Contatto: info@pdrkalk.ch.",
           "Le presenti CG si applicano alla versione di prova, all’acquisto di una licenza, agli aggiornamenti e agli eventuali moduli aggiuntivi di PDR Kalk. Si applicano esclusivamente ad aziende e lavoratori autonomi (B2B); PDR Kalk non viene venduto a consumatori.",
           "Le «condizioni di licenza e di pagamento» della pagina di ordine riassumono le presenti CG e ne fanno parte. Condizioni proprie del cliente si applicano solo se le abbiamo accettate per iscritto."
         ]
@@ -2249,7 +2258,7 @@
         "title": "Protezione dei dati",
         "items": [
           "PDR Kalk elabora i dati aziendali localmente; non raccogliamo dati di utilizzo e non gestiamo alcun cloud. L’informativa sulla privacy su pdrkalk.ch e nell’app descrive quali dati vengono trasmessi all’attivazione della versione di prova, alla ricerca di aggiornamenti o all’uso volontario di servizi di terzi.",
-          "Il cliente è il titolare del trattamento dei dati personali dei propri clienti, detentori di veicoli, collaboratori e partner (nLPD, GDPR), in particolare nell’invio di e-mail, nell’archiviazione cloud e nell’uso di servizi di IA."
+          "Il cliente è il titolare del trattamento dei dati personali dei propri clienti, detentori di veicoli, collaboratori e partner (LPD, GDPR), in particolare nell’invio di e-mail, nell’archiviazione cloud e nell’uso di servizi di IA."
         ]
       },
       {

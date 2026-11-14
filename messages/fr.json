@@ -1545,7 +1545,7 @@
     "terms": {
       "title": "Conditions de licence et de paiement",
       "versionLabel": "Version",
-      "seller": "Vendeur : Balmer Storm Solutions, Suisse",
+      "seller": "Vendeur : Balmer Storm Solutions, Oberer Hof 2, 8214 Gächlingen, Suisse",
       "fullTerms": "Les <link>conditions générales (CG)</link> complètes s’appliquent en complément ; elles sont jointes en PDF à chaque facture.",
       "items": [
         {
@@ -1690,6 +1690,8 @@
             "lines": [
               "Balmer Storm Solutions",
               "Titulaire : Dieter Balmer",
+              "Oberer Hof 2",
+              "8214 Gächlingen",
               "Suisse",
               "Numéro d'identification des entreprises (IDE) : CHE-375.250.746"
             ]
@@ -1991,6 +1993,8 @@
             "lines": [
               "Balmer Storm Solutions",
               "Titulaire : Dieter Balmer",
+              "Oberer Hof 2",
+              "8214 Gächlingen",
               "Suisse"
             ]
           }
@@ -2028,6 +2032,8 @@
             "lines": [
               "Dieter Balmer",
               "Balmer Storm Solutions",
+              "Oberer Hof 2",
+              "8214 Gächlingen",
               "Suisse"
             ]
           }
@@ -2061,14 +2067,17 @@
     "metaDescription": "Conditions générales de PDR Kalk : licence perpétuelle, version d’essai, commande et paiement, pas de remboursement, aide sans support informatique, tarifs et calculs, fonctions d’IA, garantie et responsabilité.",
     "crumbHome": "Accueil",
     "title": "Conditions générales (CG)",
-    "lastUpdated": "Dernière mise à jour : 14 octobre 2026",
+    "lastUpdated": "Dernière mise à jour : 14 novembre 2026",
     "versionLabel": "Version",
     "intro": "Les présentes CG régissent la version d’essai, l’achat et l’utilisation du logiciel PDR Kalk pour Windows et Android. Elles s’appliquent aux entreprises et aux indépendants (B2B). En commandant ou en utilisant PDR Kalk, vous acceptez les présentes CG.",
     "sellerTitle": "Fournisseur",
     "sellerLines": [
       "Balmer Storm Solutions",
       "Dieter Balmer",
+      "Oberer Hof 2",
+      "8214 Gächlingen",
       "Suisse",
+      "IDE : CHE-375.250.746",
       "info@pdrkalk.ch"
     ],
     "pdfLabel": "Télécharger les CG en PDF",
@@ -2081,7 +2090,7 @@
         "id": "scope",
         "title": "Fournisseur et champ d’application",
         "items": [
-          "PDR Kalk est fourni par Balmer Storm Solutions, Dieter Balmer, Suisse (ci-après « nous »). Contact : info@pdrkalk.ch.",
+          "PDR Kalk est fourni par Balmer Storm Solutions, Dieter Balmer, Oberer Hof 2, 8214 Gächlingen, Suisse (ci-après « nous »). Contact : info@pdrkalk.ch.",
           "Les présentes CG s’appliquent à la version d’essai, à l’achat d’une licence, aux mises à jour et aux éventuels modules complémentaires de PDR Kalk. Elles s’appliquent exclusivement aux entreprises et aux indépendants (B2B) ; PDR Kalk n’est pas vendu aux consommateurs.",
           "Les « conditions de licence et de paiement » de la page de commande résument les présentes CG et en font partie. Les conditions propres du client ne s’appliquent que si nous les avons acceptées par écrit."
         ]
@@ -2249,7 +2258,7 @@
         "title": "Protection des données",
         "items": [
           "PDR Kalk traite les données commerciales localement ; nous ne collectons aucune donnée d’utilisation et n’exploitons aucun cloud. La déclaration de confidentialité sur pdrkalk.ch et dans l’application décrit quelles données sont transmises lors de l’activation de la version d’essai, lors de la recherche de mises à jour ou lors de l’utilisation volontaire de services tiers.",
-          "Le client est responsable, au sens du droit de la protection des données (nLPD, RGPD), des données personnelles de ses clients, détenteurs de véhicules, collaborateurs et partenaires, en particulier lors de l’envoi d’e-mails, du stockage dans le cloud et de l’utilisation de services d’IA."
+          "Le client est responsable, au sens du droit de la protection des données (LPD, RGPD), des données personnelles de ses clients, détenteurs de véhicules, collaborateurs et partenaires, en particulier lors de l’envoi d’e-mails, du stockage dans le cloud et de l’utilisation de services d’IA."
         ]
       },
       {
