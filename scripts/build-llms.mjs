@@ -30,6 +30,7 @@ const pages = [
   ...LOCALES.map(l => `- ${SITE}/${l}/updates/ — release notes (${l})`),
   ...slugBlocks.flatMap(slugs => LOCALES.map(l => `- ${SITE}/${l}/${slugs[l]}/ — feature page (${l})`)),
   ...LOCALES.map(l => `- ${SITE}/${l}/privacy/ — privacy policy (${l})`),
+  ...LOCALES.map(l => `- ${SITE}/${l}/imprint/ — legal notice / imprint: provider, contact, company details (${l})`),
   ...LOCALES.map(l => `- ${SITE}/${l}/terms/ — general terms and conditions (${l}), with a PDF copy`),
   `- ${SITE}/au/terms/ — Australian terms and conditions (AUD, GST, Australian Consumer Law), with a PDF copy`,
   `- ${SITE}/sitemap.xml — sitemap`,

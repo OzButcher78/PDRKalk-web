@@ -58,6 +58,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: {languages: cluster('/privacy/')},
   }));
 
+  const imprint: MetadataRoute.Sitemap = routing.locales.map(locale => ({
+    url: `${SITE_URL}/${locale}/imprint/`,
+    lastModified: now,
+    changeFrequency: 'yearly',
+    priority: 0.3,
+    alternates: {languages: cluster('/imprint/')},
+  }));
+
   const terms: MetadataRoute.Sitemap = routing.locales.map(locale => ({
     url: `${SITE_URL}/${locale}/${TERMS_PATH}`,
     lastModified: now,
@@ -89,5 +97,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  return [...home, ...au, ...featurePages, ...updates, ...order, ...privacy, ...terms];
+  return [...home, ...au, ...featurePages, ...updates, ...order, ...privacy, ...imprint, ...terms];
 }

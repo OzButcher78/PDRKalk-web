@@ -106,6 +106,14 @@ export default function Footer({regions = REGION_FLAGS, basePath, showPrivacy = 
                   {t('links.terms')}
                 </Link>
               </li>
+              {/* The imprint lives in the locale tree, like the privacy notice. */}
+              {showPrivacy && (
+                <li>
+                  <Link href={`/${locale}/imprint/`} className="footer-link" style={LINK_STYLE}>
+                    {t('links.imprint')}
+                  </Link>
+                </li>
+              )}
               {showPages && (
                 <li>
                   <Link href={`/${locale}/updates/`} className="footer-link" style={LINK_STYLE}>

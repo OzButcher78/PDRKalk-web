@@ -36,7 +36,8 @@ unless the redirect itself is meant to change.
 |---|---|
 | `/de/ /en/ /fr/ /it/` | `app/[locale]/page.tsx` |
 | `/au/` | `app/au/page.tsx` — standalone, **not** a routing locale |
-| `/{locale}/privacy/` | `app/[locale]/privacy/page.tsx` |
+| `/{locale}/privacy/` | `app/[locale]/privacy/page.tsx` → `components/LegalDoc.tsx` (copy: `privacy.sections`) |
+| `/{locale}/imprint/` | `app/[locale]/imprint/page.tsx` → `components/LegalDoc.tsx` (copy: `imprint.sections`) |
 | `/{locale}/terms/` | `app/[locale]/terms/page.tsx` → `components/Terms.tsx` (copy: `terms` namespace; PDF link from `TERMS_PDF`) |
 | `/au/terms/` | `app/au/terms/page.tsx` — static metadata from `au.json`, its own clause set (AUD, GST, Australian Consumer Law) |
 | `/{locale}/updates/` | `app/[locale]/updates/page.tsx` (data: `data/releases.ts`) |
@@ -98,6 +99,14 @@ Rules the prebuild checker enforces:
 - `terms.sections` keeps the same shape in de/en/fr/it (section count, clause count,
   string vs `{text, bullets}`) because the checker compares array indices; `au.json`
   carries its own clause set (`AU_OPTIONAL`). German is the governing text (clause 19.4).
+
+- `privacy.sections` and `imprint.sections` are lists of `{id, title, blocks}`; a block
+  is a string (paragraph) or one of `{h}`, `{list}`, `{lines}`, `{email}`, `{url}`
+  (`components/LegalDoc.tsx`). Same shape in de/en/fr/it. The privacy notice covers the
+  website, both forms (Formspree), the video, the downloads and the app (trial
+  activation, update check, AI scanner): when a third party is added or dropped,
+  update it in all four locales. The section id `ai-privacy` is linked from
+  `Integrations` — keep it. `/au` has neither page (`showPrivacy={false}` hides both links).
 
 A new placeholder goes into `SITE_VALUES` (`lib/interpolate.ts`, if site-wide),
 `KNOWN_PLACEHOLDERS` (`scripts/check-messages.mjs`) and `PLACEHOLDER_RE`

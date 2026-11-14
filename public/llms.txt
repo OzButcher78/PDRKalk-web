@@ -80,6 +80,10 @@ Independent PDR technicians, hail-repair workshops and PDR subcontractors in Swi
 - https://pdrkalk.ch/en/privacy/ — privacy policy (en)
 - https://pdrkalk.ch/fr/privacy/ — privacy policy (fr)
 - https://pdrkalk.ch/it/privacy/ — privacy policy (it)
+- https://pdrkalk.ch/de/imprint/ — legal notice / imprint: provider, contact, company details (de)
+- https://pdrkalk.ch/en/imprint/ — legal notice / imprint: provider, contact, company details (en)
+- https://pdrkalk.ch/fr/imprint/ — legal notice / imprint: provider, contact, company details (fr)
+- https://pdrkalk.ch/it/imprint/ — legal notice / imprint: provider, contact, company details (it)
 - https://pdrkalk.ch/de/terms/ — general terms and conditions (de), with a PDF copy
 - https://pdrkalk.ch/en/terms/ — general terms and conditions (en), with a PDF copy
 - https://pdrkalk.ch/fr/terms/ — general terms and conditions (fr), with a PDF copy

@@ -108,7 +108,11 @@ for (const file of htmlFiles) {
   // --- leaked message plumbing
   const text = textOnly(html);
   if (text.includes('MISSING_MESSAGE')) err(`${name}: MISSING_MESSAGE in the rendered text`);
-  const literalKey = text.match(/\b(hero|nav|trust|demo|workflow|whatsNew|features|regions|integrations|documents|team|security|testimonials|pricing|faq|download|contact|footer|updates|pages|badges|screenshots|order|terms)\.[a-zA-Z][\w.]*/);
+  // `updates.pdrkalk.ch` is a real host name (the app's fallback update feed,
+  // named in the privacy notice) — not a leaked `updates.*` message key.
+  const literalKey = text
+    .replace(/\bupdates\.pdrkalk\.ch\b/g, '')
+    .match(/\b(hero|nav|trust|demo|workflow|whatsNew|features|regions|integrations|documents|team|security|testimonials|pricing|faq|download|contact|footer|updates|pages|badges|screenshots|order|terms)\.[a-zA-Z][\w.]*/);
   if (literalKey) err(`${name}: literal message key in text: ${literalKey[0]}`);
   const PLACEHOLDER_RE = /\{(version|price|priceEur|days|languages|years|paymentDays|n|caption|r|title|amount|email)\}/;
   const placeholder = text.match(PLACEHOLDER_RE);

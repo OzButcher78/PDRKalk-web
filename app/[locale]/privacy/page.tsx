@@ -4,6 +4,7 @@ import {getTranslations, setRequestLocale} from 'next-intl/server';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BackToTop from '@/components/BackToTop';
+import LegalDoc, {type LegalSection} from '@/components/LegalDoc';
 import {routing} from '@/i18n/routing';
 import {pageMetadata} from '@/lib/seo';
 
@@ -51,135 +52,20 @@ export default async function PrivacyPage({params}: Props) {
   );
 }
 
+/**
+ * The notice covers the website, the contact and order forms and the app
+ * (trial activation, update check, optional AI scanner). The section with the
+ * id `ai-privacy` is linked from the Integrations block — keep that id.
+ */
 function PrivacyContent() {
   const t = useTranslations('privacy');
-  const dataCollected = t.raw('dataCollectedItems') as string[];
-  const dataNotCollected = t.raw('dataNotCollectedItems') as string[];
-  const aiItems = t.raw('aiItems') as string[];
 
   return (
-    <article
-      style={{
-        maxWidth: '760px',
-        margin: '0 auto',
-        fontFamily: 'var(--font-body)',
-        lineHeight: 1.7,
-      }}
-    >
-      <h1
-        style={{
-          fontFamily: 'var(--font-display)',
-          fontSize: '2.4rem',
-          fontWeight: 800,
-          letterSpacing: '0.02em',
-          marginBottom: '0.5rem',
-          color: '#fff',
-        }}
-      >
-        {t('title')}
-      </h1>
-      <p
-        style={{
-          fontSize: '0.85rem',
-          color: 'var(--steel)',
-          letterSpacing: '0.04em',
-          marginTop: 0,
-          marginBottom: '2rem',
-        }}
-      >
-        {t('lastUpdated')}
-      </p>
-
-      <p style={{marginBottom: '2rem'}}>{t('intro')}</p>
-
-      <Section title={t('dataCollectedTitle')}>
-        <p>{t('dataCollectedIntro')}</p>
-        <ul style={{paddingLeft: '1.25rem'}}>
-          {dataCollected.map((item, i) => (
-            <li key={i} style={{marginBottom: '0.4rem'}}>{item}</li>
-          ))}
-        </ul>
-        <p style={{marginTop: '1.5rem', fontWeight: 600, color: '#fff'}}>
-          {t('dataNotCollectedTitle')}
-        </p>
-        <ul style={{paddingLeft: '1.25rem'}}>
-          {dataNotCollected.map((item, i) => (
-            <li key={i} style={{marginBottom: '0.4rem'}}>{item}</li>
-          ))}
-        </ul>
-      </Section>
-
-      <Section title={t('aiTitle')} id="ai-privacy">
-        <p>{t('aiBody')}</p>
-        <ul style={{paddingLeft: '1.25rem'}}>
-          {aiItems.map((item, i) => (
-            <li key={i} style={{marginBottom: '0.4rem'}}>{item}</li>
-          ))}
-        </ul>
-      </Section>
-
-      <Section title={t('purposeTitle')}>
-        <p>{t('purposeBody')}</p>
-      </Section>
-
-      <Section title={t('retentionTitle')}>
-        <p>{t('retentionBody')}</p>
-      </Section>
-
-      <Section title={t('processorTitle')}>
-        <p>{t('processorBody')}</p>
-      </Section>
-
-      <Section title={t('rightsTitle')}>
-        <p>{t('rightsBody')}</p>
-        <p style={{margin: '0.75rem 0'}}>
-          <a
-            href={`mailto:${t('rightsContact')}`}
-            className="tap-link"
-            style={{
-              color: 'var(--red)',
-              fontWeight: 700,
-              fontSize: '1.05rem',
-              textDecoration: 'none',
-              fontFamily: 'var(--font-display)',
-              letterSpacing: '0.04em',
-            }}
-          >
-            {t('rightsContact')}
-          </a>
-        </p>
-        <p style={{fontSize: '0.9rem', color: 'var(--steel)'}}>{t('rightsContactNote')}</p>
-      </Section>
-
-      <Section title={t('fingerprintTitle')}>
-        <p>{t('fingerprintBody')}</p>
-      </Section>
-
-      <Section title={t('appHelpTitle')}>
-        <p>{t('appHelpBody')}</p>
-      </Section>
-    </article>
-  );
-}
-
-function Section({title, id, children}: {title: string; id?: string; children: React.ReactNode}) {
-  return (
-    <section id={id} style={{marginBottom: '2.5rem'}}>
-      <h2
-        style={{
-          fontFamily: 'var(--font-display)',
-          fontSize: '1.5rem',
-          fontWeight: 700,
-          letterSpacing: '0.03em',
-          marginBottom: '0.75rem',
-          color: '#fff',
-          borderLeft: '3px solid var(--red)',
-          paddingLeft: '0.75rem',
-        }}
-      >
-        {title}
-      </h2>
-      {children}
-    </section>
+    <LegalDoc
+      title={t('title')}
+      lastUpdated={t('lastUpdated')}
+      intro={t('intro')}
+      sections={t.raw('sections') as LegalSection[]}
+    />
   );
 }

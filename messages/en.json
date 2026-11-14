@@ -732,7 +732,7 @@
         "highlights": [
           {
             "t": "Windows 10/11 & Android 10+",
-            "d": "100 % local, GDPR and revFADP compliant, with no vendor cloud."
+            "d": "100 % local, GDPR and FADP compliant, with no vendor cloud."
           },
           {
             "t": "NAS and cloud folder sync",
@@ -1058,7 +1058,7 @@
       },
       {
         "icon": "lock",
-        "title": "GDPR & revFADP",
+        "title": "GDPR & FADP",
         "desc": "No telemetry, no vendor cloud, no analytics cookies on this website. EXIF and GPS data are stripped from photos before they reach the job."
       }
     ]
@@ -1394,7 +1394,7 @@
       {
         "id": "audit",
         "q": "Is PDR Kalk audit-compliant?",
-        "a": "Every change is recorded in a SHA-256 hash chain; document versions and PDF snapshots are created automatically on every status change. The audit trail can be exported as JSON and verified. Built to GDPR and revFADP."
+        "a": "Every change is recorded in a SHA-256 hash chain; document versions and PDF snapshots are created automatically on every status change. The audit trail can be exported as JSON and verified. Built to GDPR and FADP."
       },
       {
         "id": "ai",
@@ -1676,52 +1676,383 @@
   },
   "privacy": {
     "metaTitle": "Privacy | PDR Kalk",
-    "metaDescription": "Privacy notice for PDR Kalk's one-time online trial activation: which data is sent, why, and how long it is kept. GDPR and revFADP compliant.",
-    "title": "Privacy notice — online trial activation",
-    "lastUpdated": "Last updated: 16 May 2026",
-    "intro": "When you first launch PDR Kalk and choose “Start 30-day trial”, we send a small amount of data once to our server to activate the trial. This prevents the same trial from being started repeatedly on a single device. The trial itself then runs fully offline — no further data is transmitted.",
-    "dataCollectedTitle": "What data we transmit",
-    "dataCollectedIntro": "On first-time activation, PDR Kalk sends to api.pdrkalk.ch:",
-    "dataCollectedItems": [
-      "A device identifier as a hash value (HMAC-SHA256, one-way — cannot be reversed to plaintext)",
-      "Platform (Windows or Android) and app version",
-      "A truncated IP address (IPv4 /24, IPv6 /48 — e.g. 203.0.113.0/24 instead of 203.0.113.42)",
-      "Operating system major version (e.g. “Windows 11” or “Android 14” — no detailed user-agent data)",
-      "Timestamp of the activation",
-      "After the subsequent region selection: the chosen region (CH, DE or AT)"
-    ],
-    "dataNotCollectedTitle": "What we do NOT transmit",
-    "dataNotCollectedItems": [
-      "No name, email address or postal address",
-      "No company, customer, report or invoice data",
-      "No full IP address",
-      "No telemetry or usage data during the trial",
-      "No cookies or tracking IDs"
-    ],
-    "purposeTitle": "Purpose and legal basis",
-    "purposeBody": "The transmitted data is used solely to enforce one trial per device (abuse prevention). The legal basis is our legitimate interest in protecting against licence abuse under Art. 6(1)(f) GDPR or Art. 31(2)(d) revFADP (Switzerland).",
-    "retentionTitle": "Retention period",
-    "retentionBody": "The activation record is stored during the active trial (30 days) and for 30 days after expiry. After that, the truncated IP address is removed from the record. The device-identifier hash is kept permanently for abuse-prevention purposes — it contains no directly personal data.",
-    "processorTitle": "Data processor",
-    "processorBody": "Server infrastructure: Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA. Cloudflare is certified under the EU-US Data Privacy Framework (DPF). The database is configured in Cloudflare's WEUR cluster (Frankfurt / Amsterdam); activation data is therefore normally processed exclusively within the EU.",
-    "rightsTitle": "Your rights (access, deletion, objection)",
-    "rightsBody": "You have the right to access, rectification, deletion, restriction of processing and objection. To exercise these rights, contact us by email at:",
-    "rightsContact": "dsr@pdrkalk.ch",
-    "rightsContactNote": "Please include your activation token (visible in the app's licence dialog) so we can locate your record unambiguously.",
-    "fingerprintTitle": "Technical note: device drift",
-    "fingerprintBody": "On Windows 11 with MAC-address randomisation enabled, the device identifier may change over time. In rare cases this means the same device is recognised as a new one after a reinstall. If you need a legitimate second trial (e.g. after a hardware swap or restore), contact us at info@pdrkalk.ch and we will unlock it manually.",
-    "appHelpTitle": "In-app help",
-    "appHelpBody": "A short summary of this information is also available directly in PDR Kalk under “Help → Trial privacy”.",
-    "aiTitle": "Optional AI feature: vehicle-document scanner",
-    "aiBody": "PDR Kalk includes an optional, off-by-default vehicle-document scanner. When enabled, an external AI vision API reads the vehicle data from a photo of the registration and fills the fields in the report editor. You use your own API key (bring-your-own-key); PDR Kalk runs no AI of its own and never sees the image or the key. The image is sent from your device straight to the provider you choose — never through PDR Kalk's servers. The following applies:",
-    "aiItems": [
-      "Off by default — no image is transmitted unless you enable and use the feature.",
-      "Bring-your-own-key: you supply your provider's key; billing is directly with the provider.",
-      "Provider choice: Infomaniak (Switzerland, Swiss data centres), Mistral AI (EU/France), or — only after you explicitly acknowledge the cross-border transfer — OpenAI or Anthropic (US). It never silently switches to a US provider.",
-      "Automatic redaction: before upload, the app blacks out the holder's personal-data block (name and address) directly in the image (region-aware placement). An on-camera framing guide and a mandatory review step let you check the real photo before scanning.",
-      "Compliance checklist: the scanner runs only after you confirm a data-processing agreement (DPA), opt-out of model training, retention terms, and — for US providers — the cross-border transfer.",
-      "Metadata-only audit log: records provider, region, country, which fields were returned, success, and whether redaction was applied — never the image, key, or field values.",
-      "Designed around Swiss revFADP and the EU GDPR."
+    "metaDescription": "PDR Kalk privacy notice: which personal data is processed when you visit the website, send an enquiry, order a licence or use the software, why, and for how long.",
+    "title": "Privacy notice",
+    "lastUpdated": "Last updated: 14 November 2026",
+    "intro": "This privacy notice describes which personal data we process when you visit pdrkalk.ch, contact us, order a licence or use the PDR Kalk software. PDR Kalk processes your business, customer and invoice data locally; it is not transmitted to us.",
+    "sections": [
+      {
+        "id": "controller",
+        "title": "Controller",
+        "blocks": [
+          "The controller responsible for processing personal data in connection with this website and the PDR Kalk software is:",
+          {
+            "lines": [
+              "Balmer Storm Solutions",
+              "Owner: Dieter Balmer",
+              "Switzerland",
+              "Business ID (UID): CHE-375.250.746"
+            ]
+          },
+          "General enquiries:",
+          {
+            "email": "info@pdrkalk.ch"
+          },
+          "Privacy requests:",
+          {
+            "email": "dsr@pdrkalk.ch"
+          }
+        ]
+      },
+      {
+        "id": "principles",
+        "title": "Principles",
+        "blocks": [
+          "We process personal data confidentially and in line with the applicable law, in particular the Swiss Federal Act on Data Protection (FADP) and, where applicable, the EU General Data Protection Regulation (GDPR).",
+          "Personal data is processed only for the purposes named in this notice and only to the extent necessary. We do not sell personal data and do not analyse visitor behaviour for advertising."
+        ]
+      },
+      {
+        "id": "website",
+        "title": "Visiting the website: hosting and server logs",
+        "blocks": [
+          "The website is hosted by:",
+          {
+            "lines": [
+              "Cloudflare, Inc.",
+              "101 Townsend Street",
+              "San Francisco, CA 94107",
+              "USA"
+            ]
+          },
+          "When you open the website, Cloudflare's infrastructure automatically processes connection data, in particular:",
+          {
+            "list": [
+              "IP address of the requesting device",
+              "date and time of access",
+              "pages and files requested",
+              "data volume transferred and status information",
+              "browser and operating system used",
+              "referring page, if the browser sends it"
+            ]
+          },
+          "This data is needed to deliver the website, keep it stable and secure, and detect abusive access. Cloudflare operates a worldwide server network, so the data may also be processed outside Switzerland, in particular in the USA. We do not build visitor profiles from it.",
+          "Legal basis where the GDPR applies: our legitimate interest in operating the website securely and reliably (Art. 6(1)(f) GDPR).",
+          "More information on data processing by Cloudflare:",
+          {
+            "url": "https://www.cloudflare.com/privacypolicy/"
+          }
+        ]
+      },
+      {
+        "id": "cookies",
+        "title": "Cookies, tracking and fonts",
+        "blocks": [
+          "This website uses no analytics or marketing tools and sets no tracking cookies. Visitor behaviour is not analysed for advertising.",
+          "Fonts, images and scripts are loaded from our own website. Simply visiting the pages opens no connection to third parties for fonts, maps or social networks.",
+          "We set no cookies ourselves. Where our hosting provider sets technically necessary cookies to protect against attacks, they serve only the security and operation of the website."
+        ]
+      },
+      {
+        "id": "contact",
+        "title": "Contacting us and the contact form",
+        "blocks": [
+          "When you contact us through the contact form or by email, we process the details you provide in order to answer your enquiry. The contact form transmits:",
+          {
+            "list": [
+              "first and last name",
+              "email address",
+              "type of enquiry",
+              "the content of your message"
+            ]
+          },
+          "The form details are transmitted through the Formspree service (Formspree, Inc., USA), stored there and forwarded to us by email. Technical connection data such as the IP address is processed as well. The data is processed in the USA.",
+          "Our mailboxes are operated by METANET AG, Josefstrasse 218, 8005 Zürich, Switzerland.",
+          "Legal basis where the GDPR applies: handling your enquiry and pre-contractual steps (Art. 6(1)(b) GDPR) and our legitimate interest in answering enquiries (Art. 6(1)(f) GDPR).",
+          "Please note that email communication cannot be fully protected against access by third parties, despite technical safeguards.",
+          "More information on data processing by Formspree:",
+          {
+            "url": "https://formspree.io/legal/privacy-policy/"
+          }
+        ]
+      },
+      {
+        "id": "order",
+        "title": "Ordering a licence",
+        "blocks": [
+          "When you order through the order form, we process the following details:",
+          {
+            "list": [
+              "first and last name",
+              "company",
+              "billing address (street, postcode, town, country and, where applicable, state)",
+              "email address",
+              "VAT identification number, if provided",
+              "your message, if provided",
+              "the price shown, the payment term and the version of the terms you accepted"
+            ]
+          },
+          "Like the contact form, the order is transmitted through Formspree and forwarded to us by email (see above).",
+          "We use these details to conclude and perform the licence contract: delivering the licence, invoicing, matching your payment, providing support and meeting our statutory bookkeeping duties. For a bank transfer we receive the payment details reported by the bank.",
+          "Legal basis where the GDPR applies: performance of a contract (Art. 6(1)(b) GDPR) and legal obligations (Art. 6(1)(c) GDPR). We keep order and invoice records for the statutory period of ten years."
+        ]
+      },
+      {
+        "id": "video",
+        "title": "Product video (YouTube)",
+        "blocks": [
+          "The product video on the home page is loaded only when you start it yourself. Before that, no connection to YouTube is made.",
+          "When you start it, the video is embedded from youtube-nocookie.com (YouTube's privacy-enhanced mode). The provider is Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. In particular your IP address and technical details of your browser and device are transmitted to Google; processing in the USA cannot be ruled out.",
+          "More information:",
+          {
+            "url": "https://policies.google.com/privacy"
+          }
+        ]
+      },
+      {
+        "id": "downloads",
+        "title": "Downloading the software",
+        "blocks": [
+          "The installation files (Windows installer and Android APK) are provided through GitHub. The provider is GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA.",
+          "When you click a download link, your browser connects to GitHub's servers. In particular your IP address and technical details of your browser are transmitted to GitHub. No user account is needed.",
+          "More information:",
+          {
+            "url": "https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement"
+          }
+        ]
+      },
+      {
+        "id": "trial",
+        "title": "PDR Kalk: trial activation",
+        "blocks": [
+          "When you first launch PDR Kalk and choose “Start 30-day trial”, we send a small amount of data once to our server to activate the trial. This prevents the same trial from being started repeatedly on a single device. The trial itself then runs fully offline — no further data is transmitted.",
+          {
+            "h": "What data we transmit"
+          },
+          "On first-time activation, PDR Kalk sends to api.pdrkalk.ch:",
+          {
+            "list": [
+              "A device identifier as a hash value (HMAC-SHA256, one-way — cannot be reversed to plaintext)",
+              "Platform (Windows or Android) and app version",
+              "A truncated IP address (IPv4 /24, IPv6 /48 — e.g. 203.0.113.0/24 instead of 203.0.113.42)",
+              "Operating system major version (e.g. “Windows 11” or “Android 14” — no detailed user-agent data)",
+              "Timestamp of the activation",
+              "After the subsequent region selection: the chosen region (CH, DE or AT)"
+            ]
+          },
+          {
+            "h": "What we do NOT transmit"
+          },
+          {
+            "list": [
+              "No name, email address or postal address",
+              "No company, customer, report or invoice data",
+              "No full IP address",
+              "No telemetry or usage data during the trial",
+              "No cookies or tracking IDs"
+            ]
+          },
+          {
+            "h": "Purpose and legal basis"
+          },
+          "The transmitted data is used solely to enforce one trial per device (abuse prevention). The legal basis is our legitimate interest in protecting against licence abuse (Art. 6(1)(f) GDPR; under Swiss law an overriding private interest within the meaning of Art. 31(1) FADP).",
+          {
+            "h": "Retention period"
+          },
+          "The activation record is stored during the active trial (30 days) and for 30 days after expiry. After that, the truncated IP address is removed from the record. The device-identifier hash is kept permanently for abuse-prevention purposes — it contains no directly personal data.",
+          {
+            "h": "Data processor"
+          },
+          "Server infrastructure: Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA. Cloudflare is certified under the EU-US Data Privacy Framework (DPF). The database is configured in Cloudflare's WEUR cluster (Frankfurt / Amsterdam); activation data is therefore normally processed exclusively within the EU.",
+          {
+            "h": "Technical note: device drift"
+          },
+          "On Windows 11 with MAC-address randomisation enabled, the device identifier may change over time. In rare cases this means the same device is recognised as a new one after a reinstall. If you need a legitimate second trial (e.g. after a hardware swap or restore), contact us at info@pdrkalk.ch and we will unlock it manually.",
+          "A short summary of this information is also available directly in PDR Kalk under “Help → Trial privacy”."
+        ]
+      },
+      {
+        "id": "updates",
+        "title": "PDR Kalk: checking for updates",
+        "blocks": [
+          "PDR Kalk checks whether a new version is available. To do so, the app retrieves a small version file: first from GitHub (GitHub, Inc., USA) and, as a fallback, from our update server updates.pdrkalk.ch, which runs at Cloudflare.",
+          "For technical reasons the IP address of your device and details of the app version are transmitted to that server. No business, customer or invoice data is transferred. An update is downloaded and installed only once you confirm it."
+        ]
+      },
+      {
+        "id": "ai-privacy",
+        "title": "Optional AI feature: vehicle-document scanner",
+        "blocks": [
+          "PDR Kalk includes an optional, off-by-default vehicle-document scanner. When enabled, an external AI vision API reads the vehicle data from a photo of the registration and fills the fields in the report editor. You use your own API key (bring-your-own-key); PDR Kalk runs no AI of its own and never sees the image or the key. The image is sent from your device straight to the provider you choose — never through PDR Kalk's servers. The following applies:",
+          {
+            "list": [
+              "Off by default — no image is transmitted unless you enable and use the feature.",
+              "Bring-your-own-key: you supply your provider's key; billing is directly with the provider.",
+              "Provider choice: Infomaniak (Switzerland, Swiss data centres), Mistral AI (EU/France), or — only after you explicitly acknowledge the cross-border transfer — OpenAI or Anthropic (US). It never silently switches to a US provider.",
+              "Automatic redaction: before upload, the app blacks out the holder's personal-data block (name and address) directly in the image (region-aware placement). An on-camera framing guide and a mandatory review step let you check the real photo before scanning.",
+              "Compliance checklist: the scanner runs only after you confirm a data-processing agreement (DPA), opt-out of model training, retention terms, and — for US providers — the cross-border transfer.",
+              "Metadata-only audit log: records provider, region, country, which fields were returned, success, and whether redaction was applied — never the image, key, or field values.",
+              "Designed around the Swiss FADP and the EU GDPR."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "business-data",
+        "title": "PDR Kalk: your business data",
+        "blocks": [
+          "PDR Kalk stores reports, invoices, customer and vehicle data locally on your device and in the storage locations you set up yourself (for example a network drive, a NAS or cloud storage). We have no access to this data and collect no usage data.",
+          "You are the controller for the personal data of your customers, vehicle owners, employees and partners, in particular when sending email, storing data in a cloud and using AI services.",
+          "If you voluntarily send us material for a support request (for example screenshots or logs), we use it solely to handle that request."
+        ]
+      },
+      {
+        "id": "disclosure",
+        "title": "Disclosure and transfers abroad",
+        "blocks": [
+          "Personal data is not sold and is not passed on to third parties without a corresponding purpose. Disclosure may take place in particular:",
+          {
+            "list": [
+              "to the service providers named in this notice, where this is necessary to operate the website, handle enquiries and orders or operate the software",
+              "where there is a legal obligation to disclose",
+              "where you have consented"
+            ]
+          },
+          "Some service providers (Cloudflare, Formspree, GitHub, Google) also process data in the USA. Where personal data is disclosed abroad, this is done in compliance with the requirements of the Swiss Federal Act on Data Protection and, where applicable, the GDPR; in particular the requirements for an adequate level of data protection or for appropriate safeguards are taken into account."
+        ]
+      },
+      {
+        "id": "retention",
+        "title": "Retention and deletion",
+        "blocks": [
+          "Personal data is kept only for as long as the respective purpose requires. Longer retention may be necessary in particular where:",
+          {
+            "list": [
+              "statutory retention duties apply (business records and vouchers: ten years)",
+              "claims have to be asserted, exercised or defended"
+            ]
+          },
+          "After that the data is deleted or anonymised. The periods stated above apply to the trial activation data."
+        ]
+      },
+      {
+        "id": "security",
+        "title": "Data security",
+        "blocks": [
+          "We take appropriate technical and organisational measures to protect personal data against unauthorised access, loss, misuse, alteration or unauthorised disclosure. The website is delivered over an encrypted connection (HTTPS) only."
+        ]
+      },
+      {
+        "id": "rights",
+        "title": "Your rights",
+        "blocks": [
+          "Within the scope of the applicable data protection law you have in particular the following rights:",
+          {
+            "list": [
+              "information on whether and which personal data we process about you",
+              "rectification of inaccurate personal data",
+              "deletion of your personal data, subject to the statutory conditions",
+              "restriction of processing and objection to processing",
+              "release or transfer of your personal data, subject to the statutory conditions"
+            ]
+          },
+          "To exercise them, contact us by email at:",
+          {
+            "email": "dsr@pdrkalk.ch"
+          },
+          "If your request concerns the trial activation, please include your activation token (visible in the app's licence dialog) so that we can locate your record unambiguously.",
+          "We may ask for suitable proof of identity to handle your request.",
+          "You also have the right to contact the competent supervisory authority. In Switzerland this is the Federal Data Protection and Information Commissioner (FDPIC); in the EU and the EEA it is the data protection authority at your place of residence.",
+          {
+            "url": "https://www.edoeb.admin.ch/"
+          }
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "Changes to this privacy notice",
+        "blocks": [
+          "We may amend this privacy notice, in particular when our offerings, the services we use or the legal requirements change. The version published on this website applies."
+        ]
+      }
+    ]
+  },
+  "imprint": {
+    "metaTitle": "Legal notice | PDR Kalk",
+    "metaDescription": "Legal notice for PDR Kalk: provider, contact, company details and legal information.",
+    "title": "Legal notice",
+    "lastUpdated": "Last updated: 14 November 2026",
+    "sections": [
+      {
+        "id": "provider",
+        "title": "Provider",
+        "blocks": [
+          {
+            "lines": [
+              "Balmer Storm Solutions",
+              "Owner: Dieter Balmer",
+              "Switzerland"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "contact",
+        "title": "Contact",
+        "blocks": [
+          "Email:",
+          {
+            "email": "info@pdrkalk.ch"
+          }
+        ]
+      },
+      {
+        "id": "company",
+        "title": "Company details",
+        "blocks": [
+          {
+            "lines": [
+              "Business name: Balmer Storm Solutions",
+              "Business identification number (UID): CHE-375.250.746",
+              "VAT number: CHE-375.250.746 MWST"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "responsible",
+        "title": "Responsible for the content",
+        "blocks": [
+          {
+            "lines": [
+              "Dieter Balmer",
+              "Balmer Storm Solutions",
+              "Switzerland"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "copyright",
+        "title": "Copyright",
+        "blocks": [
+          "The content and works on this website and the PDR Kalk software are protected by Swiss copyright law. They may not be used, reproduced or passed on without the prior consent of the respective rights holder, unless a statutory exception applies. The general terms and conditions govern the use of the software. Trademarks and product names of third parties belong to their respective owners."
+        ]
+      },
+      {
+        "id": "content",
+        "title": "Liability for content",
+        "blocks": [
+          "The content of this website is prepared with due care and reviewed regularly. However, no warranty is given for the accuracy, completeness and currency of the information provided. The general terms and conditions are binding for the purchase and use of PDR Kalk."
+        ]
+      },
+      {
+        "id": "links",
+        "title": "Liability for external links",
+        "blocks": [
+          "This website contains links to external websites of third parties. We have no influence on their content and design; their operators alone are responsible for them. If we become aware of legal infringements, we remove the links concerned within reasonable limits."
+        ]
+      }
     ]
   },
   "terms": {
@@ -2150,6 +2481,7 @@
       "order": "Order a licence",
       "privacy": "Privacy",
       "terms": "Terms and conditions",
+      "imprint": "Legal notice",
       "windowsInstaller": "Windows installer",
       "androidApk": "Android APK"
     }

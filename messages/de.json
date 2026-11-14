@@ -732,7 +732,7 @@
         "highlights": [
           {
             "t": "Windows 10/11 & Android 10+",
-            "d": "100 % lokal, DSGVO- und revDSG-konform, ohne Anbieter-Cloud."
+            "d": "100 % lokal, DSGVO- und DSG-konform, ohne Anbieter-Cloud."
           },
           {
             "t": "NAS- und Cloud-Ordner-Sync",
@@ -1058,7 +1058,7 @@
       },
       {
         "icon": "lock",
-        "title": "DSGVO & revDSG",
+        "title": "DSGVO & DSG",
         "desc": "Keine Telemetrie, keine Anbieter-Cloud, keine Analyse-Cookies auf dieser Website. Aus Fotos werden EXIF- und GPS-Daten entfernt, bevor sie im Auftrag landen."
       }
     ]
@@ -1394,7 +1394,7 @@
       {
         "id": "audit",
         "q": "Ist PDR Kalk revisionssicher?",
-        "a": "Jede Änderung wird in einer SHA-256-Hash-Kette festgehalten; Dokumentversionen und PDF-Snapshots entstehen automatisch bei jeder Statusänderung. Der Audit-Trail lässt sich als JSON exportieren und verifizieren. Entwickelt nach DSGVO und revDSG."
+        "a": "Jede Änderung wird in einer SHA-256-Hash-Kette festgehalten; Dokumentversionen und PDF-Snapshots entstehen automatisch bei jeder Statusänderung. Der Audit-Trail lässt sich als JSON exportieren und verifizieren. Entwickelt nach DSGVO und DSG."
       },
       {
         "id": "ai",
@@ -1676,52 +1676,383 @@
   },
   "privacy": {
     "metaTitle": "Datenschutz — PDR Kalk",
-    "metaDescription": "Datenschutzerklärung zur Online-Trial-Aktivierung von PDR Kalk: welche Daten übermittelt werden, wofür und wie lange sie gespeichert werden. DSGVO- und revDSG-konform.",
-    "title": "Datenschutzerklärung — Online-Trial-Aktivierung",
-    "lastUpdated": "Stand: 16. Mai 2026",
-    "intro": "Wenn Sie PDR Kalk zum ersten Mal starten und «30 Tage testen» wählen, übermitteln wir einmalig eine kleine Datenmenge an unseren Server, um die Trial-Version zu aktivieren. Damit verhindern wir, dass dieselbe Trial auf einem Gerät mehrfach hintereinander gestartet werden kann. Die Trial-Nutzung selbst läuft anschliessend vollständig offline — es findet keine weitere Übertragung statt.",
-    "dataCollectedTitle": "Welche Daten werden übermittelt?",
-    "dataCollectedIntro": "Bei der einmaligen Aktivierung sendet PDR Kalk an api.pdrkalk.ch:",
-    "dataCollectedItems": [
-      "Gerätekennung als Hashwert (HMAC-SHA256, einseitig — kein Klartext-Rückschluss möglich)",
-      "Plattform (Windows oder Android) und App-Version",
-      "Verkürzte IP-Adresse (IPv4 /24, IPv6 /48 — z. B. 203.0.113.0/24 statt 203.0.113.42)",
-      "Betriebssystem-Hauptversion (z. B. «Windows 11» oder «Android 14» — keine detaillierten User-Agent-Daten)",
-      "Zeitstempel der Aktivierung",
-      "Nach der anschliessenden Region-Auswahl: die gewählte Region (CH, DE oder AT)"
-    ],
-    "dataNotCollectedTitle": "Was wir NICHT übermitteln:",
-    "dataNotCollectedItems": [
-      "Kein Name, keine E-Mail-Adresse, keine Adresse",
-      "Keine Firmen-, Kunden-, Rapport- oder Rechnungsdaten",
-      "Keine vollständige IP-Adresse",
-      "Keine Telemetrie oder Nutzungsdaten während der Trial",
-      "Keine Cookies oder Tracking-IDs"
-    ],
-    "purposeTitle": "Zweck und Rechtsgrundlage",
-    "purposeBody": "Die übermittelten Daten dienen ausschliesslich dazu, eine Trial-Version pro Gerät durchzusetzen (Missbrauchsvermeidung). Rechtsgrundlage ist unser berechtigtes Interesse am Schutz vor Lizenzmissbrauch nach Art. 6 Abs. 1 lit. f DSGVO bzw. Art. 31 Abs. 2 lit. d revDSG (Schweiz).",
-    "retentionTitle": "Aufbewahrungsdauer",
-    "retentionBody": "Der Aktivierungs-Eintrag wird während der laufenden Trial (30 Tage) sowie für 30 Tage nach Trial-Ablauf gespeichert. Danach wird die verkürzte IP-Adresse aus dem Datensatz entfernt. Die Gerätekennung als Hashwert bleibt zur Missbrauchsvermeidung dauerhaft erhalten — sie enthält keine direkt personenbezogenen Daten.",
-    "processorTitle": "Auftragsverarbeiter",
-    "processorBody": "Server-Infrastruktur: Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA. Cloudflare ist nach dem EU-US Data Privacy Framework (DPF) zertifiziert. Die Datenbank ist im Cloudflare-Rechenzentrums-Cluster «WEUR» (Frankfurt / Amsterdam) konfiguriert; die Aktivierungsdaten werden daher im Regelfall ausschliesslich innerhalb der EU verarbeitet.",
-    "rightsTitle": "Ihre Rechte (Auskunft, Löschung, Widerspruch)",
-    "rightsBody": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung sowie Widerspruch. Wenden Sie sich dafür per E-Mail an:",
-    "rightsContact": "dsr@pdrkalk.ch",
-    "rightsContactNote": "Bitte geben Sie idealerweise Ihren Aktivierungs-Token an (sichtbar im Lizenz-Dialog der App), damit wir Ihren Eintrag eindeutig zuordnen können.",
-    "fingerprintTitle": "Technischer Hinweis: Geräte-Drift",
-    "fingerprintBody": "Auf Windows 11 mit aktiviertem MAC-Adress-Zufallsgenerator kann sich die Gerätekennung im Laufe der Zeit ändern. In seltenen Fällen kann es dadurch vorkommen, dass dasselbe Gerät nach einer Neuinstallation als anderes Gerät erkannt wird. Wenn Sie eine berechtigte zweite Trial benötigen (z. B. nach Hardware-Tausch oder Wiederherstellung), kontaktieren Sie uns bitte unter info@pdrkalk.ch — wir schalten Sie manuell frei.",
-    "appHelpTitle": "In-App-Hilfe",
-    "appHelpBody": "Eine kurze Zusammenfassung dieser Informationen finden Sie auch direkt in PDR Kalk unter «Hilfe → Datenschutz Testversion».",
-    "aiTitle": "Optionale KI-Funktion: Fahrzeugausweis-Scanner",
-    "aiBody": "PDR Kalk enthält einen optionalen, standardmässig deaktivierten Fahrzeugausweis-Scanner. Aktivieren Sie ihn, liest eine externe KI-Vision-API die Fahrzeugdaten aus dem fotografierten Ausweis und füllt die Felder im Rapport-Editor. Sie nutzen dafür Ihren eigenen API-Schlüssel (Bring-your-own-key); PDR Kalk betreibt selbst keine KI und sieht weder Bild noch Schlüssel. Das Bild wird direkt von Ihrem Gerät an den gewählten Anbieter übermittelt — nie über die Server von PDR Kalk. Es gilt:",
-    "aiItems": [
-      "Standardmässig deaktiviert — ohne Ihre Aktivierung und Nutzung wird kein Bild übermittelt.",
-      "Bring-your-own-key: Sie hinterlegen den Schlüssel Ihres Anbieters; die Abrechnung läuft direkt über den Anbieter.",
-      "Anbieterwahl: Infomaniak (Schweiz, Schweizer Rechenzentren), Mistral AI (EU/Frankreich) oder — nur nach ausdrücklicher Bestätigung der grenzüberschreitenden Übermittlung — OpenAI bzw. Anthropic (USA). Es wird nie still auf einen US-Anbieter umgestellt.",
-      "Automatische Schwärzung: Vor dem Upload überdeckt die App den Personendaten-Block des Halters (Name und Adresse) fest im Bild (regionsabhängige Platzierung). Eine Kamera-Hilfslinie und ein Pflicht-Kontrollschritt erlauben die Prüfung am echten Foto vor dem Scan.",
-      "Freigabe-Checkliste: Der Scanner startet erst, wenn Sie Auftragsverarbeitung (DPA), Opt-out vom Modelltraining, Aufbewahrungsbedingungen und — bei US-Anbietern — die grenzüberschreitende Übermittlung bestätigt haben.",
-      "Audit-Log nur mit Metadaten: protokolliert werden Anbieter, Region, Land, zurückgegebene Felder, Erfolg und ob geschwärzt wurde — nie das Bild, der Schlüssel oder Feldwerte.",
-      "Ausgelegt auf das Schweizer revDSG/nFADP und die EU-DSGVO."
+    "metaDescription": "Datenschutzerklärung von PDR Kalk: welche Personendaten beim Besuch der Website, bei Anfragen und Bestellungen sowie in der Software bearbeitet werden, wofür und wie lange.",
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Stand: 14. November 2026",
+    "intro": "Diese Datenschutzerklärung beschreibt, welche Personendaten wir bearbeiten, wenn Sie die Website pdrkalk.ch besuchen, uns kontaktieren, eine Lizenz bestellen oder die Software PDR Kalk nutzen. PDR Kalk verarbeitet Ihre Geschäfts-, Kunden- und Rechnungsdaten lokal; sie werden nicht an uns übermittelt.",
+    "sections": [
+      {
+        "id": "controller",
+        "title": "Verantwortliche Stelle",
+        "blocks": [
+          "Verantwortlich für die Bearbeitung von Personendaten im Zusammenhang mit dieser Website und der Software PDR Kalk ist:",
+          {
+            "lines": [
+              "Balmer Storm Solutions",
+              "Inhaber: Dieter Balmer",
+              "Schweiz",
+              "UID: CHE-375.250.746"
+            ]
+          },
+          "Allgemeine Anfragen:",
+          {
+            "email": "info@pdrkalk.ch"
+          },
+          "Anfragen zum Datenschutz:",
+          {
+            "email": "dsr@pdrkalk.ch"
+          }
+        ]
+      },
+      {
+        "id": "principles",
+        "title": "Grundsätze",
+        "blocks": [
+          "Wir bearbeiten Personendaten vertraulich und nach den geltenden Bestimmungen, insbesondere nach dem Schweizer Bundesgesetz über den Datenschutz (DSG) und, soweit anwendbar, nach der EU-Datenschutz-Grundverordnung (DSGVO).",
+          "Personendaten werden nur für die in dieser Erklärung genannten Zwecke und nur im erforderlichen Umfang bearbeitet. Wir verkaufen keine Personendaten und werten das Verhalten von Besuchern nicht zu Werbezwecken aus."
+        ]
+      },
+      {
+        "id": "website",
+        "title": "Besuch der Website: Hosting und Server-Protokolle",
+        "blocks": [
+          "Die Website wird bei folgendem Anbieter gehostet:",
+          {
+            "lines": [
+              "Cloudflare, Inc.",
+              "101 Townsend Street",
+              "San Francisco, CA 94107",
+              "USA"
+            ]
+          },
+          "Beim Aufruf der Website verarbeitet die technische Infrastruktur von Cloudflare automatisch Verbindungsdaten. Dazu gehören insbesondere:",
+          {
+            "list": [
+              "IP-Adresse des zugreifenden Geräts",
+              "Datum und Uhrzeit des Zugriffs",
+              "aufgerufene Seiten und Dateien",
+              "übertragene Datenmenge und Statusinformationen",
+              "verwendeter Browser und Betriebssystem",
+              "Herkunftsseite, sofern der Browser sie übermittelt"
+            ]
+          },
+          "Diese Daten sind nötig, um die Website auszuliefern, ihre Stabilität und Sicherheit zu gewährleisten und missbräuchliche Zugriffe zu erkennen. Cloudflare betreibt ein weltweites Servernetz; die Daten können deshalb auch ausserhalb der Schweiz, insbesondere in den USA, bearbeitet werden. Wir erstellen daraus keine Besucherprofile.",
+          "Rechtsgrundlage, soweit die DSGVO anwendbar ist: unser berechtigtes Interesse an einem sicheren und stabilen Betrieb der Website (Art. 6 Abs. 1 lit. f DSGVO).",
+          "Weitere Informationen zur Datenbearbeitung durch Cloudflare:",
+          {
+            "url": "https://www.cloudflare.com/privacypolicy/"
+          }
+        ]
+      },
+      {
+        "id": "cookies",
+        "title": "Cookies, Tracking und Schriften",
+        "blocks": [
+          "Auf dieser Website werden keine Analyse- oder Marketingwerkzeuge eingesetzt und keine Tracking-Cookies gesetzt. Das Verhalten der Besucher wird nicht zu Werbezwecken ausgewertet.",
+          "Schriften, Bilder und Skripte werden von unserer eigenen Website geladen. Beim blossen Besuch der Seiten wird keine Verbindung zu Dritten für Schriften, Karten oder soziale Netzwerke aufgebaut.",
+          "Wir selbst setzen keine Cookies. Soweit unser Hosting-Anbieter zum Schutz vor Angriffen technisch notwendige Cookies setzt, dienen diese ausschliesslich der Sicherheit und der Funktionsfähigkeit der Website."
+        ]
+      },
+      {
+        "id": "contact",
+        "title": "Kontaktaufnahme und Kontaktformular",
+        "blocks": [
+          "Wenn Sie uns über das Kontaktformular oder per E-Mail kontaktieren, bearbeiten wir die von Ihnen mitgeteilten Angaben, um Ihre Anfrage zu beantworten. Über das Kontaktformular werden übermittelt:",
+          {
+            "list": [
+              "Vor- und Nachname",
+              "E-Mail-Adresse",
+              "Art der Anfrage",
+              "Inhalt Ihrer Nachricht"
+            ]
+          },
+          "Die Formularangaben werden über den Dienst Formspree übermittelt (Formspree, Inc., USA), dort gespeichert und per E-Mail an uns weitergeleitet. Dabei werden auch technische Verbindungsdaten wie die IP-Adresse verarbeitet. Die Daten werden in den USA bearbeitet.",
+          "Unsere E-Mail-Postfächer werden von METANET AG, Josefstrasse 218, 8005 Zürich, Schweiz, betrieben.",
+          "Rechtsgrundlage, soweit die DSGVO anwendbar ist: die Bearbeitung Ihrer Anfrage und vorvertragliche Massnahmen (Art. 6 Abs. 1 lit. b DSGVO) sowie unser berechtigtes Interesse an der Beantwortung von Anfragen (Art. 6 Abs. 1 lit. f DSGVO).",
+          "Bitte beachten Sie, dass die Kommunikation per E-Mail trotz technischer Sicherheitsmassnahmen nicht vollständig vor dem Zugriff Dritter geschützt werden kann.",
+          "Weitere Informationen zur Datenbearbeitung durch Formspree:",
+          {
+            "url": "https://formspree.io/legal/privacy-policy/"
+          }
+        ]
+      },
+      {
+        "id": "order",
+        "title": "Bestellung einer Lizenz",
+        "blocks": [
+          "Bei einer Bestellung über das Bestellformular bearbeiten wir die folgenden Angaben:",
+          {
+            "list": [
+              "Vor- und Nachname",
+              "Firma",
+              "Rechnungsadresse (Strasse, Postleitzahl, Ort, Land, gegebenenfalls Bundesstaat)",
+              "E-Mail-Adresse",
+              "Umsatzsteuer-Identifikationsnummer, sofern angegeben",
+              "Ihre Mitteilung, sofern angegeben",
+              "der angezeigte Preis, die Zahlungsfrist und die Fassung der akzeptierten Bedingungen"
+            ]
+          },
+          "Die Bestellung wird wie das Kontaktformular über Formspree übermittelt und per E-Mail an uns weitergeleitet (siehe oben).",
+          "Wir verwenden diese Angaben, um den Lizenzvertrag abzuschliessen und zu erfüllen: Lizenz liefern, Rechnung stellen, Zahlungseingang zuordnen, Support leisten und die gesetzliche Buchführungspflicht erfüllen. Bei einer Banküberweisung erhalten wir die von der Bank mitgeteilten Zahlungsangaben.",
+          "Rechtsgrundlage, soweit die DSGVO anwendbar ist: Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO) und gesetzliche Pflichten (Art. 6 Abs. 1 lit. c DSGVO). Bestell- und Rechnungsunterlagen bewahren wir während der gesetzlichen Frist von zehn Jahren auf."
+        ]
+      },
+      {
+        "id": "video",
+        "title": "Produktvideo (YouTube)",
+        "blocks": [
+          "Das Produktvideo auf der Startseite wird erst geladen, wenn Sie es selbst starten. Vorher wird keine Verbindung zu YouTube aufgebaut.",
+          "Mit dem Start wird das Video über die Adresse youtube-nocookie.com eingebunden (erweiterter Datenschutzmodus von YouTube). Anbieter ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Dabei werden insbesondere Ihre IP-Adresse sowie technische Angaben zu Browser und Gerät an Google übermittelt; eine Bearbeitung in den USA kann nicht ausgeschlossen werden.",
+          "Weitere Informationen:",
+          {
+            "url": "https://policies.google.com/privacy"
+          }
+        ]
+      },
+      {
+        "id": "downloads",
+        "title": "Download der Software",
+        "blocks": [
+          "Die Installationsdateien (Windows-Installer und Android-APK) werden über GitHub bereitgestellt. Anbieter ist GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA.",
+          "Wenn Sie einen Download-Link anklicken, verbindet sich Ihr Browser mit den Servern von GitHub. Dabei werden insbesondere Ihre IP-Adresse und technische Angaben zu Ihrem Browser an GitHub übermittelt. Ein Benutzerkonto ist nicht nötig.",
+          "Weitere Informationen:",
+          {
+            "url": "https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement"
+          }
+        ]
+      },
+      {
+        "id": "trial",
+        "title": "PDR Kalk: Aktivierung der Testversion",
+        "blocks": [
+          "Wenn Sie PDR Kalk zum ersten Mal starten und «30 Tage testen» wählen, übermitteln wir einmalig eine kleine Datenmenge an unseren Server, um die Trial-Version zu aktivieren. Damit verhindern wir, dass dieselbe Trial auf einem Gerät mehrfach hintereinander gestartet werden kann. Die Trial-Nutzung selbst läuft anschliessend vollständig offline — es findet keine weitere Übertragung statt.",
+          {
+            "h": "Welche Daten werden übermittelt?"
+          },
+          "Bei der einmaligen Aktivierung sendet PDR Kalk an api.pdrkalk.ch:",
+          {
+            "list": [
+              "Gerätekennung als Hashwert (HMAC-SHA256, einseitig — kein Klartext-Rückschluss möglich)",
+              "Plattform (Windows oder Android) und App-Version",
+              "Verkürzte IP-Adresse (IPv4 /24, IPv6 /48 — z. B. 203.0.113.0/24 statt 203.0.113.42)",
+              "Betriebssystem-Hauptversion (z. B. «Windows 11» oder «Android 14» — keine detaillierten User-Agent-Daten)",
+              "Zeitstempel der Aktivierung",
+              "Nach der anschliessenden Region-Auswahl: die gewählte Region (CH, DE oder AT)"
+            ]
+          },
+          {
+            "h": "Was wir NICHT übermitteln:"
+          },
+          {
+            "list": [
+              "Kein Name, keine E-Mail-Adresse, keine Adresse",
+              "Keine Firmen-, Kunden-, Rapport- oder Rechnungsdaten",
+              "Keine vollständige IP-Adresse",
+              "Keine Telemetrie oder Nutzungsdaten während der Trial",
+              "Keine Cookies oder Tracking-IDs"
+            ]
+          },
+          {
+            "h": "Zweck und Rechtsgrundlage"
+          },
+          "Die übermittelten Daten dienen ausschliesslich dazu, eine Trial-Version pro Gerät durchzusetzen (Missbrauchsvermeidung). Rechtsgrundlage ist unser berechtigtes Interesse am Schutz vor Lizenzmissbrauch (Art. 6 Abs. 1 lit. f DSGVO; nach Schweizer Recht ein überwiegendes privates Interesse im Sinne von Art. 31 Abs. 1 DSG).",
+          {
+            "h": "Aufbewahrungsdauer"
+          },
+          "Der Aktivierungs-Eintrag wird während der laufenden Trial (30 Tage) sowie für 30 Tage nach Trial-Ablauf gespeichert. Danach wird die verkürzte IP-Adresse aus dem Datensatz entfernt. Die Gerätekennung als Hashwert bleibt zur Missbrauchsvermeidung dauerhaft erhalten — sie enthält keine direkt personenbezogenen Daten.",
+          {
+            "h": "Auftragsverarbeiter"
+          },
+          "Server-Infrastruktur: Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA. Cloudflare ist nach dem EU-US Data Privacy Framework (DPF) zertifiziert. Die Datenbank ist im Cloudflare-Rechenzentrums-Cluster «WEUR» (Frankfurt / Amsterdam) konfiguriert; die Aktivierungsdaten werden daher im Regelfall ausschliesslich innerhalb der EU verarbeitet.",
+          {
+            "h": "Technischer Hinweis: Geräte-Drift"
+          },
+          "Auf Windows 11 mit aktiviertem MAC-Adress-Zufallsgenerator kann sich die Gerätekennung im Laufe der Zeit ändern. In seltenen Fällen kann es dadurch vorkommen, dass dasselbe Gerät nach einer Neuinstallation als anderes Gerät erkannt wird. Wenn Sie eine berechtigte zweite Trial benötigen (z. B. nach Hardware-Tausch oder Wiederherstellung), kontaktieren Sie uns bitte unter info@pdrkalk.ch — wir schalten Sie manuell frei.",
+          "Eine kurze Zusammenfassung dieser Informationen finden Sie auch direkt in PDR Kalk unter «Hilfe → Datenschutz Testversion»."
+        ]
+      },
+      {
+        "id": "updates",
+        "title": "PDR Kalk: Prüfung auf Updates",
+        "blocks": [
+          "PDR Kalk prüft, ob eine neue Version verfügbar ist. Dazu ruft die App eine kleine Versionsdatei ab: zuerst bei GitHub (GitHub, Inc., USA), ersatzweise auf unserem Update-Server updates.pdrkalk.ch, der bei Cloudflare betrieben wird.",
+          "Dabei werden technisch bedingt die IP-Adresse Ihres Geräts und Angaben zur App-Version an den jeweiligen Server übermittelt. Geschäfts-, Kunden- oder Rechnungsdaten werden nicht übertragen. Ein Update wird erst heruntergeladen und installiert, wenn Sie es bestätigen."
+        ]
+      },
+      {
+        "id": "ai-privacy",
+        "title": "Optionale KI-Funktion: Fahrzeugausweis-Scanner",
+        "blocks": [
+          "PDR Kalk enthält einen optionalen, standardmässig deaktivierten Fahrzeugausweis-Scanner. Aktivieren Sie ihn, liest eine externe KI-Vision-API die Fahrzeugdaten aus dem fotografierten Ausweis und füllt die Felder im Rapport-Editor. Sie nutzen dafür Ihren eigenen API-Schlüssel (Bring-your-own-key); PDR Kalk betreibt selbst keine KI und sieht weder Bild noch Schlüssel. Das Bild wird direkt von Ihrem Gerät an den gewählten Anbieter übermittelt — nie über die Server von PDR Kalk. Es gilt:",
+          {
+            "list": [
+              "Standardmässig deaktiviert — ohne Ihre Aktivierung und Nutzung wird kein Bild übermittelt.",
+              "Bring-your-own-key: Sie hinterlegen den Schlüssel Ihres Anbieters; die Abrechnung läuft direkt über den Anbieter.",
+              "Anbieterwahl: Infomaniak (Schweiz, Schweizer Rechenzentren), Mistral AI (EU/Frankreich) oder — nur nach ausdrücklicher Bestätigung der grenzüberschreitenden Übermittlung — OpenAI bzw. Anthropic (USA). Es wird nie still auf einen US-Anbieter umgestellt.",
+              "Automatische Schwärzung: Vor dem Upload überdeckt die App den Personendaten-Block des Halters (Name und Adresse) fest im Bild (regionsabhängige Platzierung). Eine Kamera-Hilfslinie und ein Pflicht-Kontrollschritt erlauben die Prüfung am echten Foto vor dem Scan.",
+              "Freigabe-Checkliste: Der Scanner startet erst, wenn Sie Auftragsverarbeitung (DPA), Opt-out vom Modelltraining, Aufbewahrungsbedingungen und — bei US-Anbietern — die grenzüberschreitende Übermittlung bestätigt haben.",
+              "Audit-Log nur mit Metadaten: protokolliert werden Anbieter, Region, Land, zurückgegebene Felder, Erfolg und ob geschwärzt wurde — nie das Bild, der Schlüssel oder Feldwerte.",
+              "Ausgelegt auf das Schweizer DSG und die EU-DSGVO."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "business-data",
+        "title": "PDR Kalk: Ihre Geschäftsdaten",
+        "blocks": [
+          "PDR Kalk speichert Rapporte, Rechnungen, Kunden- und Fahrzeugdaten lokal auf Ihrem Gerät und an den Speicherorten, die Sie selbst einrichten (zum Beispiel Netzlaufwerk, NAS oder Cloud-Speicher). Wir haben keinen Zugriff auf diese Daten und erheben keine Nutzungsdaten.",
+          "Für die Personendaten Ihrer Kunden, Fahrzeughalter, Mitarbeitenden und Partner sind Sie datenschutzrechtlich selbst verantwortlich, insbesondere beim E-Mail-Versand, bei der Ablage in einer Cloud und bei der Nutzung von KI-Diensten.",
+          "Senden Sie uns für eine Supportanfrage freiwillig Unterlagen (zum Beispiel Bildschirmfotos oder Protokolle), verwenden wir diese ausschliesslich zur Bearbeitung dieser Anfrage."
+        ]
+      },
+      {
+        "id": "disclosure",
+        "title": "Weitergabe und Bekanntgabe ins Ausland",
+        "blocks": [
+          "Personendaten werden nicht verkauft und nicht ohne entsprechenden Zweck an Dritte weitergegeben. Eine Bekanntgabe kann insbesondere erfolgen:",
+          {
+            "list": [
+              "an die in dieser Erklärung genannten Dienstleister, soweit dies für den Betrieb der Website, die Bearbeitung von Anfragen und Bestellungen oder den Betrieb der Software nötig ist",
+              "wenn eine gesetzliche Pflicht zur Bekanntgabe besteht",
+              "wenn Sie eingewilligt haben"
+            ]
+          },
+          "Einzelne Dienstleister (Cloudflare, Formspree, GitHub, Google) bearbeiten Daten auch in den USA. Soweit Personendaten ins Ausland bekanntgegeben werden, erfolgt dies unter Beachtung der Voraussetzungen des Schweizer Datenschutzgesetzes und, soweit anwendbar, der DSGVO; insbesondere werden die Anforderungen an ein angemessenes Datenschutzniveau beziehungsweise an geeignete Garantien berücksichtigt."
+        ]
+      },
+      {
+        "id": "retention",
+        "title": "Aufbewahrung und Löschung",
+        "blocks": [
+          "Personendaten werden nur so lange aufbewahrt, wie es für den jeweiligen Zweck erforderlich ist. Eine längere Aufbewahrung kann insbesondere nötig sein, wenn:",
+          {
+            "list": [
+              "gesetzliche Aufbewahrungspflichten bestehen (Geschäftsbücher und Belege: zehn Jahre)",
+              "Ansprüche geltend gemacht, ausgeübt oder verteidigt werden müssen"
+            ]
+          },
+          "Danach werden die Daten gelöscht oder anonymisiert. Für die Aktivierungsdaten der Testversion gelten die oben genannten Fristen."
+        ]
+      },
+      {
+        "id": "security",
+        "title": "Datensicherheit",
+        "blocks": [
+          "Wir treffen angemessene technische und organisatorische Massnahmen, um Personendaten vor unberechtigtem Zugriff, Verlust, Missbrauch, Veränderung oder unbefugter Offenlegung zu schützen. Die Website wird ausschliesslich verschlüsselt (HTTPS) ausgeliefert."
+        ]
+      },
+      {
+        "id": "rights",
+        "title": "Ihre Rechte",
+        "blocks": [
+          "Im Rahmen des anwendbaren Datenschutzrechts haben Sie insbesondere folgende Rechte:",
+          {
+            "list": [
+              "Auskunft darüber, ob und welche Personendaten wir über Sie bearbeiten",
+              "Berichtigung unrichtiger Personendaten",
+              "Löschung Ihrer Personendaten unter den gesetzlichen Voraussetzungen",
+              "Einschränkung der Bearbeitung und Widerspruch gegen die Bearbeitung",
+              "Herausgabe oder Übertragung Ihrer Personendaten unter den gesetzlichen Voraussetzungen"
+            ]
+          },
+          "Wenden Sie sich dafür per E-Mail an:",
+          {
+            "email": "dsr@pdrkalk.ch"
+          },
+          "Betrifft Ihre Anfrage die Aktivierung der Testversion, geben Sie bitte Ihren Aktivierungs-Token an (sichtbar im Lizenz-Dialog der App), damit wir Ihren Eintrag eindeutig zuordnen können.",
+          "Zur Bearbeitung Ihrer Anfrage können wir einen geeigneten Identitätsnachweis verlangen.",
+          "Sie haben zudem das Recht, sich an die zuständige Aufsichtsbehörde zu wenden. In der Schweiz ist dies der Eidgenössische Datenschutz- und Öffentlichkeitsbeauftragte (EDÖB); in der EU und im EWR die Datenschutzbehörde Ihres Wohnsitzes.",
+          {
+            "url": "https://www.edoeb.admin.ch/"
+          }
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "Änderungen dieser Datenschutzerklärung",
+        "blocks": [
+          "Wir können diese Datenschutzerklärung anpassen, insbesondere wenn sich unsere Angebote, die eingesetzten Dienste oder die rechtlichen Anforderungen ändern. Es gilt die jeweils auf dieser Website veröffentlichte Fassung."
+        ]
+      }
+    ]
+  },
+  "imprint": {
+    "metaTitle": "Impressum — PDR Kalk",
+    "metaDescription": "Impressum von PDR Kalk: Anbieterin, Kontakt, Unternehmensangaben und rechtliche Hinweise.",
+    "title": "Impressum",
+    "lastUpdated": "Stand: 14. November 2026",
+    "sections": [
+      {
+        "id": "provider",
+        "title": "Angaben zur Anbieterin",
+        "blocks": [
+          {
+            "lines": [
+              "Balmer Storm Solutions",
+              "Inhaber: Dieter Balmer",
+              "Schweiz"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "contact",
+        "title": "Kontakt",
+        "blocks": [
+          "E-Mail:",
+          {
+            "email": "info@pdrkalk.ch"
+          }
+        ]
+      },
+      {
+        "id": "company",
+        "title": "Unternehmensangaben",
+        "blocks": [
+          {
+            "lines": [
+              "Geschäftsbezeichnung: Balmer Storm Solutions",
+              "Unternehmens-Identifikationsnummer (UID): CHE-375.250.746",
+              "Mehrwertsteuernummer: CHE-375.250.746 MWST"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "responsible",
+        "title": "Verantwortlich für den Inhalt",
+        "blocks": [
+          {
+            "lines": [
+              "Dieter Balmer",
+              "Balmer Storm Solutions",
+              "Schweiz"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "copyright",
+        "title": "Urheberrechte",
+        "blocks": [
+          "Die Inhalte und Werke auf dieser Website sowie die Software PDR Kalk unterliegen dem schweizerischen Urheberrecht. Eine Verwendung, Vervielfältigung oder Weitergabe ist ohne vorherige Zustimmung des jeweiligen Rechteinhabers nicht gestattet, soweit keine gesetzliche Ausnahme greift. Für die Nutzung der Software gelten die Allgemeinen Geschäftsbedingungen. Genannte Marken und Produktnamen Dritter gehören ihren jeweiligen Inhabern."
+        ]
+      },
+      {
+        "id": "content",
+        "title": "Haftung für Inhalte",
+        "blocks": [
+          "Die Inhalte dieser Website werden mit angemessener Sorgfalt erstellt und regelmässig überprüft. Für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Informationen wird jedoch keine Gewähr übernommen. Verbindlich für den Kauf und die Nutzung von PDR Kalk sind die Allgemeinen Geschäftsbedingungen."
+        ]
+      },
+      {
+        "id": "links",
+        "title": "Haftung für externe Links",
+        "blocks": [
+          "Diese Website enthält Links zu externen Websites Dritter. Auf deren Inhalte und Gestaltung haben wir keinen Einfluss; verantwortlich sind ausschliesslich die jeweiligen Betreiber. Werden uns Rechtsverletzungen bekannt, entfernen wir die betreffenden Links im Rahmen des Zumutbaren."
+        ]
+      }
     ]
   },
   "terms": {
@@ -2150,6 +2481,7 @@
       "order": "Lizenz bestellen",
       "privacy": "Datenschutz",
       "terms": "AGB",
+      "imprint": "Impressum",
       "windowsInstaller": "Windows-Installer",
       "androidApk": "Android-APK"
     }
